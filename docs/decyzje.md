@@ -95,3 +95,6 @@ P25 11:19 Artur: opis projektu mówi „Program działa lokalnie, bez internetu 
 P26 11:19 Artur: zdanie „Cel: wskazać każdy możliwy dodatek" obiecuje, że nic nie umknie, a małe dodatki schowane za ładunkiem mogą umknąć. A: zmieniamy na „najważniejsze: nie przeoczyć; pokazujemy, ile przeoczeń"; B: zostawiamy jak jest. Rekomendacja: A — uczciwie i zgodnie z tym, że przeoczenie jest gorsze (P4) — czeka
 11:20 Szef: P22–P24 odpowiedziane (P24 B zmienia P2: dobór automatyczny, operator może poprawić rodzaj) → Projektant przepisuje 02-operator.md → R2; Programista: rodzaj jako parametr wykrywania
 11:20 Projektant: krok 2 po P22–P24 — plik przepisany (P24 B: zmiana rodzaju przez operatora, analiza od nowa; zmienia P2 na „dobór automatyczny, ale poprawialny”); oznaczenia założeń zdjęte (zostaje wariant 3 persony)
+P25 11:20 odpowiedź: Artur w pokoju: A — w opisie „docelowo działa lokalnie, bez internetu”
+P26 11:20 odpowiedź: Artur w pokoju: A — „najważniejsze: nie przeoczyć; pokazujemy, ile przeoczeń”
+11:20 Artur w pokoju: poprawki nieprawdziwych zdań w opisie robimy od razu, bez pytania go (zasada, nie pytanie)
