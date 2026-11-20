@@ -49,3 +49,5 @@ PARAMETR: powód odrzucenia = lista gotowych powodów + „inny” (propozycja) 
 11:06 Szef: nazwa projektu „Prześwit” (P11) → Prezenter do docs/hacktribe.md.
 P12 11:06 odpowiedź: Artur w pokoju: A — partie w pierwszej wersji, ale najprościej: operator wskazuje kilka obrazów, program liczy po kolei i daje listę wyników; bez rozbudowanego skalowania na pokaz, w opisie jedno zdanie, jak by to rosło
 P13 11:06 odpowiedź: Artur w pokoju: A — lista gotowych powodów odrzucenia + „inny” z tekstem; do listy dołożyć „nakładanie się ładunku” (najczęstsza pomyłka)
+PARAMETR: powód odrzucenia = element konstrukcji, zgłoszony ładunek, błąd obrazu, nakładanie się ładunku, inny (własny tekst) — P13
+11:08 Projektant: krok 1 po P12/P13 — partie przeniesione do „Musi być" (najprościej), sprzeczność z §3 zamknięta; lista powodów odrzucenia ustalona

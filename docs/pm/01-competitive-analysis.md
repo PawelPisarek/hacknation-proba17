@@ -11,7 +11,7 @@ Na podstawie `docs/zadanie.md`. Data: 2026-11-20. Źródła: wyszukiwanie w siec
 ## Czego nie wiem o produkcie (stan po odpowiedziach)
 1. Wzorzec — rozstrzygnięte (P2).  2. Rola operatora — rozstrzygnięte (P3), zostaje zgodność z zadaniem §3 (P9).  3. Przeoczenie vs fałszywy alarm — rozstrzygnięte (P4).
 4. Perspektywa porównania — rozstrzygnięte (P5).  5. Cel analizy — rozstrzygnięte (P6).  6. Użytkownik, problem, zysk — rozstrzygnięte (P7).
-7. Zakres pierwszej wersji — rozstrzygnięte (P10). Otwarte: partie obrazów (P12), lista powodów odrzucenia (P13). Nazwa projektu: „Prześwit" (P11).
+7. Zakres pierwszej wersji — rozstrzygnięte (P10, P12). Powody odrzucenia — rozstrzygnięte (P13). Otwarte: brak. Nazwa projektu: „Prześwit" (P11).
 Rekomendacje i odpowiedzi: `docs/decyzje.md`.
 
 ## Rynek i kontekst
@@ -66,24 +66,25 @@ Oceniane względem wymagań zadania: **~50 MB/obraz**, **< 1 min na obraz** (§7
 - **Działanie lokalne, bez chmury**, niezależne od dostawcy skanera (.bmp z Nuctech i Multicontrol).
 - **Czytelny raport:** zaznaczone miejsca + decyzja operatora z powodem; bez oceny „winny/niewinny".
 - **Skuteczność najpierw (P4/P5):** wskazuje to, co ukryte; przeoczenie gorsze od fałszywego alarmu. Fałszywe alarmy zadanie i tak mierzy (§6), więc je raportujemy i ograniczamy, ale **nie kosztem przeoczeń** — cecha drugorzędna, nie hasło pokazu.
-- Duże pliki (~50 MB), partie (sprawa P12), < 1 min na obraz.
+- Duże pliki (~50 MB), partie w najprostszej formie (P12), < 1 min na obraz. Skalowanie na większe zbiory: jedno zdanie w opisie projektu — kolejkę obrazów można rozdzielić na wiele maszyn albo kart, bo każdy obraz liczy się osobno.
 
 ## Przepływ z operatorem (P3) a zadanie §3
 Zadanie §3: „działa samodzielnie, bez interwencji człowieka". Artur (P3): operator przy każdym miejscu zatwierdza/odrzuca z powodem. **Da się pogodzić, rozdzielając etapy:** program analizuje i zaznacza miejsca **sam** (wymóg §3), a zatwierdzenie/odrzucenie to osobny krok **po** wyniku (raport; §9: wyniki idą do repozytorium z przypisaniem do miejsca i przedmiotu kontroli). **P9** do Artura („A czy B?"): A — analiza sama, decyzja operatora na wyniku (rekomendacja); B — operator uczestniczy już w trakcie analizy.
 **Konkurenci:** w znalezionych źródłach brak opisu zatwierdzania z powodem (Rapiscan opisuje tryby analizy, nie przepływ operatora) — nasz przepływ to potencjalna przewaga **(założenie, niezbadane)**. Operator ma kilka minut na auto (P7) — zatwierdzenie musi być szybkie (jedno kliknięcie + powód z listy).
 
-## Zakres pierwszej wersji (P6) — zaakceptowany przez Artura (P10, 11:04): duży obraz ~50 MB działa od pierwszej wersji, partie mogą poczekać
+## Zakres pierwszej wersji (P6) — zaakceptowany przez Artura (P10, P12): duży obraz ~50 MB i proste partie od pierwszej wersji
 | Musi być | Później | Odpada |
 |---|---|---|
-| wczytanie obrazu .bmp (~50 MB), < 1 min | partie wielu obrazów, skalowanie | wykrywanie konkretnej kontrabandy (papierosy itd.) |
-| rozpoznanie typu naczepy i dobór wzorca z biblioteki | wzorce osobno na dostawcę skanera | porównanie z deklaracją/manifestem |
-| zaznaczenie miejsc na obrazie i raport | zapis wyników w repozytorium KAS | ocena „winny/niewinny" przez program |
-| zatwierdzenie/odrzucenie miejsca z powodem (P3) | uczenie z powodów odrzucenia | integracja ze skanerami |
-| wynik na obrazach czystych i z „dodatkami" (§6) | | działanie w chmurze |
+| wczytanie obrazu .bmp (~50 MB), < 1 min | wzorce osobno na dostawcę skanera | wykrywanie konkretnej kontrabandy (papierosy itd.) |
+| partie (P12): operator wskazuje kilka obrazów, program liczy je po kolei i oddaje listę wyników | rozbudowane skalowanie na duże zbiory (tylko opisane jednym zdaniem) | porównanie z deklaracją/manifestem |
+| rozpoznanie typu naczepy i dobór wzorca z biblioteki | zapis wyników w repozytorium KAS | ocena „winny/niewinny" przez program |
+| zaznaczenie miejsc na obrazie i raport | uczenie z powodów odrzucenia | integracja ze skanerami |
+| zatwierdzenie/odrzucenie miejsca z powodem z listy (P3, P13) | | działanie w chmurze |
+| wynik na obrazach czystych i z „dodatkami" (§6) | | |
 
-## Dwie sprzeczności zakresu z zadaniem — do rozstrzygnięcia przez Artura
-1. **Partie obrazów.** Zakres z P10 odkłada „partie wielu obrazów, skalowanie" na później, a zadanie §3 wymaga wprost: *kompresji, przetwarzania partiami i skalowalności*. To sprzeczność zakresu z zadaniem. Pytanie **P12** („A: partie w pierwszej wersji, B: później?"), rekomendacja A — zadanie tego wymaga wprost. Do odpowiedzi tabela zakresu zostaje jak w P10 (nie zmieniam zatwierdzonego).
-2. **Powód odrzucenia miejsca (P3).** Artur chce, by odrzucając, operator podawał powód. Pytanie **P13**: lista gotowych powodów (np. „element konstrukcji", „zgłoszony ładunek", „błąd obrazu") + pole „inny" z własnym tekstem, czy sam własny tekst? Rekomendacja: lista + „inny" (szybciej przy kilku minutach na auto, P7). `PARAMETR: powód odrzucenia — do Artura (P13)`.
+## Dwie sprzeczności zakresu z zadaniem — rozstrzygnięte przez Artura
+1. **Partie obrazów — rozstrzygnięte (P12, A).** Zakres z P10 odkładał partie na później, a zadanie §3 wymaga wprost kompresji, przetwarzania partiami i skalowalności. Artur: partie są w pierwszej wersji, w najprostszej formie (kilka obrazów po kolei, lista wyników), bez rozbudowanego skalowania — to ma jedno zdanie w opisie. Sprzeczność z §3 zamknięta; skalowalność pokazujemy opisem, nie kodem.
+2. **Powód odrzucenia miejsca — rozstrzygnięte (P13, A).** Lista powodów: element konstrukcji, zgłoszony ładunek, błąd obrazu, nakładanie się ładunku (najczęstsza pomyłka wg Artura), inny (własny tekst). `PARAMETR: powód odrzucenia = lista (element konstrukcji, zgłoszony ładunek, błąd obrazu, nakładanie się ładunku, inny z tekstem) — P13`.
 
 ## Pozycjonowanie (rekomendacja)
 „Asystent operatora RTG: pokazuje na obrazie naczepy, co różni się od wzorca typu — lokalnie i szybko, z naciskiem na to, by nie przeoczyć skrytki." Unikamy: obietnicy wykrywania konkretnej kontrabandy i „decyzji bez człowieka" po stronie wyniku. Obserwować: oprogramowanie Nuctech (źródło obrazów KAS) i narzędzie papierosowe KAS.
