@@ -1,5 +1,5 @@
-# Stan — 16:43
-Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
+# Stan — 19:02
+Kamień: MVP na hacknation.ksefbot.pl (koniec próby po MVP): 40 → 29 → 28 → 27 → odbiór → Artur: uproszczenia + 1 dorobienie. Makieta i hacktribe gotowe.
 
 | zadanie | kto | status |
 |---|---|---|
@@ -9,6 +9,7 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | krok 8 wizja (08-wizja.md) | Projektant | zamknięte (R3 czysto 15:28) → zadanie 35 Prezenter |
 | 22 makieta R2 | Programista | zamknięte; krytyk 7/10; Artur P73–P78 (14:38) |
 | 34 makieta R3 (P73 A, P74 A, P76 A, P77 A, P79 B, brak 7) | Programista | zamknięte; poprawki krytyka R3 (8/10, runda 3 z 3) + P80 A w r3 15:23, r3 200 — makieta zamknięta |
+| 40 strona pod linkiem: ramki, lupa, wzorzec obok, podpowiedź | Programista | zlecone 19:02; potem 29 → 28 → 27 |
 | 21 wdrożenie strona + usługa (P43 A) | Paweł → Programista, Analityk | merge do main 19acef7 (Programista 16:39, testy OK, Coolify z main); odbiór z zewnątrz (Analityk) w toku |
 | 30 odbiór A1–A14 + spójność | Analityk | zamknięte 15:34: 5 zal., A4 NIE → 36 (Programista); 37 spójność zamknięte (Projektant); poprawki Prezentera zamknięte 90212aa |
 | przejście demo na r3 | Analityk | zamknięte 15:54 (0666dd9): K1–K6, K8 OK; M1 = P83 A → Programista po 36; D1 zamknięte 707426a; 06 zamknięte; przeliczenie odbioru zamknięte 083f04d (6/15, NIE brak); manifest czasy 109 s + A4 niezależnie → Analityk |
