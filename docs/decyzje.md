@@ -668,3 +668,4 @@ P88 20:10 odpowiedź: tak (Artur w pokoju) — wzorce 3 rodzajów, cysterna bez
 P89 20:10 odpowiedź: tak (Artur w pokoju) — raport jako plik, bez wysyłki i bez ekranu kierownika
 P90 20:10 odpowiedź: tak, ale 45 s mówimy na pokazie wprost (Artur w pokoju) — wpis dla Prezentera i demo.md
 P91 20:10 odpowiedź: D1 — miniatura z zaznaczonymi miejscami w raporcie, robić od razu (Artur w pokoju); D2 i D3 odpadają
+20:10 Szef: P87–P91 odpowiedzi Artura przyjęte; zadanie 43 (D1 miniatura w raporcie) założone → Programista po porównaniu CLI; P90 → Prezenter: 45 s wprost w demo.md i README; Analityk: lista odbioru 43
