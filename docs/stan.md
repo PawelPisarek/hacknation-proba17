@@ -1,15 +1,15 @@
-# Stan — 14:36
+# Stan — 14:37
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
 |---|---|---|
 | zamknięte (start + łańcuch 0–6 + 20, 23, 31, 33) | zespół | 01–04, 05–18 (sondy Z1–Z14; Z12/Z14 przegląd po R1), 19, 20 (v3: FN 7,8%/9,7% ≤10%, ramki 5,8/6,25, 4beef05), 23 (ramki/lista + mvp/widok-auta, 7/7 testów, 6454220), 31 (17/17 OK, 8517f28), 33 (brak wzorca sr<0,80: 50/50 cystern, 0 strat, 6454220), kroki 0–6, README, hacktribe (R3; przepisany pod P57–P72 d3a232b, opis 854/1000 zn.; link r2 sprawdzić po zad. 22 przed 20:00), warianty (P36 C+B), makieta R1 (krytyk 6/10) |
 | P57–P72 w spec, 06 i 07 | Projektant | P57–P72 w spec/06 (103b1a2) + P60 B/P69 A w 07 R3/R9 (d4d4bda) |
-| krok 7 /pre-mortem (07-pre-mortem.md) | Projektant | R2 domknięte 14:04 → recenzja R3 (Analityk, po 32) |
+| krok 7 /pre-mortem (07-pre-mortem.md) | Projektant | zamknięty po R3 14:37; do wpisania liczby v3 (zad. 20), czasy 1,73/2,09 s, termin zad. 32 — bez recenzji |
 | 22 makieta R2 | Programista | zamknięte 14:14; krytyk R2 7/10 (7 braków, krytyk-r2.md) → Projektant: przegląd Artura + braki 1–6 jako P → R3 Programista po odpowiedziach |
 | 21 wdrożenie strona + usługa (P43 A) | Paweł | w toku od 13:00 |
 | 30 odbiór A1–A14 + spójność P60 B + demo.md | Analityk (kolejka) | po 32 i recenzji kroku 7 R3 |
-| 32 progi słów (P49 A) | Analityk | w toku od 14:04 (przerwane wywłaszczeniem OMENa 14:34, wznawia po krytyku R2) → krok 7 R3 → 30 |
+| 32 progi słów (P49 A) | Analityk | w toku od 14:04 (przerwane wywłaszczeniem OMENa 14:34, wznawia po krytyku R2) → 30 |
 | 24–29 funkcje (P34) | Programista | 24 zamknięte 14:31 (A1 0,0 px) → 25 wzorzec w toku od 14:32 (+ końcowe położenie wzorca) → 26 → 27 → 28 → 29; wdrożenie na ksefbot.pl po 21 |
 | docs/demo.md + slajdy | Prezenter | R2: demo 113 s link r2, slajdy R2 10 str., hacktribe bez dopisku (ec96bf7) → recenzja Analityk (zad. 30, kolejność aut R2 vs demo) |
 

@@ -435,3 +435,4 @@ P76 14:37 Artur: powiększenie 4× na miejscu 6 bez ramki i numeru. A: zostaje r
 P77 14:37 Artur: auto 4 komunikat „wpisz nr rej. i Enter” poza polem. A: przy polu „Nr rej.” i z nazwą przycisku „Zamknij auto”; B: zostaje. Rekomendacja: A — czeka
 P78 14:37 Artur: co z ekranu wyrzucić po przeglądzie R2? Rekomendacja: nic poza P66 — czeka
 14:37 Projektant: brak 7 krytyka R2 (wiersz „auto 8 · wynik przykładowy” w raporcie) — techniczny, do Programisty; progi słów z zadania 32 dojdą do Artura jako P49
+14:37 Szef: krok 7 R3 (wpis Analityka z godziną „14:50” — faktycznie ok. 14:37) — braki R2 domknięte; 3 nowe braki to nieaktualne liczby i termin (v2 → v3 z zad. 20, Z9 → 1,73/2,09 s, termin zad. 32 → przed przeglądem Artura). Krok 7 zamknięty po 3 rundach (P28): Projektant wpisuje liczby v3 do 07 bez kolejnej recenzji; brak 1 (cel na trudnym zestawie 6,25 vs 6 — minimalnie niespełniony) idzie do Artura jako informacja w wiadomości przeglądu R2.
