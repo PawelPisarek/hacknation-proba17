@@ -685,3 +685,5 @@ P92 20:28 Artur: miniatura auta w raporcie na stronie jest mała (ok. 200 px) i 
 P92 20:28 odpowiedź: A — powiększamy miniaturę na stronie jak w pobranym raporcie; jury patrzy na stronę, numery miejsc mają być czytelne (Artur w pokoju)
 08:01 Szef: faza 2 — zamrożenie funkcji minęło (07:00); zadania 44 (P92 A miniatura na stronie), 45 usługa na stałe, 46 materiały wersja końcowa, 47 krytyk slajdów, 48 przejście pokazu na linku, 49 wersja „działa na pewno”; lista pod ocenę 50–54 → Paweł wybiera (P93)
 P93 08:01 Paweł: które poprawki pod ocenę robimy do 10:00 — 50 wykres przeoczenia vs fałszywe ramki, 51 opis fałszywych alarmów, 52 „co nowego”, 53 skalowanie (auta/h, nowe rodzaje), 54 strojenie ramek trudnego zestawu (zmiana programu po zamrożeniu)? (rekomendacja: 50–53, bez 54) — czeka
+P93 08:03 odpowiedź: 50–53, bez 54 — po zamrożeniu nie ruszamy programu (Paweł)
+08:03 Szef: 50 → Analityk (po 47/48), 51–53 → Prezenter (po 46), 53 recenzja Projektant, 52 recenzja Analityk; 54 porzucone

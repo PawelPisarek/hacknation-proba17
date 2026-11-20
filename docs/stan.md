@@ -10,10 +10,10 @@ Kamień: 10:30 materiały (README, hacktribe finalny, slajdy, demo.md, wersja �
 | 47 krytyk slajdów | Analityk → Prezenter | zlecone |
 | 48 przejście pokazu na linku | Analityk | zlecone (po 45) |
 | 49 wersja „działa na pewno” (znacznik final) | Programista | po 44 |
-| 50–53 poprawki pod ocenę (materiały) | Analityk 50, Prezenter 51–53 | czeka na P93 |
-| 54 strojenie ramek (opcja) | Programista | czeka na P93 (rek.: nie) |
+| 50–53 poprawki pod ocenę (P93: tak) | Analityk 50, Prezenter 51–53 | zlecone |
+| 54 strojenie ramek | — | porzucone (P93: nie ruszamy programu) |
 
 Ustalenia Artura: P2–P92 (P92 A — miniatura na stronie jak w pliku).
-Otwarte pytania: P93 (Paweł, 08:01).
+Otwarte pytania: brak (P93 → 50–53).
 Przegląd Pawła: materiały i pokaz — prośba po 46/47.
 Lista Artura na noc: pusta (D1 zrobione, P92 → 44).
