@@ -311,12 +311,12 @@ async function miniatura(a) {   // → PNG jako data: URL (wklejany też do rapo
   c.width = MINI_SZER; c.height = Math.round(im.naturalHeight * MINI_SZER / im.naturalWidth);
   const g = c.getContext("2d"), sx = c.width / (a.szer || im.naturalWidth), sy = c.height / (a.wys || im.naturalHeight);
   g.drawImage(im, 0, 0, c.width, c.height);
-  g.lineWidth = 2; g.font = "bold 10px system-ui, sans-serif";
+  g.lineWidth = 2; g.font = "bold 13px system-ui, sans-serif";   // zad. 44 (P92 A): numery czytelne przy 320 px
   ms.forEach((m, i) => {
     const x = m.x0 * sx, y = m.y0 * sy, w = Math.max(4, (m.x1 - m.x0) * sx), h = Math.max(4, (m.y1 - m.y0) * sy);
     g.strokeStyle = KOLOR_RAMKI; g.strokeRect(x, y, w, h);
-    const t = String(i + 1), tw = g.measureText(t).width + 4, ty = y >= 12 ? y - 12 : Math.min(c.height - 12, y + h);
-    g.fillStyle = KOLOR_RAMKI; g.fillRect(x, ty, tw, 12); g.fillStyle = "#fff"; g.fillText(t, x + 2, ty + 10);
+    const t = String(i + 1), tw = g.measureText(t).width + 4, ty = y >= 16 ? y - 16 : Math.min(c.height - 16, y + h);
+    g.fillStyle = KOLOR_RAMKI; g.fillRect(x, ty, tw, 16); g.fillStyle = "#fff"; g.fillText(t, x + 2, ty + 13);
   });
   a.mini = { klucz, url: c.toDataURL("image/png") }; return a.mini.url;
 }
@@ -325,9 +325,9 @@ function rysujE7() {
   const w = wierszeRaportu();
   $("r-id").textContent = "· " + S.idKontroli;
   $("r-naglowek").textContent = `${S.kto} · ${S.miejsce} · ${w.length} aut · ${S.zamknieta ? "partia zamknięta" : "partia otwarta"}`;
-  $("r-wiersze").innerHTML = w.map((r) => `<tr data-auto="${r.auto}"><td><img class="rmini" alt="auto ${r.auto} — miniatura z miejscami">${r.bez_wzorca ? '<div class="szary">brak wzorca</div>' : ""}</td><td>auto ${r.auto}${r.wynik_przykladowy ? `<br><span class="szary">${PRZYKLAD}</span>` : ""}</td><td>${r.nr_rej ? esc(r.nr_rej) : '<span class="szary">—</span>'}</td><td>${r.rodzaj_programu}</td><td>${r.rodzaj_operatora || "—"}</td>
-    <td>${r.liczba_miejsc}</td><td>${r.decyzje.map((d) => `${d.nr}: ${d.decyzja}${d.powod ? " (" + esc(d.powod) + ")" : ""}`).join("<br>") || (r.bez_wzorca ? BW_RECZNIE : stanBezMiejsc(r))}</td>
-    <td>${r.kto}</td><td>${r.miejsce_kontroli}</td><td>${r.data_godzina}</td></tr>`).join("");
+  $("r-wiersze").innerHTML = w.map((r) => `<tr data-auto="${r.auto}"><td data-l="Obraz"><img class="rmini" alt="auto ${r.auto} — miniatura z miejscami">${r.bez_wzorca ? '<div class="szary">brak wzorca</div>' : ""}</td><td data-l="Auto">auto ${r.auto}${r.wynik_przykladowy ? `<br><span class="szary">${PRZYKLAD}</span>` : ""}</td><td data-l="Nr rej.">${r.nr_rej ? esc(r.nr_rej) : '<span class="szary">—</span>'}</td><td data-l="Rodzaj programu">${r.rodzaj_programu}</td><td data-l="Rodzaj operatora">${r.rodzaj_operatora || "—"}</td>
+    <td data-l="Miejsca">${r.liczba_miejsc}</td><td data-l="Decyzje">${r.decyzje.map((d) => `${d.nr}: ${d.decyzja}${d.powod ? " (" + esc(d.powod) + ")" : ""}`).join("<br>") || (r.bez_wzorca ? BW_RECZNIE : stanBezMiejsc(r))}</td>
+    <td data-l="Kto">${r.kto}</td><td data-l="Miejsce kontroli">${r.miejsce_kontroli}</td><td data-l="Data i godzina decyzji">${r.data_godzina}</td></tr>`).join("");
   autaRaportu().forEach((a) => miniatura(a).then((u) => { const i = document.querySelector(`#r-wiersze tr[data-auto="${a.id}"] img.rmini`); if (i) i.src = u; }).catch(() => {}));
   $("zapisz").style.display = S.zamknieta ? "none" : ""; $("r-nowa").style.display = S.zamknieta ? "" : "none";
   const braki = w.filter((r) => r.brak_decyzji);
