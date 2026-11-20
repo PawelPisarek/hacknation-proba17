@@ -28,7 +28,7 @@ python ocena/ocena.py --manifest dane/mini/manifest.json --wyniki wyniki/mini/wy
 - fałszywe alarmy (obrazy czyste z ≥1 ramką): 24/32 / 38/40; ramki na czystym trudnym śr. 12,9 (cel ≤ 6 — niespełniony);
 - dobór wzorca: 64/64 / 80/80; czas na obraz 50 MB: śr. 0,91 s, maks. 1,30 s.
 
-Metoda bazowa (zwykły / trudny, wpis 11:46): fałszywe alarmy 32/32 i 36/40, przeoczenia 8/64 i 11/62, dobór 64/64 i 79/80; czas na obraz średnio 3,8 s i 1,6 s (trudny maks. 4,8 s); pełny obraz 50 MB: 5,0 s śr., 8,1 s maks. (zwykły, siatka 24 konfiguracji naraz) i 1,7 s śr. (trudny). Baza ma więc mniej przeoczeń na zwykłym, ale więcej fałszywych alarmów niż v2. Liczby to wyniki wewnętrzne zespołu, nie gwarancja skuteczności.
+Metoda bazowa (zwykły / trudny, wpis 11:46): fałszywe alarmy 32/32 i 36/40, przeoczenia 8/64 i 11/62, dobór 64/64 i 79/80; czas na obraz — zwykły: śr. 3,8 s, a pełny 50 MB śr. 5,0 s (maks. 8,1 s; siatka 24 konfiguracji naraz); trudny: śr. 1,6 s (maks. 4,8 s), a pełny 50 MB śr. 1,7 s. Baza ma więc mniej przeoczeń na zwykłym, ale więcej fałszywych alarmów niż v2. Liczby to wyniki wewnętrzne zespołu, nie gwarancja skuteczności.
 
 ## Dane
 
