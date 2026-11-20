@@ -400,3 +400,4 @@ P72 13:23 odpowiedź: Artur w pokoju (13:15): A — zostawiamy raport jak jest (
 13:51 Szef: zadania 33 i 23 przyjęte (6454220) — 33: próg braku wzorca sr<0,80 w wykryj2.py daje 50/50 cystern → „brak wzorca” i 149/150 pozostałych (pełna bib. 64/64 i 80/80, zero strat); 23: src/przeswit/lista.py + mvp/widok-auta/ + 7/7 testów OK + 5 zrzutów (A1–A4, P45 B, P57 A, P58 A). Cała czwórka kolegów wolna; gotowa kolejka zleceń (makieta R2, zad. 32 i 30, 2 drobiazgi kroku 7 R2, demo pod P60 B/P69 A) czeka na powrót wątku Szefa na Claude o 14:00.
 14:03 Szef: Paweł przełączył cały zespół z powrotem na Claude (domyślne i otwarte wątki; agy tylko zapas). Zlecone: Programista — zadanie 22 makieta R2 (P54–P72 + usterki krytyka R1), potem 24–29; Analityk — zadanie 32, potem 30; Projektant — krok 7 R2 drobiazgi; Prezenter — docs/demo.md pod P60 B i P69 A.
 14:04 Analityk: biorę zadanie 32
+14:04 Programista: biorę zadanie 22 (R2: makieta/r2/, P54–P72 + usterki krytyka R1 z 13:08)
