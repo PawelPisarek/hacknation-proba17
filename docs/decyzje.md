@@ -10,3 +10,11 @@ P1 10:56 Paweł: kto jest kim — jakie podpisy urządzeń mają Twoje i Artura 
 10:57 Szef: zadania 01 (generator danych) i 02 (ocena + wynik bazowy) założone w docs/zadania/.
 P1 10:58 odpowiedź: Paweł — technika (rozmowa z Szefem), Artur — produkt (pokój Produkt); nikt więcej; podpisy urządzeń nieważne — kto pisze w pokoju, to Artur.
 10:58 Programista: biorę zadanie 02
+10:59 Projektant: krok 1 — pominięte (język ekranu, praca bez internetu, sztuczne dane) — z zadania: pkt 9 i uwaga ludzi
+P2 10:59 Artur: wzorzec do porównania — obraz tego samego pojazdu bez ładunku, czy wzorzec dla typu pojazdu (np. naczepa firanka)? Rekomendacja: ten sam pojazd, gdy jest; inaczej wzorzec typu — czeka
+P3 10:59 Artur: gdy program wskaże miejsca, operator tylko je ogląda i sam decyduje, czy ma też zatwierdzać/odrzucać każde? Rekomendacja: tylko ogląda i decyduje — czeka
+P4 10:59 Artur: co gorsze — przeoczyć ukryty przedmiot czy fałszywy alarm na czystej naczepie? Rekomendacja: przeoczenie gorsze, ale liczba fałszywych alarmów ma być mała i widoczna w pokazie — czeka
+P5 10:59 Artur: według czego porównujemy się z innymi rozwiązaniami? Rekomendacja: co program wskazuje i jak pokazuje to operatorowi (nie cena) — czeka
+P6 10:59 Artur: do czego posłuży analiza konkurencji? Rekomendacja: do opisu projektu i wyboru, co ma umieć pierwsza wersja — czeka
+P7 10:59 Artur: kto jest użytkownikiem, jaki ma problem i co zyska? Rekomendacja: operator RTG na granicy; małe skrytki w konstrukcji pojazdu umykają; zyska wskazane miejsca do kontroli fizycznej — czeka
+P8 10:59 Artur: czy konkurenci w analizie są właściwi (producenci skanerów i ich oprogramowanie + obecne narzędzie do papierosów)? Rekomendacja: tak — czeka
