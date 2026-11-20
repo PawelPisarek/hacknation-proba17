@@ -1,4 +1,4 @@
-# Stan — 08:06 (faza 2)
+# Stan — 08:08 (faza 2)
 Kamień: 10:30 materiały (README, hacktribe finalny, slajdy, demo.md, wersja „działa na pewno”); 10:00 ostatnie wdrożenie; 11:00 zgłoszenie. Link https://hacknation.ksefbot.pl/ 200.
 
 | zadanie | kto | status |
@@ -10,11 +10,11 @@ Kamień: 10:30 materiały (README, hacktribe finalny, slajdy, demo.md, wersja �
 | 47 krytyk slajdów | Analityk → Prezenter | zlecone |
 | 48 przejście pokazu na linku | Analityk | zlecone (po 45) |
 | 49 wersja „działa na pewno” (znacznik final) | Programista | po 44 |
-| 50–53 poprawki pod ocenę (P93: tak) | Analityk 50, Prezenter 51–53 | 50 zlecone; 51–52 recenzja 1 (Analityk); 53 R1: 4 braki → Prezenter poprawia |
+| 50–53 poprawki pod ocenę (P93: tak) | Analityk 50, Prezenter 51–53 | 50 zlecone; 51–52 recenzja 1 (Analityk); 53 R2 → Projektant |
 | 54 strojenie ramek | — | porzucone (P93: nie ruszamy programu) |
 
 Ustalenia Artura: P2–P92 (P92 A — miniatura na stronie jak w pliku).
 Otwarte pytania: brak (P93 → 50–53).
 Przegląd Pawła: materiały i pokaz — prośba po 46/47.
 Lista Artura na noc: pusta (D1 zrobione, P92 → 44).
-POM-1 (przed/po na slajdzie wyników) — Projektant pyta Artura przy przeglądzie slajdów.
+POM-1 na slajdzie 6 (bez decyzji) → Projektant pyta Artura A/B, rek. B.
