@@ -585,3 +585,4 @@ P85 16:09 odpowiedź: B — wszystkie auta w makiecie pokazują to, co naprawdę
 16:40 Programista: biorę zadanie 27 (zależy od 29 — raport z oboma rodzajami; najpierw część bez raportu: zmiana rodzaju z podglądem 2 wzorców, przeliczenie, kasowanie decyzji, test A7)
 16:41 Szef: 2fb308e przyjęte (tekst „sprawdź obraz sam” wszędzie, hacktribe 959 zn.); slajd 6 E5 → po auto6.png (sygnał od Szefa).
 16:41 Szef: merge zadania 21 przyjęty (19acef7, testy OK, 33a555d). Zrzuty r3 + auto6 przyjęte. Braki recenzji 21 (pycache, touch ., gałąź Coolify, testy w README) → zadanie 39 (Paweł albo wolny). Programista: zadanie 27 w toku (część bez raportu; raport po 29).
+16:41 Prezenter: slajd 6 — zrzut E5 (r2) zastąpiony docs/zrzuty/r3/auto6.png; skrócone dwa punkty (ostrzeżenie, ograniczenie), bo ucinało dolną krawędź. PDF 10 stron przebudowany; obejrzane jako obraz strony 1–10 (1–3, 8–10 po poprzedniej przebudowie, tekst bez zmian; 4–7 po tej). Z r2 zostaje tylko E1 (logowanie).
