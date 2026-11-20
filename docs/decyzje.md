@@ -157,3 +157,4 @@ P35 11:49 odpowiedź: Artur w pokoju: A — brak wzorca → nic nie zaznaczamy, 
 11:50 Projektant: R1 kroku 3 — poprawki bez pytania (zgodne z P29/P35): (1) JS1 AC5 i Z4 wg P35 A; (2) JS4 i etap 4 w 02-operator wg P29 (pomysł 7 odrzucony); (3) JS2 AC5 „cofnięcie decyzji” usunięte — nowa funkcja bez ustalenia Artura, poza zakresem; (4) Z8 liczy pierwsze 6 (P30 B), próg 90% jako założenie ⚠; (5) Z1: 8 obrazów z dodatkami w mini (nie 16).
 11:50 Projektant: krok 3 poprawiony po R1 (ba7678f)
 11:50 Szef: krok 3 poprawiony po R1 (ba7678f) → R2 (Analityk).
+11:51 Programista: zadanie 19 — przebieg na karcie sprawdza naraz: H1 tolerancja wzdłuż pojazdu (różnice egzemplarza), H2 trend kolumnowy (gradient skanu), H3 próg bezwzględny+względny, H4 odsiew słupków/poprzeczek, H5 maska ładunku + szukanie w środku, H6 odsiew małych plam; wybór: przeoczenia ≤10% na obu zestawach, potem min. ramek na czystym (ocena/wybor.py, zasada trafienia z ocena.py bez zmian).
