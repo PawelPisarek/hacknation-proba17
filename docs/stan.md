@@ -1,4 +1,4 @@
-# Stan — 16:31
+# Stan — 16:32
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -12,13 +12,13 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | 21 wdrożenie strona + usługa (P43 A) | Paweł | w toku od 13:00 |
 | 30 odbiór A1–A14 + spójność | Analityk | zamknięte 15:34: 5 zal., A4 NIE → 36 (Programista); 37 spójność zamknięte (Projektant); poprawki Prezentera zamknięte 90212aa |
 | przejście demo na r3 | Analityk | zamknięte 15:54 (0666dd9): K1–K6, K8 OK; M1 = P83 A → Programista po 36; D1 zamknięte 707426a; 06 zamknięte; przeliczenie odbioru po 7 autach → Analityk po 38 |
-| 38 sonda czyste auto 0 miejsc na v3 (P82) | Analityk | zamknięte 16:30: nie ma (min. 2) → B; demo+teksty → Prezenter, spec/06 → Projektant |
+| 38 sonda czyste auto 0 miejsc na v3 (P82) | Analityk → Prezenter, Projektant | zamknięte 16:30: nie ma (min. 2) → B; demo 109 s + zdanie o czystych autach zamknięte 0d9fc42; spec/06 A3/S3/S2 76e1611, ścieżka demo (113 s, auto 4) → poprawka Projektant |
 | zgodność r3 z odpowiedziami Artura P2–P83 | Projektant → Programista | zamknięte 16:23: M1, braki 2–6, P85 B w r3 (ramki z v3: 8/6/12/8/7/0/11), r3 200; slajdy i demo zamknięte 13b32d6; spec i 06 zamknięte fe82d67; „brak wskazań” wypada (38 → B) |
 | 32 progi słów (P49 A) | Analityk | zamknięte 15:06; P79 B: słów nie ma, P49 i P75 bez przedmiotu |
 | 24–29 funkcje (P34) | Programista | 24 zamknięte 14:31 (A1 0,0 px) → 25 zamknięte 15:07 (położenie wzorców w wyniki.json, metoda bez zmian 0/32 różnic) → 26 zamknięte 15:31 (A5 540 OK, 75f266d; P81 A — teksty bez zmian) → r3 teksty P81 zamknięte 15:41 (test 32 OK) → 36 w toku (odbiór na karcie) → 27 → 28 → 29; wdrożenie na ksefbot.pl po 21 |
 | docs/demo.md + slajdy | Prezenter | 4cd0c4e: demo 113 s pod P80 A, slajdy ze zrzutami r3, hacktribe 888 zn. (znaki, nie bajty); 35 wizja w tekstach zamknięte (a23e869, 934 zn.) + slajd 7 czas programu (875d9b3); zrzuty r3 po P81 w PDF (db3a7bb) → slajd 5 wycinek kafelków czytelny w PDF, zamknięte 15:44 (a97edf8) |
 
 Ustalenia Artura: P2–P56 jak wcześniej; P57 A (6 miejsc + „i jeszcze N miejsc — pokaż”); P58 A („brak wskazań — to nie gwarancja…”); P59 A / P68 (pasek „dane sztuczne — demonstracja”); P60 B (trudny jako 7. auto w partii); P61 A („Dodaj jeden obraz” na liście); P62 A (prawdziwy wybór pliku + napis „wynik przykładowy”); P63 B (ostrzeżenie przy brakach decyzji, zapis po potwierdzeniu); P64 A (godzina decyzji per auto); P65 A („Nowa partia”); P66 A (ukryć pasek E1–E7 i „makieta R1”; porządki makiety bez pytania); P67 A (pokazać 1 pudło w makiecie); P69 A (2 miejsca w aucie 1 w demo); P70 A (2 najbliższe wzorce); P71 (nic więcej nie wyrzucamy); P72 A (miniatura w raporcie po MVP); P73 A etykiety; P74 A „obejrzane, bez wskazań”; P75 B słowa po progach; P76 A ramka w zoomie; P77 A komunikat przy polu; P78 nic nie wyrzucamy; P79 B bez słów niski/średni/wysoki, tylko kolejność (zmienia P17, P45); P80 A „program nic nie wskazał — nieotwarte” do otwarcia auta, „obejrzane” po „Zamknij auto”; błędy makiety poprawiamy bez pytania.
-Otwarte pytania: brak. P84 B (bez zmian), P85 B → Programista (ramki r3 z v3). P82 → sonda 38.
+Otwarte pytania: brak. P82 B (sonda 38: nie ma). Slajd 7 (brak wzorca) czeka na 36.
 Środowisko: limit Claude odnowiony 14:00; cały zespół z powrotem na Claude (Paweł), agy tylko zapas.
 Lista Artura na noc: miniatura z zaznaczonymi miejscami w raporcie (po MVP, P72 A).
