@@ -281,3 +281,4 @@ P49 12:55 Artur: jak mają działać słowa niski/średni/wysoki skoro progi są
 P50 12:55 Artur: co blokuje oddanie? A: blokują główna ścieżka (ramki i lupa, brak wzorca, zatwierdź/odrzuć, numer rej., raport, własny .bmp z linku); zamykanie partii może poczekać; B: blokuje wszystko, także zamykanie partii. Rekomendacja: A — czeka
 P51 12:55 Artur: co pokazujemy na demo z danych? A: partia 6 aut z dane/mini (jeden dodatek mały i jedno auto bez wzorca); B: do tego dodatkowo przypadek trudny (dodatek za ładunkiem). Rekomendacja: A — czeka
 PARAMETR: progi niski/średni/wysoki = do ustalenia na danych testowych — P49
+12:55 Szef: P45 B → zadanie 23 i makieta R1 poprawione (stałe progi); PARAMETR wartości progów → Projektant zadaje P49 Arturowi.
