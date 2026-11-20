@@ -1,27 +1,13 @@
 // Zadania 23 i 24 — MVP: widok auta (ramki na badanym + lista kafelków).
-// Zgodne z src/przeswit/lista.py: A1 (numery 1..n), A2 (kolejność malejąca, stałe progi P45 B, bez %),
+// Zgodne z src/przeswit/lista.py: A1 (numery 1..n), A2 (kolejność malejąca, bez słów i bez % — P79 B),
 // A3 (P58 A: brak wskazań — to nie gwarancja...), A4 (P35 A: brak wzorca), P57 A (6 + „i jeszcze N miejsc — pokaż”).
 (function (root) {
   const BRAK_WSKAZAN = "brak wskazań — to nie gwarancja, że auto jest czyste; obejrzyj obraz sam";
   const BRAK_WZORCA = "brak wzorca — sprawdź obraz sam";
   const LIMIT_WIDOCZNYCH = 6;
-  // PARAMETR: progi słów (siła = maks. |różnica tłumienia| w miejscu) — tymczasowe wg P45 B, do P49 / zad. 32
-  const PROGI = { wysoki: 0.6, sredni: 0.3 };
   const NAZWA_RODZAJU = { firanka: "firanka", chlodnia: "chłodnia", kontener: "kontener", cysterna: "cysterna" };
 
-  function slowo(sila, progi = PROGI) {
-    if (sila >= progi.wysoki) return "wysoki";
-    if (sila >= progi.sredni) return "średni";
-    return "niski";
-  }
-
-  function klasaSlowa(s) {
-    if (s === "wysoki") return "wysoki";
-    if (s === "średni") return "sredni";
-    return "niski";
-  }
-
-  function listaMiejsc(wynik, progi = PROGI, limit = LIMIT_WIDOCZNYCH) {
+  function listaMiejsc(wynik, limit = LIMIT_WIDOCZNYCH) {
     const konf = Object.values(wynik.konfiguracje || {})[0] || { typ_wybrany: null, wzorce: [], miejsca: [] };
     if (wynik.brak_wzorca) {
       return {
@@ -42,7 +28,6 @@
       x1: m.x1,
       y1: m.y1,
       sila: m.wynik,
-      slowo: slowo(m.wynik, progi),
     }));
     const widoczne = out.slice(0, limit);
     const ukryte = Math.max(0, out.length - limit);
@@ -142,7 +127,7 @@
           const height = (Math.max(12, m.y1 - m.y0) / wys * 100).toFixed(2);
           const akt = m.nr === wybranyNr ? " akt" : "";
           const badgeStyle = m.y0 < 24 ? ' style="top:2px;left:2px"' : "";
-          return `<button type="button" class="ramka ${klasaSlowa(m.slowo)}${akt}" data-nr="${m.nr}" style="left:${left}%;top:${top}%;width:${width}%;height:${height}%" title="Miejsce ${m.nr}: ${m.slowo}"><span${badgeStyle}>${m.nr}</span></button>`;
+          return `<button type="button" class="ramka${akt}" data-nr="${m.nr}" style="left:${left}%;top:${top}%;width:${width}%;height:${height}%" title="Miejsce ${m.nr}"><span${badgeStyle}>${m.nr}</span></button>`;
         })
         .join("");
 
@@ -161,7 +146,6 @@
                 </div>
                 <div class="opis">
                   <b>#${m.nr}</b>
-                  <span class="badge ${klasaSlowa(m.slowo)}">${m.slowo}</span>
                 </div>
               </div>`;
             })
@@ -244,7 +228,6 @@
     BRAK_WSKAZAN,
     BRAK_WZORCA,
     LIMIT_WIDOCZNYCH,
-    PROGI,
     ZOOM_PO_KLIKNIECIU,
     polozenieWzorca,
     naWzorzec,
@@ -252,7 +235,6 @@
     ramkaNaWzorcu,
     okno,
     lupa,
-    slowo,
     listaMiejsc,
     renderWidokAuta,
   };

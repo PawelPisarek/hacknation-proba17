@@ -4,7 +4,7 @@ Z wynikami usługi: WYNIKI=plik1.json:manifest1,plik2.json:manifest2
 python -m unittest testy.test_lista -v
 """
 import json, os, re, unittest
-from przeswit.lista import lista_miejsc, slowo, PROGI, BRAK_WSKAZAN, BRAK_WZORCA, LIMIT_WIDOCZNYCH
+from przeswit.lista import lista_miejsc, BRAK_WSKAZAN, BRAK_WZORCA, LIMIT_WIDOCZNYCH
 
 
 def wyn(miejsca, brak=False, typ="firanka"):
@@ -20,20 +20,12 @@ class Reczne(unittest.TestCase):
         l = lista_miejsc(wyn([0.2, 0.9, 0.45]))["miejsca"]
         self.assertEqual([m["nr"] for m in l], [1, 2, 3])
         self.assertEqual([m["sila"] for m in l], [0.9, 0.45, 0.2])
-        self.assertEqual([m["slowo"] for m in l], ["wysoki", "średni", "niski"])
 
-    def test_A2_progi_stale_wspolne(self):
-        # słaby obraz nie dostaje „wysoki” z samego podziału; ta sama siła = to samo słowo w każdym aucie (P45 B)
-        slabe = lista_miejsc(wyn([0.12, 0.15]))["miejsca"]
-        self.assertEqual({m["slowo"] for m in slabe}, {"niski"})
-        a = lista_miejsc(wyn([0.45]))["miejsca"][0]["slowo"]
-        b = lista_miejsc(wyn([0.95, 0.45, 0.1]))["miejsca"][1]["slowo"]
-        self.assertEqual(a, b)
-
-    def test_A2_bez_procentow(self):
+    def test_A2_bez_slow_P79B(self):
+        # P79 B: żadnego słowa poziomu przy miejscu — tylko numer i kolejność
         for m in lista_miejsc(wyn([0.7, 0.3, 0.1]))["miejsca"]:
-            self.assertNotIn("%", m["slowo"])
-            self.assertFalse(re.search(r"\d", m["slowo"]))
+            self.assertNotIn("slowo", m)
+            self.assertEqual(set(m), {"nr", "x0", "y0", "x1", "y1", "sila"})
 
     def test_A3_brak_wskazan_P58A(self):
         l = lista_miejsc(wyn([]))
@@ -102,9 +94,8 @@ class ZWynikow(unittest.TestCase):
                     else:
                         self.assertEqual(len(l["widoczne"]), len(ms))
                         self.assertIsNone(l["napis_wiecej"])
-                    for m in ms:                                                              # A2 stałe progi
-                        self.assertEqual(m["slowo"], slowo(m["sila"]))
-                        self.assertFalse(re.search(r"\d", m["slowo"]))
+                    for m in ms:                                                              # P79 B bez słów
+                        self.assertNotIn("slowo", m)
             print(f"\nLISTA {pw}: {n}")
 
 

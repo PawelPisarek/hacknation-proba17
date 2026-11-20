@@ -35,14 +35,8 @@ main{max-width:1280px;margin:12px auto;padding:0 12px}
 .przybl button{background:#fff;border:1px solid var(--linia);padding:2px 8px;font-size:12px;cursor:pointer}.przybl button.on{background:var(--akc);color:#fff;border-color:var(--akc)}
 .warstwa-ramek{position:absolute;inset:0}
 .ramka{position:absolute;padding:0;background:transparent;border:2px solid #f0b429;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.6)}
-.ramka.wysoki{border-color:#e03131}
-.ramka.sredni{border-color:#f08c00}
-.ramka.niski{border-color:#2f9e44}
 .ramka.akt{border-width:3px;box-shadow:0 0 0 2px #fff,0 0 0 4px var(--akc);z-index:5}
 .ramka span{position:absolute;top:-18px;left:-2px;background:#1a2230;color:#fff;font-size:11px;font-weight:700;line-height:1;padding:2px 5px;border-radius:3px}
-.ramka.wysoki span{background:#c92a2a}
-.ramka.sredni span{background:#d9480f}
-.ramka.niski span{background:#2b8a3e}
 .sekcja-listy{background:var(--karta);border:1px solid var(--linia);border-top:0;border-radius:0 0 8px 8px;padding:12px}
 .kafle-pasek{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px}
 .kaf{flex:0 0 186px;border:2px solid var(--linia);border-radius:6px;padding:6px;cursor:pointer;background:#fff;transition:border-color .15s}
@@ -52,9 +46,6 @@ main{max-width:1280px;margin:12px auto;padding:0 12px}
 .kaf .wycinek{height:66px;background-color:#111;background-repeat:no-repeat;border-radius:3px;border:1px solid #cfd6e0}
 .kaf .opis{display:flex;justify-content:space-between;align-items:center;margin-top:6px;font-size:13px}
 .badge{padding:2px 8px;border-radius:999px;font-size:12px;font-weight:600}
-.badge.wysoki{background:#fde8e8;color:#a61e1e}
-.badge.sredni{background:#fff3d6;color:#995700}
-.badge.niski{background:#e6f6ea;color:#1e6b34}
 .wiecej-pasek{margin-top:10px;padding-top:10px;border-top:1px dashed var(--linia)}
 .btn-wiecej{background:#eef3fa;color:#14468c;border:1px solid #b9d0ef;border-radius:6px;padding:7px 14px;font-size:13px;font-weight:600;cursor:pointer}
 .btn-wiecej:hover{background:#dfeaf8}
@@ -85,7 +76,7 @@ main{max-width:1280px;margin:12px auto;padding:0 12px}
 </header>
 <main>
   <div id="widok"></div>
-  <p class="stopka">Wyniki metody v2 z karty OMENa (próg jakości doboru sr &lt; 0,80 — zadanie 33). Progi słów niski / średni / wysoki są stałe i wspólne dla wszystkich aut (P45 B; wartości tymczasowe do P49 / zadania 32).</p>
+  <p class="stopka">Wyniki metody v2 z karty OMENa (próg jakości doboru sr &lt; 0,80 — zadanie 33). Miejsca w kolejności od najbardziej różnego od wzorca, bez słów poziomu (P79 B).</p>
 </main>
 <script src="widok.js"></script>
 <script>
