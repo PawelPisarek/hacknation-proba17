@@ -503,3 +503,4 @@ P81 15:31 Artur: Przy każdym miejscu na obrazie program podpowiada, co zwykle t
 15:32 Programista: oddaję zadanie 26 — gotowe. Dowód (A5, testy/test_podpowiedz.mjs na OMENie, zgl-5104): A5 podpowiedź: 484 miejsc (wyniki/z25), z opisem „zwykle tu…” 394 (81%), napis P42 90; rozbicie {"podwozie":356,"P42":90,"kabina":25,"agregat":7,"rama_gora":5,"narozniki":1}; 540 sprawdzeń — OK (każdy kafelek ma podpowiedź „zwykle tu…” albo napis P42; strefy = dane/generator/z12_z14.py). Test stanu auta (zgl-5105): 8 sprawdzeń — OK.
 15:33 Szef: zadanie 26 przyjęte (75f266d, A5 540 OK); stan otwarte-niezamknięte w r3 przyjęty (9ab5afd, 8 OK); teksty podpowiedzi czekają na P81
 P81 15:33 odpowiedź: A — ogólne opisy „zwykle tu…”, prawdziwe dla każdego obrazu; bez pokazu na ręcznie podrasowanych przykładach (Artur w pokoju)
+15:34 Szef: P81 A → MVP bez zmian (zad. 26 już ogólne); makieta r3 — ręczne opisy w dane.js na te same ogólne teksty co MVP (poprawka makiety, Programista po 27)
