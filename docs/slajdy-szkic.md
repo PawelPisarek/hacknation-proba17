@@ -7,37 +7,42 @@
 ## 1. Prześwit — tytuł
 - Narzędzie AI dla operatora RTG: porównuje obraz naczepy z wzorcem i zaznacza różnice.
 - Zespół: Hackathon · repo: github.com/PawelPisarek/hacknation-proba17
-- [zrzut: ekran główny makiety — obraz naczepy z zaznaczonym miejscem]
+- ![auto: badany i wzorzec obok siebie, kafelki miejsc](zrzuty/r1/E4a-auto-widok-c.png)
 
 ## 2. Problem
 - Operator RTG KAS ogląda obrazy naczep i musi wypatrzyć skrytkę lub dodatkowy ładunek.
 - Małe przeróbki konstrukcji (detale, skrytki) łatwo przeoczyć; obecne narzędzie do papierosów słabo radzi sobie z małymi ilościami w konstrukcji.
 - Na jedno auto operator ma kilka minut.
-- [zrzut: przykładowy obraz RTG naczepy (sztuczny) bez podpowiedzi]
+- ![sztuczny obraz RTG naczepy z dodatkiem](zrzuty/lupa_badany_pelny_firanka_dodatki_00.png)
 
 ## 3. Dla kogo
 - Operator RTG Służby Celno-Skarbowej na granicy zewnętrznej UE.
 - Zyskuje: wskazane miejsca do kontroli fizycznej, zamiast przeglądania całego obrazu „na oko”.
 - Obrazy pochodzą ze skanerów Nuctech i Multicontrol (formaty .bmp, ~50 MB).
-- [zrzut: persona / ścieżka operatora z makiety]
+- ![start zmiany: operator i stanowisko](zrzuty/r1/E1-logowanie.png)
 
 ## 4. Rozwiązanie
 - System sam dobiera wzorzec **typu pojazdu** z biblioteki (operator rzadko ma czyste zdjęcie tej samej naczepy).
 - Program dobiera wzorzec typu pojazdu; operator może zmienić rodzaj pojazdu, a analiza liczy się od nowa. Gdy brak wzorca: nic nie zaznacza, napis „brak wzorca — sprawdź obraz sam”.
 - Program zaznacza miejsca różnic; najważniejsze: nie przeoczyć; pokazujemy, ile przeoczeń i ile fałszywych alarmów.
 - Partie: operator wskazuje kilka obrazów, program liczy je po kolei i oddaje listę wyników.
-- [zrzut: obraz badany obok wzorca, z zaznaczeniami]
+- ![lista partii — wszystkie auta policzone](zrzuty/r1/E3b-partia-gotowe.png)  ![auto: obraz badany obok wzorca, z ramkami](zrzuty/r1/E4a-auto-widok-c.png)
 
 ## 5. Operator decyduje
 - Dopiero na wyniku operator przy każdym zaznaczonym miejscu zatwierdza albo odrzuca; przy odrzuceniu podaje powód.
 - Decyzje i powody zostają w raporcie.
 - Człowiek zostaje decydentem; narzędzie tylko wskazuje, gdzie patrzeć.
-- [zrzut: lista miejsc z przyciskami „zatwierdź / odrzuć” i polem powodu]
+- ![odrzucenie miejsca z powodem](zrzuty/r1/E4b-odrzuc-z-powodem.png)
 
 ## 6. Demo
-- Scenariusz ≤ 2 min: wczytaj obraz → system dobiera wzorzec → zaznaczone miejsca → decyzje operatora → raport.
-- Dane: własny, sztuczny zbiór (zdjęć KAS nie mamy).
-- [zrzut: kolejne kroki makiety]  ·  [link: makieta pod GitHub Pages / ksefbot.pl — wpisać po wdrożeniu]
+- Scenariusz ≤ 2 min (`docs/demo.md`); makieta R1: https://pawelpisarek.github.io/hacknation-proba17/makieta/r1/ (wersja na ksefbot.pl — wpisać po wdrożeniu). Dane: własny, sztuczny zbiór.
+- Wybór partii: operator wskazuje kilka obrazów .bmp i uruchamia liczenie. ![E2](zrzuty/r1/E2-wybor-partii.png)
+- Lista partii: auta liczą się po kolei, wejście w auto po policzeniu całej partii. ![E3](zrzuty/r1/E3b-partia-gotowe.png)
+- Auto: obraz badany i wzorzec obok siebie, miejsca jako kafelki, zatwierdzenie albo odrzucenie z powodem. ![E4](zrzuty/r1/E4a-auto-widok-c.png)
+- Brak wzorca: program niczego nie zaznacza i mówi „sprawdź obraz sam”. ![E5](zrzuty/r1/E5-brak-wzorca.png)
+- Zmiana rodzaju pojazdu: analiza liczy się od nowa. ![E6](zrzuty/r1/E6a-zmiana-rodzaju.png)
+- Raport partii: decyzje z powodami, zapis lokalnie. ![E7](zrzuty/r1/E7a-raport.png)
+- Ograniczenie (P52 A): dodatek za ładunkiem może nie dostać ramki — mówimy to wprost, operator ogląda obraz sam.
 
 ## 7. Jak to działa i jak to mierzymy
 - Dane: sztuczne naczepy „czyste” i z „dodatkowym ładunkiem”; duże pliki .bmp (~50 MB) i partie obrazów (lista wyników) działają już w pierwszej wersji.
