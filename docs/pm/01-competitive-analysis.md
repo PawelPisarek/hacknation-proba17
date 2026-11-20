@@ -95,3 +95,8 @@ Ryzyka 12–18 mies.: dostawcy sprzętu dodają porównanie ze wzorcem do własn
 
 <!-- skill: competitor-analysis -->
 <!-- skill: przeplywy-pm -->
+
+## Ustalenia Artura (P9–P11)
+- P9: program analizuje sam i zaznacza wszystko; operator decyduje na wyniku.
+- P10: zakres pierwszej wersji zatwierdzony; dodatkowo pojedynczy duży obraz (~50 MB) działa od razu, partie później.
+- P11: nazwa projektu „Prześwit”.

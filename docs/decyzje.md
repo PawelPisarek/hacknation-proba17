@@ -34,3 +34,6 @@ P9 11:03 Artur: zadanie wymaga, by program analizował sam, a Ty chcesz, by oper
 P10 11:03 Artur: pierwsza wersja ma mieć: wczytanie obrazu, dobór wzorca typu, zaznaczenie miejsc i raport, zatwierdzanie/odrzucanie z powodem, wynik na obrazach czystych i z dodatkami; później: partie obrazów, wzorce na dostawcę skanera; odpada: wykrywanie konkretnego towaru i porównanie z deklaracją. Zgoda czy zmieniamy? Rekomendacja: zgoda — czeka
 P11 11:03 Artur: jak nazwać projekt w formularzu zgłoszenia (szkic opisu: https://github.com/PawelPisarek/hacknation-proba17/blob/main/docs/hacktribe.md)? Opcje: „RóżnicaRTG”, „Wzorzec”, „Dwa Obrazy” albo własna. Rekomendacja: „RóżnicaRTG” — od razu mówi, co program robi — czeka
 11:04 Szef: krok 1 poprawiony po R1 (29a7f88, znaczniki są) → recenzja R2: Analityk.
+P9 11:04 odpowiedź: Artur w pokoju: A — program najpierw sam zaznacza wszystko, operator decyduje na wyniku
+P10 11:04 odpowiedź: Artur w pokoju: zgoda na zakres pierwszej wersji, ze zmianą: duży obraz (~50 MB, jak w zadaniu) działa już w pierwszej wersji; partie mogą poczekać
+P11 11:04 odpowiedź: Artur w pokoju: nazwa projektu „Prześwit” (krótko, kojarzy się z RTG, nie obiecuje cudów)
