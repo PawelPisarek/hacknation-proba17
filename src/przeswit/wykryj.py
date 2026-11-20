@@ -243,6 +243,7 @@ def main():
     ap.add_argument("--manifest", help="manifest.json: bierze wzorce i badane z niego (z prawdą typu)")
     ap.add_argument("--poziom", help="tylko obrazy danego poziomu z manifestu (mini/maly/sredni/pelny)")
     ap.add_argument("--poziom-wzorcow", help="poziom wzorców biblioteki (domyślnie = --poziom)")
+    ap.add_argument("--typ", help="rodzaj pojazdu podany przez operatora (P24): wzorzec tylko spośród tego rodzaju")
     ap.add_argument("--bez-typu", default="", help="usuń wzorce tych rodzajów z biblioteki (P16: brak wzorca rodzaju)")
     ap.add_argument("--badane", nargs="*", default=[], help="lista plików badanych (partia)")
     ap.add_argument("--wyj", required=True)
@@ -265,6 +266,9 @@ def main():
         wz = [(os.path.basename(p)[:-4], typ_z_nazwy(p), p) for p in pl]
         bad = []
     bad += [(p, None) for p in a.badane]
+    if a.typ:
+        wz = [x for x in wz if x[1] == a.typ]
+        bad = [(p, t if t else a.typ) for p, t in bad]
     konf = siatka(a.siatka)
     typy_bib = sorted({t for _, t, _ in wz})
     print(f"urządzenie: {DEV} {torch.cuda.get_device_name(0) if DEV.type == 'cuda' else ''}; wzorców {len(wz)}, "

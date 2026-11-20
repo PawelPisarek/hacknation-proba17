@@ -27,6 +27,7 @@ def ocen(man, wyn, konf, typ=None):
     prawda = {e["plik"]: e for e in man["badane"] if typ is None or e["typ_pojazdu"] == typ}
     N = M = X = Y = fm = typ_ok = n = przybl = 0
     czasy, przeoczone, alarmy = [], [], []
+    tr = {}  # rodzaj trudności -> [X, N] (czyste) albo [Y, M] (dodatki)
     for r in wyn["wyniki"]:
         e = prawda.get(r["plik"])
         if e is None:
@@ -39,17 +40,21 @@ def ocen(man, wyn, konf, typ=None):
         czasy.append(r["czas_s"])
         if e["klasa"] == "czyste":
             N += 1
+            t = tr.setdefault(("fałszywe alarmy", e.get("trudnosc")), [0, 0]); t[1] += 1
             if k["miejsca"]:
                 X += 1
+                t[0] += 1
                 alarmy.append(r["plik"])
         else:
             for d in e["dodatki"]:
                 M += 1
+                t = tr.setdefault(("przeoczenia", e.get("trudnosc")), [0, 0]); t[1] += 1
                 if not any(wspolne(m, d) >= POKRYCIE * pole(d) for m in miejsca):
                     Y += 1
+                    t[0] += 1
                     przeoczone.append(f"{r['plik']}:{d['typ']}")
             fm += sum(not any(wspolne(m, d) > 0 for d in e["dodatki"]) for m in miejsca)
-    return dict(konf=konf, X=X, N=N, Y=Y, M=M, falszywe_miejsca=fm, typ_ok=typ_ok, n=n, przybl=przybl,
+    return dict(konf=konf, X=X, N=N, Y=Y, M=M, falszywe_miejsca=fm, typ_ok=typ_ok, n=n, przybl=przybl, trudnosci=tr,
                 czas_sr=sum(czasy) / max(1, len(czasy)), czas_max=max(czasy or [0]),
                 przeoczone=przeoczone, alarmy=alarmy)
 
@@ -59,6 +64,7 @@ def main():
     ap.add_argument("--manifest", required=True)
     ap.add_argument("--wyniki", required=True, nargs="+", help="jeden lub kilka wyniki.json")
     ap.add_argument("--typ", help="licz tylko badane tego rodzaju pojazdu")
+    ap.add_argument("--najlepsze", type=int, default=0, help="pokaż tylko n najlepszych konfiguracji")
     ap.add_argument("--szczegoly", action="store_true")
     a = ap.parse_args()
     man = json.load(open(a.manifest))
@@ -70,11 +76,13 @@ def main():
             r["zrodlo"] = p
             rows.append(r)
     rows.sort(key=lambda r: (r["Y"], r["X"], r["falszywe_miejsca"]))
-    for r in rows:
+    for r in rows[: a.najlepsze or None]:
         print(f"WYNIK [{r['konf']}] fałszywe alarmy {r['X']}/{r['N']}, przeoczenia {r['Y']}/{r['M']}, "
               f"fałszywe miejsca na obrazach z dodatkami {r['falszywe_miejsca']}, "
               f"dobór typu {r['typ_ok']}/{r['n']}" + (f" (wzorzec przybliżony {r['przybl']})" if r["przybl"] else "") + f", czas na obraz śr. {r['czas_sr']:.2f} s (maks. {r['czas_max']:.2f} s)"
               f"  <{r['zrodlo']}>")
+        if any(k[1] for k in r["trudnosci"]):
+            print("   wg rodzaju trudności: " + "; ".join(f"{k[0]} [{k[1]}] {v[0]}/{v[1]}" for k, v in sorted(r["trudnosci"].items(), key=str)))
         if a.szczegoly:
             print("   przeoczone:", ", ".join(r["przeoczone"]) or "—")
             print("   alarmy na czystych:", ", ".join(r["alarmy"]) or "—")
