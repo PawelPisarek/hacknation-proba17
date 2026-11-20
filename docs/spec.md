@@ -6,7 +6,7 @@
 Operator RTG (krótki staż możliwy, P19; kilkadziesiąt aut na zmianę, P20; kilka minut na auto, P7):
 1. loguje się i raz na zmianę ustawia stanowisko (miejsce kontroli) — P22 A;
 2. wskazuje kilka obrazów .bmp (partia) — P12 A; program liczy je **po kolei** i oddaje **listę partii**;
-3. na liście widzi wiersze aut (P37 A): numer naczepy, rodzaj pojazdu, stan (czeka / liczy się / gotowe / brak wzorca), liczba miejsc, **miniatura obrazu** (P37 B, jak w makiecie B);
+3. na liście widzi wiersze aut (P37 B): numer naczepy, rodzaj pojazdu, stan (czeka / liczy się / gotowe / brak wzorca), liczba miejsc, **miniatura obrazu** (P37 B, jak w makiecie B);
 4. wchodzi w auto **dopiero gdy cała partia jest policzona** (P38: pomysł 7 odrzucony w P29);
 5. w aucie widzi **dwa obrazy obok siebie**: badany z ponumerowanymi ramkami i wzorzec tego samego rodzaju; przewijanie i przybliżanie wspólne (lupa, pomysł 3);
 6. pod obrazami **kafelki miejsc** od najbardziej różnego, przy każdym jedno słowo niski / średni / wysoki, bez procentów (P17);
