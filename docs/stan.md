@@ -12,7 +12,7 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | 21 wdrożenie strona + usługa (P43 A) | Paweł | w toku od 13:00 |
 | 30 odbiór A1–A14 + spójność | Analityk | zamknięte 15:34: 5 zal., A4 NIE → 36 (Programista); 37 spójność zamknięte (Projektant); poprawki Prezentera zamknięte 90212aa |
 | przejście demo na r3 | Analityk | zamknięte 15:54 (0666dd9): K1–K6, K8 OK; M1 = P83 A → Programista po 36; D1 zamknięte 707426a; 06 zamknięte; przeliczenie odbioru po 7 autach → Analityk po 38 |
-| 38 sonda czyste auto 0 miejsc na v3 (P82) | Analityk → Prezenter, Projektant | zamknięte 16:30: nie ma (min. 2) → B; demo 109 s + zdanie o czystych autach zamknięte 0d9fc42; spec/06 A3/S3/S2 76e1611, ścieżka demo (113 s, auto 4) → poprawka Projektant |
+| 38 sonda czyste auto 0 miejsc na v3 (P82) | Analityk → Prezenter, Projektant | zamknięte 16:30: nie ma (min. 2) → B; demo 109 s + zdanie o czystych autach zamknięte 0d9fc42; spec/06/07 zamknięte 822a95b (109 s) |
 | zgodność r3 z odpowiedziami Artura P2–P83 | Projektant → Programista | zamknięte 16:23: M1, braki 2–6, P85 B w r3 (ramki z v3: 8/6/12/8/7/0/11), r3 200; slajdy i demo zamknięte 13b32d6; spec i 06 zamknięte fe82d67; „brak wskazań” wypada (38 → B) |
 | 32 progi słów (P49 A) | Analityk | zamknięte 15:06; P79 B: słów nie ma, P49 i P75 bez przedmiotu |
 | 24–29 funkcje (P34) | Programista | 24 zamknięte 14:31 (A1 0,0 px) → 25 zamknięte 15:07 (położenie wzorców w wyniki.json, metoda bez zmian 0/32 różnic) → 26 zamknięte 15:31 (A5 540 OK, 75f266d; P81 A — teksty bez zmian) → r3 teksty P81 zamknięte 15:41 (test 32 OK) → 36 w toku (odbiór na karcie) → 27 → 28 → 29; wdrożenie na ksefbot.pl po 21 |
