@@ -1,4 +1,4 @@
-# Stan — 15:55
+# Stan — 15:56
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -18,6 +18,6 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | docs/demo.md + slajdy | Prezenter | 4cd0c4e: demo 113 s pod P80 A, slajdy ze zrzutami r3, hacktribe 888 zn. (znaki, nie bajty); 35 wizja w tekstach zamknięte (a23e869, 934 zn.) + slajd 7 czas programu (875d9b3); zrzuty r3 po P81 w PDF (db3a7bb) → slajd 5 wycinek kafelków czytelny w PDF, zamknięte 15:44 (a97edf8) |
 
 Ustalenia Artura: P2–P56 jak wcześniej; P57 A (6 miejsc + „i jeszcze N miejsc — pokaż”); P58 A („brak wskazań — to nie gwarancja…”); P59 A / P68 (pasek „dane sztuczne — demonstracja”); P60 B (trudny jako 7. auto w partii); P61 A („Dodaj jeden obraz” na liście); P62 A (prawdziwy wybór pliku + napis „wynik przykładowy”); P63 B (ostrzeżenie przy brakach decyzji, zapis po potwierdzeniu); P64 A (godzina decyzji per auto); P65 A („Nowa partia”); P66 A (ukryć pasek E1–E7 i „makieta R1”; porządki makiety bez pytania); P67 A (pokazać 1 pudło w makiecie); P69 A (2 miejsca w aucie 1 w demo); P70 A (2 najbliższe wzorce); P71 (nic więcej nie wyrzucamy); P72 A (miniatura w raporcie po MVP); P73 A etykiety; P74 A „obejrzane, bez wskazań”; P75 B słowa po progach; P76 A ramka w zoomie; P77 A komunikat przy polu; P78 nic nie wyrzucamy; P79 B bez słów niski/średni/wysoki, tylko kolejność (zmienia P17, P45); P80 A „program nic nie wskazał — nieotwarte” do otwarcia auta, „obejrzane” po „Zamknij auto”; błędy makiety poprawiamy bez pytania.
-Otwarte pytania: brak. P82 15:39 Artur: A tylko bez sztuczek, inaczej B z opisem → sonda 38.
+Otwarte pytania: brak. P82 → sonda 38. P83 15:56 Artur A (ostrzeżenie przy zamknięciu partii) → Programista M1.
 Środowisko: limit Claude odnowiony 14:00; cały zespół z powrotem na Claude (Paweł), agy tylko zapas.
 Lista Artura na noc: miniatura z zaznaczonymi miejscami w raporcie (po MVP, P72 A).
