@@ -764,3 +764,4 @@ P100 08:36 Paweł: przegląd materiałów (link, demo.md, README, hacktribe, sla
 
 ### 08:37 — Prezenter: oddaję poprawki krytyka R3, braki 3–5 (zlecenie c67bb63d)
 3) Slajd 6 i wykres: „wersja z nocy / pierwsza / końcowa” → „pierwsze podejście”, „drugie podejście”, „podejście końcowe (w programie)”; w tekście: kwadrat i linia przerywana = wcześniejsze podejścia. 4) Slajd 9: tabela bez powtórzeń (1 zdanie wstępne + tabela 2 wiersze); kolumna KAS ma źródło (zadanie §1), dostawcy oznaczeni „założenie”, komórka „Decyzja: —” usunięta. 5) Slajd 1: punkty 1 i 2 połączone, większa czcionka, dół wypełniony. PDF 10 slajdów, żaden nie przepełnia. Nie ruszone: braki 1–2 (slajd 7 raport, napis „kilka sekund” w programie — produkt). Niesprawdzone: render HTML, nie plik PDF.
+08:37 Szef: braki techniczne R3 (3–5) poprawione przez Prezentera (28a14ca); czekamy na P98/P99 (Artur), potem Prezenter
