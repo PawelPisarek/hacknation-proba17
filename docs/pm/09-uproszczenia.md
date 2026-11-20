@@ -1,6 +1,6 @@
 # 09 — Uproszczenia MVP i wybór dorobienia (wiadomość do Artura — NIE WYSŁANA)
 
-Stan: R3 po recenzji 09 R2 (4 braki, `docs/odbior.md`). Czeka na sygnał Szefa po odbiorze MVP. Numery P nadam przy wysyłce (następne wolne po P85); tu robocze U1–U3, I1–I3 i D.
+Stan: R4 — dopasowane do strony pod linkiem po odbiorach 40, 29, 41, 42 i oddaniu 28 (19:51); zmiana rodzaju (27) zostaje „będzie”. Czeka na sygnał Szefa po odbiorze MVP. Numery P nadam przy wysyłce (następne wolne po P85); tu robocze U1–U3, I1–I3 i D.
 Źródła: `docs/spec.md` §8–10, `docs/zadania/23–29, 40–42`, wpisy UPROSZCZENIE w `docs/decyzje.md`, odpowiedzi P2–P85, `docs/odbior.md`.
 
 ## Czego nie wiem o produkcie
@@ -20,26 +20,27 @@ Artur, MVP jest prawie gotowe. Żeby zdążyć, kilka rzeczy zrobiliśmy prości
 | U5 | Raport | zapis jako plik, bez wysyłania do systemów KAS i bez ekranu kierownika zmiany | kierownik czyta plik; nic nie trafia do systemów KAS |
 
 **2. Co operator zobaczy na stronie pod linkiem** (to też uproszczenia, o których wiedzieć warto; pytamy tak / nie):
-- I1: przy pierwszym kliknięciu po przerwie strona będzie czekać do ok. 30 s; pojawi się komunikat „Uruchamiam program”.
+- I1 (P86): uśpiony program obsługa budzi ręcznie przed pokazem (ok. 30 s). Gdyby zasnął w trakcie, strona pokazuje komunikat „Uruchamiam program” i czeka. A — zostawiamy ręczne budzenie; B — budzenie samo (wymaga jednorazowego przygotowania przed hackathonem). Rekomendacja: A, zostawiamy jak jest.
 - I2: obraz 50 MB wysyła się ok. 45 s; cel „poniżej minuty” na całe auto jest przez to ciasny.
-- I3: będzie można wgrać jeden obraz naraz (przycisk „Dodaj jeden obraz”); partia pokazowa jest stała.
-Rekomendacja: tak.
+- I3: można wgrać jeden obraz naraz (przycisk „Dodaj jeden obraz”, działa — wgrany obraz dostaje kolejny numer auta); partia pokazowa jest stała.
+- I4: zmiana rodzaju pojazdu (Twoje P24 B i P27 A) będzie na stronie wkrótce; do tego czasu przycisku „Zmień rodzaj” nie ma albo jest nieaktywny.
+Rekomendacja: tak (przy I1 wybierasz A albo B jak wyżej).
 
 **3. Już ustalone z Tobą — bez pytania, tylko informacja:**
-- liczenie partii po kolei, auta otwiera się po policzeniu całej partii — z P12 A i P38 B;
+- partia liczy się auto po aucie: lista od razu pokazuje miniatury, a wiersze są nieklikalne, aż policzy się cała partia — z P12 A i P38 B (działa);
 - ogólne podpowiedzi „zwykle tu: …” zamiast opisów od ekspertów — z P81 A;
-- w raporcie brak miniatury z ramkami (na razie tabela) — z P72 A, miniatura jest na liście dorobienia niżej;
+- raport zapisuje się jako plik .json i .csv, ale bez miniatury z ramkami (tabela) — z P72 A; miniatura na liście aut już jest, w raporcie jest na liście dorobienia niżej;
 - dane pokazowe sztuczne; w partii nie ma auta „brak wskazań”, bo na czystych autach program zwykle coś wskazuje; „brak wskazań” to nie gwarancja — z P82 i P58 A;
 - praca bez internetu tylko „docelowo”; dziś program liczy po linku — z P25 A.
 
 **4. Co dorobić, jeśli zostanie czas — jedna rzecz (D).** Wybierasz tylko tutaj:
-- **D1 — miniatura w raporcie (ok. 1–2 h):** przy każdym aucie mały obraz z zaznaczonymi miejscami; kierownik od razu widzi, gdzie było miejsce. Twój pomysł z 13:07 (P72). Czas liczy się dopiero po tym, jak do raportu trafią decyzje, a na stronie pojawią się ramki.
+- **D1 — miniatura w raporcie (ok. 1–2 h):** przy każdym aucie mały obraz z zaznaczonymi miejscami; kierownik od razu widzi, gdzie było miejsce. Twój pomysł z 13:07 (P72). Na liście aut miniatura już jest, w raporcie jej dalej brak — więc to nadal uproszczenie. Decyzje w raporcie i ramki na stronie już działają, więc czas ok. 1–2 h jest realny.
 - **D2 — konto funkcjonariusza zamiast listy (kilka godzin):** funkcjonariusz loguje się, a „kto zdecydował” i miejsce kontroli biorą się z konta. Na publicznej stronie to konta i hasła, więc więcej pracy i uwagi niż sama lista.
 - **D3 — ekran dokładania wzorca (czas nieoszacowany, wstępnie 2–3 h):** opiekun dodaje czysty obraz jako nowy rodzaj, np. cysternę, która dziś wzorca nie ma. Ryzyko: nowy wzorzec zmienia wyniki programu na autach tego rodzaju (też na tych z pokazu) i tego dziś nie mierzymy.
 
 Rekomendacja: **D1** — najmniejsza robota, widać ją w raporcie na pokazie, zamyka Twój własny pomysł. D2 zajmuje najwięcej czasu i nie zmienia pracy z obrazem; D3 niesie ryzyko dla wyników.
 
 ## Dla Szefa
-Wysyłka: jedna wiadomość w pokoju Produkt + ntfy (adresat Artur) + wpisy P<n> `— czeka` w `docs/decyzje.md` (U1, U3, U5, I1–I3 jako jedno pytanie „przyjmujesz tak/nie” albo osobno; D osobno). Przed wysyłką: paczka do Analityka i sprawdzenie, że opisy zgadzają się ze stanem MVP po zadaniach 40, 29, 28, 27.
+Wysyłka: jedna wiadomość w pokoju Produkt + ntfy (adresat Artur) + wpisy P<n> `— czeka` w `docs/decyzje.md` (U1, U3, U5, I1–I3 jako jedno pytanie „przyjmujesz tak/nie” albo osobno; D osobno). Przed wysyłką: paczka do Analityka i sprawdzenie ze stanem MVP po odbiorze 28 i 27 (opis zgodny ze stroną do 28 włącznie; 27 zostaje „będzie”).
 
 <!-- skill: przeplywy-pm -->
