@@ -23,7 +23,7 @@
 
 ## 4. Rozwiązanie
 - Program dobiera wzorzec typu pojazdu z biblioteki; operator może zmienić rodzaj, a analiza liczy się od nowa.
-- Zaznacza miejsca różne od wzorca: najważniejsze to nie przeoczyć; pokazujemy, ile przeoczeń i ile fałszywych alarmów.
+- Zaznacza miejsca różne od wzorca, w kolejności od najbardziej odmiennego (bez ocen słownych): najważniejsze to nie przeoczyć; pokazujemy, ile przeoczeń i ile fałszywych alarmów.
 - Partia: operator wskazuje kilka obrazów, program liczy je po kolei i oddaje listę aut.
 - Gdy nie ma wzorca: nic nie zaznacza i mówi „brak wzorca — sprawdź obraz sam”.
 - ![lista partii](zrzuty/r2/E3b-partia-gotowa-7-aut.png)  ![auto: obraz badany obok wzorca](zrzuty/r2/E4a-auto1-widok-c-z-pudlem.png)

@@ -459,3 +459,4 @@ P79 15:08 Artur: Słowa „niski / średni / wysoki” przy miejscach w aucie: s
 P79 15:08 odpowiedź: B — wyrzucamy słowa niski/średni/wysoki, zostaje kolejność od najmocniejszego miejsca (Artur w pokoju; zmienia P17 i P45; powód: „niski” 23 z 26 uczy pomijać, wbrew P4). P49 i P75 bez przedmiotu — nic nie wymaga zatwierdzenia progów.
 15:08 Projektant: P79 B wpisane; spec (E4, A2, §8) i S2 bez słów; dla Szefa: Programista usuwa słowa z makiety i kodu, wyniki bez pola słowa, miejsce 'auto 7' bez słowa; zadanie 32 bez dalszego zatwierdzania
 15:09 Szef: P79 B przyjęte — słowa poziomu znikają z makiety R3, MVP i tekstów; zlecone Programiście (w zadaniu 34 i mvp/widok-auta) i Prezenterowi (README, hacktribe, demo, slajdy).
+- 15:10 Prezenter: P79 B — README/hacktribe/demo/slajdy bez słów niski/średni/wysoki (grep czysty; wcześniej też), dopisana kolejność od najbardziej odmiennego; opis hacktribe 890 zn. ≤ 1000
