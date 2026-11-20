@@ -1,4 +1,4 @@
-# Stan — 11:50
+# Stan — 11:51
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -6,11 +6,11 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | 01 generator danych | Analityk | zamknięte (dane/mini w repo; pełny ThinkPad ~/dane/proba17) |
 | krok 0 docs/materialy.md | Analityk | zamknięte |
 | 02 ocena + wynik bazowy | Programista | zamknięte (4f08297): trudny FP 36/40, przeoczenia 11/62, dobór 79/80, 50 MB 1,7–5 s |
-| 19 mniej fałszywych alarmów (karta) | Programista | w toku |
+| 19 mniej fałszywych alarmów (karta) | Programista | w toku — przebieg H1–H6 (30004b3) |
 | krok 1 /competitive-analysis | Projektant | zamknięte (R3) |
 | krok 2 operator (02-operator.md) | Projektant | zamknięte (R3) |
-| krok 3 /discover (03-discover.md) | Projektant | recenzja 2 (Analityk) — poprawka R1 ba7678f |
-| 05–18 sondy Z1–Z14 | Analityk (po 04) | zlecone (05–16 teraz; 17, 18 po makiecie) |
+| krok 3 /discover (03-discover.md) | Projektant | poprawka po R2 (4 braki), potem R3 |
+| 05–18 sondy Z1–Z14 | Analityk | w toku od 11:51 (05–16; 17, 18 po makiecie) |
 | recenzja docs/hacktribe.md | Analityk | zamknięte po R3 (f62748c, 988 zn.) |
 | 03 zbiór trudny | Analityk | zamknięte 11:18 (dane/mini-trudny, manifest-trudny.json; 112 badanych, 4 rodzaje trudności) |
 | 04 sprawdzenie zbioru trudnego | Analityk | zamknięte 11:48 (0/86 niewidocznych) |
