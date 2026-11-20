@@ -1,14 +1,14 @@
-# Stan — 11:24
+# Stan — 11:26
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
 |---|---|---|
 | 01 generator danych | Analityk | zamknięte (dane/mini w repo; pełny ThinkPad ~/dane/proba17) |
 | krok 0 docs/materialy.md | Analityk | zamknięte |
-| 02 ocena + wynik bazowy + dobór wzorca (karta OMENa) | Programista | wypchnięte 11:15 (1bbf9dd), czekam na meldunek |
+| 02 ocena + wynik bazowy + dobór wzorca (karta OMENa) | Programista | w toku — 2fcce71 (ocena wg trudności, --typ), czekam na liczby |
 | krok 1 /competitive-analysis | Projektant | zamknięte (R3) |
-| krok 2 operator (02-operator.md) | Projektant | P27 A, P28 A → wpis do pliku, potem R3 (ostatnia) |
-| recenzja docs/hacktribe.md | Analityk → Prezenter | R3: 4 braki → poprawka Prezentera, pętla zamknięta |
+| krok 2 operator (02-operator.md) | Projektant | 81d15b4 → R3 (ostatnia) u Analityka |
+| recenzja docs/hacktribe.md | Analityk | zamknięte po R3 (f62748c, 988 zn.) |
 | 03 zbiór trudny | Analityk | zamknięte 11:18 (dane/mini-trudny, manifest-trudny.json; 112 badanych, 4 rodzaje trudności) |
 | docs/hacktribe.md — „Prześwit” + partie (P12) | Prezenter | gotowe (bdba1ed); recenzja przed 20:00 |
 | szkielet slajdów | Prezenter | gotowy (1cd6c10) |
