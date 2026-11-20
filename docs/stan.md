@@ -12,7 +12,7 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | recenzja docs/hacktribe.md | Analityk | zamknięte po R3 (f62748c, 988 zn.) |
 | 03 zbiór trudny | Analityk | zamknięte 11:18 (dane/mini-trudny, manifest-trudny.json; 112 badanych, 4 rodzaje trudności) |
 | 04 sprawdzenie zbioru trudnego | Analityk | zlecone 11:28 (dowolna maszyna) |
-| README szkic | Prezenter | zlecone 11:28 |
+| README szkic | Prezenter | gotowe (c7e85e0, 38 linii, DRAFT); recenzja Analityka po zadaniu 04 |
 | docs/hacktribe.md — „Prześwit” + partie (P12) | Prezenter | gotowe (bdba1ed); recenzja przed 20:00 |
 | szkielet slajdów | Prezenter | gotowy (1cd6c10) |
 
