@@ -183,6 +183,8 @@ Braki (poza składem partii):
 
 Niezweryfikowane: ramki = CLI; zmiana rodzaju, lista partii, decyzje, raport (zad. 27–29); budzenie uśpionej usługi (42).
 
+**Dopisek Programisty (20:10) — porównanie z wierszem poleceń:** ZGODNE. `badany_mini_kontener_dodatki_01.bmp`: link (partia nr=2 i wgranie POST) = CLI — kontener, te same 3 wzorce, 12/12 miejsc, 12 ramek identycznych co do piksela, różnica wyniku 0,0000. Auto 7 bez zmiany rodzaju: firanka, 11/11, ramki identyczne. Świeżego `ocena/uruchom40.sh` nie puściłem — karta u usługi, bez drugiego zgłoszenia. Porównanie z wynikiem tej samej metody z wiersza poleceń zapisanym wcześniej. Skrypt: `node ocena/porownaj40.js` (wyniki z linku w `docs/odbior40-cli/`, CLI = `makieta/r3/wynik-v3/*.json` z przebiegu `wykryj_v3` na karcie, zgl-5130, ta sama siatka i szer. 2048).
+
 ### Recenzja 09, runda 2 (1a55580; 2026-11-20 19:19)
 
 4 braki (sprawdzone na żywym linku i w `docs/decyzje.md`; P85 jest najwyższym P):
@@ -281,6 +283,8 @@ Braki:
 4. **technika:** czas liczenia partii przy pierwszym uruchomieniu nie mierzony (wyniki przyszły w ok. 6 s, prawdopodobnie z pamięci podręcznej).
 
 Niezweryfikowane: okno systemowe wyboru pliku (użyty bezpośredni wybór w polu pliku), „inny” z własnym tekstem. Zrzuty: `docs/zrzuty/odbior28/`.
+
+**Dopisek Programisty (20:10):** brak 2 zamknięty — „Dodaj jeden obraz” (ta sama ścieżka: POST `/api/analiza`) z `badany_mini_chlodnia_czyste_00.bmp` = CLI: chłodnia, te same wzorce, 9/9 miejsc, 9 ramek identycznych, różnica wyniku 0,0000 (`node ocena/porownaj40.js` (wyniki z linku w `docs/odbior40-cli/`, CLI = `makieta/r3/wynik-v3/*.json` z przebiegu `wykryj_v3` na karcie, zgl-5130, ta sama siatka i szer. 2048)). Brak 1 (odmiana) poprawiony w 27: „i jeszcze 2 miejsca”, „1 miejsce” na linku.
 
 ## Recenzja 09 przed wysyłką — docs/pm/09-uproszczenia.md (1a53117, R4; 20:03)
 
