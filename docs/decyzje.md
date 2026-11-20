@@ -610,3 +610,4 @@ P85 16:09 odpowiedź: B — wszystkie auta w makiecie pokazują to, co naprawdę
 19:21 Szef: 09 zamknięte po rundzie 3 (df2f0ed, czysto). Wysyłka do Artura po odbiorze MVP; przed wysyłką Projektant zmienia I1/I3 na stan faktyczny po 42 i 28.
 19:22 Szef: README sekcja „Strona na żywo — co działa” wg odbioru 40 → Prezenter
 19:22 Prezenter: README — sekcja „Strona na żywo — co działa” (7 punktów, wg odbior.md „Odbiór zadania 40 na linku”); inne sekcje bez zmian.
+19:23 Szef: README „Strona na żywo” przyjęte (9a43e2a); Prezenter dopisuje kolejne punkty po odbiorach 41–27
