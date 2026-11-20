@@ -27,6 +27,22 @@ WYNIK URUCHOMIENIA: zalicza 5 z 15 pozycji (A1 lupa liczone osobno); NIE: A4; �
 
 Polecenie: `docs/uruchomienie.md`. Dowody: `wyniki/odbior/` na OMENie (`ork/zgl-5106-1795185098448/`).
 
+## Zadanie 36 — powtórzenie odbioru po przeniesieniu progu do v3 (16:34, Programista)
+Zmiana: `wykryj_v3` stosuje próg „brak wzorca” z zadania 33 (`PROG_DOBORU` sr < 0,80, ten sam zwrot co v2), commit ea756a5. Odbiór `sh testy/odbior/odbior.sh` na karcie OMENa (zgl-5130, 16:18):
+
+| Kryterium | Wynik | Dowód |
+|---|---|---|
+| A1 | zalicza | test_lista; błędne auta spoza cystern: 0 |
+| A1 (lupa) | zalicza | 633 widoków, maks. różnica 0,0 px (próg 14) |
+| A2 | zalicza | kolejność od najmocniejszego, bez słów poziomu |
+| A3 | zalicza | badany_mini_kontener_zero_00.bmp: 0 miejsc, brak_wzorca=None |
+| **A4** | **zalicza** (było NIE) | 8 z 8 cystern (mini 4, mini-trudny 4): „brak wzorca — sprawdź obraz sam”, 0 miejsc; pozostałe 24 auta dostają wzorzec (zly_dobor 0) |
+| A12 | zalicza | 8 obrazów pełnych, maks. 3,73 s, śr. 3,28 s (próg 60 s) |
+
+Testy listy: Ran 6, kod 0. WYNIK URUCHOMIENIA: zalicza 6 z 15, NIE: brak.
+
+Przeoczenia (ta sama konfiguracja i zestawy co zadanie 20, pełna biblioteka; `sh ocena/uruchom36.sh`, zgl-5143-1795187989504): zwykły 5/64 (7,8%), trudny 6/62 (9,7%: maly 6/42, za_ladunkiem 0/20) — **bez zmian** względem zadania 20; dobór 64/64 i 80/80; „brak wzorca” na zestawach z pełną biblioteką: 0 obrazów (mini 0/16, maly 0/40, pelny 0/8, trudny_mini 0/16, trudny_maly 0/48, trudny_pelny 0/16). Ramki na czystym: zwykły 5,8, trudny 6,2 (jak w zadaniu 20).
+
 ## Co nie przeszło i co z tego wynika
 - **A4 NIE.** `wykryj_v3` (metoda z zadania 20, ta od ramek 5,8/6,25 i przeoczeń 7,8%/9,7%) nie stosuje progu „brak wzorca” z zadania 33 (jest tylko w `wykryj_v2`, `PROG_DOBORU`): 8 z 8 cystern przy bibliotece bez cysterny dostaje obcy wzorzec i ramki zamiast „brak wzorca — sprawdź obraz sam”. Technika → Programista (przenieść próg doboru do v3 i powtórzyć odbiór). Dopóki tego nie ma, liczba „50/50 → brak wzorca” (WYNIK zad. 33) dotyczy v2, nie v3.
 - **Brak wskazań w partii:** na v3 żadne z 24 aut bez cysterny z `dane/mini` i `dane/mini-trudny` nie ma 0 miejsc (najmniej: `trudny_mini_kontener_ladunek_legalny_00` — 3); „brak wskazań” (A3) daje tylko `czyste_zero` (0 miejsc, zalicza), poza partią pokazową.

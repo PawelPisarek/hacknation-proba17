@@ -565,3 +565,4 @@ P85 16:09 odpowiedź: B — wszystkie auta w makiecie pokazują to, co naprawdę
 16:32 Szef: P82 B u Prezentera przyjęte (0d9fc42: demo 109 s, zdanie o czystych autach w hacktribe 958 zn., README, slajd 5). Projektant 76e1611: A3/S3/S2 przyjęte; ścieżka demo w spec/06 nadal 113 s z autem 4 → poprawka do Projektanta (wg demo.md).
 16:33 Projektant: ścieżka demo w spec i 06 wyrównana do docs/demo.md (0d9fc42): 109 s, zapas 11 s, auto 6 10 s, auta 4 nie otwieramy; 113 usunięte też w 07 (R9)
 16:33 Szef: ścieżka demo w spec/06/07 = demo.md (109 s) przyjęta (822a95b); P82 B zamknięte.
+16:34 Programista: oddaję zadanie 36 — gotowe. A4 zalicza (8/8 cystern „brak wzorca”, 0 ramek), A1–A3 i A12 zaliczają (zgl-5130); przeoczenia bez zmian: zwykły 5/64 (7,8%), trudny 6/62 (9,7%), dobór 64/64 i 80/80, 0 fałszywych „brak wzorca” (zgl-5143-1795187989504). Wynik w docs/odbior.md.
