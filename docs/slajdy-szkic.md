@@ -23,8 +23,7 @@
 
 ## 4. Rozwiązanie
 - System sam dobiera wzorzec **typu pojazdu** z biblioteki (operator rzadko ma czyste zdjęcie tej samej naczepy).
-- Program sam, bez udziału operatora, porównuje badany obraz z wzorcem i zaznacza wszystkie miejsca różnic (P9).
-- Obraz bez różnic nie dostaje zaznaczeń.
+- Program sam, bez udziału operatora, porównuje badany obraz z wzorcem i zaznacza miejsca różnic; cel: każdy możliwy dodatek, przeoczenie gorsze niż fałszywy alarm (P4, P9).
 - Partie (P12): operator wskazuje kilka obrazów, program liczy je po kolei i oddaje listę wyników.
 - [zrzut: obraz badany obok wzorca, z zaznaczeniami]
 
