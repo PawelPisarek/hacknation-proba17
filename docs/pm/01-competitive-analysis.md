@@ -104,3 +104,7 @@ Ryzyka 12–18 mies.: dostawcy sprzętu dodają porównanie ze wzorcem do własn
 - P9: program analizuje sam i zaznacza wszystko; operator decyduje na wyniku.
 - P10: zakres pierwszej wersji zatwierdzony; dodatkowo pojedynczy duży obraz (~50 MB) działa od razu, partie później.
 - P11: nazwa projektu „Prześwit”.
+
+## Ustalenia Artura (P12–P13)
+- P12: partie w pierwszej wersji, w wersji prostej: kilka obrazów liczonych po kolei, lista wyników; skalowanie tylko opisane jednym zdaniem (zmienia P10: partie nie czekają na później).
+- P13: powody odrzucenia: element konstrukcji, zgłoszony ładunek, błąd obrazu, nakładanie się ładunku, inny (własny tekst).
