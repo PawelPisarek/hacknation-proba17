@@ -755,3 +755,5 @@ Nie ruszone: slajd 8 bez rysunku (produkt → Projektant/Artur). Niesprawdzone: 
 08:34 Szef: wykres skalowania przyjęty (86a76b7, liczby = README) → Prezenter wstawia na slajd 8 razem z poprawkami R2
 5. (dopisek P97 A, Artur 08:32) Slajd 8 „Skalowanie”: wykres docs/zrzuty/wykresy/skalowanie-slajd.png (commit Analityka 86a76b7) + 3 krótkie zdania; liczby zgodne z wykresem i README (2 080 / 3 020 aut/h, ok. 70 rząd wielkości n=1, 1,73 / 1,19 s, 45 s); założenia podpisane „niemierzone”. PDF przebudowany razem z poprawkami R2, 10 slajdów bez przepełnień.
 08:34 Szef: poprawki R2 + slajd 8 oddane (0cbcb7d, 885101e) → krytyk R3 (ostatnia) + recenzja 46 → Analityk
+
+08:35 Analityk: krytyk slajdów R3: 7/10, 5 braków (produkt: 2 — s7 zrzut raportu obcięty i „brak decyzji”, s1 „kilka sekund” vs 45 s wysyłki; technika: 3 — żargon „wersja z nocy” s6, s9 tabela dubluje/„—” bez źródła, s1 powtórzenia). Recenzja 46: README/hacktribe (906 zn. sprawdzone komendą)/demo.md (czasy bez cięcia, ok. 4 s) — brak braków zmieniających zakres lub kryteria. Plik: docs/krytyk-slajdow-R3.md. Oglądane z renderu build.mjs, nie z PDF.
