@@ -25,7 +25,7 @@ Język ekranu: polski. Udawane dane: z `dane/mini` (nazwy plików `badany_mini_<
 | E1 | Logowanie i stanowisko | pole „funkcjonariusz” (lista), pole „miejsce kontroli” (lista), przycisk „Zacznij zmianę” | funkcjonariusz „SCS Kowalski”, miejsce „Terespol — stanowisko 2” (**dane udawane**); raz na zmianę |
 | E2 | Wybór partii | przycisk „Wskaż obrazy .bmp”, lista wybranych plików, „Policz partię”; makieta i demo idą na `dane/mini` (PNG); wymaganie 50 MB (A12) potwierdza pomiar Z9: śr. 5,0 s, maks. 8,1 s | 6 plików z `dane/mini` (skład wg `docs/demo.md`): firanka dodatki_00, chłodnia dodatki_01, kontener dodatki_01, kontener czyste_00, firanka czyste_01, cysterna dodatki_00; 7. plik `trudny_mini_firanka_za_ladunkiem_00.bmp` jest poza partią (P51 B; opis na ekranie wg P60 — czeka) |
 | E3 | Lista partii (z wariantu B); po ostatnim aucie wraca tu z przyciskiem „Raport partii” (P54 A) | tabela: miniatura, „auto N” + nazwa pliku (P44 A), rodzaj, stan, liczba miejsc (P37 B); stan liczy się po kolei (pasek postępu partii); wiersz „gotowe” klikalny dopiero po policzeniu całej partii (P38) | 6 wierszy; jeden ze stanem „brak wzorca” (cysterna), liczba miejsc „—” |
-| E4 | Auto — widok C | lewo: badany z ramkami 1…n; prawo: wzorzec (nazwa rodzaju + przycisk „Zmień rodzaj”); wspólne przewijanie i lupa; pod spodem kafelki (numer, słowo niski/średni/wysoki, stan: oczekuje / zatwierdzone / odrzucone); pole „Nr rej.”; przyciski „Zatwierdź”, „Odrzuć ▾ powód”; podpowiedź „zwykle tu…” przy każdym kafelku od razu (P39 B) | firanka_dodatki_00: 6 kafelków; podpowiedź np. „zwykle tu: podwozie — belka poprzeczna” |
+| E4 | Auto — widok C | lewo: badany z ramkami 1…n; prawo: wzorzec (nazwa rodzaju + przycisk „Zmień rodzaj”); wspólne przewijanie i lupa; pod spodem kafelki (numer, słowo niski/średni/wysoki, stan: oczekuje / zatwierdzone / odrzucone); pole „Nr rej.”; przyciski „Zatwierdź”, „Odrzuć ▾ powód”; podpowiedź „zwykle tu…” przy każdym kafelku od razu (P39 B) | firanka_dodatki_00: 6 kafelków; podpowiedź np. „zwykle tu: podwozie — belka poprzeczna” | Lista miejsc: 6 najsilniejszych, pod szóstym widoczna linia „i jeszcze N miejsc — pokaż” (P57 A; nic nie jest chowane po cichu).
 | E5 | Auto — brak wzorca | zamiast ramek i kafelków napis **„brak wzorca — sprawdź obraz sam”**; sam badany obraz z lupą; pola nr rej. i „Zamknij auto” (P35 A) | cysterna (nie ma jej w bibliotece wzorców) |
 | E6 | Zmiana rodzaju | lista 4 rodzajów (firanka, chłodnia, kontener, cysterna), podgląd 2 najbliższych wzorców obok badanego, „Zastosuj”; ostrzeżenie „decyzje w tym aucie zostaną skasowane” (P27 A) | wybór cysterny → E5 |
 | E7 | Raport partii | tabela po aucie: **miniatura obrazu z zaznaczonymi miejscami i ich decyzją (zatwierdzone/odrzucone) — pomysł Artura 13:08, dodatek po głównej ścieżce**, nr rej., rodzaj programu i rodzaj operatora (P27 A), liczba miejsc, decyzje z powodami, kto zdecydował, miejsce kontroli, data i godzina (P18); „Zapisz i zamknij partię” | zapis pliku .json i .csv — w wersji pod linkiem pobiera je przeglądarka; „bez internetu” dotyczy tylko uruchomienia lokalnego (P43 A, A12) |
@@ -35,7 +35,7 @@ Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wyni
 ## 3. Wejście / wyjście / dane
 - **Wejście:** pliki `.bmp` (do ~50 MB każdy, 8192×2048), biblioteka wzorców czystych dla 4 rodzajów (gotowa z naszych czystych obrazów — P15; cysterna bez wzorca na pokazie → E5, P35 A).
 - **Wyjście (na obraz):** rodzaj, wzorzec, lista miejsc `{nr, x0,y0,x1,y1, słowo niski/średni/wysoki}` posortowana od najbardziej różnego, stan; **raport** (E7) z polami P18 + numer rejestracyjny + oba rodzaje.
-- **Dane pokazowe (sztuczne):** `dane/mini`, `dane/mini-trudny`, `dane/manifest*.json`; wyniki pomiarów tylko z dopiskiem „dane sztuczne”.
+- **Dane pokazowe (sztuczne):** `dane/mini`, `dane/mini-trudny`, `dane/manifest*.json`; wyniki pomiarów tylko z dopiskiem „dane sztuczne”. Na każdym ekranie wąski pasek u góry „dane sztuczne — demonstracja” (P59 A).
 - **Działanie:** docelowo lokalnie, bez internetu (P25 A). **MVP (P43 A, Paweł):** strona na ksefbot.pl wysyła .bmp do usługi liczącej na karcie OMENa + przycisk partii pokazowej z `dane/mini`; usługa startuje razem z wdrożeniem strony (nie osobno). Wgranie własnego .bmp (także ~50 MB) działa z linku i nie jest wycinane. „Bez internetu” sprawdzamy uruchomieniem lokalnym (Docker albo wiersz poleceń).
 
 ## 4. Kryteria akceptacji (według job stories z `03-discover.md`, P-ów Artura i zadania)
@@ -43,7 +43,7 @@ Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wyni
 |---|---|---|
 | A1 | Ramki na badanym mają numery zgodne z kafelkami; kliknięcie kafelka zaznacza ramkę i przybliża oba obrazy w tym samym miejscu | JS1 AC1,3,4a; P36 C |
 | A2 | Kafelki od najbardziej różnego; słowo niski/średni/wysoki, bez procentów; progi stałe, wspólne dla wszystkich aut (P45 B), czyste auto nie dostaje „wysoki” z samego podziału; wartości progów — P49 (czeka) | P17, P45 B; JS1 AC2 |
-| A3 | Obraz bez miejsc: komunikat „brak wskazań”, nie pusta lista | JS1 AC4 |
+| A3 | Obraz bez miejsc: napis „brak wskazań — to nie gwarancja, że auto jest czyste; obejrzyj obraz sam” (P58 A), nie pusta lista | JS1 AC4 |
 | A4 | Brak wzorca → zero ramek i napis „brak wzorca — sprawdź obraz sam” | P35 A; JS1 AC5, JS3 AC6 |
 | A5 | Podpowiedź „zwykle tu…” widoczna od razu przy każdym kafelku, bez klikania; kafelek bez opisu (ok. 27% ramek, Z14) — wg P42 (Artur) napis „poza znaną konstrukcją, obejrzyj uważnie” | P39 B, P42; JS1 AC4b |
 | A6 | Odrzucenie wymaga powodu z listy P13; zatwierdzenie jednym kliknięciem; decyzja w raporcie | JS2 |
@@ -109,6 +109,9 @@ Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z d
 | P54 | A — po ostatnim aucie lista partii (E3) z przyciskiem „Raport partii”, decyzje jeszcze do zmiany | odpowiedź Artura |
 | P55 | B — jeden przycisk „Zapisz i zamknij partię” w E7 (zastępuje „Zapisz lokalnie” i „Zamknij partię”) | odpowiedź Artura, zmiana rekomendacji |
 | P56 | A — „Zapisz i zamknij partię” (raport + zamknięcie razem) blokuje oddanie; zmienia P50 (zamykanie partii nie czeka) | odpowiedź Artura 13:03 |
+| P57 | A — lista 6 najsilniejszych miejsc + linia „i jeszcze N miejsc — pokaż” (E4) |
+| P58 | A — napis „brak wskazań — to nie gwarancja…” (A3) |
+| P59 | A — pasek „dane sztuczne — demonstracja” na każdym ekranie |
 | P47 | A — opis „skrytkę lub dodatkowy ładunek” bez zmian | odpowiedź Artura 12:52 |
 | P48 | A — wyjątek „poza znaną konstrukcją” w opisie | odpowiedź Artura 12:52 |
 | P49 | A — progi dobiera zespół na danych testowych, Artur zatwierdza po zobaczeniu wyniku | odpowiedź Artura; wartości czekają na pomiar |
