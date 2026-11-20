@@ -125,3 +125,9 @@ P31 11:27 Artur: ile ze 100 prawdziwych dodatków program musi wskazać, żebyś
 PARAMETR: tolerowana liczba ramek na czystym aucie = do 3 (rekomendacja) — P30
 PARAMETR: minimalna skuteczność wskazania dodatków = 90 ze 100 (rekomendacja) — P31
 11:30 Szef: krok 3 meldunek (f996bb7) — sondy Z1–Z10 założone jako zadania 05–14 (bez czekania na P29–P31: liczby nie zależą od progów). Krok 3 domknie się po P29–P31 i recenzji przejścia.
+P29 11:29 odpowiedź: Artur w pokoju: wybrane pomysły 1, 2, 3, 6, 10 (ramki+lista; wzorzec obok z przełączaniem; lupa — konieczna na obrazie 50 MB; zmiana rodzaju z podglądem dwóch najbliższych wzorców; podpowiedź dla krótkiego stażu). Odrzucone: 4 (podpowiedź powodu), 5 (zaznaczanie ładunku — przerzuca pracę na operatora), 7, 8, 9
+P30 11:29 odpowiedź: Artur w pokoju: B — na czystym aucie do 6 ramek (woli więcej ramek niż przeoczenie)
+P31 11:29 odpowiedź: Artur w pokoju: A — program wskazuje co najmniej 90 na 100 prawdziwych dodatków
+P32 11:29 Artur: co zmienić w wybranych pomysłach (1, 2, 3, 6, 10) i czy któryś odrzucony warto wziąć w części? Rekomendacja: nic nie zmieniamy, odrzuconych nie bierzemy — czeka
+P33 11:29 Artur: najryzykowniejsze założenia: Z1 (nie przeoczyć), Z2+Z6 (za dużo ramek / nakładanie ładunku), Z7 (małe i za ładunkiem), Z11 (lupa na obrazie 50 MB) — potwierdzasz? Rekomendacja: tak — czeka
+P34 11:29 Artur: kolejność funkcji: 1 ramki+lista → 3 lupa → 2 wzorzec obok → 6 zmiana rodzaju → 10 podpowiedź krótkiego stażu — zgoda? Rekomendacja: zgoda — czeka
