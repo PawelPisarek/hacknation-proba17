@@ -23,7 +23,7 @@ Język ekranu: polski. Udawane dane: z `dane/mini` (nazwy plików `badany_mini_<
 | # | Ekran | Co jest | Udawane dane / uwagi |
 |---|---|---|---|
 | E1 | Logowanie i stanowisko | pole „funkcjonariusz” (lista), pole „miejsce kontroli” (lista), przycisk „Zacznij zmianę” | funkcjonariusz „SCS Kowalski”, miejsce „Terespol — stanowisko 2” (**dane udawane**); raz na zmianę |
-| E2 | Wybór partii | przycisk „Wskaż obrazy .bmp”, lista wybranych plików, „Policz partię”; napis „obraz ~50 MB działa” bez kompresji widocznej dla operatora | 6 plików z `dane/mini` (po jednym z firanka, chłodnia, kontener, cysterna czyste/dodatki) |
+| E2 | Wybór partii | przycisk „Wskaż obrazy .bmp”, lista wybranych plików, „Policz partię”; makieta i demo idą na `dane/mini` (PNG); wymaganie 50 MB (A12) potwierdza pomiar Z9: śr. 5,0 s, maks. 8,1 s | 6 plików z `dane/mini` (po jednym z firanka, chłodnia, kontener, cysterna czyste/dodatki) |
 | E3 | Lista partii (z wariantu B) | tabela: miniatura, numer naczepy, rodzaj, stan, liczba miejsc (P37 B); stan liczy się po kolei (pasek postępu partii); wiersz „gotowe” klikalny dopiero po policzeniu całej partii (P38) | 6 wierszy; jeden ze stanem „brak wzorca” (cysterna), liczba miejsc „—” |
 | E4 | Auto — widok C | lewo: badany z ramkami 1…n; prawo: wzorzec (nazwa rodzaju + przycisk „Zmień rodzaj”); wspólne przewijanie i lupa; pod spodem kafelki (numer, słowo niski/średni/wysoki, stan: oczekuje / zatwierdzone / odrzucone); pole „Nr rej.”; przyciski „Zatwierdź”, „Odrzuć ▾ powód”; podpowiedź „zwykle tu…” przy każdym kafelku od razu (P39 B) | firanka_dodatki_00: 6 kafelków; podpowiedź np. „zwykle tu: podwozie — belka poprzeczna” |
 | E5 | Auto — brak wzorca | zamiast ramek i kafelków napis **„brak wzorca — sprawdź obraz sam”**; sam badany obraz z lupą; pola nr rej. i „Zamknij auto” (P35 A) | cysterna (nie ma jej w bibliotece wzorców) |
@@ -45,7 +45,7 @@ Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wyni
 | A2 | Kafelki od najbardziej różnego; słowo niski/średni/wysoki, bez procentów | P17; JS1 AC2 |
 | A3 | Obraz bez miejsc: komunikat „brak wskazań”, nie pusta lista | JS1 AC4 |
 | A4 | Brak wzorca → zero ramek i napis „brak wzorca — sprawdź obraz sam” | P35 A; JS1 AC5, JS3 AC6 |
-| A5 | Podpowiedź „zwykle tu…” widoczna od razu przy każdym kafelku, bez klikania | P39 B; JS1 AC4b |
+| A5 | Podpowiedź „zwykle tu…” widoczna od razu przy każdym kafelku, bez klikania; kafelek bez opisu (ok. 27% ramek, Z14) — wg rekomendacji P42 A napis „brak podpowiedzi” (**P42 czeka**) | P39 B, P42; JS1 AC4b |
 | A6 | Odrzucenie wymaga powodu z listy P13; zatwierdzenie jednym kliknięciem; decyzja w raporcie | JS2 |
 | A7 | Zmiana rodzaju: 1 klik z listy 4 rodzajów, podgląd 2 najbliższych wzorców, przeliczenie od nowa, decyzje auta znikają, raport z oboma rodzajami | P24 B, P27 A; JS3 |
 | A8 | Partia liczy się po kolei; wiersz auta z miniaturą (P37 B); wejście w auto dopiero po całej partii | P12, P37, P38; JS4 |
@@ -53,7 +53,7 @@ Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wyni
 | A10 | Po ostatnim miejscu otwiera się następne auto partii | P40 B |
 | A11 | Raport z polami P18: id kontroli, miejsce (z ustawienia stanowiska), data i godzina, rodzaj programu i operatora, nr rej., miejsca z decyzją i powodem, kto zdecydował (zalogowany); bez pisania poza nr rej.; zapis lokalny | P18, P22 A; JS5 |
 | A12 | Obraz 50 MB < 1 min, bez internetu | zadanie §3, §7, §9 |
-| A13 | Cofnięcie decyzji w poprzednim aucie (lista partii → auto → zmiana do „Zamknij sprawę”) — P41 A (odpowiedź Artura) | P41 |
+| A13 | Decyzję w poprzednim aucie można zmienić z listy partii (lista → auto → zmiana) do zamknięcia sprawy | P41 A (odpowiedź Artura 12:44) |
 
 ## 5. Cele liczbowe Artura i stan pomiarów (dane sztuczne, metoda bazowa i v2 — zadanie 19; zadanie 20 w toku)
 | Miara | Cel | Dziś | Źródło |
@@ -88,14 +88,15 @@ UPROSZCZENIE: raport zapisywany lokalnie jako plik, bez repozytorium KAS i bez e
 ## 9. Poza zakresem (P10, P29, P32)
 Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z deklaracją, integracja ze skanerami, chmura, wzorce na dostawcę, rozbudowane skalowanie.
 
-## 10. Ustalenia w specu — P37–P41
+## 10. Ustalenia w specu — P37–P42
 | P | Rozstrzygnięcie | Stan |
 |---|---|---|
 | P37 | B — wiersz auta z miniaturą | odpowiedź Artura 12:43 (wygrywa z rekomendacją) |
 | P38 | B — wejście w auto dopiero po całej partii | odpowiedź Artura 12:41 (z P29) |
 | P39 | B — podpowiedź przy każdym kafelku | odpowiedź Artura 12:43 |
 | P40 | B — po ostatnim miejscu następne auto | odpowiedź Artura 12:43 |
-| P41 | A — decyzje w poprzednim aucie można zmienić z listy partii do zamknięcia sprawy (AC A13) | odpowiedź Artura w pokoju |
+| P41 | A — decyzje można zmienić z listy partii do zamknięcia sprawy | odpowiedź Artura 12:44 |
+| P42 | kafelek bez opisu: A — napis „brak podpowiedzi” | **czeka na Artura**; rekomendacja A, spec wg niej |
 
 <!-- skill: create-prd -->
 <!-- skill: przeplywy-pm -->

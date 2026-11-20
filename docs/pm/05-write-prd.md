@@ -3,7 +3,7 @@
 Spec do budowy: `docs/spec.md`. Wejście: `docs/pm/01–04`, `szkice-wariantow.md`, P2–P41, linie `WYNIK` (dane sztuczne).
 
 ## Czego nie wiem o produkcie
-- **P41** (czy decyzję w poprzednim aucie można zmienić po przejściu do następnego): odpowiedź Artura: A (AC A13).
+- **P42** (kafelek bez opisu, ok. 27% ramek wg Z14): czeka na Artura; w specu rekomendacja A, „brak podpowiedzi” (A5).
 - Próg P30 B (≤ 6 ramek) jest dziś niespełniony (Z2, Z6); pytanie do Artura dopiero gdy zadanie 20 też nie da ≤ 6 ramek (decyzja Szefa 12:07).
 - Zachowanie na prawdziwych obrazach KAS — nieznane, mamy tylko sztuczne (Z10).
 
@@ -14,7 +14,7 @@ Prześwit pomaga operatorowi RTG porównać obraz naczepy ze wzorcem i wskazuje 
 Zadanie KAS (`docs/zadanie.md`): narzędzie AI porównuje obraz RTG z wzorcem i wskazuje różnice. Obecne narzędzie KAS wykrywa papierosy, ale słabo małe skrytki w konstrukcji. Dane KAS nie są dostępne — pracujemy na sztucznych.
 
 ## 4. Cel i miary
-- Nie przeoczyć (P4, P26 A): przeoczenia ≤ 10% dodatków (P31 A) — dziś 12,5–14% (Z1).
+- Nie przeoczyć (P4, P26 A): przeoczenia ≤ 10% dodatków (P31 A) — dziś baza 12,5–14% (Z1), v2 18,8% (zwykły) i 17,7% (trudny, 11/62); do tego prawdziwe trafienie w pierwszych 6 ramkach tylko na 80% obrazów wobec 90% (Z8).
 - Mało ramek na czystym aucie: ≤ 6 (P30 B) — dziś ~17,7 bazowo, v2 4,2 / 12,9 (Z2, zad. 19).
 - < 1 min na obraz ~50 MB — dziś śr. 5,0 s (Z9).
 Wszystkie liczby na danych sztucznych.
