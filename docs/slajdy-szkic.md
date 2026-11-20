@@ -47,9 +47,9 @@
 ## 7. Jak to mierzymy — wyniki na danych sztucznych
 - Przeoczenia: 7,8% na zbiorze zwykłym (5/64), 9,7% na trudnym (6/62).
 - Ramki na czystym aucie: średnio 5,8 (zwykły) i 6,25 (trudny); fałszywe alarmy (auto z ≥ 1 ramką): 32/32 i 40/40 — dlatego lista ma najwyżej 6 miejsc i „pokaż resztę”.
-- Dobór wzorca: 64/64 (zwykły), 80/80 (trudny); cysterny bez wzorca w bibliotece → „brak wzorca” 50/50 (wcześniejsza wersja programu; w obecnej poprawiamy).
+- Dobór wzorca: 64/64 (zwykły), 80/80 (trudny); 8 z 8 cystern bez wzorca w bibliotece dostaje „brak wzorca — sprawdź obraz sam” i 0 ramek; żadne auto z wzorcem nie dostaje „brak wzorca” (zadanie 36, obecna wersja programu).
 - Czas pracy programu na obraz ~50 MB: średnio 1,73 s (zwykły), 1,19 s (trudny); czasu pracy operatora nie mierzyliśmy.
-- Źródło: zadania 20 i 33 w `docs/decyzje.md`; to nie są wyniki na obrazach KAS.
+- Źródło: zadania 20 i 33 w `docs/decyzje.md`, zadanie 36 w `docs/odbior.md`; to nie są wyniki na obrazach KAS.
 
 ## 8. Na tle istniejących rozwiązań
 - Porównanie: najpierw skuteczność, potem sposób pokazania operatorowi.
