@@ -23,12 +23,12 @@ Język ekranu: polski. Udawane dane: z `dane/mini` (nazwy plików `badany_mini_<
 | # | Ekran | Co jest | Udawane dane / uwagi |
 |---|---|---|---|
 | E1 | Logowanie i stanowisko | pole „funkcjonariusz” (lista), pole „miejsce kontroli” (lista), przycisk „Zacznij zmianę” | funkcjonariusz „SCS Kowalski”, miejsce „Terespol — stanowisko 2” (**dane udawane**); raz na zmianę |
-| E2 | Wybór partii | przycisk „Wskaż obrazy .bmp”, lista wybranych plików, „Policz partię”; makieta i demo idą na `dane/mini` (PNG); wymaganie 50 MB (A12) potwierdza pomiar Z9: śr. 5,0 s, maks. 8,1 s | 6 plików z `dane/mini` (po jednym z firanka, chłodnia, kontener, cysterna czyste/dodatki) |
+| E2 | Wybór partii | przycisk „Wskaż obrazy .bmp”, lista wybranych plików, „Policz partię”; makieta i demo idą na `dane/mini` (PNG); wymaganie 50 MB (A12) potwierdza pomiar Z9: śr. 5,0 s, maks. 8,1 s | 6 plików z `dane/mini` (skład wg `docs/demo.md`): firanka dodatki_00, chłodnia dodatki_01, kontener dodatki_01, kontener czyste_00, firanka czyste_01, cysterna dodatki_00; 7. plik `trudny_mini_firanka_za_ladunkiem_00.bmp` jest poza partią (P51 B; opis na ekranie wg P60 — czeka) |
 | E3 | Lista partii (z wariantu B); po ostatnim aucie wraca tu z przyciskiem „Raport partii” (P54 A) | tabela: miniatura, „auto N” + nazwa pliku (P44 A), rodzaj, stan, liczba miejsc (P37 B); stan liczy się po kolei (pasek postępu partii); wiersz „gotowe” klikalny dopiero po policzeniu całej partii (P38) | 6 wierszy; jeden ze stanem „brak wzorca” (cysterna), liczba miejsc „—” |
 | E4 | Auto — widok C | lewo: badany z ramkami 1…n; prawo: wzorzec (nazwa rodzaju + przycisk „Zmień rodzaj”); wspólne przewijanie i lupa; pod spodem kafelki (numer, słowo niski/średni/wysoki, stan: oczekuje / zatwierdzone / odrzucone); pole „Nr rej.”; przyciski „Zatwierdź”, „Odrzuć ▾ powód”; podpowiedź „zwykle tu…” przy każdym kafelku od razu (P39 B) | firanka_dodatki_00: 6 kafelków; podpowiedź np. „zwykle tu: podwozie — belka poprzeczna” |
 | E5 | Auto — brak wzorca | zamiast ramek i kafelków napis **„brak wzorca — sprawdź obraz sam”**; sam badany obraz z lupą; pola nr rej. i „Zamknij auto” (P35 A) | cysterna (nie ma jej w bibliotece wzorców) |
 | E6 | Zmiana rodzaju | lista 4 rodzajów (firanka, chłodnia, kontener, cysterna), podgląd 2 najbliższych wzorców obok badanego, „Zastosuj”; ostrzeżenie „decyzje w tym aucie zostaną skasowane” (P27 A) | wybór cysterny → E5 |
-| E7 | Raport partii | tabela po aucie: nr rej., rodzaj programu i rodzaj operatora (P27 A), liczba miejsc, decyzje z powodami, kto zdecydował, miejsce kontroli, data i godzina (P18); „Zapisz i zamknij partię” | zapis pliku .json i .csv obok programu; bez internetu |
+| E7 | Raport partii | tabela po aucie: nr rej., rodzaj programu i rodzaj operatora (P27 A), liczba miejsc, decyzje z powodami, kto zdecydował, miejsce kontroli, data i godzina (P18); „Zapisz i zamknij partię” | zapis pliku .json i .csv — w wersji pod linkiem pobiera je przeglądarka; „bez internetu” dotyczy tylko uruchomienia lokalnego (P43 A, A12) |
 
 Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wynik mniej pewny” ani wzorca przybliżonego (P35 A).
 
@@ -77,6 +77,8 @@ Cele ramek i przeoczeń **dziś niespełnione** — Szef: próg P30 B zostaje; p
 
 ## 7. Demo do 2 min (główna ścieżka)
 E1 (5 s) → E2/E3 partia 6 aut policzona (20 s) → wejście w firanka_dodatki_00 → E4: dwa obrazy, kafelek 1 → lupa, podpowiedź „zwykle tu…” (40 s) → Zatwierdź, Odrzuć z powodem „element konstrukcji”, wpisz nr rej. (25 s) → ostatnie miejsce → następne auto → **przypadek trudny `trudny_mini_firanka_za_ladunkiem_00.bmp` (P51 B, Artur): dodatek za ładunkiem — widać ramkę w lupie albo, gdy jej nie ma (Z7: przeoczenia małych dodatków 17–26%), uczciwy napis „granica programu — oglądamy obraz sam” i oglądanie obrazu samemu (P52 A, Artur)** (15 s) → cysterna E5 „brak wzorca — sprawdź obraz sam” (10 s) → E7 „Zapisz i zamknij partię” (5 s) — powrót po ostatnim aucie na listę partii z „Raport partii” (P54 A).
+
+Skład partii pokazowej: 6 aut jak w `docs/demo.md`; przypadek trudny `trudny_mini_firanka_za_ladunkiem_00.bmp` to **7. plik poza partią** (nie 7. auto), wgrywany osobno z linku („Dodaj jeden obraz”, A14 — P61 czeka). W partii nie ma firanki czystej _00 ani chłodni czystej.
 
 ## 8. UPROSZCZENIA
 UPROSZCZENIE: logowanie i ustawienie stanowiska — jedna lista funkcjonariuszy i miejsc zamiast Keycloak/AD — dorobienie: integracja z logowaniem KAS (kilka godzin)
