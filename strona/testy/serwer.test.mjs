@@ -171,7 +171,7 @@ test("zad. 42: śpiąca usługa — zdrowie mówi „uśpiona”, /api/obudz wo�
   const z = (await (await fetch(url + "/api/zdrowie")).json()).karta;
   assert.equal(z.ok, false);
   assert.equal(z.stan, "uśpiona");
-  assert.match(z.blad, /obudzi się/);
+  assert.match(z.blad, /ręcznie/);
   const a = await fetch(url + "/api/partia-pokazowa");
   assert.equal(a.status, 503);
   assert.equal((await a.json()).uspiona, true);

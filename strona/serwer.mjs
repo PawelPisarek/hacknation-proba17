@@ -10,7 +10,7 @@ const TYP = { ".html": "text/html; charset=utf-8", ".js": "text/javascript; char
   ".json": "application/json; charset=utf-8", ".png": "image/png" };
 const USPIONA = "karta uśpiona — uruchom wdroz.sh --usluga";
 const ZAJETA = "karta zajęta (liczy inny obraz) — spróbuj za chwilę";
-const NAPIS = { "uśpiona": "program śpi — obudzi się przy pierwszym liczeniu (ok. 30 s)",
+const NAPIS = { "uśpiona": "program śpi — obsługa budzi go ręcznie przed pokazem (ok. 30 s)",
   "budzi się": "Uruchamiam program, ok. 30 s", "w kolejce": "Uruchamiam program, ok. 30 s — karta kończy inne liczenie" };
 const LIMIT_MS = 120000;
 const LIMIT_B = 120 * 1024 * 1024;

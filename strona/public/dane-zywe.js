@@ -37,7 +37,7 @@ async function karta() {
   try {
     const k = (await (await fetch("/api/zdrowie")).json()).karta || {};
     if (k.ok) napisUslugi(`Karta gotowa: ${k.karta || k.urzadzenie} (metoda ${k.metoda})`, "ok");
-    else napisUslugi(k.stan === "uśpiona" ? "Program śpi — obudzi się sam przy pierwszym liczeniu (ok. 30 s)" : k.blad || "karta nie liczy", k.stan === "uśpiona" ? "" : "zle");
+    else napisUslugi(k.stan === "uśpiona" ? "Program śpi — obsługa budzi go ręcznie przed pokazem (ok. 30 s)" : k.stan === "budzi się" || k.stan === "w kolejce" ? k.blad : k.blad || "karta nie liczy", k.stan === "uśpiona" ? "" : k.stan === "budzi się" || k.stan === "w kolejce" ? "budze" : "zle");
   } catch { napisUslugi("Brak połączenia ze stroną", "zle"); }
 }
 // zad. 42: usługa śpi → strona sama ją budzi, czeka na zdrowie i liczy jeszcze raz
