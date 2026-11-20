@@ -250,6 +250,7 @@ def main():
     ap.add_argument("--szer-rob", type=int, default=1024, help="szerokość robocza różnicy (px)")
     ap.add_argument("--siatka", default=DOMYSLNA, help="konfiguracje do policzenia naraz")
     ap.add_argument("--raport", default=None, help="nazwa konfiguracji do raportu PNG (domyślnie pierwsza)")
+    ap.add_argument("--metoda", default="v1", choices=["v1", "v2"], help="v1 = wynik bazowy, v2 = zadanie 19")
     ap.add_argument("--bez-png", action="store_true")
     a = ap.parse_args()
     os.makedirs(a.wyj, exist_ok=True)
@@ -278,7 +279,11 @@ def main():
     t_bib = time.perf_counter() - t0
     wyniki = []
     for p, typ in bad:   # partia: po kolei
-        r = wykryj(p, bib, konf, typ)
+        if a.metoda == "v2":
+            from .wykryj2 import wykryj_v2
+            r = wykryj_v2(p, bib, konf, typ, a.typ)
+        else:
+            r = wykryj(p, bib, konf, typ)
         if typ and typ not in typy_bib:   # P16: wzorzec przybliżony
             for k in r["konfiguracje"].values():
                 k["uwaga"] = f"wzorzec przybliżony ({k['typ_wybrany']} zamiast {typ})"
