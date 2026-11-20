@@ -1,7 +1,7 @@
-// Makieta R2 — udawane dane (dane sztuczne z dane/mini i dane/mini-trudny, PNG w obrazy/).
+// Makieta R3 — udawane dane (dane sztuczne z dane/mini i dane/mini-trudny, PNG w obrazy/).
 // Auta 1–6: ramki wpisane na sztywno (R1) + jedno pudło obok prawdziwego dodatku w aucie 1 (P67 A).
 // Auto 7 (przypadek trudny, P60 B): ramki z prawdziwego wyniku programu v3 (zadanie 20, najlepsza konfiguracja).
-// Słowo różnicy wg P45 B: stałe progi siły, te same w każdym aucie (wartości — zadanie 32/P49; tu dowolne na makietę).
+// Kolejność miejsc od najmocniejszego (P79 B): bez słów i progów poziomu na ekranie; sila służy tylko do sortowania.
 const W = 1024, H = 256;
 // P79 B: bez słów niski/średni/wysoki — miejsca tylko w kolejności od najmocniejszego, jeden kolor ramek
 const POWODY = ["element konstrukcji", "zgłoszony ładunek", "błąd obrazu", "nakładanie się ładunku", "inny"]; // P13

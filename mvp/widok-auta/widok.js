@@ -118,6 +118,9 @@
       const pr = (o) => [o.x0, o.y0, o.x1, o.y1].map((v) => v.toFixed(1)).join(",");
       const duch = rw ? `<div class="ramka-wz" style="left:${(rw.x0 / szer * 100).toFixed(2)}%;top:${(rw.y0 / wys * 100).toFixed(2)}%;width:${(Math.max(12, rw.x1 - rw.x0) / szer * 100).toFixed(2)}%;height:${(Math.max(12, rw.y1 - rw.y0) / wys * 100).toFixed(2)}%" title="to samo miejsce na wzorcu"></div>` : "";
       const brakWzorca = Boolean(wynik.brak_wzorca);
+      // krytyk R3 brak 5: ramka wybranego miejsca nie mieści się w oknie przybliżenia → wskazówka przy ramce
+      const wieksza = wyb && (wyb.x0 < lp.badany.x0 || wyb.y0 < lp.badany.y0 || wyb.x1 > lp.badany.x1 || wyb.y1 > lp.badany.y1);
+      const wskazCiecie = wieksza ? '<div class="wskaz-ciecie">ramka większa niż widok</div>' : "";
       const rodzajOpis = l.rodzaj ? (NAZWA_RODZAJU[l.rodzaj] || l.rodzaj) : "brak wzorca";
       const ramkiHtml = lista
         .map((m) => {
@@ -182,6 +185,7 @@
                 <img src="${dane.obrazBadany}" alt="Obraz badany: ${wynik.plik}">
                 <div class="warstwa-ramek">${ramkiHtml}</div>
               </div>
+              ${wskazCiecie}
             </div>
           </div>
           ${
@@ -194,6 +198,7 @@
                       <img src="${dane.obrazWzorca}" alt="Wzorzec: ${l.wzorzec || rodzajOpis}">
                       <div class="warstwa-ramek">${duch}</div>
                     </div>
+                    ${wskazCiecie}
                   </div>
                 </div>`
           }
