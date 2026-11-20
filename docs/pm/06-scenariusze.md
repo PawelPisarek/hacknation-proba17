@@ -4,7 +4,7 @@ Wejście: `docs/spec.md` (A1–A14, E1–E7), `docs/pm/05-write-prd.md`, `docs/d
 
 ## Czego nie wiem o produkcie (pytania do Artura w pokoju)
 - **P49** (odpowiedź A): progi dobiera zespół na danych testowych; Artur zatwierdza po zobaczeniu, ile czystych aut dostaje „wysoki”. A2/S2 sprawdza zasadę, liczby wchodzą po zatwierdzeniu.
-- **P50** (odpowiedź A): blokuje główna ścieżka; zamykanie partii może poczekać.
+- **P50** (odpowiedź A) + **P56** (A): blokuje główna ścieżka oraz jeden przycisk „Zapisz i zamknij partię” (raport i zamknięcie razem; bez zamknięcia nie ma „rozstrzygnięte”).
 - **P51** (odpowiedź B): demo = partia 6 aut z `dane/mini` plus przypadek trudny (dodatek za ładunkiem, `mini-trudny`).
 Scenariusze uwzględniają odpowiedzi P49–P55.
 
@@ -75,7 +75,7 @@ S: E1 (5 s) → E2/E3 partia 6 aut (20 s) → auto 1: S1+S5 (35 s) → S6 + S9 (
 ## Co blokuje oddanie (P50 A)
 Przypadek trudny w demo (P51 B, P52): `trudny_mini_firanka_za_ladunkiem_00.bmp` — widać dodatek za ładunkiem w lupie albo uczciwie brak ramki z podpisem „granica programu — oglądamy obraz sam” (P52 A); przeoczenia na tym przypadku wg Z7 trzeba wpisać do raportu jako dane sztuczne, nie jako obietnicę.
 
-Blokują: S1, S4, S6, S9, S11 (zapis raportu przyciskiem „Zapisz i zamknij partię”), S14 (główna ścieżka i bezpieczeństwo przeoczeń: operator widzi miejsca, decyzja i raport działają, własny plik z linku działa). Nie blokują, ale wpisujemy do raportu z oceny: S2 wartości progów, S3, S7, S8 pasek, S12 pomiary liczbowe, blokada zmian po zamknięciu w S13 (P50 A: zamykanie może poczekać). **Konflikt z P55 B:** jeden przycisk zapisuje raport (blokuje, S11) i zamyka partię; czy cały przycisk blokuje oddanie, rozstrzyga P56 (czeka; wg rek. A: tak, S11 i S13 blokują razem). Cele liczbowe (przeoczenia ≤ 10%, ramki ≤ 6) to osobne pomiary w `docs/spec.md` §5, nie scenariusze.
+Blokują: S1, S4, S6, S9, S11, S13 (przycisk „Zapisz i zamknij partię”, P56 A), S14 (główna ścieżka i bezpieczeństwo przeoczeń: operator widzi miejsca, decyzja i raport działają, własny plik z linku działa). Nie blokują, ale wpisujemy do raportu z oceny: S2 wartości progów, S3, S7, S8 pasek, S12 pomiary liczbowe, blokada zmian po zamknięciu w S13 (P50 A: zamykanie może poczekać). **Konflikt z P55 B:** jeden przycisk zapisuje raport (blokuje, S11) i zamyka partię; czy cały przycisk blokuje oddanie, rozstrzyga P56 (czeka; wg rek. A: tak, S11 i S13 blokują razem). Cele liczbowe (przeoczenia ≤ 10%, ramki ≤ 6) to osobne pomiary w `docs/spec.md` §5, nie scenariusze.
 
 <!-- skill: test-scenarios -->
 <!-- skill: dummy-dataset -->

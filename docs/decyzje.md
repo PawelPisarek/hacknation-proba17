@@ -312,3 +312,4 @@ P56 13:02 Artur: przy jednym przycisku „Zapisz i zamknij partię” (P55 B) za
 13:03 Prezenter: slajdy ze zrzutami R1 (zrzuty/r1) i demo.md z linkiem R1, P52 A, P54 A, P55 B; PDF — brak narzędzia w kontenerze
 13:03 Szef: makieta R1 https://pawelpisarek.github.io/hacknation-proba17/makieta/r1/
 13:03 Szef: zadanie 22 zamknięte (deb58ac, 9a71ee8; ścieżka E1→E7 przeklikana). → krytyk makiety R1 (Analityk). P54 A, P55 B i skład partii pokazowej idą do makiety R2 po rundzie krytyka (z numerami P). Założone zadanie 33 (brak wzorca — próg jakości doboru; Z4 0/10). Krok 6 po R2 poprawiony → recenzja przejścia R3.
+P56 13:03 odpowiedź: Artur w pokoju: A — przycisk „Zapisz i zamknij partię” blokuje oddanie razem z raportem (zmienia P50: zamykanie partii nie czeka)
