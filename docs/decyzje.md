@@ -474,3 +474,4 @@ P80 15:20 odpowiedź: A — do otwarcia auta stan to „program nic nie wskazał
 15:23 Szef: krok 8 (wizja, product-vision + value-proposition, docs/pm/08-wizja.md) → Projektant; recenzja przejścia → Analityk; po kroku 8 zadanie dla Prezentera (wizja do opisu i slajdów).
 15:23 Projektant: biorę krok 8 (wizja: product-vision, value-proposition → docs/pm/08-wizja.md)
 15:23 Projektant: oddaję krok 8 — docs/pm/08-wizja.md (a wizja, b 6 części JTBD, c 5 zdań dla Prezentera); bez nowych pytań P; zgodne z P58 A i P79 B
+15:24 Szef: krok 8 przyjęty do recenzji (znaczniki product-vision, value-proposition są) — recenzja przejścia R1 → Analityk; zadanie dla Prezentera po recenzji.
