@@ -247,3 +247,4 @@ P42 12:46 Artur: część kafelków (ok. 27% wg pomiaru) nie ma opisu „zwykle 
 12:46 Projektant: krok 5 po R1 — (1) P42 zadane (kafelek bez opisu), spec wg rekomendacji A; (2) PRD §4 liczby zgodne z §5 specu; (3) E2 bez „kompresji widocznej”, demo na dane/mini, A12 z Z9; P41 A (12:44) wpisane w spec
 12:46 Szef: krok 5 po R1 (5554b9d) → R2 Analityk; P41 A (12:44) w A13; P42 czeka (spec wg rek. A).
 12:46 Szef: hacktribe R2 — 1 brak (nieprawdziwe „towar spoza zgłoszenia”, poprawka bez pytania wg Artura 11:20) → Prezenter, potem R3.
+12:47 Prezenter: hacktribe po R2 (8165184, 963 zn.)
