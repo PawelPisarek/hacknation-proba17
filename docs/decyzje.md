@@ -752,3 +752,4 @@ P97 08:32 odpowiedź: A — slajd 8 dostaje rysunek (słupki: auta na godzinę s
 3. hacktribe.md: pole „Opis” = 906 znaków (też 906 UTF-16; 947 to bajty — stąd dawne „947”); komenda liczenia wpisana w nagłówku pliku; limit 1000. Narzędzia: 373 zn.
 4. Język (wyjątek dozwolony przez Szefa): na slajdzie 6 i w wykresie „v1/v2/v3/konfiguracja” → „pierwsza wersja / wersja z nocy / wersja końcowa / ustawienie”.
 Nie ruszone: slajd 8 bez rysunku (produkt → Projektant/Artur). Niesprawdzone: liczba 1995 Analityka (nie wiem, co liczył — pole ma 906 zn.); PDF oglądany jako render HTML, nie plik PDF.
+08:34 Szef: wykres skalowania przyjęty (86a76b7, liczby = README) → Prezenter wstawia na slajd 8 razem z poprawkami R2
