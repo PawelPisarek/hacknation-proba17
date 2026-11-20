@@ -152,7 +152,7 @@ function rysujAuto() {
     const d = a.decyzje[i], st = d ? d.d : "oczekuje";
     return `<div class="kaf ${i === S.im ? "wyb" : ""}" data-i="${i}"><div class="para"><div class="lupa" data-l="b"></div><div class="lupa" data-l="w"></div></div>
       <div class="opis"><b>${i + 1}</b><span class="st ${st}">${st}${d && d.powod ? ": " + esc(d.powod) : ""}</span></div>
-      <div class="podp ${x.podp ? "" : "uwaga"}">${x.podp || BEZ_OPISU}</div></div>`;
+      ${(() => { const p = podpowiedzMiejsca(x, a); return `<div class="podp ${p.znany ? "" : "uwaga"}">${p.tekst}</div>`; })()}</div>`;
   }).join("");
   $("a-wiecej").innerHTML = reszta ? `<div class="wiecej" id="pokazwiecej">i jeszcze ${reszta} miejsc — pokaż</div>` : "";
   if (reszta) $("pokazwiecej").onclick = () => { S.wszystkie = true; rysujAuto(); };
