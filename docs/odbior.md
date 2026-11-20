@@ -257,3 +257,27 @@ Braki: **produkt** (drobny) — kolumna „Obraz” (miniatura, P37 B) na liści
 | napis „Uruchamiam program, ok. 30 s” + ponawianie | **zalicza** | na żywo 19:37: pasek „Uruchamiam program, ok. 30 s — karta kończy inne liczenie… (3 s)”, partia 0/7, strona ponawiała sama, potem policzyła; zrzut `docs/zrzuty/odbior42/napis-uruchamiam-program-19-37.png` |
 | `/api/obudz` uśpiona → 503 z napisem o ręcznym budzeniu | **tylko w testach** | żywo przy działającej usłudze: `POST /api/obudz` = 200 `{stan:działa}` w 0,17 s; usługi nie usypiałem. Testy `strona/testy/budzik.test.mjs`, `serwer.test.mjs`: 17/17 pass (w tym „uśpiona → 503 z napisem”, „bez budzika → 503”, „zad. 42: śpiąca usługa…”) — uruchomione przeze mnie lokalnie |
 Braki: **technika** — 503 „obsługa budzi go ręcznie” nie widziany na żywo (nie usypiałem usługi); tekst napisu 503 nie czytany przeze mnie z żywego linku.
+
+## Odbiór zadania 28 na linku (19:53, dfd32be; prawdziwe kliknięcia, partia pokazowa)
+
+| Kryterium | Wynik | Dowód |
+|---|---|---|
+| A8: auta liczą się po kolei | zaliczone | stan „liczy się 3/7”, auto 4 „liczy się”, 5 „czeka” (`zrzuty/odbior28/a8-liczenie-w-toku.png`), potem „7 aut gotowe” |
+| A8: wiersze nieklikalne w trakcie liczenia | zaliczone (kod + snapshot) | w trakcie liczenia wiersze nie mają obsługi kliknięcia (snapshot), po liczeniu „clickable”; kod `klik = gotowa && …` |
+| A8: miniatury w kolumnie „Obraz” | zaliczone | 7 obrazów 1024×256 z `/api/obraz?partia=0..6` (`a8-lista-gotowa.png`) |
+| A10: następne auto po ostatnim miejscu | zaliczone | „Zamknij auto” → „auto 2 z 7” (`a10-auto2-po-zamknij.png`), dalej do auta 7 |
+| A10: po ostatnim aucie lista + „Raport partii” | zaliczone | „Partia — 7 aut gotowe”, przycisk „Raport partii” (`a10-po-ostatnim.png`) |
+| „i jeszcze N miejsc — pokaż” | zaliczone | auto 1: 6 miejsc + „i jeszcze 2 miejsc — pokaż”, po kliknięciu 8 (`wiecej-pokazane.png`) |
+| „Dodaj jeden obraz” (P61 A), prawdziwy wybór pliku | zaliczone z zastrzeżeniem | plik `dane/mini/badany_mini_chlodnia_czyste_00.bmp` wgrany do pola pliku (przez `upload`, nie przez okno systemowe) → „auto 8”, chłodnia, 9 miejsc (`dodaj-jeden-obraz.png`); zgodność z CLI niesprawdzona |
+| 29: „Zamknij auto” nieaktywne do ostatniego miejsca | zaliczone | nieaktywne przy 0 z 8, aktywne po 8 × Zatwierdź (`zamknij-aktywne.png`) |
+| 29: Enter jako skrót | zaliczone | auto 3 zamknięte Enterem → „auto 4 z 7” |
+| 29: „Zmień rodzaj” ukryte | zaliczone | przycisk w DOM, niewidoczny (`offsetParent` = null) w widoku auta |
+| 29: po zamknięciu partii decyzje wyszarzone | zaliczone na liście; widok auta niedostępny | po „Zapisz mimo to” (ostrzeżenie „Brak decyzji: auto 8”) wiersze mają klasę „zablok”, nie da się wejść w auto, „Partia zamknięta — decyzji nie można już zmieniać.” (`raport-zamkniety.png`); wyszarzenia przycisków w widoku auta nie da się obejrzeć kliknięciem — tylko kod (aplikacja.js ~l.200) |
+
+Braki:
+1. **produkt (drobny):** „i jeszcze 2 miejsc” — zła odmiana (2 miejsca; 5 miejsc, 22 miejsc?).
+2. **technika:** zgodność wyniku „Dodaj jeden obraz” z CLI nie sprawdzona (bez osobnego zgłoszenia na kartę).
+3. **technika:** wyszarzenie decyzji w widoku auta po zamknięciu partii niedostępne z interfejsu (wiersze zablokowane) — zostaje test w kodzie; nieweryfikowalne kliknięciem.
+4. **technika:** czas liczenia partii przy pierwszym uruchomieniu nie mierzony (wyniki przyszły w ok. 6 s, prawdopodobnie z pamięci podręcznej).
+
+Niezweryfikowane: okno systemowe wyboru pliku (użyty bezpośredni wybór w polu pliku), „inny” z własnym tekstem. Zrzuty: `docs/zrzuty/odbior28/`.
