@@ -6,6 +6,7 @@ import fs from "fs";
 import vm from "vm";
 const kod = fs.readFileSync(new URL("../makieta/r3/dane.js", import.meta.url), "utf8");
 const kt = vm.createContext({});
+vm.runInContext(fs.readFileSync(new URL("../mvp/widok-auta/widok.js", import.meta.url), "utf8"), kt);   // P81 A: dane.js bierze teksty z MVP
 vm.runInContext(kod + "\n;globalThis.__T = { stanBezMiejsc, OBEJRZANE, NIEOTWARTE, OTWARTE_NIEZAMKNIETE };", kt);
 const T = kt.__T;
 let ok = 0, zle = 0;
