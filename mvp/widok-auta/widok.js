@@ -61,12 +61,16 @@
   // x_b = s·x_w + dx, y_b = y_w + dy; dobor liczony przy szerokości SZER_DOBOR, tu przeliczony na piksele obrazu.
   const SZER_DOBOR = 512;
   const ZOOM_PO_KLIKNIECIU = 4;
+  // Zadanie 25: usługa zapisuje końcowe położenie (z korektą ddx/ddy) w wynik.polozenie_wzorcow — w pikselach obrazu;
+  // starsze wyniki bez tego pola → przybliżenie z doboru (512 px).
   function polozenieWzorca(wynik, wzId) {
     const szer = wynik.szer || 1024;
+    const k = (wynik.polozenie_wzorcow || []).find((x) => x.id === wzId);
+    if (k) return { s: k.s || 1, dx: k.dx || 0, dy: k.dy || 0, znane: true, koncowe: true };
     const d = (wynik.dobor || []).find((x) => x.id === wzId);
     if (!d) return { s: 1, dx: 0, dy: 0, znane: false };
     const f = szer / SZER_DOBOR;
-    return { s: d.s || 1, dx: (d.dx || 0) * f, dy: (d.dy || 0) * f, znane: true };
+    return { s: d.s || 1, dx: (d.dx || 0) * f, dy: (d.dy || 0) * f, znane: true, koncowe: false };
   }
   const naWzorzec = (t, x, y) => ({ x: (x - t.dx) / t.s, y: y - t.dy });
   const naBadany = (t, x, y) => ({ x: t.s * x + t.dx, y: y + t.dy });
@@ -91,7 +95,7 @@
     return { badany: { ...B, zx: z, zy: z }, wzorzec: W, punktB: { x: cx, y: cy }, punktW: naWzorzec(t, cx, cy) };
   }
   const stylOkna = (o, szer, wys) =>
-    o.z === 1 ? "" : `--zx:${o.zx.toFixed(4)};--zy:${o.zy};transform:scale(${o.zx.toFixed(4)},${o.zy}) translate(${(-o.x0 / szer * 100).toFixed(3)}%,${(-o.y0 / wys * 100).toFixed(3)}%)`;
+    o.z === 1 && o.zx === 1 && !o.x0 && !o.y0 ? "" : `--zx:${o.zx.toFixed(4)};--zy:${o.zy};transform:scale(${o.zx.toFixed(4)},${o.zy}) translate(${(-o.x0 / szer * 100).toFixed(3)}%,${(-o.y0 / wys * 100).toFixed(3)}%)`;
 
   function stylWyciecia(imgUrl, m, szer, wys) {
     const cx = (m.x0 + m.x1) / 2;
@@ -120,7 +124,11 @@
       const lista = pokazWszystkie ? l.miejsca : l.widoczne;
       const wyb = l.miejsca.find((m) => m.nr === wybranyNr);
       const lp = wyb ? lupa(wyb, zoom, szer, wys, t)
-        : (() => { const o = { ...okno(szer / 2, wys / 2, zoom, szer, wys), zx: zoom, zy: zoom }; return { badany: o, wzorzec: o }; })();
+        : (() => {   // bez miejsc: cały kadr badanego, wzorzec w tym samym kadrze (zadanie 25)
+            const B = okno(szer / 2, wys / 2, zoom, szer, wys);
+            const a = naWzorzec(t, B.x0, B.y0), b = naWzorzec(t, B.x1, B.y1);
+            return { badany: { ...B, zx: zoom, zy: zoom }, wzorzec: { x0: a.x, y0: a.y, x1: b.x, y1: b.y, z: zoom, zx: zoom * t.s, zy: zoom } };
+          })();
       const rw = wyb ? ramkaNaWzorcu(t, wyb) : null;
       const pr = (o) => [o.x0, o.y0, o.x1, o.y1].map((v) => v.toFixed(1)).join(",");
       const duch = rw ? `<div class="ramka-wz" style="left:${(rw.x0 / szer * 100).toFixed(2)}%;top:${(rw.y0 / wys * 100).toFixed(2)}%;width:${(Math.max(12, rw.x1 - rw.x0) / szer * 100).toFixed(2)}%;height:${(Math.max(12, rw.y1 - rw.y0) / wys * 100).toFixed(2)}%" title="to samo miejsce na wzorcu"></div>` : "";

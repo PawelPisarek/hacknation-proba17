@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Prześwit — MVP: widok auta (zadania 23–24)</title>
+<title>Prześwit — MVP: widok auta (zadania 23–25)</title>
 <style>
 :root{--tlo:#f4f6f9;--karta:#fff;--linia:#d5dbe3;--tekst:#1a2230;--szary:#5b6678;--akc:#1b5fb8}
 *{box-sizing:border-box}
@@ -74,6 +74,7 @@ main{max-width:1280px;margin:12px auto;padding:0 12px}
       <select id="sel-zestaw">
         <option value="mini">dane/mini (v2, biblioteka bez cysterny)</option>
         <option value="mini-trudny">dane/mini-trudny (v2, biblioteka bez cysterny)</option>
+        <option value="mini-pelna">dane/mini (v2, pełna biblioteka z cysterną — 4 rodzaje)</option>
         <option value="czyste-zero">dane/scenariusze/czyste_zero (A3: 0 miejsc)</option>
       </select>
     </label>
@@ -89,8 +90,9 @@ main{max-width:1280px;margin:12px auto;padding:0 12px}
 <script src="widok.js"></script>
 <script>
 const ZRODLA = {
-  "mini": { json: "../../wyniki/z23_33/mini/wyniki.json", kat: "../../dane/mini/" },
-  "mini-trudny": { json: "../../wyniki/z23_33/mini-trudny/wyniki.json", kat: "../../dane/mini-trudny/" },
+  "mini": { json: "../../wyniki/z25/mini/wyniki.json", kat: "../../dane/mini/" },
+  "mini-trudny": { json: "../../wyniki/z25/mini-trudny/wyniki.json", kat: "../../dane/mini-trudny/" },
+  "mini-pelna": { json: "../../wyniki/z25/mini-pelna/wyniki.json", kat: "../../dane/mini/" },
   "czyste-zero": {
     kat: "../../dane/scenariusze/czyste_zero/",
     wzorzecKat: "../../dane/mini/",

@@ -23,6 +23,8 @@ const sprawdz = (war, opis) => { if (war) ok++; else { zle++; console.log("BŁĄ
   const w = L.polozenieWzorca({ szer: 1024, dobor: [{ id: "a", s: 1.04, dx: -1, dy: 2 }] }, "a");
   sprawdz(w.dx === -2 && w.dy === 4 && w.znane, "dobor 512 px → piksele obrazu (×2)");
   sprawdz(!L.polozenieWzorca({ szer: 1024, dobor: [] }, "x").znane, "brak w doborze → tożsamość");
+  const kk = L.polozenieWzorca({ szer: 1024, dobor: [{ id: "a", s: 1, dx: -1, dy: 2 }], polozenie_wzorcow: [{ id: "a", s: 1.02, dx: -3.5, dy: 4.25 }] }, "a");
+  sprawdz(kk.koncowe && kk.dx === -3.5 && kk.dy === 4.25 && kk.s === 1.02, "końcowe położenie ma pierwszeństwo przed doborem");
   const brzeg = L.lupa({ x0: 0, y0: 0, x1: 8, y1: 8 }, 4, 1024, 256, t);
   sprawdz(brzeg.badany.x0 === 0 && brzeg.badany.y0 === 0, "okno przycięte do obrazu przy brzegu");
 }
@@ -30,14 +32,16 @@ const sprawdz = (war, opis) => { if (war) ok++; else { zle++; console.log("BŁĄ
 // na wynikach programu: każde miejsce, każde przybliżenie
 const fs = require("fs");
 let miejsc = 0, maksRoznica = 0;
-for (const zestaw of ["mini", "mini-trudny"]) {
-  const d = JSON.parse(fs.readFileSync(new URL(`../wyniki/z23_33/${zestaw}/wyniki.json`, import.meta.url)));
+const KAT = process.env.WYNIKI_LUPA || "z25";   // zadanie 25: wyniki z końcowym położeniem wzorca
+for (const zestaw of ["mini", "mini-trudny"].concat(KAT === "z25" ? ["mini-pelna"] : [])) {
+  const d = JSON.parse(fs.readFileSync(new URL(`../wyniki/${KAT}/${zestaw}/wyniki.json`, import.meta.url)));
   for (const r of d.wyniki) {
     const l = L.listaMiejsc(r);
     if (r.brak_wzorca) { sprawdz(l.miejsca.length === 0, `${r.plik}: brak wzorca → bez lupy`); continue; }
     const t = L.polozenieWzorca(r, l.wzorzec);
     sprawdz(t.znane, `${r.plik}: wzorzec ${l.wzorzec} jest w doborze`);
-    for (const m of l.miejsca) for (const z of [2, 4]) {
+    if (KAT === "z25") sprawdz(t.koncowe, `${r.plik}: lupa bierze końcowe położenie z wyniki.json (polozenie_wzorcow)`);
+    for (const m of l.miejsca) for (const z of [1, 2, 4]) {
       miejsc++;
       const lp = L.lupa(m, z, r.szer, r.wys, t);
       const B = lp.badany, W = lp.wzorzec, pb = lp.punktB, pw = lp.punktW;
@@ -52,6 +56,6 @@ for (const zestaw of ["mini", "mini-trudny"]) {
     }
   }
 }
-console.log(`A1 lupa: ${miejsc} widoków (miejsce × przybliżenie 2×/4×), maks. różnica położenia w oknach ${maksRoznica.toFixed(1)} px (próg Z12 ${Z12_MAKS})`);
+console.log(`A1 lupa: ${miejsc} widoków (miejsce × przybliżenie 1×/2×/4×, wyniki/${KAT}), maks. różnica położenia w oknach ${maksRoznica.toFixed(1)} px (próg Z12 ${Z12_MAKS})`);
 console.log(`${ok + zle} sprawdzeń — ${zle ? `BŁĘDY: ${zle}` : "OK"}`);
 process.exit(zle ? 1 : 0);
