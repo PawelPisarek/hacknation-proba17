@@ -10,7 +10,7 @@
 - [zrzut: ekran główny makiety — obraz naczepy z zaznaczonym miejscem]
 
 ## 2. Problem
-- Operator RTG KAS ogląda obrazy naczep i musi wypatrzyć skrytkę lub towar spoza zgłoszenia.
+- Operator RTG KAS ogląda obrazy naczep i musi wypatrzyć skrytkę lub dodatkowy ładunek.
 - Małe przeróbki konstrukcji (detale, skrytki) łatwo przeoczyć; obecne narzędzie do papierosów słabo radzi sobie z małymi ilościami w konstrukcji.
 - Na jedno auto operator ma kilka minut.
 - [zrzut: przykładowy obraz RTG naczepy (sztuczny) bez podpowiedzi]
