@@ -731,3 +731,4 @@ P96 08:18 odpowiedź: A — „materiał do douczania” przenosimy do „Co dal
 
 ### 08:19 — Prezenter: P95 A / P96 A wprowadzone (zlecenie 0b2a4502)
 Kto: Artur (08:18), wykonuje Prezenter. 1) Zdanie „zespół 5 botów AI w 24 h” zostaje, z odnośnikiem do dziennika decyzji (…/blob/main/docs/decyzje.md): README pkt 6, hacktribe.md (pole narzędzi), slajd 7. 2) „Materiał do douczania” usunięty z opisów funkcji; jako plan w README „Co dalej” (nowa sekcja) i na slajdzie 10. Zasada Artura: zdanie nieprawdziwe wobec programu poprawiam sam. PDF przebudowany (10 slajdów, bez przepełnień). Commit w następnym kroku (hash w stan/odpowiedzi).
+08:20 Szef: P95/P96 wprowadzone (Prezenter, 1cd5209); link do dziennika 200; krytyk R2 (Analityk) na wersji ≥ 1cd5209
