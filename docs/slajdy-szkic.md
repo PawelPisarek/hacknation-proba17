@@ -32,10 +32,10 @@
 ## 5. Operator decyduje
 - Przy każdym miejscu operator zatwierdza albo odrzuca; powód podaje przy odrzuceniu.
 - Decyzje, powody, kto i kiedy — w raporcie, zapisanym lokalnie jednym przyciskiem.
-- Gdy program nic nie wskazuje: „brak wskazań — to nie gwarancja, że auto jest czyste”.
+- Na czystych autach program zwykle coś wskazuje — decyzję zawsze podejmuje człowiek.
 - ![wycinek: kafelki miejsc z podpowiedziami i przyciski decyzji](zrzuty/r3/wycinek-kafelki.png)
 
-## 6. Demo (≈ 113 s, `docs/demo.md`)
+## 6. Demo (≈ 109 s, `docs/demo.md`)
 - Partia 7 aut (nazwy neutralne, ramki z prawdziwego wyniku programu): miejsc 8, 6, 12, 8, 7, 0 (brak wzorca), 11. 7. auto (z `dane/mini-trudny`) to przypadek trudny (dodatek za ładunkiem), na liście nieoznaczony. U góry pasek „dane sztuczne — demonstracja”.
 - Auto 1: rozstrzygamy 2 miejsca i wracamy na listę, reszta „oczekuje”. ![lista](zrzuty/r3/lista.png)
 - Auto: obraz i wzorzec obok siebie, kafelki, zatwierdź/odrzuć z powodem. ![auto](zrzuty/r3/auto1.png)
