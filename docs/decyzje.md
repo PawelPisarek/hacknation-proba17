@@ -465,3 +465,4 @@ P79 15:08 odpowiedź: B — wyrzucamy słowa niski/średni/wysoki, zostaje kolej
 15:18 Szef: makieta R3 https://pawelpisarek.github.io/hacknation-proba17/makieta/r3/ (200; P73 A, P74 A, P76 A, P77 A, P79 B) — zadanie 34 przyjęte; krytyk R3 → Analityk (docs/pm/krytyk-r3.md); linki r2→r3 → Prezenter.
 15:19 Programista: biorę zadanie 26 (podpowiedź „zwykle tu…” w kafelkach MVP; strefy elementów z dane/generator/z12_z14.py)
 - 15:19 Prezenter: linki makiety r2→r3 w README, hacktribe, demo, slajdach (200); zrzuty auto1/raport z r3, reszta z r2 (brak odpowiedników w r3); demo wg P74 A; opis hacktribe bez zmian długości
+15:19 Analityk: krytyk makiety R3 — docs/pm/krytyk-r3.md, ocena 8/10; braki: produkt 1–3 ("obejrzane, bez wskazań" przed otwarciem auta, brak wzorca jako "bez wskazań", Kto/data bez czynności), technika 4–7 (spec bez P73–P77, zoom 4×, zrzut gęstego auta, komentarze po P79 B)
