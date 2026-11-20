@@ -5,6 +5,7 @@ Spec do budowy: `docs/spec.md`. Wejście: `docs/pm/01–04`, `szkice-wariantow.m
 ## Czego nie wiem o produkcie
 - **P42** (kafelek bez opisu, ok. 27% ramek wg Z14): odpowiedź Artura: napis „poza znaną konstrukcją, obejrzyj uważnie” (A5).
 - Próg P30 B (≤ 6 ramek) jest dziś niespełniony (Z2, Z6); pytanie do Artura dopiero gdy zadanie 20 też nie da ≤ 6 ramek (decyzja Szefa 12:07).
+- **P43 A (Paweł):** MVP = strona na ksefbot.pl + usługa na karcie OMENa, startująca z wdrożeniem; wgranie własnego .bmp z linku działa (A14, spec §3). „Bez internetu” sprawdzane uruchomieniem lokalnym (A12). P44–P48: A, B (P45 stałe progi), A, A, A; wartości progów — P49.
 - Zachowanie na prawdziwych obrazach KAS — nieznane, mamy tylko sztuczne (Z10).
 
 ## 1. Podsumowanie
@@ -29,7 +30,7 @@ Funkcjonariusz SCS przy stanowisku RTG na przejściu granicznym; może mieć kr�
 ## 7. Rozwiązanie
 7.1 Ścieżka: logowanie → partia → lista partii → auto (widok C: badany i wzorzec obok, kafelki miejsc) → zatwierdź/odrzuć z powodem → nr rej. → następne auto → raport. Szczegóły ekranów E1–E7: `docs/spec.md` §2.
 7.2 Funkcje w kolejności P34 (pozycje 1→5 = pomysły 1, 3, 2, 10, 6): ramki + lista; lupa; wzorzec obok; podpowiedź krótkiego stażu; zmiana rodzaju. Podstawa: .bmp 50 MB, partia po kolei, dobór wzorca, powody odrzucenia (P13), raport (P18), brak wzorca → napis (P35 A).
-7.3 Technika: lokalnie, bez internetu docelowo (P25 A).
+7.3 Technika: docelowo lokalnie, bez internetu (P25 A); MVP pod linkiem: strona na ksefbot.pl + usługa na karcie OMENa startująca z wdrożeniem, wgranie własnego .bmp z linku działa (P43 A, A14).
 7.4 Założenia: Z1, Z2+Z6, Z7, Z11 (P33) — wyniki w specu §5–6; Z12, Z14 do przeglądu na makiecie.
 
 ## 8. Wydanie

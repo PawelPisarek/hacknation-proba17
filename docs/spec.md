@@ -102,7 +102,7 @@ Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z d
 <!-- skill: create-prd -->
 <!-- skill: przeplywy-pm -->
 
-## 11. Czekają na Artura (spec wg rekomendacji)
-P44 (A: „auto N”), P45 (B: stałe progi), P46 (A: „Zamknij partię”), P47 (A: opis bez zmian), P48 (A: dopisać wyjątek „poza znaną konstrukcją” do opisu). P43 — Paweł (MVP na ksefbot.pl).
+## 11. P43–P48 rozstrzygnięte
+P43 A (Paweł), P44 A, P45 B, P46 A, P47 A, P48 A — odpowiedzi w `docs/decyzje.md`. Wartości progów słów niski/średni/wysoki: P49 (czeka).
 <!-- skill: create-prd -->
 <!-- skill: przeplywy-pm -->
