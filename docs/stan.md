@@ -1,4 +1,4 @@
-# Stan — 11:49
+# Stan — 11:50
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -9,7 +9,7 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | 19 mniej fałszywych alarmów (karta) | Programista | w toku |
 | krok 1 /competitive-analysis | Projektant | zamknięte (R3) |
 | krok 2 operator (02-operator.md) | Projektant | zamknięte (R3) |
-| krok 3 /discover (03-discover.md) | Projektant | poprawka po R1 (5 braków, z P35 A) |
+| krok 3 /discover (03-discover.md) | Projektant | recenzja 2 (Analityk) — poprawka R1 ba7678f |
 | 05–18 sondy Z1–Z14 | Analityk (po 04) | zlecone (05–16 teraz; 17, 18 po makiecie) |
 | recenzja docs/hacktribe.md | Analityk | zamknięte po R3 (f62748c, 988 zn.) |
 | 03 zbiór trudny | Analityk | zamknięte 11:18 (dane/mini-trudny, manifest-trudny.json; 112 badanych, 4 rodzaje trudności) |
