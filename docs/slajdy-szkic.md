@@ -23,7 +23,7 @@
 
 ## 4. Rozwiązanie
 - System sam dobiera wzorzec **typu pojazdu** z biblioteki (operator rzadko ma czyste zdjęcie tej samej naczepy).
-- Program dobiera wzorzec typu pojazdu; operator może zmienić rodzaj pojazdu, a analiza liczy się od nowa. Gdy brak wzorca: „wzorzec przybliżony” i „wynik mniej pewny”.
+- Program dobiera wzorzec typu pojazdu; operator może zmienić rodzaj pojazdu, a analiza liczy się od nowa. Gdy brak wzorca: nic nie zaznacza, napis „brak wzorca — sprawdź obraz sam”.
 - Program zaznacza miejsca różnic; najważniejsze: nie przeoczyć; pokazujemy, ile przeoczeń i ile fałszywych alarmów.
 - Partie: operator wskazuje kilka obrazów, program liczy je po kolei i oddaje listę wyników.
 - [zrzut: obraz badany obok wzorca, z zaznaczeniami]
