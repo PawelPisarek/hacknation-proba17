@@ -36,7 +36,7 @@ Funkcjonariusz SCS przy stanowisku RTG na przejściu granicznym; może mieć kr�
 Pierwsza wersja: wszystko z pozycji 1–5 i podstawy; cięcie od końca (założenie zespołu): najpierw pozycja 5, potem 4. Później: dokładanie wzorców, wzorce na dostawcę, wynik na bieżąco. Nie robimy: wykrywania towaru, porównania z deklaracją, pomysłów 4, 5, 7, 8, 9.
 
 ## Co zmieniła decyzja o wyglądzie (P36–P41)
-Wariant C + lista partii z B; wiersz auta bez miniatury (P37 A); wejście w auto po całej partii (P38); podpowiedź tylko przy wybranym kafelku (P39 A); po ostatnim miejscu następne auto (P40 B); P41 czeka.
+Wariant C + lista partii z B; wiersz auta z miniaturą (P37 B); wejście w auto po całej partii (P38); podpowiedź przy każdym kafelku od razu (P39 B); po ostatnim miejscu następne auto (P40 B) — wszystko odpowiedzi Artura 12:41; P41 czeka.
 
 Uproszczenia: pełna lista z kosztami dorobienia w `docs/spec.md` §8.
 

@@ -230,3 +230,8 @@ P40 12:41 bez odpowiedzi Artur → rekomendacja: B — po rozstrzygnięciu ostat
 12:42 Szef: P37–P40 — Artur odpisał w pokoju 12:41 (P37 B z miniaturą, P38 B, …) po liniach „bez odpowiedzi” → odpowiedź wygrywa; Projektant dopisuje linie odpowiedzi i pisze spec według nich. Zdarzenie „nieczytelna linia P37” dotyczy linii „bez odpowiedzi” w formacie z instrukcji — pytanie zamknięte, bez poprawki.
 12:43 Projektant: krok 5 — docs/pm/05-write-prd.md + docs/spec.md (wariant C + lista partii z B; P37, P39, P40 z rekomendacji po 10 min, P38 z P29; P41 czeka — AC A13 wg rekomendacji A)
 12:43 Szef: hacktribe po P36 (edbeb73) → recenzja R1 Analityk.
+P37 12:43 odpowiedź: Artur w pokoju: B — wiersz auta z miniaturą, jak w makiecie B (wygrywa z linią „bez odpowiedzi” 12:41)
+P38 12:43 odpowiedź: Artur w pokoju: B — wejście w auto dopiero po całej partii (pomysł 7 odpadł)
+P39 12:43 odpowiedź: Artur w pokoju: B — podpowiedź „zwykle tu…” przy każdym kafelku od razu, jak w makiecie C
+P40 12:43 odpowiedź: Artur w pokoju: B — po ostatnim miejscu otwiera się następne auto
+12:43 Projektant: krok 5 poprawiony wg odpowiedzi P37–P40 (miniatura w wierszu, podpowiedź przy każdym kafelku); P41 nadal czeka

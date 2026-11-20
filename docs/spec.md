@@ -6,11 +6,11 @@
 Operator RTG (krótki staż możliwy, P19; kilkadziesiąt aut na zmianę, P20; kilka minut na auto, P7):
 1. loguje się i raz na zmianę ustawia stanowisko (miejsce kontroli) — P22 A;
 2. wskazuje kilka obrazów .bmp (partia) — P12 A; program liczy je **po kolei** i oddaje **listę partii**;
-3. na liście widzi wiersze aut (P37 A): numer naczepy, rodzaj pojazdu, stan (czeka / liczy się / gotowe / brak wzorca), liczba miejsc. Bez miniatury;
+3. na liście widzi wiersze aut (P37 A): numer naczepy, rodzaj pojazdu, stan (czeka / liczy się / gotowe / brak wzorca), liczba miejsc, **miniatura obrazu** (P37 B, jak w makiecie B);
 4. wchodzi w auto **dopiero gdy cała partia jest policzona** (P38: pomysł 7 odrzucony w P29);
 5. w aucie widzi **dwa obrazy obok siebie**: badany z ponumerowanymi ramkami i wzorzec tego samego rodzaju; przewijanie i przybliżanie wspólne (lupa, pomysł 3);
 6. pod obrazami **kafelki miejsc** od najbardziej różnego, przy każdym jedno słowo niski / średni / wysoki, bez procentów (P17);
-7. klika kafelek → lupa na obu obrazach naraz; **podpowiedź „zwykle tu…”** pokazuje się tylko przy wybranym kafelku (P39 A);
+7. klika kafelek → lupa na obu obrazach naraz; **podpowiedź „zwykle tu…” jest od razu przy każdym kafelku** (P39 B, jak w makiecie C);
 8. **zatwierdza** (1 klik) albo **odrzuca** z powodem z listy: element konstrukcji, zgłoszony ładunek, błąd obrazu, nakładanie się ładunku, inny (własny tekst) — P13;
 9. wpisuje **numer rejestracyjny** naczepy — osobne pole przy każdym aucie, przed zatwierdzeniem wyniku (P22 A, P28 A);
 10. po rozstrzygnięciu ostatniego miejsca w aucie **otwiera się następne auto z partii** (P40 B);
@@ -24,8 +24,8 @@ Język ekranu: polski. Udawane dane: z `dane/mini` (nazwy plików `badany_mini_<
 |---|---|---|---|
 | E1 | Logowanie i stanowisko | pole „funkcjonariusz” (lista), pole „miejsce kontroli” (lista), przycisk „Zacznij zmianę” | funkcjonariusz „SCS Kowalski”, miejsce „Terespol — stanowisko 2” (**dane udawane**); raz na zmianę |
 | E2 | Wybór partii | przycisk „Wskaż obrazy .bmp”, lista wybranych plików, „Policz partię”; napis „obraz ~50 MB działa” bez kompresji widocznej dla operatora | 6 plików z `dane/mini` (po jednym z firanka, chłodnia, kontener, cysterna czyste/dodatki) |
-| E3 | Lista partii (z wariantu B) | tabela: numer naczepy, rodzaj, stan, liczba miejsc (P37 A); stan liczy się po kolei (pasek postępu partii); wiersz „gotowe” klikalny dopiero po policzeniu całej partii (P38) | 6 wierszy; jeden ze stanem „brak wzorca” (cysterna), liczba miejsc „—” |
-| E4 | Auto — widok C | lewo: badany z ramkami 1…n; prawo: wzorzec (nazwa rodzaju + przycisk „Zmień rodzaj”); wspólne przewijanie i lupa; pod spodem kafelki (numer, słowo niski/średni/wysoki, stan: oczekuje / zatwierdzone / odrzucone); pole „Nr rej.”; przyciski „Zatwierdź”, „Odrzuć ▾ powód”; podpowiedź „zwykle tu…” tylko przy wybranym kafelku (P39 A) | firanka_dodatki_00: 6 kafelków; podpowiedź np. „zwykle tu: podwozie — belka poprzeczna” |
+| E3 | Lista partii (z wariantu B) | tabela: miniatura, numer naczepy, rodzaj, stan, liczba miejsc (P37 B); stan liczy się po kolei (pasek postępu partii); wiersz „gotowe” klikalny dopiero po policzeniu całej partii (P38) | 6 wierszy; jeden ze stanem „brak wzorca” (cysterna), liczba miejsc „—” |
+| E4 | Auto — widok C | lewo: badany z ramkami 1…n; prawo: wzorzec (nazwa rodzaju + przycisk „Zmień rodzaj”); wspólne przewijanie i lupa; pod spodem kafelki (numer, słowo niski/średni/wysoki, stan: oczekuje / zatwierdzone / odrzucone); pole „Nr rej.”; przyciski „Zatwierdź”, „Odrzuć ▾ powód”; podpowiedź „zwykle tu…” przy każdym kafelku od razu (P39 B) | firanka_dodatki_00: 6 kafelków; podpowiedź np. „zwykle tu: podwozie — belka poprzeczna” |
 | E5 | Auto — brak wzorca | zamiast ramek i kafelków napis **„brak wzorca — sprawdź obraz sam”**; sam badany obraz z lupą; pola nr rej. i „Zamknij auto” (P35 A) | cysterna (nie ma jej w bibliotece wzorców) |
 | E6 | Zmiana rodzaju | lista 4 rodzajów (firanka, chłodnia, kontener, cysterna), podgląd 2 najbliższych wzorców obok badanego, „Zastosuj”; ostrzeżenie „decyzje w tym aucie zostaną skasowane” (P27 A) | wybór cysterny → E5 |
 | E7 | Raport partii | tabela po aucie: nr rej., rodzaj programu i rodzaj operatora (P27 A), liczba miejsc, decyzje z powodami, kto zdecydował, miejsce kontroli, data i godzina (P18); „Zapisz lokalnie” | zapis pliku .json i .csv obok programu; bez internetu |
@@ -45,10 +45,10 @@ Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wyni
 | A2 | Kafelki od najbardziej różnego; słowo niski/średni/wysoki, bez procentów | P17; JS1 AC2 |
 | A3 | Obraz bez miejsc: komunikat „brak wskazań”, nie pusta lista | JS1 AC4 |
 | A4 | Brak wzorca → zero ramek i napis „brak wzorca — sprawdź obraz sam” | P35 A; JS1 AC5, JS3 AC6 |
-| A5 | Podpowiedź „zwykle tu…” tylko przy wybranym kafelku | P39 A; JS1 AC4b |
+| A5 | Podpowiedź „zwykle tu…” widoczna od razu przy każdym kafelku, bez klikania | P39 B; JS1 AC4b |
 | A6 | Odrzucenie wymaga powodu z listy P13; zatwierdzenie jednym kliknięciem; decyzja w raporcie | JS2 |
 | A7 | Zmiana rodzaju: 1 klik z listy 4 rodzajów, podgląd 2 najbliższych wzorców, przeliczenie od nowa, decyzje auta znikają, raport z oboma rodzajami | P24 B, P27 A; JS3 |
-| A8 | Partia liczy się po kolei; wiersz auta (P37 A); wejście w auto dopiero po całej partii | P12, P37, P38; JS4 |
+| A8 | Partia liczy się po kolei; wiersz auta z miniaturą (P37 B); wejście w auto dopiero po całej partii | P12, P37, P38; JS4 |
 | A9 | Osobne pole nr rej. przy każdym aucie, przed zatwierdzeniem wyniku | P28 A |
 | A10 | Po ostatnim miejscu otwiera się następne auto partii | P40 B |
 | A11 | Raport z polami P18: id kontroli, miejsce (z ustawienia stanowiska), data i godzina, rodzaj programu i operatora, nr rej., miejsca z decyzją i powodem, kto zdecydował (zalogowany); bez pisania poza nr rej.; zapis lokalny | P18, P22 A; JS5 |
@@ -83,7 +83,7 @@ UPROSZCZENIE: partia = obrazy liczone po kolei, wejście w auto po całej partii
 UPROSZCZENIE: biblioteka wzorców z naszych sztucznych czystych obrazów, bez dokładania przez opiekuna — dorobienie: ekran dokładania wzorców
 UPROSZCZENIE: podpowiedź „zwykle tu…” z generatora (4 sztuczne rodzaje), nie z prawdziwych naczep — dorobienie: opisy od ekspertów KAS
 UPROSZCZENIE: raport zapisywany lokalnie jako plik, bez repozytorium KAS i bez ekranu kierownika zmiany — dorobienie: integracja z repozytorium obrazów
-UPROSZCZENIE: brak miniatury w wierszu auta (P37 A) — dorobienie: miniatura, mała
+
 
 ## 9. Poza zakresem (P10, P29, P32)
 Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z deklaracją, integracja ze skanerami, chmura, wzorce na dostawcę, rozbudowane skalowanie.
@@ -91,10 +91,10 @@ Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z d
 ## 10. Ustalenia w specu — P37–P41
 | P | Rozstrzygnięcie | Stan |
 |---|---|---|
-| P37 | A — wiersz auta bez miniatury | rekomendacja (bez odpowiedzi Artura, 12:41) |
-| P38 | wejście w auto dopiero po całej partii | z P29 (pomysł 7 odrzucony) |
-| P39 | A — podpowiedź tylko przy wybranym kafelku | rekomendacja (bez odpowiedzi Artura, 12:41) |
-| P40 | B — po ostatnim miejscu następne auto | rekomendacja (bez odpowiedzi Artura, 12:41) |
+| P37 | B — wiersz auta z miniaturą | odpowiedź Artura 12:41 (wygrywa z rekomendacją) |
+| P38 | B — wejście w auto dopiero po całej partii | odpowiedź Artura 12:41 (z P29) |
+| P39 | B — podpowiedź przy każdym kafelku | odpowiedź Artura 12:41 |
+| P40 | B — po ostatnim miejscu następne auto | odpowiedź Artura 12:41 |
 | P41 | A — decyzje w poprzednim aucie można zmienić z listy partii do zamknięcia sprawy (AC A13) | **czeka na Artura**; odpowiedź po czasie wygrywa |
 
 <!-- skill: create-prd -->
