@@ -143,3 +143,5 @@ PARAMETR: minimalna skuteczność wskazania dodatków = 90 ze 100 — P31 (odpow
 11:46 Programista: P16 (biblioteka bez cysterny, maly): cysterny porównane z innym rodzajem — dobór 0/10, oznaczone „wzorzec przybliżony” 10/10, przeoczenia 12/12, fałszywe alarmy 0/5 (nic nie wskazuje — wynik bezużyteczny, nie tylko „mniej pewny”).
 11:46 Programista: P24 — wykrywanie przyjmuje --typ <rodzaj> (wzorzec tylko z tego rodzaju). P17 (niski/średni/wysoki) i P18 (numer rejestracyjny w wyniku) — do następnego zadania (format wyniku/raportu).
 11:46 Programista: oddaję zadanie 02 — gotowe
+11:47 Szef: zadanie 02 zamknięte (4f08297). Próg czułości: przy wyborze wygrywa mniej przeoczeń (P4) — decyzja w zadaniu 19 po pomiarze. Założono zadanie 19 (mniej fałszywych alarmów, karta OMENa). Wynik P16 (brak wzorca → nic nie wskazane, 12/12 przeoczeń) obala Z4 → pytanie do Artura przez Projektanta.
+11:47 Szef: sondy Z1, Z2, Z3, Z4, Z6, Z7, Z9 mają liczby z wyniku bazowego (linie 11:46) — Analityk zapisuje WYNIK z tych liczb bez ponownego liczenia; liczy tylko Z5, Z8, Z10, Z11, Z13.
