@@ -1,0 +1,20 @@
+# Krytyk makiety R3 — 15:19 (Analityk)
+
+Oceniane: zrzuty `docs/zrzuty/r3/` (auto1, auto4, auto7-zoom4-miejsce6, raport, telefon-auto1, telefon-lista), kod `makieta/r3/`, wpis Programisty 15:16; wzorzec: `docs/spec.md`, P57–P79 z `docs/decyzje.md`. Nie otwierałem żywej strony — ocena ze zrzutów i kodu.
+
+**Ocena: 8/10.** P73 A, P76 A, P77 A, P79 B widać na zrzutach; poprawki R2 (P57 A „i jeszcze N miejsc”, P58 A, P59 A, P63 B, P64 A, brak 7) nie zostały zepsute. Braki niżej, od najważniejszego.
+
+## Braki
+
+1. **produkt — „obejrzane, bez wskazań” pojawia się, zanim ktokolwiek obejrzy auto (P74 A).** Na zrzucie telefon-lista auta 4 i 6 mają „obejrzane, bez wskazań”, a nie mają „✓ auto zamknięte” (auto 2 ma). W raporcie to samo, z datą „—”. Kod: `OBEJRZANE` jest stałą dla każdego auta bez miejsc, `kiedy` ustawia się dopiero przy „Zamknij auto”. Raport, który ma być dowodem kontroli (P18), twierdzi o aucie, którego operator nie otworzył, że jest obejrzane. Do poprawki: „obejrzane” dopiero po „Zamknij auto” (z datą), przed tym „do obejrzenia”; ostrzeżenie P63 B ma wtedy wymieniać też takie auta albo osobno „nieobejrzane”. Rozstrzygnięcie wymaga Artura, bo P74 A mówi „stan obejrzane” bez momentu.
+2. **produkt — auto „brak wzorca” (auto 6, cysterna) dostaje w liście i raporcie „obejrzane, bez wskazań”.** Program tego auta nie analizował, a „bez wskazań” brzmi jak „czyste” — przeciw P58 A i E5 („brak wzorca — sprawdź obraz sam”). Na liście zostaje czerwony „brak wzorca”, ale kolumna „Miejsca” i raport mówią „bez wskazań”. Do poprawki: osobny tekst dla braku wzorca w kolumnie miejsc i w raporcie („brak wzorca — obejrzyj sam”, bez „bez wskazań”). Można to zrobić bez pytania (błąd makiety wg zasady Artura 14:38).
+3. **produkt — auto bez miejsc jest w raporcie „rozstrzygnięte” bez decyzji operatora, a kolumna „Kto” podaje „SCS Kowalski” dla aut 4 i 6 z datą „—”.** Kto, jeśli nie było żadnej czynności? Spójność z brakiem 1: wpisać „Kto” i datę dopiero po „Zamknij auto”.
+4. **technika — spec nie ma P73–P77.** `docs/spec.md`: E3/E4/E7, A11 i tabela §10 kończą się na P72; brak P73 (numer przy ramce bez nakładania), P74 (stan „obejrzane, bez wskazań”, ostrzeżenie tylko dla nierozstrzygniętych — A11 nadal mówi o liście aut „brak decyzji”), P76 (ramka i numer przy 4×), P77 (komunikat przy „Nr rej.”, przycisk „Zamknij auto” — E5 nie nazywa go tak w E4), P78 (nic). Projektant dopisuje; bez tego AC dla MVP nie obejmują poprawek R3.
+5. **technika — P76 A: przy 4× zaznaczenie ramki pokrywa niemal cały obraz (auto 7, miejsce 6), ale to ramka większa od okna.** Na zrzucie widać obwódkę i etykietę „6”, więc P76 spełnione; jednak ramka 6 zasłania treść, a po stronie wzorca jest ten sam prostokąt — nie ma wskazówki, że to „widoczna część ramki”. Dopisek w zrzucie lub w kafelku (np. „ramka większa niż widok”) — niekrytyczne; sprawdzić w MVP `mvp/widok-auta`, czy robi to samo (zrzuty tylko makiety).
+6. **technika — P73 A: tylko zrzut auto 1 pokazuje etykiety; nie ma zrzutu z gęstym przypadkiem (auto 7, 6 z 11 ramek na 1×).** Auto 1: numery 1 i 2 stoją tuż obok siebie, 3 na kołach — nie nakładają się, ale reguła „pierwsze wolne miejsce” nie jest pokazana tam, gdzie ramek jest najwięcej; na telefonie (telefon-auto1) 1 i 2 stykają się. Dołożyć zrzut auto 7 na 1× i na telefonie.
+7. **technika — komentarz w kodzie i listy po R2 nieaktualne po P79 B:** `makieta/r3/aplikacja.js:317–318` („Numer i słowo”), `dane.js:4` („Słowo różnicy wg P45 B”). Zero wpływu na ekran; po P79 B zostają mylące dla Programisty.
+
+## Sprawdzone, bez braku
+- P79 B: w kodzie i na zrzutach nie ma „niski/średni/wysoki” ani procentów (grep po `makieta/r3/`: tylko komentarze, brak w tekstach ekranu); kafelki mają numer, stan, opis „zwykle tu…” lub „poza znaną konstrukcją, obejrzyj uważnie”; ramki jednego koloru.
+- P57 A/P58 A/P59 A/P63 B/P64 A/brak 7: widoczne na zrzutach (auto 7: „i jeszcze 5 miejsc — pokaż”; auto 4: P58; pasek na każdym ekranie; ostrzeżenie z listą aut; wiersz „próba wgrania — wynik przykładowy (makieta)”).
+- Telefon: lista partii mieści się w 390 px (poprawka Programisty, zrzut potwierdza).
