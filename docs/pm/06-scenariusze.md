@@ -1,12 +1,12 @@
 # Krok 6 — scenariusze odbioru „Prześwit” (`/test-scenarios`, dane pokazowe — `dummy-dataset`)
 
-Wejście: `docs/spec.md` (A1–A14, E1–E7), `docs/pm/05-write-prd.md`, `docs/decyzje.md` (P1–P48). Dane **sztuczne**: `dane/mini` (16 badanych + 12 wzorców, 1024×256), `dane/mini-trudny` (przypadki: egzemplarz, ładunek legalny, mały dodatek, za ładunkiem), `dane/manifest*.json` (prawda o dodatkach). Skrót ról: OP = operator RTG; TEST = tester.
+Wejście: `docs/spec.md` (A1–A14, E1–E7), `docs/pm/05-write-prd.md`, `docs/decyzje.md` (P1–P51). Dane **sztuczne**: `dane/mini` (16 badanych + 12 wzorców, 1024×256), `dane/mini-trudny` (przypadki: egzemplarz, ładunek legalny, mały dodatek, za ładunkiem), `dane/manifest*.json` (prawda o dodatkach). Skrót ról: OP = operator RTG; TEST = tester.
 
 ## Czego nie wiem o produkcie (pytania do Artura w pokoju)
-- **P49** — wartości progów niski/średni/wysoki (P45 B: stałe, wspólne dla aut). Wartości nie ustalone; A2/S2 sprawdza tylko zasadę („czyste auto nie dostaje „wysoki” z samego podziału”), nie liczby.
-- **P50** — co blokuje oddanie (które scenariusze muszą przejść).
-- **P51** — co pokazujemy na demo z danych: tylko `dane/mini`, czy też przypadek z `mini-trudny`.
-Do odpowiedzi scenariusze są wg rekomendacji (zaznaczone „wg rek.”).
+- **P49** (odpowiedź A): progi dobiera zespół na danych testowych; Artur zatwierdza po zobaczeniu, ile czystych aut dostaje „wysoki”. A2/S2 sprawdza zasadę, liczby wchodzą po zatwierdzeniu.
+- **P50** (odpowiedź A): blokuje główna ścieżka; zamykanie partii może poczekać.
+- **P51** (odpowiedź B): demo = partia 6 aut z `dane/mini` plus przypadek trudny (dodatek za ładunkiem, `mini-trudny`).
+Scenariusze uwzględniają odpowiedzi P49–P51.
 
 ## Dane pokazowe (dummy-dataset)
 **Partia pokazowa (6 aut, `dane/mini`)** — kolejność i oczekiwany stan na E3:
@@ -70,9 +70,9 @@ Format: **Cel — Warunki — Kroki → wynik — Oczekiwane.** Wszystkie kroki 
 **Warunki:** strona na ksefbot.pl wdrożona; usługa na karcie OMENa wystartowała razem z wdrożeniem (TEST nie uruchamia jej ręcznie). **Kroki:** 1) otwórz link w przeglądarce; 2) kliknij partię pokazową (`dane/mini`) → wynik; 3) wgraj własny `badany_mini_kontener_dodatki_00.bmp` → wynik; 4) wgraj BMP ~50 MB → wynik; 5) po restarcie hosta powtórz krok 3 bez ręcznego uruchamiania. **Oczekiwane:** wgranie z linku daje wynik (nie błąd połączenia i nie „wgrywanie wyłączone”); usługa słucha po wdrożeniu i po restarcie; wgrywania nie wycinamy (P43 A, Paweł). Nieprawdziwy wynik = blokuje oddanie MVP.
 
 ## Ścieżka demo (do 2 min) — przejście ręczne
-S: E1 (5 s) → E2/E3 partia 6 aut (20 s) → auto 1: S1+S5 (40 s) → S6 + S9 (30 s) → S10 → auto 6 S4 (15 s) → E7 S11 (10 s). Czas całości zapisać; > 2 min = poprawka scenariusza demo.
+S: E1 (5 s) → E2/E3 partia 6 aut (20 s) → auto 1: S1+S5 (35 s) → S6 + S9 (25 s) → S10 → przypadek trudny `trudny_mini_firanka_za_ladunkiem_00.bmp` — dodatek za ładunkiem (P51 B, 20 s) → auto 6 S4 (10 s) → E7 S11 (5 s). Czas całości zapisać; > 2 min = poprawka scenariusza demo.
 
-## Co blokuje oddanie (wg rek., czeka P50)
+## Co blokuje oddanie (P50 A)
 Blokują: S1, S4, S6, S9, S11, S14 (główna ścieżka i bezpieczeństwo przeoczeń: operator widzi miejsca, decyzja i raport działają, własny plik z linku działa). Nie blokują, ale wpisujemy do raportu z oceny: S2 wartości progów, S3, S7, S8 pasek, S12 pomiary liczbowe, S13 „Zamknij partię” (wg rek.: odpuszczamy tylko gdy zabraknie czasu — UPROSZCZENIE: raport bez zamykania partii — „rozstrzygnięte” dopisane ręcznie — pół godziny). Cele liczbowe (przeoczenia ≤ 10%, ramki ≤ 6) to osobne pomiary w `docs/spec.md` §5, nie scenariusze.
 
 <!-- skill: test-scenarios -->

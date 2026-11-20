@@ -104,12 +104,12 @@ Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z d
 | P46 | A — „Zamknij partię” w E7, potem „rozstrzygnięte” | odpowiedź Artura 12:52 |
 | P47 | A — opis „skrytkę lub dodatkowy ładunek” bez zmian | odpowiedź Artura 12:52 |
 | P48 | A — wyjątek „poza znaną konstrukcją” w opisie | odpowiedź Artura 12:52 |
-| P49 | wartości progów słów — czeka | pytanie 12:5x |
+| P49 | A — progi dobiera zespół na danych testowych, Artur zatwierdza po zobaczeniu wyniku | odpowiedź Artura; wartości czekają na pomiar |
 
 <!-- skill: create-prd -->
 <!-- skill: przeplywy-pm -->
 
 ## 11. P43–P48 rozstrzygnięte
-P43 A (Paweł), P44 A, P45 B, P46 A, P47 A, P48 A — odpowiedzi w `docs/decyzje.md`. Wartości progów słów niski/średni/wysoki: P49 (czeka).
+P43 A (Paweł), P44 A, P45 B, P46 A, P47 A, P48 A — odpowiedzi w `docs/decyzje.md`. Wartości progów słów niski/średni/wysoki: P49 A (wartości po pomiarze i zatwierdzeniu Artura).
 <!-- skill: create-prd -->
 <!-- skill: przeplywy-pm -->

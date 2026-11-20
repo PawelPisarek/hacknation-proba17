@@ -283,3 +283,7 @@ P51 12:55 Artur: co pokazujemy na demo z danych? A: partia 6 aut z dane/mini (je
 PARAMETR: progi niski/średni/wysoki = do ustalenia na danych testowych — P49
 12:55 Szef: P45 B → zadanie 23 i makieta R1 poprawione (stałe progi); PARAMETR wartości progów → Projektant zadaje P49 Arturowi.
 12:55 Projektant: PARAMETR „trzy równe części” (P45 wg rekomendacji) nieaktualny — P45 B: stałe progi wspólne; wartości progów to P49 (linia „do Artura” zastąpiona pytaniem P49)
+P49 12:56 odpowiedź: Artur w pokoju: A — my dobieramy progi na danych testowych i pokazujemy mu wynik (ile czystych aut dostaje „wysoki”); zatwierdza dopiero po zobaczeniu
+P50 12:56 odpowiedź: Artur w pokoju: A — blokuje główna ścieżka (ramki i lupa, brak wzorca, zatwierdź/odrzuć, numer rej., raport, własny .bmp z linku); zamykanie partii może poczekać
+P51 12:56 odpowiedź: Artur w pokoju: B — demo: partia 6 aut z dane/mini plus przypadek trudny (dodatek za ładunkiem); zmienia rekomendację A
+PARAMETR: progi niski/średni/wysoki = dobiera zespół na danych testowych, wynik (ile czystych aut dostaje „wysoki”) do pokazania Arturowi do zatwierdzenia — P49
