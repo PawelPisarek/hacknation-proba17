@@ -281,3 +281,33 @@ Braki:
 4. **technika:** czas liczenia partii przy pierwszym uruchomieniu nie mierzony (wyniki przyszły w ok. 6 s, prawdopodobnie z pamięci podręcznej).
 
 Niezweryfikowane: okno systemowe wyboru pliku (użyty bezpośredni wybór w polu pliku), „inny” z własnym tekstem. Zrzuty: `docs/zrzuty/odbior28/`.
+
+## Recenzja 09 przed wysyłką — docs/pm/09-uproszczenia.md (1a53117, R4; 20:03)
+
+Sprawdzone względem odbiorów 40, 29, 41, 42 i 28 w tym pliku oraz `docs/decyzje.md`. Tylko tekst do Artura. 4 braki, od najważniejszego:
+
+1. **produkt** — I1 pyta Artura A/B o budzenie usługi, ale to rozstrzygnął Paweł: P86 (19:36) „nie teraz — budzimy ręcznie przed pokazem; tokeny Paweł przygotuje przed hackathonem”. Artur nie jest właścicielem tej decyzji, a B („budzenie samo”) to kolejne dorobienie (~15 min po wstawieniu tokenu), które konkuruje z D1–D3 i łamie zasadę „jedno dorobienie wybierasz tylko w D”. Zostawić I1 jako informację bez pytania (jak sekcja 3), bez wariantu B.
+2. **produkt** — I4 („przycisku Zmień rodzaj nie ma albo jest nieaktywny — będzie wkrótce”) przestanie być prawdą po zadaniu 27 (Programista wziął je w f574a32). Przed wysyłką dopasować: po odbiorze 27 przenieść do sekcji 3 jako działające (P24 B, P27 A), przed odbiorem 27 nie wysyłać. Odbiór 28 potwierdza, że dziś przycisk jest ukryty (offsetParent = null).
+3. **technika** — dwa „działa” nie są w pełni zaliczone na linku: (a) „ramki na stronie już działają” (D1) — odbiór 40 zaliczył ramki, lupę, wzorzec i podpowiedź, ale porównanie ramek z wierszem poleceń zostało otwarte (Szef przekazał Programiście); (b) „Dodaj jeden obraz — działa” — odbiór 28: wgrany plik z `dane/mini` dostał numer auta 8, ale przez pole pliku, nie okno systemowe, i bez porównania z wierszem poleceń. Dla Artura (produkt) „działa” jest uczciwe, ale przed sygnałem „zaliczone” domknąć (a) albo zostawić zdanie bez „już”.
+4. **produkt** (drobny) — słowa techniczne w tekście do Artura: „.json i .csv” (sekcja 3 i I3 — „plik raportu do otwarcia w arkuszu”), „komunikat” (I1; „napis”), „program”/„uśpiony program” (I1 — Artur zna „aplikację”/„stronę”; ujednolicić z resztą tekstu: „usługa liczy na naszym serwerze” — spójnie z U8 z R1).
+
+Zgodne z odbiorami (zaliczone na linku): lista z miniaturami i liczeniem po kolei, wiersze nieklikalne w trakcie liczenia (odbiór 28); podpowiedzi „zwykle tu: …” (40); raport .json i .csv bez miniatury (29); skład partii i „brak wzorca” dla cysterny (41); napis „Uruchamiam program, ok. 30 s” (42); „obraz 50 MB ok. 45 s” (odbiór 21: 44,9 s i 45,1 s). U1, U3, U5 nie są rozstrzygnięte w `docs/decyzje.md` — pytanie jest uzasadnione. Zbędnych U nie ma.
+
+Niezweryfikowane: czy wiadomość jest w pokoju Produkt (szkic); czas D1–D3 nie mierzony.
+
+## Lista odbioru zadania 27 — zmiana rodzaju (przygotowana, 20:03; sprawdzam po oddaniu przez Programistę)
+
+Kryteria: `docs/zadania/27-zmiana-rodzaju.md`, A7 i E6 z `docs/spec.md` (P24 B, P27 A, P70 A). Link: https://hacknation.ksefbot.pl/. Przed startem `GET /api/zdrowie` (200, karta ok; przy uśpionej usłudze nie budzę bez zlecenia). Prawdziwe kliknięcia (`agent-browser`), karta tylko przez stronę. Partia pokazowa: auto 7 = „trudny” (firanka, 11 miejsc), auto 6 = cysterna (brak wzorca).
+
+| # | Kryterium | Jak sprawdzić | Zalicza, gdy |
+|---|---|---|---|
+| 27-1 | „Zmień rodzaj” widoczne i podgląd | auto 7 → „Zmień rodzaj” | lista 4 rodzajów (firanka, chłodnia, kontener, cysterna); podgląd 2 najbliższych wzorców z numerami 1 i 2 obok badanego; ostrzeżenie „decyzje w tym aucie zostaną …” |
+| 27-2 | „Zastosuj” przelicza auto | auto 7: zatwierdź 2 miejsca → „Zmień rodzaj” → inny rodzaj → „Zastosuj”; porównać z `GET` z `&typ=` (curl) | stan „liczy się”, potem nowy wynik; nagłówek „WZORZEC: <nowy rodzaj>”; liczba miejsc = odpowiedzi usługi z `&typ=`; zmiana widoczna na liście partii (kolumna Rodzaj) |
+| 27-3 | decyzje auta kasowane | po „Zastosuj” w aucie z decyzjami | wszystkie kafelki „oczekuje”, „Zamknij auto” nieaktywne, auto niezamknięte (brak „✓ auto zamknięte” na liście); inne auta bez zmian |
+| 27-4 | raport z oboma rodzajami | „Raport partii” → tabela; „Zapisz i zamknij partię” → pobrane .json i .csv | pole `rodzaj_programu` = rodzaj programu, `rodzaj_operatora` = wybrany; kolumny w .csv; auto bez zmiany: operator „—” |
+| 27-5 | cysterna od razu „brak wzorca” | auto 7 → rodzaj cysterna → „Zastosuj” | „brak wzorca — obejrzyj ręcznie”, 0 ramek, bez podglądu wzorców, bez błędu; powrót na firankę przywraca ramki |
+| 27-6 | błąd przeliczenia zostawia rodzaj i decyzje | w przeglądarce nadpisać `fetch` tak, by żądanie z `&typ=` kończyło się błędem (bez usypiania usługi); „Zastosuj” | czytelny napis o błędzie, rodzaj i decyzje bez zmian, auto nadal obsługiwalne; w kodzie: test dla ścieżki błędu (zapisać, jeśli brak) |
+| 27-7 | „Anuluj” | „Zmień rodzaj” → „Anuluj” | nic się nie zmienia, decyzje zostają |
+| 27-8 | brak regresji | A6, A9, A10, A13 po zmianie rodzaju (kilka kliknięć); odmiana „i jeszcze N miejsc” (Programista poprawia w f574a32) | „2 miejsca”, „5 miejsc”; decyzje, nr rej., następne auto i raport jak w odbiorach 28/29 |
+
+Zrzuty: `docs/zrzuty/odbior27/`. Wynik: sekcja „Odbiór zadania 27 na linku”, zaliczone / NIE z dowodem; braki „technika” albo „produkt”.
