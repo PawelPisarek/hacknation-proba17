@@ -1,4 +1,4 @@
-# Stan — 20:06
+# Stan — 20:07
 Kamień: MVP na hacknation.ksefbot.pl (koniec próby po MVP): 40 → 41 → 42 → 29 → 28 → 27 → odbiór → Artur: uproszczenia + 1 dorobienie. Makieta i hacktribe gotowe.
 
 | zadanie | kto | status |
