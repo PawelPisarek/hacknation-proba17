@@ -1,4 +1,4 @@
-# Stan — 15:15
+# Stan — 15:18
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -7,7 +7,7 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | P57–P72 w spec, 06 i 07 | Projektant | P57–P72 w spec/06 (103b1a2) + P60 B/P69 A w 07 R3/R9 (d4d4bda) |
 | krok 7 /pre-mortem (07-pre-mortem.md) | Projektant | zamknięty po R3, liczby v3 wpisane |
 | 22 makieta R2 | Programista | zamknięte; krytyk 7/10; Artur P73–P78 (14:38) |
-| 34 makieta R3 (P73 A, P74 A, P76 A, P77 A, brak 7 — wiersz „próbny”, 1f107e5) | Programista | w toku od 15:02 + P79 B (usunąć słowa poziomu z R3 i mvp/widok-auta) |
+| 34 makieta R3 (P73 A, P74 A, P76 A, P77 A, P79 B, brak 7) | Programista | zamknięte 15:16, r3 200; krytyk R3 → Analityk; linki r3 → Prezenter |
 | 21 wdrożenie strona + usługa (P43 A) | Paweł | w toku od 13:00 |
 | 30 odbiór A1–A14 + spójność P60 B + demo.md | Analityk | w toku od 15:06 |
 | 32 progi słów (P49 A) | Analityk | zamknięte 15:06; P79 B: słów nie ma, P49 i P75 bez przedmiotu |
