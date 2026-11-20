@@ -358,3 +358,26 @@ Kryteria: `docs/zadania/43-miniatura-w-raporcie.md`, P91 D1, P72. Link: https://
 | 43-10 | czas | „Raport partii” po policzeniu partii; „Zapisz i zamknij” | raport otwiera się < 2 s, zapis < 5 s (bez nowego liczenia na karcie — „bez liczenia” wg zadania); w żądaniach sieciowych tylko `/api/obraz` (hook `fetch`), zero `/api/partia-pokazowa`/`/api/analiza` przy otwarciu raportu |
 
 Dowód każdego punktu: liczba albo cytat ekranu + zrzut. Wynik: sekcja „Odbiór zadania 43 na linku”, zaliczone / NIE, braki „technika” albo „produkt”. Niezweryfikowane z góry: format pliku z miniaturami (wybierze Programista), wygląd na małym ekranie.
+
+## Odbiór zadania 43 na linku (Analityk, 20:27; strona v=32, https://hacknation.ksefbot.pl/, usługa „ok” — GTX 1050, v3)
+
+Wynik: **10 z 10 zaliczone** wg listy 43-1…43-10. Skrypty: `docs/zrzuty/odbior43/odbior43-analityk.sh` (okno 1280/800 px) i `odbior43-przeplyw.sh` (zmiana rodzaju, „Dodaj jeden obraz”, zapis); prawdziwe kliknięcia (`agent-browser`), karta tylko przez stronę. Pobrane pliki: `docs/zrzuty/odbior43/pobrane/`. Zrzuty: `docs/zrzuty/odbior43/`.
+
+| # | Wynik | Dowód |
+|---|---|---|
+| 43-1 | zal. | 7 z 7 `img` z `naturalWidth`=320 (320×80), kolejność auta 1…7; po „Policz partię” → „Raport partii” (`43-raport-1280.png`) |
+| 43-2 | zal. | piksele ramek (#e08a00) na miniaturze sprawdzone ramka po ramce: auto 1 — 8 z 8 miejsc (pokrycie krawędzi 1,00), auto 7 — 11 z 11. Widok auta pokazuje 6 ramek („i jeszcze N miejsc — pokaż”), a miniatura wszystkie; te 6 leży w tym samym miejscu co w widoku (odchyłka ≤ 2,6 px na miniaturze 320 px). Numery 1…n widoczne. Kolor decyzji na miniaturze: brak — zgodnie z P79 B (jeden kolor), więc nie liczę jako brak |
+| 43-3 | zal. | auto 6: miniatura 0 pikseli ramek + „brak wzorca” pod miniaturą i „brak wzorca — obejrzyj ręcznie” w decyzjach; w pobranym .html też |
+| 43-4 | zal. | auto 7: firanka 11 ramek → kontener (`&typ=kontener`, „Zastosuj”) **10 ramek** (`43-4-auto7-kontener.png`) → firanka znów **11** → cysterna 0 ramek + „brak wzorca” (`43-4-auto7-cysterna.png`); program zostaje „firanka”, operator zmienia się, w .json auto 7: `rodzaj_operatora: cysterna`, 0 miejsc |
+| 43-5 | zal. | „Zapisz i zamknij partię” → ostrzeżenie „Brak decyzji …” → „Zapisz mimo to” → pobrane 3 pliki: `raport-partii.html` 265 KB (8 obrazów PNG w środku jako `data:`, 0 odnośników `http(s)`, 0 `link`/`script`/zewn. `src`), `.json`, `.csv`. Otwarte z dysku (`file://`): 8 obrazów `naturalWidth`>0, 0 zasobów sieciowych, każde auto z miniaturą i ramkami (`43-5-raport-html.png`, `…-auto8.png`) |
+| 43-6 | zal. | .json: identyczna lista i kolejność kluczy co `odbior27/raport-27.json` (15 pól, z `decyzje[nr, decyzja, powod]`), jednakowa w każdym aucie; .csv: nagłówek identyczny bajt w bajt, BOM jest; wiersze 52 = suma decyzji (auto 6 i 7 bez miejsc po 1 wierszu). Żadnej dodatkowej kolumny |
+| 43-7 | zal. | „Dodaj jeden obraz” (`badany_mini_chlodnia_czyste_00.bmp`, `#plik1`): auto 8 chłodnia 9 miejsc, miniatura 9 z 9 ramek (`43-7-auto8.png`); raport ma 8 aut, pobrany .json 8 aut, .html 8 miniatur |
+| 43-8 | zal. | skrypty Programisty na żywym linku: odbiór 29 (7 ok, 0 błędów), 28 (16 ok), 27 (14 ok, „wszystko ok”): decyzje, A10, A13 (wyszarzenie po zamknięciu), „Dodaj jeden obraz”, zmiana rodzaju, błąd przeliczenia |
+| 43-9 | zal. | 1280 px: tabela 1070/1070, bez przewijania, kolumna „Rodzaj programu” nie ucięta; 800 px: 770/770, nie ucięta (`43-raport-800.png`). Miniatura wyświetlana ok. 200 px, ramki i numery widoczne, w pobranym .html 320 px czytelne |
+| 43-10 | zal. | miniatury 8 aut gotowe w stronie po 13 ms (przy ponownym otwarciu; przy pierwszym ≤ 30 ms), zapis 3 plików ok. 0,5 s (z narzutem narzędzia); zapytań `partia-pokazowa`/`analiza` przy otwarciu raportu i zapisie: 0 nowych (licznik zasobów bez zmiany); `/api/obraz` ładowany raz na auto (9 wpisów dla 8 aut + cysterna) |
+
+### Braki
+- technika (moja lista): w 43-6 podałem płaską listę pól (`miejsce, decyzja, powod`), a prawdziwy .json ma `liczba_miejsc` i zagnieżdżone `decyzje[]`; porównanie zrobiłem z `raport-27.json` (zgodne), lista poprawiona tu.
+- produkt, drobny: miniatura w raporcie na stronie jest mała (ok. 200 px), numery ramek ledwo czytelne; w pliku .html 320 px jest dobrze. Do decyzji Projektanta, nie blokuje.
+- niezweryfikowane: wydruk .html do PDF; czas „pierwszy raz po uśpieniu” (usługa działała); kolor decyzji na miniaturze (P79 B: brak).
+- Pomiar czasu nie obejmuje sieci użytkownika; hook `fetch` nie założony — brak nowych liczeń wnioskuję z licznika zasobów.
