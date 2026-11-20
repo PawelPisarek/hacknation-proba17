@@ -4,7 +4,7 @@ Z wynikami usługi: WYNIKI=plik1.json:manifest1,plik2.json:manifest2
 python -m unittest testy.test_lista -v
 """
 import json, os, re, unittest
-from przeswit.lista import lista_miejsc, BRAK_WSKAZAN, BRAK_WZORCA, LIMIT_WIDOCZNYCH
+from przeswit.lista import lista_miejsc, napis_wiecej, BRAK_WSKAZAN, BRAK_WZORCA, LIMIT_WIDOCZNYCH
 
 
 def wyn(miejsca, brak=False, typ="firanka"):
@@ -43,9 +43,13 @@ class Reczne(unittest.TestCase):
         self.assertEqual(len(l["widoczne"]), LIMIT_WIDOCZNYCH)
         self.assertEqual([m["nr"] for m in l["widoczne"]], [1, 2, 3, 4, 5, 6])
         self.assertEqual(l["ukryte"], 3)
-        self.assertEqual(l["napis_wiecej"], "i jeszcze 3 miejsc — pokaż")
+        self.assertEqual(l["napis_wiecej"], "i jeszcze 3 miejsca — pokaż")
         l6 = lista_miejsc(wyn([0.1, 0.2, 0.3, 0.4, 0.5, 0.6]))
         self.assertEqual((l6["ukryte"], l6["napis_wiecej"]), (0, None))
+
+    def test_odmiana_napisu_wiecej(self):   # 1 miejsce, 2–4 miejsca, 5+ miejsc (12–14 miejsc)
+        for n, w in [(1, "miejsce"), (2, "miejsca"), (4, "miejsca"), (5, "miejsc"), (12, "miejsc"), (14, "miejsc"), (22, "miejsca"), (25, "miejsc")]:
+            self.assertEqual(napis_wiecej(n), f"i jeszcze {n} {w} — pokaż")
 
 
 class ZWynikow(unittest.TestCase):
@@ -90,7 +94,7 @@ class ZWynikow(unittest.TestCase):
                         n["ponad_6"] += 1
                         self.assertEqual(len(l["widoczne"]), LIMIT_WIDOCZNYCH)
                         self.assertEqual(l["ukryte"], len(ms) - LIMIT_WIDOCZNYCH)
-                        self.assertEqual(l["napis_wiecej"], f"i jeszcze {l['ukryte']} miejsc — pokaż")
+                        self.assertEqual(l["napis_wiecej"], napis_wiecej(l["ukryte"]))
                     else:
                         self.assertEqual(len(l["widoczne"]), len(ms))
                         self.assertIsNone(l["napis_wiecej"])

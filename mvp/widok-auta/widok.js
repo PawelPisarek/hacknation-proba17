@@ -38,7 +38,7 @@
       miejsca: out,
       widoczne,
       ukryte,
-      napisWiecej: ukryte ? `i jeszcze ${ukryte} miejsc — pokaż` : null,
+      napisWiecej: ukryte ? napisWiecej(ukryte) : null,
     };
   }
 
@@ -258,7 +258,13 @@
     return l;
   }
 
+  // odmiana: 1 miejsce, 2–4 miejsca (bez 12–14), reszta miejsc (zad. 27, uwaga Szefa po odbiorze 28)
+  function miejsc(n) { const j = n % 10, d = n % 100; return n === 1 ? "miejsce" : j >= 2 && j <= 4 && (d < 12 || d > 14) ? "miejsca" : "miejsc"; }
+  function napisWiecej(n) { return `i jeszcze ${n} ${miejsc(n)} — pokaż`; }
+
   root.PrzeswitLista = {
+    miejsc,
+    napisWiecej,
     POZA_KONSTRUKCJA,
     STREFY,
     podpowiedz,

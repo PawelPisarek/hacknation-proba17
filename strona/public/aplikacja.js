@@ -3,7 +3,8 @@
 // Stan tylko w pamięci strony (udawane dane, bez backendu). Zmiany względem R1 — docs/decyzje.md (zadanie 22, R2).
 const $ = (i) => document.getElementById(i);
 const S = { kto: "", miejsce: "", pliki: [], partia: [], liczy: false, zamknieta: false,
-  ia: 0, im: 0, budzenie: 0, zoom: 1, wzn: 0, zRodz: null, idKontroli: "", wszystkie: false, potwierdz: false };
+  ia: 0, im: 0, budzenie: 0, zoom: 1, wzn: 0, zRodz: null, idKontroli: "", wszystkie: false, potwierdz: false,
+  zmianaRodzaju: true };   // zad. 27 (P24 B / P27 A): „Zmień rodzaj” czynny
 
 function ekran(id) {
   document.querySelectorAll(".ekr").forEach((e) => e.classList.toggle("on", e.id === id));
@@ -120,7 +121,7 @@ function rysujAuto() {
   ustawSrc("imgB", obrazBadany(a));
   ["obB", "obW"].forEach((id) => { $(id).style.width = (100 * S.zoom) + "%"; $(id).querySelectorAll(".ramka, .wycinek").forEach((r) => r.remove()); });
   $("a-rodzaj").textContent = NAZWA[rodz] + (a.rodzajOperatora ? ` (program: ${NAZWA[a.rodzaj]})` : "");
-  $("zmienrodz").style.display = S.zmianaRodzaju ? "" : "none";   // zad. 27 (P24 B / P27 A: do oddania 27 ukryty)
+  $("zmienrodz").style.display = S.zmianaRodzaju ? "" : "none"; $("zmienrodz").disabled = S.zamknieta;   // zad. 27 (P24 B / P27 A)
   // P77 A: „Zamknij auto” zawsze widoczny przy „Nr rej.” (Enter — skrót); aktywny, gdy wszystkie miejsca rozstrzygnięte
   $("a-zamknij").disabled = S.zamknieta || !(bw || !a.miejsca.length || a.miejsca.every((_, j) => a.decyzje[j]));
   $("a-zamknij").title = S.zamknieta ? "partia zamknięta" : $("a-zamknij").disabled ? "najpierw rozstrzygnij wszystkie miejsca" : "";
@@ -165,7 +166,7 @@ function rysujAuto() {
       <div class="opis"><b>${i + 1}</b><span class="st ${st}">${st}${d && d.powod ? ": " + esc(d.powod) : ""}</span></div>
       ${(() => { const p = podpowiedzMiejsca(x, a); return `<div class="podp ${p.znany ? "" : "uwaga"}">${p.tekst}</div>`; })()}</div>`;
   }).join("");
-  $("a-wiecej").innerHTML = reszta ? `<div class="wiecej" id="pokazwiecej">i jeszcze ${reszta} miejsc — pokaż</div>` : "";
+  $("a-wiecej").innerHTML = reszta ? `<div class="wiecej" id="pokazwiecej">${PrzeswitLista.napisWiecej(reszta)}</div>` : "";
   if (reszta) $("pokazwiecej").onclick = () => { S.wszystkie = true; rysujAuto(); };
   $("a-kafle").querySelectorAll(".kaf").forEach((el) => {
     const x = a.miejsca[+el.dataset.i];
@@ -271,10 +272,17 @@ function podgladWz() {   // P70 A: 2 wzorce wybranego rodzaju najbliższe badane
 }
 $("zmienrodz").onclick = zmienRodzaj;
 $("z-anuluj").onclick = () => { ekran("E4"); rysujAuto(); };
-$("z-zast").onclick = () => {   // P24 B, P27 A: przeliczenie od nowa, decyzje auta znikają, raport z oboma rodzajami
-  const a = A(); a.rodzajOperatora = S.zRodz === a.rodzaj ? null : S.zRodz; a.decyzje = {}; a.zamkniete = false; a.kiedy = "";
-  a.miejsca = brakWzorca(a) ? [] : sortuj(a.rodzajOperatora ? MIEJSCA_PO_ZMIANIE : a.oryg);
-  a.stan = brakWzorca(a) ? "brak wzorca" : "gotowe"; S.im = 0; S.zoom = 1; S.wzn = 0; S.wszystkie = false; przyciskiZoom();
+$("z-zast").onclick = async () => {   // P24 B, P27 A: przeliczenie od nowa z rodzajem operatora (&typ=), decyzje auta znikają, raport z oboma rodzajami
+  const a = A(); if (S.zamknieta || S.liczy) return;
+  const bylo = a.rodzajOperatora; a.rodzajOperatora = S.zRodz === a.rodzaj ? null : S.zRodz;
+  S.im = 0; S.zoom = 1; S.wzn = 0; S.wszystkie = false; przyciskiZoom();
+  if (brakWzorca(a)) { a.decyzje = {}; a.zamkniete = false; a.kiedy = ""; a.miejsca = []; a.stan = "brak wzorca"; ekran("E4"); rysujAuto(); return; }   // cysterna → E5, bez liczenia
+  $("z-zast").disabled = true; $("z-zast").textContent = "liczy się…"; $("z-blad").textContent = ""; S.liczy = true;
+  try {
+    const w = await liczAuto(a, a.rodzajOperatora || a.rodzaj); if (!w || w.blad) throw new Error(w?.blad || "brak wyniku");
+    przyjmij(a, w); a.miejsca = sortuj(a.oryg); a.stan = "gotowe"; a.decyzje = {}; a.zamkniete = false; a.kiedy = "";
+  } catch (e) { a.rodzajOperatora = bylo; $("z-blad").textContent = "Nie udało się przeliczyć (" + e.message + "). Rodzaj i decyzje bez zmian — spróbuj jeszcze raz."; return; }
+  finally { S.liczy = false; $("z-zast").disabled = false; $("z-zast").textContent = "Zastosuj"; }
   ekran("E4"); rysujAuto();
 };
 

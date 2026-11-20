@@ -10,6 +10,16 @@ Bez torcha — działa w aplikacji i w testach bez karty.
 BRAK_WSKAZAN = "brak wskazań — to nie gwarancja, że auto jest czyste; obejrzyj obraz sam"
 BRAK_WZORCA = "brak wzorca — sprawdź obraz sam"
 LIMIT_WIDOCZNYCH = 6
+def miejsc(n):
+    """Odmiana: 1 miejsce, 2–4 miejsca (bez 12–14), reszta miejsc (uwaga Szefa po odbiorze 28)."""
+    j, d = n % 10, n % 100
+    return "miejsce" if n == 1 else "miejsca" if 2 <= j <= 4 and not 12 <= d <= 14 else "miejsc"
+
+
+def napis_wiecej(n):
+    return f"i jeszcze {n} {miejsc(n)} — pokaż"
+
+
 def lista_miejsc(wynik, konf=None, limit=LIMIT_WIDOCZNYCH):
     """wynik: jeden obraz z wyniki.json (wykryj_v2).
     Zwraca dict(napis, rodzaj, wzorzec, miejsca, widoczne, ukryte, napis_wiecej).
@@ -32,4 +42,4 @@ def lista_miejsc(wynik, konf=None, limit=LIMIT_WIDOCZNYCH):
                 miejsca=out,
                 widoczne=wid,
                 ukryte=ukr,
-                napis_wiecej=f"i jeszcze {ukr} miejsc — pokaż" if ukr else None)
+                napis_wiecej=napis_wiecej(ukr) if ukr else None)
