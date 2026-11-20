@@ -55,10 +55,13 @@ function liczPoKolei(od) {   // partia liczy się po kolei (P12), wejście w aut
 }
 
 // ---------- E3 ----------
-// P74 A: „brak decyzji” tylko dla auta z nierozstrzygniętymi miejscami; auto bez miejsc (też brak wzorca) = „obejrzane, bez wskazań”
+// P74 A: „brak decyzji” tylko dla auta z nierozstrzygniętymi miejscami; auto bez miejsc = „obejrzane, bez wskazań”; brak wzorca = „brak wzorca — obejrzyj ręcznie” (krytyk R3 brak 2)
 const miejscaAuta = (a) => (brakWzorca(a) ? [] : a.miejsca);
 const bezDecyzji = (a) => !a.zepsuty && miejscaAuta(a).some((_, j) => !a.decyzje[j]);
-const OBEJRZANE = "obejrzane, bez wskazań";
+const OBEJRZANE = "obejrzane, bez wskazań";   // P80 A: dopiero po „Zamknij auto”, z godziną i osobą
+const NIEOTWARTE = "program nic nie wskazał — nieotwarte";   // P80 A: do „Zamknij auto”
+const stanBezMiejsc = (a) => (a.zamkniete ? OBEJRZANE : NIEOTWARTE);
+const BW_RECZNIE = "brak wzorca — obejrzyj ręcznie";   // krytyk R3 brak 2 (E5, P58 A): auto bez wzorca nigdy „bez wskazań”
 function rysujE3() {
   const n = S.partia.length, g = S.partia.filter((a) => !["czeka", "liczy się"].includes(a.stan)).length, gotowa = policzone();
   $("p-ile").textContent = n + " aut";
@@ -77,7 +80,7 @@ function rysujE3() {
       <td>${liczone || a.zepsuty ? "—" : NAZWA[rodz]}</td>
       <td><span class="stan ${cls}">${st}</span>${a.zamkniete && !S.zamknieta ? ' <span class="szary">✓ auto zamknięte</span>' : ""}
         ${a.zepsuty ? '<div class="blad">Nie da się odczytać pliku — to nie jest obraz .bmp albo plik jest uszkodzony. Pozostałe auta liczą się dalej.</div>' : ""}</td>
-      <td>${liczone || a.zepsuty ? "—" : !miejscaAuta(a).length ? `0 <span class="szary">· ${OBEJRZANE}</span>` : a.miejsca.length + (gotowa ? ` <span class="szary">(zostało ${zost})</span>` : "")}</td></tr>`;
+      <td>${liczone || a.zepsuty ? "—" : brakWzorca(a) ? `— <span class="szary">· ${BW_RECZNIE}</span>` : !miejscaAuta(a).length ? `0 <span class="szary">· ${stanBezMiejsc(a)}</span>` : a.miejsca.length + (gotowa ? ` <span class="szary">(zostało ${zost})</span>` : "")}</td></tr>`;
   }).join("");
   $("p-wiersze").querySelectorAll("tr.klik").forEach((t) => (t.onclick = () => otworzAuto(+t.dataset.i)));
   const wszystkieObejrzane = gotowa && S.partia.every((a) => a.zepsuty || a.zamkniete);
@@ -273,7 +276,7 @@ function wierszeRaportu() {
     rodzaj_programu: NAZWA[a.rodzaj] + (Z_WZORCEM.includes(a.rodzaj) ? "" : " (brak wzorca)"), bez_wzorca: brakWzorca(a), rodzaj_operatora: a.rodzajOperatora ? NAZWA[a.rodzajOperatora] : "",
     liczba_miejsc: brakWzorca(a) ? 0 : a.miejsca.length, wynik_przykladowy: !!a.wlasny,
     decyzje: a.miejsca.map((x, i) => ({ nr: i + 1, decyzja: a.decyzje[i]?.d || "brak decyzji", powod: a.decyzje[i]?.powod || "" })),
-    kto: S.kto, miejsce_kontroli: S.miejsce, data_godzina: a.kiedy || "—", brak_decyzji: bezDecyzji(a),
+    kto: a.zamkniete ? S.kto : "—", miejsce_kontroli: S.miejsce, data_godzina: a.zamkniete && a.kiedy ? a.kiedy : "—", zamkniete: a.zamkniete,   // krytyk R3 brak 3 brak_decyzji: bezDecyzji(a),
   }));
 }
 function rysujE7() {
@@ -281,7 +284,7 @@ function rysujE7() {
   $("r-id").textContent = "· " + S.idKontroli;
   $("r-naglowek").textContent = `${S.kto} · ${S.miejsce} · ${w.length} aut · ${S.zamknieta ? "partia zamknięta" : "partia otwarta"}`;
   $("r-wiersze").innerHTML = w.map((r) => `<tr><td>auto ${r.auto}${r.wynik_przykladowy ? '<br><span class="szary">próba wgrania — wynik przykładowy (makieta)</span>' : ""}</td><td>${r.nr_rej ? esc(r.nr_rej) : '<span class="szary">—</span>'}</td><td>${r.rodzaj_programu}</td><td>${r.rodzaj_operatora || "—"}</td>
-    <td>${r.liczba_miejsc}</td><td>${r.decyzje.map((d) => `${d.nr}: ${d.decyzja}${d.powod ? " (" + esc(d.powod) + ")" : ""}`).join("<br>") || (r.bez_wzorca ? "brak wzorca — " + OBEJRZANE : OBEJRZANE)}</td>
+    <td>${r.liczba_miejsc}</td><td>${r.decyzje.map((d) => `${d.nr}: ${d.decyzja}${d.powod ? " (" + esc(d.powod) + ")" : ""}`).join("<br>") || (r.bez_wzorca ? BW_RECZNIE : r.zamkniete ? OBEJRZANE : NIEOTWARTE)}</td>
     <td>${r.kto}</td><td>${r.miejsce_kontroli}</td><td>${r.data_godzina}</td></tr>`).join("");
   $("zapisz").style.display = S.zamknieta ? "none" : ""; $("r-nowa").style.display = S.zamknieta ? "" : "none";
   const braki = w.filter((r) => r.brak_decyzji);
@@ -314,9 +317,11 @@ $("r-lista").onclick = () => { S.potwierdz = false; ekran("E3"); rysujE3(); };
 ekran("E1");
 
 // ---------- P73 A / P76 A: etykiety ramek ----------
-// Numer i słowo w jednej małej etykiecie OBOK ramki (nad, pod, z prawej, z lewej — pierwsze wolne miejsce w obrazie),
-// bez nakładania na inne etykiety i ramki; gdy nie ma miejsca na „nr słowo”, zostaje sam numer (pełny opis jest w kafelku).
+// Sam numer miejsca (P79 B: bez słów poziomu) w małej etykiecie OBOK ramki (nad, pod, z prawej, z lewej — pierwsze wolne
+// miejsce w obrazie), bez nakładania na inne etykiety i ramki; gdy ciasno — w ramce od środka (pełny opis jest w kafelku).
 const nachodzi = (q, lista) => lista.some((z) => q.x < z.x + z.w && z.x < q.x + q.w && q.y < z.y + z.h && z.y < q.y + q.h);
+const ODSTEP = 4;   // krytyk R3 brak 6: etykiety nie stykają się (także telefon)
+const zOdstepem = (q) => ({ x: q.x - ODSTEP, y: q.y - ODSTEP, w: q.w + 2 * ODSTEP, h: q.h + 2 * ODSTEP });
 const prost = (r) => ({ x: r.offsetLeft, y: r.offsetTop, w: r.offsetWidth, h: r.offsetHeight });
 function ulozEtykiety(id) {
   const ob = $(id), Wp = ob.clientWidth, Hp = ob.clientHeight, etykiety = [];
@@ -330,14 +335,14 @@ function ulozEtykiety(id) {
       sp.textContent = tekst; const w = sp.offsetWidth, h = sp.offsetHeight;
       const kand = [[R.x, R.y - h - g], [R.x + R.w - w, R.y - h - g], [R.x, R.y + R.h + g], [R.x + R.w - w, R.y + R.h + g],
         [R.x + R.w + g, R.y], [R.x - w - g, R.y], [R.x + R.w + g, R.y + R.h - h], [R.x - w - g, R.y + R.h - h]];
-      const dobra = kand.find(([x, y]) => x >= 0 && y >= 0 && x + w <= Wp && y + h <= Hp && !nachodzi({ x, y, w, h }, etykiety) && !nachodzi({ x, y, w, h }, inne));
+      const dobra = kand.find(([x, y]) => x >= 0 && y >= 0 && x + w <= Wp && y + h <= Hp && !nachodzi(zOdstepem({ x, y, w, h }), etykiety) && !nachodzi({ x, y, w, h }, inne));
       if (dobra) return ustaw(dobra[0], dobra[1], w, h);
     }
     // ciasno (np. telefon 1×): sam numer w pierwszym miejscu w obrazie, które nie zasłania innej etykiety
     sp.textContent = sp.dataset.krotki; const w = sp.offsetWidth, h = sp.offsetHeight;
-    const kand = [[R.x, R.y - h - g], [R.x, R.y + R.h + g], [R.x + R.w + g, R.y], [R.x - w - g, R.y], [R.x + 1, R.y + 1]]
+    const kand = [[R.x, R.y - h - g], [R.x, R.y + R.h + g], [R.x + R.w + g, R.y], [R.x - w - g, R.y], [R.x + R.w - w, R.y - h - g], [R.x + R.w - w, R.y + R.h + g], [R.x + 1, R.y + 1], [R.x + R.w - w - 1, R.y + R.h - h - 1]]
       .map(([x, y]) => [Math.min(Math.max(0, x), Wp - w), Math.min(Math.max(0, y), Hp - h)]);
-    const [x, y] = kand.find(([x, y]) => !nachodzi({ x, y, w, h }, etykiety)) || kand[0];
+    const [x, y] = kand.find(([x, y]) => !nachodzi(zOdstepem({ x, y, w, h }), etykiety)) || kand.find(([x, y]) => !nachodzi({ x, y, w, h }, etykiety)) || kand[0];
     ustaw(x, y, w, h);
   });
 }
@@ -353,7 +358,7 @@ function przypnijEtykiete() {
     let wy = $(ob).querySelector(".wycinek");
     if (!ciecie) { if (wy) wy.remove(); }
     else {
-      if (!wy) { wy = document.createElement("div"); wy.className = "wycinek " + [...r.classList].filter((c) => /^s\d$/.test(c)).join(" "); $(ob).appendChild(wy); }
+      if (!wy) { wy = document.createElement("div"); wy.className = "wycinek " + [...r.classList].filter((c) => /^s\d$/.test(c)).join(" "); wy.innerHTML = '<span class="wskaz">ramka większa niż widok</span>'; $(ob).appendChild(wy); }   // krytyk R3 brak 5
       const x0 = Math.max(R.x, V.x), y0 = Math.max(R.y, V.y), x1 = Math.min(R.x + R.w, V.x + V.w), y1 = Math.min(R.y + R.h, V.y + V.h);
       Object.assign(wy.style, { left: x0 + "px", top: y0 + "px", width: Math.max(0, x1 - x0) + "px", height: Math.max(0, y1 - y0) + "px" });
     }
