@@ -1,13 +1,13 @@
-# Stan — 11:13
+# Stan — 11:15
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
 |---|---|---|
 | 01 generator danych | Analityk | zamknięte (dane/mini w repo; pełny ThinkPad ~/dane/proba17) |
 | krok 0 docs/materialy.md | Analityk | zamknięte |
-| 02 ocena + wynik bazowy + dobór wzorca (karta OMENa) | Programista | w toku |
+| 02 ocena + wynik bazowy + dobór wzorca (karta OMENa) | Programista | wypchnięte 11:15 (1bbf9dd), czekam na meldunek |
 | krok 1 /competitive-analysis | Projektant | zamknięte (R3) |
-| krok 2 operator (02-operator.md) | Projektant | P14–P21 odpowiedziane → poprawka, potem recenzja przejścia |
+| krok 2 operator (02-operator.md) | Projektant | po P14–P21 (5fdf2bd) → R1 u Analityka |
 | recenzja docs/hacktribe.md | Analityk | R1 4 braki → poprawione (6adbde2) → R2 po zad. 03 |
 | 03 zbiór trudny | Analityk | zlecone |
 | docs/hacktribe.md — „Prześwit” + partie (P12) | Prezenter | gotowe (bdba1ed); recenzja przed 20:00 |
