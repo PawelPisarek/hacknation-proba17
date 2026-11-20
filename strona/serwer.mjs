@@ -10,6 +10,8 @@ const TYP = { ".html": "text/html; charset=utf-8", ".js": "text/javascript; char
   ".json": "application/json; charset=utf-8", ".png": "image/png" };
 const USPIONA = "karta uśpiona — uruchom wdroz.sh --usluga";
 const ZAJETA = "karta zajęta (liczy inny obraz) — spróbuj za chwilę";
+const NAPIS = { "uśpiona": "program śpi — obudzi się przy pierwszym liczeniu (ok. 30 s)",
+  "budzi się": "Uruchamiam program, ok. 30 s", "w kolejce": "Uruchamiam program, ok. 30 s — karta kończy inne liczenie" };
 const LIMIT_MS = 120000;
 const LIMIT_B = 120 * 1024 * 1024;
 const zaDuzy = { blad: "plik większy niż 120 MB" };
@@ -23,7 +25,8 @@ async function zbierz(req) {
   return Buffer.concat(cz);
 }
 
-export function utworz({ omenUrl, katalog, limitMs = LIMIT_MS }) {
+// budzikUrl (zad. 42): budzik na OMENie (usluga/budzik.mjs) — mówi, czy usługa śpi, i na prośbę ją zgłasza.
+export function utworz({ omenUrl, katalog, limitMs = LIMIT_MS, budzikUrl = "" }) {
   const kat = path.resolve(katalog);
   const doUslugi = async (req, res, sciezka) => {
     let body = null, dl = null;
@@ -40,7 +43,7 @@ export function utworz({ omenUrl, katalog, limitMs = LIMIT_MS }) {
         dl = body.length;
       }
     }
-    if (!omenUrl) { req.resume(); return json(res, 503, { blad: USPIONA }); }
+    if (!omenUrl) { req.resume(); return json(res, 503, { blad: USPIONA, uspiona: true }); }
     try {
       const opcje = { method: req.method, signal: AbortSignal.timeout(limitMs) };
       if (body !== null) Object.assign(opcje, { body, duplex: "half",
@@ -51,10 +54,19 @@ export function utworz({ omenUrl, katalog, limitMs = LIMIT_MS }) {
       res.end(d);
     } catch (e) {
       const czas = e?.name === "TimeoutError" || e?.name === "AbortError" || e?.cause?.name === "TimeoutError";
-      if (!res.headersSent) json(res, 503, { blad: czas ? ZAJETA : USPIONA });
+      if (!res.headersSent) json(res, 503, czas ? { blad: ZAJETA } : { blad: USPIONA, uspiona: true });
     }
   };
   return http.createServer((req, res) => obsluz(req, res).catch(() => { if (!res.headersSent) json(res, 500, { blad: "błąd strony" }); else res.destroy(); }));
+
+  // stan usługi od budzika, z napisem dla człowieka
+  async function odBudzika(sciezka, metoda) {
+    try {
+      const r = await fetch(budzikUrl + sciezka, { method: metoda, signal: AbortSignal.timeout(10000) });
+      const s = await r.json();
+      return { ...s, blad: s.stan === "działa" ? "" : (s.blad && s.stan === "uśpiona" ? s.blad : NAPIS[s.stan] || s.blad || USPIONA) };
+    } catch { return { stan: "brak budzika", blad: USPIONA }; }
+  }
 
   async function obsluz(req, res) {
     const u = new URL(req.url, "http://x");
@@ -64,8 +76,14 @@ export function utworz({ omenUrl, katalog, limitMs = LIMIT_MS }) {
         if (!omenUrl) throw new Error("brak OMEN_URL");
         const r = await fetch(omenUrl + "/zdrowie", { signal: AbortSignal.timeout(5000) });
         karta = await r.json();
-      } catch (e) { karta = { ok: false, blad: USPIONA }; }
+      } catch (e) { karta = { ok: false, blad: USPIONA, stan: "uśpiona" }; }
+      if (!karta.ok && budzikUrl) karta = { ...karta, ...(await odBudzika("/stan", "GET")) };
       return json(res, 200, { strona: "ok", karta });
+    }
+    if (u.pathname === "/api/obudz" && req.method === "POST") {
+      if (!budzikUrl) return json(res, 503, { stan: "brak budzika", blad: USPIONA });
+      const s = await odBudzika("/obudz", "POST");
+      return json(res, s.stan === "brak budzika" || s.stan === "uśpiona" ? 503 : 200, s);   // „uśpiona” po prośbie = nie obudził
     }
     if (u.pathname === "/api/analiza" && req.method === "POST") return doUslugi(req, res, "/analiza" + u.search);
     if (u.pathname === "/api/partia-pokazowa" && req.method === "GET") return doUslugi(req, res, "/partia-pokazowa");
@@ -94,6 +112,8 @@ function wyslij(res, p, d) {
 
 if (import.meta.url === pathToFileURL(process.argv[1] || "").href) {
   const PORT = +process.env.PORT || 3000, OMEN = process.env.OMEN_URL || "";
-  utworz({ omenUrl: OMEN, katalog: path.join(import.meta.dirname, "public") })
+  // budzik domyślnie na tym samym hoście co usługa, port 8769 (BUDZIK_URL=- wyłącza)
+  const BUDZIK = process.env.BUDZIK_URL === "-" ? "" : process.env.BUDZIK_URL || (OMEN ? OMEN.replace(/:\d+$/, ":8769") : "");
+  utworz({ omenUrl: OMEN, katalog: path.join(import.meta.dirname, "public"), budzikUrl: BUDZIK })
     .listen(PORT, () => console.log(`Prześwit na porcie ${PORT}` + (OMEN ? `, karta: ${OMEN}` : ", bez usługi na karcie")));
 }

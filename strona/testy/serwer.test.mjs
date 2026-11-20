@@ -157,3 +157,40 @@ test("zad. 40: przekazuje /api/obraz i podaje widok.js z mvp/", async () => {
   assert.equal(b.headers.get("cache-control"), "no-store");   // CDN nie zapamięta 404
   await zamknij(strona); await zamknij(atrapa);
 });
+
+test("zad. 42: śpiąca usługa — zdrowie mówi „uśpiona”, /api/obudz woła budzik, 503 ma znacznik uspiona", async () => {
+  const wolania = [];
+  const budzik = http.createServer((req, res) => {
+    wolania.push(`${req.method} ${req.url}`);
+    res.writeHead(req.url === "/obudz" ? 202 : 200, { "content-type": "application/json" });
+    res.end(JSON.stringify(req.url === "/obudz" ? { stan: "budzi się", od_s: 0 } : { stan: "uśpiona" }));
+  });
+  const budzikUrl = await nasluch(budzik);
+  const strona = utworz({ omenUrl: "http://127.0.0.1:9", katalog: KAT, budzikUrl });
+  const url = await nasluch(strona);
+  const z = (await (await fetch(url + "/api/zdrowie")).json()).karta;
+  assert.equal(z.ok, false);
+  assert.equal(z.stan, "uśpiona");
+  assert.match(z.blad, /obudzi się/);
+  const a = await fetch(url + "/api/partia-pokazowa");
+  assert.equal(a.status, 503);
+  assert.equal((await a.json()).uspiona, true);
+  const o = await fetch(url + "/api/obudz", { method: "POST" });
+  assert.equal(o.status, 200);
+  const oj = await o.json();
+  assert.equal(oj.stan, "budzi się");
+  assert.equal(oj.blad, "Uruchamiam program, ok. 30 s");
+  assert.deepEqual(wolania, ["GET /stan", "POST /obudz"]);
+  await zamknij(strona); await zamknij(budzik);
+});
+
+test("zad. 42: bez budzika /api/obudz → 503, zdrowie dalej z podpowiedzią", async () => {
+  const strona = utworz({ omenUrl: "http://127.0.0.1:9", katalog: KAT, budzikUrl: "http://127.0.0.1:9" });
+  const url = await nasluch(strona);
+  const o = await fetch(url + "/api/obudz", { method: "POST" });
+  assert.equal(o.status, 503);
+  const z = (await (await fetch(url + "/api/zdrowie")).json()).karta;
+  assert.equal(z.stan, "brak budzika");
+  assert.match(z.blad, /wdroz\.sh --usluga/);
+  await zamknij(strona);
+});

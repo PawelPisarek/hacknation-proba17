@@ -11,6 +11,7 @@ async function karta() {
     const z = await (await fetch("/api/zdrowie")).json();
     const k = z.karta || {};
     $("#karta").textContent = k.ok ? `Karta gotowa: ${k.karta || k.urzadzenie} (metoda ${k.metoda})` : (k.blad || "karta nie liczy na GPU");
+    if (!k.ok && k.stan === "uśpiona") $("#karta").textContent = "Program śpi — obudzi się sam przy pierwszym liczeniu (ok. 30 s)";
     $("#karta").className = k.ok ? "ok" : "zle";
   } catch { $("#karta").textContent = "Brak połączenia ze stroną"; $("#karta").className = "zle"; }
 }
@@ -62,16 +63,45 @@ function dodaj(w, obrazBadany) {
   return i;
 }
 
-async function pokaz(obietnica, opis, poWynikach) {
+const czekaj = (ms) => new Promise((r) => setTimeout(r, ms));
+const sek = (t0) => Math.round((performance.now() - t0) / 1000);
+
+// zad. 42: usługa śpi → strona sama ją budzi (budzik na OMENie), czeka na zdrowie i wtedy liczy jeszcze raz
+async function obudz() {
+  const t0 = performance.now();
+  $("#stan").textContent = "Uruchamiam program, ok. 30 s…"; $("#stan").className = "budze";
+  const r = await fetch("/api/obudz", { method: "POST" });
+  const s = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(s.blad || "nie udało się uruchomić programu");
+  while (sek(t0) < 300) {
+    await czekaj(3000);
+    const k = (await (await fetch("/api/zdrowie")).json().catch(() => ({}))).karta || {};
+    if (k.ok) return sek(t0);
+    if (k.stan === "uśpiona" && sek(t0) > 90) throw new Error(k.blad || "program nie wstał — spróbuj jeszcze raz");
+    $("#stan").textContent = `${k.stan === "w kolejce" ? k.blad : "Uruchamiam program, ok. 30 s"}… (${sek(t0)} s)`;
+  }
+  throw new Error("program nie wstał w 5 min — spróbuj za chwilę");
+}
+
+async function pokaz(zrob, opis, poWynikach) {
   $("#stan").textContent = opis; $("#stan").className = "";
   const t0 = performance.now();
+  let budzenie = 0;
+  const odpowiedz = async () => {
+    const r = await zrob();
+    try { return [r, await r.json()]; } catch { throw new Error(`serwer odpowiedział błędem ${r.status} — spróbuj za chwilę`); }
+  };
   try {
-    const r = await obietnica;
-    let j;
-    try { j = await r.json(); } catch { throw new Error(`serwer odpowiedział błędem ${r.status} — spróbuj za chwilę`); }
+    let [r, j] = await odpowiedz();
+    if (r.status === 503 && j.uspiona) {
+      budzenie = await obudz();
+      $("#stan").textContent = opis; $("#stan").className = "";
+      [r, j] = await odpowiedz();
+    }
     if (!r.ok) throw new Error(j.blad || `błąd ${r.status}`);
     poWynikach(j);
-    $("#stan").textContent = `Gotowe w ${((performance.now() - t0) / 1000).toFixed(1)} s.`;
+    $("#stan").textContent = `Gotowe w ${((performance.now() - t0) / 1000).toFixed(1)} s` +
+      (budzenie ? ` (w tym uruchomienie programu ${budzenie} s).` : ".");
   } catch (e) { $("#stan").textContent = e.message; $("#stan").className = "blad"; }
   karta();
 }
@@ -80,13 +110,13 @@ $("#plik").addEventListener("change", () => {
   const f = $("#plik").files[0];
   if (!f) return;
   const url = URL.createObjectURL(f);   // badany pokazujemy z pliku w przeglądarce — bez drugiej wysyłki
-  pokaz(fetch(`/api/analiza?nazwa=${encodeURIComponent(f.name)}`, { method: "POST", body: f }),
+  pokaz(() => fetch(`/api/analiza?nazwa=${encodeURIComponent(f.name)}`, { method: "POST", body: f }),
     `Liczę ${f.name} (${(f.size / 1048576).toFixed(1)} MB)…`, (j) => otworz(dodaj(j, url)));
   $("#plik").value = "";
 });
 
 function partia(autoNr) {
-  return pokaz(fetch("/api/partia-pokazowa"), "Liczę partię pokazową (7 aut)…", (j) => {
+  return pokaz(() => fetch("/api/partia-pokazowa"), "Liczę partię pokazową (7 aut)…", (j) => {
     const pierwsze = auta.length;
     for (const w of j.wyniki || []) dodaj(w, w.obraz ? `/api/obraz?${w.obraz}` : "");
     otworz(pierwsze + Math.max(0, Math.min((j.wyniki || []).length - 1, (autoNr || 1) - 1)));
