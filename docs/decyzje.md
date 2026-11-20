@@ -206,3 +206,4 @@ P37 12:31 Artur: wiersz auta na liście partii — A: numer naczepy, rodzaj poja
 P38 12:31 Artur: czy operator może wejść w auto, zanim policzy się cała partia? A: tak, w każde już gotowe; B: dopiero gdy cała partia gotowa (jak w ustaleniach z /discover, pomysł 7 odrzucony). Rekomendacja: B — czeka
 P39 12:31 Artur: podpowiedź „zwykle tu…” — A: tylko przy wybranym kafelku miejsca; B: przy każdym kafelku od razu. Rekomendacja: A — czeka
 P40 12:31 Artur: po rozstrzygnięciu ostatniego miejsca w aucie — A: wraca do listy partii; B: otwiera się następne auto z partii. Rekomendacja: B — czeka
+12:31 Prezenter: README poprawione po R1 (commit poniżej)

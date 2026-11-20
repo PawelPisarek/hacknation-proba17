@@ -1,44 +1,47 @@
 # Prześwit
 
-**Status: DRAFT** — wersja robocza, wyniki skuteczności jeszcze niezmierzone.
+**Status: DRAFT** — wersja robocza; część celów skuteczności jeszcze niespełniona (sekcja „Wyniki”).
 
 **Prześwit** to narzędzie AI dla operatora RTG na granicy: porównuje obraz naczepy z wzorcem typu pojazdu i zaznacza miejsca, w których może być ukryty towar. Operator zatwierdza lub odrzuca każde miejsce (odrzucenie z powodem); decyzja należy do niego.
 
 Dla kogo: operatorzy RTG Służby Celno-Skarbowej (zadanie KAS, HackNation).
-Makieta: warianty do wyboru — https://pawelpisarek.github.io/hacknation-proba17/makieta/warianty/ · wersja na ksefbot.pl: — (po wdrożeniu)
+Makieta (wybór wariantu): https://pawelpisarek.github.io/hacknation-proba17/makieta/warianty/ · wersja na ksefbot.pl: — (po wdrożeniu)
 
 ## Jak uruchomić
 
-Kod: `src/przeswit/` (`wykryj.py` — wykrywanie, `bmp.py` — wczytanie BMP), ocena: `ocena/ocena.py`.
-Zależności: `pip install -r requirements.txt`. Liczenie używa karty graficznej (CUDA), a bez niej procesora.
-
-Szybka próba na małym zbiorze w repo (komenda z nagłówka `wykryj.py`):
+Wymaga Pythona 3 i `pip install -r requirements.txt`; liczy na karcie graficznej (CUDA), bez niej na procesorze (wolniej). Kod: `src/przeswit/` (`wykryj.py` — metoda bazowa v1, `wykryj2.py` — v2, `wykryj3.py` — v3, `bmp.py`), ocena: `ocena/ocena.py`, `ocena/wybor.py`, `ocena/analiza.py`.
 
 ```
+# partia wskazanych obrazów (lista wyników + PNG z zaznaczeniami; opcjonalnie --typ firanka|chlodnia|kontener|cysterna)
+PYTHONPATH=src python -m przeswit.wykryj --biblioteka KATALOG_WZORCOW --badane a.bmp b.bmp --wyj wyniki/partia
+# szybka próba na małym zbiorze z repo + ocena
 PYTHONPATH=src python -m przeswit.wykryj --biblioteka dane/mini --manifest dane/mini/manifest.json --wyj wyniki/mini
-PYTHONPATH=src python -m przeswit.wykryj --biblioteka DIR --badane a.bmp b.bmp ... --wyj DIR   # partia: wskazane obrazy
+python ocena/ocena.py --manifest dane/mini/manifest.json --wyniki wyniki/mini/wyniki.json
 ```
 
-Wynik bazowy i ocena na pełnych zbiorach: `ocena/uruchom.sh` (wymaga zbiorów w `$DANE` i `$TRUDNE`, karty graficznej). Uruchomienie aplikacji z makietą: —
+**Uwaga:** domyślne ustawienia (`prog=6`) różnią się od użytych w wynikach, więc „szybka próba” da inne liczby. Wyniki odtwarzają skrypty na pełnych zbiorach (`$DANE`, `$TRUDNE`, karta graficzna): `ocena/uruchom.sh` (metoda bazowa, siatka z `prog=10,14`), `ocena/uruchom19.sh` (metoda v2, `--metoda v2`), `ocena/uruchom20.sh` (v3). Uruchomienie aplikacji z makietą: —
+
+## Wyniki (na danych sztucznych, nie na zdjęciach KAS)
+
+Źródło: linie `WYNIK` w `docs/decyzje.md`; metoda v2 (zad. 19), zestaw zwykły / trudny:
+- przeoczenia: 12/64 (18,8%) / 11/62 (17,7%); cel ≤ 10% — **niespełniony**;
+- fałszywe alarmy (obrazy czyste z ≥1 ramką): 24/32 / 38/40; ramki na czystym trudnym śr. 12,9 (cel ≤ 6 — niespełniony);
+- dobór wzorca: 64/64 / 80/80; czas na obraz 50 MB: śr. 0,91 s, maks. 1,30 s.
+
+Metoda bazowa: przeoczenia 8/64 (zwykły) i 11/62 (trudny), czas śr. 1,7 s. Liczby to wyniki wewnętrzne zespołu, nie gwarancja skuteczności.
 
 ## Dane
 
-Zbiór sztuczny (zdjęć KAS nie mamy): naczepy czyste i z dodatkowym ładunkiem, pliki BMP do ~50 MB, cztery typy pojazdów.
-Opis i generator: `dane/README.md` (generator deterministyczny); podzbiory w repo: `dane/mini/`, `dane/mini-trudny/`; pełne zbiory poza repo.
+Zbiór sztuczny (zdjęć KAS nie mamy): naczepy czyste i z dodatkowym ładunkiem, pliki BMP do ~50 MB, cztery typy pojazdów. Opis i generator: `dane/README.md`; podzbiory w repo: `dane/mini/`, `dane/mini-trudny/`; pełne zbiory poza repo.
 
 ## Użyte narzędzia (przygotowane wcześniej)
 
-- **Zespół botów na OpenMausBot** (5 ról: Szef, Projektant, Analityk, Programista, Prezenter) — https://github.com/milind-soni/OpenMausBot (Apache-2.0)
+- **Zespół botów na OpenMausBot** (5 ról: Szef, Projektant, Analityk, Programista, Prezenter) — https://github.com/milind-soni/OpenMausBot (Apache-2.0); zlecenia liczeniowe idą przez orkiestrator zadań (Slurm)
+- **Karta graficzna** GTX 1050 (laptop OMEN), na której liczono wyniki
 - **Modele Claude** (Anthropic)
 - **Skille pm-skills** — https://github.com/phuryn/pm-skills (MIT); łańcuch opisu produktu w `docs/pm/`
 - **Biblioteki z `requirements.txt`:** numpy, torch, pillow
 
 ## Dokumenty
 
-`docs/hacktribe.md` (opis do formularza, DRAFT) · `docs/slajdy-szkic.md` (szkielet prezentacji) · `docs/decyzje.md` (ustalenia)
-
-## Uruchomienie (szkic, Programista)
-Wymaga: Python 3, `pip install -r requirements.txt` (numpy, torch z CUDA, pillow); liczy na karcie graficznej.
-- Partia obrazów (lista wyników + PNG z zaznaczeniami): `PYTHONPATH=src python -m przeswit.wykryj --biblioteka <katalog wzorców> --badane a.bmp b.bmp --wyj wyniki/partia` (opcjonalnie `--typ firanka|chlodnia|kontener|cysterna`).
-- Ocena na zbiorze z manifestem: `PYTHONPATH=src python -m przeswit.wykryj --biblioteka dane/mini --manifest dane/mini/manifest.json --wyj wyniki/mini` i `python ocena/ocena.py --manifest dane/mini/manifest.json --wyniki wyniki/mini/wyniki.json`.
-- Pełny przebieg oceny (zwykły + trudny, wszystkie poziomy): `sh ocena/uruchom.sh` (dane w `~/dane/proba17`, `~/dane/proba17-trudny`).
+`docs/hacktribe.md` (opis do formularza, DRAFT) · `docs/slajdy-szkic.md` · `docs/decyzje.md` (ustalenia i WYNIK) · `docs/materialy.md` · `docs/pm/` (łańcuch PM) · `docs/zrzuty/` (zrzuty, lupa)
