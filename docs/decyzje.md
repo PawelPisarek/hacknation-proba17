@@ -682,3 +682,4 @@ P91 20:10 odpowiedź: D1 — miniatura z zaznaczonymi miejscami w raporcie, robi
 20:27 Szef: 43 zamknięte (odbiór 10/10, Analityk 20:27); brak „produkt” (miniatura ~200 px na stronie, numery ledwo czytelne) → Projektant; README D1 → Prezenter
 20:27 Prezenter: README D1 — punkt 19 (miniatura w raporcie, raport-partii.html offline; bez PDF, niesprawdzone); demo.md krok 7 wspomina miniaturę, czas bez zmian 114 s
 P92 20:28 Artur: miniatura auta w raporcie na stronie jest mała (ok. 200 px) i numery miejsc ledwo widać; w pobranym pliku jest większa (320 px) — A: powiększamy miniaturę na stronie jak w pliku, B: zostaje jak jest (rekomendacja: B) — czeka
+P92 20:28 odpowiedź: A — powiększamy miniaturę na stronie jak w pobranym raporcie; jury patrzy na stronę, numery miejsc mają być czytelne (Artur w pokoju)
