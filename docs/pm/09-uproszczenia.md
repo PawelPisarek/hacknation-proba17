@@ -21,7 +21,7 @@ Artur, MVP jest prawie gotowe. Żeby zdążyć, kilka rzeczy zrobiliśmy prości
 
 **2. Co operator zobaczy na stronie pod linkiem** (to też uproszczenia; pytamy tak / nie):
 - I1 (P90): obraz 50 MB wysyła się ok. 45 s; cel „poniżej minuty” na całe auto jest przez to ciasny.
-- I2 (P90): można wgrać jeden obraz naraz (przycisk „Dodaj jeden obraz” — wgrany obraz dostaje kolejny numer auta; sprawdzamy jeszcze, czy wynik zgadza się z wynikiem liczenia); partia pokazowa jest stała.
+- I2 (P90): można wgrać jeden obraz naraz (przycisk „Dodaj jeden obraz” — wgrany obraz dostaje kolejny numer auta; wynik zgadza się z wynikiem liczenia: 9 z 9 miejsc, bez różnicy w położeniu); partia pokazowa jest stała.
 Rekomendacja: tak.
 
 **3. Już ustalone z Tobą — bez pytania, tylko informacja:**
@@ -34,7 +34,7 @@ Rekomendacja: tak.
 - uśpiona usługa: pierwsze kliknięcie po dłuższej przerwie czeka do ok. 30 s; obsługa budzi ją ręcznie przed pokazem (decyzja Pawła, P86). Gdyby zasnęła w trakcie, strona pokazuje napis „Uruchamiam…” i czeka;
 
 **4. Co dorobić, jeśli zostanie czas — jedna rzecz (P91).** Wybierasz tylko tutaj:
-- **D1 — miniatura w raporcie (ok. 1–2 h):** przy każdym aucie mały obraz z zaznaczonymi miejscami; kierownik od razu widzi, gdzie było miejsce. Twój pomysł z 13:07 (P72). Na liście aut miniatura już jest, w raporcie jej dalej brak — więc to nadal uproszczenie. Decyzje w raporcie sprawdzamy dalej; czas ok. 1–2 h przyjmujemy jako realny.
+- **D1 — miniatura w raporcie (ok. 1–2 h):** przy każdym aucie mały obraz z zaznaczonymi miejscami; kierownik od razu widzi, gdzie było miejsce. Twój pomysł z 13:07 (P72). Na liście aut miniatura już jest; w raporcie jej brak. Wybrałeś D1 (P91) — jest w toku (zadanie 43), czas ok. 1–2 h.
 - **D2 — konto funkcjonariusza zamiast listy (kilka godzin):** funkcjonariusz loguje się, a „kto zdecydował” i miejsce kontroli biorą się z konta. Na publicznej stronie to konta i hasła, więc więcej pracy i uwagi niż sama lista.
 - **D3 — ekran dokładania wzorca (czas nieoszacowany, wstępnie 2–3 h):** opiekun dodaje czysty obraz jako nowy rodzaj, np. cysternę, która dziś wzorca nie ma. Ryzyko: nowy wzorzec zmienia wyniki aplikacji na autach tego rodzaju (też na tych z pokazu) i tego dziś nie mierzymy.
 
