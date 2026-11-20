@@ -35,7 +35,7 @@ $("policz").onclick = () => { nowaPartia(); ekran("E3"); liczPoKolei(0); };
 
 function zrobAuto(p, id) {
   return { ...p, id, stan: "czeka", rodzajProgramu: p.rodzaj, rodzajOperatora: null, miejsca: sortuj(p.miejsca), oryg: p.miejsca,
-    decyzje: {}, nr: "", zamkniete: false, kiedy: "" };
+    decyzje: {}, nr: "", zamkniete: false, otwarte: false, kiedy: "" };
 }
 function nowaPartia() {
   S.partia = S.pliki.map((p, i) => zrobAuto(p, i + 1));
@@ -58,9 +58,6 @@ function liczPoKolei(od) {   // partia liczy się po kolei (P12), wejście w aut
 // P74 A: „brak decyzji” tylko dla auta z nierozstrzygniętymi miejscami; auto bez miejsc = „obejrzane, bez wskazań”; brak wzorca = „brak wzorca — obejrzyj ręcznie” (krytyk R3 brak 2)
 const miejscaAuta = (a) => (brakWzorca(a) ? [] : a.miejsca);
 const bezDecyzji = (a) => !a.zepsuty && miejscaAuta(a).some((_, j) => !a.decyzje[j]);
-const OBEJRZANE = "obejrzane, bez wskazań";   // P80 A: dopiero po „Zamknij auto”, z godziną i osobą
-const NIEOTWARTE = "program nic nie wskazał — nieotwarte";   // P80 A: do „Zamknij auto”
-const stanBezMiejsc = (a) => (a.zamkniete ? OBEJRZANE : NIEOTWARTE);
 const BW_RECZNIE = "brak wzorca — obejrzyj ręcznie";   // krytyk R3 brak 2 (E5, P58 A): auto bez wzorca nigdy „bez wskazań”
 function rysujE3() {
   const n = S.partia.length, g = S.partia.filter((a) => !["czeka", "liczy się"].includes(a.stan)).length, gotowa = policzone();
@@ -104,7 +101,7 @@ $("nowa").onclick = () => { S.pliki = []; S.partia = []; S.zamknieta = false; ek
 const A = () => S.partia[S.ia];
 const ustawSrc = (id, u) => { if (u == null) $(id).removeAttribute("src"); else if ($(id).getAttribute("src") !== u) $(id).setAttribute("src", u); };
 function otworzAuto(i) {
-  S.ia = i; const a = A(); S.im = Math.max(0, a.miejsca.findIndex((_, j) => !a.decyzje[j])); S.zoom = 1; S.wzn = 0; S.wszystkie = false;
+  S.ia = i; const a = A(); a.otwarte = true;   // decyzja 15:29 (P80 A) S.im = Math.max(0, a.miejsca.findIndex((_, j) => !a.decyzje[j])); S.zoom = 1; S.wzn = 0; S.wszystkie = false;
   przyciskiZoom(); ekran("E4"); $("a-nrinfo").textContent = ""; rysujAuto();
 }
 function brakWzorca(a) { return !Z_WZORCEM.includes(a.rodzajOperatora || a.rodzaj); }
@@ -276,7 +273,7 @@ function wierszeRaportu() {
     rodzaj_programu: NAZWA[a.rodzaj] + (Z_WZORCEM.includes(a.rodzaj) ? "" : " (brak wzorca)"), bez_wzorca: brakWzorca(a), rodzaj_operatora: a.rodzajOperatora ? NAZWA[a.rodzajOperatora] : "",
     liczba_miejsc: brakWzorca(a) ? 0 : a.miejsca.length, wynik_przykladowy: !!a.wlasny,
     decyzje: a.miejsca.map((x, i) => ({ nr: i + 1, decyzja: a.decyzje[i]?.d || "brak decyzji", powod: a.decyzje[i]?.powod || "" })),
-    kto: a.zamkniete ? S.kto : "—", miejsce_kontroli: S.miejsce, data_godzina: a.zamkniete && a.kiedy ? a.kiedy : "—", zamkniete: a.zamkniete,   // krytyk R3 brak 3 brak_decyzji: bezDecyzji(a),
+    kto: a.zamkniete ? S.kto : "—", miejsce_kontroli: S.miejsce, data_godzina: a.zamkniete && a.kiedy ? a.kiedy : "—", zamkniete: a.zamkniete, otwarte: !!a.otwarte,   // krytyk R3 brak 3 brak_decyzji: bezDecyzji(a),
   }));
 }
 function rysujE7() {
@@ -284,7 +281,7 @@ function rysujE7() {
   $("r-id").textContent = "· " + S.idKontroli;
   $("r-naglowek").textContent = `${S.kto} · ${S.miejsce} · ${w.length} aut · ${S.zamknieta ? "partia zamknięta" : "partia otwarta"}`;
   $("r-wiersze").innerHTML = w.map((r) => `<tr><td>auto ${r.auto}${r.wynik_przykladowy ? '<br><span class="szary">próba wgrania — wynik przykładowy (makieta)</span>' : ""}</td><td>${r.nr_rej ? esc(r.nr_rej) : '<span class="szary">—</span>'}</td><td>${r.rodzaj_programu}</td><td>${r.rodzaj_operatora || "—"}</td>
-    <td>${r.liczba_miejsc}</td><td>${r.decyzje.map((d) => `${d.nr}: ${d.decyzja}${d.powod ? " (" + esc(d.powod) + ")" : ""}`).join("<br>") || (r.bez_wzorca ? BW_RECZNIE : r.zamkniete ? OBEJRZANE : NIEOTWARTE)}</td>
+    <td>${r.liczba_miejsc}</td><td>${r.decyzje.map((d) => `${d.nr}: ${d.decyzja}${d.powod ? " (" + esc(d.powod) + ")" : ""}`).join("<br>") || (r.bez_wzorca ? BW_RECZNIE : stanBezMiejsc(r))}</td>
     <td>${r.kto}</td><td>${r.miejsce_kontroli}</td><td>${r.data_godzina}</td></tr>`).join("");
   $("zapisz").style.display = S.zamknieta ? "none" : ""; $("r-nowa").style.display = S.zamknieta ? "" : "none";
   const braki = w.filter((r) => r.brak_decyzji);
