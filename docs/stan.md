@@ -12,5 +12,5 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 
 Ustalenia Artura: P2 wzorzec typu z biblioteki; P3+P9 program zaznacza sam, operator zatwierdza/odrzuca na wyniku z powodem; P4 przeoczenie gorsze; P5 skuteczność najpierw; P7 kilka minut na auto; P10 zakres 1. wersji, duży obraz ~50 MB od razu, partie później; P11 nazwa „Prześwit”.
 Otwarte pytania: —
-Środowisko: brak ssh (shim) i rsync w kontenerze — alarm do Pawła 11:06.
+Środowisko: rsync i ssh wróciły (11:09), orkiestrator działa.
 Lista Artura na noc: —

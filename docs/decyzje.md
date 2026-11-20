@@ -51,3 +51,4 @@ P12 11:06 odpowiedź: Artur w pokoju: A — partie w pierwszej wersji, ale najpr
 P13 11:06 odpowiedź: Artur w pokoju: A — lista gotowych powodów odrzucenia + „inny” z tekstem; do listy dołożyć „nakładanie się ładunku” (najczęstsza pomyłka)
 PARAMETR: powód odrzucenia = element konstrukcji, zgłoszony ładunek, błąd obrazu, nakładanie się ładunku, inny (własny tekst) — P13
 11:08 Projektant: krok 1 po P12/P13 — partie przeniesione do „Musi być" (najprościej), sprzeczność z §3 zamknięta; lista powodów odrzucenia ustalona
+11:09 Szef: Paweł — rsync i ssh wróciły (restart kontenera); orkiestrator startuje zlecenia, w tym --wyslij → liczenie normalnie przez orkiestrator na całą flotę
