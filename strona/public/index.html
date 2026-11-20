@@ -1,1 +1,44 @@
-<!doctype html><html lang="pl"><head><meta charset="utf-8"><title>Prześwit</title></head><body>Prześwit</body></html>
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prześwit — MVP</title>
+<style>
+  :root { --tlo: #f6f7f9; --tekst: #1b1f24; --ramka: #d0d5dc; --akcent: #1f5fbf; --blad: #b3261e; --ok: #1e7b34; }
+  @media (prefers-color-scheme: dark) { :root { --tlo: #15181c; --tekst: #e6e8eb; --ramka: #3a4048; --akcent: #7fb0ff; --blad: #ff8a80; --ok: #7ed18f; } }
+  body { margin: 0; padding: 16px; font: 15px/1.45 system-ui, sans-serif; background: var(--tlo); color: var(--tekst); }
+  main { max-width: 960px; margin: 0 auto; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .przyciski { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+  button, label.przycisk { padding: 8px 14px; border: 1px solid var(--akcent); border-radius: 6px; background: transparent; color: var(--akcent); font: inherit; cursor: pointer; }
+  input[type=file] { display: none; }
+  #karta.ok { color: var(--ok); } #karta.zle, .blad { color: var(--blad); }
+  .tabela { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border-bottom: 1px solid var(--ramka); padding: 6px 8px; text-align: left; vertical-align: top; }
+  details summary { cursor: pointer; }
+  small { opacity: .75; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Prześwit — porównanie obrazu RTG z wzorcem</h1>
+  <small>Dane sztuczne. Wynik surowy: miejsca od najbardziej różnego.</small>
+  <p id="karta">Sprawdzam kartę…</p>
+  <div class="przyciski">
+    <label class="przycisk" for="plik">Wskaż obraz .bmp</label>
+    <input id="plik" type="file" accept=".bmp">
+    <button id="partia" type="button">Partia pokazowa</button>
+  </div>
+  <p id="stan"></p>
+  <div class="tabela">
+    <table>
+      <thead><tr><th>plik</th><th>rodzaj</th><th>biblioteka</th><th>miejsc</th><th>czas</th><th>miejsca</th></tr></thead>
+      <tbody id="wyniki"></tbody>
+    </table>
+  </div>
+</main>
+<script src="strona.js"></script>
+</body>
+</html>
