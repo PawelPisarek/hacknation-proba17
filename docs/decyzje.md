@@ -163,3 +163,4 @@ P35 11:49 odpowiedź: Artur w pokoju: A — brak wzorca → nic nie zaznaczamy, 
 11:51 Szef: krok 3 R2 — 4 braki → Projektant poprawia (R3 ostatnia).
 11:52 Projektant: R2 kroku 3 — bez pytania (z P12, P35, P30 B): JS3 dostaje AC5/AC6; JS4 AC1: stan „policzone”, obrazy otwiera się po całej partii (P12: lista wyników po przeliczeniu po kolei); Z6 próg ≥90% obrazów ≤6 ramek; Z1 i Z10 jeden poziom mini; nagłówek P35; 02-operator: usunięte „wzorzec przybliżony”.
 11:52 Projektant: krok 3 poprawiony po R2 (988b897)
+11:52 Szef: krok 3 poprawiony po R2 → R3 (Analityk, ostatnia).
