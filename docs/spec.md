@@ -9,7 +9,7 @@ Operator RTG (krótki staż możliwy, P19; kilkadziesiąt aut na zmianę, P20; k
 3. na liście widzi wiersze aut (P37 B): „auto N” z nazwą pliku (nr rej. po wpisaniu w E4; P44 A), rodzaj pojazdu, stan (czeka / liczy się / gotowe / brak wzorca), liczba miejsc, **miniatura obrazu** (P37 B, jak w makiecie B);
 4. wchodzi w auto **dopiero gdy cała partia jest policzona** (P38: pomysł 7 odrzucony w P29);
 5. w aucie widzi **dwa obrazy obok siebie**: badany z ponumerowanymi ramkami i wzorzec tego samego rodzaju; przewijanie i przybliżanie wspólne (lupa, pomysł 3);
-6. pod obrazami **kafelki miejsc** od najbardziej różnego, przy każdym jedno słowo niski / średni / wysoki, bez procentów (P17);
+6. pod obrazami **kafelki miejsc** od najbardziej różnego, przy każdym numer i stan, bez słów niski / średni / wysoki i bez procentów — liczy się kolejność od najmocniejszego miejsca (P79 B, zmienia P17);
 7. klika kafelek → lupa na obu obrazach naraz; **podpowiedź „zwykle tu…” jest od razu przy każdym kafelku** (P39 B, jak w makiecie C);
 8. **zatwierdza** (1 klik) albo **odrzuca** z powodem z listy: element konstrukcji, zgłoszony ładunek, błąd obrazu, nakładanie się ładunku, inny (własny tekst) — P13;
 9. wpisuje **numer rejestracyjny** naczepy — osobne pole przy każdym aucie, przed zatwierdzeniem wyniku (P22 A, P28 A);
@@ -25,7 +25,7 @@ Język ekranu: polski. Udawane dane: z `dane/mini` i `dane/mini-trudny` (nazwy p
 | E1 | Logowanie i stanowisko | pole „funkcjonariusz” (lista), pole „miejsce kontroli” (lista), przycisk „Zacznij zmianę” | funkcjonariusz „SCS Kowalski”, miejsce „Terespol — stanowisko 2” (**dane udawane**); raz na zmianę |
 | E2 | Wybór partii | przycisk „Wskaż obrazy .bmp” (w makiecie prawdziwy wybór plików z dysku; własny plik pokazuje wynik przykładowy z napisem „makieta: wynik przykładowy, nie z Twojego obrazu” — P62 A), lista wybranych plików, „Policz partię”; makieta i demo idą na `dane/mini` + `dane/mini-trudny` (PNG); wymaganie 50 MB (A12) potwierdza pomiar zadania 20 (v3): śr. 1,7 s, maks. 2,1 s (zestaw trudny śr. 1,19 s) | **7 aut w partii pokazowej** (P51 B, P60 B): 6 z `dane/mini` (firanka dodatki_00, chłodnia dodatki_01, kontener dodatki_01, kontener czyste_00, firanka czyste_01, cysterna dodatki_00) + **7. auto w partii: przypadek trudny `trudny_mini_firanka_za_ladunkiem_00.bmp`** (bez oznaczania na ekranie, które auto jest trudne) |
 | E3 | Lista partii (z wariantu B); po ostatnim aucie wraca tu z przyciskiem „Raport partii” (P54 A) | tabela: miniatura, „auto N” + nazwa pliku (P44 A), rodzaj, stan, liczba miejsc (P37 B); stan liczy się po kolei (pasek postępu partii); wiersz „gotowe” klikalny dopiero po policzeniu całej partii (P38); zawsze przycisk „Dodaj jeden obraz” — plik liczy się i dopisuje jako kolejne auto (P61 A); po zamknięciu partii przycisk „Nowa partia” (P65 A) | **7 wierszy** (6 z `dane/mini` + 7. przypadek trudny `trudny_mini_firanka_za_ladunkiem_00.bmp`, bez oznaczania, które jest trudne — P60 B); jeden ze stanem „brak wzorca” (cysterna), liczba miejsc „—” |
-| E4 | Auto — widok C | lewo: badany z ramkami 1…n; prawo: wzorzec (nazwa rodzaju + przycisk „Zmień rodzaj”); wspólne przewijanie i lupa; pod spodem kafelki (numer, słowo niski/średni/wysoki, stan: oczekuje / zatwierdzone / odrzucone); pole „Nr rej.”; przyciski „Zatwierdź”, „Odrzuć ▾ powód”; podpowiedź „zwykle tu…” przy każdym kafelku od razu (P39 B) | firanka_dodatki_00: 6 kafelków; podpowiedź np. „zwykle tu: podwozie — belka poprzeczna” | Lista miejsc: 6 najsilniejszych, pod szóstym widoczna linia „i jeszcze N miejsc — pokaż” (P57 A; nic nie jest chowane po cichu).
+| E4 | Auto — widok C | lewo: badany z ramkami 1…n; prawo: wzorzec (nazwa rodzaju + przycisk „Zmień rodzaj”); wspólne przewijanie i lupa; pod spodem kafelki (numer, stan: oczekuje / zatwierdzone / odrzucone); pole „Nr rej.”; przyciski „Zatwierdź”, „Odrzuć ▾ powód”; podpowiedź „zwykle tu…” przy każdym kafelku od razu (P39 B) | firanka_dodatki_00: 6 kafelków; podpowiedź np. „zwykle tu: podwozie — belka poprzeczna” | Lista miejsc: 6 najsilniejszych, pod szóstym widoczna linia „i jeszcze N miejsc — pokaż” (P57 A; nic nie jest chowane po cichu).
 | E5 | Auto — brak wzorca | zamiast ramek i kafelków napis **„brak wzorca — sprawdź obraz sam”**; sam badany obraz z lupą; pola nr rej. i „Zamknij auto” (P35 A) | cysterna (nie ma jej w bibliotece wzorców) |
 | E6 | Zmiana rodzaju | lista 4 rodzajów (firanka, chłodnia, kontener, cysterna), podgląd 2 najbliższych wzorców badanego obrazu (z numerami 1 i 2 — P70 A) obok badanego, „Zastosuj”; ostrzeżenie „decyzje w tym aucie zostaną skasowane” (P27 A) | wybór cysterny → E5 |
 | E7 | Raport partii | tabela po aucie: nr rej., rodzaj programu i rodzaj operatora (P27 A), liczba miejsc, decyzje z powodami, kto zdecydował, miejsce kontroli, data i godzina decyzji operatora przy każdym aucie (auto bez decyzji „—” — P64 A) (P18); „Zapisz i zamknij partię” (gdy część aut nie ma decyzji: ostrzeżenie z listą aut „brak decyzji”, zapis możliwy po potwierdzeniu — P63 B); po zamknięciu przycisk „Nowa partia” wraca do E2 (P65 A) | zapis pliku .json i .csv — w wersji pod linkiem pobiera je przeglądarka; „bez internetu” dotyczy tylko uruchomienia lokalnego (P43 A, A12); miniatura z zaznaczonymi miejscami w raporcie wycięta z MVP → UPROSZCZENIE (P72 A) |
@@ -34,7 +34,7 @@ Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wyni
 
 ## 3. Wejście / wyjście / dane
 - **Wejście:** pliki `.bmp` (do ~50 MB każdy, 8192×2048), biblioteka wzorców czystych dla 4 rodzajów (gotowa z naszych czystych obrazów — P15; cysterna bez wzorca na pokazie → E5, P35 A).
-- **Wyjście (na obraz):** rodzaj, wzorzec, lista miejsc `{nr, x0,y0,x1,y1, słowo niski/średni/wysoki}` posortowana od najbardziej różnego, stan; **raport** (E7) z polami P18 + numer rejestracyjny + oba rodzaje.
+- **Wyjście (na obraz):** rodzaj, wzorzec, lista miejsc `{nr, x0,y0,x1,y1}` posortowana od najbardziej różnego, stan; **raport** (E7) z polami P18 + numer rejestracyjny + oba rodzaje.
 - **Dane pokazowe (sztuczne):** `dane/mini`, `dane/mini-trudny`, `dane/manifest*.json`; wyniki pomiarów tylko z dopiskiem „dane sztuczne”. Na każdym ekranie wąski pasek u góry „dane sztuczne — demonstracja” (P59 A, scalone z P68).
 - **Działanie:** docelowo lokalnie, bez internetu (P25 A). **MVP (P43 A, Paweł):** strona na ksefbot.pl wysyła .bmp do usługi liczącej na karcie OMENa + przycisk partii pokazowej z `dane/mini`; usługa startuje razem z wdrożeniem strony (nie osobno). Wgranie własnego .bmp (także ~50 MB) działa z linku i nie jest wycinane. „Bez internetu” sprawdzamy uruchomieniem lokalnym (Docker albo wiersz poleceń).
 
@@ -42,7 +42,7 @@ Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wyni
 | AC | Warunek | Źródło |
 |---|---|---|
 | A1 | Ramki na badanym mają numery zgodne z kafelkami; kliknięcie kafelka zaznacza ramkę i przybliża oba obrazy w tym samym miejscu | JS1 AC1,3,4a; P36 C |
-| A2 | Kafelki od najbardziej różnego; słowo niski/średni/wysoki, bez procentów; progi stałe, wspólne dla wszystkich aut (P45 B), czyste auto nie dostaje „wysoki” z samego podziału; wartości progów — P49 (czeka) | P17, P45 B; JS1 AC2 |
+| A2 | Kafelki od najbardziej różnego, bez słów i procentów, tylko numer, stan i kolejność; progi słów nie istnieją (P49, P75 bez przedmiotu) | P79 B (zmienia P17, P45); JS1 AC2 |
 | A3 | Obraz bez miejsc: napis „brak wskazań — to nie gwarancja, że auto jest czyste; obejrzyj obraz sam” (P58 A), nie pusta lista | JS1 AC4 |
 | A4 | Brak wzorca → zero ramek i napis „brak wzorca — sprawdź obraz sam” | P35 A; JS1 AC5, JS3 AC6 |
 | A5 | Podpowiedź „zwykle tu…” widoczna od razu przy każdym kafelku, bez klikania; kafelek bez opisu (ok. 27% ramek, Z14) — wg P42 (Artur) napis „poza znaną konstrukcją, obejrzyj uważnie” | P39 B, P42; JS1 AC4b |
@@ -134,6 +134,6 @@ Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z d
 <!-- skill: przeplywy-pm -->
 
 ## 11. P43–P48 rozstrzygnięte
-P43 A (Paweł), P44 A, P45 B, P46 A, P47 A, P48 A — odpowiedzi w `docs/decyzje.md`. Wartości progów słów niski/średni/wysoki: P49 A (wartości po pomiarze i zatwierdzeniu Artura).
+P43 A (Paweł), P44 A, P45 B, P46 A, P47 A, P48 A — odpowiedzi w `docs/decyzje.md`. Słowa niski/średni/wysoki wyrzucone: P79 B (zmienia P17 i P45); P49 i P75 bez przedmiotu.
 <!-- skill: create-prd -->
 <!-- skill: przeplywy-pm -->
