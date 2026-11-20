@@ -10,17 +10,17 @@ KONF="trend=1;tolx=2;rho=0.1;konstr=1;min_pole=0.0001;lok=2;jas=1;wyb=1;tau_pud=
 WARIANTY=${WARIANTY:-"A:0.6,0.3;B:0.9,0.5;C:1.5,0.8"}
 mkdir -p $WYJ
 nvidia-smi --query-gpu=name,memory.used,memory.total --format=csv,noheader
-[ -d $POZA/czyste_p49 ] || python dane/generator/scenariusze.py --wyj $WYJ/scen_repo --poza $POZA
+ls $POZA/czyste_p49/badany_mini_*.bmp >/dev/null 2>&1 || python dane/generator/scenariusze.py --wyj $WYJ/scen_repo --poza $POZA
 # biblioteka z 20 dodatkowych czystych aut (P49): wzorce z dane/mini + czyste_p49
 L=$WYJ/p49lib; rm -rf $L; mkdir -p $L
 for f in dane/mini/wzorzec_*.bmp; do ln -s $(pwd)/$f $L/; done
-for f in $POZA/czyste_p49/*.bmp; do ln -s $f $L/; done
+for f in $POZA/czyste_p49/badany_mini_*.bmp; do ln -s $f $L/; done
 python - <<PY
 import json, os
 m = json.load(open("dane/mini/manifest.json"))
 dod = [e for e in m["badane"] if False]
 bad = []
-for f in sorted(os.listdir("$POZA/czyste_p49")):
+for f in sorted(x for x in os.listdir("$POZA/czyste_p49") if x.startswith("badany_mini_")):
     t = f.split("_")[2]
     bad.append(dict(plik=f, id=f[:-4], typ_pojazdu=t, poziom="mini", klasa="czyste", trudny=False, dodatki=[], szer=1024, wys=256))
 m["badane"] = bad
