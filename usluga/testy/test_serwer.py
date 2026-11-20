@@ -110,6 +110,44 @@ class TestSerwer(unittest.TestCase):
         self.assertIn(zadanie(self.url + "/../usluga/serwer.py")[0], (403, 404))
         self.assertIn(zadanie(self.url + "/%2e%2e/usluga/serwer.py")[0], (403, 404))
 
+    def surowe(self, naglowki, cialo=b"", zamknij_po=False):
+        host, port = self.url[7:].split(":")
+        c = socket.create_connection((host, int(port)), timeout=5)
+        c.sendall(("POST /analiza HTTP/1.1\r\nHost: x\r\n" + naglowki + "\r\n").encode() + cialo)
+        if zamknij_po:
+            c.close(); return None
+        odp = b""
+        try:
+            while b"\r\n\r\n" not in odp:
+                kaw = c.recv(4096)
+                if not kaw:
+                    break
+                odp += kaw
+        finally:
+            c.close()
+        return int(odp.split(b" ")[1]) if odp else 0
+
+    def test_brak_dlugosci_411(self):
+        self.uruchom()
+        self.assertEqual(self.surowe("Transfer-Encoding: chunked\r\n", b"5\r\nBMxyz\r\n0\r\n\r\n"), 411)
+        self.assertEqual(zadanie(self.url + "/zdrowie")[0], 200)
+
+    def test_zla_dlugosc_400(self):
+        self.uruchom()
+        self.assertEqual(self.surowe("Content-Length: -5\r\n"), 400)
+        self.assertEqual(self.surowe("Content-Length: abc\r\n"), 400)
+        self.assertEqual(self.wolania, [])
+
+    def test_zerwane_wgranie_nie_zostawia_pliku(self):
+        import glob, tempfile
+        self.uruchom()
+        przed = set(glob.glob(os.path.join(tempfile.gettempdir(), "*.bmp")))
+        self.surowe("Content-Length: 100000\r\n", b"BM" + b"x" * 100, zamknij_po=True)
+        time.sleep(0.5)
+        po = set(glob.glob(os.path.join(tempfile.gettempdir(), "*.bmp")))
+        self.assertEqual(po - przed, set())
+        self.assertEqual(zadanie(self.url + "/zdrowie")[0], 200)
+
 
 if __name__ == "__main__":
     unittest.main()

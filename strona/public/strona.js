@@ -37,7 +37,8 @@ async function pokaz(obietnica, opis) {
   const t0 = performance.now();
   try {
     const r = await obietnica;
-    const j = await r.json();
+    let j;
+    try { j = await r.json(); } catch { throw new Error(`serwer odpowiedział błędem ${r.status} — spróbuj za chwilę`); }
     if (!r.ok) throw new Error(j.blad || `błąd ${r.status}`);
     for (const w of j.wyniki || [j]) $("#wyniki").append(wiersz(w));
     $("#stan").textContent = `Gotowe w ${((performance.now() - t0) / 1000).toFixed(1)} s.`;

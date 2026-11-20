@@ -47,6 +47,7 @@ def zbuduj(licz, info, strona_dir, bezczynnosc_s, port=0, host="127.0.0.1"):
 
     class Obsluga(BaseHTTPRequestHandler):
         protocol_version = "HTTP/1.1"
+        timeout = 60                      # zawieszony klient nie trzyma wątku bez końca
 
         def log_message(self, fmt, *a):
             sys.stderr.write("%s %s\n" % (time.strftime("%H:%M:%S"), fmt % a))
@@ -101,20 +102,38 @@ def zbuduj(licz, info, strona_dir, bezczynnosc_s, port=0, host="127.0.0.1"):
             p, q = self.sciezka()
             if p != "/analiza":
                 return self.odpowiedz(404, {"blad": "brak"})
-            n = int(self.headers.get("Content-Length") or 0)
+            cl = self.headers.get("Content-Length")
+            if cl is None:
+                self.close_connection = True
+                return self.odpowiedz(411, {"blad": "brak długości pliku (Content-Length)"})
+            try:
+                n = int(cl)
+            except ValueError:
+                n = -1
+            if n < 0:
+                self.close_connection = True
+                return self.odpowiedz(400, {"blad": "zła długość pliku"})
             if n > LIMIT_B:
                 self.close_connection = True
                 return self.odpowiedz(413, {"blad": "plik większy niż 120 MB"})
-            with tempfile.NamedTemporaryFile(suffix=".bmp", delete=False) as t:
-                zostalo = n
-                while zostalo:
-                    kaw = self.rfile.read(min(zostalo, 1 << 20))
-                    if not kaw:
-                        break
-                    t.write(kaw)
-                    zostalo -= len(kaw)
-                sciezka = t.name
+            t = tempfile.NamedTemporaryFile(suffix=".bmp", delete=False)
+            sciezka = t.name
             try:
+                try:
+                    with t:
+                        zostalo = n
+                        while zostalo:
+                            kaw = self.rfile.read(min(zostalo, 1 << 20))
+                            if not kaw:
+                                break
+                            t.write(kaw)
+                            zostalo -= len(kaw)
+                except OSError:               # klient zerwał połączenie / przekroczył czas
+                    self.close_connection = True
+                    return
+                if zostalo:
+                    self.close_connection = True
+                    return self.odpowiedz(400, {"blad": "plik ucięty w trakcie wysyłania"})
                 with open(sciezka, "rb") as f:
                     if f.read(2) != b"BM":
                         return self.odpowiedz(400, {"blad": "to nie jest plik .bmp (brak nagłówka BM)"})
@@ -125,7 +144,10 @@ def zbuduj(licz, info, strona_dir, bezczynnosc_s, port=0, host="127.0.0.1"):
                 wynik["plik"] = q.get("nazwa") or wynik.get("plik")
                 return self.odpowiedz(200, wynik)
             finally:
-                os.unlink(sciezka)
+                try:
+                    os.unlink(sciezka)
+                except OSError:
+                    pass
                 ostatnie[0] = time.monotonic()
 
     s = ThreadingHTTPServer((host, port), Obsluga)
