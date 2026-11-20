@@ -117,3 +117,10 @@ P28 11:23 odpowiedź: Artur w pokoju: A — osobne pole numeru rejestracyjnego p
 11:26 Szef: krok 2 — P27/P28 wpisane (81d15b4) → R3 (ostatnia) u Analityka.
 11:25 Analityk: recenzja krok 2 R3 (02-operator.md, 81d15b4) — brak braków zmieniających zakres lub kryteria. Braki R2 zamknięte: P27 A (decyzje znikają, raport z dwoma rodzajami — etap 8 i ekrany), P28 A (pole numeru przy każdym obrazie, etap 2), logowanie/ustawienie stanowiska (etap 0 i ekran), 01-competitive-analysis zgodny z P24 B (wiersze 6, 41, 80), sekcja ustaleń P14–P28. Zdań niezgodnych z zadaniem lub odpowiedziami Artura (w tym 11:20) nie znalazłem; „poprawka bez pytania”: brak.
 11:27 Szef: krok 2 zamknięty (R3: brak braków zmieniających zakres lub kryteria, 81d15b4) → krok 3 /discover + job-stories (Projektant).
+11:27 Szef: krok 3 discover (Projektant) — job stories + lista ryzykownych założeń Z<n> z sondami.
+11:27 Projektant: krok 3 — pominięte (co badamy, co już wiemy, jaką decyzję ustawia odkrywanie) — z zadania i P2–P28: badamy pierwszą wersję Prześwitu (zadanie §1–§3), wiemy z kroków 1–2, decyzja = zakres MVP i kolejność funkcji
+P29 11:27 Artur: wybór pomysłów do dalszej pracy — 10 pomysłów na funkcje (lista w pokoju i w docs/pm/03-discover.md); wybierz 3–5 albo wszystkie. Rekomendacja: 1 (lista od najbardziej różnego), 2 (podgląd wzorca z przełączaniem), 4 (podpowiedź powodu odrzucenia), 5 (oznaczenie zgłoszonego ładunku), 6 (zmiana rodzaju z podglądem dwóch najbliższych wzorców) — czeka
+P30 11:27 Artur: ile ramek na czystym aucie (bez żadnych dodatków) operator jeszcze zniesie, zanim przestanie ufać programowi? A: do 3 ramek; B: do 6 ramek. Rekomendacja: A — operator ma kilka minut na auto, a każda ramka to decyzja — czeka
+P31 11:27 Artur: ile ze 100 prawdziwych dodatków program musi wskazać, żebyśmy uznali go za użyteczny? A: co najmniej 90 (reszta ginie przy ładunku); B: co najmniej 80. Rekomendacja: A — przeoczenie jest gorsze od fałszywego alarmu (P4) — czeka
+PARAMETR: tolerowana liczba ramek na czystym aucie = do 3 (rekomendacja) — P30
+PARAMETR: minimalna skuteczność wskazania dodatków = 90 ze 100 (rekomendacja) — P31
