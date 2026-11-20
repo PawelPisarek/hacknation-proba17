@@ -36,3 +36,9 @@ Opis i generator: `dane/README.md` (generator deterministyczny); podzbiory w rep
 ## Dokumenty
 
 `docs/hacktribe.md` (opis do formularza, DRAFT) · `docs/slajdy-szkic.md` (szkielet prezentacji) · `docs/decyzje.md` (ustalenia)
+
+## Uruchomienie (szkic, Programista)
+Wymaga: Python 3, `pip install -r requirements.txt` (numpy, torch z CUDA, pillow); liczy na karcie graficznej.
+- Partia obrazów (lista wyników + PNG z zaznaczeniami): `PYTHONPATH=src python -m przeswit.wykryj --biblioteka <katalog wzorców> --badane a.bmp b.bmp --wyj wyniki/partia` (opcjonalnie `--typ firanka|chlodnia|kontener|cysterna`).
+- Ocena na zbiorze z manifestem: `PYTHONPATH=src python -m przeswit.wykryj --biblioteka dane/mini --manifest dane/mini/manifest.json --wyj wyniki/mini` i `python ocena/ocena.py --manifest dane/mini/manifest.json --wyniki wyniki/mini/wyniki.json`.
+- Pełny przebieg oceny (zwykły + trudny, wszystkie poziomy): `sh ocena/uruchom.sh` (dane w `~/dane/proba17`, `~/dane/proba17-trudny`).
