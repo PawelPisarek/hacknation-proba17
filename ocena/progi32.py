@@ -43,6 +43,7 @@ if __name__ == "__main__":
     ap.add_argument("--konf", required=True)
     ap.add_argument("--warianty", default="")
     ap.add_argument("--wyj", default=None)
+    ap.add_argument("--plik", action="append", default=[], help="wypisz miejsca tego auta ze słowami wg wariantów")
     a = ap.parse_args()
     zest = [(n, json.load(open(m)), json.load(open(w))) for n, m, w in a.zestaw]
     cz, sk, fm = zbierz(zest, a.konf)
@@ -74,5 +75,22 @@ if __name__ == "__main__":
         wyn.append(dict(wariant=nm, wysoki=hi, sredni=mid, czyste=c, czyste_wg_zestawu=pz, skrytki=k, falszywe_miejsca_na_autach_ze_skrytkami=f))
         print(f"WARIANT {nm} (wysoki≥{hi}, średni≥{mid}): czyste N={len(cz)} {c} | skrytki M={len(sk)} {k} | miejsca nie na skrytce {f}")
         print("   czyste wg zestawu:", pz)
+    for pl in a.plik:
+        for nazwa, man, wyn in zest:
+            e = {x["plik"]: x for x in man["badane"]}.get(pl)
+            r = next((r for r in wyn["wyniki"] if r["plik"] == pl), None)
+            if e is None or r is None:
+                continue
+            ms = sorted(r["konfiguracje"][a.konf]["miejsca"], key=lambda m: -m["wynik"])
+            print(f"AUTO {pl} ({nazwa}), miejsc {len(ms)}:")
+            for i, m in enumerate(ms, 1):
+                prawd = any(wspolne(m, d) >= POKRYCIE * pole(d) for d in e["dodatki"])
+                dotyk = any(wspolne(m, d) > 0 for d in e["dodatki"])
+                sl = {}
+                for w in [x for x in a.warianty.split(";") if x]:
+                    nm, pr = w.split(":"); hi, mid = map(float, pr.split(","))
+                    sl[nm] = slowo(m["wynik"], hi, mid)
+                eti = "PRAWDZIWY DODATEK" if prawd else ("styka się z dodatkiem" if dotyk else "fałszywe")
+                print(f"  miejsce {i}: siła {m['wynik']}, x {m['x0']}-{m['x1']} y {m['y0']}-{m['y1']}, {eti}, słowa {sl}")
     if a.wyj:
         json.dump(dict(czyste=len(cz), skrytki=len(sk), warianty=wyn), open(a.wyj, "w"), ensure_ascii=False, indent=1)

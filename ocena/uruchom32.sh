@@ -41,4 +41,4 @@ K=$(python -c "import json;print(next(iter(json.load(open('$WYJ/mini/wyniki.json
 python ocena/progi32.py --zestaw mini dane/mini/manifest.json $WYJ/mini/wyniki.json \
   --zestaw mini-trudny dane/mini-trudny/manifest.json $WYJ/mini-trudny/wyniki.json \
   --zestaw czyste_p49 $L/manifest.json $WYJ/p49/wyniki.json \
-  --konf "$K" --warianty "$WARIANTY" --wyj $WYJ/progi32.json
+  --konf "$K" --plik trudny_mini_firanka_za_ladunkiem_00.bmp --warianty "$WARIANTY" --wyj $WYJ/progi32.json
