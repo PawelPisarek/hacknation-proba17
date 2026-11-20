@@ -66,3 +66,7 @@ Persona: „Marek". Cel: decyzja o aucie w kilka minut. Etapy dopasowane do prod
 <!-- skill: user-personas -->
 <!-- skill: customer-journey-map -->
 <!-- skill: przeplywy-pm -->
+
+## Ustalenia Artura (P27–P28)
+- P27: zmiana rodzaju pojazdu kasuje dotychczasowe decyzje i liczy analizę od nowa; raport zapisuje rodzaj dobrany przez program i rodzaj poprawiony przez operatora.
+- P28: numer rejestracyjny naczepy — osobne pole przy każdym obrazie partii, wypełnione przed zatwierdzeniem wyniku.
