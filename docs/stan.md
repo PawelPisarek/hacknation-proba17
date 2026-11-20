@@ -1,4 +1,4 @@
-# Stan — 13:40
+# Stan — 13:46
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
