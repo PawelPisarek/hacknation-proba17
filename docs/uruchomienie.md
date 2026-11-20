@@ -12,3 +12,5 @@ Co robi `testy/odbior/odbior.sh`:
 3. `testy/odbior/odbior.py raport` składa tabelę A1–A14 z czasem i wersją; kryteria, których kodu jeszcze nie ma (A5–A11, A13, A14), dostają „jeszcze nie ma”. Plik wynikowy: `wyniki/odbior/odbior.md` na OMENie (`rsync` z `ork/<id>/wyniki/odbior/`), kopia z wynikiem w `docs/odbior.md`.
 
 Wymaga: `~/dane/proba17` (zestaw ze wzorcami i obrazami pełnymi) i `dane/scenariusze/czyste_zero` (w repo). Scenariuszy z `docs/pm/06-scenariusze.md` ani metody detekcji skrypt nie zmienia.
+
+Generator danych scenariuszy (`dane/generator/scenariusze.py`) na innej wersji numpy (np. 2.5.x na flocie) daje inne bajty niż pliki w `dane/mini`, dlatego kontrola bajtowa jest ostrzeżeniem, a repo trzyma oryginały; sha256 plików generowanych poza repo zależą od wersji numpy.

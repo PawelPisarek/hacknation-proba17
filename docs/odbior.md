@@ -97,3 +97,11 @@ Metoda: wykryj_v3, konfiguracja zadania 20 bez zmian, biblioteka dane/mini (peł
 | badany_mini_firanka_czyste_00.bmp | 19 | — |
 
 **Werdykt: nie ma (najmniej 2 miejsca: badany_mini_cysterna_czyste_03.bmp i badany_mini_kontener_czyste_04.bmp).** Z 28 aut żadne nie ma 0 miejsc; zakres 2–19, mediana 7. Wg zadania 38: ścieżka B — moment „brak wskazań” wypada z pokazu na realnym aucie, w opisie zdanie „na czystych autach program zwykle coś wskazuje”. Partii, progów i metody nie ruszano.
+
+## Przeliczenie po zmianie składu partii na 7 aut (2026-11-20 16:35; zgl-5144, OMEN; zegar OMENa w pliku wynikowym pokazuje 16:35)
+
+- Manifest (`testy/odbior/manifest_sprawdz.py`): 17 scenariuszy, partia 7 aut (7. = `trudny_mini_firanka_za_ladunkiem_00`), brakujących plików 0, S4 bez dublowania pliku, na cysternie → **WYNIK MANIFESTU: OK**.
+- `odbior.sh`: A1, A1 (lupa), A2 (bez słów, P79 B), A3, A4 (S4), A12 (maks. 2,03 s) **zalicza**; A5–A11, A13, A14 „jeszcze nie ma” (jak wcześniej); testy listy Ran 6, kod 0; **WYNIK URUCHOMIENIA: zalicza 6 z 15; NIE: brak**. Regresji nie ma; zbiory do testów (mini, mini-trudny) są te same, nie zależą od składu partii.
+- Zmiany w manifeście: nazwa i kryterium S2 bez słów niski/średni/wysoki (P79 B; P45 i P49 zastąpione); `warunki` w demo wyrównane do `docs/demo.md` (5+14+20+22+14+14+14+10 = 113 s).
+- Przycisk „Policz partię” na żywej r3: przed wyborem `disabled=true`, od razu po „Partia pokazowa (7 aut)” `disabled=false` — brak do Prezentera: **nie ma**.
+- Niesprawdzone: S2/S4 przeliczone przez `test_lista` na zestawach mini/mini-trudny (czyli na plikach partii), nie na ekranie makiety; czasy demo.
