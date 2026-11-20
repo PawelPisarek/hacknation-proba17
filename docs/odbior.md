@@ -311,3 +311,27 @@ Kryteria: `docs/zadania/27-zmiana-rodzaju.md`, A7 i E6 z `docs/spec.md` (P24 B, 
 | 27-8 | brak regresji | A6, A9, A10, A13 po zmianie rodzaju (kilka kliknięć); odmiana „i jeszcze N miejsc” (Programista poprawia w f574a32) | „2 miejsca”, „5 miejsc”; decyzje, nr rej., następne auto i raport jak w odbiorach 28/29 |
 
 Zrzuty: `docs/zrzuty/odbior27/`. Wynik: sekcja „Odbiór zadania 27 na linku”, zaliczone / NIE z dowodem; braki „technika” albo „produkt”.
+
+## Odbiór zadania 27 na linku (20:08, 1a83bd1; prawdziwe kliknięcia, auto 7 partii pokazowej)
+
+Wynik: **zaliczone 8/8**, 3 drobne braki. Usługa działała (`/api/zdrowie` 200, v3 GTX 1050); karta tylko przez stronę.
+
+| # | Wynik | Dowód |
+|---|---|---|
+| 27-1 podgląd | zaliczone | auto 7 → „Zmień rodzaj”: 4 rodzaje (firanka „(program)”, chłodnia, kontener, cysterna), „wzorzec 1 — firanka / wzorzec 2 — firanka”, po wyborze kontenera „wzorzec 1/2 — kontener”, 3 obrazy 1024×256, ostrzeżenie „Decyzje w tym aucie zostaną skasowane, a analiza policzy się od nowa.” (`27-1-zmien-rodzaj.png`, `27-1-podglad-kontener.png`) |
+| 27-2 „Zastosuj” przelicza | zaliczone | żądanie `/api/partia-pokazowa?nr=6&typ=kontener` (hook na `fetch`); 10 miejsc na stronie = 10 w odpowiedzi `curl` z `&typ=kontener`; nagłówek „WZORZEC: kontener (program: firanka)”; lista: kontener, 10 (`27-2-po-zastosuj.png`, `27-3-lista-po-zmianie.png`) |
+| 27-3 decyzje kasowane | zaliczone | auto 7 z 2 × „zatwierdzone” („zostało 8 z 10”) → chłodnia + „Zastosuj”: 1 miejsce „oczekuje”, „zostało 1 z 1”, „Zamknij auto” nieaktywne (`27-3-decyzje-skasowane.png`); inne auta bez zmian (lista) |
+| 27-4 raport z oboma rodzajami | zaliczone | pobrane .json i .csv (`raport-27.json`, `raport-27.csv`): auto 7 `rodzaj_programu`=firanka, `rodzaj_operatora`=kontener (w .csv te same dwie kolumny); auto 6 „nieustalony (brak wzorca)”; auta bez zmiany operatora puste. Na stronie tabela ma kolumny „Rodzaj programu” i „Rodzaj operatora” (`27-4-raport.png`) |
+| 27-5 cysterna | zaliczone | auto 7 → cysterna: „brak wzorca — sprawdź obraz sam”, „rodzaj: cysterna”, 0 ramek, bez podglądu wzorców, „Zamknij auto” aktywne, bez błędu (`27-5-cysterna.png`); powrót na rodzaj programu: „WZORZEC: firanka”, „ramki 1–6 z 11” (rodzaj operatora wyczyszczony) |
+| 27-6 błąd przeliczenia | zaliczone | `fetch` z `typ=` podmieniony na odrzucenie: „Nie udało się przeliczyć (symulowany błąd sieci). Rodzaj i decyzje bez zmian — spróbuj jeszcze raz.”; po „Anuluj” nadal kontener, 2 × „zatwierdzone” (`27-6-blad-przeliczenia.png`) |
+| 27-7 „Anuluj” | zaliczone | wybrana cysterna + „Anuluj”: rodzaj i 2 decyzje bez zmian (`27-7-po-anuluj.png`) |
+| 27-8 brak regresji | zaliczone | „i jeszcze 4 miejsca — pokaż” (odmiana poprawna); „Zamknij auto”, powrót na listę, „Raport partii”, „Zapisz i zamknij partię” z ostrzeżeniem „Brak decyzji …” i pobraniem plików działają jak w odbiorach 28/29 |
+
+Kolumna „Rodzaj programu” z zrzutu `link-27-raport.png`: u mnie (okno 1280 px) tabela mieści się w kontenerze (1070/1070 px), nic nie ucięte; oba rodzaje są w pobranym raporcie.
+
+Braki:
+1. **produkt (drobny):** w .json `rodzaj_operatora` brak = pusty napis, a w tabeli i w kolumnie `kto`/`data_godzina` brak = „—”; ujednolicić.
+2. **technika:** ucięcie kolumny na zrzucie Programisty nie odtworzone w oknie 1280 px; sprawdzić przy węższym oknie (laptop), jeśli pokaz będzie na małym ekranie.
+3. **technika:** zgodność liczby miejsc z wierszem poleceń dla rodzaju operatora (`--typ`) nie sprawdzona (porównanie robi Programista przy 40); sprawdzono tylko zgodność strona = usługa (curl).
+
+Niezweryfikowane: zachowanie po uśpieniu usługi w trakcie przeliczenia (nie usypiałem; błąd symulowany przez `fetch`); wgrany własny plik z „Zmień rodzaj”. Zrzuty i pliki: `docs/zrzuty/odbior27/`.
