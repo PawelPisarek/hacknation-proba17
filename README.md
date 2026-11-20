@@ -53,10 +53,15 @@ https://hacknation.ksefbot.pl/ (odebrane na linku, 20.11.2026, dane sztuczne):
 8. Partia pokazowa ma 7 aut z liczbą miejsc 8 / 6 / 12 / 8 / 7 / 0 / 11; auto 6 (cysterna) ma „brak wzorca”.
 9. Każde miejsce zatwierdzasz jednym kliknięciem albo odrzucasz z powodem wybranym z listy; auto zamykasz po wpisaniu numeru rejestracyjnego.
 10. Raport partii pobierzesz jako .json i .csv; przy zamykaniu partii program ostrzega o autach bez decyzji.
+11. Partia liczy się auto po aucie (stan „liczy się 3/7”), a na liście są miniatury obrazów; wiersze stają się klikalne, gdy auto jest policzone.
+12. „Dodaj jeden obraz” dokłada kolejne auto do partii.
+13. Gdy miejsc jest więcej niż widać, lista ma „i jeszcze N miejsc — pokaż”.
+14. „Zamknij auto” działa po rozstrzygnięciu ostatniego miejsca (Enter jako skrót) i otwiera następne auto; po ostatnim wraca lista z „Raport partii”.
+15. Po zamknięciu partii decyzji nie da się już zmienić (wiersze listy są zablokowane).
 
 Gdy program jest zajęty, strona pokazuje „Uruchamiam program, ok. 30 s” i sama ponawia liczenie. Uśpiony program obsługa budzi ręcznie przed pokazem (UPROSZCZENIE P86).
 
-W przygotowaniu: zadanie 28 (lista partii z miniaturami) i zadanie 27 (zmiana rodzaju).
+W przygotowaniu: zadanie 27 (zmiana rodzaju).
 
 ## Wyniki (na danych sztucznych, nie na zdjęciach KAS)
 
