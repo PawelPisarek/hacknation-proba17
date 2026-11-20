@@ -20,7 +20,7 @@ Kolumny: **Blok** = blokuje oddanie / pokaz (tak / nie, wg P50 A: główna ście
 | R6 | T | brak wzorca (cysterna) dostaje ramki z przybliżonego wzorca | Z4: 0/10 doborów, program napisu jeszcze nie robi | **tak** | nie (P35 A już ustalone) | zadanie 33, S4; Programista |
 | R7 | T | publiczność bierze liczby ze sztucznych danych za wynik na prawdziwych autach | Z10 (n małe), „dane sztuczne” tylko w opisie | **tak** | **tak (P59, P68)** | pasek na ekranie; P59 A (P68 scalone z P59: odpowiedź dotyczy obu) |
 | R8 | T | kolejność miejsc „od najmocniejszego” nie zgadza się z oczekiwaniem Artura (bez słów poziomu, P79 B; trafienie w pierwszych 6 miejscach 80%, cel 90% niespełniony) | P45 B, P79 B | **tak** | nie | zadanie 32, pokazać Arturowi |
-| R9 | T | demo > 2 min lub psuje się przy zmianie dopiero przed pokazem | spec §7: 8 kroków, 113 s, partia 7 aut (trudny jako 7. auto w partii, P60 B); auto 1: 2 miejsca i powrót na listę (P69 A) | **tak** | nie | próba demo ze stoperem wg „Ścieżka demo (do 2 min)” w 06-scenariusze.md (z zapasem z P69 A) |
+| R9 | T | demo > 2 min lub psuje się przy zmianie dopiero przed pokazem | spec §7: 8 kroków, 109 s, partia 7 aut (trudny jako 7. auto w partii, P60 B); auto 1: 2 miejsca i powrót na listę (P69 A) | **tak** | nie | próba demo ze stoperem wg „Ścieżka demo (do 2 min)” w 06-scenariusze.md (z zapasem z P69 A) |
 | R10 | T | zły rodzaj dobrany, wzorzec nie pasuje → przeoczenia 70% | Z5: 70% → 12% po poprawieniu; Z3 99% | nie | nie (zmiana rodzaju już jest, P24 B) | track; Z13 n=1 do powtórzenia |
 | R11 | T | wzorzec obok przesunięty > mały dodatek | Z12: mediana 6,5 px w polach dodatków, maks. 14 | nie | nie | fast-follow: ocena na makiecie z osobą z zewnątrz |
 | R12 | T | „zwykle tu…” sztuczne, operator widzi nieprawdziwe opisy | Z14: 73% ramek ma opis (próg 80%); 27% „poza znaną konstrukcją” (P42) | nie | nie (zdanie w opisie „opisy z generatora”) | fast-follow: opisy od ekspertów KAS (UPROSZCZENIE) |
@@ -78,7 +78,7 @@ Kolumny: **Blok** = blokuje oddanie / pokaz (tak / nie, wg P50 A: główna ście
 | R6 | zadanie 33; S4 | Programista | przed pokazem |
 | R7 | pasek P59 A (P68 scalone) | Programista | przed pokazem |
 | R8 | zadanie 32; P49 | Analityk → Artur | przed przeglądem Artura |
-| R9 | próba demo (stoper) wg „Ścieżka demo (do 2 min)”; zapas: ścieżka ma 113 s (7 s zapasu), więc przy > 120 s skracamy krok auta 1 (P69 A: 2 miejsca) albo auto 6, bez dodawania kroków | Prezenter | dzień przed pokazem |
+| R9 | próba demo (stoper) wg „Ścieżka demo (do 2 min)”; zapas: ścieżka ma 109 s (11 s zapasu), więc przy > 120 s skracamy krok auta 1 (P69 A: 2 miejsca) albo auto 6, bez dodawania kroków | Prezenter | dzień przed pokazem |
 | R20 | S1 brzegowe na `trudny_mini_firanka_maly_00` (lupa na małym dodatku) | Programista, Projektant | przed makietą R2 |
 
 <!-- skill: pre-mortem -->
