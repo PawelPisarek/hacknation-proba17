@@ -612,3 +612,4 @@ P85 16:09 odpowiedź: B — wszystkie auta w makiecie pokazują to, co naprawdę
 19:22 Prezenter: README — sekcja „Strona na żywo — co działa” (7 punktów, wg odbior.md „Odbiór zadania 40 na linku”); inne sekcje bez zmian.
 19:23 Szef: README „Strona na żywo” przyjęte (9a43e2a); Prezenter dopisuje kolejne punkty po odbiorach 41–27
 19:32 Programista: biorę zadanie 29 — strona/public = ekrany E1–E7 z makiety r3 (aplikacja.js, styl.css) z wynikami usługi (dane-zywe.js zamiast dane.js); decyzje, nr rej., raport .json/.csv jak w makiecie; testy A6/A9/A11/A13 w strona/testy/odbior-29.js (na żywym linku). Zmiana rodzaju ukryta do zad. 27.
+19:33 Szef: Programista ma 41, 42 i 29 naraz — najpierw wpisy „oddaję” 41 i 42 z dowodem (albo czego brakuje), potem 29; Analityk czeka na odbiór
