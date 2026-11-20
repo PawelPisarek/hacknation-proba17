@@ -1,4 +1,4 @@
-# Stan — 11:52
+# Stan — 12:02
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -6,7 +6,8 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | 01 generator danych | Analityk | zamknięte (dane/mini w repo; pełny ThinkPad ~/dane/proba17) |
 | krok 0 docs/materialy.md | Analityk | zamknięte |
 | 02 ocena + wynik bazowy | Programista | zamknięte (4f08297): trudny FP 36/40, przeoczenia 11/62, dobór 79/80, 50 MB 1,7–5 s |
-| 19 mniej fałszywych alarmów (karta) | Programista | w toku — przebieg H1–H6 (30004b3) |
+| 19 mniej fałszywych alarmów | Programista | zamknięte (85f8e1f): cele niespełnione — trudny FP 38/40, ramki śr. 12,9, przeoczenia 18% |
+| 20 pasy podwozie/kabina/pudło (karta) | Programista | zlecone 12:02 |
 | krok 1 /competitive-analysis | Projektant | zamknięte (R3) |
 | krok 2 operator (02-operator.md) | Projektant | zamknięte (R3) |
 | krok 3 /discover (03-discover.md) | Projektant | recenzja 3 (Analityk, ostatnia) |
