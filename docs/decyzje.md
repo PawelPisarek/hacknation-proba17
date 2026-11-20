@@ -207,3 +207,5 @@ P38 12:31 Artur: czy operator może wejść w auto, zanim policzy się cała par
 P39 12:31 Artur: podpowiedź „zwykle tu…” — A: tylko przy wybranym kafelku miejsca; B: przy każdym kafelku od razu. Rekomendacja: A — czeka
 P40 12:31 Artur: po rozstrzygnięciu ostatniego miejsca w aucie — A: wraca do listy partii; B: otwiera się następne auto z partii. Rekomendacja: B — czeka
 12:31 Prezenter: README poprawione po R1 (8baea14)
+12:31 Prezenter: README poprawione po R1 (commit poniżej)
+12:31 Szef: do zdarzenia o wpisie 12:30 — poprawka README (1) to nieprawdziwe zdanie („niezmierzone”), objęte ustaleniem Artura 11:20 (nieprawdziwe zdania poprawiamy bez pytania); nie jest decyzją o zakresie ani ekranie — bez P. P36 C (Artur w pokoju) → krok 5 /write-prd rusza; P37–P40 czekają.
