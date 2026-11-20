@@ -223,3 +223,37 @@ Uwaga do wysyłki (nie brak): I1 i I3 są w czasie przyszłym — przed wysłani
 1. **technika** — test `odbior-29.js` wywołuje `.onclick()`/`.onchange()` i podmienia `pobierz`, czyli nie jest klikaniem ani pobieraniem pliku: nie dowodzi, że przycisk jest widoczny, a plik się pobiera. Odbiór prawdziwym klikaniem po wstaniu usługi.
 2. **technika** — A6, A9, A11, A13, E3–E7: do sprawdzenia po wstaniu usługi (po 41); bez tego odbiór 29 jest niepełny.
 3. **produkt** (drobny, do sprawdzenia) — powód „pusta paleta” trafił do raportu jako zwykły tekst „inny”; w raporcie nie widać, że to „inny” (P13 A dopuszcza własny tekst — zgodne, tylko uwaga).
+
+## Odbiór zadania 29 na linku — dokończenie (19:44; usługa wstała 19:39, v3 na GTX 1050)
+
+Prawdziwe kliknięcia w przeglądarce (E1 → E2 → „Partia pokazowa” → „Policz partię” → auto 1 → … → raport). Zrzuty: `docs/zrzuty/odbior29/`. Pobrane pliki (przechwycone z przycisku „Zapisz mimo to”): `raport-pobrany.json`, `raport-pobrany.csv`.
+
+| Kryterium | Wynik | Dowód |
+|---|---|---|
+| A6 | **zalicza** | „Zatwierdź” = 1 klik (kafelek 1 „zatwierdzone”); „Odrzuć ▾ powód” z listy: element konstrukcji / zgłoszony ładunek / błąd obrazu / nakładanie się ładunku / inny — kafelek 2 „odrzucone: nakładanie się ładunku”; odrzucenia bez powodu nie ma jak zrobić (kontrolka tylko z powodem); zrzut `a6-decyzje.png` |
+| A9 | **zalicza** | 8/8 decyzji, bez nr rej. auto zostaje otwarte, pole z alarmem i napis „Wpisz nr rej. naczepy, potem kliknij „Zamknij auto” (albo Enter)”; po wpisaniu `WL 12345` + Enter otwiera się auto 2 (A10 też); na liście „auto 1 · WL 12345 … ✓ auto zamknięte” |
+| A13 | **zalicza z zastrzeżeniem** | z listy → auto 1 → zmiana kafelka 1 na „odrzucone (element konstrukcji)” — jest w raporcie; po „Zapisz mimo to” lista „rozstrzygnięte”, napis „Partia zamknięta — decyzji nie można już zmieniać.”, „Nowa partia” → E2. Zastrzeżenie: po zamknięciu widok auta nadal pokazuje aktywne „Zatwierdź/Odrzuć” (kod linie 182/209 blokuje zapis; w przeglądarce nie potwierdziłem, że zmiana jest odrzucana) |
+| A11 | **zalicza** | E7: kolumny Auto, Nr rej., Rodzaj programu, Rodzaj operatora, Miejsca, Decyzje, Kto, Miejsce kontroli, Data i godzina; ostrzeżenie „Brak decyzji: auto 2, auto 3, auto 4, auto 5, auto 7. Zapisać raport i zamknąć partię mimo to?” + „Zapisz mimo to” / „Wróć do listy”; auto 6 (brak wzorca) nie jest na liście braków decyzji |
+| Pobrane .json vs decyzje na stronie | **zgodne** | .json: 7 aut, miejsca 8/6/12/8/7/0/11, auto 1: `WL 12345`, kto SCS Kowalski, 19:43, decyzje 1 odrzucone (element konstrukcji), 2 odrzucone (nakładanie się ładunku), 3–8 zatwierdzone, `zamkniete: true`; pozostałe „brak decyzji”, data „—” |
+| Pobrane .csv | **zgodne** | 12 kolumn jak w `docs/przyklad-raportu/`, 53 wiersze = 52 miejsca + 1 wiersz auta 6 (bez miejsc, „nieustalony (brak wzorca)”); nr rej. w każdym wierszu auta 1 |
+| E3–E7 | **zalicza** | E3 lista (zrzut `e3-lista.png`, `e3-po-auto1.png`), E4 widok z ramkami/kafelkami/wzorcem, E5 brak wzorca (lista: „brak wzorca — obejrzyj ręcznie”; otwarcie E5 nie klikane), E7 `e7-raport.png`, `e7-ostrzezenie.png`, E2 po „Nowa partia” |
+
+**Braki:**
+1. **produkt** — napis przy numerze rej. odsyła do przycisku „Zamknij auto”, którego na ekranie nie ma (jest tylko Enter). Albo przycisk, albo napis „… i naciśnij Enter”.
+2. **produkt** — „Zmień rodzaj” jest widoczny w widoku auta (Szef: ukryty do zadania 27) — kliknięcia nie sprawdzałem.
+3. **technika** — A13: po zamknięciu partii przyciski decyzji w widoku auta wyglądają na aktywne; sprawdzić, że zapis jest odrzucany (albo je wyłączyć).
+4. **technika** — nie sprawdzone: otwarcie E5 (auto 6) klikiem, „inny” z własnym tekstem na stronie (jest w teście Programisty), porównanie ramek z CLI (zad. 40, otwarte).
+
+## Odbiór zadania 41 na linku (19:44)
+
+**Zalicza.** Partia pokazowa po „Policz partię” (usługa 19:39, `/api/partia-pokazowa`; strona i API zgodne): auto 1 firanka 8, auto 2 chłodnia 6, auto 3 kontener 12, auto 4 kontener 8, auto 5 firanka 7, auto 6 „brak wzorca” (0 miejsc, „— · brak wzorca — obejrzyj ręcznie”), auto 7 firanka 11 = **8/6/12/8/7/0/11** jak w pm/06. Pliki: dodatki_00 / chlodnia_dodatki_01 / kontener_dodatki_01 / kontener_czyste_00 / firanka_czyste_01 / cysterna_dodatki_00 / trudny firanka_za_ladunkiem_00. Na ekranie neutralne nazwy `skan_NN.bmp` (P60 B). Zrzut: `docs/zrzuty/odbior41/lista-partii.png`.
+Braki: **produkt** (drobny) — kolumna „Obraz” (miniatura, P37 B) na liście jest pusta; to dorobienie D1/zadanie 28, nie 41.
+
+## Odbiór zadania 42 na linku (19:44) — w zakresie bez tokenu (P86)
+
+| Punkt | Wynik | Dowód |
+|---|---|---|
+| `/api/zdrowie` zwraca stan | **zalicza** | 200 w 0,45 s: `{strona:ok, karta:{ok:true, urzadzenie:cuda, GTX 1050, metoda v3…}}`; przy kolejce 19:37: `karta: stan „w kolejce”, pozycja 1, blad „Uruchamiam program, ok. 30 s — karta kończy inne liczenie”` |
+| napis „Uruchamiam program, ok. 30 s” + ponawianie | **zalicza** | na żywo 19:37: pasek „Uruchamiam program, ok. 30 s — karta kończy inne liczenie… (3 s)”, partia 0/7, strona ponawiała sama, potem policzyła; zrzut `docs/zrzuty/odbior42/napis-uruchamiam-program-19-37.png` |
+| `/api/obudz` uśpiona → 503 z napisem o ręcznym budzeniu | **tylko w testach** | żywo przy działającej usłudze: `POST /api/obudz` = 200 `{stan:działa}` w 0,17 s; usługi nie usypiałem. Testy `strona/testy/budzik.test.mjs`, `serwer.test.mjs`: 17/17 pass (w tym „uśpiona → 503 z napisem”, „bez budzika → 503”, „zad. 42: śpiąca usługa…”) — uruchomione przeze mnie lokalnie |
+Braki: **technika** — 503 „obsługa budzi go ręcznie” nie widziany na żywo (nie usypiałem usługi); tekst napisu 503 nie czytany przeze mnie z żywego linku.
