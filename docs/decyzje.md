@@ -743,3 +743,5 @@ Kto: Artur (08:18), wykonuje Prezenter. 1) Zdanie „zespół 5 botów AI w 24 h
 P97 08:31 Artur: Slajd 8 „Skalowanie” to sam tekst — A: dodajemy prosty rysunek (słupki: auta na godzinę samo liczenie vs przez stronę, z podpisem „założenie” przy wzroście z kartami); B: zostaje sam tekst. Slajdy: https://github.com/PawelPisarek/hacknation-proba17/blob/main/docs/slajdy.pdf (rekomendacja: A) — czeka
 P97 08:32 odpowiedź: A — slajd 8 dostaje rysunek (słupki: auta na godzinę samo liczenie vs przez stronę, podpis „założenie” przy wzroście z kartami) (Artur w pokoju)
 08:32 Szef: P97 A (Artur w pokoju 08:31) — wykres skalowania → Analityk (PNG), wstawienie na slajd 8 → Prezenter po PNG
+
+08:33 Analityk: P97 A — wykres do slajdu 8 gotowy: docs/zrzuty/wykresy/skalowanie-slajd.png (skrypt ocena/wykres-skalowanie-slajd.mjs). Słupki aut/h na 1 kartę: ok. 2 080 (zwykły), ok. 3 020 (trudny), ok. 70 przez stronę (n=1, rząd wielkości); słupka wzrostu z liczbą kart nie ma — w podpisie „założenie, niemierzone”. Liczby z README „Skalowanie”.
