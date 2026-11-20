@@ -712,3 +712,4 @@ P94 08:09 odpowiedź: B — obraz przed/po i obok krótka tabela (Artur w pokoju
   2) strona (Node 22): `cp mvp/widok-auta/widok.js strona/public/ && PORT=3000 OMEN_URL=http://127.0.0.1:8770 node strona/serwer.mjs` → otwórz http://localhost:3000/ (albo Docker: `docker build -t przeswit . && docker run -p 3000:3000 -e OMEN_URL=http://<adres usługi>:8770 przeswit`)
   3) testy: `node --test strona/testy/serwer.test.mjs strona/testy/budzik.test.mjs` (17/17); odbiór kliknięciami: `sh strona/testy/odbior-44-klik.sh http://localhost:3000`
   Uwaga: sama usługa pod :8770/ też podaje stronę, ale bez widok.js (404) — widok auta nie działa; używać strony z punktu 2.
+08:12 Szef: 44 wdrożone (v=33), 45 usługa na stałe od 08:04 (zgl-5171), 49 znacznik final na 6d9b93a — Programista; sprawdzenie 45 po 15 min bez ruchu + odbiór 44 na linku → Analityk; komendy uruchomienia → README (Prezenter)
