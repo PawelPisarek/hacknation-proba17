@@ -1,4 +1,4 @@
-# Stan — 20:14
+# Stan — 20:15
 Kamień: MVP na hacknation.ksefbot.pl (koniec próby po MVP): 40 → 41 → 42 → 29 → 28 → 27 → odbiór → Artur: uproszczenia + 1 dorobienie. Makieta i hacktribe gotowe.
 
 | zadanie | kto | status |
@@ -9,7 +9,7 @@ Kamień: MVP na hacknation.ksefbot.pl (koniec próby po MVP): 40 → 41 → 42 �
 | krok 8 wizja (08-wizja.md) | Projektant | zamknięte (R3 czysto 15:28) → zadanie 35 Prezenter |
 | 22 makieta R2 | Programista | zamknięte; krytyk 7/10; Artur P73–P78 (14:38) |
 | 34 makieta R3 (P73 A, P74 A, P76 A, P77 A, P79 B, brak 7) | Programista | zamknięte; poprawki krytyka R3 (8/10, runda 3 z 3) + P80 A w r3 15:23, r3 200 — makieta zamknięta |
-| 09 uproszczenia + dorobienie (Artur) | Projektant | gotowe do wysyłki do 28 włącznie (1a53117; I1 ręczne budzenie P86, I4 Zmień rodzaj); R1 poprawione 21c8a97; wysłane 20:08, Artur 20:10: P87–P90 tak, P91 D1 → zadanie 43 |
+| 09 uproszczenia + dorobienie (Artur) | Projektant | gotowe do wysyłki do 28 włącznie (1a53117; I1 ręczne budzenie P86, I4 Zmień rodzaj); R1 poprawione 21c8a97; wysłane 20:08, Artur 20:10: P87–P90 tak, P91 D1 → zadanie 43; po CLI bez „sprawdzamy” (765d6e9) — zamknięte |
 | 43 D1 miniatura w raporcie (P91) | Programista → Analityk | w toku 20:12 (Programista, raport-partii.html); lista odbioru 43 gotowa (43-1…43-10, a176d45); README po odbiorze; demo 114 s + ograniczenia P87–P90 w README zamknięte |
 | 41 skład partii pokazowej wg 06 / 42 budzenie uśpionej usługi | Programista | zamknięte 19:45: odbiory 29/41/42 zal. (0d2e3e2); A13 wyszarzenie + miniatury → Programista przy 28; „Zamknij auto” (P77 A) i „Zmień rodzaj” nieaktywny (P27 A) → Programista przy 28; README 10 pkt (bcca007); 28 zamknięte 19:55 (odbiór zal.); 27 zamknięte 20:08 (odbiór 8/8); CLI 40 zgodne 4/4 (20:11); poprawki odbioru 27 zrobione |
 | 40 strona pod linkiem: ramki, lupa, wzorzec obok, podpowiedź | Programista | zamknięte 19:20 (odbiór 07e8d6d: 6/7 zal.; CLI = HTTP otwarte → Programista; przycisk „Dodaj jeden obraz” P61 A i rozwijanie listy → przy 28) |
