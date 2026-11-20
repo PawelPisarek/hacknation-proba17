@@ -43,6 +43,11 @@ python ocena/ocena.py --manifest dane/mini/manifest.json --wyniki wyniki/mini/wy
   Uwaga: sama usługa pod :8770 też podaje stronę, ale bez `widok.js` — widok auta nie działa; używać strony z punktu 2.
 - **Wersja pokazowa** (ta sama co pod linkiem po ostatnim wdrożeniu) = znacznik git `final`: `git checkout final`, potem uruchomienie jak wyżej.
 
+## Co dalej
+
+- Plan: zapisane powody odrzuceń jako materiał do douczania metody (jeszcze nie zrobione).
+- Wzorce z prawdziwych danych KAS i pomiary na obrazach KAS; integracja z systemami KAS; pomiar skalowania na kilku kartach.
+
 ## Strona na żywo — co działa
 
 https://hacknation.ksefbot.pl/ (odebrane na linku, 20.11.2026, dane sztuczne):
@@ -105,9 +110,9 @@ Czas na obraz 50 MB mierzymy tylko dla v3 (śr. 1,73 s / 1,19 s); czasy v1 i v2 
 1. **Samodzielny dobór wzorca rodzaju pojazdu** — program sam wybiera wzorzec (dobór 64/64 i 80/80; WYNIK zad. 20); operator może zmienić rodzaj jednym kliknięciem (zrzut: `docs/zrzuty/mvp/link-27-zmiana.png`).
 2. **Porównanie z dwoma najbliższymi wzorcami po wyrównaniu** — obraz badany stoi obok wzorca, z przesunięciem dopasowanym do miejsca (przeoczenia 7,8% / 9,7%, WYNIK zad. 20; zrzut: `docs/zrzuty/mvp/link-auto7-lupa4-miejsce2.png`).
 3. **Ramka + „zwykle tu…” zamiast surowej mapy** — ramki ponumerowane jak kafelki, kolejność od najbardziej odmiennego, śr. 5,8 / 6,25 ramki na czystym aucie (WYNIK zad. 20; zrzut: `docs/zrzuty/mvp/link-auto7-ramki.png`).
-4. **Decyzja operatora z powodem odrzucenia w raporcie** — .json, .csv i .html z miniaturami aut; zapis powodów to materiał do douczania metody (zrzut: `docs/zrzuty/mvp/link-43-raport.png`).
+4. **Decyzja operatora z powodem odrzucenia w raporcie** — .json, .csv i .html z miniaturami aut; powody zapisują się w raporcie (zrzut: `docs/zrzuty/mvp/link-43-raport.png`).
 5. **Działanie lokalne, bez internetu** — kontener bez sieci liczy partię pokazową 7/7 (WYNIK zad. 21).
-6. **Zbudowane przez zespół 5 botów AI** (OpenMausBot + Claude) w 24 h; czas liczenia obrazu 50 MB śr. 1,73 s / 1,19 s (WYNIK zad. 20).
+6. **Zbudowane przez zespół 5 botów AI** (OpenMausBot + Claude) w 24 h (dowód: [dziennik decyzji](https://github.com/PawelPisarek/hacknation-proba17/blob/main/docs/decyzje.md)); czas liczenia obrazu 50 MB śr. 1,73 s / 1,19 s (WYNIK zad. 20).
 
 ## Skalowanie
 

@@ -728,3 +728,6 @@ P96 08:17 Artur: W materiałach pisze, że powody odrzucenia to „materiał do 
 P95 08:18 odpowiedź: A — zdanie „zespół 5 botów AI” zostaje, z odnośnikiem do dziennika decyzji w repo (Artur w pokoju)
 P96 08:18 odpowiedź: A — „materiał do douczania” przenosimy do „Co dalej” jako plan (Artur w pokoju); Artur: poprawki nieprawdziwych zdań to nie pytania, tylko poprawki dla Programisty/Prezentera
 08:19 Szef: P95 A, P96 A (Artur w pokoju 08:18) → Prezenter; zasada Artura: poprawka zdania nieprawdziwego wobec stanu programu = bez pytania (autor poprawia sam do stanu faktycznego)
+
+### 08:19 — Prezenter: P95 A / P96 A wprowadzone (zlecenie 0b2a4502)
+Kto: Artur (08:18), wykonuje Prezenter. 1) Zdanie „zespół 5 botów AI w 24 h” zostaje, z odnośnikiem do dziennika decyzji (…/blob/main/docs/decyzje.md): README pkt 6, hacktribe.md (pole narzędzi), slajd 7. 2) „Materiał do douczania” usunięty z opisów funkcji; jako plan w README „Co dalej” (nowa sekcja) i na slajdzie 10. Zasada Artura: zdanie nieprawdziwe wobec programu poprawiam sam. PDF przebudowany (10 slajdów, bez przepełnień). Commit w następnym kroku (hash w stan/odpowiedzi).

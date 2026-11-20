@@ -46,9 +46,9 @@
 - Samodzielny dobór wzorca rodzaju pojazdu: 64/64 i 80/80.
 - Porównanie z dwoma najbliższymi wzorcami po wyrównaniu: przeoczenia 7,8% / 9,7%.
 - Ramka + „zwykle tu…” zamiast surowej mapy: śr. 5,8 / 6,25 ramki na czystym aucie.
-- Decyzja z powodem odrzucenia w raporcie (.json, .csv, .html z miniaturami) — materiał do douczania.
+- Decyzja z powodem odrzucenia w raporcie (.json, .csv, .html z miniaturami).
 - Działa lokalnie, bez internetu: partia pokazowa 7/7 w kontenerze bez sieci.
-- Zbudowane przez zespół 5 botów AI w 24 h.
+- Zbudowane przez zespół 5 botów AI w 24 h (dowód: dziennik decyzji, github.com/PawelPisarek/hacknation-proba17/blob/main/docs/decyzje.md).
 
 ## 8. Skalowanie (pomiary i założenia)
 - Pomiar: 1 karta GTX 1050, obraz 50 MB — 1,73 s / 1,19 s; wysyłka pliku przez sieć ok. 45 s.
@@ -61,7 +61,7 @@
 - Źródło: analiza konkurencji, docs/pm/01-competitive-analysis.md.
 
 ## 10. Co dalej i użyte narzędzia
-- Dalej: wzorce z prawdziwych danych KAS i pomiary na obrazach KAS; integracja z repozytorium obrazów i systemami KAS; wzorce per dostawca skanera; pomiar skalowania na kilku kartach.
+- Dalej (plan): zapisane powody odrzuceń jako materiał do douczania metody; wzorce z prawdziwych danych KAS i pomiary na obrazach KAS; integracja z repozytorium obrazów i systemami KAS; wzorce per dostawca skanera; pomiar skalowania na kilku kartach.
 - Narzędzia: zespół botów na OpenMausBot (github.com/milind-soni/OpenMausBot, Apache-2.0), modele Claude (Anthropic), skille pm-skills (github.com/phuryn/pm-skills, MIT).
 - Z kodu: numpy, torch, pillow; orkiestrator zadań (Slurm); karta GTX 1050 w komputerze OMEN.
 
