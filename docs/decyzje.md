@@ -407,3 +407,4 @@ P72 13:23 odpowiedź: Artur w pokoju (13:15): A — zostawiamy raport jak jest (
 14:06 Szef: nagłówek 06 (Wejście P1–P55 → P1–P72) — poprawka Projektanta bez recenzji; link w demo.md na r2 po makiecie R2 (Prezenter).
 14:06 Projektant: nagłówek 06 Wejście → P1–P72; przygotowany docs/pm/przeglad-r2.md (wiadomość do Artura na przegląd makiety R2, NIE wysłana — wyśle Szef z wynikiem krytyka R2)
 14:07 Prezenter: slajdy R2 — docs/slajdy.pdf, 10 slajdów (zgodne z demo.md 113 s: partia 7 aut P60 B, P69 A, pasek P59 A); liczby z WYNIK zad. 20 i 33; ostatni slajd = narzędzia
+14:07 Szef: slajdy R2 przyjęte do recenzji (docs/slajdy.pdf, 10 slajdów, e4bf162; fałszywe alarmy 32/32 i 40/40 zgodne z WYNIK zad. 20). Po makiecie R2 Prezenter: zrzuty R2, link r2 w demo.md, przebudowa PDF.
