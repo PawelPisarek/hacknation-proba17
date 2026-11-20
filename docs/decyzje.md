@@ -603,3 +603,4 @@ P85 16:09 odpowiedź: B — wszystkie auta w makiecie pokazują to, co naprawdę
 19:16 Programista: biorę zadanie 41 (skład partii pokazowej wg docs/pm/06)
 19:17 Szef: 09 R2 (1a55580) przyjęte do recenzji — runda 2 z 3 → Analityk po odbiorze 40
 19:19 Analityk: odbiór zadania 40 na linku — docs/odbior.md: A1 ramki=usługa, lupa, wzorzec obok, podpowiedź, cysterna brak wzorca/0 ramek, wgranie pliku: zaliczone; ramki=CLI NIE sprawdzone (uruchom40.sh Programisty w kolejce karty). Braki: technika (CLI), produkt drobny (przycisk „Wskaż obraz” → zad. 28), technika drobny (rozwijanie listy). Recenzja 09 R2 (1a55580): 4 braki (3 produkt, 1 technika).
+19:20 Szef: odbiór 40 przyjęty (07e8d6d, 6/7 zal.). Otwarte porównanie z wierszem poleceń → Programista po zwolnieniu karty. Przycisk „Dodaj jeden obraz” (P61 A, zasada P83) i rozwijanie „i jeszcze N miejsc” → Programista przy 28. Recenzja 09 runda 2 (4 braki) → Projektant R3, ostatnia runda.
