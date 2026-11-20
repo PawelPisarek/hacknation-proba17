@@ -25,3 +25,4 @@ P5 11:00 odpowiedź: Artur w pokoju: przede wszystkim skuteczność (czy wskazuj
 P6 11:00 odpowiedź: Artur w pokoju: jak w rekomendacji (opis projektu i wybór zakresu pierwszej wersji)
 P7 11:00 odpowiedź: Artur w pokoju: jak w rekomendacji; dodatkowo operator ma kilka minut na jedno auto
 P8 11:00 odpowiedź: Artur w pokoju: tak, konkurenci właściwi
+11:01 Szef: krok 1 przyjęty (znaczniki competitor-analysis, przeplywy-pm są) → recenzja przejścia R1: Analityk. P2/P3/P4 przekazane do zadań 01 i 02 (wzorzec typu z biblioteki, dobór wzorca w ocenie).
