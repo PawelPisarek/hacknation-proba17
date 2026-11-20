@@ -107,3 +107,4 @@ P28 11:21 Artur: gdzie i kiedy operator wpisuje numer rejestracyjny, gdy obrazó
 11:22 Szef: krok 2 R2 poprawiony (da5b2ca); R3 po P27–P28 (pokój zablokowany, pytania poszły na telefon; Projektant wkleja po otwarciu). P25–P26 A → Prezenter poprawia hacktribe + slajd 4 → R3 recenzji
 P27 11:23 odpowiedź: Artur w pokoju: A — po zmianie rodzaju pojazdu decyzje znikają, wszystko liczy się od nowa; raport zapisuje oba rodzaje (dobrany przez program i poprawiony przez operatora)
 P28 11:23 odpowiedź: Artur w pokoju: A — osobne pole numeru rejestracyjnego przy każdym obrazie partii, przed zatwierdzeniem wyniku
+11:23 Szef: hacktribe poprawiony wg P25–P26 (c493b20 Projektant, 428ec61 slajdy Prezenter) → R3 Analityk; P27–P28 w pokoju
