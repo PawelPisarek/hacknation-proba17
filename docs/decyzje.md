@@ -9,3 +9,4 @@ P1 10:56 Paweł: kto jest kim — jakie podpisy urządzeń mają Twoje i Artura 
 10:57 Szef: w kontenerze brak klienta ssh — postawiony zastępczy /data/.local/bin/ssh (Python/paramiko); push działa.
 10:57 Szef: zadania 01 (generator danych) i 02 (ocena + wynik bazowy) założone w docs/zadania/.
 P1 10:58 odpowiedź: Paweł — technika (rozmowa z Szefem), Artur — produkt (pokój Produkt); nikt więcej; podpisy urządzeń nieważne — kto pisze w pokoju, to Artur.
+10:58 Programista: biorę zadanie 02
