@@ -584,3 +584,4 @@ P85 16:09 odpowiedź: B — wszystkie auta w makiecie pokazują to, co naprawdę
 16:40 Programista: docs/zrzuty/r3/auto6.png — r3 po a931a39, auto 6 skan_06.bmp (cysterna): napis „brak wzorca — sprawdź obraz sam”, 0 ramek, „Zamknij auto”. Do podmiany na slajdzie 6 zamiast zrzutu z r2 (Prezenter).
 16:40 Programista: biorę zadanie 27 (zależy od 29 — raport z oboma rodzajami; najpierw część bez raportu: zmiana rodzaju z podglądem 2 wzorców, przeliczenie, kasowanie decyzji, test A7)
 16:41 Szef: 2fb308e przyjęte (tekst „sprawdź obraz sam” wszędzie, hacktribe 959 zn.); slajd 6 E5 → po auto6.png (sygnał od Szefa).
+16:41 Szef: merge zadania 21 przyjęty (19acef7, testy OK, 33a555d). Zrzuty r3 + auto6 przyjęte. Braki recenzji 21 (pycache, touch ., gałąź Coolify, testy w README) → zadanie 39 (Paweł albo wolny). Programista: zadanie 27 w toku (część bez raportu; raport po 29).
