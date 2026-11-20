@@ -98,3 +98,4 @@ P26 11:19 Artur: zdanie „Cel: wskazać każdy możliwy dodatek" obiecuje, że 
 P25 11:20 odpowiedź: Artur w pokoju: A — w opisie „docelowo działa lokalnie, bez internetu”
 P26 11:20 odpowiedź: Artur w pokoju: A — „najważniejsze: nie przeoczyć; pokazujemy, ile przeoczeń”
 11:20 Artur w pokoju: poprawki nieprawdziwych zdań w opisie robimy od razu, bez pytania go (zasada, nie pytanie)
+11:20 Szef: krok 2 — plik przepisany wg P22–P24 (b286fdb) → R2 Analityk
