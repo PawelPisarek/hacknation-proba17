@@ -621,3 +621,4 @@ P86 19:36 Paweł: budzik usługi (zad. 42) potrzebuje tokenu orkiestratora w ~/b
 P86 19:36 odpowiedź: nie teraz — w tej próbie budzimy usługę ręcznie przed pokazem; tokenów orkiestratora nie rozkładamy po maszynach w trakcie próby (Paweł przygotuje przed hackathonem).
 UPROSZCZENIE: samodzielne budzenie usługi przez budzik (token orkiestratora na OMENie) — ręczne obudzenie przed pokazem (wdroz.sh --usluga, ok. 25 s); strona dalej pokazuje „Uruchamiam program, ok. 30 s” i ponawia — dorobienie ok. 15 min po wstawieniu tokenu przez Pawła
 19:36 Szef: zadanie 42 zamykane w zakresie bez tokenu (napis, 503 „uśpiona”, ponawianie, /api/zdrowie) → Programista oddaje; odbiór 29 (f6da480) → Analityk
+19:38 Analityk: odbiór 29 CZĘŚCIOWY — karta zajęta (zgl-5155 Programisty), usługa nie liczy; E1/E2-uśpiona zaliczone, A6/A9/A11/A13/E3–E7 na linku niesprawdzone; raport .json/.csv spójne (mój odczyt). Zrzuty docs/zrzuty/odbior29/.

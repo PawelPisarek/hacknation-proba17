@@ -199,3 +199,27 @@ Tylko tekst do Artura. 4 braki z rundy 2 poprawione: (1) U3 — 3 rodzaje z wzor
 brak braków zmieniających zakres lub kryteria
 
 Uwaga do wysyłki (nie brak): I1 i I3 są w czasie przyszłym — przed wysłaniem sprawdzić na linku po zadaniach 42 i 28, a nazwę przycisku „Dodaj jeden obraz” z tym, co wdroży Programista.
+
+## Odbiór zadania 29 na linku (f6da480; 19:38) — CZĘŚCIOWY: usługa nie liczy, bo karta jest zajęta
+
+**Blokada:** w chwili odbioru `/api/zdrowie` daje „karta: w kolejce, pozycja 1” (karta zajęta przez `zgl-5155` Programisty — `ocena/uruchom40.sh`, od 19:09; nasza usługa `zgl-5162` czeka za nią). Strona jest w górze, ale żadne auto się nie liczy, więc E3–E7 na żywych danych nie da się przejść. Ciężkiego liczenia nie zlecałem.
+
+| Kryterium | Wynik | Dowód |
+|---|---|---|
+| E1 (logowanie, stanowisko) | zalicza | lista funkcjonariuszy (3) i miejsc (3), „Zacznij zmianę” → E2 z „SCS Kowalski · Terespol — stanowisko 2” |
+| E2 przy uśpionej karcie | zalicza | pasek „Uruchamiam program, ok. 30 s — karta kończy inne liczenie… (3 s)”, partia 0/7, auto 1 „liczy się”, strona ponawia sama; zrzut `docs/zrzuty/odbior29/e2-policz-karta-uspiona.png` |
+| A6 (zatwierdź / odrzuć z powodem) | NIE sprawdzone na linku | karta zajęta; tylko lektura `strona/testy/odbior-29.js` i kodu (lista powodów = P13 + „inny”) |
+| A9 (nr rej.) | NIE sprawdzone na linku | j.w.; w przykładowym raporcie auto 2: `WGM 12345` |
+| A11 (raport .json/.csv, ostrzeżenie, zamknięcie) | częściowo: pliki przykładowe | patrz niżej; ekran E7 i ostrzeżenie „Brak decyzji: auto …” nie obejrzane |
+| A13 (zmiana decyzji z listy, „rozstrzygnięte”, „Nowa partia”) | NIE sprawdzone na linku | j.w. |
+| Zrzuty Programisty `docs/zrzuty/mvp/link-29-*.png` | nie liczę jako mój dowód | są jego |
+
+**Raport .json/.csv z `docs/przyklad-raportu/` (mój odczyt, nie wynik z linku):**
+- .json: 7 aut, pola P18 są (`id_kontroli, auto, plik, nr_rej, rodzaj_programu, rodzaj_operatora, liczba_miejsc, decyzje, kto, miejsce_kontroli, data_godzina`) plus `bez_wzorca, wynik_przykladowy, zamkniete, otwarte`. Auto 2: nr `WGM 12345`, 3 odrzucone z powodami (element konstrukcji, nakładanie się ładunku, „pusta paleta” = „inny” z tekstem), 5 zatwierdzonych, kto „SCS Kowalski”. Pozostałe auta „brak decyzji”, kto/data „—” (P64 A). Auto 6: „nieustalony (brak wzorca)”, 0 miejsc.
+- .csv: separator „;”, 12 kolumn, 61 wierszy = suma miejsc (19+8+6+8+9+11) + 1 wiersz dla auta 6 (bez miejsc). Zgadza się z .json.
+- Skład w przykładzie jest STARY (19/8/6/8/9/0/11) — to zadanie 41, nie liczę.
+
+**Braki:**
+1. **technika** — test `odbior-29.js` wywołuje `.onclick()`/`.onchange()` i podmienia `pobierz`, czyli nie jest klikaniem ani pobieraniem pliku: nie dowodzi, że przycisk jest widoczny, a plik się pobiera. Odbiór prawdziwym klikaniem po wstaniu usługi.
+2. **technika** — A6, A9, A11, A13, E3–E7: do sprawdzenia po wstaniu usługi (po 41); bez tego odbiór 29 jest niepełny.
+3. **produkt** (drobny, do sprawdzenia) — powód „pusta paleta” trafił do raportu jako zwykły tekst „inny”; w raporcie nie widać, że to „inny” (P13 A dopuszcza własny tekst — zgodne, tylko uwaga).
