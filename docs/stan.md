@@ -6,8 +6,8 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | 01 generator danych | Analityk | zamknięte (dane/mini w repo; pełny ThinkPad ~/dane/proba17) |
 | krok 0 docs/materialy.md | Analityk | zamknięte |
 | 02 ocena + wynik bazowy + dobór wzorca (karta OMENa) | Programista | w toku |
-| krok 1 /competitive-analysis | Projektant | poprawka po R2 → R3 |
-| docs/hacktribe.md — nazwa „Prześwit” | Prezenter | zlecone |
+| krok 1 /competitive-analysis | Projektant | R3 (ostatnia) u Analityka |
+| docs/hacktribe.md — „Prześwit” + partie (P12) | Prezenter | gotowe (bdba1ed); recenzja przed 20:00 |
 | szkielet slajdów | Prezenter | gotowy (1cd6c10) |
 
 Ustalenia Artura: P2 wzorzec typu z biblioteki; P3+P9 program zaznacza sam, operator zatwierdza/odrzuca na wyniku z powodem; P4 przeoczenie gorsze; P5 skuteczność najpierw; P7 kilka minut na auto; P10 zakres 1. wersji, duży obraz ~50 MB od razu, partie później; P11 nazwa „Prześwit”.
