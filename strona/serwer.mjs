@@ -86,7 +86,7 @@ export function utworz({ omenUrl, katalog, limitMs = LIMIT_MS, budzikUrl = "" })
       return json(res, s.stan === "brak budzika" || s.stan === "uśpiona" ? 503 : 200, s);   // „uśpiona” po prośbie = nie obudził
     }
     if (u.pathname === "/api/analiza" && req.method === "POST") return doUslugi(req, res, "/analiza" + u.search);
-    if (u.pathname === "/api/partia-pokazowa" && req.method === "GET") return doUslugi(req, res, "/partia-pokazowa");
+    if (u.pathname === "/api/partia-pokazowa" && req.method === "GET") return doUslugi(req, res, "/partia-pokazowa" + u.search);
     if (u.pathname === "/api/obraz" && req.method === "GET") return doUslugi(req, res, "/obraz" + u.search);
     if (u.pathname.startsWith("/api/")) return json(res, 404, { blad: "brak" });
     let rel;

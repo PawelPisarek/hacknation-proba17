@@ -51,12 +51,14 @@ for (const [nazwa, omenUrl] of [["martwa usługa", "http://127.0.0.1:9"], ["brak
 test("przekazuje partię i zdrowie", async () => {
   const atrapa = http.createServer((req, res) => {
     res.writeHead(200, { "content-type": "application/json" });
-    res.end(JSON.stringify(req.url === "/zdrowie" ? { ok: true } : { wyniki: [1, 2] }));
+    res.end(JSON.stringify(req.url === "/zdrowie" ? { ok: true } : { wyniki: [1, 2], url: req.url }));
   });
   const omenUrl = await nasluch(atrapa);
   const strona = utworz({ omenUrl, katalog: KAT });
   const url = await nasluch(strona);
-  assert.deepEqual(await (await fetch(url + "/api/partia-pokazowa")).json(), { wyniki: [1, 2] });
+  assert.deepEqual(await (await fetch(url + "/api/partia-pokazowa")).json(), { wyniki: [1, 2], url: "/partia-pokazowa" });
+  // zad. 28: jedno auto partii (liczenie po kolei), zad. 27: z rodzajem
+  assert.equal((await (await fetch(url + "/api/partia-pokazowa?nr=3&typ=firanka")).json()).url, "/partia-pokazowa?nr=3&typ=firanka");
   assert.deepEqual(await (await fetch(url + "/api/zdrowie")).json(), { strona: "ok", karta: { ok: true } });
   await zamknij(strona); await zamknij(atrapa);
 });

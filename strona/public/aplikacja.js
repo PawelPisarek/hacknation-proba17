@@ -23,7 +23,7 @@ function rysujE2() {
   $("policz").disabled = !S.pliki.length;
 }
 $("wskaz").onclick = () => $("plik").click();   // P62 A: prawdziwy wybór plików z dysku
-$("pokazowa").onclick = () => { pokazowa = null; S.pliki = Array.from({ length: POKAZOWA }, (_, i) => ({ nazwa: `skan_${String(i + 1).padStart(2, "0")}.bmp`, nrPartii: i })); rysujE2(); };   // P60 B: 7 aut, trudny w środku partii bez oznaczenia
+$("pokazowa").onclick = () => { S.pliki = Array.from({ length: POKAZOWA }, (_, i) => ({ nazwa: `skan_${String(i + 1).padStart(2, "0")}.bmp`, nrPartii: i, url: `/api/obraz?partia=${i}` })); rysujE2(); };   // zad. 28: miniatura od razu, przed liczeniem; P60 B: 7 aut, trudny w środku partii bez oznaczenia
 // Własny plik: sprawdzamy nagłówek „BM” (P53 A — zepsuty plik dostaje komunikat, reszta liczy się dalej);
 // wynik to przykład z auta 1 z napisem P62 A, obraz — Twój plik (przeglądarka zwykle umie pokazać .bmp).
 async function wlasnyPlik(f) {
@@ -120,7 +120,11 @@ function rysujAuto() {
   ustawSrc("imgB", obrazBadany(a));
   ["obB", "obW"].forEach((id) => { $(id).style.width = (100 * S.zoom) + "%"; $(id).querySelectorAll(".ramka, .wycinek").forEach((r) => r.remove()); });
   $("a-rodzaj").textContent = NAZWA[rodz] + (a.rodzajOperatora ? ` (program: ${NAZWA[a.rodzaj]})` : "");
-  $("zmienrodz").style.display = S.zmianaRodzaju ? "" : "none";   // zad. 27
+  $("zmienrodz").style.display = S.zmianaRodzaju ? "" : "none";   // zad. 27 (P24 B / P27 A: do oddania 27 ukryty)
+  // P77 A: „Zamknij auto” zawsze widoczny przy „Nr rej.” (Enter — skrót); aktywny, gdy wszystkie miejsca rozstrzygnięte
+  $("a-zamknij").disabled = S.zamknieta || !(bw || !a.miejsca.length || a.miejsca.every((_, j) => a.decyzje[j]));
+  $("a-zamknij").title = S.zamknieta ? "partia zamknięta" : $("a-zamknij").disabled ? "najpierw rozstrzygnij wszystkie miejsca" : "";
+  $("a-nr").disabled = S.zamknieta;
   $("a-dwa").style.gridTemplateColumns = bw ? "1fr" : "";
   $("a-wz").style.display = bw ? "none" : "";
   // E5 (P35 A): jeden napis nad obrazem (nie na nim — podwozie zostaje widoczne), bez ramek i kafelków
@@ -179,7 +183,6 @@ function lupa(el, src, x, zoom = 6) {
 function rysujDecyzje(a) {
   const el = $("a-dec"), i = S.im, x = a.miejsca[i], d = a.decyzje[i];
   el.innerHTML = `<b>miejsce ${i + 1}</b> `;
-  if (S.zamknieta) { el.innerHTML += ' <span class="szary">partia zamknięta</span>'; return; }
   const ok = Object.assign(document.createElement("button"), { className: "btn ok", textContent: "Zatwierdź" });
   // jedna kontrolka „Odrzuć ▾ powód” (spec E4): wybór powodu od razu odrzuca; „inny” — wpis i Enter / OK
   const sel = Object.assign(document.createElement("select"), { className: "btn nie" });
@@ -194,6 +197,10 @@ function rysujDecyzje(a) {
   inny.onkeydown = (e) => { if (e.key === "Enter") odrzucInny(); }; innyOk.onclick = odrzucInny;
   ok.onclick = () => decyduj(a, i, { d: "zatwierdzone" });
   el.append(ok, sel, inny, innyOk);
+  if (S.zamknieta) {   // odbiór 29 (A13): po zamknięciu partii przyciski widoczne, ale wyszarzone
+    ok.disabled = sel.disabled = true;
+    return el.insertAdjacentHTML("beforeend", '<span class="szary">partia zamknięta — decyzji nie można już zmieniać</span>');
+  }
   if (d) el.insertAdjacentHTML("beforeend", `<span class="szary">teraz: ${d.d}${d.powod ? " (" + esc(d.powod) + ")" : ""} — możesz zmienić</span>`);
   const zost = a.miejsca.filter((_, j) => !a.decyzje[j]).length;
   el.insertAdjacentHTML("beforeend", `<span class="szary">zostało ${zost} z ${a.miejsca.length}</span>`);
@@ -204,12 +211,10 @@ function decyduj(a, i, d) {
   if (n >= 0) { if (n >= widoczne(a)) S.wszystkie = true; return wybierz(n); }
   rysujAuto(); dalejPoAucie(a);   // P40 B: po ostatnim miejscu następne auto
 }
-function rysujZamknij(a) {
-  $("a-dec").innerHTML = "";
-  if (S.zamknieta) return;
-  const b = Object.assign(document.createElement("button"), { className: "btn ok", textContent: "Zamknij auto" });
-  b.onclick = () => dalejPoAucie(a); $("a-dec").append(b);
+function rysujZamknij() {   // P77 A: przycisk „Zamknij auto” jest przy polu „Nr rej.”
+  $("a-dec").innerHTML = S.zamknieta ? '<span class="szary">partia zamknięta</span>' : '<span class="szary">Wpisz nr rej. i kliknij „Zamknij auto” przy polu „Nr rej.”.</span>';
 }
+$("a-zamknij").onclick = () => dalejPoAucie(A());
 const NR_INFO = "Wpisz nr rej. naczepy, potem kliknij „Zamknij auto” (albo Enter).";
 function dalejPoAucie(a) {
   a.nr = $("a-nr").value.trim().toUpperCase();

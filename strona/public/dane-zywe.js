@@ -71,14 +71,11 @@ async function zapytaj(zrob) {
   if (!r.ok) throw new Error(j.blad || `błąd ${r.status}`);
   return j;
 }
-let pokazowa = null;   // wyniki partii pokazowej: jedno liczenie na partię
+// zad. 28: każde auto osobnym zapytaniem — lista pokazuje postęp auto po aucie (P12); typ — rodzaj operatora (zad. 27)
 async function liczAuto(a, typ) {
-  if (a.plikF) {
-    const q = `nazwa=${encodeURIComponent(a.plikF.name)}` + (typ ? `&typ=${encodeURIComponent(typ)}` : "");
-    return zapytaj(() => fetch(`/api/analiza?${q}`, { method: "POST", body: a.plikF }));
-  }
-  pokazowa = pokazowa || zapytaj(() => fetch("/api/partia-pokazowa")).catch((e) => { pokazowa = null; throw e; });
-  return (await pokazowa).wyniki[a.nrPartii];
+  const t = typ ? `&typ=${encodeURIComponent(typ)}` : "";
+  if (a.plikF) return zapytaj(() => fetch(`/api/analiza?nazwa=${encodeURIComponent(a.plikF.name)}${t}`, { method: "POST", body: a.plikF }));
+  return (await zapytaj(() => fetch(`/api/partia-pokazowa?nr=${a.nrPartii}${t}`))).wyniki[0];
 }
 // wynik usługi → pola auta (miejsca od najmocniejszego — kolejność z usługi, P79 B)
 function przyjmij(a, w) {

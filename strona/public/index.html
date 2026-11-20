@@ -1,6 +1,6 @@
 <!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Prześwit</title>
-<link rel="stylesheet" href="styl.css?v=42">
+<link rel="stylesheet" href="styl.css?v=28">
 <style>
 .sztuczne{background:#ffe9a8;color:#5a4300;font-size:12px;font-weight:700;text-align:center;padding:3px 8px;letter-spacing:.02em}
 .ekr{display:none}.ekr.on{display:block}
@@ -74,7 +74,7 @@ td img.mini{width:150px;border-radius:3px;display:block;background:#000;min-heig
 <section class="ekr" id="E4">
 <div class="pasek"><button class="btn jasny" id="dolisty">‹ lista partii</button><b id="a-nazwa"></b><span class="szary" id="a-plik"></span>
 <label>Przybliżenie <span class="przel"><button data-z="1" class="on">1×</button><button data-z="2">2×</button><button data-z="4">4×</button></span></label>
-<label>Nr rej. <input class="nrrej" id="a-nr" placeholder="np. WGM 12345"><span class="nrinfo" id="a-nrinfo" role="alert"></span></label></div>
+<label>Nr rej. <input class="nrrej" id="a-nr" placeholder="np. WGM 12345"></label><button class="btn ok" id="a-zamknij" style="padding:4px 10px">Zamknij auto</button><span class="nrinfo" id="a-nrinfo" role="alert"></span></div>
 <div class="przyklad" id="a-przyklad" style="display:none"></div>
 <div class="napis-bw" id="a-bw" style="display:none"></div>
 <div class="dwa" id="a-dwa"><div><h3>BADANY <span id="a-ramki"></span></h3><div class="okno" id="ob"><div class="obraz" id="obB"><img id="imgB" alt="obraz badany"></div></div></div>
@@ -101,7 +101,7 @@ td img.mini{width:150px;border-radius:3px;display:block;background:#000;min-heig
 <div class="przyciski"><button class="btn ok" id="zapisz">Zapisz i zamknij partię</button> <button class="btn ok" id="r-nowa" style="display:none">Nowa partia</button> <button class="btn jasny" id="r-lista">‹ lista partii</button></div>
 <p class="szary" id="r-info">Zapis: raport-partii.json i raport-partii.csv. W wersji pod linkiem pliki pobiera przeglądarka; docelowo program działa też bez internetu, po uruchomieniu lokalnym.</p></div></section>
 
-<script src="widok.js?v=42"></script>   <!-- P81 A: wspólne teksty podpowiedzi z MVP -->
-<script src="dane-zywe.js?v=42"></script>
-<script src="aplikacja.js?v=42"></script>
+<script src="widok.js?v=28"></script>   <!-- P81 A: wspólne teksty podpowiedzi z MVP -->
+<script src="dane-zywe.js?v=28"></script>
+<script src="aplikacja.js?v=28"></script>
 </body></html>

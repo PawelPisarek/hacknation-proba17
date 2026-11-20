@@ -87,6 +87,16 @@ class TestSerwer(unittest.TestCase):
         self.assertEqual(len(json.loads(ciało)["wyniki"]), 7)
         self.assertEqual(self.wolania[-1][1], "mini-trudny")
 
+    def test_partia_po_jednym_z_typem(self):   # zad. 28 (po kolei) i 27 (rodzaj operatora)
+        self.uruchom()
+        kod, ciało = zadanie(self.url + "/api/partia-pokazowa?nr=2&typ=firanka")
+        wyniki = json.loads(ciało)["wyniki"]
+        self.assertEqual((kod, len(wyniki), wyniki[0]["obraz"]), (200, 1, "partia=2"))
+        self.assertEqual(wyniki[0]["plik"], "badany_mini_kontener_dodatki_01.bmp")
+        self.assertEqual(self.wolania[-1][2], "firanka")
+        for zle in ("nr=7", "nr=-1", "nr=x"):
+            self.assertEqual(zadanie(self.url + "/partia-pokazowa?" + zle)[0], 404, zle)
+
     def test_obraz_partii_i_wzorca(self):
         self.uruchom(wzorce={("mini", "w1"): MINI})
         kod, ciało = zadanie(self.url + "/partia-pokazowa")

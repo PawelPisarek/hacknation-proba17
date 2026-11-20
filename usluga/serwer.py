@@ -3,7 +3,7 @@
   PYTHONPATH=src:. python -m usluga.serwer [--host 0.0.0.0] [--port 8770] [--bezczynnosc 10] [--bez-sieci]
          [--metoda v2] [--siatka ...] [--szer-rob 2048] [--biblioteki mini,mini-trudny,maly]
 
-Endpointy (także pod /api/...): GET /zdrowie, POST /analiza?typ=&biblioteka= (ciało = .bmp), GET /partia-pokazowa,
+Endpointy (także pod /api/...): GET /zdrowie, POST /analiza?typ=&biblioteka= (ciało = .bmp), GET /partia-pokazowa[?nr=N&typ=],
 GET /obraz?partia=N | ?biblioteka=B&id=ID (podgląd do widoku auta, zad. 40), GET / i pliki strony z strona/public. Jedno liczenie naraz (karta 4 GB). --bezczynnosc N: po N min bez żądania
 usługa kończy się i zwalnia kartę (0 = nigdy; tylko na pokaz). --bez-sieci: połączenia poza pętlę zwrotną odmawiane.
 """
@@ -83,12 +83,24 @@ def zbuduj(licz, info, strona_dir, bezczynnosc_s, port=0, host="127.0.0.1", wzor
             if p == "/obraz":
                 return self.obraz(q)
             if p == "/partia-pokazowa":
+                # zad. 28: ?nr=N — jedno auto partii (strona liczy po kolei); zad. 27: ?typ= — rodzaj od operatora
                 with open(PARTIA) as f:
                     partia = json.load(f)
-                wyniki = []
-                for i, e in enumerate(partia):
+                typ = q.get("typ") or None
+                numery = range(len(partia))
+                if "nr" in q:
                     try:
-                        w = self.licz_jedno(os.path.join(rdzen.KORZEN, e["plik"]), e["biblioteka"], None)
+                        numery = [int(q["nr"])]
+                        if numery[0] < 0:
+                            raise IndexError
+                        partia[numery[0]]
+                    except (ValueError, IndexError):
+                        return self.odpowiedz(404, {"blad": "brak auta w partii"})
+                wyniki = []
+                for i in numery:
+                    e = partia[i]
+                    try:
+                        w = self.licz_jedno(os.path.join(rdzen.KORZEN, e["plik"]), e["biblioteka"], typ)
                     except Exception as ex:   # jeden zły plik nie zatrzymuje partii
                         w = {"plik": os.path.basename(e["plik"]), "blad": str(ex)}
                     w["obraz"] = "partia=%d" % i
