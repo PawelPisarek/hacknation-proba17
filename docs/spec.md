@@ -76,7 +76,7 @@ Cele ramek i przeoczeń **dziś niespełnione** — Szef: próg P30 B zostaje; p
 - Dane tylko sztuczne (Z10: stosunek przeoczeń 0,6, n małe) — w opisie zawsze „na danych sztucznych”.
 
 ## 7. Demo do 2 min (główna ścieżka)
-E1 (5 s) → E2/E3 partia 6 aut policzona (20 s) → wejście w firanka_dodatki_00 → E4: dwa obrazy, kafelek 1 → lupa, podpowiedź „zwykle tu…” (40 s) → Zatwierdź, Odrzuć z powodem „element konstrukcji”, wpisz nr rej. (30 s) → ostatnie miejsce → następne auto → cysterna E5 „brak wzorca — sprawdź obraz sam” (15 s) → E7 raport (10 s).
+E1 (5 s) → E2/E3 partia 6 aut policzona (20 s) → wejście w firanka_dodatki_00 → E4: dwa obrazy, kafelek 1 → lupa, podpowiedź „zwykle tu…” (40 s) → Zatwierdź, Odrzuć z powodem „element konstrukcji”, wpisz nr rej. (25 s) → ostatnie miejsce → następne auto → **przypadek trudny `trudny_mini_firanka_za_ladunkiem_00.bmp` (P51 B, Artur): dodatek za ładunkiem — widać ramkę w lupie albo, gdy jej nie ma (Z7: przeoczenia małych dodatków 17–26%), uczciwy napis i oglądanie obrazu samemu; wybór pokazu P52, czeka** (15 s) → cysterna E5 „brak wzorca — sprawdź obraz sam” (10 s) → E7 raport (5 s).
 
 ## 8. UPROSZCZENIA
 UPROSZCZENIE: logowanie i ustawienie stanowiska — jedna lista funkcjonariuszy i miejsc zamiast Keycloak/AD — dorobienie: integracja z logowaniem KAS (kilka godzin)
