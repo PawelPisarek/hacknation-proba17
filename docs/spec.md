@@ -43,7 +43,7 @@ Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wyni
 |---|---|---|
 | A1 | Ramki na badanym mają numery zgodne z kafelkami; kliknięcie kafelka zaznacza ramkę i przybliża oba obrazy w tym samym miejscu | JS1 AC1,3,4a; P36 C |
 | A2 | Kafelki od najbardziej różnego, bez słów i procentów, tylko numer, stan i kolejność; progi słów nie istnieją (P49, P75 bez przedmiotu) | P79 B (zmienia P17, P45); JS1 AC2 |
-| A3 | Obraz bez miejsc: napis „brak wskazań — to nie gwarancja, że auto jest czyste; obejrzyj obraz sam” (P58 A), nie pusta lista | JS1 AC4 |
+| A3 (czeka na sondę 38 — P82; w r3 16:23 żadne auto partii nie ma 0 miejsc, auto 4 ma 8) | Obraz bez miejsc: napis „brak wskazań — to nie gwarancja, że auto jest czyste; obejrzyj obraz sam” (P58 A), nie pusta lista | JS1 AC4 |
 | A4 | Brak wzorca → zero ramek i napis „brak wzorca — sprawdź obraz sam” | P35 A; JS1 AC5, JS3 AC6 |
 | A5 | Podpowiedź „zwykle tu…” widoczna od razu przy każdym kafelku, bez klikania; kafelek bez opisu (ok. 27% ramek, Z14) — wg P42 (Artur) napis „poza znaną konstrukcją, obejrzyj uważnie” | P39 B, P42; JS1 AC4b |
 | A6 | Odrzucenie wymaga powodu z listy P13; zatwierdzenie jednym kliknięciem; decyzja w raporcie | JS2 |
@@ -76,9 +76,9 @@ Cele ramek i przeoczeń **dziś niespełnione** — Szef: próg P30 B zostaje; p
 - Dane tylko sztuczne (Z10: stosunek przeoczeń 0,6, n małe) — w opisie zawsze „na danych sztucznych”.
 
 ## 7. Demo do 2 min (główna ścieżka)
-Ścieżka wg `docs/demo.md` — **113 s** (zapas 7 s): E1 (5 s) → E2/E3 partia 7 aut policzona (14 s) → wejście w firanka_dodatki_00 → E4: dwa obrazy, kafelek 1 → lupa, podpowiedź „zwykle tu…” (20 s) → rozstrzygamy 2 miejsca (Zatwierdź, Odrzuć z powodem „element konstrukcji”), wpisz nr rej., wracamy na listę, pozostałe miejsca zostają „oczekuje” (P69 A; 22 s) → z listy auta 4 i 6: „program nic nie wskazał — nieotwarte” (P80 A) i „brak wzorca — sprawdź obraz sam” (P35 A; 14 s) → **7. auto w partii: przypadek trudny `trudny_mini_firanka_za_ladunkiem_00.bmp` (P51 B, P60 B — wewnątrz partii, bez oznaczania na ekranie, które jest trudne): dodatek za ładunkiem — widać ramkę w lupie albo, gdy jej nie ma (Z7: przeoczenia małych dodatków 17–26%), uczciwy napis „granica programu — oglądamy obraz sam” i oglądanie obrazu samemu (P52 A, Artur)** (14 s) → E7 „Zapisz i zamknij partię” (ostrzeżenie z listą aut „brak decyzji” → potwierdzenie, P63 B; 14 s) → krok 8 „Nowa partia” (P65 A) i własny `.bmp` z linku (A14; 10 s). „Dodaj jeden obraz” (P61 A) to osobny krok poza 2 minutami — powrót po ostatnim aucie na listę partii z „Raport partii” (P54 A).
+Ścieżka wg `docs/demo.md` — **113 s** (zapas 7 s): E1 (5 s) → E2/E3 partia 7 aut policzona (14 s) → wejście w firanka_dodatki_00 → E4: dwa obrazy, kafelek 1 → lupa, podpowiedź „zwykle tu…” (20 s) → rozstrzygamy 2 miejsca (Zatwierdź, Odrzuć z powodem „element konstrukcji”), wpisz nr rej., wracamy na listę, pozostałe miejsca zostają „oczekuje” (P69 A; 22 s) → z listy auta 4 i 6: auto 4 ma w r3 8 miejsc, więc moment „program nic nie wskazał — nieotwarte” (P80 A) **czeka na sondę 38 (P82)**; auto 6 — „brak wzorca — sprawdź obraz sam” (P35 A; 14 s) → **7. auto w partii: przypadek trudny `trudny_mini_firanka_za_ladunkiem_00.bmp` (P51 B, P60 B — wewnątrz partii, bez oznaczania na ekranie, które jest trudne): dodatek za ładunkiem — widać ramkę w lupie albo, gdy jej nie ma (Z7: przeoczenia małych dodatków 17–26%), uczciwy napis „granica programu — oglądamy obraz sam” i oglądanie obrazu samemu (P52 A, Artur)** (14 s) → E7 „Zapisz i zamknij partię” (ostrzeżenie z listą aut „brak decyzji” → potwierdzenie, P63 B; 14 s) → krok 8 „Nowa partia” (P65 A) i własny `.bmp` z linku (A14; 10 s). „Dodaj jeden obraz” (P61 A) to osobny krok poza 2 minutami — powrót po ostatnim aucie na listę partii z „Raport partii” (P54 A).
 
-Skład partii pokazowej (P60 B): **7 aut w partii** — 6 z `dane/mini` (firanka dodatki_00, chłodnia dodatki_01, kontener dodatki_01, kontener czyste_00, firanka czyste_01, cysterna dodatki_00) + **7. auto w partii `trudny_mini_firanka_za_ladunkiem_00.bmp`** (operator nie wie z góry, które jest trudne; tak samo na pokazie). Przycisk „Dodaj jeden obraz” (P61 A) jest na liście partii, ale poza 2 minutami pokazu. W partii nie ma chłodni czystej; auta 4 i 5 to kontener_czyste_00 i firanka_czyste_01.
+Skład partii pokazowej (P60 B): **7 aut w partii** — 6 z `dane/mini` (firanka dodatki_00, chłodnia dodatki_01, kontener dodatki_01, kontener czyste_00, firanka czyste_01, cysterna dodatki_00) + **7. auto w partii `trudny_mini_firanka_za_ladunkiem_00.bmp`** (operator nie wie z góry, które jest trudne; tak samo na pokazie). Przycisk „Dodaj jeden obraz” (P61 A) jest na liście partii, ale poza 2 minutami pokazu. Miejsca wg wyniku programu w r3 16:23 (P85 B): 8/6/12/8/7/0/11; na ekranie nazwy `skan_NN.bmp`. W partii nie ma chłodni czystej; auta 4 i 5 to kontener_czyste_00 i firanka_czyste_01.
 
 ## 8. UPROSZCZENIA
 UPROSZCZENIE: logowanie i ustawienie stanowiska — jedna lista funkcjonariuszy i miejsc zamiast Keycloak/AD — dorobienie: integracja z logowaniem KAS (kilka godzin)
@@ -137,6 +137,9 @@ Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z d
 | P76 | A — zoom 4× zachowuje ramkę z numerem | odpowiedź Artura 14:38 (w pokoju) |
 | P77 | A — komunikat przy polu „Nr rej.”, przycisk „Zamknij auto” | odpowiedź Artura 14:38 (w pokoju) |
 | P78 | nic nie wyrzucamy z ekranu | odpowiedź Artura 14:38 (w pokoju) |
+| P83 | A — „Zapisz i zamknij partię” przy autach bez decyzji: ostrzeżenie „Brak decyzji: auto N …” z listą aut, „Zapisz mimo to” i „Wróć do listy” (jak P63 B) | odpowiedź Artura 15:56 (w pokoju) |
+| P84 | B — auto, na którym program nic nie wskazał, zostaje otwarte, aż ktoś je obejrzy i zamknie (jak P80 A) | odpowiedź Artura 16:09 (w pokoju) |
+| P85 | B — wszystkie auta w makiecie pokazują to, co naprawdę wskazał program, bez ręcznych zaznaczeń (jak P81) | odpowiedź Artura 16:09 (w pokoju) |
 | P79 | B — bez słów niski / średni / wysoki, tylko kolejność od najmocniejszego miejsca (zmienia P17 i P45; P49 i P75 bez przedmiotu) | odpowiedź Artura 15:08 (w pokoju) |
 
 <!-- skill: create-prd -->
