@@ -55,13 +55,14 @@ https://hacknation.ksefbot.pl/ (odebrane na linku, 20.11.2026, dane sztuczne):
 10. Raport partii pobierzesz jako .json i .csv; przy zamykaniu partii program ostrzega o autach bez decyzji.
 11. Partia liczy się auto po aucie (stan „liczy się 3/7”), a na liście są miniatury obrazów; wiersze stają się klikalne, gdy auto jest policzone.
 12. „Dodaj jeden obraz” dokłada kolejne auto do partii.
-13. Gdy miejsc jest więcej niż widać, lista ma „i jeszcze N miejsc — pokaż”.
+13. Gdy miejsc jest więcej niż widać, lista ma „i jeszcze N miejsc — pokaż” (z poprawną odmianą: 2 miejsca, 1 miejsce).
 14. „Zamknij auto” działa po rozstrzygnięciu ostatniego miejsca (Enter jako skrót) i otwiera następne auto; po ostatnim wraca lista z „Raport partii”.
 15. Po zamknięciu partii decyzji nie da się już zmienić (wiersze listy są zablokowane).
+16. Rodzaj pojazdu zmienisz jednym kliknięciem, z podglądem 2 wzorców; auto przelicza się, a wcześniejsze decyzje przy nim są kasowane (odbiór niezależny w toku).
+17. Po zmianie na cysternę program pisze „brak wzorca”.
+18. Raport partii zawiera rodzaj wykryty przez program i rodzaj wybrany przez operatora.
 
 Gdy program jest zajęty, strona pokazuje „Uruchamiam program, ok. 30 s” i sama ponawia liczenie. Uśpiony program obsługa budzi ręcznie przed pokazem (UPROSZCZENIE P86).
-
-W przygotowaniu: zadanie 27 (zmiana rodzaju).
 
 ## Wyniki (na danych sztucznych, nie na zdjęciach KAS)
 
