@@ -112,6 +112,7 @@ def wykryj_v3(sciezka, bib, konfiguracje, typ_prawda=None, typ_wymuszony=None):
     f = w / SZER_DOBOR
     kand = [d for d in dop if d["typ"] == typ]
     WW = []
+    pol = []
     for d in kand:                                       # jak v2: skala + przesunięcie + jasność całego obrazu
         i = [x[0] for x in bib.wpisy].index(d["id"])
         wr = dopasuj_rozmiar(bib.rob[i], rob)
@@ -119,6 +120,8 @@ def wykryj_v3(sciezka, bib, konfiguracje, typ_prawda=None, typ_wymuszony=None):
         ww = warp_skala(wr, sk, d["dx"] * f, d["dy"] * f)
         _, _, ddx, ddy = dopasuj(rob, ww, skale=torch.tensor([1.0]), max_dx=3 * f / w + 2 / w, max_dy=3 * f / h + 2 / h)
         ww = warp_skala(wr, sk, d["dx"] * f + ddx, d["dy"] * f + ddy)
+        # zadanie 25: końcowe położenie wzorca w pikselach obrazu (x_b = s·x_w + dx, y_b = y_w + dy) — tylko zapis
+        pol.append(dict(id=d["id"], s=round(d["s"], 4), dx=round((d["dx"] * f + ddx) * W / w, 2), dy=round((d["dy"] * f + ddy) * H / h, 2)))
         x, y = ww.flatten(), rob.flatten()
         xm, ym = x.mean(), y.mean()
         alfa = ((x - xm) * (y - ym)).sum() / ((x - xm) ** 2).sum().clamp(min=1e-6)
@@ -185,4 +188,5 @@ def wykryj_v3(sciezka, bib, konfiguracje, typ_prawda=None, typ_wymuszony=None):
     if DEV.type == "cuda":
         torch.cuda.synchronize()
     return dict(plik=os.path.basename(sciezka), szer=W, wys=H, typ_prawda=typ_prawda, dobor=dop[:5],
+                polozenie_wzorcow=pol,
                 czas_s=round(time.perf_counter() - t0, 3), czas_dobor_s=round(t_dobor, 3), konfiguracje=wyniki)

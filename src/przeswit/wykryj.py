@@ -251,6 +251,7 @@ def main():
     ap.add_argument("--siatka", default=DOMYSLNA, help="konfiguracje do policzenia naraz")
     ap.add_argument("--raport", default=None, help="nazwa konfiguracji do raportu PNG (domyślnie pierwsza)")
     ap.add_argument("--metoda", default="v1", choices=["v1", "v2", "v3"], help="v1 = wynik bazowy, v2 = zadanie 19, v3 = zadanie 20")
+    ap.add_argument("--prog-doboru", default=None, help="zadanie 33: 'miara:próg' (maks|sr), np. maks:0.9; poniżej — brak wzorca")
     ap.add_argument("--bez-png", action="store_true")
     ap.add_argument("--wznow", action="store_true", help="dopisuje każdy wynik do <wyj>/czesc.jsonl i pomija obrazy już tam zapisane (wywłaszczenie)")
     a = ap.parse_args()
@@ -298,14 +299,20 @@ def main():
             r = wykryj_v3(p, bib, konf, typ, a.typ)
         elif a.metoda == "v2":
             from .wykryj2 import wykryj_v2
-            r = wykryj_v2(p, bib, konf, typ, a.typ)
+            pd = None
+            if a.prog_doboru == "brak":
+                pd = ("sr", None)
+            elif a.prog_doboru:
+                mi, pv = a.prog_doboru.split(":")
+                pd = (mi, float(pv))
+            r = wykryj_v2(p, bib, konf, typ, a.typ, pd)
         else:
             r = wykryj(p, bib, konf, typ)
-        if typ and typ not in typy_bib:   # P16: wzorzec przybliżony
+        if typ and typ not in typy_bib and not r.get("brak_wzorca"):   # P16: wzorzec przybliżony
             for k in r["konfiguracje"].values():
                 k["uwaga"] = f"wzorzec przybliżony ({k['typ_wybrany']} zamiast {typ})"
         nazwa = a.raport or konf[0]["nazwa"]
-        if not a.bez_png:
+        if not a.bez_png and not r.get("brak_wzorca"):
             r["raport_png"] = raport_png(p, r["konfiguracje"][nazwa]["miejsca"],
                                          os.path.join(a.wyj, os.path.basename(p)[:-4] + ".png"))
         wyniki.append(r)
@@ -314,6 +321,7 @@ def main():
                 fz.write(json.dumps(r, ensure_ascii=False) + "\n")
         k0 = r["konfiguracje"][nazwa]
         print(f"{r['plik']}: typ {k0['typ_wybrany']} (prawda {typ}), miejsc {len(k0['miejsca'])}, "
+              f"jakość doboru {r.get('jakosc_doboru')}, "
               f"{r['czas_s']:.2f} s", flush=True)
     out = dict(siatka=a.siatka, typy_biblioteki=typy_bib, konfiguracje=[k["nazwa"] for k in konf], szer_rob=a.szer_rob,
                czas_biblioteki_s=round(t_bib, 2), urzadzenie=str(DEV), wyniki=wyniki)

@@ -1,41 +1,20 @@
-# Stan — 13:09
+# Stan — 15:18
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
 |---|---|---|
-| 01 generator danych | Analityk | zamknięte (dane/mini w repo; pełny ThinkPad ~/dane/proba17) |
-| krok 0 docs/materialy.md | Analityk | zamknięte |
-| 02 ocena + wynik bazowy | Programista | zamknięte (4f08297): trudny FP 36/40, przeoczenia 11/62, dobór 79/80, 50 MB 1,7–5 s |
-| 19 mniej fałszywych alarmów | Programista | zamknięte (85f8e1f): cele niespełnione — trudny FP 38/40, ramki śr. 12,9, przeoczenia 18% |
-| 20 pasy podwozie/kabina/pudło (karta) | Programista | w toku od 12:04 |
+| zamknięte (start + łańcuch 0–6 + 20, 23, 31, 33) | zespół | 01–04, 05–18 (sondy Z1–Z14; Z12/Z14 przegląd po R1), 19, 20 (v3: FN 7,8%/9,7% ≤10%, ramki 5,8/6,25, 4beef05), 23 (ramki/lista + mvp/widok-auta, 7/7 testów, 6454220), 31 (17/17 OK, 8517f28), 33 (brak wzorca sr<0,80: 50/50 cystern, 0 strat, 6454220), kroki 0–6, README, hacktribe (R3; przepisany pod P57–P72 d3a232b, opis 854/1000 zn.; link r2 sprawdzić po zad. 22 przed 20:00), warianty (P36 C+B), makieta R1 (krytyk 6/10) |
+| P57–P72 w spec, 06 i 07 | Projektant | P57–P72 w spec/06 (103b1a2) + P60 B/P69 A w 07 R3/R9 (d4d4bda) |
+| krok 7 /pre-mortem (07-pre-mortem.md) | Projektant | zamknięty po R3, liczby v3 wpisane |
+| 22 makieta R2 | Programista | zamknięte; krytyk 7/10; Artur P73–P78 (14:38) |
+| 34 makieta R3 (P73 A, P74 A, P76 A, P77 A, P79 B, brak 7) | Programista | zamknięte 15:16, r3 200; krytyk R3 → Analityk; linki r3 → Prezenter |
 | 21 wdrożenie strona + usługa (P43 A) | Paweł | w toku od 13:00 |
-| krok 1 /competitive-analysis | Projektant | zamknięte (R3) |
-| krok 2 operator (02-operator.md) | Projektant | zamknięte (R3) |
-| krok 3 /discover (03-discover.md) | Projektant | zamknięte (R3) |
-| krok 4 priorytety (04-priorytety.md) | Projektant | zamknięte (R2) |
-| krok 5 /write-prd + docs/spec.md | Projektant | zamknięty; odbiorca R2 bez braków (aba5f22) |
-| krok 6 /test-scenarios (06-scenariusze.md) | Projektant | zamknięty po R3; dopisanie P56 A w toku |
-| krok 7 /pre-mortem (07-pre-mortem.md) | Projektant | R1: 3 braki technika → poprawka; R2 po niej |
-| 32 progi słów (P49 A) | — | po 20 i 31 |
-| 30 odbiór A1–A14 | — | do wzięcia (po 31) |
-| 31 dane scenariuszy | Analityk | w toku (generator 12:58) |
-| 22 makieta R1 (lista partii + C) | Programista | zamknięte; krytyk R1 6/10 (12 braków) → pytania do Artura (Projektant); R2 po odpowiedziach |
-| 33 brak wzorca — próg doboru | Programista | po 23 |
-| 23 ramki i lista | Programista | zlecone |
-| 24–29 funkcje (P34) | — | do wzięcia po kolei |
-| 05–16 sondy Z1–Z11, Z13 | Analityk | zamknięte (3038023): Z2, Z6 obalone; Z3, Z7, Z9, Z11 potwierdzone; Z1, Z8 pomiędzy; Z4, Z13 nierozstrzygnięte |
-| 17, 18 sondy Z12, Z14 | Analityk | część liczona zamknięta: Z12 potwierdza, Z14 pomiędzy (73%); przegląd po makiecie R1 |
-| recenzja docs/hacktribe.md | Analityk | zamknięte po R3 (f62748c, 988 zn.) |
-| 03 zbiór trudny | Analityk | zamknięte 11:18 (dane/mini-trudny, manifest-trudny.json; 112 badanych, 4 rodzaje trudności) |
-| 04 sprawdzenie zbioru trudnego | Analityk | zamknięte 11:48 (0/86 niewidocznych) |
-| README | Prezenter | zamknięte po R3 (ceb6717) |
-| docs/hacktribe.md — „Prześwit” + partie (P12) | Prezenter | P47 A, P48 A wpisane; sprawdzenie końcowe przed 20:00 |
-| docs/demo.md szkic (P51 B) | Prezenter | szkic 117 s (9860149); linki po 22 i 21 |
-| szkielet slajdów | Prezenter | gotowy (1cd6c10) |
-| szkice wariantów A/B/C | Projektant | gotowe (docs/pm/szkice-wariantow.md) |
-| trzy makiety wariantów | Programista | zamknięte — P36: C (+ lista partii z B) |
+| 30 odbiór A1–A14 + spójność P60 B + demo.md | Analityk | w toku od 15:06 |
+| 32 progi słów (P49 A) | Analityk | zamknięte 15:06; P79 B: słów nie ma, P49 i P75 bez przedmiotu |
+| 24–29 funkcje (P34) | Programista | 24 zamknięte 14:31 (A1 0,0 px) → 25 zamknięte 15:07 (położenie wzorców w wyniki.json, metoda bez zmian 0/32 różnic) → 26 → 27 → 28 → 29; wdrożenie na ksefbot.pl po 21 |
+| docs/demo.md + slajdy | Prezenter | P79 B: teksty bez słów poziomu (29f0da7); R2: demo 113 s link r2, slajdy R2 10 str., hacktribe bez dopisku (ec96bf7) → recenzja Analityk (zad. 30, kolejność aut R2 vs demo) |
 
-Ustalenia Artura: P2 wzorzec typu z biblioteki (P24: operator może poprawić rodzaj, analiza od nowa); P22 nr rej. wpisuje operator, miejsce = stanowisko, kto = zalogowany; P23 nieaktualne po P35; P37 wiersz auta z miniaturą; P38 wejście po całej partii; P39 podpowiedź przy każdym kafelku; P40 po ostatnim miejscu następne auto; P44 „auto N” + plik; P45 stałe progi (wartości P49); P46 „Zamknij partię”; P47 opis zostaje; P48 wyjątek w opisie; P49 progi dobieramy my, Artur zatwierdza po wyniku; P50 blokuje główna ścieżka, zamykanie partii może poczekać; P51 demo: 6 aut + przypadek trudny; P41 decyzję w poprzednim aucie można zmienić do zamknięcia sprawy; P42 kafelek bez opisu: „poza znaną konstrukcją, obejrzyj uważnie”; P27 po zmianie rodzaju decyzje znikają, raport ma oba rodzaje; P28 nr rej. osobno przy każdym obrazie; P25 „docelowo lokalnie”; P26 „nie przeoczyć”; nieprawdziwe zdania poprawiamy bez pytania (11:20); P3+P9 program zaznacza sam, operator zatwierdza/odrzuca na wyniku z powodem; P4 przeoczenie gorsze; P5 skuteczność najpierw; P7 kilka minut na auto; P10 zakres 1. wersji, duży obraz ~50 MB od razu; P12 partie w 1. wersji (po kolei, lista wyników); P13 powód odrzucenia z listy + „inny”; P11 nazwa „Prześwit”; P14 cztery rodzaje; P15 biblioteka z naszych czystych; P16→P35 brak wzorca → nic nie zaznaczamy, „brak wzorca — sprawdź obraz sam” (pomiar 0/12); P17 ramki + lista + wzorzec obok, różnica niski/średni/wysoki; P18 + nr rejestracyjny; P19 krótki staż; P20 kilkadziesiąt aut/zmianę; P29 pomysły 1, 2, 3 (lupa), 6, 10 (podpowiedź dla krótkiego stażu); P30 do 6 ramek na czystym; P31 ≥ 90/100 dodatków; P32 bez zmian; P33 najryzykowniejsze Z1, Z2+Z6, Z7, Z11; P34 kolejność 1 → 3 → 2 → 10 → 6.; P36 ekran C (badany i wzorzec obok, kafelki miejsc, „zwykle tu…”) + lista partii z B jako pierwszy ekran
-Otwarte pytania: P57–P59 (krok 7), P60–P71 (krytyk R1), pomysł miniatury w raporcie — Artur; P49 wynik po zadaniu 32
-Środowisko: rsync i ssh wróciły (11:09), orkiestrator działa.
-Lista Artura na noc: —
+Ustalenia Artura: P2–P56 jak wcześniej; P57 A (6 miejsc + „i jeszcze N miejsc — pokaż”); P58 A („brak wskazań — to nie gwarancja…”); P59 A / P68 (pasek „dane sztuczne — demonstracja”); P60 B (trudny jako 7. auto w partii); P61 A („Dodaj jeden obraz” na liście); P62 A (prawdziwy wybór pliku + napis „wynik przykładowy”); P63 B (ostrzeżenie przy brakach decyzji, zapis po potwierdzeniu); P64 A (godzina decyzji per auto); P65 A („Nowa partia”); P66 A (ukryć pasek E1–E7 i „makieta R1”; porządki makiety bez pytania); P67 A (pokazać 1 pudło w makiecie); P69 A (2 miejsca w aucie 1 w demo); P70 A (2 najbliższe wzorce); P71 (nic więcej nie wyrzucamy); P72 A (miniatura w raporcie po MVP); P73 A etykiety; P74 A „obejrzane, bez wskazań”; P75 B słowa po progach; P76 A ramka w zoomie; P77 A komunikat przy polu; P78 nic nie wyrzucamy; P79 B bez słów niski/średni/wysoki, tylko kolejność (zmienia P17, P45); błędy makiety poprawiamy bez pytania.
+Otwarte pytania: brak.
+Środowisko: limit Claude odnowiony 14:00; cały zespół z powrotem na Claude (Paweł), agy tylko zapas.
+Lista Artura na noc: miniatura z zaznaczonymi miejscami w raporcie (po MVP, P72 A).

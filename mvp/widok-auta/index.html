@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prześwit — MVP: widok auta (zadania 23–25)</title>
+<style>
+:root{--tlo:#f4f6f9;--karta:#fff;--linia:#d5dbe3;--tekst:#1a2230;--szary:#5b6678;--akc:#1b5fb8}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--tlo);color:var(--tekst)}
+.pasek-sztuczne{background:#fff3d6;color:#734900;border-bottom:1px solid #ecc97e;padding:5px 14px;font-size:12px;font-weight:600;text-align:center}
+header{background:#162235;color:#fff;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+header b{font-size:16px}
+.wybor{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:13px}
+.wybor select{padding:4px 8px;border-radius:4px;border:1px solid #485b78;background:#22324c;color:#fff;font-size:13px}
+main{max-width:1280px;margin:12px auto;padding:0 12px}
+.pasek-auta{background:var(--karta);border:1px solid var(--linia);border-radius:8px 8px 0 0;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.auto-tytul b{font-size:16px;margin-right:8px}
+.auto-tytul .plik{font-size:13px;color:var(--szary);font-family:ui-monospace,monospace}
+.auto-meta{display:flex;gap:8px;align-items:center;font-size:13px}
+.tag-rodzaj{background:#e6eef9;color:#124486;padding:3px 10px;border-radius:999px;font-weight:600}
+.tag-miejsca{color:var(--szary)}
+.dwa{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px;background:#1c1f24}
+.dwa.jeden{grid-template-columns:1fr}
+.dwa>*{min-width:0}
+.panel-obr h3{margin:0 0 6px;font-size:12px;letter-spacing:.04em;color:#d6dce6;font-weight:600;display:flex;gap:8px;align-items:center}
+.panel-obr .podtytul{font-weight:400;color:#9aa5b6;font-family:ui-monospace,monospace;font-size:11px}
+.scena{position:relative;background:#000;border-radius:4px;overflow:hidden;line-height:0}
+.scena img{width:100%;height:100%;display:block}
+.plotno{position:relative;width:100%;height:100%;transform-origin:0 0;--zx:1;--zy:1}
+.plotno .ramka,.plotno .ramka-wz{border-left-width:calc(2px / var(--zx));border-right-width:calc(2px / var(--zx));border-top-width:calc(2px / var(--zy));border-bottom-width:calc(2px / var(--zy));box-shadow:none}
+.plotno .ramka.akt{border-left-width:calc(3px / var(--zx));border-right-width:calc(3px / var(--zx));border-top-width:calc(3px / var(--zy));border-bottom-width:calc(3px / var(--zy));outline:none;box-shadow:none;border-color:#fff;background:rgba(27,95,184,.18)}
+.plotno .ramka span{transform:scale(calc(1 / var(--zx)),calc(1 / var(--zy)));transform-origin:0 100%}
+.ramka-wz{position:absolute;border:2px dashed #4dabf7;box-shadow:0 0 0 1px rgba(0,0,0,.6);pointer-events:none}
+.przybl button{background:#fff;border:1px solid var(--linia);padding:2px 8px;font-size:12px;cursor:pointer}.przybl button.on{background:var(--akc);color:#fff;border-color:var(--akc)}
+.warstwa-ramek{position:absolute;inset:0}
+.ramka{position:absolute;padding:0;background:transparent;border:2px solid #f0b429;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.6)}
+.ramka.akt{border-width:3px;box-shadow:0 0 0 2px #fff,0 0 0 4px var(--akc);z-index:5}
+.ramka span{position:absolute;top:-18px;left:-2px;background:#1a2230;color:#fff;font-size:11px;font-weight:700;line-height:1;padding:2px 5px;border-radius:3px}
+.sekcja-listy{background:var(--karta);border:1px solid var(--linia);border-top:0;border-radius:0 0 8px 8px;padding:12px}
+.kafle-pasek{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px}
+.kaf{flex:0 0 186px;border:2px solid var(--linia);border-radius:6px;padding:6px;cursor:pointer;background:#fff;transition:border-color .15s}
+.kaf:hover{border-color:#8db2e3}
+.kaf.wyb{border-color:var(--akc);background:#f0f6ff}
+.kaf .para{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.kaf .wycinek{height:66px;background-color:#111;background-repeat:no-repeat;border-radius:3px;border:1px solid #cfd6e0}
+.kaf .opis{display:flex;justify-content:space-between;align-items:center;margin-top:6px;font-size:13px}
+.badge{padding:2px 8px;border-radius:999px;font-size:12px;font-weight:600}
+.wiecej-pasek{margin-top:10px;padding-top:10px;border-top:1px dashed var(--linia)}
+.btn-wiecej{background:#eef3fa;color:#14468c;border:1px solid #b9d0ef;border-radius:6px;padding:7px 14px;font-size:13px;font-weight:600;cursor:pointer}
+.btn-wiecej:hover{background:#dfeaf8}
+.komunikat{padding:14px 16px;border-radius:6px;font-size:15px;font-weight:600}
+.komunikat.brak-wzorca{background:#fff3d6;color:#7a4b00;border:1px solid #e6c278}
+.komunikat.brak-wskazan{background:#eef5ff;color:#164178;border:1px solid #b8d1f2}
+.stopka{margin:10px 0 18px;font-size:12px;color:var(--szary)}
+@media(max-width:760px){.dwa{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="pasek-sztuczne">dane sztuczne — demonstracja</div>
+<header>
+  <b>Prześwit — widok auta</b>
+  <div class="wybor">
+    <label>Zestaw:
+      <select id="sel-zestaw">
+        <option value="mini">dane/mini (v2, biblioteka bez cysterny)</option>
+        <option value="mini-trudny">dane/mini-trudny (v2, biblioteka bez cysterny)</option>
+        <option value="mini-pelna">dane/mini (v2, pełna biblioteka z cysterną — 4 rodzaje)</option>
+        <option value="czyste-zero">dane/scenariusze/czyste_zero (A3: 0 miejsc)</option>
+      </select>
+    </label>
+    <label>Auto:
+      <select id="sel-auto"></select>
+    </label>
+  </div>
+</header>
+<main>
+  <div id="widok"></div>
+  <p class="stopka">Wyniki metody v2 z karty OMENa (próg jakości doboru sr &lt; 0,80 — zadanie 33). Miejsca w kolejności od najbardziej różnego od wzorca, bez słów poziomu (P79 B).</p>
+</main>
+<script src="widok.js"></script>
+<script>
+const ZRODLA = {
+  "mini": { json: "../../wyniki/z25/mini/wyniki.json", kat: "../../dane/mini/" },
+  "mini-trudny": { json: "../../wyniki/z25/mini-trudny/wyniki.json", kat: "../../dane/mini-trudny/" },
+  "mini-pelna": { json: "../../wyniki/z25/mini-pelna/wyniki.json", kat: "../../dane/mini/" },
+  "czyste-zero": {
+    kat: "../../dane/scenariusze/czyste_zero/",
+    wzorzecKat: "../../dane/mini/",
+    wyniki: [{
+      plik: "badany_mini_kontener_zero_00.bmp",
+      szer: 1024,
+      wys: 256,
+      brak_wzorca: false,
+      konfiguracje: {
+        k: { typ_wybrany: "kontener", wzorce: ["wzorzec_mini_kontener_00"], miejsca: [] }
+      }
+    }]
+  }
+};
+
+const qs = new URLSearchParams(location.search);
+const selZ = document.getElementById("sel-zestaw");
+const selA = document.getElementById("sel-auto");
+const kontener = document.getElementById("widok");
+const cache = {};
+
+async function zaladujZestaw(klucz) {
+  const z = ZRODLA[klucz] || ZRODLA.mini;
+  if (!cache[klucz]) {
+    if (z.wyniki) {
+      cache[klucz] = z.wyniki;
+    } else {
+      const resp = await fetch(z.json);
+      const data = await resp.json();
+      cache[klucz] = data.wyniki;
+    }
+  }
+  const lista = cache[klucz];
+  selA.innerHTML = lista.map((r, i) => `<option value="${r.plik}">${i + 1}. ${r.plik}</option>`).join("");
+  const plik = qs.get("plik");
+  if (plik && lista.some((r) => r.plik === plik)) {
+    selA.value = plik;
+  }
+  pokazAuto(klucz, selA.value);
+}
+
+function pokazAuto(klucz, plik) {
+  const z = ZRODLA[klucz];
+  const r = cache[klucz].find((x) => x.plik === plik) || cache[klucz][0];
+  const konf = Object.values(r.konfiguracje)[0];
+  const wzId = (konf.wzorce && konf.wzorce[0]) || "";
+  const wzKat = z.wzorzecKat || z.kat;
+  PrzeswitLista.renderWidokAuta(kontener, {
+    wynik: r,
+    obrazBadany: z.kat + r.plik,
+    obrazWzorca: wzId ? wzKat + wzId + ".bmp" : "",
+    tytul: r.plik.replace(/\.bmp$/, ""),
+  });
+}
+
+selZ.addEventListener("change", () => zaladujZestaw(selZ.value));
+selA.addEventListener("change", () => pokazAuto(selZ.value, selA.value));
+const startZ = qs.get("zestaw") || "mini";
+selZ.value = ZRODLA[startZ] ? startZ : "mini";
+zaladujZestaw(selZ.value);
+</script>
+</body>
+</html>
