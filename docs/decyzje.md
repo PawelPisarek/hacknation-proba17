@@ -409,3 +409,4 @@ P72 13:23 odpowiedź: Artur w pokoju (13:15): A — zostawiamy raport jak jest (
 14:07 Prezenter: slajdy R2 — docs/slajdy.pdf, 10 slajdów (zgodne z demo.md 113 s: partia 7 aut P60 B, P69 A, pasek P59 A); liczby z WYNIK zad. 20 i 33; ostatni slajd = narzędzia
 14:07 Szef: slajdy R2 przyjęte do recenzji (docs/slajdy.pdf, 10 slajdów, e4bf162; fałszywe alarmy 32/32 i 40/40 zgodne z WYNIK zad. 20). Po makiecie R2 Prezenter: zrzuty R2, link r2 w demo.md, przebudowa PDF.
 14:08 Prezenter: hacktribe po P57–P72 i wynikach zad. 20/33 (opis 854 zn. ≤ 1000, narzędzia 193 zn., nazwa 8, zespół 9); link makiety R2 — dziś 404, do wdrożenia
+14:09 Szef: hacktribe.md przyjęty (d3a232b, opis 854/1000 znaków, link makieta/r2 — dziś 404 do wdrożenia zad. 22; przed 20:00 sprawdzić link i usunąć dopisek „zacznie działać”) → recenzja Analityk razem z demo i slajdami.
