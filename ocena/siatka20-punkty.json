@@ -1,0 +1,2437 @@
+{
+ "wybrana": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01",
+ "punkty": [
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=0,tau_pud=0.06,tau_pod=0.12,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 4.031,
+    "przeoczenia_pct": 14.06,
+    "Y": 9,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 13.925,
+    "przeoczenia_pct": 17.74,
+    "Y": 11,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=0,tau_pud=0.06,tau_pod=0.12,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.844,
+    "przeoczenia_pct": 14.06,
+    "Y": 9,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 5.6,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=0,tau_pud=0.06,tau_pod=0.12,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 4.062,
+    "przeoczenia_pct": 14.06,
+    "Y": 9,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 13.25,
+    "przeoczenia_pct": 17.74,
+    "Y": 11,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=0,tau_pud=0.06,tau_pod=0.12,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.781,
+    "przeoczenia_pct": 14.06,
+    "Y": 9,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 5.375,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=0,tau_pud=0.06,tau_pod=0.2,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 2.812,
+    "przeoczenia_pct": 14.06,
+    "Y": 9,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 14.075,
+    "przeoczenia_pct": 19.35,
+    "Y": 12,
+    "M": 62,
+    "FP": 37,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=0,tau_pud=0.06,tau_pod=0.2,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.219,
+    "przeoczenia_pct": 14.06,
+    "Y": 9,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.975,
+    "przeoczenia_pct": 17.74,
+    "Y": 11,
+    "M": 62,
+    "FP": 37,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=0,tau_pud=0.06,tau_pod=0.2,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 2.844,
+    "przeoczenia_pct": 14.06,
+    "Y": 9,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 13.4,
+    "przeoczenia_pct": 19.35,
+    "Y": 12,
+    "M": 62,
+    "FP": 37,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=0,tau_pud=0.06,tau_pod=0.2,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.156,
+    "przeoczenia_pct": 14.06,
+    "Y": 9,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.675,
+    "przeoczenia_pct": 17.74,
+    "Y": 11,
+    "M": 62,
+    "FP": 37,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=0,tau_pud=0.08,tau_pod=0.12,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 4.0,
+    "przeoczenia_pct": 17.19,
+    "Y": 11,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 13.85,
+    "przeoczenia_pct": 17.74,
+    "Y": 11,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=0,tau_pud=0.08,tau_pod=0.12,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.844,
+    "przeoczenia_pct": 14.06,
+    "Y": 9,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 5.475,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=0,tau_pud=0.08,tau_pod=0.12,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 4.031,
+    "przeoczenia_pct": 17.19,
+    "Y": 11,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 13.225,
+    "przeoczenia_pct": 17.74,
+    "Y": 11,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=0,tau_pud=0.08,tau_pod=0.12,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.781,
+    "przeoczenia_pct": 14.06,
+    "Y": 9,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 5.25,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=0,tau_pud=0.08,tau_pod=0.2,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 2.781,
+    "przeoczenia_pct": 17.19,
+    "Y": 11,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 13.875,
+    "przeoczenia_pct": 19.35,
+    "Y": 12,
+    "M": 62,
+    "FP": 37,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=0,tau_pud=0.08,tau_pod=0.2,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.188,
+    "przeoczenia_pct": 14.06,
+    "Y": 9,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.8,
+    "przeoczenia_pct": 17.74,
+    "Y": 11,
+    "M": 62,
+    "FP": 37,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=0,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 2.812,
+    "przeoczenia_pct": 17.19,
+    "Y": 11,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 13.2,
+    "przeoczenia_pct": 19.35,
+    "Y": 12,
+    "M": 62,
+    "FP": 37,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=0,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.125,
+    "przeoczenia_pct": 14.06,
+    "Y": 9,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.5,
+    "przeoczenia_pct": 17.74,
+    "Y": 11,
+    "M": 62,
+    "FP": 37,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=1,tau_pud=0.06,tau_pod=0.12,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 13.688,
+    "przeoczenia_pct": 10.94,
+    "Y": 7,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 21.425,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=1,tau_pud=0.06,tau_pod=0.12,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 7.969,
+    "przeoczenia_pct": 4.69,
+    "Y": 3,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 8.9,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=1,tau_pud=0.06,tau_pod=0.12,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 13.438,
+    "przeoczenia_pct": 10.94,
+    "Y": 7,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 20.825,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=1,tau_pud=0.06,tau_pod=0.12,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 7.688,
+    "przeoczenia_pct": 4.69,
+    "Y": 3,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 8.7,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=1,tau_pud=0.06,tau_pod=0.2,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 11.844,
+    "przeoczenia_pct": 10.94,
+    "Y": 7,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 20.35,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=1,tau_pud=0.06,tau_pod=0.2,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 7.438,
+    "przeoczenia_pct": 7.81,
+    "Y": 5,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 8.325,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=1,tau_pud=0.06,tau_pod=0.2,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 11.594,
+    "przeoczenia_pct": 10.94,
+    "Y": 7,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 19.675,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=1,tau_pud=0.06,tau_pod=0.2,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 7.156,
+    "przeoczenia_pct": 7.81,
+    "Y": 5,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 8.075,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=1,tau_pud=0.08,tau_pod=0.12,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 12.875,
+    "przeoczenia_pct": 10.94,
+    "Y": 7,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 20.575,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=1,tau_pud=0.08,tau_pod=0.12,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 7.344,
+    "przeoczenia_pct": 4.69,
+    "Y": 3,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 8.975,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=1,tau_pud=0.08,tau_pod=0.12,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 12.625,
+    "przeoczenia_pct": 10.94,
+    "Y": 7,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 19.975,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=1,tau_pud=0.08,tau_pod=0.12,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 7.062,
+    "przeoczenia_pct": 4.69,
+    "Y": 3,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 8.775,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 10.938,
+    "przeoczenia_pct": 10.94,
+    "Y": 7,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 19.375,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 6.625,
+    "przeoczenia_pct": 7.81,
+    "Y": 5,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 8.375,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 10.688,
+    "przeoczenia_pct": 10.94,
+    "Y": 7,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 18.7,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=0,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 6.344,
+    "przeoczenia_pct": 7.81,
+    "Y": 5,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 8.125,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=0,tau_pud=0.06,tau_pod=0.12,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 4.719,
+    "przeoczenia_pct": 17.19,
+    "Y": 11,
+    "M": 64,
+    "FP": 28,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 19.55,
+    "przeoczenia_pct": 19.35,
+    "Y": 12,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=0,tau_pud=0.06,tau_pod=0.12,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 3.25,
+    "przeoczenia_pct": 15.62,
+    "Y": 10,
+    "M": 64,
+    "FP": 28,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 5.075,
+    "przeoczenia_pct": 19.35,
+    "Y": 12,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=0,tau_pud=0.06,tau_pod=0.12,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 4.625,
+    "przeoczenia_pct": 17.19,
+    "Y": 11,
+    "M": 64,
+    "FP": 28,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 19.1,
+    "przeoczenia_pct": 19.35,
+    "Y": 12,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=0,tau_pud=0.06,tau_pod=0.12,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 3.188,
+    "przeoczenia_pct": 15.62,
+    "Y": 10,
+    "M": 64,
+    "FP": 28,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.825,
+    "przeoczenia_pct": 19.35,
+    "Y": 12,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=0,tau_pud=0.06,tau_pod=0.2,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 3.375,
+    "przeoczenia_pct": 20.31,
+    "Y": 13,
+    "M": 64,
+    "FP": 26,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 16.25,
+    "przeoczenia_pct": 20.97,
+    "Y": 13,
+    "M": 62,
+    "FP": 37,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=0,tau_pud=0.06,tau_pod=0.2,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.344,
+    "przeoczenia_pct": 18.75,
+    "Y": 12,
+    "M": 64,
+    "FP": 26,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 5.1,
+    "przeoczenia_pct": 17.74,
+    "Y": 11,
+    "M": 62,
+    "FP": 37,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=0,tau_pud=0.06,tau_pod=0.2,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 3.281,
+    "przeoczenia_pct": 20.31,
+    "Y": 13,
+    "M": 64,
+    "FP": 26,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 15.775,
+    "przeoczenia_pct": 20.97,
+    "Y": 13,
+    "M": 62,
+    "FP": 37,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=0,tau_pud=0.06,tau_pod=0.2,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.281,
+    "przeoczenia_pct": 18.75,
+    "Y": 12,
+    "M": 64,
+    "FP": 26,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.775,
+    "przeoczenia_pct": 17.74,
+    "Y": 11,
+    "M": 62,
+    "FP": 37,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=0,tau_pud=0.08,tau_pod=0.12,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 4.625,
+    "przeoczenia_pct": 18.75,
+    "Y": 12,
+    "M": 64,
+    "FP": 26,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 19.575,
+    "przeoczenia_pct": 19.35,
+    "Y": 12,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=0,tau_pud=0.08,tau_pod=0.12,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 3.219,
+    "przeoczenia_pct": 17.19,
+    "Y": 11,
+    "M": 64,
+    "FP": 26,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.875,
+    "przeoczenia_pct": 19.35,
+    "Y": 12,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=0,tau_pud=0.08,tau_pod=0.12,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 4.531,
+    "przeoczenia_pct": 18.75,
+    "Y": 12,
+    "M": 64,
+    "FP": 26,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 19.125,
+    "przeoczenia_pct": 19.35,
+    "Y": 12,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=0,tau_pud=0.08,tau_pod=0.12,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 3.156,
+    "przeoczenia_pct": 17.19,
+    "Y": 11,
+    "M": 64,
+    "FP": 26,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.65,
+    "przeoczenia_pct": 19.35,
+    "Y": 12,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=0,tau_pud=0.08,tau_pod=0.2,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 3.156,
+    "przeoczenia_pct": 21.88,
+    "Y": 14,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 16.525,
+    "przeoczenia_pct": 20.97,
+    "Y": 13,
+    "M": 62,
+    "FP": 36,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=0,tau_pud=0.08,tau_pod=0.2,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.219,
+    "przeoczenia_pct": 20.31,
+    "Y": 13,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.975,
+    "przeoczenia_pct": 17.74,
+    "Y": 11,
+    "M": 62,
+    "FP": 36,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=0,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 3.062,
+    "przeoczenia_pct": 21.88,
+    "Y": 14,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 16.05,
+    "przeoczenia_pct": 20.97,
+    "Y": 13,
+    "M": 62,
+    "FP": 36,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=0,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.156,
+    "przeoczenia_pct": 20.31,
+    "Y": 13,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.675,
+    "przeoczenia_pct": 17.74,
+    "Y": 11,
+    "M": 62,
+    "FP": 36,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=1,tau_pud=0.06,tau_pod=0.12,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 14.219,
+    "przeoczenia_pct": 9.38,
+    "Y": 6,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 27.0,
+    "przeoczenia_pct": 6.45,
+    "Y": 4,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=1,tau_pud=0.06,tau_pod=0.12,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 7.25,
+    "przeoczenia_pct": 6.25,
+    "Y": 4,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 8.125,
+    "przeoczenia_pct": 6.45,
+    "Y": 4,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=1,tau_pud=0.06,tau_pod=0.12,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 14.062,
+    "przeoczenia_pct": 9.38,
+    "Y": 6,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 26.55,
+    "przeoczenia_pct": 6.45,
+    "Y": 4,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=1,tau_pud=0.06,tau_pod=0.12,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 7.125,
+    "przeoczenia_pct": 6.25,
+    "Y": 4,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 7.925,
+    "przeoczenia_pct": 6.45,
+    "Y": 4,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=1,tau_pud=0.06,tau_pod=0.2,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 12.406,
+    "przeoczenia_pct": 10.94,
+    "Y": 7,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 24.05,
+    "przeoczenia_pct": 9.68,
+    "Y": 6,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=1,tau_pud=0.06,tau_pod=0.2,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 6.719,
+    "przeoczenia_pct": 9.38,
+    "Y": 6,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 8.175,
+    "przeoczenia_pct": 9.68,
+    "Y": 6,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=1,tau_pud=0.06,tau_pod=0.2,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 12.25,
+    "przeoczenia_pct": 10.94,
+    "Y": 7,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 23.55,
+    "przeoczenia_pct": 9.68,
+    "Y": 6,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=1,tau_pud=0.06,tau_pod=0.2,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 6.594,
+    "przeoczenia_pct": 9.38,
+    "Y": 6,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 8.0,
+    "przeoczenia_pct": 9.68,
+    "Y": 6,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.12,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 12.375,
+    "przeoczenia_pct": 10.94,
+    "Y": 7,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 26.7,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.12,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 6.5,
+    "przeoczenia_pct": 6.25,
+    "Y": 4,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 7.575,
+    "przeoczenia_pct": 6.45,
+    "Y": 4,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.12,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 12.219,
+    "przeoczenia_pct": 10.94,
+    "Y": 7,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 26.25,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.12,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 6.375,
+    "przeoczenia_pct": 6.25,
+    "Y": 4,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 7.375,
+    "przeoczenia_pct": 6.45,
+    "Y": 4,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 10.469,
+    "przeoczenia_pct": 12.5,
+    "Y": 8,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 23.775,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 5.875,
+    "przeoczenia_pct": 9.38,
+    "Y": 6,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 7.725,
+    "przeoczenia_pct": 9.68,
+    "Y": 6,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 10.312,
+    "przeoczenia_pct": 12.5,
+    "Y": 8,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 23.3,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=0,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 5.75,
+    "przeoczenia_pct": 9.38,
+    "Y": 6,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 7.55,
+    "przeoczenia_pct": 9.68,
+    "Y": 6,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=0,tau_pud=0.06,tau_pod=0.12,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 3.25,
+    "przeoczenia_pct": 18.75,
+    "Y": 12,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 11.925,
+    "przeoczenia_pct": 12.9,
+    "Y": 8,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=0,tau_pud=0.06,tau_pod=0.12,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.656,
+    "przeoczenia_pct": 17.19,
+    "Y": 11,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.975,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=0,tau_pud=0.06,tau_pod=0.12,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 3.188,
+    "przeoczenia_pct": 18.75,
+    "Y": 12,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 11.25,
+    "przeoczenia_pct": 12.9,
+    "Y": 8,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=0,tau_pud=0.06,tau_pod=0.12,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.594,
+    "przeoczenia_pct": 17.19,
+    "Y": 11,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.95,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=0,tau_pud=0.06,tau_pod=0.2,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 2.594,
+    "przeoczenia_pct": 18.75,
+    "Y": 12,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 12.65,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 39,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=0,tau_pud=0.06,tau_pod=0.2,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.312,
+    "przeoczenia_pct": 18.75,
+    "Y": 12,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.625,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 39,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=0,tau_pud=0.06,tau_pod=0.2,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 2.5,
+    "przeoczenia_pct": 18.75,
+    "Y": 12,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 12.025,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 39,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=0,tau_pud=0.06,tau_pod=0.2,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.219,
+    "przeoczenia_pct": 18.75,
+    "Y": 12,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.525,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 39,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=0,tau_pud=0.08,tau_pod=0.12,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 2.938,
+    "przeoczenia_pct": 20.31,
+    "Y": 13,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 11.7,
+    "przeoczenia_pct": 12.9,
+    "Y": 8,
+    "M": 62,
+    "FP": 39,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=0,tau_pud=0.08,tau_pod=0.12,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.375,
+    "przeoczenia_pct": 17.19,
+    "Y": 11,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.875,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 39,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=0,tau_pud=0.08,tau_pod=0.12,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 2.875,
+    "przeoczenia_pct": 20.31,
+    "Y": 13,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 11.025,
+    "przeoczenia_pct": 12.9,
+    "Y": 8,
+    "M": 62,
+    "FP": 39,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=0,tau_pud=0.08,tau_pod=0.12,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.312,
+    "przeoczenia_pct": 17.19,
+    "Y": 11,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.85,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 39,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=0,tau_pud=0.08,tau_pod=0.2,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 2.344,
+    "przeoczenia_pct": 20.31,
+    "Y": 13,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 12.325,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=0,tau_pud=0.08,tau_pod=0.2,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.125,
+    "przeoczenia_pct": 18.75,
+    "Y": 12,
+    "M": 64,
+    "FP": 25,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.45,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=0,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 2.25,
+    "przeoczenia_pct": 20.31,
+    "Y": 13,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 11.7,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=0,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.031,
+    "przeoczenia_pct": 18.75,
+    "Y": 12,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.35,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 38,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=1,tau_pud=0.06,tau_pod=0.12,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 10.688,
+    "przeoczenia_pct": 7.81,
+    "Y": 5,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 18.6,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=1,tau_pud=0.06,tau_pod=0.12,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 7.531,
+    "przeoczenia_pct": 7.81,
+    "Y": 5,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 8.775,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=1,tau_pud=0.06,tau_pod=0.12,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 10.594,
+    "przeoczenia_pct": 7.81,
+    "Y": 5,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 17.95,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=1,tau_pud=0.06,tau_pod=0.12,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 7.438,
+    "przeoczenia_pct": 7.81,
+    "Y": 5,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 8.7,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=1,tau_pud=0.06,tau_pod=0.2,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 9.062,
+    "przeoczenia_pct": 10.94,
+    "Y": 7,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 18.225,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=1,tau_pud=0.06,tau_pod=0.2,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 6.719,
+    "przeoczenia_pct": 9.38,
+    "Y": 6,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 7.925,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=1,tau_pud=0.06,tau_pod=0.2,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 8.969,
+    "przeoczenia_pct": 10.94,
+    "Y": 7,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 17.6,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=1,tau_pud=0.06,tau_pod=0.2,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 6.625,
+    "przeoczenia_pct": 9.38,
+    "Y": 6,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 7.825,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=1,tau_pud=0.08,tau_pod=0.12,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 9.375,
+    "przeoczenia_pct": 7.81,
+    "Y": 5,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 17.8,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=1,tau_pud=0.08,tau_pod=0.12,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 6.562,
+    "przeoczenia_pct": 7.81,
+    "Y": 5,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 8.85,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=1,tau_pud=0.08,tau_pod=0.12,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 9.281,
+    "przeoczenia_pct": 7.81,
+    "Y": 5,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 17.15,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=1,tau_pud=0.08,tau_pod=0.12,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 6.469,
+    "przeoczenia_pct": 7.81,
+    "Y": 5,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 8.775,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 7.812,
+    "przeoczenia_pct": 10.94,
+    "Y": 7,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 17.25,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 5.812,
+    "przeoczenia_pct": 9.38,
+    "Y": 6,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 7.8,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 7.719,
+    "przeoczenia_pct": 10.94,
+    "Y": 7,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 16.625,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=0,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 5.719,
+    "przeoczenia_pct": 9.38,
+    "Y": 6,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 7.7,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=0,tau_pud=0.06,tau_pod=0.12,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 3.875,
+    "przeoczenia_pct": 18.75,
+    "Y": 12,
+    "M": 64,
+    "FP": 27,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 16.5,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=0,tau_pud=0.06,tau_pod=0.12,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.938,
+    "przeoczenia_pct": 15.62,
+    "Y": 10,
+    "M": 64,
+    "FP": 27,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.625,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=0,tau_pud=0.06,tau_pod=0.12,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 3.812,
+    "przeoczenia_pct": 18.75,
+    "Y": 12,
+    "M": 64,
+    "FP": 27,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 16.25,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=0,tau_pud=0.06,tau_pod=0.12,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.875,
+    "przeoczenia_pct": 15.62,
+    "Y": 10,
+    "M": 64,
+    "FP": 27,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.475,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=0,tau_pud=0.06,tau_pod=0.2,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 2.906,
+    "przeoczenia_pct": 18.75,
+    "Y": 12,
+    "M": 64,
+    "FP": 26,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 13.225,
+    "przeoczenia_pct": 19.35,
+    "Y": 12,
+    "M": 62,
+    "FP": 39,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=0,tau_pud=0.06,tau_pod=0.2,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.406,
+    "przeoczenia_pct": 17.19,
+    "Y": 11,
+    "M": 64,
+    "FP": 26,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.55,
+    "przeoczenia_pct": 17.74,
+    "Y": 11,
+    "M": 62,
+    "FP": 39,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=0,tau_pud=0.06,tau_pod=0.2,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 2.844,
+    "przeoczenia_pct": 18.75,
+    "Y": 12,
+    "M": 64,
+    "FP": 26,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 12.925,
+    "przeoczenia_pct": 19.35,
+    "Y": 12,
+    "M": 62,
+    "FP": 39,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=0,tau_pud=0.06,tau_pod=0.2,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.344,
+    "przeoczenia_pct": 17.19,
+    "Y": 11,
+    "M": 64,
+    "FP": 26,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.375,
+    "przeoczenia_pct": 17.74,
+    "Y": 11,
+    "M": 62,
+    "FP": 39,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=0,tau_pud=0.08,tau_pod=0.12,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 3.625,
+    "przeoczenia_pct": 20.31,
+    "Y": 13,
+    "M": 64,
+    "FP": 26,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 17.2,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=0,tau_pud=0.08,tau_pod=0.12,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.75,
+    "przeoczenia_pct": 17.19,
+    "Y": 11,
+    "M": 64,
+    "FP": 26,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.325,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=0,tau_pud=0.08,tau_pod=0.12,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 3.562,
+    "przeoczenia_pct": 20.31,
+    "Y": 13,
+    "M": 64,
+    "FP": 26,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 16.95,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=0,tau_pud=0.08,tau_pod=0.12,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.688,
+    "przeoczenia_pct": 17.19,
+    "Y": 11,
+    "M": 64,
+    "FP": 26,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.175,
+    "przeoczenia_pct": 16.13,
+    "Y": 10,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=0,tau_pud=0.08,tau_pod=0.2,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 2.562,
+    "przeoczenia_pct": 20.31,
+    "Y": 13,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 14.125,
+    "przeoczenia_pct": 19.35,
+    "Y": 12,
+    "M": 62,
+    "FP": 39,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=0,tau_pud=0.08,tau_pod=0.2,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.125,
+    "przeoczenia_pct": 18.75,
+    "Y": 12,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.4,
+    "przeoczenia_pct": 17.74,
+    "Y": 11,
+    "M": 62,
+    "FP": 39,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=0,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 2.5,
+    "przeoczenia_pct": 20.31,
+    "Y": 13,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 13.825,
+    "przeoczenia_pct": 19.35,
+    "Y": 12,
+    "M": 62,
+    "FP": 39,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=0,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 2.062,
+    "przeoczenia_pct": 18.75,
+    "Y": 12,
+    "M": 64,
+    "FP": 24,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 4.225,
+    "przeoczenia_pct": 17.74,
+    "Y": 11,
+    "M": 62,
+    "FP": 39,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.06,tau_pod=0.12,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 11.156,
+    "przeoczenia_pct": 7.81,
+    "Y": 5,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 23.15,
+    "przeoczenia_pct": 9.68,
+    "Y": 6,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.06,tau_pod=0.12,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 7.031,
+    "przeoczenia_pct": 6.25,
+    "Y": 4,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 7.125,
+    "przeoczenia_pct": 6.45,
+    "Y": 4,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.06,tau_pod=0.12,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 11.094,
+    "przeoczenia_pct": 7.81,
+    "Y": 5,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 22.725,
+    "przeoczenia_pct": 9.68,
+    "Y": 6,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.06,tau_pod=0.12,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 6.969,
+    "przeoczenia_pct": 6.25,
+    "Y": 4,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 6.775,
+    "przeoczenia_pct": 6.45,
+    "Y": 4,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.06,tau_pod=0.2,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 9.219,
+    "przeoczenia_pct": 10.94,
+    "Y": 7,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 19.55,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.06,tau_pod=0.2,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 6.375,
+    "przeoczenia_pct": 7.81,
+    "Y": 5,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 7.025,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.06,tau_pod=0.2,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 9.156,
+    "przeoczenia_pct": 10.94,
+    "Y": 7,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 19.05,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.06,tau_pod=0.2,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 6.312,
+    "przeoczenia_pct": 7.81,
+    "Y": 5,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 6.625,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.12,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 9.781,
+    "przeoczenia_pct": 9.38,
+    "Y": 6,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 22.9,
+    "przeoczenia_pct": 9.68,
+    "Y": 6,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.12,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 6.625,
+    "przeoczenia_pct": 6.25,
+    "Y": 4,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 6.85,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.12,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 9.719,
+    "przeoczenia_pct": 9.38,
+    "Y": 6,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 22.475,
+    "przeoczenia_pct": 9.68,
+    "Y": 6,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.12,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 6.562,
+    "przeoczenia_pct": 6.25,
+    "Y": 4,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 6.5,
+    "przeoczenia_pct": 8.06,
+    "Y": 5,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.1,scal=0",
+   "zwykly": {
+    "ramki_sr": 7.844,
+    "przeoczenia_pct": 12.5,
+    "Y": 8,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 19.45,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.1,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 5.875,
+    "przeoczenia_pct": 7.81,
+    "Y": 5,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 6.65,
+    "przeoczenia_pct": 9.68,
+    "Y": 6,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0",
+   "zwykly": {
+    "ramki_sr": 7.781,
+    "przeoczenia_pct": 12.5,
+    "Y": 8,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 18.95,
+    "przeoczenia_pct": 11.29,
+    "Y": 7,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  },
+  {
+   "konf": "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01",
+   "zwykly": {
+    "ramki_sr": 5.812,
+    "przeoczenia_pct": 7.81,
+    "Y": 5,
+    "M": 64,
+    "FP": 32,
+    "N": 32
+   },
+   "trudny": {
+    "ramki_sr": 6.25,
+    "przeoczenia_pct": 9.68,
+    "Y": 6,
+    "M": 62,
+    "FP": 40,
+    "N": 40
+   }
+  }
+ ]
+}
