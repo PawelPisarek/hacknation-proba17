@@ -17,6 +17,7 @@ https://github.com/PawelPisarek/hacknation-proba17
 ## Link do makiety
 
 https://pawelpisarek.github.io/hacknation-proba17/makieta/r3/ (makieta R3)
+https://hacknation.ksefbot.pl/ (działający program, dane sztuczne)
 
 ## Opis wstępny (≤ 1000 znaków; 958 zn.)
 

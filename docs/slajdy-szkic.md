@@ -7,6 +7,7 @@
 - Prześwit to pomocnik operatora RTG: pokazuje, gdzie na obrazie auta patrzeć najpierw, a decyzja zawsze zostaje po stronie człowieka.
 - Narzędzie AI dla operatora RTG: porównuje obraz naczepy z wzorcem i zaznacza różnice.
 - Zespół: Hackathon · repo: github.com/PawelPisarek/hacknation-proba17
+- Makieta: pawelpisarek.github.io/hacknation-proba17/makieta/r3/ · działający program: hacknation.ksefbot.pl
 - Wszystko na danych sztucznych — demonstracja.
 - ![auto: badany i wzorzec obok siebie, kafelki miejsc](zrzuty/r3/auto1.png)
 
