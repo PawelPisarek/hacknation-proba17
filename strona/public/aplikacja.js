@@ -298,13 +298,37 @@ function wierszeRaportu() {
     brak_decyzji: bezDecyzji(a),   // P63 B, P83 A: ostrzeżenie przy „Zapisz i zamknij partię”
   }));
 }
+// zad. 43 (P91 D1): miniatura badanego z zaznaczonymi miejscami — z obrazu /api/obraz i już policzonych ramek, bez liczenia
+const MINI_SZER = 320, KOLOR_RAMKI = "#e08a00";   // P79 B: jeden kolor, jak ramki w widoku auta
+const obrazy = {};
+const wczytajObraz = (u) => (obrazy[u] ||= new Promise((ok, zle) => {
+  const i = new Image(); i.onload = () => ok(i); i.onerror = () => { delete obrazy[u]; zle(new Error("obraz")); }; i.src = u;
+}));
+async function miniatura(a) {   // → PNG jako data: URL (wklejany też do raport-partii.html)
+  const bw = brakWzorca(a), ms = bw ? [] : a.miejsca, klucz = JSON.stringify([obrazBadany(a), ms.map((m) => [m.x0, m.y0, m.x1, m.y1])]);
+  if (a.mini?.klucz === klucz) return a.mini.url;
+  const im = await wczytajObraz(obrazBadany(a)), c = document.createElement("canvas");
+  c.width = MINI_SZER; c.height = Math.round(im.naturalHeight * MINI_SZER / im.naturalWidth);
+  const g = c.getContext("2d"), sx = c.width / (a.szer || im.naturalWidth), sy = c.height / (a.wys || im.naturalHeight);
+  g.drawImage(im, 0, 0, c.width, c.height);
+  g.lineWidth = 2; g.font = "bold 10px system-ui, sans-serif";
+  ms.forEach((m, i) => {
+    const x = m.x0 * sx, y = m.y0 * sy, w = Math.max(4, (m.x1 - m.x0) * sx), h = Math.max(4, (m.y1 - m.y0) * sy);
+    g.strokeStyle = KOLOR_RAMKI; g.strokeRect(x, y, w, h);
+    const t = String(i + 1), tw = g.measureText(t).width + 4, ty = y >= 12 ? y - 12 : Math.min(c.height - 12, y + h);
+    g.fillStyle = KOLOR_RAMKI; g.fillRect(x, ty, tw, 12); g.fillStyle = "#fff"; g.fillText(t, x + 2, ty + 10);
+  });
+  a.mini = { klucz, url: c.toDataURL("image/png") }; return a.mini.url;
+}
+const autaRaportu = () => S.partia.filter((a) => !a.zepsuty);   // te same auta co wierszeRaportu()
 function rysujE7() {
   const w = wierszeRaportu();
   $("r-id").textContent = "· " + S.idKontroli;
   $("r-naglowek").textContent = `${S.kto} · ${S.miejsce} · ${w.length} aut · ${S.zamknieta ? "partia zamknięta" : "partia otwarta"}`;
-  $("r-wiersze").innerHTML = w.map((r) => `<tr><td>auto ${r.auto}${r.wynik_przykladowy ? `<br><span class="szary">${PRZYKLAD}</span>` : ""}</td><td>${r.nr_rej ? esc(r.nr_rej) : '<span class="szary">—</span>'}</td><td>${r.rodzaj_programu}</td><td>${r.rodzaj_operatora || "—"}</td>
+  $("r-wiersze").innerHTML = w.map((r) => `<tr data-auto="${r.auto}"><td><img class="rmini" alt="auto ${r.auto} — miniatura z miejscami">${r.bez_wzorca ? '<div class="szary">brak wzorca</div>' : ""}</td><td>auto ${r.auto}${r.wynik_przykladowy ? `<br><span class="szary">${PRZYKLAD}</span>` : ""}</td><td>${r.nr_rej ? esc(r.nr_rej) : '<span class="szary">—</span>'}</td><td>${r.rodzaj_programu}</td><td>${r.rodzaj_operatora || "—"}</td>
     <td>${r.liczba_miejsc}</td><td>${r.decyzje.map((d) => `${d.nr}: ${d.decyzja}${d.powod ? " (" + esc(d.powod) + ")" : ""}`).join("<br>") || (r.bez_wzorca ? BW_RECZNIE : stanBezMiejsc(r))}</td>
     <td>${r.kto}</td><td>${r.miejsce_kontroli}</td><td>${r.data_godzina}</td></tr>`).join("");
+  autaRaportu().forEach((a) => miniatura(a).then((u) => { const i = document.querySelector(`#r-wiersze tr[data-auto="${a.id}"] img.rmini`); if (i) i.src = u; }).catch(() => {}));
   $("zapisz").style.display = S.zamknieta ? "none" : ""; $("r-nowa").style.display = S.zamknieta ? "" : "none";
   const braki = w.filter((r) => r.brak_decyzji);
   $("r-ostrz").innerHTML = S.potwierdz && braki.length && !S.zamknieta ?
@@ -324,8 +348,23 @@ function zapiszIZamknij() {   // P55 B / P56 A: jeden przycisk — zapis .json i
       .map((d) => [r.id_kontroli, r.auto, r.plik, r.nr_rej, r.rodzaj_programu, r.rodzaj_operatora, d.nr, d.decyzja, d.powod, r.kto, r.miejsce_kontroli, r.data_godzina].join(";")))).join("\n");
   pobierz("raport-partii.csv", "﻿" + csv, "text/csv");
   S.zamknieta = true; S.potwierdz = false;
-  $("r-info").textContent = "Zapisano raport-partii.json i raport-partii.csv; partia zamknięta. W wersji pod linkiem pliki pobrała przeglądarka.";
+  $("r-info").textContent = "Zapisano raport-partii.json i raport-partii.csv; partia zamknięta. Przygotowuję raport-partii.html z miniaturami…";
   rysujE7();
+  raportHtml(w).then((h) => { pobierz("raport-partii.html", h, "text/html");
+    $("r-info").textContent = "Zapisano raport-partii.json, raport-partii.csv i raport-partii.html (z miniaturami); partia zamknięta. W wersji pod linkiem pliki pobrała przeglądarka."; });
+}
+async function raportHtml(w) {   // zad. 43: jeden plik — tabela raportu z miniaturami (data:), bez internetu, drukuje się do PDF
+  const mini = {}; await Promise.all(autaRaportu().map(async (a) => { try { mini[a.id] = await miniatura(a); } catch { mini[a.id] = ""; } }));
+  const wiersz = (r) => `<tr id="auto-${r.auto}"><td>${mini[r.auto] ? `<img src="${mini[r.auto]}" alt="auto ${r.auto}">` : "brak obrazu"}${r.bez_wzorca ? "<br>brak wzorca" : ""}</td>
+<td>auto ${r.auto}<br><small>${esc(r.plik)}</small></td><td>${r.nr_rej ? esc(r.nr_rej) : "—"}</td><td>${esc(r.rodzaj_programu)}</td><td>${esc(r.rodzaj_operatora)}</td><td>${r.liczba_miejsc}</td>
+<td>${r.decyzje.map((d) => `${d.nr}: ${esc(d.decyzja)}${d.powod ? " (" + esc(d.powod) + ")" : ""}`).join("<br>") || (r.bez_wzorca ? BW_RECZNIE : esc(stanBezMiejsc(r)))}</td>
+<td>${esc(r.kto)}</td><td>${esc(r.data_godzina)}</td></tr>`;
+  return `<!doctype html><html lang="pl"><head><meta charset="utf-8"><title>Raport partii ${esc(S.idKontroli)}</title>
+<style>body{font:14px system-ui,sans-serif;margin:16px;color:#1c2430}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #d9dde3;padding:6px;text-align:left;vertical-align:top}img{width:${MINI_SZER}px;max-width:40vw;display:block}small{color:#6b7380}@media print{tr{break-inside:avoid}}</style></head><body>
+<h1>Raport partii ${esc(S.idKontroli)}</h1><p>${esc(S.kto)} · ${esc(S.miejsce)} · ${w.length} aut · zapisano ${new Date().toLocaleString("pl-PL")}</p>
+<p>Miniatura: obraz badany z zaznaczonymi miejscami; numer ramki = numer miejsca w kolumnie „Decyzje”.</p>
+<table><thead><tr><th>Obraz</th><th>Auto</th><th>Nr rej.</th><th>Rodzaj programu</th><th>Rodzaj operatora</th><th>Miejsca</th><th>Decyzje</th><th>Kto</th><th>Data i godzina decyzji</th></tr></thead>
+<tbody>${w.map(wiersz).join("\n")}</tbody></table></body></html>`;
 }
 $("zapisz").onclick = () => {   // P63 B: ostrzeżenie z listą aut bez decyzji, zapis po potwierdzeniu
   if (wierszeRaportu().some((r) => r.brak_decyzji)) { S.potwierdz = true; return rysujE7(); }

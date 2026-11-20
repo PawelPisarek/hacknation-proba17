@@ -1,8 +1,9 @@
 <!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Prześwit</title>
-<link rel="stylesheet" href="styl.css?v=31">
+<link rel="stylesheet" href="styl.css?v=32">
 <style>
 #z-blad:empty{display:none}
+img.rmini{width:200px;max-width:none;display:block;border-radius:3px;background:#000;min-height:50px}
 .sztuczne{background:#ffe9a8;color:#5a4300;font-size:12px;font-weight:700;text-align:center;padding:3px 8px;letter-spacing:.02em}
 .ekr{display:none}.ekr.on{display:block}
 .karta{max-width:900px;margin:14px auto;background:var(--karta);border:1px solid var(--linia);border-radius:8px;padding:14px}
@@ -97,12 +98,12 @@ td img.mini{width:150px;border-radius:3px;display:block;background:#000;min-heig
 <!-- E7 Raport -->
 <section class="ekr" id="E7"><div class="karta" style="max-width:1100px"><h2>Raport partii <span class="szary" id="r-id"></span></h2>
 <p class="szary" id="r-naglowek"></p>
-<div style="overflow-x:auto"><table><thead><tr><th>Auto</th><th>Nr rej.</th><th>Rodzaj programu</th><th>Rodzaj operatora</th><th>Miejsca</th><th>Decyzje</th><th>Kto</th><th>Miejsce kontroli</th><th>Data i godzina decyzji</th></tr></thead><tbody id="r-wiersze"></tbody></table></div>
+<div style="overflow-x:auto"><table><thead><tr><th>Obraz</th><th>Auto</th><th>Nr rej.</th><th>Rodzaj programu</th><th>Rodzaj operatora</th><th>Miejsca</th><th>Decyzje</th><th>Kto</th><th>Miejsce kontroli</th><th>Data i godzina decyzji</th></tr></thead><tbody id="r-wiersze"></tbody></table></div>
 <div id="r-ostrz"></div>
 <div class="przyciski"><button class="btn ok" id="zapisz">Zapisz i zamknij partię</button> <button class="btn ok" id="r-nowa" style="display:none">Nowa partia</button> <button class="btn jasny" id="r-lista">‹ lista partii</button></div>
-<p class="szary" id="r-info">Zapis: raport-partii.json i raport-partii.csv. W wersji pod linkiem pliki pobiera przeglądarka; docelowo program działa też bez internetu, po uruchomieniu lokalnym.</p></div></section>
+<p class="szary" id="r-info">Zapis: raport-partii.json, raport-partii.csv i raport-partii.html (z miniaturami). W wersji pod linkiem pliki pobiera przeglądarka; docelowo program działa też bez internetu, po uruchomieniu lokalnym.</p></div></section>
 
-<script src="widok.js?v=31"></script>   <!-- P81 A: wspólne teksty podpowiedzi z MVP -->
-<script src="dane-zywe.js?v=31"></script>
-<script src="aplikacja.js?v=31"></script>
+<script src="widok.js?v=32"></script>   <!-- P81 A: wspólne teksty podpowiedzi z MVP -->
+<script src="dane-zywe.js?v=32"></script>
+<script src="aplikacja.js?v=32"></script>
 </body></html>
