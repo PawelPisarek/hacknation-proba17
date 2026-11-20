@@ -90,3 +90,4 @@ P24 11:16 Artur: czy operator może zmienić rodzaj pojazdu lub wzorzec dobrany 
 P22 11:18 odpowiedź: Artur w pokoju: A — numer rejestracyjny wpisuje operator (jedno pole), miejsce kontroli to ustawienie stanowiska, „kto zdecydował” z zalogowanego funkcjonariusza
 P23 11:18 odpowiedź: Artur w pokoju: A — przy wzorcu przybliżonym te same słowa niski/średni/wysoki + napis nad listą „wynik mniej pewny”
 P24 11:18 odpowiedź: Artur w pokoju: B — operator może zmienić rodzaj pojazdu (zna go z dokumentów przewozowych), wybiera z listy jednym kliknięciem, analiza liczy się od nowa (zmienia P2: dobór wzorca jest automatyczny, ale poprawialny)
+11:19 Szef: recenzja hacktribe R2 — brak 3 zamknięty (nazwa zespołu „Hackathon” = decyzja 11:11, linia 67); braki 1–2 produkt → Projektant pyta Artura (P25–P26), Prezenter poprawia po odpowiedziach → R3
