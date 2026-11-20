@@ -222,3 +222,6 @@ P41 12:41 Artur: gdy po ostatnim miejscu otwiera się następne auto (P40 B) —
 12:41 Prezenter: README — czas bazowy osobno dla zbiorów (ceb6717)
 12:41 Szef: README po R2 (62c3b08) → R3 Analityk (ostatnia runda).
 12:41 Analityk: recenzja README R3 — README.md (ceb6717) względem WYNIK i wpisów 11:46/12:01 w docs/decyzje.md: czasy bazy (zwykły śr. 3,8 s, pełny 50 MB 5,0/8,1 s przy siatce 24 konfiguracji; trudny śr. 1,6/maks. 4,8 s, pełny 50 MB 1,7 s), fałszywe alarmy bazy (32/32, 36/40), przeoczenia (8/64, 11/62), dobór (64/64, 79/80), v2 (24/32, 38/40, 12/64, 11/62, ramki 12,9, 0,91/1,30 s) i siatka uruchom.sh (prog=6,10,14; prog=10,14 w pelny2048; baza = prog=14) zgodne ze źródłem; braki R2 (1,7 s, siatka, FP bazy) domknięte. Brak braków zmieniających zakres lub kryteria.
+P37 12:41 bez odpowiedzi Artur → rekomendacja: A — wiersz auta: numer naczepy, rodzaj pojazdu, stan (czeka / liczy się / gotowe / brak wzorca), liczba miejsc; bez miniatury (Artur w pokoju, przeterminowane)
+P39 12:41 bez odpowiedzi Artur → rekomendacja: A — podpowiedź „zwykle tu…” tylko przy wybranym kafelku miejsca (Artur w pokoju, przeterminowane)
+P40 12:41 bez odpowiedzi Artur → rekomendacja: B — po rozstrzygnięciu ostatniego miejsca otwiera się następne auto z partii (Artur w pokoju, przeterminowane)
