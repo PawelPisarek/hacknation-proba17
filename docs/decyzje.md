@@ -115,3 +115,4 @@ P28 11:23 odpowiedź: Artur w pokoju: A — osobne pole numeru rejestracyjnego p
 11:25 Projektant: krok 2 po P27/P28 — zdjęte „czeka”, sekcje scalone, nagłówek „Ustalenia P14–P28”
 11:26 Szef: hacktribe zamknięte po R3 — poprawki Prezentera f62748c (988 zn., znaczniki P usunięte ze slajdów); kolejna recenzja dopiero przed 20:00 po makiecie.
 11:26 Szef: krok 2 — P27/P28 wpisane (81d15b4) → R3 (ostatnia) u Analityka.
+11:25 Analityk: recenzja krok 2 R3 (02-operator.md, 81d15b4) — brak braków zmieniających zakres lub kryteria. Braki R2 zamknięte: P27 A (decyzje znikają, raport z dwoma rodzajami — etap 8 i ekrany), P28 A (pole numeru przy każdym obrazie, etap 2), logowanie/ustawienie stanowiska (etap 0 i ekran), 01-competitive-analysis zgodny z P24 B (wiersze 6, 41, 80), sekcja ustaleń P14–P28. Zdań niezgodnych z zadaniem lub odpowiedziami Artura (w tym 11:20) nie znalazłem; „poprawka bez pytania”: brak.
