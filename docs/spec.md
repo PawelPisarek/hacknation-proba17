@@ -131,6 +131,7 @@ Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z d
 | P72 | A — zostawiamy raport bez miniatury teraz; miniatura w raporcie dopisana do UPROSZCZEŃ po MVP | odpowiedź Artura 13:23 (z pokoju 13:15) |
 | P73 | A — numer w małej etykiecie obok ramki, bez nakładania na inne etykiety i ramki (błąd makiety poprawiany bez pytania) | odpowiedź Artura 14:38 (w pokoju) |
 | P74 | A — auto bez miejsc: „obejrzane, bez wskazań”; ostrzeżenie P63 B tylko dla aut z nierozstrzygniętymi miejscami (doprecyzowanie: P80) | odpowiedź Artura 14:38 (w pokoju) |
+| P80 | A — auto nieotwarte: „program nic nie wskazał — nieotwarte”; „obejrzane, bez wskazań” dopiero po „Zamknij auto”, z godziną i osobą; nic z ekranu nie wyrzucamy | odpowiedź Artura (w pokoju) |
 | P75 | B — słowo przy aucie 7 wstrzymane; po P79 B bez przedmiotu (słów nie ma) | odpowiedź Artura 14:38, P79 15:08 |
 | P76 | A — zoom 4× zachowuje ramkę z numerem | odpowiedź Artura 14:38 (w pokoju) |
 | P77 | A — komunikat przy polu „Nr rej.”, przycisk „Zamknij auto” | odpowiedź Artura 14:38 (w pokoju) |
