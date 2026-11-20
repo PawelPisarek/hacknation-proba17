@@ -23,7 +23,7 @@
 
 ## 4. Rozwiązanie
 - System sam dobiera wzorzec **typu pojazdu** z biblioteki (operator rzadko ma czyste zdjęcie tej samej naczepy).
-- Program sam, bez udziału operatora, porównuje badany obraz z wzorcem i zaznacza miejsca różnic; cel: każdy możliwy dodatek, przeoczenie gorsze niż fałszywy alarm (P4, P9).
+- Program sam, bez udziału operatora, porównuje badany obraz z wzorcem i zaznacza miejsca różnic; najważniejsze: nie przeoczyć; pokazujemy, ile przeoczeń (P4, P9, P26).
 - Partie (P12): operator wskazuje kilka obrazów, program liczy je po kolei i oddaje listę wyników.
 - [zrzut: obraz badany obok wzorca, z zaznaczeniami]
 
@@ -57,7 +57,7 @@
 
 ## 10. Co dalej
 - Zasilić biblioteką prawdziwych wzorców typów pojazdów po otrzymaniu danych KAS.
-- Praca lokalna, bez chmury (docelowo wymóg KAS) oraz integracja z repozytorium obrazów KAS.
+- Docelowo praca lokalna, bez internetu i chmury (wymóg KAS) oraz integracja z repozytorium obrazów KAS.
 - Rozbudowa skalowania na większe zbiory oraz wzorce per dostawca skanera (Nuctech, Multicontrol); pomiary na obrazach KAS **[do zmierzenia]**.
 - [zrzut: schemat wdrożenia — opcjonalnie]
 
