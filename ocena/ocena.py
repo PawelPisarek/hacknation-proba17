@@ -64,12 +64,21 @@ def main():
     ap.add_argument("--manifest", required=True)
     ap.add_argument("--wyniki", required=True, nargs="+", help="jeden lub kilka wyniki.json")
     ap.add_argument("--typ", help="licz tylko badane tego rodzaju pojazdu")
+    ap.add_argument("--razem", action="store_true", help="połącz pliki wyników (np. kilka poziomów) w jedną ocenę")
     ap.add_argument("--najlepsze", type=int, default=0, help="pokaż tylko n najlepszych konfiguracji")
     ap.add_argument("--szczegoly", action="store_true")
     a = ap.parse_args()
     man = json.load(open(a.manifest))
     rows = []
-    for p in a.wyniki:
+    if a.razem:  # jedna linia na konfigurację, ze wszystkich plików naraz
+        ws = [json.load(open(p)) for p in a.wyniki]
+        konfy = [k for k in ws[0]["konfiguracje"] if all(k in w["konfiguracje"] for w in ws)]
+        wyn = dict(konfiguracje=konfy, wyniki=[r for w in ws for r in w["wyniki"]])
+        for k in konfy:
+            r = ocen(man, wyn, k, a.typ)
+            r["zrodlo"] = "+".join(a.wyniki)
+            rows.append(r)
+    for p in ([] if a.razem else a.wyniki):
         wyn = json.load(open(p))
         for k in wyn["konfiguracje"]:
             r = ocen(man, wyn, k, a.typ)
