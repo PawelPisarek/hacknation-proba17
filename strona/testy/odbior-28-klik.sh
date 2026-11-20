@@ -34,7 +34,7 @@ $B screenshot "$ZR/link-28-lista.png" >/dev/null
 # auto 3 (12 miejsc): „i jeszcze 6 miejsc — pokaż”
 $B click '#p-wiersze tr[data-i="2"]' >/dev/null
 widac "#a-zamknij"; jest '$("a-zamknij").disabled && $("a-zamknij").textContent==="Zamknij auto"' "„Zamknij auto” przy nr rej., nieaktywny przed decyzjami (P77 A)"
-jest '!document.getElementById("zmienrodz").offsetParent' "„Zmień rodzaj” ukryty do 27"
+jest '!!document.getElementById("zmienrodz").offsetParent' "„Zmień rodzaj” widoczny (od zad. 27)"
 [ "$($B get text '#pokazwiecej')" = "i jeszcze 6 miejsc — pokaż" ] && ok "napis „i jeszcze 6 miejsc — pokaż” (odmiana: 6 → miejsc)" || zle "pokaż więcej"
 $B click "#pokazwiecej" >/dev/null
 jest 'document.querySelectorAll("#a-kafle .kaf").length===12' "po kliknięciu 12 kafli"
