@@ -1,0 +1,2255 @@
+{
+ "czyste": 36,
+ "skrytki": 26,
+ "warianty": {
+  "siatka": "trend=1;tolx=2;rho=0.1;konstr=1;min_pole=0.0001;lok=2;jas=1;wyb=1;tau_pud=0.08;tau_pod=0.2;tau_kab=0.2;scal=0.01",
+  "typy_biblioteki": [
+   "chlodnia",
+   "cysterna",
+   "firanka",
+   "kontener"
+  ],
+  "konfiguracje": [
+   "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01"
+  ],
+  "szer_rob": 2048,
+  "czas_biblioteki_s": 0.14,
+  "urzadzenie": "cuda",
+  "wyniki": [
+   {
+    "plik": "badany_mini_chlodnia_czyste_02.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "chlodnia",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_chlodnia_02",
+      "typ": "chlodnia",
+      "wynik": 0.941316545009613,
+      "s": 0.9800000190734863,
+      "dx": 0.0,
+      "dy": 1.0
+     },
+     {
+      "id": "wzorzec_mini_chlodnia_00",
+      "typ": "chlodnia",
+      "wynik": 0.9220120310783386,
+      "s": 0.8799999952316284,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_chlodnia_01",
+      "typ": "chlodnia",
+      "wynik": 0.9183174967765808,
+      "s": 0.9300000071525574,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_00",
+      "typ": "kontener",
+      "wynik": 0.8659444451332092,
+      "s": 1.0099999904632568,
+      "dx": -3.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_01",
+      "typ": "kontener",
+      "wynik": 0.8585934638977051,
+      "s": 0.9000000357627869,
+      "dx": 0.0,
+      "dy": 1.0
+     }
+    ],
+    "czas_s": 0.666,
+    "czas_dobor_s": 0.327,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "chlodnia",
+      "wzorce": [
+       "wzorzec_mini_chlodnia_02",
+       "wzorzec_mini_chlodnia_00",
+       "wzorzec_mini_chlodnia_01"
+      ],
+      "miejsca": [
+       {
+        "x0": 719,
+        "y0": 218,
+        "x1": 728,
+        "y1": 237,
+        "wynik": 2.126
+       },
+       {
+        "x0": 783,
+        "y0": 206,
+        "x1": 800,
+        "y1": 250,
+        "wynik": 1.807
+       },
+       {
+        "x0": 757,
+        "y0": 219,
+        "x1": 765,
+        "y1": 234,
+        "wynik": 1.697
+       },
+       {
+        "x0": 847,
+        "y0": 185,
+        "x1": 859,
+        "y1": 215,
+        "wynik": 0.798
+       },
+       {
+        "x0": 849,
+        "y0": 25,
+        "x1": 855,
+        "y1": 34,
+        "wynik": 0.598
+       },
+       {
+        "x0": 733,
+        "y0": 27,
+        "x1": 737,
+        "y1": 34,
+        "wynik": 0.213
+       },
+       {
+        "x0": 551,
+        "y0": 191,
+        "x1": 556,
+        "y1": 203,
+        "wynik": 0.203
+       },
+       {
+        "x0": 760,
+        "y0": 188,
+        "x1": 764,
+        "y1": 198,
+        "wynik": 0.201
+       },
+       {
+        "x0": 725,
+        "y0": 45,
+        "x1": 728,
+        "y1": 148,
+        "wynik": 0.156
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_chlodnia_czyste_03.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "chlodnia",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_chlodnia_02",
+      "typ": "chlodnia",
+      "wynik": 0.9550469517707825,
+      "s": 1.100000023841858,
+      "dx": -2.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_chlodnia_00",
+      "typ": "chlodnia",
+      "wynik": 0.9352369904518127,
+      "s": 0.9700000286102295,
+      "dx": 1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_chlodnia_01",
+      "typ": "chlodnia",
+      "wynik": 0.9303701519966125,
+      "s": 1.0299999713897705,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_00",
+      "typ": "kontener",
+      "wynik": 0.8658740520477295,
+      "s": 1.1100000143051147,
+      "dx": -1.0,
+      "dy": -1.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_02",
+      "typ": "kontener",
+      "wynik": 0.8506229519844055,
+      "s": 1.0700000524520874,
+      "dx": 0.0,
+      "dy": 0.0
+     }
+    ],
+    "czas_s": 0.361,
+    "czas_dobor_s": 0.196,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "chlodnia",
+      "wzorce": [
+       "wzorzec_mini_chlodnia_02",
+       "wzorzec_mini_chlodnia_00",
+       "wzorzec_mini_chlodnia_01"
+      ],
+      "miejsca": [
+       {
+        "x0": 793,
+        "y0": 202,
+        "x1": 826,
+        "y1": 247,
+        "wynik": 1.161
+       },
+       {
+        "x0": 859,
+        "y0": 199,
+        "x1": 879,
+        "y1": 238,
+        "wynik": 0.985
+       },
+       {
+        "x0": 926,
+        "y0": 0,
+        "x1": 947,
+        "y1": 213,
+        "wynik": 0.774
+       },
+       {
+        "x0": 460,
+        "y0": 239,
+        "x1": 464,
+        "y1": 250,
+        "wynik": 0.392
+       },
+       {
+        "x0": 796,
+        "y0": 32,
+        "x1": 815,
+        "y1": 160,
+        "wynik": 0.209
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_chlodnia_czyste_04.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "chlodnia",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_chlodnia_00",
+      "typ": "chlodnia",
+      "wynik": 0.9600427746772766,
+      "s": 0.9200000166893005,
+      "dx": 1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_chlodnia_01",
+      "typ": "chlodnia",
+      "wynik": 0.950430691242218,
+      "s": 0.9800000190734863,
+      "dx": 1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_chlodnia_02",
+      "typ": "chlodnia",
+      "wynik": 0.9343891143798828,
+      "s": 1.0399999618530273,
+      "dx": -1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_02",
+      "typ": "kontener",
+      "wynik": 0.889529824256897,
+      "s": 1.0099999904632568,
+      "dx": 1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_00",
+      "typ": "kontener",
+      "wynik": 0.8741240501403809,
+      "s": 1.0600000619888306,
+      "dx": -2.0,
+      "dy": 0.0
+     }
+    ],
+    "czas_s": 0.345,
+    "czas_dobor_s": 0.194,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "chlodnia",
+      "wzorce": [
+       "wzorzec_mini_chlodnia_00",
+       "wzorzec_mini_chlodnia_01",
+       "wzorzec_mini_chlodnia_02"
+      ],
+      "miejsca": [
+       {
+        "x0": 783,
+        "y0": 214,
+        "x1": 793,
+        "y1": 232,
+        "wynik": 1.919
+       },
+       {
+        "x0": 496,
+        "y0": 238,
+        "x1": 506,
+        "y1": 253,
+        "wynik": 1.225
+       },
+       {
+        "x0": 427,
+        "y0": 238,
+        "x1": 436,
+        "y1": 254,
+        "wynik": 1.02
+       },
+       {
+        "x0": 858,
+        "y0": 206,
+        "x1": 867,
+        "y1": 215,
+        "wynik": 0.793
+       },
+       {
+        "x0": 784,
+        "y0": 25,
+        "x1": 789,
+        "y1": 33,
+        "wynik": 0.263
+       },
+       {
+        "x0": 784,
+        "y0": 161,
+        "x1": 790,
+        "y1": 201,
+        "wynik": 0.247
+       },
+       {
+        "x0": 756,
+        "y0": 191,
+        "x1": 761,
+        "y1": 203,
+        "wynik": 0.226
+       },
+       {
+        "x0": 757,
+        "y0": 96,
+        "x1": 761,
+        "y1": 146,
+        "wynik": 0.144
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_chlodnia_czyste_05.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "chlodnia",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_chlodnia_00",
+      "typ": "chlodnia",
+      "wynik": 0.9448719620704651,
+      "s": 0.9000000357627869,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_chlodnia_01",
+      "typ": "chlodnia",
+      "wynik": 0.9371976852416992,
+      "s": 0.9600000381469727,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_chlodnia_02",
+      "typ": "chlodnia",
+      "wynik": 0.9247254729270935,
+      "s": 1.0099999904632568,
+      "dx": -1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_00",
+      "typ": "kontener",
+      "wynik": 0.8617204427719116,
+      "s": 1.0299999713897705,
+      "dx": -2.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_02",
+      "typ": "kontener",
+      "wynik": 0.8603649735450745,
+      "s": 0.9900000095367432,
+      "dx": 0.0,
+      "dy": 0.0
+     }
+    ],
+    "czas_s": 0.352,
+    "czas_dobor_s": 0.195,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "chlodnia",
+      "wzorce": [
+       "wzorzec_mini_chlodnia_00",
+       "wzorzec_mini_chlodnia_01",
+       "wzorzec_mini_chlodnia_02"
+      ],
+      "miejsca": [
+       {
+        "x0": 761,
+        "y0": 213,
+        "x1": 785,
+        "y1": 232,
+        "wynik": 3.098
+       },
+       {
+        "x0": 690,
+        "y0": 215,
+        "x1": 701,
+        "y1": 232,
+        "wynik": 1.647
+       },
+       {
+        "x0": 260,
+        "y0": 214,
+        "x1": 268,
+        "y1": 232,
+        "wynik": 0.807
+       },
+       {
+        "x0": 814,
+        "y0": 238,
+        "x1": 821,
+        "y1": 244,
+        "wynik": 0.596
+       },
+       {
+        "x0": 139,
+        "y0": 97,
+        "x1": 145,
+        "y1": 123,
+        "wynik": 0.581
+       },
+       {
+        "x0": 814,
+        "y0": 214,
+        "x1": 823,
+        "y1": 219,
+        "wynik": 0.428
+       },
+       {
+        "x0": 778,
+        "y0": 191,
+        "x1": 783,
+        "y1": 202,
+        "wynik": 0.243
+       },
+       {
+        "x0": 756,
+        "y0": 191,
+        "x1": 761,
+        "y1": 200,
+        "wynik": 0.228
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_chlodnia_czyste_06.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "chlodnia",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_chlodnia_02",
+      "typ": "chlodnia",
+      "wynik": 0.9267168641090393,
+      "s": 1.100000023841858,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_chlodnia_00",
+      "typ": "chlodnia",
+      "wynik": 0.9115362763404846,
+      "s": 0.9800000190734863,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_chlodnia_01",
+      "typ": "chlodnia",
+      "wynik": 0.8996288180351257,
+      "s": 1.0499999523162842,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_00",
+      "typ": "kontener",
+      "wynik": 0.838664710521698,
+      "s": 1.1200000047683716,
+      "dx": -1.0,
+      "dy": -1.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_01",
+      "typ": "firanka",
+      "wynik": 0.8249786496162415,
+      "s": 1.0,
+      "dx": -1.0,
+      "dy": 0.0
+     }
+    ],
+    "czas_s": 0.357,
+    "czas_dobor_s": 0.196,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "chlodnia",
+      "wzorce": [
+       "wzorzec_mini_chlodnia_02",
+       "wzorzec_mini_chlodnia_00",
+       "wzorzec_mini_chlodnia_01"
+      ],
+      "miejsca": [
+       {
+        "x0": 788,
+        "y0": 25,
+        "x1": 839,
+        "y1": 256,
+        "wynik": 2.461
+       },
+       {
+        "x0": 468,
+        "y0": 237,
+        "x1": 490,
+        "y1": 252,
+        "wynik": 1.304
+       },
+       {
+        "x0": 553,
+        "y0": 236,
+        "x1": 566,
+        "y1": 253,
+        "wynik": 1.111
+       },
+       {
+        "x0": 850,
+        "y0": 196,
+        "x1": 891,
+        "y1": 250,
+        "wynik": 1.008
+       },
+       {
+        "x0": 938,
+        "y0": 0,
+        "x1": 959,
+        "y1": 218,
+        "wynik": 0.933
+       },
+       {
+        "x0": 946,
+        "y0": 236,
+        "x1": 955,
+        "y1": 245,
+        "wynik": 0.68
+       },
+       {
+        "x0": 69,
+        "y0": 195,
+        "x1": 74,
+        "y1": 204,
+        "wynik": 0.621
+       },
+       {
+        "x0": 271,
+        "y0": 212,
+        "x1": 280,
+        "y1": 232,
+        "wynik": 0.556
+       },
+       {
+        "x0": 356,
+        "y0": 191,
+        "x1": 362,
+        "y1": 199,
+        "wynik": 0.244
+       },
+       {
+        "x0": 608,
+        "y0": 33,
+        "x1": 613,
+        "y1": 129,
+        "wynik": 0.234
+       },
+       {
+        "x0": 608,
+        "y0": 159,
+        "x1": 614,
+        "y1": 193,
+        "wynik": 0.233
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_cysterna_czyste_02.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "cysterna",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_cysterna_02",
+      "typ": "cysterna",
+      "wynik": 0.9325966238975525,
+      "s": 0.9300000071525574,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_cysterna_01",
+      "typ": "cysterna",
+      "wynik": 0.9074804186820984,
+      "s": 0.9300000071525574,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_cysterna_00",
+      "typ": "cysterna",
+      "wynik": 0.8857128024101257,
+      "s": 0.8600000143051147,
+      "dx": -1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_00",
+      "typ": "firanka",
+      "wynik": 0.7713796496391296,
+      "s": 0.8700000047683716,
+      "dx": 0.0,
+      "dy": -1.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_02",
+      "typ": "firanka",
+      "wynik": 0.7697766423225403,
+      "s": 0.9900000095367432,
+      "dx": 0.0,
+      "dy": 0.0
+     }
+    ],
+    "czas_s": 0.361,
+    "czas_dobor_s": 0.199,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "cysterna",
+      "wzorce": [
+       "wzorzec_mini_cysterna_02",
+       "wzorzec_mini_cysterna_01",
+       "wzorzec_mini_cysterna_00"
+      ],
+      "miejsca": [
+       {
+        "x0": 722,
+        "y0": 75,
+        "x1": 846,
+        "y1": 250,
+        "wynik": 4.957
+       },
+       {
+        "x0": 147,
+        "y0": 213,
+        "x1": 158,
+        "y1": 231,
+        "wynik": 0.818
+       },
+       {
+        "x0": 325,
+        "y0": 190,
+        "x1": 331,
+        "y1": 203,
+        "wynik": 0.395
+       },
+       {
+        "x0": 546,
+        "y0": 191,
+        "x1": 552,
+        "y1": 203,
+        "wynik": 0.384
+       },
+       {
+        "x0": 69,
+        "y0": 53,
+        "x1": 74,
+        "y1": 117,
+        "wynik": 0.371
+       },
+       {
+        "x0": 475,
+        "y0": 173,
+        "x1": 481,
+        "y1": 203,
+        "wynik": 0.37
+       },
+       {
+        "x0": 519,
+        "y0": 0,
+        "x1": 529,
+        "y1": 203,
+        "wynik": 0.366
+       },
+       {
+        "x0": 664,
+        "y0": 0,
+        "x1": 668,
+        "y1": 11,
+        "wynik": 0.091
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_cysterna_czyste_03.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "cysterna",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_cysterna_02",
+      "typ": "cysterna",
+      "wynik": 0.9486023783683777,
+      "s": 0.9700000286102295,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_cysterna_01",
+      "typ": "cysterna",
+      "wynik": 0.9224290251731873,
+      "s": 0.9800000190734863,
+      "dx": 1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_cysterna_00",
+      "typ": "cysterna",
+      "wynik": 0.8964776396751404,
+      "s": 0.9200000166893005,
+      "dx": -1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_00",
+      "typ": "kontener",
+      "wynik": 0.7898390889167786,
+      "s": 1.0299999713897705,
+      "dx": -1.0,
+      "dy": -1.0
+     },
+     {
+      "id": "wzorzec_mini_chlodnia_02",
+      "typ": "chlodnia",
+      "wynik": 0.7874411344528198,
+      "s": 1.0199999809265137,
+      "dx": 0.0,
+      "dy": 0.0
+     }
+    ],
+    "czas_s": 0.358,
+    "czas_dobor_s": 0.198,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "cysterna",
+      "wzorce": [
+       "wzorzec_mini_cysterna_02",
+       "wzorzec_mini_cysterna_01",
+       "wzorzec_mini_cysterna_00"
+      ],
+      "miejsca": [
+       {
+        "x0": 867,
+        "y0": 191,
+        "x1": 879,
+        "y1": 226,
+        "wynik": 0.927
+       },
+       {
+        "x0": 790,
+        "y0": 159,
+        "x1": 819,
+        "y1": 249,
+        "wynik": 0.773
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_cysterna_czyste_04.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "cysterna",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_cysterna_02",
+      "typ": "cysterna",
+      "wynik": 0.9527648687362671,
+      "s": 0.9399999976158142,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_cysterna_01",
+      "typ": "cysterna",
+      "wynik": 0.9430561065673828,
+      "s": 0.9399999976158142,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_cysterna_00",
+      "typ": "cysterna",
+      "wynik": 0.920417308807373,
+      "s": 0.8700000047683716,
+      "dx": -1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_chlodnia_02",
+      "typ": "chlodnia",
+      "wynik": 0.793334424495697,
+      "s": 0.9700000286102295,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_00",
+      "typ": "kontener",
+      "wynik": 0.7859328985214233,
+      "s": 0.9800000190734863,
+      "dx": -1.0,
+      "dy": -1.0
+     }
+    ],
+    "czas_s": 0.346,
+    "czas_dobor_s": 0.195,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "cysterna",
+      "wzorce": [
+       "wzorzec_mini_cysterna_02",
+       "wzorzec_mini_cysterna_01",
+       "wzorzec_mini_cysterna_00"
+      ],
+      "miejsca": [
+       {
+        "x0": 354,
+        "y0": 239,
+        "x1": 357,
+        "y1": 250,
+        "wynik": 0.392
+       },
+       {
+        "x0": 527,
+        "y0": 23,
+        "x1": 532,
+        "y1": 65,
+        "wynik": 0.376
+       },
+       {
+        "x0": 527,
+        "y0": 191,
+        "x1": 532,
+        "y1": 203,
+        "wynik": 0.363
+       },
+       {
+        "x0": 548,
+        "y0": 191,
+        "x1": 553,
+        "y1": 203,
+        "wynik": 0.357
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_cysterna_czyste_05.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "cysterna",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_cysterna_01",
+      "typ": "cysterna",
+      "wynik": 0.9318049550056458,
+      "s": 0.9300000071525574,
+      "dx": 0.0,
+      "dy": -1.0
+     },
+     {
+      "id": "wzorzec_mini_cysterna_02",
+      "typ": "cysterna",
+      "wynik": 0.9200726747512817,
+      "s": 0.9300000071525574,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_cysterna_00",
+      "typ": "cysterna",
+      "wynik": 0.9085919857025146,
+      "s": 0.8700000047683716,
+      "dx": -1.0,
+      "dy": -1.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_02",
+      "typ": "firanka",
+      "wynik": 0.7647155523300171,
+      "s": 0.9700000286102295,
+      "dx": 0.0,
+      "dy": -1.0
+     },
+     {
+      "id": "wzorzec_mini_chlodnia_01",
+      "typ": "chlodnia",
+      "wynik": 0.7533130049705505,
+      "s": 0.9000000357627869,
+      "dx": 2.0,
+      "dy": -1.0
+     }
+    ],
+    "czas_s": 0.358,
+    "czas_dobor_s": 0.196,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "cysterna",
+      "wzorce": [
+       "wzorzec_mini_cysterna_01",
+       "wzorzec_mini_cysterna_02",
+       "wzorzec_mini_cysterna_00"
+      ],
+      "miejsca": [
+       {
+        "x0": 684,
+        "y0": 202,
+        "x1": 698,
+        "y1": 233,
+        "wynik": 1.179
+       },
+       {
+        "x0": 746,
+        "y0": 159,
+        "x1": 763,
+        "y1": 216,
+        "wynik": 0.899
+       },
+       {
+        "x0": 715,
+        "y0": 187,
+        "x1": 734,
+        "y1": 216,
+        "wynik": 0.717
+       },
+       {
+        "x0": 329,
+        "y0": 58,
+        "x1": 334,
+        "y1": 129,
+        "wynik": 0.384
+       },
+       {
+        "x0": 71,
+        "y0": 49,
+        "x1": 76,
+        "y1": 64,
+        "wynik": 0.352
+       },
+       {
+        "x0": 474,
+        "y0": 191,
+        "x1": 480,
+        "y1": 203,
+        "wynik": 0.332
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_cysterna_czyste_06.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "cysterna",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_cysterna_00",
+      "typ": "cysterna",
+      "wynik": 0.9366119503974915,
+      "s": 0.9600000381469727,
+      "dx": -1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_cysterna_01",
+      "typ": "cysterna",
+      "wynik": 0.9358379244804382,
+      "s": 1.0299999713897705,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_cysterna_02",
+      "typ": "cysterna",
+      "wynik": 0.8903278708457947,
+      "s": 1.0099999904632568,
+      "dx": -2.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_chlodnia_00",
+      "typ": "chlodnia",
+      "wynik": 0.7746680378913879,
+      "s": 0.9399999976158142,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_chlodnia_01",
+      "typ": "chlodnia",
+      "wynik": 0.7701420783996582,
+      "s": 1.0099999904632568,
+      "dx": -1.0,
+      "dy": 0.0
+     }
+    ],
+    "czas_s": 0.36,
+    "czas_dobor_s": 0.199,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "cysterna",
+      "wzorce": [
+       "wzorzec_mini_cysterna_00",
+       "wzorzec_mini_cysterna_01",
+       "wzorzec_mini_cysterna_02"
+      ],
+      "miejsca": [
+       {
+        "x0": 799,
+        "y0": 201,
+        "x1": 842,
+        "y1": 251,
+        "wynik": 1.457
+       },
+       {
+        "x0": 314,
+        "y0": 237,
+        "x1": 325,
+        "y1": 254,
+        "wynik": 1.077
+       },
+       {
+        "x0": 358,
+        "y0": 214,
+        "x1": 366,
+        "y1": 232,
+        "wynik": 0.751
+       },
+       {
+        "x0": 429,
+        "y0": 214,
+        "x1": 437,
+        "y1": 232,
+        "wynik": 0.695
+       },
+       {
+        "x0": 196,
+        "y0": 214,
+        "x1": 204,
+        "y1": 232,
+        "wynik": 0.689
+       },
+       {
+        "x0": 291,
+        "y0": 185,
+        "x1": 298,
+        "y1": 204,
+        "wynik": 0.362
+       },
+       {
+        "x0": 511,
+        "y0": 95,
+        "x1": 515,
+        "y1": 124,
+        "wynik": 0.298
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_firanka_czyste_02.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "firanka",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_firanka_00",
+      "typ": "firanka",
+      "wynik": 0.9235185384750366,
+      "s": 1.0399999618530273,
+      "dx": -1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_01",
+      "typ": "firanka",
+      "wynik": 0.9010518789291382,
+      "s": 1.0499999523162842,
+      "dx": -3.0,
+      "dy": 1.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_01",
+      "typ": "kontener",
+      "wynik": 0.8859502673149109,
+      "s": 1.0600000619888306,
+      "dx": -2.0,
+      "dy": 1.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_02",
+      "typ": "firanka",
+      "wynik": 0.8625521659851074,
+      "s": 1.1399999856948853,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_00",
+      "typ": "kontener",
+      "wynik": 0.8434336185455322,
+      "s": 1.1699999570846558,
+      "dx": -2.0,
+      "dy": 0.0
+     }
+    ],
+    "czas_s": 0.364,
+    "czas_dobor_s": 0.198,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "firanka",
+      "wzorce": [
+       "wzorzec_mini_firanka_00",
+       "wzorzec_mini_firanka_01",
+       "wzorzec_mini_firanka_02"
+      ],
+      "miejsca": [
+       {
+        "x0": 967,
+        "y0": 202,
+        "x1": 1006,
+        "y1": 241,
+        "wynik": 1.692
+       },
+       {
+        "x0": 880,
+        "y0": 162,
+        "x1": 946,
+        "y1": 256,
+        "wynik": 1.331
+       },
+       {
+        "x0": 778,
+        "y0": 211,
+        "x1": 797,
+        "y1": 233,
+        "wynik": 0.913
+       },
+       {
+        "x0": 817,
+        "y0": 203,
+        "x1": 846,
+        "y1": 252,
+        "wynik": 0.855
+       },
+       {
+        "x0": 651,
+        "y0": 0,
+        "x1": 712,
+        "y1": 206,
+        "wynik": 0.457
+       },
+       {
+        "x0": 504,
+        "y0": 0,
+        "x1": 524,
+        "y1": 205,
+        "wynik": 0.423
+       },
+       {
+        "x0": 428,
+        "y0": 0,
+        "x1": 450,
+        "y1": 205,
+        "wynik": 0.333
+       },
+       {
+        "x0": 933,
+        "y0": 72,
+        "x1": 937,
+        "y1": 88,
+        "wynik": 0.208
+       },
+       {
+        "x0": 239,
+        "y0": 30,
+        "x1": 258,
+        "y1": 201,
+        "wynik": 0.111
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_firanka_czyste_03.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "firanka",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_firanka_00",
+      "typ": "firanka",
+      "wynik": 0.9420283436775208,
+      "s": 0.949999988079071,
+      "dx": 1.0,
+      "dy": -1.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_01",
+      "typ": "firanka",
+      "wynik": 0.9339381456375122,
+      "s": 0.9600000381469727,
+      "dx": -1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_01",
+      "typ": "kontener",
+      "wynik": 0.9108140468597412,
+      "s": 0.9600000381469727,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_02",
+      "typ": "firanka",
+      "wynik": 0.9012605547904968,
+      "s": 1.0499999523162842,
+      "dx": -1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_00",
+      "typ": "kontener",
+      "wynik": 0.8909363150596619,
+      "s": 1.0600000619888306,
+      "dx": -1.0,
+      "dy": -1.0
+     }
+    ],
+    "czas_s": 0.363,
+    "czas_dobor_s": 0.197,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "firanka",
+      "wzorce": [
+       "wzorzec_mini_firanka_00",
+       "wzorzec_mini_firanka_01",
+       "wzorzec_mini_firanka_02"
+      ],
+      "miejsca": [
+       {
+        "x0": 436,
+        "y0": 236,
+        "x1": 446,
+        "y1": 253,
+        "wynik": 0.939
+       },
+       {
+        "x0": 367,
+        "y0": 238,
+        "x1": 372,
+        "y1": 251,
+        "wynik": 0.684
+       },
+       {
+        "x0": 595,
+        "y0": 0,
+        "x1": 630,
+        "y1": 204,
+        "wynik": 0.546
+       },
+       {
+        "x0": 680,
+        "y0": 178,
+        "x1": 691,
+        "y1": 204,
+        "wynik": 0.475
+       },
+       {
+        "x0": 845,
+        "y0": 180,
+        "x1": 855,
+        "y1": 201,
+        "wynik": 0.436
+       },
+       {
+        "x0": 462,
+        "y0": 0,
+        "x1": 484,
+        "y1": 204,
+        "wynik": 0.419
+       },
+       {
+        "x0": 230,
+        "y0": 186,
+        "x1": 235,
+        "y1": 193,
+        "wynik": 0.207
+       },
+       {
+        "x0": 851,
+        "y0": 74,
+        "x1": 856,
+        "y1": 147,
+        "wynik": 0.175
+       },
+       {
+        "x0": 686,
+        "y0": 111,
+        "x1": 689,
+        "y1": 149,
+        "wynik": 0.135
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_firanka_czyste_04.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "firanka",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_firanka_01",
+      "typ": "firanka",
+      "wynik": 0.928115725517273,
+      "s": 0.9700000286102295,
+      "dx": -1.0,
+      "dy": 1.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_00",
+      "typ": "firanka",
+      "wynik": 0.9210649132728577,
+      "s": 0.9800000190734863,
+      "dx": -1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_02",
+      "typ": "firanka",
+      "wynik": 0.9014895558357239,
+      "s": 1.0700000524520874,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_01",
+      "typ": "kontener",
+      "wynik": 0.8986874222755432,
+      "s": 0.9600000381469727,
+      "dx": 0.0,
+      "dy": 1.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_02",
+      "typ": "kontener",
+      "wynik": 0.8870569467544556,
+      "s": 1.0399999618530273,
+      "dx": 0.0,
+      "dy": 0.0
+     }
+    ],
+    "czas_s": 0.364,
+    "czas_dobor_s": 0.198,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "firanka",
+      "wzorce": [
+       "wzorzec_mini_firanka_01",
+       "wzorzec_mini_firanka_00",
+       "wzorzec_mini_firanka_02"
+      ],
+      "miejsca": [
+       {
+        "x0": 751,
+        "y0": 0,
+        "x1": 880,
+        "y1": 256,
+        "wynik": 1.305
+       },
+       {
+        "x0": 609,
+        "y0": 26,
+        "x1": 638,
+        "y1": 233,
+        "wynik": 0.593
+       },
+       {
+        "x0": 469,
+        "y0": 0,
+        "x1": 490,
+        "y1": 206,
+        "wynik": 0.388
+       },
+       {
+        "x0": 692,
+        "y0": 93,
+        "x1": 704,
+        "y1": 168,
+        "wynik": 0.37
+       },
+       {
+        "x0": 179,
+        "y0": 0,
+        "x1": 201,
+        "y1": 205,
+        "wynik": 0.358
+       },
+       {
+        "x0": 315,
+        "y0": 140,
+        "x1": 340,
+        "y1": 203,
+        "wynik": 0.246
+       },
+       {
+        "x0": 594,
+        "y0": 192,
+        "x1": 598,
+        "y1": 201,
+        "wynik": 0.188
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_firanka_czyste_05.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "firanka",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_firanka_00",
+      "typ": "firanka",
+      "wynik": 0.9088220596313477,
+      "s": 1.0399999618530273,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_02",
+      "typ": "firanka",
+      "wynik": 0.8944810628890991,
+      "s": 1.1399999856948853,
+      "dx": 0.0,
+      "dy": 1.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_01",
+      "typ": "firanka",
+      "wynik": 0.8884360790252686,
+      "s": 1.0399999618530273,
+      "dx": -1.0,
+      "dy": 1.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_01",
+      "typ": "kontener",
+      "wynik": 0.8775832056999207,
+      "s": 1.0399999618530273,
+      "dx": 0.0,
+      "dy": 1.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_02",
+      "typ": "kontener",
+      "wynik": 0.8691766262054443,
+      "s": 1.1200000047683716,
+      "dx": -1.0,
+      "dy": 1.0
+     }
+    ],
+    "czas_s": 0.36,
+    "czas_dobor_s": 0.196,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "firanka",
+      "wzorce": [
+       "wzorzec_mini_firanka_00",
+       "wzorzec_mini_firanka_02",
+       "wzorzec_mini_firanka_01"
+      ],
+      "miejsca": [
+       {
+        "x0": 933,
+        "y0": 159,
+        "x1": 996,
+        "y1": 256,
+        "wynik": 3.423
+       },
+       {
+        "x0": 861,
+        "y0": 203,
+        "x1": 913,
+        "y1": 256,
+        "wynik": 2.879
+       },
+       {
+        "x0": 774,
+        "y0": 217,
+        "x1": 784,
+        "y1": 234,
+        "wynik": 2.609
+       },
+       {
+        "x0": 384,
+        "y0": 240,
+        "x1": 393,
+        "y1": 255,
+        "wynik": 1.085
+       },
+       {
+        "x0": 358,
+        "y0": 216,
+        "x1": 366,
+        "y1": 234,
+        "wynik": 0.829
+       },
+       {
+        "x0": 148,
+        "y0": 216,
+        "x1": 157,
+        "y1": 235,
+        "wynik": 0.752
+       },
+       {
+        "x0": 698,
+        "y0": 27,
+        "x1": 711,
+        "y1": 186,
+        "wynik": 0.53
+       },
+       {
+        "x0": 984,
+        "y0": 26,
+        "x1": 990,
+        "y1": 33,
+        "wynik": 0.504
+       },
+       {
+        "x0": 634,
+        "y0": 0,
+        "x1": 684,
+        "y1": 207,
+        "wynik": 0.494
+       },
+       {
+        "x0": 508,
+        "y0": 0,
+        "x1": 529,
+        "y1": 207,
+        "wynik": 0.488
+       },
+       {
+        "x0": 749,
+        "y0": 158,
+        "x1": 758,
+        "y1": 206,
+        "wynik": 0.458
+       },
+       {
+        "x0": 751,
+        "y0": 31,
+        "x1": 758,
+        "y1": 66,
+        "wynik": 0.454
+       },
+       {
+        "x0": 356,
+        "y0": 194,
+        "x1": 361,
+        "y1": 202,
+        "wynik": 0.239
+       },
+       {
+        "x0": 235,
+        "y0": 193,
+        "x1": 240,
+        "y1": 201,
+        "wynik": 0.175
+       },
+       {
+        "x0": 747,
+        "y0": 102,
+        "x1": 751,
+        "y1": 121,
+        "wynik": 0.174
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_firanka_czyste_06.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "firanka",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_firanka_02",
+      "typ": "firanka",
+      "wynik": 0.9297860860824585,
+      "s": 1.0199999809265137,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_02",
+      "typ": "kontener",
+      "wynik": 0.9296373128890991,
+      "s": 0.9900000095367432,
+      "dx": 1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_01",
+      "typ": "firanka",
+      "wynik": 0.9026691317558289,
+      "s": 0.9200000166893005,
+      "dx": 1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_00",
+      "typ": "firanka",
+      "wynik": 0.896497905254364,
+      "s": 0.9300000071525574,
+      "dx": 1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_00",
+      "typ": "kontener",
+      "wynik": 0.8839478492736816,
+      "s": 1.0399999618530273,
+      "dx": -2.0,
+      "dy": 0.0
+     }
+    ],
+    "czas_s": 0.359,
+    "czas_dobor_s": 0.195,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "firanka",
+      "wzorce": [
+       "wzorzec_mini_firanka_02",
+       "wzorzec_mini_firanka_01",
+       "wzorzec_mini_firanka_00"
+      ],
+      "miejsca": [
+       {
+        "x0": 783,
+        "y0": 172,
+        "x1": 855,
+        "y1": 256,
+        "wynik": 2.784
+       },
+       {
+        "x0": 426,
+        "y0": 237,
+        "x1": 438,
+        "y1": 256,
+        "wynik": 1.253
+       },
+       {
+        "x0": 355,
+        "y0": 238,
+        "x1": 368,
+        "y1": 253,
+        "wynik": 1.232
+       },
+       {
+        "x0": 570,
+        "y0": 0,
+        "x1": 601,
+        "y1": 203,
+        "wynik": 0.538
+       },
+       {
+        "x0": 621,
+        "y0": 0,
+        "x1": 649,
+        "y1": 205,
+        "wynik": 0.507
+       },
+       {
+        "x0": 424,
+        "y0": 0,
+        "x1": 462,
+        "y1": 205,
+        "wynik": 0.473
+       },
+       {
+        "x0": 661,
+        "y0": 120,
+        "x1": 667,
+        "y1": 162,
+        "wynik": 0.351
+       },
+       {
+        "x0": 661,
+        "y0": 191,
+        "x1": 666,
+        "y1": 204,
+        "wynik": 0.321
+       },
+       {
+        "x0": 318,
+        "y0": 25,
+        "x1": 329,
+        "y1": 132,
+        "wynik": 0.313
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_kontener_czyste_02.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "kontener",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_kontener_02",
+      "typ": "kontener",
+      "wynik": 0.9310866594314575,
+      "s": 1.0499999523162842,
+      "dx": 0.0,
+      "dy": -1.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_01",
+      "typ": "kontener",
+      "wynik": 0.926239550113678,
+      "s": 0.9900000095367432,
+      "dx": -1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_00",
+      "typ": "kontener",
+      "wynik": 0.9030926823616028,
+      "s": 1.100000023841858,
+      "dx": -4.0,
+      "dy": -1.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_02",
+      "typ": "firanka",
+      "wynik": 0.871980607509613,
+      "s": 1.0700000524520874,
+      "dx": 0.0,
+      "dy": -1.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_00",
+      "typ": "firanka",
+      "wynik": 0.8665924072265625,
+      "s": 0.9700000286102295,
+      "dx": 0.0,
+      "dy": -1.0
+     }
+    ],
+    "czas_s": 0.353,
+    "czas_dobor_s": 0.195,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "kontener",
+      "wzorce": [
+       "wzorzec_mini_kontener_02",
+       "wzorzec_mini_kontener_01",
+       "wzorzec_mini_kontener_00"
+      ],
+      "miejsca": [
+       {
+        "x0": 857,
+        "y0": 217,
+        "x1": 867,
+        "y1": 228,
+        "wynik": 0.964
+       },
+       {
+        "x0": 198,
+        "y0": 191,
+        "x1": 204,
+        "y1": 203,
+        "wynik": 0.381
+       },
+       {
+        "x0": 845,
+        "y0": 169,
+        "x1": 848,
+        "y1": 178,
+        "wynik": 0.158
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_kontener_czyste_03.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "kontener",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_kontener_00",
+      "typ": "kontener",
+      "wynik": 0.9231144189834595,
+      "s": 1.1299999952316284,
+      "dx": -1.0,
+      "dy": -1.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_01",
+      "typ": "kontener",
+      "wynik": 0.9211215972900391,
+      "s": 1.0299999713897705,
+      "dx": -1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_02",
+      "typ": "kontener",
+      "wynik": 0.9066849946975708,
+      "s": 1.090000033378601,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_01",
+      "typ": "firanka",
+      "wynik": 0.8876542448997498,
+      "s": 1.0099999904632568,
+      "dx": -1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_00",
+      "typ": "firanka",
+      "wynik": 0.8683403134346008,
+      "s": 1.0299999713897705,
+      "dx": -1.0,
+      "dy": -1.0
+     }
+    ],
+    "czas_s": 0.355,
+    "czas_dobor_s": 0.195,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "kontener",
+      "wzorce": [
+       "wzorzec_mini_kontener_00",
+       "wzorzec_mini_kontener_01",
+       "wzorzec_mini_kontener_02"
+      ],
+      "miejsca": [
+       {
+        "x0": 821,
+        "y0": 11,
+        "x1": 924,
+        "y1": 256,
+        "wynik": 1.596
+       },
+       {
+        "x0": 69,
+        "y0": 191,
+        "x1": 75,
+        "y1": 205,
+        "wynik": 1.263
+       },
+       {
+        "x0": 945,
+        "y0": 185,
+        "x1": 966,
+        "y1": 214,
+        "wynik": 1.237
+       },
+       {
+        "x0": 267,
+        "y0": 213,
+        "x1": 275,
+        "y1": 231,
+        "wynik": 0.68
+       },
+       {
+        "x0": 696,
+        "y0": 213,
+        "x1": 704,
+        "y1": 231,
+        "wynik": 0.669
+       },
+       {
+        "x0": 575,
+        "y0": 191,
+        "x1": 582,
+        "y1": 203,
+        "wynik": 0.254
+       },
+       {
+        "x0": 578,
+        "y0": 82,
+        "x1": 582,
+        "y1": 124,
+        "wynik": 0.127
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_kontener_czyste_04.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "kontener",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_kontener_01",
+      "typ": "kontener",
+      "wynik": 0.9524492621421814,
+      "s": 0.9900000095367432,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_00",
+      "typ": "kontener",
+      "wynik": 0.9327414631843567,
+      "s": 1.100000023841858,
+      "dx": -4.0,
+      "dy": -1.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_02",
+      "typ": "kontener",
+      "wynik": 0.9125111103057861,
+      "s": 1.0499999523162842,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_01",
+      "typ": "firanka",
+      "wynik": 0.8950904607772827,
+      "s": 0.9800000190734863,
+      "dx": -1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_00",
+      "typ": "firanka",
+      "wynik": 0.8915916085243225,
+      "s": 0.9800000190734863,
+      "dx": 0.0,
+      "dy": -1.0
+     }
+    ],
+    "czas_s": 0.355,
+    "czas_dobor_s": 0.195,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "kontener",
+      "wzorce": [
+       "wzorzec_mini_kontener_01",
+       "wzorzec_mini_kontener_00",
+       "wzorzec_mini_kontener_02"
+      ],
+      "miejsca": [
+       {
+        "x0": 840,
+        "y0": 187,
+        "x1": 872,
+        "y1": 230,
+        "wynik": 1.367
+       },
+       {
+        "x0": 807,
+        "y0": 158,
+        "x1": 814,
+        "y1": 200,
+        "wynik": 0.288
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_kontener_czyste_05.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "kontener",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_kontener_02",
+      "typ": "kontener",
+      "wynik": 0.9234331250190735,
+      "s": 0.9700000286102295,
+      "dx": 2.0,
+      "dy": 1.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_00",
+      "typ": "kontener",
+      "wynik": 0.921001136302948,
+      "s": 1.0,
+      "dx": 1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_01",
+      "typ": "kontener",
+      "wynik": 0.8855101466178894,
+      "s": 0.9100000262260437,
+      "dx": 3.0,
+      "dy": 1.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_02",
+      "typ": "firanka",
+      "wynik": 0.8761453628540039,
+      "s": 0.9900000095367432,
+      "dx": 2.0,
+      "dy": 1.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_01",
+      "typ": "firanka",
+      "wynik": 0.8700761795043945,
+      "s": 0.8899999856948853,
+      "dx": 2.0,
+      "dy": 1.0
+     }
+    ],
+    "czas_s": 0.337,
+    "czas_dobor_s": 0.195,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "kontener",
+      "wzorce": [
+       "wzorzec_mini_kontener_02",
+       "wzorzec_mini_kontener_00",
+       "wzorzec_mini_kontener_01"
+      ],
+      "miejsca": [
+       {
+        "x0": 693,
+        "y0": 191,
+        "x1": 790,
+        "y1": 256,
+        "wynik": 3.868
+       },
+       {
+        "x0": 818,
+        "y0": 207,
+        "x1": 826,
+        "y1": 214,
+        "wynik": 1.534
+       },
+       {
+        "x0": 851,
+        "y0": 188,
+        "x1": 856,
+        "y1": 206,
+        "wynik": 0.719
+       },
+       {
+        "x0": 186,
+        "y0": 62,
+        "x1": 193,
+        "y1": 98,
+        "wynik": 0.411
+       },
+       {
+        "x0": 186,
+        "y0": 126,
+        "x1": 193,
+        "y1": 162,
+        "wynik": 0.401
+       },
+       {
+        "x0": 515,
+        "y0": 191,
+        "x1": 522,
+        "y1": 203,
+        "wynik": 0.355
+       }
+      ]
+     }
+    }
+   },
+   {
+    "plik": "badany_mini_kontener_czyste_06.bmp",
+    "szer": 1024,
+    "wys": 256,
+    "typ_prawda": "kontener",
+    "dobor": [
+     {
+      "id": "wzorzec_mini_kontener_02",
+      "typ": "kontener",
+      "wynik": 0.9436736702919006,
+      "s": 1.0299999713897705,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_01",
+      "typ": "kontener",
+      "wynik": 0.9115239977836609,
+      "s": 0.949999988079071,
+      "dx": 1.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_kontener_00",
+      "typ": "kontener",
+      "wynik": 0.9068891406059265,
+      "s": 1.0700000524520874,
+      "dx": -3.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_02",
+      "typ": "firanka",
+      "wynik": 0.8894685506820679,
+      "s": 1.0700000524520874,
+      "dx": 0.0,
+      "dy": 0.0
+     },
+     {
+      "id": "wzorzec_mini_firanka_00",
+      "typ": "firanka",
+      "wynik": 0.8843898177146912,
+      "s": 0.9399999976158142,
+      "dx": 1.0,
+      "dy": 0.0
+     }
+    ],
+    "czas_s": 0.355,
+    "czas_dobor_s": 0.195,
+    "konfiguracje": {
+     "trend=1,tolx=2,rho=0.1,konstr=1,min_pole=0.0001,lok=2,jas=1,wyb=1,tau_pud=0.08,tau_pod=0.2,tau_kab=0.2,scal=0.01": {
+      "typ_wybrany": "kontener",
+      "wzorce": [
+       "wzorzec_mini_kontener_02",
+       "wzorzec_mini_kontener_01",
+       "wzorzec_mini_kontener_00"
+      ],
+      "miejsca": [
+       {
+        "x0": 751,
+        "y0": 208,
+        "x1": 762,
+        "y1": 244,
+        "wynik": 1.106
+       },
+       {
+        "x0": 724,
+        "y0": 214,
+        "x1": 734,
+        "y1": 237,
+        "wynik": 0.921
+       },
+       {
+        "x0": 812,
+        "y0": 226,
+        "x1": 836,
+        "y1": 250,
+        "wynik": 0.891
+       },
+       {
+        "x0": 198,
+        "y0": 188,
+        "x1": 204,
+        "y1": 205,
+        "wynik": 0.346
+       },
+       {
+        "x0": 198,
+        "y0": 25,
+        "x1": 204,
+        "y1": 71,
+        "wynik": 0.34
+       },
+       {
+        "x0": 817,
+        "y0": 191,
+        "x1": 827,
+        "y1": 203,
+        "wynik": 0.311
+       },
+       {
+        "x0": 544,
+        "y0": 158,
+        "x1": 551,
+        "y1": 190,
+        "wynik": 0.298
+       }
+      ]
+     }
+    }
+   }
+  ]
+ }
+}
