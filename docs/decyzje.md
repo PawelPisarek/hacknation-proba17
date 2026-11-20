@@ -663,3 +663,8 @@ P89 20:08 Artur: przyjmujesz na pokaz uproszczenie U5 — raport jako plik do po
 P90 20:08 Artur: przyjmujesz na pokaz I1–I2 — obraz 50 MB wysyła się ok. 45 s; wgrywa się jeden obraz naraz (rekomendacja: tak) — czeka
 P91 20:08 Artur: które jedno dorobić, jeśli zostanie czas — D1 miniatura w raporcie, D2 konto funkcjonariusza, D3 ekran dokładania wzorca (rekomendacja: D1) — czeka
 20:09 Szef: 09 wysłane do Artura (P87–P91, ntfy 5×202, c5d88cb); README bez dopisku 27; czekam na Artura (P91 = dorobienie)
+P87 20:10 odpowiedź: tak (Artur w pokoju) — logowanie z listy, bez KAS
+P88 20:10 odpowiedź: tak (Artur w pokoju) — wzorce 3 rodzajów, cysterna bez
+P89 20:10 odpowiedź: tak (Artur w pokoju) — raport jako plik, bez wysyłki i bez ekranu kierownika
+P90 20:10 odpowiedź: tak, ale 45 s mówimy na pokazie wprost (Artur w pokoju) — wpis dla Prezentera i demo.md
+P91 20:10 odpowiedź: D1 — miniatura z zaznaczonymi miejscami w raporcie, robić od razu (Artur w pokoju); D2 i D3 odpadają
