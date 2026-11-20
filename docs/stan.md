@@ -9,7 +9,7 @@ Kamień: MVP na hacknation.ksefbot.pl (koniec próby po MVP): 40 → 41 → 42 �
 | krok 8 wizja (08-wizja.md) | Projektant | zamknięte (R3 czysto 15:28) → zadanie 35 Prezenter |
 | 22 makieta R2 | Programista | zamknięte; krytyk 7/10; Artur P73–P78 (14:38) |
 | 34 makieta R3 (P73 A, P74 A, P76 A, P77 A, P79 B, brak 7) | Programista | zamknięte; poprawki krytyka R3 (8/10, runda 3 z 3) + P80 A w r3 15:23, r3 200 — makieta zamknięta |
-| 09 uproszczenia + dorobienie (Artur) | Projektant | R3 7e31c7a; recenzja 3 z 3 → Analityk; wysyłka po odbiorze MVP |
+| 09 uproszczenia + dorobienie (Artur) | Projektant | zamknięte R3 7e31c7a (runda 3 czysto, df2f0ed); wysyłka po odbiorze MVP, przed nią czas przyszły → teraźniejszy wg 42 i 28 |
 | 41 skład partii pokazowej wg 06 / 42 budzenie uśpionej usługi | Programista | 41 w toku 19:16 (partia-pokazowa.json); 42 czeka |
 | 40 strona pod linkiem: ramki, lupa, wzorzec obok, podpowiedź | Programista | zamknięte 19:20 (odbiór 07e8d6d: 6/7 zal.; CLI = HTTP otwarte → Programista; przycisk „Dodaj jeden obraz” P61 A i rozwijanie listy → przy 28) |
 | 21 wdrożenie strona + usługa (P43 A) | Paweł → Programista, Analityk | zamknięte: merge 19acef7, odbiór z zewnątrz 8768b32 (B1 → 41 skład partii, B2 → 42 budzenie); porządki → 39 |
