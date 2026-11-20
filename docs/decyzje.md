@@ -124,3 +124,4 @@ P30 11:27 Artur: ile ramek na czystym aucie (bez żadnych dodatków) operator je
 P31 11:27 Artur: ile ze 100 prawdziwych dodatków program musi wskazać, żebyśmy uznali go za użyteczny? A: co najmniej 90 (reszta ginie przy ładunku); B: co najmniej 80. Rekomendacja: A — przeoczenie jest gorsze od fałszywego alarmu (P4) — czeka
 PARAMETR: tolerowana liczba ramek na czystym aucie = do 3 (rekomendacja) — P30
 PARAMETR: minimalna skuteczność wskazania dodatków = 90 ze 100 (rekomendacja) — P31
+11:30 Szef: krok 3 meldunek (f996bb7) — sondy Z1–Z10 założone jako zadania 05–14 (bez czekania na P29–P31: liczby nie zależą od progów). Krok 3 domknie się po P29–P31 i recenzji przejścia.
