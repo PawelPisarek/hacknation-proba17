@@ -471,3 +471,4 @@ P80 15:20 Artur: Auta, których operator jeszcze nie otworzył (np. auta 4 i 6 n
 15:20 Projektant: brak 1 krytyka R3 → P80 (z pytaniem „co z ekranu wyrzucić?”); braki 2 i 3 (cysterna bez wzorca nie może mieć „bez wskazań”; kolumna „Kto” bez czynności) to błędy makiety dla Programisty, bez pytania; spec §10 ma P73–P79; spec bez słów poziomu (grep: tylko zapisy o ich usunięciu)
 P80 15:20 odpowiedź: A — do otwarcia auta stan to „program nic nie wskazał — nieotwarte”; „obejrzane, bez wskazań” dopiero po „Zamknij auto”, z godziną i osobą. Z ekranu nic nie wyrzucamy. (Artur w pokoju)
 15:21 Szef: P80 A przekazane Programiście (razem z poprawkami R3: braki 2, 3, 5, 6, 7); brak 4 zamknięty (spec P73–P79, Projektant).
+15:23 Szef: krok 8 (wizja, product-vision + value-proposition, docs/pm/08-wizja.md) → Projektant; recenzja przejścia → Analityk; po kroku 8 zadanie dla Prezentera (wizja do opisu i slajdów).

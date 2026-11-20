@@ -1,4 +1,4 @@
-# Stan — 15:21
+# Stan — 15:23
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -6,6 +6,7 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | zamknięte (start + łańcuch 0–6 + 20, 23, 31, 33) | zespół | 01–04, 05–18 (sondy Z1–Z14; Z12/Z14 przegląd po R1), 19, 20 (v3: FN 7,8%/9,7% ≤10%, ramki 5,8/6,25, 4beef05), 23 (ramki/lista + mvp/widok-auta, 7/7 testów, 6454220), 31 (17/17 OK, 8517f28), 33 (brak wzorca sr<0,80: 50/50 cystern, 0 strat, 6454220), kroki 0–6, README, hacktribe (R3; przepisany pod P57–P72 d3a232b, opis 854/1000 zn.; link r2 sprawdzić po zad. 22 przed 20:00), warianty (P36 C+B), makieta R1 (krytyk 6/10) |
 | P57–P72 w spec, 06 i 07 | Projektant | P57–P72 w spec/06 (103b1a2) + P60 B/P69 A w 07 R3/R9 (d4d4bda) |
 | krok 7 /pre-mortem (07-pre-mortem.md) | Projektant | zamknięty po R3, liczby v3 wpisane |
+| krok 8 wizja (08-wizja.md) | Projektant | zlecone 15:23 → recenzja Analityk → zadanie Prezentera |
 | 22 makieta R2 | Programista | zamknięte; krytyk 7/10; Artur P73–P78 (14:38) |
 | 34 makieta R3 (P73 A, P74 A, P76 A, P77 A, P79 B, brak 7) | Programista | zamknięte 15:16, r3 200; krytyk R3 8/10 (runda 3 z 3): braki 2,3,5,6,7 → Programista w r3; brak 1 → P80 A → Programista; brak 4 spec → Projektant zamknięty (P73–P79 w spec) |
 | 21 wdrożenie strona + usługa (P43 A) | Paweł | w toku od 13:00 |
