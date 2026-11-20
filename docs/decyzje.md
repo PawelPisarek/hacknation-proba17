@@ -745,3 +745,10 @@ P97 08:32 odpowiedź: A — slajd 8 dostaje rysunek (słupki: auta na godzinę s
 08:32 Szef: P97 A (Artur w pokoju 08:31) — wykres skalowania → Analityk (PNG), wstawienie na slajd 8 → Prezenter po PNG
 
 08:33 Analityk: P97 A — wykres do slajdu 8 gotowy: docs/zrzuty/wykresy/skalowanie-slajd.png (skrypt ocena/wykres-skalowanie-slajd.mjs). Słupki aut/h na 1 kartę: ok. 2 080 (zwykły), ok. 3 020 (trudny), ok. 70 przez stronę (n=1, rząd wielkości); słupka wzrostu z liczbą kart nie ma — w podpisie „założenie, niemierzone”. Liczby z README „Skalowanie”.
+
+### 08:33 — Prezenter: oddaję poprawki krytyka R2 (zlecenie 76c5188b)
+1. Czas liczenia: slajd 4 i demo.md bez „90 s” i cięcia — partia liczy się ok. 3,5–4 s na stałej usłudze (zad. 45); krok 2 mieści się w 14 s, suma 114 s = nagłówek bez zmian (kroki liczone od nowa: 5+14+20+22+10+14+14+15).
+2. Puste połowy: slajdy 1, 4, 7 z czytelnymi wycinkami zrzutów z linku (wycinek-start, przed-po-lista powiększona, wycinek-raport), slajd 9 z tabelą porównania, slajdy tekstowe z większą czcionką; PDF 10 slajdów, żaden nie przepełnia (wysokość 720 na wszystkich).
+3. hacktribe.md: pole „Opis” = 906 znaków (też 906 UTF-16; 947 to bajty — stąd dawne „947”); komenda liczenia wpisana w nagłówku pliku; limit 1000. Narzędzia: 373 zn.
+4. Język (wyjątek dozwolony przez Szefa): na slajdzie 6 i w wykresie „v1/v2/v3/konfiguracja” → „pierwsza wersja / wersja z nocy / wersja końcowa / ustawienie”.
+Nie ruszone: slajd 8 bez rysunku (produkt → Projektant/Artur). Niesprawdzone: liczba 1995 Analityka (nie wiem, co liczył — pole ma 906 zn.); PDF oglądany jako render HTML, nie plik PDF.

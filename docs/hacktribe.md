@@ -1,6 +1,8 @@
 # HackTribe — tekst do formularza
 
 > Gotowe do wklejenia. Wszystkie obrazy i wyniki z danych sztucznych (nie z obrazów KAS); liczby z linii WYNIK zadania 20 (v3) w `docs/decyzje.md`. Linki sprawdzone: HTTP 200 (20.11.2026).
+>
+> **Liczenie znaków pola „Opis”** (samo pole, bez nagłówka; znaki, nie bajty): `node -e "const t=require('fs').readFileSync('docs/hacktribe.md','utf8').split('\n## Opis')[1].split('\n\n')[1];console.log([...t].length,t.length,Buffer.byteLength(t))"` → **906** znaków (906 jednostek UTF-16; 947 bajtów — stąd dawne „947”). Limit 1000.
 
 ## Nazwa projektu (`product-name`)
 

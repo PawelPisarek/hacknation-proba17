@@ -9,6 +9,7 @@
 - Zespół: Hackathon · repo: github.com/PawelPisarek/hacknation-proba17
 - Działający program: hacknation.ksefbot.pl · makieta: pawelpisarek.github.io/hacknation-proba17/makieta/r3/
 - Wszystko na danych sztucznych — demonstracja.
+- ![ekran startowy programu](zrzuty/slajdy/wycinek-start.png)
 
 ## 2. Problem i dla kogo
 - Operator RTG Służby Celno-Skarbowej ogląda obrazy naczep (Nuctech, Multicontrol; .bmp, ~50 MB) i na jedno auto ma kilka minut.
@@ -21,9 +22,9 @@
 - Gdy nie ma wzorca: „brak wzorca — obejrzyj ręcznie”. Na czystych autach program zwykle coś wskazuje — decyzję zawsze podejmuje człowiek.
 - ![auto 1: badany i wzorzec obok siebie, ramki, kafelki z podpowiedzią „zwykle tu…”](zrzuty/slajdy/wycinek-auto1.png)
 
-## 4. Demo (≈ 114 s, nagranie na hacknation.ksefbot.pl)
+## 4. Demo (≈ 2 min, nagranie na hacknation.ksefbot.pl)
 - Partia 7 aut: miejsc 8, 6, 12, 8, 7, 0 (brak wzorca — obejrzyj ręcznie), 11.
-- Liczenie partii trwa ok. 90 s — w nagraniu jest cięcie montażowe po kliknięciu „Policz partię”.
+- Partia 7 aut liczy się na działającej usłudze w ok. 4 s — nagranie bez cięć.
 - Auto 1: obraz i wzorzec obok siebie, 2 miejsca rozstrzygnięte; raport partii z miniaturami aut.
 - Źródło: scenariusz docs/demo.md.
 - ![lista partii: 7 aut, miejsca, brak wzorca przy aucie 6](zrzuty/slajdy/przed-po-lista.png)
@@ -38,8 +39,8 @@
 
 ## 6. Skuteczność: przeoczenia kontra ramki
 - Miarą jest kolejność miejsc, nie alarm tak/nie: czyste auto dostaje śr. 5,8 / 6,25 ramki (fałszywy alarm = czyste auto z ≥ 1 ramką: 32/32, 40/40).
-- Każda kropka to konfiguracja programu; zielony trójkąt (wybrana) spełnia cel ≤ 10% przeoczeń.
-- Źródło: 128 konfiguracji, dane sztuczne.
+- Każda kropka to jedno ustawienie programu; zielony trójkąt (wersja końcowa) spełnia cel ≤ 10% przeoczeń, a „ramki na czystym aucie” to miejsca wskazane na aucie bez dodatku.
+- Źródło: 128 ustawień wersji końcowej, dane sztuczne.
 - ![wykres: przeoczenia kontra średnia liczba ramek na czystym aucie](zrzuty/wykresy/przeoczenia-vs-ramki-slajd.png)
 
 ## 7. Co nowego
@@ -49,6 +50,7 @@
 - Decyzja z powodem odrzucenia w raporcie (.json, .csv, .html z miniaturami).
 - Działa lokalnie, bez internetu: partia pokazowa 7/7 w kontenerze bez sieci.
 - Zbudowane przez zespół 5 botów AI w 24 h (dowód: dziennik decyzji, github.com/PawelPisarek/hacknation-proba17/blob/main/docs/decyzje.md).
+- ![raport partii z miniaturami aut](zrzuty/slajdy/wycinek-raport.png)
 
 ## 8. Skalowanie (pomiary i założenia)
 - Pomiar: 1 karta GTX 1050, obraz 50 MB — 1,73 s / 1,19 s; wysyłka pliku przez sieć ok. 45 s.
@@ -58,6 +60,9 @@
 ## 9. Na tle istniejących rozwiązań
 - Dostawcy skanerów (Rapiscan, Smiths Detection, Nuctech, Leidos) mają własne analizy związane z własnym sprzętem; obecne narzędzie KAS wykrywa papierosy.
 - Prześwit: porównanie z wzorcem typu, lokalnie, z decyzją operatora; bez porównania z deklaracją.
+| | Skanery dostawców | Obecne narzędzie KAS | Prześwit |
+| Co robi | własne analizy, związane z własnym sprzętem | wykrywa papierosy | porównuje obraz ze wzorcem typu |
+| Decyzja | zależy od dostawcy | — | zawsze operator |
 - Źródło: analiza konkurencji, docs/pm/01-competitive-analysis.md.
 
 ## 10. Co dalej i użyte narzędzia
