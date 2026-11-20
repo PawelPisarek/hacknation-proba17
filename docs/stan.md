@@ -1,4 +1,4 @@
-# Stan — 16:35
+# Stan — 16:36
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -11,7 +11,7 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | 34 makieta R3 (P73 A, P74 A, P76 A, P77 A, P79 B, brak 7) | Programista | zamknięte; poprawki krytyka R3 (8/10, runda 3 z 3) + P80 A w r3 15:23, r3 200 — makieta zamknięta |
 | 21 wdrożenie strona + usługa (P43 A) | Paweł | w toku od 13:00 |
 | 30 odbiór A1–A14 + spójność | Analityk | zamknięte 15:34: 5 zal., A4 NIE → 36 (Programista); 37 spójność zamknięte (Projektant); poprawki Prezentera zamknięte 90212aa |
-| przejście demo na r3 | Analityk | zamknięte 15:54 (0666dd9): K1–K6, K8 OK; M1 = P83 A → Programista po 36; D1 zamknięte 707426a; 06 zamknięte; przeliczenie odbioru po 7 autach → Analityk po 38 |
+| przejście demo na r3 | Analityk | zamknięte 15:54 (0666dd9): K1–K6, K8 OK; M1 = P83 A → Programista po 36; D1 zamknięte 707426a; 06 zamknięte; przeliczenie odbioru zamknięte 083f04d (6/15, NIE brak); manifest czasy 109 s + A4 niezależnie → Analityk |
 | 38 sonda czyste auto 0 miejsc na v3 (P82) | Analityk → Prezenter, Projektant | zamknięte 16:30: nie ma (min. 2) → B; demo 109 s + zdanie o czystych autach zamknięte 0d9fc42; spec/06/07 zamknięte 822a95b (109 s) |
 | zgodność r3 z odpowiedziami Artura P2–P83 | Projektant → Programista | zamknięte 16:23: M1, braki 2–6, P85 B w r3 (ramki z v3: 8/6/12/8/7/0/11), r3 200; slajdy i demo zamknięte 13b32d6; spec i 06 zamknięte fe82d67; „brak wskazań” wypada (38 → B) |
 | 32 progi słów (P49 A) | Analityk | zamknięte 15:06; P79 B: słów nie ma, P49 i P75 bez przedmiotu |
