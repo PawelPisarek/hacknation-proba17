@@ -91,10 +91,10 @@ Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z d
 ## 10. Ustalenia w specu — P37–P41
 | P | Rozstrzygnięcie | Stan |
 |---|---|---|
-| P37 | B — wiersz auta z miniaturą | odpowiedź Artura 12:41 (wygrywa z rekomendacją) |
+| P37 | B — wiersz auta z miniaturą | odpowiedź Artura 12:43 (wygrywa z rekomendacją) |
 | P38 | B — wejście w auto dopiero po całej partii | odpowiedź Artura 12:41 (z P29) |
-| P39 | B — podpowiedź przy każdym kafelku | odpowiedź Artura 12:41 |
-| P40 | B — po ostatnim miejscu następne auto | odpowiedź Artura 12:41 |
+| P39 | B — podpowiedź przy każdym kafelku | odpowiedź Artura 12:43 |
+| P40 | B — po ostatnim miejscu następne auto | odpowiedź Artura 12:43 |
 | P41 | A — decyzje w poprzednim aucie można zmienić z listy partii do zamknięcia sprawy (AC A13) | odpowiedź Artura w pokoju |
 
 <!-- skill: create-prd -->
