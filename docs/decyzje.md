@@ -558,3 +558,4 @@ P85 16:09 odpowiedź: B — wszystkie auta w makiecie pokazują to, co naprawdę
 16:25 Szef: slajd 6 i demo.md pod r3 16:23 przyjęte (13b32d6); auto 4 w demo czeka na 38; czas 113 s i pozostałe strony PDF → przegląd po 38
 16:26 Projektant: spec i 06 wyrównane do r3 16:23 i P83 A, P84 B, P85 B (miejsca 8/6/12/8/7/0/11, nazwy skan_NN, ostrzeżenie „Brak decyzji”); A3/S3, S2 i moment „brak wskazań” w demo oznaczone „czeka na sondę 38”, nieprzepisane; makiety i kodu nie ruszałem
 16:27 Szef: spec i 06 wg r3 16:23 i P83–P85 przyjęte (fe82d67); A3/S2/S3 czekają na 38
+16:30 Analityk: sonda 38 — czyste auto z 0 miejsc na v3: nie ma (28 aut: 8 dane/mini + 20 czyste_p49; najmniej 2 miejsca: badany_mini_cysterna_czyste_03.bmp, badany_mini_kontener_czyste_04.bmp; zakres 2–19); v3 liczyło z progiem z zadania 36 i bez — wyniki identyczne; tabela w docs/odbior.md „Sonda 38”; → B (Projektant/Prezenter/Programista wg zadania 38)

@@ -43,3 +43,41 @@ Polecenie: `docs/uruchomienie.md`. Dowody: `wyniki/odbior/` na OMENie (`ork/zgl-
 **P79 B** (bez słów niski/średni/wysoki): czyste: README, hacktribe, demo.md, slajdy-szkic, 08-wizja; spec zgodny (A2, E4, §8). Do poprawy:
 4. **technika → Projektant:** `06-scenariusze.md` linia 6: P49 A „Artur zatwierdza po zobaczeniu, ile czystych aut dostaje «wysoki»” — przedmiot odpadł (P79 B); nagłówek S2 „Kolejność i słowa”.
 5. **technika → Projektant:** `07-pre-mortem.md` R8 („progi niski/średni/wysoki rozjeżdżają się z oczekiwaniem Artura”, kolumna blokuje „tak”) — ryzyko bez przedmiotu; spec tabela decyzji, wiersz P49 („wartości czekają na pomiar”) bez dopisku P79 B.
+
+## Sonda 38 — czy czyste auto daje 0 miejsc na v3 (16:30, OMEN GTX 1050, zgłoszenie zgl-5142)
+
+Metoda: wykryj_v3, konfiguracja zadania 20 bez zmian, biblioteka dane/mini (pełna, 12 wzorców), badane: 8 czystych z dane/mini + 20 z ~/dane/scenariusze/czyste_p49 (ziarno 17). Skrypt: testy/sonda38.sh. `czyste_zero/badany_mini_kontener_zero_00.bmp` pominięte (kopia wzorca, P82).
+**Próg „brak wzorca” z zadania 36:** przebieg 1 z progiem (domyślnym), przebieg 2 bez (`--prog-doboru sr:0.0`) — wyniki identyczne we wszystkich 28 autach; próg nie zadziałał na żadnym (biblioteka pełna, jakość doboru ≥ 0,9).
+
+| auto | miejsc (z progiem = bez progu) | werdykt |
+|---|---|---|
+| badany_mini_cysterna_czyste_03.bmp | 2 | — |
+| badany_mini_kontener_czyste_04.bmp | 2 | — |
+| badany_mini_kontener_czyste_02.bmp | 3 | — |
+| badany_mini_cysterna_czyste_04.bmp | 4 | — |
+| badany_mini_chlodnia_czyste_03.bmp | 5 | — |
+| badany_mini_cysterna_czyste_00.bmp | 5 | — |
+| badany_mini_cysterna_czyste_05.bmp | 6 | — |
+| badany_mini_kontener_czyste_05.bmp | 6 | — |
+| badany_mini_cysterna_czyste_06.bmp | 7 | — |
+| badany_mini_firanka_czyste_01.bmp | 7 | — |
+| badany_mini_firanka_czyste_04.bmp | 7 | — |
+| badany_mini_kontener_czyste_01.bmp | 7 | — |
+| badany_mini_kontener_czyste_03.bmp | 7 | — |
+| badany_mini_kontener_czyste_06.bmp | 7 | — |
+| badany_mini_chlodnia_czyste_04.bmp | 8 | — |
+| badany_mini_chlodnia_czyste_05.bmp | 8 | — |
+| badany_mini_cysterna_czyste_02.bmp | 8 | — |
+| badany_mini_kontener_czyste_00.bmp | 8 | — |
+| badany_mini_chlodnia_czyste_00.bmp | 9 | — |
+| badany_mini_chlodnia_czyste_02.bmp | 9 | — |
+| badany_mini_firanka_czyste_02.bmp | 9 | — |
+| badany_mini_firanka_czyste_03.bmp | 9 | — |
+| badany_mini_firanka_czyste_06.bmp | 9 | — |
+| badany_mini_chlodnia_czyste_01.bmp | 10 | — |
+| badany_mini_chlodnia_czyste_06.bmp | 11 | — |
+| badany_mini_cysterna_czyste_01.bmp | 13 | — |
+| badany_mini_firanka_czyste_05.bmp | 15 | — |
+| badany_mini_firanka_czyste_00.bmp | 19 | — |
+
+**Werdykt: nie ma (najmniej 2 miejsca: badany_mini_cysterna_czyste_03.bmp i badany_mini_kontener_czyste_04.bmp).** Z 28 aut żadne nie ma 0 miejsc; zakres 2–19, mediana 7. Wg zadania 38: ścieżka B — moment „brak wskazań” wypada z pokazu na realnym aucie, w opisie zdanie „na czystych autach program zwykle coś wskazuje”. Partii, progów i metody nie ruszano.
