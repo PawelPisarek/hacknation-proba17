@@ -6,7 +6,7 @@
 
 Dla kogo: operatorzy RTG Służby Celno-Skarbowej (zadanie KAS, HackNation).
 Makieta (wybór wariantu): https://pawelpisarek.github.io/hacknation-proba17/makieta/warianty/ · wersja na ksefbot.pl: — (po wdrożeniu)
-Makieta R2 (klikalna, dane sztuczne, partia pokazowa 7 aut): https://pawelpisarek.github.io/hacknation-proba17/makieta/r2/
+Makieta R3 (klikalna, dane sztuczne, partia pokazowa 7 aut): https://pawelpisarek.github.io/hacknation-proba17/makieta/r3/
 
 ## Jak uruchomić
 

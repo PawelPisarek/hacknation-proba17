@@ -1,13 +1,13 @@
-# Slajdy R2 — Prześwit (DRAFT, 10 slajdów; PDF: docs/slajdy.pdf)
+# Slajdy R3 — Prześwit (DRAFT, 10 slajdów; PDF: docs/slajdy.pdf)
 
 > Oś przekazu (`value-prop-statements`): *Dla operatora RTG na granicy: Prześwit wskazuje miejsca, w których obraz naczepy odbiega od wzorca, więc operator w kilka minut wie, gdzie szukać skrytki — decyzję nadal podejmuje on.*
-> Wszystkie liczby: dane sztuczne, linie WYNIK w `docs/decyzje.md` (zadania 20 i 33). Zrzuty makiety R2.
+> Wszystkie liczby: dane sztuczne, linie WYNIK w `docs/decyzje.md` (zadania 20 i 33). Zrzuty makiety R3 (część ekranów z R2: logowanie, lista partii, odrzucenie, cysterna).
 
 ## 1. Prześwit
 - Narzędzie AI dla operatora RTG: porównuje obraz naczepy z wzorcem i zaznacza różnice.
 - Zespół: Hackathon · repo: github.com/PawelPisarek/hacknation-proba17
 - Wszystko na danych sztucznych — demonstracja.
-- ![auto: badany i wzorzec obok siebie, kafelki miejsc](zrzuty/r2/E4a-auto1-widok-c-z-pudlem.png)
+- ![auto: badany i wzorzec obok siebie, kafelki miejsc](zrzuty/r3/auto1.png)
 
 ## 2. Problem
 - Operator RTG KAS ogląda obrazy naczep i musi wypatrzyć skrytkę lub dodatkowy ładunek.
@@ -26,7 +26,7 @@
 - Zaznacza miejsca różne od wzorca, w kolejności od najbardziej odmiennego (bez ocen słownych): najważniejsze to nie przeoczyć; pokazujemy, ile przeoczeń i ile fałszywych alarmów.
 - Partia: operator wskazuje kilka obrazów, program liczy je po kolei i oddaje listę aut.
 - Gdy nie ma wzorca: nic nie zaznacza i mówi „brak wzorca — sprawdź obraz sam”.
-- ![lista partii](zrzuty/r2/E3b-partia-gotowa-7-aut.png)  ![auto: obraz badany obok wzorca](zrzuty/r2/E4a-auto1-widok-c-z-pudlem.png)
+- ![lista partii](zrzuty/r2/E3b-partia-gotowa-7-aut.png)  ![auto: obraz badany obok wzorca](zrzuty/r3/auto1.png)
 
 ## 5. Operator decyduje
 - Przy każdym miejscu operator zatwierdza albo odrzuca; powód podaje przy odrzuceniu.
@@ -37,9 +37,9 @@
 ## 6. Demo (≈ 113 s, `docs/demo.md`)
 - Partia 7 aut z `dane/mini`; 7. auto to przypadek trudny (dodatek za ładunkiem), na liście nieoznaczony. U góry pasek „dane sztuczne — demonstracja”.
 - Auto 1: rozstrzygamy 2 miejsca i wracamy na listę, reszta „oczekuje”. ![lista](zrzuty/r2/E3b-partia-gotowa-7-aut.png)
-- Auto: obraz i wzorzec obok siebie, kafelki, zatwierdź/odrzuć z powodem. ![auto](zrzuty/r2/E4a-auto1-widok-c-z-pudlem.png)
+- Auto: obraz i wzorzec obok siebie, kafelki, zatwierdź/odrzuć z powodem. ![auto](zrzuty/r3/auto1.png)
 - Brak wzorca (cysterna): „sprawdź obraz sam”. ![brak wzorca](zrzuty/r2/E5-cysterna-brak-wzorca.png)
-- Raport partii; auta bez decyzji — ostrzeżenie i potwierdzenie. ![raport](zrzuty/r2/E7a-raport-ostrzezenie-brak-decyzji.png)
+- Raport partii; auta bez decyzji — ostrzeżenie i potwierdzenie. ![raport](zrzuty/r3/raport.png)
 - Ograniczenie: dodatek za ładunkiem może nie dostać ramki — mówimy to wprost.
 
 ## 7. Jak to mierzymy — wyniki na danych sztucznych

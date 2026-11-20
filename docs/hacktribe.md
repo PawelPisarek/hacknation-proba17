@@ -16,7 +16,7 @@ https://github.com/PawelPisarek/hacknation-proba17
 
 ## Link do makiety
 
-https://pawelpisarek.github.io/hacknation-proba17/makieta/r2/ (makieta R2)
+https://pawelpisarek.github.io/hacknation-proba17/makieta/r3/ (makieta R3)
 
 ## Opis wstępny (≤ 1000 znaków; 854 zn.)
 
