@@ -69,7 +69,7 @@ Oceniane względem wymagań zadania: **~50 MB/obraz**, **< 1 min na obraz** (§7
 - Duże pliki (~50 MB), partie w najprostszej formie (P12), < 1 min na obraz. Skalowanie na większe zbiory: jedno zdanie w opisie projektu — kolejkę obrazów można rozdzielić na wiele maszyn albo kart, bo każdy obraz liczy się osobno.
 
 ## Przepływ z operatorem (P3) a zadanie §3
-Zadanie §3: „działa samodzielnie, bez interwencji człowieka". Artur (P3): operator przy każdym miejscu zatwierdza/odrzuca z powodem. **Da się pogodzić, rozdzielając etapy:** program analizuje i zaznacza miejsca **sam** (wymóg §3), a zatwierdzenie/odrzucenie to osobny krok **po** wyniku (raport; §9: wyniki idą do repozytorium z przypisaniem do miejsca i przedmiotu kontroli). **P9** do Artura („A czy B?"): A — analiza sama, decyzja operatora na wyniku (rekomendacja); B — operator uczestniczy już w trakcie analizy.
+Zadanie §3: „działa samodzielnie, bez interwencji człowieka". Artur (P3): operator przy każdym miejscu zatwierdza/odrzuca z powodem. **Da się pogodzić, rozdzielając etapy:** program analizuje i zaznacza miejsca **sam** (wymóg §3), a zatwierdzenie/odrzucenie to osobny krok **po** wyniku (raport; §9: wyniki idą do repozytorium z przypisaniem do miejsca i przedmiotu kontroli). **P9 rozstrzygnięte (Artur, A):** analiza sama, decyzja operatora na wyniku.
 **Konkurenci:** w znalezionych źródłach brak opisu zatwierdzania z powodem (Rapiscan opisuje tryby analizy, nie przepływ operatora) — nasz przepływ to potencjalna przewaga **(założenie, niezbadane)**. Operator ma kilka minut na auto (P7) — zatwierdzenie musi być szybkie (jedno kliknięcie + powód z listy).
 
 ## Zakres pierwszej wersji (P6) — zaakceptowany przez Artura (P10, P12): duży obraz ~50 MB i proste partie od pierwszej wersji
@@ -103,7 +103,7 @@ Ryzyka 12–18 mies.: dostawcy sprzętu dodają porównanie ze wzorcem do własn
 
 ## Ustalenia Artura (P9–P11)
 - P9: program analizuje sam i zaznacza wszystko; operator decyduje na wyniku.
-- P10: zakres pierwszej wersji zatwierdzony; dodatkowo pojedynczy duży obraz (~50 MB) działa od razu, partie później.
+- P10: zakres pierwszej wersji zatwierdzony; dodatkowo pojedynczy duży obraz (~50 MB) działa od razu, partie później — zmienione w P12 (partie w pierwszej wersji, w prostej formie).
 - P11: nazwa projektu „Prześwit”.
 
 ## Ustalenia Artura (P12–P13)
