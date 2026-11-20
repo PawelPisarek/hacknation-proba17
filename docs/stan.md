@@ -15,6 +15,6 @@ Kamień: 10:30 materiały (README, hacktribe finalny, slajdy, demo.md, wersja �
 
 Ustalenia Artura: P2–P92 (P92 A — miniatura na stronie jak w pliku).
 Otwarte pytania: slajd 7 zrzut, slajd 1 zdanie — Projektant pyta Artura.
-Przegląd Pawła: materiały i pokaz — prośba po 46/47.
+Przegląd Pawła: prośba wysłana 08:36 (P100) — nagranie pokazu + materiały.
 Lista Artura na noc: pusta (D1 zrobione, P92 → 44).
 POM-1 zamknięte (P94 B).
