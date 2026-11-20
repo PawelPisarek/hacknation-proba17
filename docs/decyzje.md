@@ -418,3 +418,4 @@ PARAMETR: progi słów w makiecie R2 = wysoki ≥ 0,6, średni ≥ 0,3 siły (au
 14:14 Szef: makieta R2 https://pawelpisarek.github.io/hacknation-proba17/makieta/r2/ (HTTP 200, zadanie 22 zamknięte, ce88075/e9d33da, 25 zrzutów docs/zrzuty/r2/) → krytyk R2 Analityk (przed recenzją kroku 7 R3); Prezenter: zrzuty R2 w slajdach, link r2 w demo.md, w hacktribe.md usunąć „zacznie działać”, przebudowa PDF; Programista → zadanie 24.
 - 14:15 Prezenter: slajdy (10) ze zrzutami R2, demo.md z linkiem r2, hacktribe bez dopisku „link zacznie działać”; opis bez zmian (854 zn.)
 14:15 Szef: Prezenter ec96bf7 przyjęte (slajdy R2 10 str., demo.md link r2, hacktribe bez dopisku) → recenzja Analityk w zadaniu 30 (w tym kolejność aut R2 vs demo.md).
+14:16 Programista: biorę zadanie 24
