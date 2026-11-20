@@ -19,6 +19,11 @@ function wiersz(w) {
     return tr;
   }
   const m = w.miejsca || [];
+  if (w.brak_wzorca) {
+    tr.append(el("td", w.plik), el("td", "—"), el("td", w.biblioteka || ""));
+    const td = el("td", w.napis); td.colSpan = 3; tr.append(td);
+    return tr;
+  }
   tr.append(el("td", w.plik), el("td", w.rodzaj), el("td", w.biblioteka + (w.uwaga ? ` (${w.uwaga})` : "")),
     el("td", String(m.length)), el("td", `${(w.czas_s ?? 0).toFixed(2)} s`));
   const td = el("td");

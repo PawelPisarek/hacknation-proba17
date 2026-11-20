@@ -178,12 +178,14 @@ def main():
     ap.add_argument("--siatka", default=rdzen.SIATKA, help="jedna konfiguracja detektora")
     ap.add_argument("--szer-rob", type=int, default=rdzen.SZER_ROB)
     ap.add_argument("--biblioteki", default="mini,mini-trudny,maly")
+    ap.add_argument("--prog-doboru", default="%s:%s" % rdzen.PROG_DOBORU, help="'miara:próg' (zad. 33); 'brak' = bez progu")
     a = ap.parse_args()
     if a.bez_sieci:
         bez_sieci()
     import torch
     from przeswit.wykryj import DEV, siatka
     konf = siatka(a.siatka)[0]
+    pd = None if a.prog_doboru == "brak" else (a.prog_doboru.split(":")[0], float(a.prog_doboru.split(":")[1]))
     opisy = {n: rdzen.BIBLIOTEKI_DOMYSLNE[n] for n in a.biblioteki.split(",") if n}
     t0 = time.perf_counter()
     bib = rdzen.wczytaj_biblioteki(opisy, a.szer_rob)
@@ -191,7 +193,7 @@ def main():
         sys.exit("brak biblioteki mini (dane/mini) — usługa nie wystartuje")
     karta = torch.cuda.get_device_name(0) if DEV.type == "cuda" else ""
     info = dict(ok=DEV.type == "cuda", urzadzenie=DEV.type, karta=karta, metoda=a.metoda, siatka=a.siatka,
-                biblioteki={n: len(b.wpisy) for n, b in bib.items()}, bez_sieci=a.bez_sieci)
+                biblioteki={n: len(b.wpisy) for n, b in bib.items()}, bez_sieci=a.bez_sieci, prog_doboru=a.prog_doboru)
 
     def licz(sciezka, nazwa_bib, typ):
         from przeswit.bmp import wczytaj_szarosc
@@ -199,7 +201,7 @@ def main():
         nazwa, uwaga = rdzen.wybierz(szer, bib, nazwa_bib)
         if nazwa not in bib:
             raise ValueError("nieznana biblioteka %r" % nazwa)
-        w = rdzen.analizuj(sciezka, bib[nazwa], a.metoda, konf, typ)
+        w = rdzen.analizuj(sciezka, bib[nazwa], a.metoda, konf, typ, prog_doboru=pd)
         w["biblioteka"] = nazwa
         if uwaga:
             w["uwaga"] = uwaga

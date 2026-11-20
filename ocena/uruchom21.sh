@@ -1,5 +1,6 @@
 #!/bin/sh
-# Zadanie 21 — dowód na karcie (jedno zlecenie gpu-tlo, trzy hipotezy):
+# Zadanie 21 — dowód na karcie (jedno zlecenie gpu-tlo, cztery hipotezy):
+#  H4 cysterna bez wzorca w bibliotece dostaje „brak wzorca” (próg doboru zad. 33), pozostałe auta nie;
 #  H1 usługa przez HTTP daje te same miejsca co CLI przeswit.wykryj (ta sama metoda, siatka, biblioteka);
 #  H2 z włączoną strażą „bez sieci” (tylko 127.0.0.1) partia pokazowa liczy się w całości;
 #  H3 obraz pełny ~50 MB (8192×2048) przez HTTP < 60 s.
@@ -55,14 +56,18 @@ for b in ("mini", "mini-trudny"):
     for r in json.load(open(f"{wyj}/cli_{b}/wyniki.json"))["wyniki"]:
         k = next(iter(r["konfiguracje"].values()))
         cli[r["plik"]] = (k["typ_wybrany"], sorted((m["x0"], m["y0"], m["x1"], m["y1"]) for m in k["miejsca"]))
-zg = 0
+zg = brak = 0
 for plik, (typ, ramki) in sorted(cli.items()):
     h = http.get(plik, {})
+    if h.get("brak_wzorca"):   # próg doboru (zad. 33) liczy usługa; CLI v3 go nie zna
+        brak += 1
+        print(f"{plik}: http „{h.get('napis')}” (0 miejsc), cli {typ}/{len(ramki)} miejsc — brak wzorca")
+        continue
     hr = sorted((m["x0"], m["y0"], m["x1"], m["y1"]) for m in h.get("miejsca", []))
     ok = h.get("rodzaj") == typ and hr == ramki
     zg += ok
     print(f"{plik}: http {h.get('rodzaj')}/{len(hr)} miejsc, cli {typ}/{len(ramki)} miejsc, czas {h.get('czas_s')} s — {'zgodne' if ok else 'RÓŻNE'}")
-print(f"H1 ZGODNE {zg}/{len(cli)}; H2 partia bez sieci: {sum('blad' not in w for w in http.values())}/{len(http)} policzone")
+print(f"H1 ZGODNE {zg}/{len(cli) - brak} (brak wzorca: {brak}); H2 partia bez sieci: {sum('blad' not in w for w in http.values())}/{len(http)} policzone")
 d = json.load(open(f"{wyj}/duzy_http.json"))
 print(f"H3 duży {d.get('plik')} {d.get('szer')}x{d.get('wys')}: biblioteka {d.get('biblioteka')}, miejsc {len(d.get('miejsca', []))}, "
       f"liczenie {d.get('czas_s')} s, całe żądanie {t1 - t0:.1f} s{' (' + d['blad'] + ')' if 'blad' in d else ''}")

@@ -33,7 +33,7 @@ class TestRdzen(unittest.TestCase):
     def test_analizuj_mapuje_i_sortuje(self):
         konf = {"nazwa": "K"}
 
-        def atrapa(sciezka, bib, konfiguracje, typ_prawda=None, typ_wymuszony=None):
+        def atrapa(sciezka, bib, konfiguracje, typ_prawda=None, typ_wymuszony=None, prog_doboru=None):
             return dict(plik="a.bmp", szer=1024, wys=256, czas_s=0.5, konfiguracje={"K": {
                 "typ_wybrany": "firanka", "wzorce": ["w1"], "miejsca": [
                     {"x0": 0, "y0": 0, "x1": 5, "y1": 5, "wynik": 3.0},
@@ -45,9 +45,45 @@ class TestRdzen(unittest.TestCase):
         self.assertEqual([m["nr"] for m in r["miejsca"]], [1, 2])
         self.assertEqual(r["czas_s"], 0.5)
 
-    def test_siatka_ma_klucze_v2(self):
+    def test_domyslna_v3_z_progiem_doboru(self):
+        self.assertEqual(rdzen.METODA, "v3")
         klucze = {k.split("=")[0] for k in rdzen.SIATKA.split(";")}
-        self.assertLessEqual({"trend", "tolx", "tau", "rho", "konstr", "lad", "min_pole"}, klucze)
+        self.assertLessEqual({"trend", "tolx", "rho", "konstr", "min_pole", "lok", "jas", "wyb", "tau_pud", "tau_pod",
+                              "tau_kab", "scal"}, klucze)
+        self.assertEqual(rdzen.PROG_DOBORU, ("sr", 0.80))
+
+    def test_brak_wzorca_v3_nic_nie_zaznacza(self):
+        wolany = []
+        r = rdzen.analizuj("a.bmp", None, "v3", {"nazwa": "K"}, prog_doboru=("sr", 0.8),
+                           detektor=lambda *a, **k: wolany.append(1), ocena_doboru=lambda s, b, p: True)
+        self.assertEqual(wolany, [])
+        self.assertTrue(r["brak_wzorca"])
+        self.assertEqual(r["miejsca"], [])
+        self.assertIsNone(r["rodzaj"])
+        self.assertEqual(r["napis"], "brak wzorca — sprawdź obraz sam")
+        self.assertEqual(r["plik"], "a.bmp")
+
+    def test_v3_z_wzorcem_liczy(self):
+        atrapa = lambda s, b, k, tp=None, tw=None: dict(plik="a.bmp", czas_s=0.1, konfiguracje={"K": {
+            "typ_wybrany": "kontener", "wzorce": [], "miejsca": [{"x0": 0, "y0": 0, "x1": 1, "y1": 1, "wynik": 2.0}]}})
+        r = rdzen.analizuj("a.bmp", None, "v3", {"nazwa": "K"}, prog_doboru=("sr", 0.8), detektor=atrapa,
+                           ocena_doboru=lambda s, b, p: False)
+        self.assertFalse(r["brak_wzorca"])
+        self.assertEqual(r["rodzaj"], "kontener")
+
+    def test_typ_od_operatora_pomija_prog(self):
+        atrapa = lambda s, b, k, tp=None, tw=None: dict(plik="a.bmp", czas_s=0.1, konfiguracje={"K": {
+            "typ_wybrany": tw, "wzorce": [], "miejsca": []}})
+        r = rdzen.analizuj("a.bmp", None, "v3", {"nazwa": "K"}, typ="cysterna", prog_doboru=("sr", 0.8), detektor=atrapa,
+                           ocena_doboru=lambda s, b, p: True)
+        self.assertEqual(r["rodzaj"], "cysterna")
+
+    def test_brak_wzorca_v2_z_detektora(self):
+        atrapa = lambda *a: dict(plik="a.bmp", czas_s=0.1, brak_wzorca=True, konfiguracje={"K": {
+            "typ_wybrany": None, "wzorce": [], "miejsca": [], "napis": "brak wzorca — sprawdź obraz sam"}})
+        r = rdzen.analizuj("a.bmp", None, "v2", {"nazwa": "K"}, prog_doboru=("sr", 0.8), detektor=atrapa)
+        self.assertTrue(r["brak_wzorca"])
+        self.assertEqual(r["napis"], "brak wzorca — sprawdź obraz sam")
 
     def test_partia_pliki_istnieja(self):
         with open(os.path.join(KORZEN, "usluga", "partia-pokazowa.json")) as f:
