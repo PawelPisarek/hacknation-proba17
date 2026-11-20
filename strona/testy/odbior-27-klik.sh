@@ -72,8 +72,9 @@ const j=pliki.find(f=>f.endsWith(".json")),c=pliki.find(f=>f.endsWith(".csv"));
 if(!j||!c){console.log("BŁĄD brak pobranych plików: "+pliki);process.exit(1)}
 const r=JSON.parse(fs.readFileSync(p+"/"+j,"utf8")),a7=r.find(x=>x.auto===7),a1=r.find(x=>x.auto===1);
 if(!a7.rodzaj_programu.startsWith(n(prog))||a7.rodzaj_operatora!==n(nowy)||a7.decyzje[0].decyzja!=="zatwierdzone")throw "auto 7: "+JSON.stringify(a7);
+const a2=r.find(x=>x.auto===2);if(a2.rodzaj_operatora!=="—")throw "auto 2 bez zmiany: rodzaj_operatora="+JSON.stringify(a2.rodzaj_operatora);
 if(a1.rodzaj_operatora!=="cysterna"||a1.liczba_miejsc!==0)throw "auto 1: "+JSON.stringify(a1);
-console.log("ok  .json auto 7: rodzaj_programu="+a7.rodzaj_programu+", rodzaj_operatora="+a7.rodzaj_operatora+", "+a7.liczba_miejsc+" miejsc; auto 1: operator=cysterna, 0 miejsc");
+console.log("ok  .json auto 7: rodzaj_programu="+a7.rodzaj_programu+", rodzaj_operatora="+a7.rodzaj_operatora+", "+a7.liczba_miejsc+" miejsc; auto 1: operator=cysterna, 0 miejsc; auto 2 bez zmiany: operator „—”");
 const k=fs.readFileSync(p+"/"+c,"utf8").replace(/^﻿/,"").split("\n"),h=k[0].split(";"),w=k.slice(1).map(l=>l.split(";")).filter(x=>x[1]==="7");
 const ip=h.indexOf("rodzaj_programu"),io=h.indexOf("rodzaj_operatora");
 if(!w.length||!w.every(x=>x[ip].startsWith(n(prog))&&x[io]===n(nowy)))throw "csv auto 7: "+JSON.stringify(w[0]);

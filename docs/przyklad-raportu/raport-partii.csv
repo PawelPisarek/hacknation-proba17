@@ -1,63 +1,63 @@
 ﻿id_kontroli;auto;plik;nr_rej;rodzaj_programu;rodzaj_operatora;miejsce;decyzja;powod;kto;miejsce_kontroli;data_godzina
-K-20261120-327;1;skan_01.bmp;;firanka;;1;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;1;skan_01.bmp;;firanka;;2;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;1;skan_01.bmp;;firanka;;3;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;1;skan_01.bmp;;firanka;;4;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;1;skan_01.bmp;;firanka;;5;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;1;skan_01.bmp;;firanka;;6;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;1;skan_01.bmp;;firanka;;7;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;1;skan_01.bmp;;firanka;;8;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;1;skan_01.bmp;;firanka;;9;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;1;skan_01.bmp;;firanka;;10;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;1;skan_01.bmp;;firanka;;11;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;1;skan_01.bmp;;firanka;;12;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;1;skan_01.bmp;;firanka;;13;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;1;skan_01.bmp;;firanka;;14;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;1;skan_01.bmp;;firanka;;15;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;1;skan_01.bmp;;firanka;;16;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;1;skan_01.bmp;;firanka;;17;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;1;skan_01.bmp;;firanka;;18;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;1;skan_01.bmp;;firanka;;19;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;2;skan_02.bmp;WGM 12345;firanka;;1;odrzucone;element konstrukcji;SCS Kowalski;Terespol — stanowisko 2;20.11.2026, 19:35
-K-20261120-327;2;skan_02.bmp;WGM 12345;firanka;;2;odrzucone;nakładanie się ładunku;SCS Kowalski;Terespol — stanowisko 2;20.11.2026, 19:35
-K-20261120-327;2;skan_02.bmp;WGM 12345;firanka;;3;odrzucone;pusta paleta;SCS Kowalski;Terespol — stanowisko 2;20.11.2026, 19:35
-K-20261120-327;2;skan_02.bmp;WGM 12345;firanka;;4;zatwierdzone;;SCS Kowalski;Terespol — stanowisko 2;20.11.2026, 19:35
-K-20261120-327;2;skan_02.bmp;WGM 12345;firanka;;5;zatwierdzone;;SCS Kowalski;Terespol — stanowisko 2;20.11.2026, 19:35
-K-20261120-327;2;skan_02.bmp;WGM 12345;firanka;;6;zatwierdzone;;SCS Kowalski;Terespol — stanowisko 2;20.11.2026, 19:35
-K-20261120-327;2;skan_02.bmp;WGM 12345;firanka;;7;zatwierdzone;;SCS Kowalski;Terespol — stanowisko 2;20.11.2026, 19:35
-K-20261120-327;2;skan_02.bmp;WGM 12345;firanka;;8;zatwierdzone;;SCS Kowalski;Terespol — stanowisko 2;20.11.2026, 19:35
-K-20261120-327;3;skan_03.bmp;;chłodnia;;1;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;3;skan_03.bmp;;chłodnia;;2;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;3;skan_03.bmp;;chłodnia;;3;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;3;skan_03.bmp;;chłodnia;;4;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;3;skan_03.bmp;;chłodnia;;5;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;3;skan_03.bmp;;chłodnia;;6;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;4;skan_04.bmp;;kontener;;1;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;4;skan_04.bmp;;kontener;;2;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;4;skan_04.bmp;;kontener;;3;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;4;skan_04.bmp;;kontener;;4;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;4;skan_04.bmp;;kontener;;5;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;4;skan_04.bmp;;kontener;;6;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;4;skan_04.bmp;;kontener;;7;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;4;skan_04.bmp;;kontener;;8;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;5;skan_05.bmp;;kontener;;1;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;5;skan_05.bmp;;kontener;;2;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;5;skan_05.bmp;;kontener;;3;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;5;skan_05.bmp;;kontener;;4;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;5;skan_05.bmp;;kontener;;5;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;5;skan_05.bmp;;kontener;;6;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;5;skan_05.bmp;;kontener;;7;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;5;skan_05.bmp;;kontener;;8;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;5;skan_05.bmp;;kontener;;9;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;6;skan_06.bmp;;nieustalony (brak wzorca);;;;;—;Terespol — stanowisko 2;—
-K-20261120-327;7;skan_07.bmp;;firanka;;1;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;7;skan_07.bmp;;firanka;;2;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;7;skan_07.bmp;;firanka;;3;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;7;skan_07.bmp;;firanka;;4;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;7;skan_07.bmp;;firanka;;5;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;7;skan_07.bmp;;firanka;;6;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;7;skan_07.bmp;;firanka;;7;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;7;skan_07.bmp;;firanka;;8;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;7;skan_07.bmp;;firanka;;9;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;7;skan_07.bmp;;firanka;;10;brak decyzji;;—;Terespol — stanowisko 2;—
-K-20261120-327;7;skan_07.bmp;;firanka;;11;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;1;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;2;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;3;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;4;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;5;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;6;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;7;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;8;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;9;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;10;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;11;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;12;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;13;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;14;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;15;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;16;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;17;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;18;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;1;skan_01.bmp;;firanka;—;19;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;2;skan_02.bmp;WGM 12345;firanka;—;1;odrzucone;element konstrukcji;SCS Kowalski;Terespol — stanowisko 2;20.11.2026, 19:35
+K-20261120-327;2;skan_02.bmp;WGM 12345;firanka;—;2;odrzucone;nakładanie się ładunku;SCS Kowalski;Terespol — stanowisko 2;20.11.2026, 19:35
+K-20261120-327;2;skan_02.bmp;WGM 12345;firanka;—;3;odrzucone;pusta paleta;SCS Kowalski;Terespol — stanowisko 2;20.11.2026, 19:35
+K-20261120-327;2;skan_02.bmp;WGM 12345;firanka;—;4;zatwierdzone;;SCS Kowalski;Terespol — stanowisko 2;20.11.2026, 19:35
+K-20261120-327;2;skan_02.bmp;WGM 12345;firanka;—;5;zatwierdzone;;SCS Kowalski;Terespol — stanowisko 2;20.11.2026, 19:35
+K-20261120-327;2;skan_02.bmp;WGM 12345;firanka;—;6;zatwierdzone;;SCS Kowalski;Terespol — stanowisko 2;20.11.2026, 19:35
+K-20261120-327;2;skan_02.bmp;WGM 12345;firanka;—;7;zatwierdzone;;SCS Kowalski;Terespol — stanowisko 2;20.11.2026, 19:35
+K-20261120-327;2;skan_02.bmp;WGM 12345;firanka;—;8;zatwierdzone;;SCS Kowalski;Terespol — stanowisko 2;20.11.2026, 19:35
+K-20261120-327;3;skan_03.bmp;;chłodnia;—;1;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;3;skan_03.bmp;;chłodnia;—;2;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;3;skan_03.bmp;;chłodnia;—;3;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;3;skan_03.bmp;;chłodnia;—;4;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;3;skan_03.bmp;;chłodnia;—;5;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;3;skan_03.bmp;;chłodnia;—;6;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;4;skan_04.bmp;;kontener;—;1;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;4;skan_04.bmp;;kontener;—;2;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;4;skan_04.bmp;;kontener;—;3;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;4;skan_04.bmp;;kontener;—;4;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;4;skan_04.bmp;;kontener;—;5;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;4;skan_04.bmp;;kontener;—;6;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;4;skan_04.bmp;;kontener;—;7;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;4;skan_04.bmp;;kontener;—;8;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;5;skan_05.bmp;;kontener;—;1;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;5;skan_05.bmp;;kontener;—;2;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;5;skan_05.bmp;;kontener;—;3;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;5;skan_05.bmp;;kontener;—;4;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;5;skan_05.bmp;;kontener;—;5;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;5;skan_05.bmp;;kontener;—;6;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;5;skan_05.bmp;;kontener;—;7;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;5;skan_05.bmp;;kontener;—;8;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;5;skan_05.bmp;;kontener;—;9;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;6;skan_06.bmp;;nieustalony (brak wzorca);—;;;;—;Terespol — stanowisko 2;—
+K-20261120-327;7;skan_07.bmp;;firanka;—;1;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;7;skan_07.bmp;;firanka;—;2;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;7;skan_07.bmp;;firanka;—;3;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;7;skan_07.bmp;;firanka;—;4;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;7;skan_07.bmp;;firanka;—;5;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;7;skan_07.bmp;;firanka;—;6;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;7;skan_07.bmp;;firanka;—;7;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;7;skan_07.bmp;;firanka;—;8;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;7;skan_07.bmp;;firanka;—;9;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;7;skan_07.bmp;;firanka;—;10;brak decyzji;;—;Terespol — stanowisko 2;—
+K-20261120-327;7;skan_07.bmp;;firanka;—;11;brak decyzji;;—;Terespol — stanowisko 2;—

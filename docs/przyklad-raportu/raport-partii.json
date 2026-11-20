@@ -6,7 +6,7 @@
     "nr_rej": "",
     "rodzaj_programu": "firanka",
     "bez_wzorca": false,
-    "rodzaj_operatora": "",
+    "rodzaj_operatora": "—",
     "liczba_miejsc": 19,
     "wynik_przykladowy": false,
     "decyzje": [
@@ -119,7 +119,7 @@
     "nr_rej": "WGM 12345",
     "rodzaj_programu": "firanka",
     "bez_wzorca": false,
-    "rodzaj_operatora": "",
+    "rodzaj_operatora": "—",
     "liczba_miejsc": 8,
     "wynik_przykladowy": false,
     "decyzje": [
@@ -177,7 +177,7 @@
     "nr_rej": "",
     "rodzaj_programu": "chłodnia",
     "bez_wzorca": false,
-    "rodzaj_operatora": "",
+    "rodzaj_operatora": "—",
     "liczba_miejsc": 6,
     "wynik_przykladowy": false,
     "decyzje": [
@@ -225,7 +225,7 @@
     "nr_rej": "",
     "rodzaj_programu": "kontener",
     "bez_wzorca": false,
-    "rodzaj_operatora": "",
+    "rodzaj_operatora": "—",
     "liczba_miejsc": 8,
     "wynik_przykladowy": false,
     "decyzje": [
@@ -283,7 +283,7 @@
     "nr_rej": "",
     "rodzaj_programu": "kontener",
     "bez_wzorca": false,
-    "rodzaj_operatora": "",
+    "rodzaj_operatora": "—",
     "liczba_miejsc": 9,
     "wynik_przykladowy": false,
     "decyzje": [
@@ -346,7 +346,7 @@
     "nr_rej": "",
     "rodzaj_programu": "nieustalony (brak wzorca)",
     "bez_wzorca": true,
-    "rodzaj_operatora": "",
+    "rodzaj_operatora": "—",
     "liczba_miejsc": 0,
     "wynik_przykladowy": false,
     "decyzje": [],
@@ -363,7 +363,7 @@
     "nr_rej": "",
     "rodzaj_programu": "firanka",
     "bez_wzorca": false,
-    "rodzaj_operatora": "",
+    "rodzaj_operatora": "—",
     "liczba_miejsc": 11,
     "wynik_przykladowy": false,
     "decyzje": [

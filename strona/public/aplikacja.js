@@ -290,7 +290,7 @@ $("z-zast").onclick = async () => {   // P24 B, P27 A: przeliczenie od nowa z ro
 function wierszeRaportu() {
   return S.partia.filter((a) => !a.zepsuty).map((a) => ({
     id_kontroli: S.idKontroli, auto: a.id, plik: nazwaAuta(a), nr_rej: a.nr || "",
-    rodzaj_programu: (a.rodzaj ? NAZWA[a.rodzaj] : "nieustalony") + (Z_WZORCEM.includes(a.rodzaj) ? "" : " (brak wzorca)"), bez_wzorca: brakWzorca(a), rodzaj_operatora: a.rodzajOperatora ? NAZWA[a.rodzajOperatora] : "",
+    rodzaj_programu: (a.rodzaj ? NAZWA[a.rodzaj] : "nieustalony") + (Z_WZORCEM.includes(a.rodzaj) ? "" : " (brak wzorca)"), bez_wzorca: brakWzorca(a), rodzaj_operatora: a.rodzajOperatora ? NAZWA[a.rodzajOperatora] : "—",   // odbiór 27: „—” jak w tabeli
     liczba_miejsc: brakWzorca(a) ? 0 : a.miejsca.length, wynik_przykladowy: !!a.wlasny,
     decyzje: a.miejsca.map((x, i) => ({ nr: i + 1, decyzja: a.decyzje[i]?.d || "brak decyzji", powod: a.decyzje[i]?.powod || "" })),
     kto: a.kiedy ? S.kto : "—", miejsce_kontroli: S.miejsce, data_godzina: a.kiedy || "—",   // P64 A / P22 A: osoba i godzina ostatniej decyzji (decyzja o miejscu albo zamknięcie auta)
