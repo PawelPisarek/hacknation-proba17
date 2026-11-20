@@ -1,0 +1,62 @@
+<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prześwit — wariant C: badany i wzorzec obok siebie</title><link rel="stylesheet" href="../wspolne/styl.css">
+<style>
+.dwa{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:6px;background:#222}
+.dwa h3{margin:0 0 4px;font-size:13px;color:#ddd;font-weight:600;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dwa h3 select{font-size:12px;padding:2px 4px}
+.okno{overflow:auto;background:#000;border-radius:4px}.okno .obraz{transition:width .15s}
+.miniat{display:flex;gap:8px;overflow-x:auto;padding:8px 12px;background:var(--karta);border-top:1px solid var(--linia)}
+.mi{flex:0 0 auto;width:170px;border:2px solid var(--linia);border-radius:6px;padding:4px;cursor:pointer;background:#fff}
+.mi.wyb{border-color:var(--akc)}.mi .para{display:grid;grid-template-columns:1fr 1fr;gap:3px}.mi .lupa{height:60px}
+.mi .opis{font-size:12px;margin-top:3px}.mi .podp{font-size:11px;padding:2px 5px;margin-top:3px}
+.podglad{display:none;padding:8px 12px;background:#fffbe6;border-bottom:1px solid var(--linia)}
+.podglad .dw{display:grid;grid-template-columns:1fr 1fr;gap:8px}.podglad img{width:100%;cursor:pointer;border:2px solid transparent;border-radius:3px}.podglad img:hover{border-color:var(--akc)}
+@media(max-width:700px){.dwa{grid-template-columns:1fr}}
+</style></head><body>
+<header><b>Prześwit</b><span class="wariant">makieta — C: badany i wzorzec obok siebie</span><a href="../a/">A</a><a href="../b/">B</a><a href="../c/">C</a></header>
+<div class="pasek"><span class="stan" id="stan"></span><span class="szary" id="ktore"></span>
+<label>Przybliżenie <span class="przel"><button data-z="1" class="on">1×</button><button data-z="2">2×</button><button data-z="4">4×</button></span></label>
+<label>Nr rej. <span id="nr"></span></label></div>
+<div class="podglad" id="podglad"><div class="szary" style="margin-bottom:6px">Dwa najbliższe wzorce rodzaju <b id="podrodz"></b> — kliknij, który pasuje:</div><div class="dw" id="dw"></div></div>
+<div class="dwa"><div><h3>BADANY <span id="nramek"></span></h3><div class="okno" id="ob"><div class="obraz" id="obB"><img id="imgB" alt="obraz badany"></div></div></div>
+<div><h3>WZORZEC <span id="rodzaj"></span></h3><div class="okno" id="ow"><div class="obraz" id="obW"><img id="imgW" alt="wzorzec"></div></div></div></div>
+<div class="miniat" id="miniat"></div>
+<div class="decyzja" id="dec"></div>
+<div class="decyzja"><button class="btn jasny" id="poprz">« poprzednie auto</button><button class="btn jasny" id="nasta">następne auto »</button></div>
+<p class="makieta">Makieta: udawane dane (obrazy z dane/mini, ramki wpisane na sztywno). Przewijanie i przybliżanie obu obrazów jest wspólne.</p>
+<script src="../wspolne/dane.js"></script><script>
+let ia=0, im=0, zoom=1, wz=0;
+const $=(i)=>document.getElementById(i);
+const kl=(m)=>m.slowo==="wysoki"?"s3":m.slowo==="średni"?"s2":"s1";
+const ustaw=(id,u)=>{if($(id).getAttribute("src")!==u)$(id).setAttribute("src",u);};
+function pokaz(){
+  const a=AUTA[ia]; ustaw("imgB",obrazBadany(a));
+  $("stan").textContent="gotowe "+AUTA.length+"/"+AUTA.length; $("ktore").textContent="auto "+(ia+1)+" z "+AUTA.length;
+  $("nr").replaceChildren(poleNrRej(a));
+  $("rodzaj").replaceChildren(selectRodzaj(a,(r)=>{ if(!r) return; $("podrodz").textContent=NAZWA[r];
+    $("dw").innerHTML=[0,1].map(i=>'<img data-i="'+i+'" src="'+obrazWzorca(r,i)+'" alt="wzorzec '+(i+1)+'">').join(""); $("podglad").style.display="block";
+    $("dw").querySelectorAll("img").forEach(im2=>im2.onclick=()=>{a.rodzaj=r;wz=+im2.dataset.i;$("podglad").style.display="none";im=0;pokaz();}); }));
+  ["obB","obW"].forEach(id=>{$(id).style.width=(100*zoom)+"%"; $(id).querySelector(".brakwz")?.remove();});
+  if(!a.rodzaj){ $("obB").querySelectorAll(".ramka").forEach(r=>r.remove()); $("imgW").removeAttribute("src"); $("imgW").alt="";
+    const d=document.createElement("div"); d.className="brakwz"; d.textContent=BRAK_WZORCA; $("obB").appendChild(d);
+    $("obW").style.minHeight="60px"; $("nramek").textContent=""; $("miniat").innerHTML='<span class="podp">'+BRAK_WZORCA+' — wybierz rodzaj po prawej, jeśli go znasz.</span>'; decyzjaUI($("dec"),a,null); return; }
+  ustaw("imgW",obrazWzorca(a.rodzaj,wz)); $("imgW").alt="wzorzec";
+  rysujRamki($("obB"),a,im,wybierz);
+  // to samo miejsce na wzorcu: ramka przerywana bez decyzji
+  $("obW").querySelectorAll(".ramka").forEach(r=>r.remove());
+  a.miejsca.forEach((m,i)=>{const r=document.createElement("div");r.className="ramka "+kl(m)+(i===im?" wyb":"");r.style.cssText="border-style:dashed;left:"+pct(m.x0,W)+";top:"+pct(m.y0,H)+";width:"+pct(m.x1-m.x0,W)+";height:"+pct(m.y1-m.y0,H);r.innerHTML="<span>"+(i+1)+"</span>";$("obW").appendChild(r);});
+  $("nramek").textContent="ramki "+a.miejsca.map((_,i)=>i+1).join(" ");
+  $("miniat").innerHTML=a.miejsca.map((m,i)=>{const d=decyzja(a,i);return '<div class="mi '+(i===im?"wyb":"")+'" data-i="'+i+'"><div class="para"><div class="lupa" data-l="b"></div><div class="lupa" data-l="w"></div></div><div class="opis"><b>'+(i+1)+'</b> <span class="slowo '+kl(m)+'">'+m.slowo+'</span> '+(d?(d.d==="zatwierdzone"?"✓":"✗ "+d.powod):"")+'</div><div class="podp">'+podpowiedz(a,m)+'</div></div>';}).join("");
+  $("miniat").querySelectorAll(".mi").forEach(el=>{const m=a.miejsca[+el.dataset.i]; rysujLupe(el.querySelector('[data-l="b"]'),obrazBadany(a),m,6); rysujLupe(el.querySelector('[data-l="w"]'),obrazWzorca(a.rodzaj,wz),m,6); el.onclick=()=>wybierz(+el.dataset.i,true);});
+  decyzjaUI($("dec"),a,im,()=>{const n=a.miejsca.findIndex((_,i)=>!decyzja(a,i)); if(n>=0) wybierz(n,true); else pokaz();});
+}
+function wybierz(i,przybliz){ im=i; if(przybliz&&zoom<4){zoom=4;przyciski();} pokaz(); const a=AUTA[ia],m=a.miejsca[i]; if(!m) return;
+  const o=$("ob"); requestAnimationFrame(()=>{const sw=o.scrollWidth,sh=o.scrollHeight; o.scrollLeft=(m.x0+m.x1)/2/W*sw-o.clientWidth/2; o.scrollTop=(m.y0+m.y1)/2/H*sh-o.clientHeight/2; synch(o,$("ow"));}); }
+function synch(z,d){d.scrollLeft=z.scrollLeft;d.scrollTop=z.scrollTop;}
+let blok=false; [["ob","ow"],["ow","ob"]].forEach(([z,d])=>$(z).addEventListener("scroll",()=>{if(blok)return;blok=true;synch($(z),$(d));requestAnimationFrame(()=>blok=false);}));
+function przyciski(){document.querySelectorAll("[data-z]").forEach(b=>b.className=(+b.dataset.z===zoom)?"on":"");}
+document.querySelectorAll("[data-z]").forEach(b=>b.onclick=()=>{zoom=+b.dataset.z;przyciski();pokaz();});
+$("nasta").onclick=()=>{ia=(ia+1)%AUTA.length;im=0;wz=0;zoom=1;przyciski();pokaz();};
+$("poprz").onclick=()=>{ia=(ia+AUTA.length-1)%AUTA.length;im=0;wz=0;zoom=1;przyciski();pokaz();};
+$("imgB").onload=pokaz; addEventListener("resize",pokaz); pokaz();
+</script></body></html>

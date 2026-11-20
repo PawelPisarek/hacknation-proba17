@@ -1,0 +1,49 @@
+<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prześwit — wariant A: jeden obraz na cały ekran</title><link rel="stylesheet" href="../wspolne/styl.css">
+<style>
+.uklad{display:flex;align-items:stretch}.uklad .obraz{flex:1}
+.lista{width:230px;background:var(--karta);border-left:1px solid var(--linia);padding:8px;overflow:auto}
+.lista.zlozona{width:auto;padding:4px}.lista.zlozona ol{display:none}
+.lista ol{margin:6px 0 0;padding-left:20px}.lista li{cursor:pointer;padding:3px 0}.lista li.wyb{font-weight:700}
+.pod{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:10px;padding:10px 12px;background:var(--karta)}
+@media(max-width:700px){.pod{grid-template-columns:1fr}.lista{position:absolute;right:0;z-index:5;max-height:70vh}.uklad{position:relative}}
+</style></head><body>
+<header><b>Prześwit</b><span class="wariant">makieta — A: jeden obraz na cały ekran</span><a href="../a/">A</a><a href="../b/">B</a><a href="../c/">C</a></header>
+<div class="pasek"><label>Rodzaj <span id="rodzaj"></span></label><label>Nr rej. <span id="nr"></span></label>
+<span class="stan" id="stan"></span><span class="szary" id="ktore"></span></div>
+<div class="uklad"><div class="obraz" id="obraz"><img id="img" alt="obraz RTG naczepy"></div>
+<aside class="lista zlozona" id="lista"><button class="btn jasny" id="zwin">Lista ›</button><ol id="ol"></ol></aside></div>
+<div class="pod" id="pod"><div><div class="lupa" id="lupa"></div></div>
+<div><div class="przel"><button id="pb" class="on">badane</button><button id="pw">wzorzec</button></div>
+<p id="opis"></p><p class="podp" id="podp"></p></div></div>
+<div class="decyzja" id="dec"></div>
+<div class="decyzja"><button class="btn jasny" id="poprz">« poprzednie auto</button><button class="btn jasny" id="nastm">następne miejsce ›</button><button class="btn jasny" id="nasta">następne auto »</button></div>
+<p class="makieta">Makieta: udawane dane (obrazy z dane/mini, ramki wpisane na sztywno). Klik ramki = lupa; strzałka „następne miejsce” idzie od najbardziej różnego.</p>
+<script src="../wspolne/dane.js"></script><script>
+let ia=0, im=0, zrodlo="b";
+const $=(i)=>document.getElementById(i);
+function pokaz(){
+  const a=AUTA[ia]; const u=obrazBadany(a); if($("img").getAttribute("src")!==u) $("img").setAttribute("src",u);
+  $("rodzaj").replaceChildren(selectRodzaj(a,(r)=>{a.rodzaj=r||null;pokaz();})); $("nr").replaceChildren(poleNrRej(a));
+  $("stan").textContent="gotowe "+AUTA.length+"/"+AUTA.length; $("ktore").textContent="auto "+(ia+1)+" z "+AUTA.length+" · zostało miejsc: "+ileZostalo(a);
+  const o=$("obraz"); o.querySelector(".brakwz")?.remove();
+  if(!a.rodzaj){ o.querySelectorAll(".ramka").forEach(r=>r.remove()); const d=document.createElement("div"); d.className="brakwz"; d.textContent=BRAK_WZORCA; o.appendChild(d);
+    $("pod").style.display="none"; $("ol").innerHTML=""; decyzjaUI($("dec"),a,null); return; }
+  $("pod").style.display="";
+  rysujRamki(o,a,im,(i)=>{im=i;pokaz();});
+  $("ol").innerHTML=a.miejsca.map((m,i)=>'<li class="'+(i===im?"wyb":"")+'" data-i="'+i+'">'+(i+1)+' <span class="slowo '+(m.slowo==="wysoki"?"s3":m.slowo==="średni"?"s2":"s1")+'">'+m.slowo+'</span>'+(decyzja(a,i)?(decyzja(a,i).d==="zatwierdzone"?" ✓":" ✗"):"")+'</li>').join("");
+  $("ol").querySelectorAll("li").forEach(li=>li.onclick=()=>{im=+li.dataset.i;pokaz();});
+  const m=a.miejsca[im]; if(!m){decyzjaUI($("dec"),a,null);return;}
+  rysujLupe($("lupa"), zrodlo==="b"?obrazBadany(a):obrazWzorca(a.rodzaj), m);
+  $("opis").innerHTML="Miejsce "+(im+1)+": różnica od wzorca <span class='slowo'>"+m.slowo+"</span>";
+  $("podp").textContent=podpowiedz(a,m);
+  decyzjaUI($("dec"),a,im,()=>{ if(im<a.miejsca.length-1) im++; pokaz(); });
+}
+$("pb").onclick=()=>{zrodlo="b";$("pb").className="on";$("pw").className="";pokaz();};
+$("pw").onclick=()=>{zrodlo="w";$("pw").className="on";$("pb").className="";pokaz();};
+$("zwin").onclick=()=>{const l=$("lista");l.classList.toggle("zlozona");$("zwin").textContent=l.classList.contains("zlozona")?"Lista ›":"‹ Lista";};
+$("nastm").onclick=()=>{const n=AUTA[ia].miejsca.length; if(n) im=(im+1)%n; pokaz();};
+$("nasta").onclick=()=>{ia=(ia+1)%AUTA.length;im=0;pokaz();};
+$("poprz").onclick=()=>{ia=(ia+AUTA.length-1)%AUTA.length;im=0;pokaz();};
+addEventListener("resize",pokaz); $("img").onload=pokaz; pokaz();
+</script></body></html>

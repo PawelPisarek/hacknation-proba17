@@ -1,0 +1,62 @@
+<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prześwit — wariant B: najpierw lista (kolejka)</title><link rel="stylesheet" href="../wspolne/styl.css">
+<style>
+.partia{max-width:760px;margin:12px auto;background:var(--karta);border:1px solid var(--linia);border-radius:8px}
+.partia h2{font-size:16px;margin:0;padding:10px 12px;border-bottom:1px solid var(--linia)}
+.wiersz{display:flex;gap:10px;align-items:center;padding:8px 12px;border-bottom:1px solid var(--linia);cursor:pointer}
+.wiersz:hover{background:#f0f5fb}.wiersz img{width:150px;border-radius:3px}.wiersz .op{flex:1}
+.ekran{display:grid;grid-template-columns:minmax(260px,340px) minmax(0,1fr);min-height:calc(100vh - 44px)}
+.kolejka{background:var(--karta);border-right:1px solid var(--linia);padding:8px}
+.poz{border:1px solid var(--linia);border-radius:6px;padding:8px;margin-bottom:8px;cursor:pointer}
+.poz.wyb{border-color:var(--akc);box-shadow:0 0 0 2px #cfe1f5}.poz.zrobione{opacity:.6}
+.poz .gora{display:flex;gap:8px;align-items:center}.poz .gora .sp{flex:1}
+.poz button{border:1px solid var(--linia);background:#fff;border-radius:5px;padding:3px 9px;cursor:pointer}
+.prawa{padding:10px;display:flex;flex-direction:column;gap:10px}
+@media(max-width:760px){.ekran{grid-template-columns:1fr}.kolejka{border-right:0;border-bottom:1px solid var(--linia)}.wiersz img{width:100px}}
+</style></head><body>
+<header><b>Prześwit</b><span class="wariant">makieta — B: najpierw lista (kolejka)</span><a href="../a/">A</a><a href="../b/">B</a><a href="../c/">C</a></header>
+<div id="ekran-partia"><div class="partia"><h2>Partia: <span id="ile"></span> <span class="stan">gotowe</span></h2><div id="wiersze"></div></div>
+<p class="makieta" style="text-align:center">Makieta: udawane dane (obrazy z dane/mini, ramki wpisane na sztywno). Pierwszy ekran = lista wyników partii.</p></div>
+<div id="ekran-auto" style="display:none"><div class="ekran">
+<div class="kolejka"><button class="btn jasny" id="wroc">‹ partia</button> <span class="szary" id="zostalo"></span><div id="poz" style="margin-top:8px"></div>
+<div id="koniec" style="display:none"><button class="btn ok" id="zamknij">Zamknij auto · raport</button></div></div>
+<div class="prawa"><div class="obraz" id="obraz"><img id="img" alt="obraz RTG naczepy"></div>
+<div id="lupablok"><div class="lupa" id="lupa"></div><div style="margin-top:6px" class="przel"><button id="pb" class="on">badane</button><button id="pw">wzorzec</button></div></div>
+<div class="pasek" style="border:1px solid var(--linia);border-radius:6px"><label>Rodzaj <span id="rodzaj"></span></label><label>Nr rej. <span id="nr"></span></label></div>
+<div id="raport" style="display:none" class="podp"></div></div></div></div>
+<script src="../wspolne/dane.js"></script><script>
+let ia=0, im=0, zrodlo="b";
+const $=(i)=>document.getElementById(i);
+const kl=(m)=>m.slowo==="wysoki"?"s3":m.slowo==="średni"?"s2":"s1";
+function partia(){
+  $("ekran-partia").style.display=""; $("ekran-auto").style.display="none";
+  $("ile").textContent=AUTA.length+" aut,";
+  $("wiersze").innerHTML=AUTA.map((a,i)=>'<div class="wiersz" data-i="'+i+'"><img src="'+obrazBadany(a)+'" alt=""><div class="op"><b>Auto '+a.id+'</b> · '+(a.rodzaj?NAZWA[a.rodzaj]:"?")+(NRREJ[a.id]?" · "+NRREJ[a.id]:"")+'<br><span class="szary">'+(a.rodzaj?a.miejsca.length+" miejsc · zostało "+ileZostalo(a):'<span class="stan brak">'+BRAK_WZORCA+'</span>')+'</span></div><span class="stan">gotowe</span></div>').join("");
+  $("wiersze").querySelectorAll(".wiersz").forEach(w=>w.onclick=()=>{ia=+w.dataset.i;im=Math.max(0,AUTA[ia].miejsca.findIndex((_,i)=>!decyzja(AUTA[ia],i)));auto();});
+}
+function auto(){
+  $("ekran-partia").style.display="none"; $("ekran-auto").style.display=""; $("raport").style.display="none";
+  const a=AUTA[ia]; const u=obrazBadany(a); if($("img").getAttribute("src")!==u) $("img").setAttribute("src",u);
+  $("rodzaj").replaceChildren(selectRodzaj(a,(r)=>{a.rodzaj=r||null;im=0;auto();})); $("nr").replaceChildren(poleNrRej(a));
+  const o=$("obraz"); o.querySelector(".brakwz")?.remove();
+  if(!a.rodzaj){ o.querySelectorAll(".ramka").forEach(r=>r.remove()); const d=document.createElement("div"); d.className="brakwz"; d.textContent=BRAK_WZORCA; o.appendChild(d);
+    $("poz").innerHTML='<p class="podp">'+BRAK_WZORCA+'. Program nie zaznacza miejsc, gdy nie ma wzorca tego rodzaju.</p>'; $("lupablok").style.display="none"; $("zostalo").textContent=""; $("koniec").style.display=""; return; }
+  $("lupablok").style.display="";
+  rysujRamki(o,a,im,(i)=>{im=i;auto();});
+  $("zostalo").textContent="zostało: "+ileZostalo(a)+" z "+a.miejsca.length;
+  $("poz").innerHTML=a.miejsca.map((m,i)=>{const d=decyzja(a,i);return '<div class="poz '+(i===im?"wyb ":"")+(d?"zrobione":"")+'" data-i="'+i+'"><div class="gora"><b>'+(i+1)+'</b><span class="slowo '+kl(m)+' sp">'+m.slowo+'</span>'+(d?'<span class="szary">'+(d.d==="zatwierdzone"?"✓":"✗ "+d.powod)+'</span>':'<button data-ok="'+i+'" title="zatwierdź">✓</button><button data-nie="'+i+'" title="odrzuć">✗</button>')+'</div><div class="szary">„'+podpowiedz(a,m)+'”</div>'+(i===im&&!d?'<div class="decyzja" id="dec" style="padding:6px 0 0;border:0"></div>':'')+'</div>';}).join("");
+  $("poz").querySelectorAll(".poz").forEach(p=>p.onclick=(e)=>{if(e.target.closest("select,input,button"))return; im=+p.dataset.i;auto();});
+  $("poz").querySelectorAll("[data-ok]").forEach(b=>b.onclick=()=>{DECYZJE[a.id+":"+b.dataset.ok]={d:"zatwierdzone"};dalej();});
+  $("poz").querySelectorAll("[data-nie]").forEach(b=>b.onclick=()=>{im=+b.dataset.nie;auto();$("dec").querySelector(".powod").focus();});
+  if($("dec")) decyzjaUI($("dec"),a,im,dalej);
+  $("koniec").style.display=ileZostalo(a)?"none":"";
+  const m=a.miejsca[im]; if(m) rysujLupe($("lupa"), zrodlo==="b"?obrazBadany(a):obrazWzorca(a.rodzaj), m);
+}
+function dalej(){const a=AUTA[ia];const n=a.miejsca.findIndex((_,i)=>!decyzja(a,i));if(n>=0)im=n;auto();}
+$("zamknij").onclick=()=>{const a=AUTA[ia];const z=a.miejsca.filter((_,i)=>decyzja(a,i)?.d==="zatwierdzone").length;
+  $("raport").style.display="";$("raport").innerHTML="<b>Raport auta "+a.id+"</b> · nr rej. "+(NRREJ[a.id]||"—")+" · rodzaj "+(a.rodzaj?NAZWA[a.rodzaj]:"brak wzorca")+" · zatwierdzone miejsca: "+z+" · odrzucone: "+(a.miejsca.length-z)+'<br><button class="btn jasny" id="nast" style="margin-top:6px">następne auto »</button>';
+  $("nast").onclick=()=>{ia=(ia+1)%AUTA.length;im=0;auto();};};
+$("pb").onclick=()=>{zrodlo="b";$("pb").className="on";$("pw").className="";auto();};
+$("pw").onclick=()=>{zrodlo="w";$("pw").className="on";$("pb").className="";auto();};
+$("wroc").onclick=partia; addEventListener("resize",()=>{if($("ekran-auto").style.display==="")auto();}); $("img").onload=()=>auto(); partia();
+</script></body></html>
