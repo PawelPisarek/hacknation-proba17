@@ -98,6 +98,15 @@ class TestSerwer(unittest.TestCase):
         for zle in ("partia=99", "partia=x", "biblioteka=mini&id=nie", "id=../../etc/passwd", ""):
             self.assertEqual(zadanie(self.url + "/obraz?" + zle)[0], 404, zle)
 
+    def test_sklad_partii_jak_pm06(self):
+        # zad. 41: skład z docs/pm/06 (auto 1..7) i spec §7
+        with open(serwer.PARTIA) as f:
+            pliki = [os.path.basename(e["plik"]) for e in json.load(f)]
+        self.assertEqual(pliki, ["badany_mini_firanka_dodatki_00.bmp", "badany_mini_chlodnia_dodatki_01.bmp",
+                                 "badany_mini_kontener_dodatki_01.bmp", "badany_mini_kontener_czyste_00.bmp",
+                                 "badany_mini_firanka_czyste_01.bmp", "badany_mini_cysterna_dodatki_00.bmp",
+                                 "trudny_mini_firanka_za_ladunkiem_00.bmp"])
+
     def test_bezczynnosc(self):
         self.uruchom(bezczynnosc_s=0.5)
         time.sleep(1.5)
