@@ -14,7 +14,7 @@ const BEZ_OPISU = PrzeswitLista.POZA_KONSTRUKCJA;   // P42 — z MVP (P81 A)
 const PRZYKLAD = "makieta: wynik przykładowy, nie z Twojego obrazu";   // P62 A
 const ILE_NA_LISCIE = 6;   // P57 A
 const m = (x0, y0, x1, y1, sila) => ({ x0, y0, x1, y1, sila });
-// P81 A: podpowiedź „zwykle tu…” / P42 — ta sama funkcja i ta sama lista tekstów co MVP (mvp/widok-auta/widok.js,
+// P81 A: podpowiedź strefy / P42 — ta sama funkcja i ta sama lista tekstów co MVP (mvp/widok-auta/widok.js,
 // strefy z dane/generator/z12_z14.py); bez ręcznych opisów. Strefy według rodzaju, z którym program porównuje auto.
 const podpowiedzMiejsca = (x, a) => PrzeswitLista.podpowiedz(x, a.rodzajOperatora || a.rodzaj, W, H);
 // 2 najbliższe wzorce badanego obrazu w każdym rodzaju — z doboru programu v3 (P70 A); brak w doborze → _00, _01
