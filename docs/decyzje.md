@@ -18,3 +18,10 @@ P5 10:59 Artur: według czego porównujemy się z innymi rozwiązaniami? Rekomen
 P6 10:59 Artur: do czego posłuży analiza konkurencji? Rekomendacja: do opisu projektu i wyboru, co ma umieć pierwsza wersja — czeka
 P7 10:59 Artur: kto jest użytkownikiem, jaki ma problem i co zyska? Rekomendacja: operator RTG na granicy; małe skrytki w konstrukcji pojazdu umykają; zyska wskazane miejsca do kontroli fizycznej — czeka
 P8 10:59 Artur: czy konkurenci w analizie są właściwi (producenci skanerów i ich oprogramowanie + obecne narzędzie do papierosów)? Rekomendacja: tak — czeka
+P2 11:00 odpowiedź: Artur w pokoju: wzorzec typu z biblioteki (operator prawie nigdy nie ma czystego zdjęcia tej samej naczepy); system dobiera wzorzec typu sam
+P3 11:00 odpowiedź: Artur w pokoju: operator przy każdym miejscu zatwierdza albo odrzuca, a odrzucając podaje powód; zostaje w raporcie
+P4 11:00 odpowiedź: Artur w pokoju: przeoczenie gorsze (jak w rekomendacji)
+P5 11:00 odpowiedź: Artur w pokoju: przede wszystkim skuteczność (czy wskazuje to, co ukryte); sposób pokazania na drugim miejscu
+P6 11:00 odpowiedź: Artur w pokoju: jak w rekomendacji (opis projektu i wybór zakresu pierwszej wersji)
+P7 11:00 odpowiedź: Artur w pokoju: jak w rekomendacji; dodatkowo operator ma kilka minut na jedno auto
+P8 11:00 odpowiedź: Artur w pokoju: tak, konkurenci właściwi

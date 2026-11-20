@@ -66,3 +66,10 @@ Ryzyka 12–18 mies.: dostawcy sprzętu dodają porównanie ze wzorcem do własn
 
 <!-- skill: competitor-analysis -->
 <!-- skill: przeplywy-pm -->
+
+## Ustalenia Artura (P2–P8)
+- Wzorzec: z biblioteki typów pojazdów, dobierany automatycznie (P2).
+- Operator zatwierdza/odrzuca każde wskazane miejsce, przy odrzuceniu podaje powód; trafia do raportu (P3).
+- Przeoczenie gorsze niż fałszywy alarm (P4). Porównanie z konkurencją: najpierw skuteczność, potem sposób pokazania (P5).
+- Analiza służy opisowi projektu i wyborowi zakresu pierwszej wersji (P6).
+- Użytkownik: operator RTG na granicy, ma kilka minut na jedno auto (P7). Konkurenci właściwi (P8).
