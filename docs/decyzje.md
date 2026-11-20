@@ -263,3 +263,4 @@ PARAMETR: podział słów niski/średni/wysoki = trzy równe części w obrębie
 P46 12:50 Artur: co zamyka sprawę (partię), po której nie zmieniamy decyzji (P41)? A: przycisk „Zamknij partię” w raporcie, po nim wiersz „rozstrzygnięte” i brak zmian; B: sprawa zamyka się sama po zapisie raportu. Rekomendacja: A — czeka
 P47 12:50 Artur: opis projektu mówi „wypatrzyć skrytkę lub dodatkowy ładunek” (nie porównujemy z deklaracją towaru). Zostawić? A: zostawiamy to sformułowanie; B: piszemy „towar spoza zgłoszenia”. Rekomendacja: A — czeka
 P48 12:50 Artur: opis mówi, że każdy kafelek ma podpowiedź „zwykle tu…”, a wg P42 część pokazuje „poza znaną konstrukcją, obejrzyj uważnie”. A: dopisać to do opisu; B: zostawić opis bez wyjątku. Rekomendacja: A — czeka
+12:51 Projektant: spec po odbiorcy R1 wg rekomendacji P44–P48 (czekają na Artura)
