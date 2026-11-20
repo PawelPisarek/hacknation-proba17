@@ -481,3 +481,4 @@ PARAMETR: stan auta bez miejsc otwartego, ale niezamkniętego = „program nic n
 15:25 Szef: krok 8 recenzja R1 — 5 braków (ramki wg P57 A, cel a wynik v3, P80 A i P55 B, docelowo bez internetu P25 A, lupa bez zastrzeżenia) → Projektant poprawia 08-wizja.md; potem recenzja R2 Analityk.
 15:25 Projektant: krok 8 poprawiony po R1 (5 braków): P57 A + 5,8/6,25 ramki; P31 wyniki 7,8%/9,7%, Z8 80%/48%; P80 A, P55 B, cytat P58 A z ekranu; „bez internetu” docelowo (P25 A); lupa z zastrzeżeniem (R20), „uczy się” usunięte. Bez zmiany zakresu, bez pytań P. 08-wizja.md gotowy do recenzji R2
 15:26 Szef: poprawki R3 przyjęte (braki 2, 3, 5, 6, 7 + P80 A; r3 200 sprawdzone) — makieta R3 zamknięta po 3 rundach krytyka; demo.md i slajdy pod P80 A + zrzuty r3 + obejrzenie PDF → Prezenter; Programista dalej zadanie 26.
+15:26 Szef: krok 8 poprawka R1 przyjęta (e37dfe2) → recenzja R2 Analityk.
