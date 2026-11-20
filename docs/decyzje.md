@@ -66,3 +66,11 @@ P21 11:11 Artur: gdzie dziś operatorowi boli najbardziej? Rekomendacja: małe s
 11:11 Projektant: krok 2 — pominięte (praca bez internetu, sztuczne dane, bez człowieka przy analizie, próg alarmu = P4, powody odrzucenia = P13) — z zadania i ustaleń P4/P9/P13
 11:11 Szef: recenzja hacktribe — 4 braki → Prezenter poprawia; nazwa zespołu „Hackathon” (jak wcześniejsza decyzja Pawła); zadanie 03 zbiór trudny
 11:12 Analityk: biorę zadanie 03
+P14 11:12 odpowiedź: Artur w pokoju: cztery rodzaje pojazdów (firanka, chłodnia, kontener, cysterna)
+P15 11:12 odpowiedź: Artur w pokoju: jak w rekomendacji — biblioteka gotowa z naszych czystych obrazów; dokładanie nowych później
+P16 11:12 odpowiedź: Artur w pokoju: brak wzorca → porównanie z najbliższym rodzajem i wyraźny napis „wzorzec przybliżony (<rodzaj> zamiast <rodzaj>)”, wynik mniej pewny
+P17 11:12 odpowiedź: Artur w pokoju: obraz z ponumerowanymi ramkami + lista do zatwierdzenia/odrzucenia, wzorzec obok; przy miejscu jedno słowo różnicy od wzorca (niski/średni/wysoki), bez procentów; lista od najbardziej różnego
+P18 11:12 odpowiedź: Artur w pokoju: jak w rekomendacji + numer rejestracyjny naczepy
+P19 11:12 odpowiedź: Artur w pokoju: funkcjonariusz SCS przy stanowisku RTG; nie zakładać doświadczenia — coraz częściej krótki staż, im narzędzie pomoże najbardziej
+P20 11:12 odpowiedź: Artur w pokoju: kilkadziesiąt aut na zmianę
+P21 11:12 odpowiedź: Artur w pokoju: jak w rekomendacji — skrytki ginące wśród podobnych obrazów, zmęczenie przy powtarzalnej pracy
