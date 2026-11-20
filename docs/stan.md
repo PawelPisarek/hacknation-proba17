@@ -1,19 +1,20 @@
-# Stan — 14:38
+# Stan — 14:39
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
 |---|---|---|
 | zamknięte (start + łańcuch 0–6 + 20, 23, 31, 33) | zespół | 01–04, 05–18 (sondy Z1–Z14; Z12/Z14 przegląd po R1), 19, 20 (v3: FN 7,8%/9,7% ≤10%, ramki 5,8/6,25, 4beef05), 23 (ramki/lista + mvp/widok-auta, 7/7 testów, 6454220), 31 (17/17 OK, 8517f28), 33 (brak wzorca sr<0,80: 50/50 cystern, 0 strat, 6454220), kroki 0–6, README, hacktribe (R3; przepisany pod P57–P72 d3a232b, opis 854/1000 zn.; link r2 sprawdzić po zad. 22 przed 20:00), warianty (P36 C+B), makieta R1 (krytyk 6/10) |
 | P57–P72 w spec, 06 i 07 | Projektant | P57–P72 w spec/06 (103b1a2) + P60 B/P69 A w 07 R3/R9 (d4d4bda) |
-| krok 7 /pre-mortem (07-pre-mortem.md) | Projektant | zamknięty po R3 14:37; liczby v3 wpisane |
-| 22 makieta R2 | Programista | zamknięte 14:14; krytyk R2 7/10 (7 braków, krytyk-r2.md) → Projektant: przegląd Artura + braki 1–6 jako P → R3 Programista po odpowiedziach |
+| krok 7 /pre-mortem (07-pre-mortem.md) | Projektant | zamknięty po R3, liczby v3 wpisane |
+| 22 makieta R2 | Programista | zamknięte; krytyk 7/10; Artur P73–P78 (14:38) |
+| 34 makieta R3 (P73 A, P74 A, P76 A, P77 A, brak 7) | Programista | po 25; słowa auta 7 (P75 B) po 32 |
 | 21 wdrożenie strona + usługa (P43 A) | Paweł | w toku od 13:00 |
 | 30 odbiór A1–A14 + spójność P60 B + demo.md | Analityk (kolejka) | po 32 i recenzji kroku 7 R3 |
 | 32 progi słów (P49 A) | Analityk | w toku od 14:04 (przerwane wywłaszczeniem OMENa 14:34, wznawia po krytyku R2) → 30 |
 | 24–29 funkcje (P34) | Programista | 24 zamknięte 14:31 (A1 0,0 px) → 25 wzorzec w toku od 14:32 (+ końcowe położenie wzorca) → 26 → 27 → 28 → 29; wdrożenie na ksefbot.pl po 21 |
 | docs/demo.md + slajdy | Prezenter | R2: demo 113 s link r2, slajdy R2 10 str., hacktribe bez dopisku (ec96bf7) → recenzja Analityk (zad. 30, kolejność aut R2 vs demo) |
 
-Ustalenia Artura: P2–P56 jak wcześniej; P57 A (6 miejsc + „i jeszcze N miejsc — pokaż”); P58 A („brak wskazań — to nie gwarancja…”); P59 A / P68 (pasek „dane sztuczne — demonstracja”); P60 B (trudny jako 7. auto w partii); P61 A („Dodaj jeden obraz” na liście); P62 A (prawdziwy wybór pliku + napis „wynik przykładowy”); P63 B (ostrzeżenie przy brakach decyzji, zapis po potwierdzeniu); P64 A (godzina decyzji per auto); P65 A („Nowa partia”); P66 A (ukryć pasek E1–E7 i „makieta R1”; porządki makiety bez pytania); P67 A (pokazać 1 pudło w makiecie); P69 A (2 miejsca w aucie 1 w demo); P70 A (2 najbliższe wzorce); P71 (nic więcej nie wyrzucamy); P72 A (miniatura w raporcie po MVP).
-Otwarte pytania: P73–P78 (przegląd R2, Artur, 14:37; telefon z linkiem 14:38 — pokój Produkt czeka na wpis Artura); P49 wartości po zadaniu 32.
+Ustalenia Artura: P2–P56 jak wcześniej; P57 A (6 miejsc + „i jeszcze N miejsc — pokaż”); P58 A („brak wskazań — to nie gwarancja…”); P59 A / P68 (pasek „dane sztuczne — demonstracja”); P60 B (trudny jako 7. auto w partii); P61 A („Dodaj jeden obraz” na liście); P62 A (prawdziwy wybór pliku + napis „wynik przykładowy”); P63 B (ostrzeżenie przy brakach decyzji, zapis po potwierdzeniu); P64 A (godzina decyzji per auto); P65 A („Nowa partia”); P66 A (ukryć pasek E1–E7 i „makieta R1”; porządki makiety bez pytania); P67 A (pokazać 1 pudło w makiecie); P69 A (2 miejsca w aucie 1 w demo); P70 A (2 najbliższe wzorce); P71 (nic więcej nie wyrzucamy); P72 A (miniatura w raporcie po MVP); P73 A etykiety; P74 A „obejrzane, bez wskazań”; P75 B słowa po progach; P76 A ramka w zoomie; P77 A komunikat przy polu; P78 nic nie wyrzucamy; błędy makiety poprawiamy bez pytania.
+Otwarte pytania: brak; P75 B i P49 czekają na wynik zadania 32.
 Środowisko: limit Claude odnowiony 14:00; cały zespół z powrotem na Claude (Paweł), agy tylko zapas.
 Lista Artura na noc: miniatura z zaznaczonymi miejscami w raporcie (po MVP, P72 A).
