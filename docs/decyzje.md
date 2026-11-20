@@ -332,3 +332,7 @@ P56 13:03 odpowiedź: Artur w pokoju: A — przycisk „Zapisz i zamknij partię
   Braki „produkt” (1–10) → Projektant (pokój Produkt); „technika” (11–12) zostają tu.
 13:05 Projektant: P56 A przeniesione do 06, spec (A11, §10) i 05 (wejście, 7.1)
 13:06 Prezenter: demo.md — P56 A w kroku 7 i uwagach
+13:06 Programista: biorę zadanie 23
+13:06 Programista: biorę zadanie 33
+13:06 Programista: zadania 23+33 — jeden przebieg na karcie (ocena/uruchom23_33.sh), hipotezy: H1 miara jakości doboru = najlepsza korelacja pojedynczego wzorca (maks) vs H2 = średnia korelacja najlepszego rodzaju (sr) — która lepiej oddziela cysterny (bez wzorca) od pozostałych; H3 siatka progów (co 0,01) — czy istnieje próg z cysternami 100% „brak wzorca” i pozostałymi bez strat wobec 79/80; H4 (zad. 23) lista z wyniku v2 na dane/mini i mini-trudny spełnia A2–A4 (numery 1…n, kolejność malejąca, stałe progi słów, „brak wskazań”, „brak wzorca” z zerem ramek).
+13:06 Programista: PARAMETR: progi słów różnicy (siła = maks. |różnica tłumienia| w miejscu) wysoki ≥ 0,6, średni ≥ 0,3, poniżej niski — do Artura (P49 / zadanie 32), wartości tymczasowe wg P45 B
