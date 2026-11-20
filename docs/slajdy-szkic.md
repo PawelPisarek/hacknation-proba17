@@ -33,7 +33,7 @@
 - Przy każdym miejscu operator zatwierdza albo odrzuca; powód podaje przy odrzuceniu.
 - Decyzje, powody, kto i kiedy — w raporcie, zapisanym lokalnie jednym przyciskiem.
 - Gdy program nic nie wskazuje: „brak wskazań — to nie gwarancja, że auto jest czyste”.
-- ![odrzucenie miejsca z powodem](zrzuty/r3/auto7.png)
+- ![wycinek: kafelki miejsc z podpowiedziami i przyciski decyzji](zrzuty/r3/wycinek-kafelki.png)
 
 ## 6. Demo (≈ 113 s, `docs/demo.md`)
 - Partia 7 aut: 6 z `dane/mini`, 7. z `dane/mini-trudny`; 7. auto to przypadek trudny (dodatek za ładunkiem), na liście nieoznaczony. U góry pasek „dane sztuczne — demonstracja”.
