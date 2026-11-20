@@ -53,3 +53,4 @@ PARAMETR: powód odrzucenia = element konstrukcji, zgłoszony ładunek, błąd o
 11:08 Projektant: krok 1 po P12/P13 — partie przeniesione do „Musi być" (najprościej), sprzeczność z §3 zamknięta; lista powodów odrzucenia ustalona
 11:09 Szef: Paweł — rsync i ssh wróciły (restart kontenera); orkiestrator startuje zlecenia, w tym --wyslij → liczenie normalnie przez orkiestrator na całą flotę
 11:09 Analityk: recenzja krok 1 R3 — brak braków zmieniających zakres lub kryteria. Uwaga techniczna (nie zmienia zakresu): nieaktualne zdania w pliku — wiersz 'Przepływ z operatorem' nadal opisuje P9 jako pytanie do Artura, a ustalenie P10 w sekcji 'Ustalenia (P9–P11)' mówi 'partie później' wbrew P12 (zakres w tabeli jest poprawny).
+11:10 Szef: krok 1 zamknięty (R3: brak braków) → krok 2 operator (Projektant); recenzja docs/hacktribe.md (Analityk)
