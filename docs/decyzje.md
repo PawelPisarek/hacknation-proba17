@@ -687,3 +687,4 @@ P92 20:28 odpowiedź: A — powiększamy miniaturę na stronie jak w pobranym ra
 P93 08:01 Paweł: które poprawki pod ocenę robimy do 10:00 — 50 wykres przeoczenia vs fałszywe ramki, 51 opis fałszywych alarmów, 52 „co nowego”, 53 skalowanie (auta/h, nowe rodzaje), 54 strojenie ramek trudnego zestawu (zmiana programu po zamrożeniu)? (rekomendacja: 50–53, bez 54) — czeka
 P93 08:03 odpowiedź: 50–53, bez 54 — po zamrożeniu nie ruszamy programu (Paweł)
 08:03 Szef: 50 → Analityk (po 47/48), 51–53 → Prezenter (po 46), 53 recenzja Projektant, 52 recenzja Analityk; 54 porzucone
+08:03 Projektant: POM-1 Na slajdzie z wynikami pokazać jedno auto przed i po (obraz bez ramek i z ramkami obok siebie) zamiast tabeli — szybsze zrozumienie dla jury
