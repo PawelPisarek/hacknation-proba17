@@ -4,6 +4,7 @@
 > Wszystkie liczby: dane sztuczne, linie WYNIK w `docs/decyzje.md` (zadania 20 i 33). Zrzuty makiety R3 (część ekranów z R2: logowanie, cysterna).
 
 ## 1. Prześwit
+- Prześwit to pomocnik operatora RTG: pokazuje, gdzie na obrazie auta patrzeć najpierw, a decyzja zawsze zostaje po stronie człowieka.
 - Narzędzie AI dla operatora RTG: porównuje obraz naczepy z wzorcem i zaznacza różnice.
 - Zespół: Hackathon · repo: github.com/PawelPisarek/hacknation-proba17
 - Wszystko na danych sztucznych — demonstracja.

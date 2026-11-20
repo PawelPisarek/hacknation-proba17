@@ -1,5 +1,7 @@
 # Prześwit
 
+> Prześwit to pomocnik operatora RTG: pokazuje, gdzie na obrazie auta patrzeć najpierw, a decyzja zawsze zostaje po stronie człowieka.
+
 **Status: DRAFT** — wersja robocza; część celów skuteczności jeszcze niespełniona (sekcja „Wyniki”).
 
 **Prześwit** to narzędzie AI dla operatora RTG na granicy: porównuje obraz naczepy z wzorcem typu pojazdu i zaznacza miejsca, w których może być ukryty towar. Operator zatwierdza lub odrzuca każde miejsce (odrzucenie z powodem); decyzja należy do niego.

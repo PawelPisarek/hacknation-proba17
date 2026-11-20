@@ -493,3 +493,4 @@ PARAMETR: teksty podpowiedzi MVP = „zwykle tu: podwozie — belki, koła i oś
 15:29 Szef: krok 8 poprawka R2 przyjęta → recenzja R3 (ostatnia) Analityk
 15:29 Szef: krok 8 R3 czysto (Analityk 15:28) → krok 8 zamknięty; zadanie 35 (wizja w tekstach) dla Prezentera
 15:29 Szef: auto bez miejsc otwarte, a niezamknięte → napis: program nic nie wskazał — otwarte, niezamknięte; obejrzane dopiero po Zamknij auto (wynika z P80 A, poprawka makiety/MVP)
+15:30 Prezenter: oddaję zadanie 35 — zdanie wizji (docs/pm/08-wizja.md, (c) pkt 1) na początku README, opisu hacktribe (934 zn., ≤1000) i slajdu 1 (10 slajdów, PDF przebudowany); 80%/48% nie występują w tych plikach, demo.md nietknięte.
