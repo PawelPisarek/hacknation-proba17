@@ -1,4 +1,4 @@
-# Stan — 12:46
+# Stan — 12:47
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -12,14 +12,14 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | krok 2 operator (02-operator.md) | Projektant | zamknięte (R3) |
 | krok 3 /discover (03-discover.md) | Projektant | zamknięte (R3) |
 | krok 4 priorytety (04-priorytety.md) | Projektant | zamknięte (R2) |
-| krok 5 /write-prd + docs/spec.md | Projektant | po R1 (5554b9d) → R2 Analityk; P41 A; P42 czeka |
+| krok 5 /write-prd + docs/spec.md | Projektant | zamknięty po R2 (5554b9d) → recenzja odbiorcy Programista; P42 czeka |
 | 05–16 sondy Z1–Z11, Z13 | Analityk | zamknięte (3038023): Z2, Z6 obalone; Z3, Z7, Z9, Z11 potwierdzone; Z1, Z8 pomiędzy; Z4, Z13 nierozstrzygnięte |
 | 17, 18 sondy Z12, Z14 | Analityk | część liczona zamknięta: Z12 potwierdza, Z14 pomiędzy (73%); przegląd po makiecie R1 |
 | recenzja docs/hacktribe.md | Analityk | zamknięte po R3 (f62748c, 988 zn.) |
 | 03 zbiór trudny | Analityk | zamknięte 11:18 (dane/mini-trudny, manifest-trudny.json; 112 badanych, 4 rodzaje trudności) |
 | 04 sprawdzenie zbioru trudnego | Analityk | zamknięte 11:48 (0/86 niewidocznych) |
 | README | Prezenter | zamknięte po R3 (ceb6717) |
-| docs/hacktribe.md — „Prześwit” + partie (P12) | Prezenter | R2: 1 brak → poprawka, potem R3 |
+| docs/hacktribe.md — „Prześwit” + partie (P12) | Prezenter | po R2 (8165184, 963 zn.) → R3 Analityk |
 | szkielet slajdów | Prezenter | gotowy (1cd6c10) |
 | szkice wariantów A/B/C | Projektant | gotowe (docs/pm/szkice-wariantow.md) |
 | trzy makiety wariantów | Programista | zamknięte — P36: C (+ lista partii z B) |

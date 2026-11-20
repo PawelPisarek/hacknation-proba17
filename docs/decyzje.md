@@ -250,3 +250,5 @@ P42 12:46 Artur: część kafelków (ok. 27% wg pomiaru) nie ma opisu „zwykle 
 12:47 Prezenter: hacktribe po R2 (8165184, 963 zn.)
 12:47 Analityk: recenzja kroku 5 R2 — docs/pm/05-write-prd.md + docs/spec.md (5554b9d) względem braków R1, 04-priorytety.md i decyzji. Braki R1 domknięte: (1) A5 i P42 (kafelek bez opisu → „brak podpowiedzi”, rekomendacja A, czeka — nie brak); (2) PRD §4 podaje v2 18,8% / 17,7% (11/62) i Z8 80% wobec 90% — zgodne z WYNIK i spec §5; (3) E2 bez „kompresji widocznej”, A12 oparte na Z9 (5,0 s, maks. 8,1 s), makieta na dane/mini. P41 A (12:44) zgodne z linią w decyzjach, A13 i §10; godziny P37–P40 (12:43) poprawione; brak sprzeczności między PRD a specem ani z 04. brak braków zmieniających zakres lub kryteria
 P42 12:47 odpowiedź: Artur w pokoju: ani A, ani B — kafelek bez opisu „zwykle tu…” pokazuje „poza znaną konstrukcją, obejrzyj uważnie”
+12:47 Szef: krok 5 zamknięty po R2 (5554b9d) → recenzja odbiorcy specu: Programista („czego mi brakuje, żeby zbudować MVP”).
+12:47 Szef: hacktribe po R2 (8165184, 963 zn.; slajd 2 8945d6d) → R3 Analityk.
