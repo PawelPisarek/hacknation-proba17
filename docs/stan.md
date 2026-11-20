@@ -15,6 +15,6 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | docs/demo.md + slajdy | Prezenter | R2: demo 113 s link r2, slajdy R2 10 str., hacktribe bez dopisku (ec96bf7) → recenzja Analityk (zad. 30, kolejność aut R2 vs demo) |
 
 Ustalenia Artura: P2–P56 jak wcześniej; P57 A (6 miejsc + „i jeszcze N miejsc — pokaż”); P58 A („brak wskazań — to nie gwarancja…”); P59 A / P68 (pasek „dane sztuczne — demonstracja”); P60 B (trudny jako 7. auto w partii); P61 A („Dodaj jeden obraz” na liście); P62 A (prawdziwy wybór pliku + napis „wynik przykładowy”); P63 B (ostrzeżenie przy brakach decyzji, zapis po potwierdzeniu); P64 A (godzina decyzji per auto); P65 A („Nowa partia”); P66 A (ukryć pasek E1–E7 i „makieta R1”; porządki makiety bez pytania); P67 A (pokazać 1 pudło w makiecie); P69 A (2 miejsca w aucie 1 w demo); P70 A (2 najbliższe wzorce); P71 (nic więcej nie wyrzucamy); P72 A (miniatura w raporcie po MVP); P73 A etykiety; P74 A „obejrzane, bez wskazań”; P75 B słowa po progach; P76 A ramka w zoomie; P77 A komunikat przy polu; P78 nic nie wyrzucamy; błędy makiety poprawiamy bez pytania.
-Otwarte pytania: słowa po zadaniu 32 (P75 B, P49) — Projektant zadaje Arturowi od 15:07.
+Otwarte pytania: P79 (słowa po zadaniu 32; domyka P49, P75 B) — czeka od Artura, rek. A (poziomy D).
 Środowisko: limit Claude odnowiony 14:00; cały zespół z powrotem na Claude (Paweł), agy tylko zapas.
 Lista Artura na noc: miniatura z zaznaczonymi miejscami w raporcie (po MVP, P72 A).
