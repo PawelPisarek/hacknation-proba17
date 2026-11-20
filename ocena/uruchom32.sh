@@ -28,7 +28,8 @@ json.dump(m, open("$L/manifest.json", "w"), ensure_ascii=False)
 print("p49:", len(bad))
 PY
 w() { n=$1; d=$2; shift 2
-  python -m przeswit.wykryj --metoda v3 --szer-rob 2048 --biblioteka "$d" --manifest "$d/manifest.json" --wyj $WYJ/$n --bez-png --siatka "$KONF" | tail -1; }
+  [ -s "$WYJ/$n/wyniki.json" ] && { echo "pomijam $n (już policzone)"; return; }
+  python -m przeswit.wykryj --metoda v3 --szer-rob 2048 --biblioteka "$d" --manifest "$d/manifest.json" --wyj $WYJ/$n --bez-png --wznow --siatka "$KONF" | tail -1; }
 w mini dane/mini
 w mini-trudny dane/mini-trudny
 w p49 $L
