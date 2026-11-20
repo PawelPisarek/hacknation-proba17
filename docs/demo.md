@@ -1,10 +1,10 @@
-# Prześwit — scenariusz demo (DRAFT, ≤ 2 min)
+# Prześwit — scenariusz demo (≤ 2 min)
 
-Nagrywa człowiek. Razem **109 s** (limit 120 s, zapas 11 s). Wszystko na danych sztucznych (`dane/mini`, `dane/mini-trudny`); przez cały pokaz u góry ekranu pasek „dane sztuczne — demonstracja” (P59 A).
+Nagrywa człowiek, **na działającym programie** pod linkiem. Razem **114 s** (limit 120 s, zapas 6 s). Wszystko na danych sztucznych (`dane/mini`, `dane/mini-trudny`); przez cały pokaz u góry ekranu pasek „dane sztuczne — demonstracja” (P59 A).
 Źródła: `docs/spec.md` §7, P50 A (główna ścieżka), P51 B + P60 B (partia 7 aut, trudny przypadek to 7. auto), P69 A (w aucie 1 rozstrzygamy 2 miejsca).
 
-**Link do pokazu:** makieta R3: https://pawelpisarek.github.io/hacknation-proba17/makieta/r3/ (E1–E7, działa); działający program: https://hacknation.ksefbot.pl/. Zrzuty ekranów: `docs/zrzuty/r3/`.
-**Przed nagraniem:** usługa liczenia działa; pod ręką partia pokazowa — 7 aut, na ekranie nazwy neutralne `skan_01.bmp`…`skan_07.bmp` (P60 B), liczba miejsc z wyniku programu (makieta r3, P85 B): auto 1 — 8, auto 2 — 6, auto 3 — 12, auto 5 — 7, auto 6 — 0 („brak wzorca”; biblioteka bez cysterny), auto 7 — 11 (przypadek trudny: dodatek za ładunkiem; na liście nieoznaczony — operator nie wie z góry). Do tego własny .bmp do wgrania.
+**Link do nagrania: https://hacknation.ksefbot.pl/** (działający program, ekrany E1–E7 jak w makiecie). Makieta R3 (https://pawelpisarek.github.io/hacknation-proba17/makieta/r3/) tylko jako zapas, gdy usługa liczenia nie odpowiada. Zrzuty ekranów: `docs/zrzuty/r3/` (makieta) i `docs/zrzuty/mvp/` (link).
+**Przed nagraniem:** usługa liczenia działa; pod ręką partia pokazowa — 7 aut, na ekranie nazwy neutralne `skan_01.bmp`…`skan_07.bmp` (P60 B), liczba miejsc z wyniku programu na linku (P85 B): auto 1 — 8, auto 2 — 6, auto 3 — 12, auto 5 — 7, auto 6 — 0 („brak wzorca”; biblioteka bez cysterny), auto 7 — 11 (przypadek trudny: dodatek za ładunkiem; na liście nieoznaczony — operator nie wie z góry). Do tego własny .bmp do wgrania. Gdy program „uruchamia się, ok. 30 s” — poczekać, strona sama ponawia; usługa działa na stałe (zad. 45).
 
 | # | Czas | Ekran | Klikamy | Co widać | Lektor (1 zdanie) |
 |---|---|---|---|---|---|
@@ -20,9 +20,9 @@ Nagrywa człowiek. Razem **109 s** (limit 120 s, zapas 11 s). Wszystko na danych
 **Suma: 5 + 14 + 20 + 22 + 10 + 14 + 14 + 15 = 114 s.**
 
 ## Uwagi
-- Liczby skuteczności w demo nie padają. Jeśli trzeba (na pytanie, bez wyświetlania), z zadania 20, na danych sztucznych: przeoczenia 7,8% (zestaw zwykły) i 9,7% (trudny).
+- Liczby skuteczności w demo nie padają na ekranie. Jeśli trzeba (na pytanie, bez wyświetlania), z zadania 20, na danych sztucznych: przeoczenia 7,8% (zestaw zwykły) i 9,7% (trudny).
 - Czas liczenia pokazu dotyczy obrazów z `dane/mini` (małe); dla ~50 MB wynik zadania 20: zwykły śr. 1,73 s, trudny śr. 1,19 s — nie czekamy na niego na nagraniu.
 - Rozstrzygnięte przez Artura: P52 A, P54 A, P55 B, P56 A, P57 A, P58 A, P59 A, P60 B (trudny jako 7. auto), P63 B, P64 A, P65 A, P67 A, P69 A (2 miejsca w aucie 1), P70 A. P61 A („Dodaj jeden obraz” na liście) — alternatywa dla kroku 8, gdy trzeba wgrać plik w trakcie partii.
-- Nagranie robić na makiecie R3 (link wyżej); zrzuty w `docs/zrzuty/r3/` odpowiadają krokom 1–8.
-- Sonda 38 (docs/odbior.md): na 28 czystych autach program zawsze wskazał ≥ 2 miejsca, więc „brak wskazań” nie jest w demo (P82 B); auto 4 to zwykłe auto z 8 miejscami i w pokazie go pomijamy. Auto 6 (brak wzorca) działa na r3.
+- Nagranie robić na https://hacknation.ksefbot.pl/ (nie na makiecie); zrzuty w `docs/zrzuty/r3/` odpowiadają krokom 1–8. Liczby miejsc i czasy kroków na linku potwierdza przejście z zadania 48 — po nim poprawić tabelę, suma ma zostać ≤ 120 s.
+- Sonda 38 (docs/odbior.md): na 28 czystych autach program zawsze wskazał ≥ 2 miejsca, więc „brak wskazań” nie jest w demo (P82 B); auto 4 to zwykłe auto z 8 miejscami i w pokazie go pomijamy. Auto 6 (brak wzorca) działa na linku (0 ramek).
 - Kroki 5–6 zależą od usługi na OMENie; trudne auto na liście nie jest oznaczone, więc wynik w kroku 6 może się zmienić z wersją programu.

@@ -2,8 +2,6 @@
 
 > Prześwit to pomocnik operatora RTG: pokazuje, gdzie na obrazie auta patrzeć najpierw, a decyzja zawsze zostaje po stronie człowieka.
 
-**Status: DRAFT** — wersja robocza; część celów skuteczności jeszcze niespełniona (sekcja „Wyniki”).
-
 **Prześwit** to narzędzie AI dla operatora RTG na granicy: porównuje obraz naczepy z wzorcem typu pojazdu i zaznacza miejsca, w których może być ukryty towar. Operator zatwierdza lub odrzuca każde miejsce (odrzucenie z powodem); decyzja należy do niego. Na czystych autach program zwykle coś wskazuje — decyzję zawsze podejmuje człowiek.
 
 Dla kogo: operatorzy RTG Służby Celno-Skarbowej (zadanie KAS, HackNation).
@@ -22,7 +20,7 @@ PYTHONPATH=src python -m przeswit.wykryj --biblioteka dane/mini --manifest dane/
 python ocena/ocena.py --manifest dane/mini/manifest.json --wyniki wyniki/mini/wyniki.json
 ```
 
-**Uwaga:** domyślne ustawienia (`prog=6`) różnią się od użytych w wynikach, więc „szybka próba” da inne liczby. Wyniki odtwarzają skrypty na pełnych zbiorach (`$DANE`, `$TRUDNE`, karta graficzna): `ocena/uruchom.sh` (metoda bazowa; domyślna siatka `prog=6,10,14`, a `prog=10,14` tylko w kroku pelny2048; wynik bazowy to konfiguracja `dobor=najblizszy,K=3,tol=2,prog=14`), `ocena/uruchom19.sh` (metoda v2, `--metoda v2`), `ocena/uruchom20.sh` (v3). Uruchomienie aplikacji z makietą: —
+**Uwaga:** domyślne ustawienia (`prog=6`) różnią się od użytych w wynikach, więc „szybka próba” da inne liczby. Wyniki odtwarzają skrypty na pełnych zbiorach (`$DANE`, `$TRUDNE`, karta graficzna): `ocena/uruchom.sh` (metoda bazowa; domyślna siatka `prog=6,10,14`, a `prog=10,14` tylko w kroku pelny2048; wynik bazowy to konfiguracja `dobor=najblizszy,K=3,tol=2,prog=14`), `ocena/uruchom19.sh` (metoda v2, `--metoda v2`), `ocena/uruchom20.sh` (v3). Uruchomienie strony i usługi lokalnie: sekcja „Aplikacja” niżej.
 
 ## Aplikacja: strona + usługa na karcie (zadanie 21)
 
@@ -36,7 +34,13 @@ python ocena/ocena.py --manifest dane/mini/manifest.json --wyniki wyniki/mini/wy
   docker run --rm --network none -p 8770:8770 przeswit        # strona i usługa: http://localhost:8770
   ```
   Z kartą NVIDIA: `--build-arg TORCH_INDEX=https://download.pytorch.org/whl/cu121` i `docker run --gpus all …`.
-  Bez Dockera: `PYTHONPATH=src:. python -m usluga.serwer --bez-sieci` (wiersz poleceń, http://127.0.0.1:8770).
+  Bez Dockera: `PYTHONPATH=src:. python -m usluga.serwer --bez-sieci` (usługa liczenia, http://127.0.0.1:8770).
+- **Strona + usługa osobno, lokalnie (2 terminale):**
+  ```
+  PYTHONPATH=src:. python -m usluga.serwer --bez-sieci --bezczynnosc 0      # usługa na :8770
+  OMEN_URL=http://127.0.0.1:8770 BUDZIK_URL=- PORT=3000 node strona/serwer.mjs   # strona: http://localhost:3000
+  ```
+  <!-- do potwierdzenia: Programista wpisuje sprawdzone komendy do docs/decyzje.md; README poprawić według nich -->
 
 ## Strona na żywo — co działa
 
@@ -74,12 +78,44 @@ Gdy program jest zajęty, strona pokazuje „Uruchamiam program, ok. 30 s” i s
 
 ## Wyniki (na danych sztucznych, nie na zdjęciach KAS)
 
-Źródło: linie `WYNIK` w `docs/decyzje.md`; metoda v2 (zad. 19), zestaw zwykły / trudny:
-- przeoczenia: 12/64 (18,8%) / 11/62 (17,7%); cel ≤ 10% — **niespełniony**;
-- fałszywe alarmy (obrazy czyste z ≥1 ramką): 24/32 / 38/40; ramki na czystym trudnym śr. 12,9 (cel ≤ 6 — niespełniony);
-- dobór wzorca: 64/64 / 80/80; czas na obraz 50 MB: śr. 0,91 s, maks. 1,30 s.
+Metoda pod linkiem to **v3** (zad. 20, WYNIK z 13:39 w `docs/decyzje.md`), zestaw zwykły / trudny:
+- przeoczenia: **5/64 (7,8%)** / **6/62 (9,7%)**; cel ≤ 10% — **spełniony** na obu;
+- ramki na czystym aucie: śr. **5,8** / **6,25**; cel ≤ 6 — zwykły spełniony, trudny minimalnie powyżej (brak 0,25 ramki);
+- fałszywe alarmy (czyste auta z ≥ 1 ramką): **32/32** i **40/40** — dlatego lista pokazuje najwyżej 6 miejsc i „pokaż resztę”, a decyzję zawsze podejmuje człowiek;
+- dobór wzorca: **64/64** i **80/80**;
+- czas na obraz 50 MB (sam program): śr. **1,73 s** / **1,19 s**; wysłanie takiego pliku przez łącze na stronę trwa ok. 45 s (patrz „Ograniczenia”).
 
-Metoda bazowa (zwykły / trudny, wpis 11:46): fałszywe alarmy 32/32 i 36/40, przeoczenia 8/64 i 11/62, dobór 64/64 i 79/80; czas na obraz — zwykły: śr. 3,8 s, a pełny 50 MB śr. 5,0 s (maks. 8,1 s; siatka 24 konfiguracji naraz); trudny: śr. 1,6 s (maks. 4,8 s), a pełny 50 MB śr. 1,7 s. Baza ma więc mniej przeoczeń na zwykłym, ale więcej fałszywych alarmów niż v2. Liczby to wyniki wewnętrzne zespołu, nie gwarancja skuteczności.
+**Czym jest u nas fałszywy alarm.** Fałszywy alarm to czyste auto, na którym program zaznaczył ≥ 1 miejsce. Prześwit nie odpowiada „alarm: tak/nie” — daje operatorowi **kolejność miejsc** (najbardziej odmienne od wzorca pierwsze, na ekranie najwyżej 6), bo najważniejsze jest nie przeoczyć. Dlatego miarą jest średnia liczba ramek na czystym aucie (5,8 / 6,25), a nie „100% fałszywych alarmów” bez kontekstu; na 28 czystych autach (sonda 38 w `docs/odbior.md`) program zawsze wskazał ≥ 2 miejsca, więc „brak wskazań” nie jest obietnicą produktu. Decyzję o każdym miejscu podejmuje człowiek.
+
+| Metoda | Przeoczenia zwykły / trudny | Ramki na czystym (śr.) | Fałszywe alarmy | Dobór wzorca |
+|---|---|---|---|---|
+| v1 (baza, zad. 2) | 8/64 (12,5%) / 11/62 (17,7%) | — | 32/32 / 36/40 | 64/64 / 79/80 |
+| v2 (zad. 19) | 12/64 (18,8%) / 11/62 (17,7%) | 4,2 / 12,9 | 24/32 / 38/40 | 64/64 / 80/80 |
+| **v3 (zad. 20, pod linkiem)** | **5/64 (7,8%) / 6/62 (9,7%)** | **5,8 / 6,25** | 32/32 / 40/40 | 64/64 / 80/80 |
+
+Czas na obraz 50 MB: baza śr. 5,0 s (zwykły) i 1,7 s (trudny), v2 śr. 0,91 s, v3 śr. 1,73 s i 1,19 s. To wyniki wewnętrzne zespołu na obrazach sztucznych, nie gwarancja skuteczności na zdjęciach KAS.
+
+## Co nowego
+
+1. **Samodzielny dobór wzorca rodzaju pojazdu** — program sam wybiera wzorzec (dobór 64/64 i 80/80; WYNIK zad. 20); operator może zmienić rodzaj jednym kliknięciem (zrzut: `docs/zrzuty/mvp/link-27-zmiana.png`).
+2. **Porównanie z dwoma najbliższymi wzorcami po wyrównaniu** — obraz badany stoi obok wzorca, z przesunięciem dopasowanym do miejsca (przeoczenia 7,8% / 9,7%, WYNIK zad. 20; zrzut: `docs/zrzuty/mvp/link-auto7-lupa4-miejsce2.png`).
+3. **Ramka + „zwykle tu…” zamiast surowej mapy** — ramki ponumerowane jak kafelki, kolejność od najbardziej odmiennego, śr. 5,8 / 6,25 ramki na czystym aucie (WYNIK zad. 20; zrzut: `docs/zrzuty/mvp/link-auto7-ramki.png`).
+4. **Decyzja operatora z powodem odrzucenia w raporcie** — .json, .csv i .html z miniaturami aut; zapis powodów to materiał do douczania metody (zrzut: `docs/zrzuty/mvp/link-43-raport.png`).
+5. **Działanie lokalne, bez internetu** — kontener bez sieci liczy partię pokazową 7/7 (WYNIK zad. 21).
+6. **Zbudowane przez zespół 5 botów AI** (OpenMausBot + Claude) w czasie hackathonu; czas liczenia obrazu 50 MB śr. 1,73 s / 1,19 s (WYNIK zad. 20).
+
+## Skalowanie
+
+Pomiar: GTX 1050 (laptop OMEN), jeden obraz naraz. Reszta to wyliczenia z tych pomiarów — założenia podpisane.
+
+| Wielkość | Wartość | Źródło / założenie |
+|---|---|---|
+| Czas liczenia obrazu 50 MB | śr. 1,73 s (zwykły) / 1,19 s (trudny) | pomiar, WYNIK zad. 20 |
+| Auta na godzinę na 1 kartę — samo liczenie | ok. 2 080 / ok. 3 020 | wyliczenie: 3600 s ÷ 1,73 s i ÷ 1,19 s; bez wysyłki i wczytania pliku |
+| Auta na godzinę przez stronę (wysyłka ok. 45 s) | ok. 70 na jedno stanowisko | pomiar 44,9 / 45,1 s (8768b32), całe żądanie ~52 s (WYNIK zad. 21): 3600 ÷ 52 |
+| Więcej kart / stanowisk | przepustowość rośnie mniej więcej liniowo z liczbą kart | **założenie**, niemierzone: obrazy są niezależne, usługa liczy jeden po drugim |
+| Nowy rodzaj pojazdu | dołożenie wzorców do biblioteki, bez trenowania | metoda porównuje z biblioteką wzorców (v3); koszt = zdobycie wzorców |
+| Wąskie gardło | wysyłka pliku przez sieć (45 s z ~52 s) | pomiar j.w.; przy liczeniu obok skanera (lokalnie, bez sieci) znika |
 
 ## Dane
 
@@ -88,6 +124,7 @@ Zbiór sztuczny (zdjęć KAS nie mamy): naczepy czyste i z dodatkowym ładunkiem
 ## Użyte narzędzia (przygotowane wcześniej)
 
 - **Zespół botów na OpenMausBot** (5 ról: Szef, Projektant, Analityk, Programista, Prezenter) — https://github.com/milind-soni/OpenMausBot (Apache-2.0); zlecenia liczeniowe idą przez orkiestrator zadań (Slurm)
+- **Orkiestrator zadań** (Slurm, klient `orkiestrator`) — kolejka zleceń liczeniowych na karcie
 - **Karta graficzna** GTX 1050 (laptop OMEN), na której liczono wyniki
 - **Modele Claude** (Anthropic)
 - **Skille pm-skills** — https://github.com/phuryn/pm-skills (MIT); łańcuch opisu produktu w `docs/pm/`
@@ -95,4 +132,4 @@ Zbiór sztuczny (zdjęć KAS nie mamy): naczepy czyste i z dodatkowym ładunkiem
 
 ## Dokumenty
 
-`docs/hacktribe.md` (opis do formularza, DRAFT) · `docs/slajdy-szkic.md` · `docs/decyzje.md` (ustalenia i WYNIK) · `docs/materialy.md` · `docs/pm/` (łańcuch PM) · `docs/zrzuty/` (zrzuty, lupa)
+`docs/hacktribe.md` (opis do formularza) · `docs/demo.md` (scenariusz pokazu) · `docs/slajdy.pdf` (źródło: `docs/slajdy-szkic.md`) · `docs/decyzje.md` (ustalenia i WYNIK) · `docs/materialy.md` · `docs/pm/` (łańcuch PM) · `docs/zrzuty/` (zrzuty, lupa)
