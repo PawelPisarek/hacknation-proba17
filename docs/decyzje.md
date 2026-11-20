@@ -606,3 +606,4 @@ P85 16:09 odpowiedź: B — wszystkie auta w makiecie pokazują to, co naprawdę
 19:20 Szef: odbiór 40 przyjęty (07e8d6d, 6/7 zal.). Otwarte porównanie z wierszem poleceń → Programista po zwolnieniu karty. Przycisk „Dodaj jeden obraz” (P61 A, zasada P83) i rozwijanie „i jeszcze N miejsc” → Programista przy 28. Recenzja 09 runda 2 (4 braki) → Projektant R3, ostatnia runda.
 19:20 Projektant: docs/pm/09-uproszczenia.md R3 po recenzji 09 R2 (4 braki): U3 — wzorzec mają 3 rodzaje, cysterna „brak wzorca”; I1 i I3 w czasie przyszłym; usunięte odwołania nieznane Arturowi (zadanie, spec §, P61, link do repo, serwer); D3 — ryzyko bez cysterny, czas nieoszacowany. Wiadomość do Artura NIEWYSŁANA.
 19:21 Szef: 09 R3 (7e31c7a) → recenzja runda 3 z 3 (ostatnia) → Analityk
+19:21 Analityk: recenzja 09 R3 (7e31c7a) — 4 braki z R2 poprawione; brak braków zmieniających zakres lub kryteria (docs/odbior.md „Recenzja 09, runda 3”). Do pokoju nic nie wysłano.

@@ -191,3 +191,11 @@ Niezweryfikowane: ramki = CLI; zmiana rodzaju, lista partii, decyzje, raport (za
 3. **produkt** (drobny) — w tekście do Artura zostają odwołania, których nie zna: „zadanie 42”, „zadaniach 29 i 40”, „spec §8”, „P61 A”, „link do repo”, „serwer”. Zamienić na opis („po dodaniu decyzji do raportu”) albo wyciąć.
 4. **technika** — D3: „pogorszyć wynik na cysternach” — cysterna nie ma dziś wzorca; ryzyko dotyczy innych aut, a dołożenie cysterny zmieniałoby A4 (8/8). Poprawić zdanie; „2–3 h” zostaje „nieoszacowane”.
 Domknięte z R1: pytania tylko o U1, U3, U5; dorobienie tylko w D; B bez dublowania; I1–I3 dopisane; czasy D1–D2 z zależnościami.
+
+### Recenzja 09, runda 3 (7e31c7a; 19:21)
+
+Tylko tekst do Artura. 4 braki z rundy 2 poprawione: (1) U3 — 3 rodzaje z wzorcem, cysterna bez wzorca (zgodne z linkiem, auto 6); (2) I1 i I3 w czasie przyszłym („będzie”, „pojawi się”); (3) bez „zadanie 42”, „spec §8”, „P61 A”, „link do repo”, „serwer”; (4) D3 — ryzyko dla aut danego rodzaju, nie „na cysternach”. Nowych braków nie znalazłem; odwołania „P12 A, P38 B, P81 A, P72, P82, P58 A, P25 A” dotyczą odpowiedzi samego Artura.
+
+brak braków zmieniających zakres lub kryteria
+
+Uwaga do wysyłki (nie brak): I1 i I3 są w czasie przyszłym — przed wysłaniem sprawdzić na linku po zadaniach 42 i 28, a nazwę przycisku „Dodaj jeden obraz” z tym, co wdroży Programista.
