@@ -2,14 +2,17 @@
 
 Na podstawie `docs/zadanie.md`. Data: 2026-11-20. Źródła: wyszukiwanie w sieci 20.11 (linki na końcu) i wiedza ogólna — pozycje bez źródła oznaczone **(założenie)**; cen i udziałów w rynku nie podajemy, bo nie mamy ich z wiarygodnego źródła.
 
-## Czego nie wiem o produkcie (pytania do Artura w pokoju Produkt)
-1. Czym ma być wzorzec: obraz **tego samego** pojazdu pustego, czy wzorzec dla **typu** pojazdu (naczepa firanka, chłodnia…)? (decyduje, jak trudne jest porównanie)
-2. Co operator robi z alarmem — tylko widzi zaznaczone miejsca, czy musi też potwierdzić/odrzucić każde?
-3. Czy ważniejsze jest, by nie przeoczyć żadnego „dodatku", czy by nie robić fałszywych alarmów (co wolno poświęcić)?
-4. Perspektywa porównania w tej analizie (funkcje / sposób wskazywania / wdrożenie).
-5. Do czego posłuży analiza (opis projektu, pokaz, wybór pierwszej wersji).
-6. Kto jest użytkownikiem, jaki ma problem, co zyska (moment (a)).
-Rekomendacje i odpowiedzi: `docs/decyzje.md` (P2…).
+## Ustalenia Artura z pokoju (docs/decyzje.md)
+- **P2:** wzorzec **typu z biblioteki** — operator prawie nigdy nie ma czystego zdjęcia tej samej naczepy; system dobiera wzorzec typu sam.
+- **P3:** operator przy każdym wskazanym miejscu zatwierdza albo odrzuca, a odrzucając podaje powód (zostaje w raporcie). **Sprzeczność z zadaniem §3** („bez interwencji człowieka") — patrz „Przepływ z operatorem" i pytanie P9.
+- **P4/P5:** przeoczenie gorsze od fałszywego alarmu; **skuteczność (czy wskazuje to, co ukryte) jest pierwsza, sposób pokazania druga.**
+- **P6:** analiza służy opisowi projektu i wyborowi zakresu pierwszej wersji. **P7:** operator ma kilka minut na jedno auto. **P8:** konkurenci właściwi.
+
+## Czego nie wiem o produkcie (stan po odpowiedziach)
+1. Wzorzec — rozstrzygnięte (P2).  2. Rola operatora — rozstrzygnięte (P3), zostaje zgodność z zadaniem §3 (P9).  3. Przeoczenie vs fałszywy alarm — rozstrzygnięte (P4).
+4. Perspektywa porównania — rozstrzygnięte (P5).  5. Cel analizy — rozstrzygnięte (P6).  6. Użytkownik, problem, zysk — rozstrzygnięte (P7).
+7. Otwarte: czy zakres pierwszej wersji z tabeli poniżej jest dobry (P10).
+Rekomendacje i odpowiedzi: `docs/decyzje.md`.
 
 ## Rynek i kontekst
 - **Rynek:** kontrola nieinwazyjna pojazdów i kontenerów skanerami RTG na granicach; kupujący: służby celne i graniczne. Główni dostawcy sprzętu: Nuctech, Smiths Detection, Rapiscan, Leidos (raporty rynkowe wymieniają je jako kluczowych graczy) oraz Multicontrol (wymieniony w zadaniu).
@@ -18,43 +21,69 @@ Rekomendacje i odpowiedzi: `docs/decyzje.md` (P2…).
 - Stan dziedziny: analiza obrazów cargo jest według przeglądu UCL stosunkowo niedojrzała — dużo miejsca na proste, zrozumiałe narzędzie.
 - **Warunki zadania, które zawężają rynek:** działanie bez internetu i chmury w docelowym wdrożeniu, pliki ~50 MB, <1 min na obraz, wskazanie miejsc graficznie, pomiar fałszywych alarmów i przeoczeń.
 
+
 ## Bezpośredni konkurenci (to samo zadanie, ten sam kupujący)
-| # | Konkurent | Pozycjonowanie | Mocne strony | Słabe strony / luki |
-|---|---|---|---|---|
-| 1 | **Rapiscan** (oprogramowanie InSight) | sprzęt + oprogramowanie analityczne dla granic i portów | wykrywanie anomalii wg intensywności, tekstury i kształtu; osobne tryby: pusty kontener, podobny ładunek, ładunek o dużej gęstości, niejednorodny; osobne modele na kontrabandę; patenty na porównanie obrazu z deklaracją | związane z własnym sprzętem; (założenie) brak otwartego wsparcia dla obrazów Nuctech/Multicontrol; nie widać opisu porównania „ten pojazd vs wzorzec" |
-| 2 | **Smiths Detection** (rodzina iCMORE) **(założenie, bez źródła z tego wyszukiwania)** | sprzęt + automatyczne wykrywanie zagrożeń | (założenie) automatyczne rozpoznawanie kategorii towarów i wykrywanie ukrytych przedmiotów | (założenie) zamknięte, drogie, przypięte do własnych skanerów |
-| 3 | **Nuctech** (oprogramowanie AI do własnych skanerów) | największy dostawca sprzętu RTG; skanery u KAS | obrazy trafiają już do repozytorium KAS; wspólny format danych | (założenie) wykrywa klasy przedmiotów, nie „zmianę konstrukcji"; zależność od jednego dostawcy |
-| 4 | **Leidos** **(założenie)** | integrator rozwiązań kontrolnych | doświadczenie wdrożeniowe | (założenie) duże wdrożenia projektowe, nie narzędzie „od ręki" |
-| 5 | **Obecne narzędzie KAS do papierosów** (z zadania) | wykrywa papierosy w ładunku i pojazdach | działa w produkcji, operatorzy je znają | słabe przy małych ilościach ukrytych w konstrukcji (zadanie, p. 1) |
+| # | Konkurent | Pozycjonowanie | Mocne strony | Słabe strony / luki | Skuteczność (wykrycia / fałszywe alarmy) |
+|---|---|---|---|---|---|
+| 1 | **Rapiscan** (InSight) | sprzęt + oprogramowanie analityczne dla granic i portów | anomalie wg intensywności, tekstury, kształtu; tryby: pusty kontener, podobny ładunek, duża gęstość, niejednorodny; osobne modele na kontrabandę; patenty na porównanie z deklaracją | związane z własnym sprzętem; (założenie) brak wsparcia obrazów Nuctech/Multicontrol; nie widać porównania „badany vs wzorzec typu" | brak danych (nie publikowane) |
+| 2 | **Smiths Detection** (iCMORE) **(założenie, bez źródła)** | sprzęt + automatyczne wykrywanie zagrożeń | (założenie) rozpoznawanie kategorii towarów, ukryte przedmioty | (założenie) zamknięte, przypięte do własnych skanerów | brak danych |
+| 3 | **Nuctech** (AI do własnych skanerów) | duży dostawca sprzętu; skanery u KAS | obrazy już trafiają do repozytorium KAS | (założenie) klasy przedmiotów, nie „zmiana konstrukcji"; zależność od dostawcy | brak danych |
+| 4 | **Leidos** **(założenie)** | integrator rozwiązań kontrolnych | doświadczenie wdrożeniowe | (założenie) duże wdrożenia projektowe, nie narzędzie „od ręki" | brak danych |
+| 5 | **Obecne narzędzie KAS (papierosy)** (zadanie §1) | wykrywa papierosy w ładunku i pojazdach | działa w produkcji | słabe przy małych ilościach w konstrukcji | z zadania: niezadowalająca przy małych ilościach w konstrukcji; liczb brak |
 
 ## Konkurenci pośrednie (inne podejście, to samo zadanie)
 - **Operator sam, ręcznie** — porównuje wzrokiem z pamięcią; zmęczenie, rotacja, małe detale umykają.
 - **Porównanie z deklaracją/manifestem** (patenty m.in. Rapiscan) — wykrywa niezgodność towaru, nie skrytkę w konstrukcji.
 - **Badania akademickie** — UCL: anomalie na poziomie fragmentów obrazu, scalane w mapę ciepła całego kontenera; patent z użyciem autoenkodera; praca WVU z „uczniem i nauczycielem" na obrazach normalnych. Wniosek: podejścia istnieją, ale nie widać gotowego, otwartego narzędzia „wzorzec vs badany".
 
-## Przegląd podejść do porównywania obrazów i wykrywania anomalii (do wyboru przez Programistę)
-| Podejście | Idea | Zaleta | Ryzyko |
-|---|---|---|---|
-| Różnica pikseli po dopasowaniu obrazów | odejmij wzorzec od badanego po wyrównaniu | proste, szybkie, tłumaczy się operatorowi; działa na CPU i bez internetu | wrażliwe na przesunięcie/skalę/różny pojazd → dużo fałszywych alarmów |
-| Dopasowanie + różnica z tolerancją i filtrem szumu | j.w. + progi, minimalny rozmiar, scalanie sąsiednich plam | kontrola fałszywych alarmów | progi trzeba stroić na danych |
-| Uczenie na „czystych" obrazach (autoenkoder) | sieć uczy się odtwarzać normalny obraz; duży błąd = anomalia | nie potrzebuje przykładów przemytu (zadanie: uczenie na czystych) | małe obiekty zlewają się z tłem; wymaga karty graficznej do nauki |
-| Pamięć fragmentów normalnych (PatchCore, **(założenie)** brak testów na RTG naczep) | porównuje fragmenty obrazu z bazą fragmentów z czystych | dobre wyniki w przemyśle; mapa ciepła | w sieci nie znalazłem testów na naczepach; sprawdzić na naszych danych |
-| Uczenie wskazywania obiektów (detekcja) | uczy się rozpoznawać przedmioty | dobre dla znanych klas | wymaga oznaczonych „dodatków"; nie łapie nowych skrytek; nie pasuje do „uczenia na czystych" |
-| Fragmenty + drzewa decyzyjne (UCL) | ocena anomalii dla fragmentów, mapa ciepła | lekkie, wytłumaczalne | wymaga opracowania cech |
 
-**Rekomendacja (do decyzji Programisty/Szefa):** zacząć od dopasowania + różnicy z tolerancją (wynik bazowy), potem model uczony na czystych obrazach i porównać oba na tym samym zbiorze testowym (zgodnie z zasadą: ≥ 2 hipotezy naraz na karcie).
+## Wzorzec typu z biblioteki (P2) — co z tego wynika
+System sam **rozpoznaje typ naczepy i dobiera wzorzec z biblioteki**. Dochodzą trzy elementy, których konkurenci nie opisują jako osobnego kroku:
+1. **Rozpoznanie typu naczepy** (np. firanka, chłodnia, skrzynia) — błąd tu psuje wszystko dalej.
+2. **Budowa biblioteki wzorców** z ok. 200 obrazów z zadania (§7: pary „przed/po"; do biblioteki idą obrazy czyste pogrupowane wg typu). Mało obrazów na typ → wzorzec nie pokrywa naturalnej zmienności pojazdów (liczby typów nie znamy — **założenie**).
+3. **Dobór i dopasowanie wzorca** — nawet ten sam typ różni się wyposażeniem, długością, ustawieniem.
+**Skutek złego doboru:** fałszywe alarmy (różnice konstrukcji uznane za „dodatki") albo przeoczenia (dodatek podobny do elementu wzorca). To ryzyko nr 1 przy wzorcu typu; sprawdzać na zbiorze z zadania §6.
+
+## Przegląd podejść do porównywania obrazów i wykrywania anomalii (do wyboru przez Programistę)
+Oceniane względem wymagań zadania: **~50 MB/obraz**, **< 1 min na obraz** (§7), **praca bez internetu i chmury** w docelowym wdrożeniu (§9; na hackathonie AI wolno używać do napisania kodu), **uczenie na czystych obrazach** (§5), **wskazanie miejsc graficznie** (§3). W docelowym wdrożeniu KAS karty graficznej **nie zakładamy** (założenie).
+
+| Podejście | Idea | 50 MB / < 1 min | Offline | Wzorzec typu (P2) | Zaleta | Ryzyko |
+|---|---|---|---|---|---|---|
+| Różnica pikseli po dopasowaniu | odejmij wzorzec typu od badanego po wyrównaniu | tak, na procesorze (na zmniejszonym podglądzie/kafelkach) | tak | wprost, ale wzorzec typu ≠ ten pojazd | proste, zrozumiałe dla operatora | przesunięcia i różnice między pojazdami → fałszywe alarmy |
+| Dopasowanie + różnica z tolerancją i filtrem szumu | j.w. + progi, minimalny rozmiar plamy, scalanie | tak | tak | tak; uśrednienie kilku wzorców typu zmniejsza szum | kontrola fałszywych alarmów | progi do strojenia |
+| Uczenie na czystych (autoenkoder) | odtwarza normalny obraz; duży błąd = anomalia | po kafelkach; nauka na karcie, użycie możliwe na procesorze (założenie) | tak po nauce | „zna" typ sam; rzadkie typy źle | zgodne z §5 | małe obiekty zlewają się z tłem |
+| Pamięć fragmentów normalnych (PatchCore) **(założenie: brak testów na RTG naczep)** | fragment badany vs baza fragmentów z czystych | po kafelkach; duża baza i pamięć przy 50 MB | tak | baza = biblioteka typu | mapa ciepła | czas/pamięć; niesprawdzone na naczepach |
+| Wykrywanie znanych przedmiotów | uczy się rozpoznawać przedmioty | tak | tak | niepotrzebny | dobre dla znanych klas | wymaga oznaczonych „dodatków" (nie mamy), nie łapie nowych skrytek, niezgodne z §5 |
+| Fragmenty + drzewa decyzyjne (UCL) | ocena fragmentów, mapa ciepła | tak | tak | częściowo | lekkie, wytłumaczalne | wymaga opracowania cech |
+
+**Źródło obrazów — Nuctech i Multicontrol:** oba dostarczają obrazy do repozytorium KAS; zadanie podaje format **.bmp**. Każdy dostawca ma inną charakterystykę obrazu → wzorce osobno na dostawcę **(założenie)**; w sztucznych danych tego nie odtworzymy, więc to ryzyko wdrożeniowe, nie hackathonowe.
+
+**Rekomendacja (do decyzji Programisty/Szefa):** zacząć od dopasowania + różnicy z tolerancją (wynik bazowy), potem model uczony na czystych i porównać oba na tym samym zbiorze testowym (≥ 2 hipotezy naraz na karcie). Rozpoznanie typu i dobór wzorca to pierwszy krok każdego z nich.
 
 ## Różnicowanie — luki do wykorzystania
 - Wskazanie **zmiany konstrukcji** (skrytki), nie tylko znanego towaru — luka obecnego narzędzia KAS.
-- **Porównanie z wzorcem** jako główna idea: operator widzi „co się zmieniło", nie wynik z procentem.
-- **Działanie lokalne, bez chmury**, niezależne od dostawcy skanera (BMP z Nuctech i Multicontrol).
-- **Czytelny raport:** zaznaczone miejsca na obrazie + lista, bez oceny „winny/niewinny" — decyzja zostaje u operatora.
-- **Mało fałszywych alarmów** jako cecha widoczna w demo (wynik na obrazach czystych).
-- Duże pliki (~50 MB), przetwarzanie partiami, <1 min na obraz.
+- **Porównanie z wzorcem typu** jako główna idea: operator widzi „co się zmieniło", nie wynik z procentem.
+- **Działanie lokalne, bez chmury**, niezależne od dostawcy skanera (.bmp z Nuctech i Multicontrol).
+- **Czytelny raport:** zaznaczone miejsca + decyzja operatora z powodem; bez oceny „winny/niewinny".
+- **Skuteczność najpierw (P4/P5):** wskazuje to, co ukryte; przeoczenie gorsze od fałszywego alarmu. Fałszywe alarmy zadanie i tak mierzy (§6), więc je raportujemy i ograniczamy, ale **nie kosztem przeoczeń** — cecha drugorzędna, nie hasło pokazu.
+- Duże pliki (~50 MB), partie, < 1 min na obraz.
+
+## Przepływ z operatorem (P3) a zadanie §3
+Zadanie §3: „działa samodzielnie, bez interwencji człowieka". Artur (P3): operator przy każdym miejscu zatwierdza/odrzuca z powodem. **Da się pogodzić, rozdzielając etapy:** program analizuje i zaznacza miejsca **sam** (wymóg §3), a zatwierdzenie/odrzucenie to osobny krok **po** wyniku (raport; §9: wyniki idą do repozytorium z przypisaniem do miejsca i przedmiotu kontroli). **P9** do Artura („A czy B?"): A — analiza sama, decyzja operatora na wyniku (rekomendacja); B — operator uczestniczy już w trakcie analizy.
+**Konkurenci:** w znalezionych źródłach brak opisu zatwierdzania z powodem (Rapiscan opisuje tryby analizy, nie przepływ operatora) — nasz przepływ to potencjalna przewaga **(założenie, niezbadane)**. Operator ma kilka minut na auto (P7) — zatwierdzenie musi być szybkie (jedno kliknięcie + powód z listy).
+
+## Proponowany zakres pierwszej wersji (P6) — do akceptacji Artura (P10)
+| Musi być | Później | Odpada |
+|---|---|---|
+| wczytanie obrazu .bmp (~50 MB), < 1 min | partie wielu obrazów, skalowanie | wykrywanie konkretnej kontrabandy (papierosy itd.) |
+| rozpoznanie typu naczepy i dobór wzorca z biblioteki | wzorce osobno na dostawcę skanera | porównanie z deklaracją/manifestem |
+| zaznaczenie miejsc na obrazie i raport | zapis wyników w repozytorium KAS | ocena „winny/niewinny" przez program |
+| zatwierdzenie/odrzucenie miejsca z powodem (P3) | uczenie z powodów odrzucenia | integracja ze skanerami |
+| wynik na obrazach czystych i z „dodatkami" (§6) | | działanie w chmurze |
 
 ## Pozycjonowanie (rekomendacja)
-„Asystent operatora RTG: pokazuje na obrazie naczepy, co różni się od wzorca — lokalnie, szybko, z małą liczbą fałszywych alarmów." Unikamy: obietnicy wykrywania konkretnej kontrabandy i „autonomicznej decyzji" (decyzja zostaje u funkcjonariusza). Obserwować: rozwój oprogramowania Nuctech (źródło obrazów KAS) i narzędzia papierosowego KAS.
-Ryzyka 12–18 mies.: dostawcy sprzętu dodają porównanie ze wzorcem do własnych skanerów; różnice między pojazdami (ten sam typ, inne wyposażenie) → fałszywe alarmy.
+„Asystent operatora RTG: pokazuje na obrazie naczepy, co różni się od wzorca typu — lokalnie i szybko, z naciskiem na to, by nie przeoczyć skrytki." Unikamy: obietnicy wykrywania konkretnej kontrabandy i „decyzji bez człowieka" po stronie wyniku. Obserwować: oprogramowanie Nuctech (źródło obrazów KAS) i narzędzie papierosowe KAS.
+Ryzyka 12–18 mies.: dostawcy sprzętu dodają porównanie ze wzorcem do własnych skanerów; zły dobór wzorca typu (ryzyko nr 1); różnice między dostawcami obrazów.
 
 ## Źródła (wyszukiwanie 20.11.2026)
 - Rapiscan — technologia: https://rapiscan-ase.com/resource-center/technology
@@ -66,10 +95,3 @@ Ryzyka 12–18 mies.: dostawcy sprzętu dodają porównanie ze wzorcem do własn
 
 <!-- skill: competitor-analysis -->
 <!-- skill: przeplywy-pm -->
-
-## Ustalenia Artura (P2–P8)
-- Wzorzec: z biblioteki typów pojazdów, dobierany automatycznie (P2).
-- Operator zatwierdza/odrzuca każde wskazane miejsce, przy odrzuceniu podaje powód; trafia do raportu (P3).
-- Przeoczenie gorsze niż fałszywy alarm (P4). Porównanie z konkurencją: najpierw skuteczność, potem sposób pokazania (P5).
-- Analiza służy opisowi projektu i wyborowi zakresu pierwszej wersji (P6).
-- Użytkownik: operator RTG na granicy, ma kilka minut na jedno auto (P7). Konkurenci właściwi (P8).
