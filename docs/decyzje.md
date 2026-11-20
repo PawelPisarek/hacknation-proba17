@@ -439,7 +439,7 @@ P78 14:37 Artur: co z ekranu wyrzucić po przeglądzie R2? Rekomendacja: nic poz
 14:38 Projektant: 07-pre-mortem — liczby z WYNIK zadania 20 (ramki 5,8/6,25, przeoczenia 7,8%/9,7%, mały dodatek 6/42, czas 1,73/2,09 s) w R1–R4; termin R8 (zadanie 32) → przed przeglądem Artura; Artur dostaje zdanie o 6,25 ramki przy celu 6
 P73 14:38 odpowiedź: A (Artur w pokoju) — numer i słowo w jednej małej etykiecie obok ramki, bez nakładania; Artur: to błąd makiety, takich nie pytać, poprawiać od razu
 P74 14:38 odpowiedź: A (Artur w pokoju) — auta bez miejsc: „obejrzane, bez wskazań”; ostrzeżenie P63 B tylko dla aut z nierozstrzygniętymi miejscami
-P75 14:38 odpowiedź: B (Artur w pokoju) — na pokazie słowo wysoki nie stoi na kole, gdy prawdziwy dodatek ma niski; czekamy na progi z P49, potem ustalamy słowa; jeśli dalej odwrotnie — pokazać Arturowi wynik
+P75 14:38 odpowiedź: B (Artur w pokoju) — na pokazie słowo wysoki nie stoi na kole, gdy prawdziwy dodatek ma niski; słowa ustalamy dopiero po progach z P49; jeśli dalej odwrotnie — pokazać Arturowi wynik
 P76 14:38 odpowiedź: A (Artur w pokoju) — zoom 4× zachowuje ramkę z numerem
 P77 14:38 odpowiedź: A (Artur w pokoju) — komunikat przy polu „Nr rej.”, przycisk „Zamknij auto”
 P78 14:38 odpowiedź: nic nie wyrzucamy (Artur w pokoju)
