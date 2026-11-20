@@ -1,4 +1,4 @@
-# Stan — 13:05
+# Stan — 13:06
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -19,7 +19,7 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | 32 progi słów (P49 A) | — | po 20 i 31 |
 | 30 odbiór A1–A14 | — | do wzięcia (po 31) |
 | 31 dane scenariuszy | Analityk | w toku (generator 12:58) |
-| 22 makieta R1 (lista partii + C) | Programista | zamknięte; krytyk R1 (Analityk) |
+| 22 makieta R1 (lista partii + C) | Programista | zamknięte; krytyk R1 6/10 (12 braków) → pytania do Artura (Projektant); R2 po odpowiedziach |
 | 33 brak wzorca — próg doboru | Programista | po 23 |
 | 23 ramki i lista | Programista | zlecone |
 | 24–29 funkcje (P34) | — | do wzięcia po kolei |
