@@ -2,7 +2,7 @@
 
 Wejście: `docs/zadanie.md`, `docs/pm/01-competitive-analysis.md`, `docs/pm/02-operator.md` (zamknięty), ustalenia P2–P28 z `docs/decyzje.md`. Produkt: **Prześwit** (P11), nowy produkt (brak użytkowników do zbadania w terenie — założenia sprawdzamy sondami na sztucznych danych `dane/mini` i `dane/mini-trudny`). Co badamy, co już wiemy i jaką decyzję ustawia odkrywanie — z zadania i kroków 1–2: badamy pierwszą wersję, decyzja = zakres MVP i kolejność funkcji (linia „pominięte” w `docs/decyzje.md`).
 
-**Status:** wybór Artura jest (P29–P31). Gotowe: pomysły (A), job stories (B), założenia rdzenia Z1–Z10 (C) z progami od Artura, założenia wybranych pomysłów Z11–Z14 i plan sond (D). **Czeka na Artura:** P32 (zmiany w wybranych i odrzucone w części), P33 (najryzykowniejsze założenia), P34 (kolejność funkcji) — przed krokiem 4.
+**Status:** krok 3 odpowiedziany w całości (P29–P34). Do wyniku dopisany jest plan sond i priorytety; krok 4 (priorytety) buduje na kolejności 1 → 3 → 2 → 10 → 6.
 
 ## Czego nie wiem o produkcie (pytania do Artura, pokój Produkt)
 | P | Sprawa | Stan |
@@ -10,9 +10,9 @@ Wejście: `docs/zadanie.md`, `docs/pm/01-competitive-analysis.md`, `docs/pm/02-o
 | P29 | Które 3–5 z 10 pomysłów bierzemy dalej | **Artur: 1, 2, 3, 6, 10.** Odpadają 4, 5 (przerzuca pracę na operatora), 7, 8, 9. Lupa konieczna na obrazie 50 MB; 10 to ludzie z P19 |
 | P30 | Ile ramek na czystym aucie operator zniesie | **Artur: B — do 6** (woli więcej ramek niż przeoczenie) |
 | P31 | Ile ze 100 prawdziwych dodatków trzeba wskazać | **Artur: A — co najmniej 90** |
-| P32 | Co zmienić w wybranych pomysłach; czy któryś odrzucony warto wziąć w części | **czeka** |
-| P33 | Czy najryzykowniejsze założenia to Z1, Z2, Z6, Z7, Z11 | **czeka** |
-| P34 | Kolejność funkcji wybranych pomysłów | **czeka** |
+| P32 | Co zmienić w wybranych pomysłach; czy któryś odrzucony warto wziąć w części | **Artur: nic nie zmieniamy, odrzuconych nie bierzemy** |
+| P33 | Czy najryzykowniejsze założenia to Z1, Z2, Z6, Z7, Z11 | **Artur: tak** |
+| P34 | Kolejność funkcji wybranych pomysłów | **Artur: 1 → 3 → 2 → 10 → 6** |
 Z zadania i P2–P28, więc bez pytań: praca bez internetu, sztuczne dane, analiza bez człowieka (P9), przeoczenie gorsze od fałszywego alarmu (P4), powody odrzucenia (P13), poprawa rodzaju przez operatora (P24).
 
 ## A. Dziesięć pomysłów (skill `brainstorm-ideas-new`; perspektywy: PM / projektant / inżynier)
@@ -71,9 +71,9 @@ Wybór Artura wprowadza założenia pomysłów 2, 3, 6, 10 (pomysł 1 = Z8).
 
 **Plan sond (kolejność):** (1) Z1, Z2, Z6, Z7, Z8, Z10 — jeden przebieg oceny na `mini` i `mini-trudny` (Programista/Analityk); (2) Z9, Z11 — czas i pamięć na `pelny`; (3) Z3, Z13, Z5, Z4 — dobór rodzaju; (4) Z12, Z14 — przegląd z osobą z zewnątrz na makiecie (po makiecie, na zlecenie Szefa). Eksperymenty bez budowania: Z12 i Z14 to test na makiecie z danymi pokazowymi (prototyp), reszta to liczenie na zbiorze. Sondy nie zmieniają zakresu; wynik progu ⚠ obalonego wraca do Artura jako pytanie.
 
-**Najryzykowniejsze założenia (do potwierdzenia: P33):** Z1 (nie przeoczyć), Z2 i Z6 (za dużo ramek / nakładanie ładunku), Z7 (małe i za ładunkiem), Z11 (lupa na 50 MB).
+**Najryzykowniejsze założenia (potwierdził Artur, P33):** Z1 (nie przeoczyć), Z2 i Z6 (za dużo ramek / nakładanie ładunku), Z7 (małe i za ładunkiem), Z11 (lupa na 50 MB).
 
-**Kolejność funkcji (do potwierdzenia: P34):** 1 ramki + lista → 3 lupa → 2 wzorzec obok → 6 zmiana rodzaju → 10 podpowiedź krótkiego stażu.
+**Kolejność funkcji (P34, Artur):** 1 ramki + lista → 3 lupa → 2 wzorzec obok → 10 podpowiedź krótkiego stażu → 6 zmiana rodzaju.
 
 <!-- skill: discover -->
 <!-- skill: job-stories -->

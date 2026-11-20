@@ -131,3 +131,6 @@ P31 11:29 odpowiedź: Artur w pokoju: A — program wskazuje co najmniej 90 na 1
 P32 11:29 Artur: co zmienić w wybranych pomysłach (1, 2, 3, 6, 10) i czy któryś odrzucony warto wziąć w części? Rekomendacja: nic nie zmieniamy, odrzuconych nie bierzemy — czeka
 P33 11:29 Artur: najryzykowniejsze założenia: Z1 (nie przeoczyć), Z2+Z6 (za dużo ramek / nakładanie ładunku), Z7 (małe i za ładunkiem), Z11 (lupa na obrazie 50 MB) — potwierdzasz? Rekomendacja: tak — czeka
 P34 11:29 Artur: kolejność funkcji: 1 ramki+lista → 3 lupa → 2 wzorzec obok → 6 zmiana rodzaju → 10 podpowiedź krótkiego stażu — zgoda? Rekomendacja: zgoda — czeka
+P32 11:31 odpowiedź: Artur w pokoju: nic nie zmieniamy w wybranych pomysłach, odrzuconych nie bierzemy
+P33 11:31 odpowiedź: Artur w pokoju: tak — najryzykowniejsze: Z1, Z2+Z6, Z7, Z11
+P34 11:31 odpowiedź: Artur w pokoju: kolejność funkcji 1 → 3 → 2 → 10 → 6 (podpowiedź krótkiego stażu przed zmianą rodzaju)
