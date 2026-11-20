@@ -134,3 +134,6 @@ P34 11:29 Artur: kolejność funkcji: 1 ramki+lista → 3 lupa → 2 wzorzec obo
 P32 11:31 odpowiedź: Artur w pokoju: nic nie zmieniamy w wybranych pomysłach, odrzuconych nie bierzemy
 P33 11:31 odpowiedź: Artur w pokoju: tak — najryzykowniejsze: Z1, Z2+Z6, Z7, Z11
 P34 11:31 odpowiedź: Artur w pokoju: kolejność funkcji 1 → 3 → 2 → 10 → 6 (podpowiedź krótkiego stażu przed zmianą rodzaju)
+PARAMETR: tolerowana liczba ramek na czystym aucie = do 6 — P30 (odpowiedź Artura B; linia „do 3 (rekomendacja)” nieaktualna)
+PARAMETR: minimalna skuteczność wskazania dodatków = 90 ze 100 — P31 (odpowiedź Artura A)
+11:33 Szef: krok 3 — P29–P34 odpowiedziane (kolejność funkcji P34: 1 → 3 → 2 → 10 → 6); sondy Z11–Z14 założone jako zadania 15–18 (17, 18 po makiecie). Krok 3 → recenzja przejścia R1 (Analityk).
