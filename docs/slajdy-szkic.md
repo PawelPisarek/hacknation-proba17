@@ -1,10 +1,10 @@
 # Slajdy — szkielet (DRAFT, ≤ 10 slajdów, potem PDF)
 
 > Szkic przed pomiarami i makietą. Liczby skuteczności: **[do zmierzenia]** — nie wpisujemy niczego, czego nie zmierzyliśmy.
-> Oś przekazu (`value-prop-statements`): *Dla operatora RTG na granicy: RóżnicaRTG wskazuje miejsca, w których obraz naczepy odbiega od wzorca, więc operator w kilka minut wie, gdzie szukać skrytki — decyzję nadal podejmuje on.*
-> Nazwa „RóżnicaRTG” to rekomendacja z `docs/hacktribe.md`.
+> Oś przekazu (`value-prop-statements`): *Dla operatora RTG na granicy: Prześwit wskazuje miejsca, w których obraz naczepy odbiega od wzorca, więc operator w kilka minut wie, gdzie szukać skrytki — decyzję nadal podejmuje on.*
+> Nazwa „Prześwit” — wybór Artura (P11).
 
-## 1. RóżnicaRTG — tytuł
+## 1. Prześwit — tytuł
 - Narzędzie AI dla operatora RTG: porównuje obraz naczepy z wzorcem i zaznacza różnice.
 - Zespół: Hackathon · repo: github.com/PawelPisarek/hacknation-proba17
 - [zrzut: ekran główny makiety — obraz naczepy z zaznaczonym miejscem]
@@ -23,12 +23,12 @@
 
 ## 4. Rozwiązanie
 - System sam dobiera wzorzec **typu pojazdu** z biblioteki (operator rzadko ma czyste zdjęcie tej samej naczepy).
-- Porównuje badany obraz z wzorcem i zaznacza miejsca różnic.
+- Program sam, bez udziału operatora, porównuje badany obraz z wzorcem i zaznacza wszystkie miejsca różnic (P9).
 - Obraz bez różnic nie dostaje zaznaczeń.
 - [zrzut: obraz badany obok wzorca, z zaznaczeniami]
 
 ## 5. Operator decyduje
-- Przy każdym zaznaczonym miejscu operator zatwierdza albo odrzuca; odrzucając, podaje powód.
+- Dopiero na wyniku operator przy każdym zaznaczonym miejscu zatwierdza albo odrzuca; odrzucając, podaje powód (P9).
 - Decyzje i powody zostają w raporcie.
 - Człowiek zostaje decydentem; narzędzie tylko wskazuje, gdzie patrzeć.
 - [zrzut: lista miejsc z przyciskami „zatwierdź / odrzuć” i polem powodu]
@@ -39,7 +39,7 @@
 - [zrzut: kolejne kroki makiety]  ·  [link: makieta pod GitHub Pages / ksefbot.pl — wpisać po wdrożeniu]
 
 ## 7. Jak to działa i jak to mierzymy
-- Dane: sztuczne naczepy „czyste” i z „dodatkowym ładunkiem”, pliki .bmp, przetwarzanie partiami.
+- Dane: sztuczne naczepy „czyste” i z „dodatkowym ładunkiem”; duże pliki .bmp (~50 MB) działają już w pierwszej wersji (P10).
 - Priorytet: przeoczenie jest gorsze niż fałszywy alarm — ale liczbę fałszywych alarmów pokazujemy wprost.
 - Przeoczenia (na obrazach z dodatkami): **[do zmierzenia]** · fałszywe alarmy (na obrazach czystych): **[do zmierzenia]** · czas na obraz: **[do zmierzenia]**
 - [zrzut: wykres/tabela wyniku na zbiorze testowym — po pomiarze]
@@ -57,8 +57,8 @@
 
 ## 10. Co dalej
 - Zasilić biblioteką prawdziwych wzorców typów pojazdów po otrzymaniu danych KAS.
-- Praca lokalna, bez chmury (docelowo wymóg KAS) i integracja z repozytorium obrazów.
-- Skalowanie na większe zbiory; pomiary na obrazach KAS **[do zmierzenia]**.
+- Praca lokalna, bez chmury (docelowo wymóg KAS) oraz integracja z repozytorium obrazów KAS.
+- Przetwarzanie partii obrazów i wzorce per dostawca skanera (Nuctech, Multicontrol); pomiary na obrazach KAS **[do zmierzenia]**.
 - [zrzut: schemat wdrożenia — opcjonalnie]
 
 <!-- skill: value-prop-statements -->
