@@ -86,6 +86,59 @@ def brak_wzorca_v3(sciezka, bib, prog):
     return brak_wzorca(dop, prog)
 
 
+def rozmiar_bmp(sciezka):
+    """(szer, wys) z nagłówka BMP — bez czytania pikseli; zły plik -> (None, None)."""
+    try:
+        with open(sciezka, "rb") as f:
+            h = f.read(26)
+        return int.from_bytes(h[18:22], "little", signed=True), abs(int.from_bytes(h[22:26], "little", signed=True))
+    except (OSError, IndexError):
+        return None, None
+
+
+def widok(r):
+    """Zad. 40: pola dla widoku auta na stronie (lupa — położenie wzorca w pikselach obrazu; zad. 27 — 2 najbliższe
+    wzorce z doboru). Tylko przepisanie z wyniku detektora, metoda bez zmian."""
+    out = {}
+    if r.get("polozenie_wzorcow"):
+        out["polozenie_wzorcow"] = r["polozenie_wzorcow"]
+    if r.get("dobor"):
+        out["dobor"] = [dict(id=d["id"], typ=d.get("typ"), wynik=round(float(d.get("wynik", 0)), 4), s=d.get("s"),
+                             dx=d.get("dx"), dy=d.get("dy")) for d in r["dobor"]]
+    return out
+
+
+PODGLAD_SZER = 2048
+
+
+def podglad_bmp(sciezka, szer_maks=PODGLAD_SZER):
+    """Zad. 40: obraz do pokazania w przeglądarce — 8-bit szary BMP, szerokość <= szer_maks (co n-ty piksel).
+    Ramki są w ułamkach obrazu, więc pomniejszenie ich nie przesuwa."""
+    import numpy as np
+    from przeswit.bmp import wczytaj_szarosc
+    w, _ = rozmiar_bmp(sciezka)
+    krok = max(1, -(-int(w or 1) // szer_maks))
+    return bmp_szary(wczytaj_szarosc(sciezka, krok=krok))
+
+
+def bmp_szary(g):
+    """uint8 (H, W) -> bajty BMP 8-bit z paletą szarości (wiersze od dołu, wyrównane do 4 B)."""
+    import numpy as np
+    h, w = g.shape
+    row = (w + 3) // 4 * 4
+    px = np.zeros((h, row), np.uint8)
+    px[:, :w] = g[::-1]
+    paleta = np.repeat(np.arange(256, dtype=np.uint8), 4).reshape(256, 4)
+    paleta[:, 3] = 0
+    off = 14 + 40 + 1024
+    rozm = off + px.size
+    nag = (b"BM" + rozm.to_bytes(4, "little") + b"\0\0\0\0" + off.to_bytes(4, "little")
+           + (40).to_bytes(4, "little") + w.to_bytes(4, "little") + h.to_bytes(4, "little", signed=True)
+           + (1).to_bytes(2, "little") + (8).to_bytes(2, "little") + b"\0" * 4 + px.size.to_bytes(4, "little")
+           + (2835).to_bytes(4, "little") * 2 + (256).to_bytes(4, "little") + b"\0" * 4)
+    return nag + paleta.tobytes() + px.tobytes()
+
+
 def analizuj(sciezka, bib, metoda, konf, typ=None, detektor=None, prog_doboru=None, ocena_doboru=None):
     """Jedno liczenie -> {plik, szer, wys, rodzaj, wzorce, miejsca[{nr,x0,y0,x1,y1,roznica}], czas_s, brak_wzorca, napis?}.
     prog_doboru (miara, próg): poniżej — nic nie zaznaczamy (P35). Rodzaj podany przez operatora (typ) pomija próg."""
@@ -93,7 +146,8 @@ def analizuj(sciezka, bib, metoda, konf, typ=None, detektor=None, prog_doboru=No
     if metoda == "v3" and prog_doboru and not typ:
         t0 = time.perf_counter()
         if (ocena_doboru or brak_wzorca_v3)(sciezka, bib, prog_doboru):
-            return dict(plik=os.path.basename(sciezka), szer=None, wys=None, rodzaj=None, wzorce=[], miejsca=[],
+            szer, wys = rozmiar_bmp(sciezka)
+            return dict(plik=os.path.basename(sciezka), szer=szer, wys=wys, rodzaj=None, wzorce=[], miejsca=[],
                         czas_s=round(time.perf_counter() - t0, 3), brak_wzorca=True, napis=BRAK_WZORCA)
     r = det(sciezka, bib, [konf], None, typ, prog_doboru) if metoda == "v2" else det(sciezka, bib, [konf], None, typ)
     k = r["konfiguracje"][konf["nazwa"]]
@@ -104,4 +158,4 @@ def analizuj(sciezka, bib, metoda, konf, typ=None, detektor=None, prog_doboru=No
     return dict(plik=r["plik"], szer=r.get("szer"), wys=r.get("wys"), rodzaj=k["typ_wybrany"], wzorce=k.get("wzorce", []),
                 miejsca=[dict(nr=i + 1, x0=m["x0"], y0=m["y0"], x1=m["x1"], y1=m["y1"], roznica=m["wynik"])
                          for i, m in enumerate(miejsca)],
-                czas_s=r["czas_s"], brak_wzorca=False)
+                czas_s=r["czas_s"], brak_wzorca=False, **widok(r))

@@ -69,6 +69,7 @@ export function utworz({ omenUrl, katalog, limitMs = LIMIT_MS }) {
     }
     if (u.pathname === "/api/analiza" && req.method === "POST") return doUslugi(req, res, "/analiza" + u.search);
     if (u.pathname === "/api/partia-pokazowa" && req.method === "GET") return doUslugi(req, res, "/partia-pokazowa");
+    if (u.pathname === "/api/obraz" && req.method === "GET") return doUslugi(req, res, "/obraz" + u.search);
     if (u.pathname.startsWith("/api/")) return json(res, 404, { blad: "brak" });
     let rel;
     try { rel = decodeURIComponent(u.pathname); } catch { return json(res, 400, { blad: "zły adres" }); }
@@ -76,11 +77,19 @@ export function utworz({ omenUrl, katalog, limitMs = LIMIT_MS }) {
     const p = path.resolve(kat, "." + (rel === "/" ? "/index.html" : rel));
     if (p !== kat && !p.startsWith(kat + path.sep)) return json(res, 403, { blad: "poza katalogiem strony" });
     fs.readFile(p, (e, d) => {
+      // widok auta (zad. 40) to ten sam plik co mvp/widok-auta/widok.js: w obrazie Dockera kopiowany do public/,
+      // lokalnie czytany z mvp/
+      if (e && rel === "/widok.js") return fs.readFile(WIDOK, (e2, d2) => e2 ? json(res, 404, { blad: "brak" }) : wyslij(res, WIDOK, d2));
       if (e) return json(res, 404, { blad: "brak" });
-      res.writeHead(200, { "content-type": TYP[path.extname(p)] || "application/octet-stream", "cache-control": "no-cache" });
-      res.end(d);
+      wyslij(res, p, d);
     });
   }
+}
+
+const WIDOK = path.join(import.meta.dirname, "..", "mvp", "widok-auta", "widok.js");
+function wyslij(res, p, d) {
+  res.writeHead(200, { "content-type": TYP[path.extname(p)] || "application/octet-stream", "cache-control": "no-cache" });
+  res.end(d);
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1] || "").href) {

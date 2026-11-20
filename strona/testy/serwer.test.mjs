@@ -135,3 +135,23 @@ test("usługa nie zdąży → 503 „zajęta”, nie „uśpiona”", async () =
   assert.doesNotMatch(b, /uśpiona/);
   await zamknij(strona); await zamknij(atrapa);
 });
+
+test("zad. 40: przekazuje /api/obraz i podaje widok.js z mvp/", async () => {
+  const atrapa = http.createServer((req, res) => {
+    res.writeHead(200, { "content-type": "image/bmp" });
+    res.end("BM" + req.url);
+  });
+  const omenUrl = await nasluch(atrapa);
+  const strona = utworz({ omenUrl, katalog: KAT });
+  const url = await nasluch(strona);
+  const r = await fetch(url + "/api/obraz?biblioteka=mini&id=wzorzec_mini_firanka_00");
+  assert.equal(r.status, 200);
+  assert.equal(r.headers.get("content-type"), "image/bmp");
+  assert.equal(await r.text(), "BM/obraz?biblioteka=mini&id=wzorzec_mini_firanka_00");
+  const w = await fetch(url + "/widok.js");
+  assert.equal(w.status, 200);
+  assert.match(await w.text(), /renderWidokAuta/);
+  const h = await (await fetch(url + "/")).text();
+  assert.match(h, /src="widok\.js"/);
+  await zamknij(strona); await zamknij(atrapa);
+});

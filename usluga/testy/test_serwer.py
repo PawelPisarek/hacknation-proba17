@@ -16,7 +16,7 @@ def zadanie(url, dane=None, metoda=None):
 
 
 class TestSerwer(unittest.TestCase):
-    def uruchom(self, licz=None, bezczynnosc_s=0):
+    def uruchom(self, licz=None, bezczynnosc_s=0, wzorce=None):
         self.wolania = []
 
         def atrapa(sciezka, nazwa_bib, typ):
@@ -25,7 +25,8 @@ class TestSerwer(unittest.TestCase):
             self.wolania.append((n, nazwa_bib, typ))
             return {"plik": os.path.basename(sciezka), "rodzaj": "firanka", "miejsca": [], "czas_s": 0.01, "biblioteka": nazwa_bib}
         info = {"ok": False, "urzadzenie": "cpu", "karta": "", "metoda": "v2", "siatka": "x", "biblioteki": {"mini": 4}}
-        s = serwer.zbuduj(licz or atrapa, info, os.path.join(KORZEN, "strona", "public"), bezczynnosc_s, port=0)
+        s = serwer.zbuduj(licz or atrapa, info, os.path.join(KORZEN, "strona", "public"), bezczynnosc_s, port=0,
+                          wzorce=wzorce, podglad=lambda p: b"BM" + os.path.basename(p).encode())
         threading.Thread(target=s.serve_forever, daemon=True).start()
         self.addCleanup(s.server_close)
         self.addCleanup(s.shutdown)
@@ -85,6 +86,17 @@ class TestSerwer(unittest.TestCase):
         self.assertEqual(kod, 200)
         self.assertEqual(len(json.loads(ciało)["wyniki"]), 7)
         self.assertEqual(self.wolania[-1][1], "mini-trudny")
+
+    def test_obraz_partii_i_wzorca(self):
+        self.uruchom(wzorce={("mini", "w1"): MINI})
+        kod, ciało = zadanie(self.url + "/partia-pokazowa")
+        wyniki = json.loads(ciało)["wyniki"]
+        self.assertEqual([w["obraz"] for w in wyniki], ["partia=%d" % i for i in range(7)])
+        kod, ciało = zadanie(self.url + "/api/obraz?partia=5")
+        self.assertEqual((kod, ciało), (200, b"BMbadany_mini_cysterna_dodatki_00.bmp"))
+        self.assertEqual(zadanie(self.url + "/obraz?biblioteka=mini&id=w1"), (200, b"BM" + os.path.basename(MINI).encode()))
+        for zle in ("partia=99", "partia=x", "biblioteka=mini&id=nie", "id=../../etc/passwd", ""):
+            self.assertEqual(zadanie(self.url + "/obraz?" + zle)[0], 404, zle)
 
     def test_bezczynnosc(self):
         self.uruchom(bezczynnosc_s=0.5)

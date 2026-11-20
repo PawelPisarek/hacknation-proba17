@@ -96,3 +96,41 @@ class TestRdzen(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestWidok(unittest.TestCase):
+    MINI = os.path.join(KORZEN, "dane/mini/badany_mini_firanka_czyste_00.bmp")
+
+    def test_rozmiar_z_naglowka(self):
+        self.assertEqual(rdzen.rozmiar_bmp(self.MINI), (1024, 256))
+        self.assertEqual(rdzen.rozmiar_bmp("/nie/ma.bmp"), (None, None))
+
+    def test_brak_wzorca_ma_rozmiar(self):
+        r = rdzen.analizuj(self.MINI, None, "v3", {"nazwa": "K"}, prog_doboru=("sr", 0.8),
+                           detektor=lambda *a, **k: None, ocena_doboru=lambda s, b, p: True)
+        self.assertEqual((r["szer"], r["wys"]), (1024, 256))
+
+    def test_widok_przepisuje_polozenie_i_dobor(self):
+        pol = [{"id": "w1", "s": 1.02, "dx": -1, "dy": 2}]
+        atrapa = lambda s, b, k, tp=None, tw=None: dict(plik="a.bmp", czas_s=0.1, polozenie_wzorcow=pol,
+            dobor=[{"id": "w1", "typ": "firanka", "wynik": 0.91234567, "s": 1.0, "dx": 0, "dy": 0},
+                   {"id": "w2", "typ": "kontener", "wynik": 0.8, "s": 1.0, "dx": 1, "dy": 0}],
+            konfiguracje={"K": {"typ_wybrany": "firanka", "wzorce": ["w1"], "miejsca": []}})
+        r = rdzen.analizuj("a.bmp", None, "v3", {"nazwa": "K"}, detektor=atrapa)
+        self.assertEqual(r["polozenie_wzorcow"], pol)
+        self.assertEqual([d["id"] for d in r["dobor"]], ["w1", "w2"])
+        self.assertEqual(r["dobor"][0]["wynik"], 0.9123)
+
+    def test_podglad_to_ten_sam_obraz(self):
+        from przeswit.bmp import wczytaj_szarosc
+        import tempfile
+        b = rdzen.podglad_bmp(self.MINI)
+        with tempfile.NamedTemporaryFile(suffix=".bmp", delete=False) as t:
+            t.write(b)
+        self.addCleanup(os.unlink, t.name)
+        self.assertEqual(rdzen.rozmiar_bmp(t.name), (1024, 256))
+        self.assertTrue((wczytaj_szarosc(t.name) == wczytaj_szarosc(self.MINI)).all())
+        maly = rdzen.podglad_bmp(self.MINI, szer_maks=300)
+        with open(t.name, "wb") as f:
+            f.write(maly)
+        self.assertEqual(rdzen.rozmiar_bmp(t.name), (256, 64))

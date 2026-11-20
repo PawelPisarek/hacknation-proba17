@@ -4,7 +4,7 @@
          [--metoda v2] [--siatka ...] [--szer-rob 2048] [--biblioteki mini,mini-trudny,maly]
 
 Endpointy (także pod /api/...): GET /zdrowie, POST /analiza?typ=&biblioteka= (ciało = .bmp), GET /partia-pokazowa,
-GET / i pliki strony z strona/public. Jedno liczenie naraz (karta 4 GB). --bezczynnosc N: po N min bez żądania
+GET /obraz?partia=N | ?biblioteka=B&id=ID (podgląd do widoku auta, zad. 40), GET / i pliki strony z strona/public. Jedno liczenie naraz (karta 4 GB). --bezczynnosc N: po N min bez żądania
 usługa kończy się i zwalnia kartę (0 = nigdy; tylko na pokaz). --bez-sieci: połączenia poza pętlę zwrotną odmawiane.
 """
 import argparse, ipaddress, json, mimetypes, os, socket, sys, tempfile, threading, time, urllib.parse
@@ -39,8 +39,13 @@ def z_siecia():
     socket.socket.connect = _connect
 
 
-def zbuduj(licz, info, strona_dir, bezczynnosc_s, port=0, host="127.0.0.1"):
-    """licz(sciezka, nazwa_bib|None, typ|None) -> dict; info = treść /zdrowie. Zwraca serwer (bez serve_forever)."""
+def zbuduj(licz, info, strona_dir, bezczynnosc_s, port=0, host="127.0.0.1", wzorce=None, podglad=None):
+    """licz(sciezka, nazwa_bib|None, typ|None) -> dict; info = treść /zdrowie. Zwraca serwer (bez serve_forever).
+    Zad. 40: GET /obraz?partia=N (badany z partii pokazowej) albo ?biblioteka=B&id=ID (wzorzec, wzorce={(B, ID): ścieżka})
+    -> podglad(ścieżka) = bajty BMP do widoku auta; tylko pliki z tych dwóch list."""
+    wzorce = wzorce or {}
+    podglad = podglad or rdzen.podglad_bmp
+    pamiec = {}
     blokada = threading.Lock()
     ostatnie = [time.monotonic()]
     strona_dir = os.path.realpath(strona_dir)
@@ -75,15 +80,19 @@ def zbuduj(licz, info, strona_dir, bezczynnosc_s, port=0, host="127.0.0.1"):
             p, q = self.sciezka()
             if p == "/zdrowie":
                 return self.odpowiedz(200, info)
+            if p == "/obraz":
+                return self.obraz(q)
             if p == "/partia-pokazowa":
                 with open(PARTIA) as f:
                     partia = json.load(f)
                 wyniki = []
-                for e in partia:
+                for i, e in enumerate(partia):
                     try:
-                        wyniki.append(self.licz_jedno(os.path.join(rdzen.KORZEN, e["plik"]), e["biblioteka"], None))
+                        w = self.licz_jedno(os.path.join(rdzen.KORZEN, e["plik"]), e["biblioteka"], None)
                     except Exception as ex:   # jeden zły plik nie zatrzymuje partii
-                        wyniki.append({"plik": os.path.basename(e["plik"]), "blad": str(ex)})
+                        w = {"plik": os.path.basename(e["plik"]), "blad": str(ex)}
+                    w["obraz"] = "partia=%d" % i
+                    wyniki.append(w)
                     ostatnie[0] = time.monotonic()
                 return self.odpowiedz(200, {"wyniki": wyniki})
             plik = os.path.realpath(os.path.join(strona_dir, urllib.parse.unquote(p).lstrip("/") or "index.html"))
@@ -96,6 +105,24 @@ def zbuduj(licz, info, strona_dir, bezczynnosc_s, port=0, host="127.0.0.1"):
             with open(plik, "rb") as f:
                 typ = mimetypes.guess_type(plik)[0] or "application/octet-stream"
                 return self.odpowiedz(200, tresc=f.read(), typ=typ + ("; charset=utf-8" if typ.startswith("text/") else ""))
+
+        def obraz(self, q):
+            sciezka = None
+            if "partia" in q:
+                try:
+                    with open(PARTIA) as f:
+                        sciezka = os.path.join(rdzen.KORZEN, json.load(f)[int(q["partia"])]["plik"])
+                except (ValueError, IndexError, KeyError):
+                    sciezka = None
+            elif "id" in q:
+                sciezka = wzorce.get((q.get("biblioteka") or "mini", q["id"]))
+            if not sciezka or not os.path.isfile(sciezka):
+                return self.odpowiedz(404, {"blad": "brak obrazu"})
+            if sciezka not in pamiec:
+                if len(pamiec) > 64:
+                    pamiec.clear()
+                pamiec[sciezka] = podglad(sciezka)
+            return self.odpowiedz(200, tresc=pamiec[sciezka], typ="image/bmp")
 
         def do_POST(self):
             ostatnie[0] = time.monotonic()
@@ -207,7 +234,8 @@ def main():
             w["uwaga"] = uwaga
         return w
 
-    s = zbuduj(licz, info, os.path.join(rdzen.KORZEN, "strona", "public"), a.bezczynnosc * 60, a.port, a.host)
+    wz = {(n, i): p for n, o in opisy.items() for i, _, p in rdzen.wpisy_biblioteki(o)}
+    s = zbuduj(licz, info, os.path.join(rdzen.KORZEN, "strona", "public"), a.bezczynnosc * 60, a.port, a.host, wzorce=wz)
     print("Prześwit: http://%s:%d  %s %s, biblioteki %s (%.1f s), bezczynność %s min%s" % (
         a.host, a.port, info["urzadzenie"], karta, info["biblioteki"], time.perf_counter() - t0, a.bezczynnosc,
         ", bez sieci" if a.bez_sieci else ""), flush=True)
