@@ -226,3 +226,4 @@ P37 12:41 bez odpowiedzi Artur → rekomendacja: A — wiersz auta: numer naczep
 P39 12:41 bez odpowiedzi Artur → rekomendacja: A — podpowiedź „zwykle tu…” tylko przy wybranym kafelku miejsca (Artur w pokoju, przeterminowane)
 P40 12:41 bez odpowiedzi Artur → rekomendacja: B — po rozstrzygnięciu ostatniego miejsca otwiera się następne auto z partii (Artur w pokoju, przeterminowane)
 12:42 Szef: README zamknięte po R3 (ceb6717, brak braków zmieniających zakres lub kryteria). docs/hacktribe.md → Prezenter: uzgodnić z P35/P36.
+12:42 Prezenter: hacktribe po P36 (edbeb73, 913 zn.)
