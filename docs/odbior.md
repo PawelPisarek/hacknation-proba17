@@ -339,3 +339,22 @@ Braki:
 3. **technika:** zgodność liczby miejsc z wierszem poleceń dla rodzaju operatora (`--typ`) nie sprawdzona (porównanie robi Programista przy 40); sprawdzono tylko zgodność strona = usługa (curl).
 
 Niezweryfikowane: zachowanie po uśpieniu usługi w trakcie przeliczenia (nie usypiałem; błąd symulowany przez `fetch`); wgrany własny plik z „Zmień rodzaj”. Zrzuty i pliki: `docs/zrzuty/odbior27/`.
+
+## Lista odbioru 43 — miniatura z zaznaczonymi miejscami w raporcie (przygotowana, 20:11; odpalam po „oddaję zadanie 43”)
+
+Kryteria: `docs/zadania/43-miniatura-w-raporcie.md`, P91 D1, P72. Link: https://hacknation.ksefbot.pl/. Przed startem `GET /api/zdrowie` (200; uśpionej usługi nie budzę bez zlecenia). Prawdziwe kliknięcia (`agent-browser`), karta tylko przez stronę, zrzuty w `docs/zrzuty/odbior43/`. Punkt odniesienia: widok auta (ramki 1…n, współrzędne z `#obB`) i dotychczasowe pliki z odbioru 27 (`docs/zrzuty/odbior27/raport-27.json`, `raport-27.csv`).
+
+| # | Kryterium | Krok | Zalicza, gdy |
+|---|---|---|---|
+| 43-1 | miniatura przy każdym aucie | partia pokazowa → „Policz partię” → „Raport partii” | każde z 7 aut ma obraz (`img` z `naturalWidth` > 0, nie pusty ani błąd 404); 7 miniatur, kolejność jak auta 1–7 |
+| 43-2 | ramki jak w widoku auta | auto 1 i auto 7 (11 miejsc): policzyć ramki na miniaturze (obraz z nakładką — element `canvas`/`svg`/`div` albo plik) i porównać z widokiem auta | liczba ramek = liczba miejsc (8 i 11), numery 1…n, położenie względne (x0/szerokość, y0/wysokość) zgodne z widokiem auta z dokładnością kilku pikseli miniatury; po zatwierdzeniu/odrzuceniu miejsca kolor ramki zgodny z decyzją, jeśli taki jest w specyfikacji (inaczej „technika: brak oznaczenia decyzji”) |
+| 43-3 | cysterna | auto 6 w raporcie | miniatura bez ramek + napis „brak wzorca” (wg P81: „brak wzorca — obejrzyj ręcznie”); brak błędu |
+| 43-4 | zmiana rodzaju | auto 7: „Zmień rodzaj” → kontener → „Zastosuj” (10 miejsc, odpowiedź usługi z `&typ=kontener`) → „Raport partii” | miniatura auta 7 ma 10 ramek (nie 11); po powrocie na firankę znów 11; cysterna na aucie 7: miniatura bez ramek; decyzje skasowane — ramki bez koloru decyzji |
+| 43-5 | pobrany raport zawiera miniatury | „Zapisz i zamknij partię” (z ostrzeżeniem „Brak decyzji …” → „Zapisz mimo to”); przechwycić pobrane pliki (hook na `Blob` / pobranie) | wśród pobranych jest raport z obrazkami 7 aut (format wg wpisu Programisty: HTML/PDF/ .json z polem miniatury + pliki); po otwarciu pliku każde auto ma miniaturę z ramkami; plik otwiera się bez strony i bez sieci; rozmiar rozsądny (< kilka MB) |
+| 43-6 | dotychczasowe pola bez zmian | porównać `.json` i `.csv` z `raport-27.json/.csv` dla tego samego scenariusza (auto 7 = kontener) | te same pola i nazwy: `id_kontroli, auto, plik, nr_rej, rodzaj_programu, rodzaj_operatora, miejsce, decyzja, powod, kto, miejsce_kontroli, data_godzina`; dopuszczalna jedna dodatkowa kolumna z nazwą pliku miniatury; liczba wierszy .csv = suma miejsc + wiersz auta 6; kolejność kolumn bez zmian |
+| 43-7 | „Dodaj jeden obraz” (auto 8) | lista partii → „Dodaj jeden obraz” → `dane/mini/badany_mini_chlodnia_czyste_00.bmp` (`upload` w pole `#plik1`, jak w odbiorze 28) → „Raport partii” | auto 8 ma miniaturę z ramkami (9 miejsc, odbiór 28); raport ma 8 aut; pobrany plik zawiera 8 miniatur |
+| 43-8 | brak regresji | A6, A9, A10, A13 (odbiory 28/29) po zmianach w raporcie; „Zmień rodzaj” (27-1…27-7 w skrócie) | decyzje, nr rej., następne auto, zamknięcie partii i błąd przeliczenia jak dotąd; „Brak decyzji …” z numerami aut; raport zamknięty bez „Zapisz i zamknij” i bez wyszarzenia na liście |
+| 43-9 | wygląd i szerokość | raport przy oknie 1280 px i 800 px | kolumna z miniaturą i „Rodzaj programu” nie ucięte (z odbioru 27, brak 2); miniatura czytelna (ramki widoczne, nie punkty) |
+| 43-10 | czas | „Raport partii” po policzeniu partii; „Zapisz i zamknij” | raport otwiera się < 2 s, zapis < 5 s (bez nowego liczenia na karcie — „bez liczenia” wg zadania); w żądaniach sieciowych tylko `/api/obraz` (hook `fetch`), zero `/api/partia-pokazowa`/`/api/analiza` przy otwarciu raportu |
+
+Dowód każdego punktu: liczba albo cytat ekranu + zrzut. Wynik: sekcja „Odbiór zadania 43 na linku”, zaliczone / NIE, braki „technika” albo „produkt”. Niezweryfikowane z góry: format pliku z miniaturami (wybierze Programista), wygląd na małym ekranie.
