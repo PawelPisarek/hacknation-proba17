@@ -1,4 +1,4 @@
-# Stan — 19:02
+# Stan — 19:04
 Kamień: MVP na hacknation.ksefbot.pl (koniec próby po MVP): 40 → 29 → 28 → 27 → odbiór → Artur: uproszczenia + 1 dorobienie. Makieta i hacktribe gotowe.
 
 | zadanie | kto | status |
@@ -9,6 +9,7 @@ Kamień: MVP na hacknation.ksefbot.pl (koniec próby po MVP): 40 → 29 → 28 �
 | krok 8 wizja (08-wizja.md) | Projektant | zamknięte (R3 czysto 15:28) → zadanie 35 Prezenter |
 | 22 makieta R2 | Programista | zamknięte; krytyk 7/10; Artur P73–P78 (14:38) |
 | 34 makieta R3 (P73 A, P74 A, P76 A, P77 A, P79 B, brak 7) | Programista | zamknięte; poprawki krytyka R3 (8/10, runda 3 z 3) + P80 A w r3 15:23, r3 200 — makieta zamknięta |
+| 09 uproszczenia + dorobienie (Artur) | Projektant | szkic bf9cb62 (U1–U8, D1–D3); recenzja Analityka i wysyłka po odbiorze MVP |
 | 40 strona pod linkiem: ramki, lupa, wzorzec obok, podpowiedź | Programista | zlecone 19:02; potem 29 → 28 → 27 |
 | 21 wdrożenie strona + usługa (P43 A) | Paweł → Programista, Analityk | merge do main 19acef7 (Programista 16:39, testy OK, Coolify z main); odbiór z zewnątrz (Analityk) w toku |
 | 30 odbiór A1–A14 + spójność | Analityk | zamknięte 15:34: 5 zal., A4 NIE → 36 (Programista); 37 spójność zamknięte (Projektant); poprawki Prezentera zamknięte 90212aa |
