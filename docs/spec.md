@@ -23,7 +23,7 @@ Język ekranu: polski. Udawane dane: z `dane/mini` (nazwy plików `badany_mini_<
 | # | Ekran | Co jest | Udawane dane / uwagi |
 |---|---|---|---|
 | E1 | Logowanie i stanowisko | pole „funkcjonariusz” (lista), pole „miejsce kontroli” (lista), przycisk „Zacznij zmianę” | funkcjonariusz „SCS Kowalski”, miejsce „Terespol — stanowisko 2” (**dane udawane**); raz na zmianę |
-| E2 | Wybór partii | przycisk „Wskaż obrazy .bmp”, lista wybranych plików, „Policz partię”; makieta i demo idą na `dane/mini` (PNG); wymaganie 50 MB (A12) potwierdza pomiar Z9: śr. 5,0 s, maks. 8,1 s | 6 plików z `dane/mini` (skład wg `docs/demo.md`): firanka dodatki_00, chłodnia dodatki_01, kontener dodatki_01, kontener czyste_00, firanka czyste_01, cysterna dodatki_00; 7. plik `trudny_mini_firanka_za_ladunkiem_00.bmp` jest poza partią (P51 B; opis na ekranie wg P60 — czeka) |
+| E2 | Wybór partii | przycisk „Wskaż obrazy .bmp”, lista wybranych plików, „Policz partię”; makieta i demo idą na `dane/mini` (PNG); wymaganie 50 MB (A12) potwierdza pomiar Z9: śr. 5,0 s, maks. 8,1 s | 6 plików z `dane/mini` (skład wg `docs/demo.md`): firanka dodatki_00, chłodnia dodatki_01, kontener dodatki_01, kontener czyste_00, firanka czyste_01, cysterna dodatki_00; 7. plik `trudny_mini_firanka_za_ladunkiem_00.bmp` jest poza partią, opisany na ekranie (P51 B; P60 A — rekomendacja 13:20 po 10 min) |
 | E3 | Lista partii (z wariantu B); po ostatnim aucie wraca tu z przyciskiem „Raport partii” (P54 A) | tabela: miniatura, „auto N” + nazwa pliku (P44 A), rodzaj, stan, liczba miejsc (P37 B); stan liczy się po kolei (pasek postępu partii); wiersz „gotowe” klikalny dopiero po policzeniu całej partii (P38) | 6 wierszy; jeden ze stanem „brak wzorca” (cysterna), liczba miejsc „—” |
 | E4 | Auto — widok C | lewo: badany z ramkami 1…n; prawo: wzorzec (nazwa rodzaju + przycisk „Zmień rodzaj”); wspólne przewijanie i lupa; pod spodem kafelki (numer, słowo niski/średni/wysoki, stan: oczekuje / zatwierdzone / odrzucone); pole „Nr rej.”; przyciski „Zatwierdź”, „Odrzuć ▾ powód”; podpowiedź „zwykle tu…” przy każdym kafelku od razu (P39 B) | firanka_dodatki_00: 6 kafelków; podpowiedź np. „zwykle tu: podwozie — belka poprzeczna” | Lista miejsc: 6 najsilniejszych, pod szóstym widoczna linia „i jeszcze N miejsc — pokaż” (P57 A; nic nie jest chowane po cichu).
 | E5 | Auto — brak wzorca | zamiast ramek i kafelków napis **„brak wzorca — sprawdź obraz sam”**; sam badany obraz z lupą; pola nr rej. i „Zamknij auto” (P35 A) | cysterna (nie ma jej w bibliotece wzorców) |
@@ -115,6 +115,7 @@ Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z d
 | P47 | A — opis „skrytkę lub dodatkowy ładunek” bez zmian | odpowiedź Artura 12:52 |
 | P48 | A — wyjątek „poza znaną konstrukcją” w opisie | odpowiedź Artura 12:52 |
 | P49 | A — progi dobiera zespół na danych testowych, Artur zatwierdza po zobaczeniu wyniku | odpowiedź Artura; wartości czekają na pomiar |
+| P60 | A — skład partii: 6 aut, a trudny przypadek (`trudny_mini_firanka_za_ladunkiem_00.bmp`) jest 7. plikiem poza partią, opisanym na ekranie | bez odpowiedzi Artur 13:20 → rekomendacja |
 
 <!-- skill: create-prd -->
 <!-- skill: przeplywy-pm -->
