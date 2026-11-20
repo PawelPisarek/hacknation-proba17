@@ -437,3 +437,10 @@ P78 14:37 Artur: co z ekranu wyrzucić po przeglądzie R2? Rekomendacja: nic poz
 14:37 Projektant: brak 7 krytyka R2 (wiersz „auto 8 · wynik przykładowy” w raporcie) — techniczny, do Programisty; progi słów z zadania 32 dojdą do Artura jako P49
 14:37 Szef: krok 7 R3 (wpis Analityka z godziną „14:50” — faktycznie ok. 14:37) — braki R2 domknięte; 3 nowe braki to nieaktualne liczby i termin (v2 → v3 z zad. 20, Z9 → 1,73/2,09 s, termin zad. 32 → przed przeglądem Artura). Krok 7 zamknięty po 3 rundach (P28): Projektant wpisuje liczby v3 do 07 bez kolejnej recenzji; brak 1 (cel na trudnym zestawie 6,25 vs 6 — minimalnie niespełniony) idzie do Artura jako informacja w wiadomości przeglądu R2.
 14:38 Projektant: 07-pre-mortem — liczby z WYNIK zadania 20 (ramki 5,8/6,25, przeoczenia 7,8%/9,7%, mały dodatek 6/42, czas 1,73/2,09 s) w R1–R4; termin R8 (zadanie 32) → przed przeglądem Artura; Artur dostaje zdanie o 6,25 ramki przy celu 6
+P73 14:38 odpowiedź: A (Artur w pokoju) — numer i słowo w jednej małej etykiecie obok ramki, bez nakładania; Artur: to błąd makiety, takich nie pytać, poprawiać od razu
+P74 14:38 odpowiedź: A (Artur w pokoju) — auta bez miejsc: „obejrzane, bez wskazań”; ostrzeżenie P63 B tylko dla aut z nierozstrzygniętymi miejscami
+P75 14:38 odpowiedź: B (Artur w pokoju) — na pokazie nie ma „wysoki” na kole przy „niski” na prawdziwym dodatku; czekamy na progi z P49, potem ustalamy słowa; jeśli dalej odwrotnie — pokazać Arturowi wynik
+P76 14:38 odpowiedź: A (Artur w pokoju) — zoom 4× zachowuje ramkę z numerem
+P77 14:38 odpowiedź: A (Artur w pokoju) — komunikat przy polu „Nr rej.”, przycisk „Zamknij auto”
+P78 14:38 odpowiedź: nic nie wyrzucamy (Artur w pokoju)
+14:38 Projektant: poprawki R2 dla Programisty (bez pytań, wg Artura): P73 etykiety, P74 stan „obejrzane, bez wskazań” + ostrzeżenie tylko dla nierozstrzygniętych, P76 ramka w zoomie 4×, P77 komunikat przy polu. P75 B: słowa auta 7 wstrzymane do progów P49 (zadanie 32); zasada dla przyszłych pytań: błędy makiety i warianty „zostaw błąd” to poprawka, nie pytanie
