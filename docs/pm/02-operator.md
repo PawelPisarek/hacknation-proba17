@@ -60,3 +60,8 @@ Persona: „Marek". Cel: decyzja o aucie w kilka minut. Etapy dopasowane do prod
 <!-- skill: user-personas -->
 <!-- skill: customer-journey-map -->
 <!-- skill: przeplywy-pm -->
+
+## Ustalenia Artura (P22–P24)
+- P22: numer rejestracyjny naczepy wpisuje operator (jedno pole); miejsce kontroli to ustawienie stanowiska; „kto zdecydował” z zalogowanego funkcjonariusza.
+- P23: przy wzorcu przybliżonym słowa niski/średni/wysoki bez zmian, nad listą napis „wynik mniej pewny”.
+- P24: system dobiera rodzaj pojazdu sam, ale operator (zna go z dokumentów przewozowych) może go zmienić z listy jednym kliknięciem; analiza liczy się od nowa. Dotyczy etapu 3 drogi operatora i ekranu wyniku (lista rodzajów: firanka, chłodnia, kontener, cysterna).
