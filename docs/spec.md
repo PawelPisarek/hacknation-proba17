@@ -85,6 +85,7 @@ UPROSZCZENIE: logowanie i ustawienie stanowiska — jedna lista funkcjonariuszy 
 UPROSZCZENIE: partia = obrazy liczone po kolei, wejście w auto po całej partii — bez wyniku na bieżąco i bez skalowania (jedno zdanie w opisie, jak by rosło) — dorobienie: równoległe liczenie i wynik na bieżąco (pomysł 7, odrzucony)
 UPROSZCZENIE: biblioteka wzorców z naszych sztucznych czystych obrazów, bez dokładania przez opiekuna — dorobienie: ekran dokładania wzorców
 UPROSZCZENIE: podpowiedź „zwykle tu…” z generatora (4 sztuczne rodzaje), nie z prawdziwych naczep — dorobienie: opisy od ekspertów KAS
+P81 A (Artur): opisy „zwykle tu…” są ogólne i działają dla każdego obrazu (np. „podwozie — belki, koła i oś”, „właz cysterny”, „narożniki kontenera”); makieta i pokaz nie używają ręcznie dokładniejszych opisów dla przykładów.
 UPROSZCZENIE: raport zapisywany lokalnie jako plik, bez repozytorium KAS i bez ekranu kierownika zmiany — dorobienie: integracja z repozytorium obrazów
 UPROSZCZENIE: brak miniatury obrazu z zaznaczonymi miejscami (zatwierdzone/odrzucone) przy każdym aucie w raporcie E7 (P72 A) — tabela z decyzjami i powodami — dorobienie: miniatura z ramkami w wierszu raportu po MVP (ok. 1–2 h)
 
