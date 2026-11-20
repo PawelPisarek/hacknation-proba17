@@ -1,6 +1,6 @@
 # Krok 6 — scenariusze odbioru „Prześwit” (`/test-scenarios`, dane pokazowe — `dummy-dataset`)
 
-Wejście: `docs/spec.md` (A1–A14, E1–E7), `docs/pm/05-write-prd.md`, `docs/decyzje.md` (P1–P55 (P53 A: zły plik odrzucony, reszta liczy się; P54 A: po ostatnim aucie lista partii z „Raport partii”; P55 B: jeden przycisk „Zapisz i zamknij partię”)). Dane **sztuczne**: `dane/mini` (16 badanych + 12 wzorców, 1024×256), `dane/mini-trudny` (przypadki: egzemplarz, ładunek legalny, mały dodatek, za ładunkiem), `dane/manifest*.json` (prawda o dodatkach). Skrót ról: OP = operator RTG; TEST = tester.
+Wejście: `docs/spec.md` (A1–A14, E1–E7), `docs/pm/05-write-prd.md`, `docs/decyzje.md` (P1–P72 (P53 A: zły plik odrzucony, reszta liczy się; P54 A: po ostatnim aucie lista partii z „Raport partii”; P55 B: jeden przycisk „Zapisz i zamknij partię”)). Dane **sztuczne**: `dane/mini` (16 badanych + 12 wzorców, 1024×256), `dane/mini-trudny` (przypadki: egzemplarz, ładunek legalny, mały dodatek, za ładunkiem), `dane/manifest*.json` (prawda o dodatkach). Skrót ról: OP = operator RTG; TEST = tester.
 
 ## Czego nie wiem o produkcie (pytania do Artura w pokoju)
 - **P49** (odpowiedź A): progi dobiera zespół na danych testowych; Artur zatwierdza po zobaczeniu, ile czystych aut dostaje „wysoki”. A2/S2 sprawdza zasadę, liczby wchodzą po zatwierdzeniu.
