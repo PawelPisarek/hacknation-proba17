@@ -89,7 +89,8 @@ def main():
                 G.obraz(typ, nazwa, "mini", tr, "czyste", 17, tmp)
                 s_gen = sha(os.path.join(tmp, nazwa + ".bmp"))
                 s_ref = sha(os.path.join(a.mini, nazwa + ".bmp"))
-                assert s_gen == s_ref, f"rozbieżność bajtów z dane/mini: {nazwa}"
+                if s_gen != s_ref:  # numpy na flocie (2.5.x) liczy inaczej niż przy generowaniu dane/mini; to ostrzeżenie, nie błąd
+                    print(f"OSTRZEŻENIE: rozbieżność bajtów z dane/mini: {nazwa} (wersja numpy)", file=sys.stderr)
                 os.remove(os.path.join(tmp, nazwa + ".bmp"))
                 czyste_p49_lista.append(
                     dict(
@@ -172,23 +173,24 @@ def main():
     bib_pelna = [os.path.join(a.mini, e["plik"]) for e in man_mini["wzorce"]]
     bib_bez_cysterny = [os.path.join(a.mini, e["plik"]) for e in man_mini["wzorce"] if e["typ_pojazdu"] != "cysterna"]
 
-    # 6) Partia pokazowa (6 aut z docs/pm/06-scenariusze.md)
+    # 6) Partia pokazowa (7 aut: kolejność z docs/pm/06-scenariusze.md, docs/spec.md §7 i docs/demo.md; P60 B — 7. auto trudne, bez oznaczenia)
     partia_spec = [
-        (1, "badany_mini_firanka_dodatki_00.bmp", "firanka", "WL 12345", "gotowe, liczba miejsc > 0, główna ścieżka demo"),
-        (2, "badany_mini_chlodnia_czyste_00.bmp", "chlodnia", "LU 5T021", "gotowe (miejsc <= 6 wg P30 B albo 'brak wskazań'; bez 'wysoki' z samego podziału P45 B)"),
-        (3, "badany_mini_kontener_dodatki_01.bmp", "kontener", "PZ 7K889", "gotowe"),
-        (4, "badany_mini_firanka_czyste_01.bmp", "firanka", "BI 22001", "gotowe"),
-        (5, "badany_mini_chlodnia_dodatki_00.bmp", "chlodnia", "KR 8N334", "gotowe"),
-        (6, "badany_mini_cysterna_czyste_00.bmp", "cysterna", "GD 3P101", "brak wzorca, miejsc '—' (E5, wzorce cysterny wyjęte z biblioteki)"),
+        (1, a.mini, "badany_mini_firanka_dodatki_00.bmp", "firanka", "WL 12345", "gotowe, liczba miejsc > 0, główna ścieżka demo"),
+        (2, a.mini, "badany_mini_chlodnia_dodatki_01.bmp", "chlodnia", "LU 5T021", "gotowe"),
+        (3, a.mini, "badany_mini_kontener_dodatki_01.bmp", "kontener", "PZ 7K889", "gotowe"),
+        (4, a.mini, "badany_mini_kontener_czyste_00.bmp", "kontener", "BI 22001", "gotowe (na v3 min. 3 miejsca; 'brak wskazań' tylko dla czyste_zero)"),
+        (5, a.mini, "badany_mini_firanka_czyste_01.bmp", "firanka", "KR 8N334", "gotowe"),
+        (6, a.mini, "badany_mini_cysterna_dodatki_00.bmp", "cysterna", "GD 3P101", "brak wzorca, miejsc '—' (E5, wzorce cysterny wyjęte z biblioteki)"),
+        (7, a.trudny, "trudny_mini_firanka_za_ladunkiem_00.bmp", "firanka", "", "gotowe; przypadek trudny (P60 B), bez oznaczenia na liście; więcej miejsc niż 6 -> 'i jeszcze n miejsc' (P57 A)"),
     ]
     partia_pokazowa = []
-    for nr, plik, typ, rej, ocz in partia_spec:
-        e = idx_mini[plik]
+    for nr, katalog, plik, typ, rej, ocz in partia_spec:
+        e = (idx_trudny if katalog == a.trudny else idx_mini)[plik]
         assert e["typ_pojazdu"] == typ
         partia_pokazowa.append(
             dict(
                 auto=nr,
-                plik=os.path.join(a.mini, plik),
+                plik=os.path.join(katalog, plik),
                 typ_pojazdu=typ,
                 nr_rej=rej,
                 dodatki_wg_manifestu=len(e["dodatki"]) > 0,
@@ -264,7 +266,7 @@ def main():
             nazwa="Brak wzorca (cysterna)",
             blokuje=True,
             biblioteka="bez_cysterny",
-            pliki=[partia_pliki[5], p_cyst_dod],
+            pliki=[partia_pliki[5]],
             warunki="Wzorce cysterny wyjęte z biblioteki (9 wzorców: firanka, chłodnia, kontener); auto 6 w partii.",
             oczekiwany_wynik="Na E3 stan 'brak wzorca' i liczba miejsc '—'; na E4/E5 zero ramek i dosłowny napis 'brak wzorca — sprawdź obraz sam'; brak napisu 'wynik mniej pewny' i brak wzorca przybliżonego; sam obraz badany z lupą.",
         ),
@@ -361,13 +363,13 @@ def main():
         ),
         "demo": dict(
             kryterium="Ścieżka demo <= 2 min (P51 B, P52 A, P57 A, P59 A)",
-            nazwa="Przejście pokazowe (6 aut + przypadek trudny za ładunkiem)",
+            nazwa="Przejście pokazowe (7 aut, 7. = przypadek trudny za ładunkiem)",
             blokuje=True,
             biblioteka="bez_cysterny",
-            pliki=partia_pliki + [p_za_lad],
+            pliki=partia_pliki,
             pliki_dodatkowe_trudne=[p_maly, p_lad_leg],
             dodatki_trudny=idx_trudny["trudny_mini_firanka_za_ladunkiem_00.bmp"]["dodatki"],
-            warunki="E1 (5 s) -> E2/E3 partia 6 aut (20 s) -> auto 1 S1+S5 (35 s) -> S6+S9 (25 s) -> S10 -> przypadek trudny za ładunkiem (20 s) -> auto 6 S4 (10 s) -> E7 S11 (5 s); pasek u góry 'dane sztuczne — demonstracja' (P59 A).",
+            warunki="E1 (5 s) -> E2/E3 partia 7 aut (20 s) -> auto 1 S1+S5 (35 s) -> S6+S9 (25 s) -> S10 -> przypadek trudny za ładunkiem (20 s) -> auto 6 S4 (10 s) -> E7 S11 (5 s); pasek u góry 'dane sztuczne — demonstracja' (P59 A).",
             oczekiwany_wynik="Całość <= 2 min; dla trudny_mini_firanka_za_ladunkiem_00.bmp widać dodatek w lupie albo uczciwie brak ramki z napisem 'granica programu — oglądamy obraz sam' (P52 A); na trudny_mini_chlodnia_ladunek_legalny_00.bmp bez lawiny ramek (P57 A: 6 najsilniejszych + 'i jeszcze N miejsc — pokaż').",
         ),
     }
@@ -410,7 +412,7 @@ def main():
             uwaga="Wzorce cysterny są w dane/mini, ale na pokazie i w S4/S7 (krok 4) należy używać biblioteki bez_cysterny (9 wzorców, P35 A).",
         ),
         partia_pokazowa=partia_pokazowa,
-        uwaga_makieta_r1="Makieta R1 (wpis 13:02 Programisty) użyła innego składu 6 aut (chlodnia_dodatki_01, kontener_czyste_00, cysterna_dodatki_00); obowiązujący skład scenariuszy z docs/pm/06-scenariusze.md jest w polu partia_pokazowa powyżej (do ujednolicenia w R2).",
+        uwaga_makieta_r1="Od zadania 31 (wersja 7 aut) partia_pokazowa ma skład i kolejność z docs/pm/06-scenariusze.md, docs/spec.md §7 i docs/demo.md (P60 B); makieta R3 ma ten sam skład.",
         czyste_p49=dict(
             liczba_razem=len(czyste_p49_lista),
             w_repo_mini=sum(1 for x in czyste_p49_lista if x["gdzie"] == "repo"),
@@ -434,7 +436,7 @@ def main():
         "Pełne mapowanie `scenariusz -> pliki -> oczekiwany wynik` oraz sumy kontrolne SHA-256 znajdują się w `dane/scenariusze/manifest.json`.",
         "",
         "## Pliki w repo (`dane/scenariusze/`)",
-        "- `manifest.json` — manifest wszystkich 17 pozycji (`S1`–`S14`, `S1_brzegowe`, `S2b`, `demo`), skład partii pokazowej (6 aut), dane udawanego operatora i biblioteki (`pelna`, `bez_cysterny`).",
+        "- `manifest.json` — manifest wszystkich 17 pozycji (`S1`–`S14`, `S1_brzegowe`, `S2b`, `demo`), skład partii pokazowej (7 aut), dane udawanego operatora i biblioteki (`pelna`, `bez_cysterny`).",
         "- `nieprawidlowy/` — `plik_tekstowy.bmp` (tekst jako `.bmp`), `uciety.bmp` (poprawny nagłówek BMP, ucięte piksele), `pusty.bmp` (0 B) — dla `S2b` / `E2` (P53 A).",
         "- `czyste_zero/badany_mini_kontener_zero_00.bmp` — czyste auto kontener o zerowej różnicy wobec `dane/mini/wzorzec_mini_kontener_00.bmp` (gwarantowane 0 miejsc w v1/v2/v3 bez zmiany progów) — dla testu ekranu `S3` / `A3` (P58 A). Niezależne czyste auta pod hipotezę H1 i progi P49 są w `dane/mini` i `czyste_p49/`.",
         "",

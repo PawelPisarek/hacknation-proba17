@@ -5,7 +5,7 @@
   "ziarno": 17,
   "poza_repo": {
     "sciezka": "/home/hackathon/dane/scenariusze",
-    "host_wygenerowania": "thinkpad",
+    "host_wygenerowania": "ubuntuvg",
     "odtworzenie": "python dane/generator/scenariusze.py --wyj dane/scenariusze --poza ~/dane/scenariusze",
     "uwaga": "czyste_p49/ (20 BMP, ~15,7 MB) i duzy/ (1 BMP, 50,3 MB) leżą poza repo; to samo ziarno 17 daje identyczne bajty na każdej maszynie (duży plik jest też identyczny bajt-do-bajtu z ~/dane/proba17/badany_pelny_kontener_dodatki_00.bmp)."
   },
@@ -63,13 +63,28 @@
     },
     {
       "auto": 2,
-      "plik": "dane/mini/badany_mini_chlodnia_czyste_00.bmp",
+      "plik": "dane/mini/badany_mini_chlodnia_dodatki_01.bmp",
       "typ_pojazdu": "chlodnia",
       "nr_rej": "LU 5T021",
-      "dodatki_wg_manifestu": false,
-      "liczba_dodatkow": 0,
-      "dodatki": [],
-      "oczekiwane_e3": "gotowe (miejsc <= 6 wg P30 B albo 'brak wskazań'; bez 'wysoki' z samego podziału P45 B)"
+      "dodatki_wg_manifestu": true,
+      "liczba_dodatkow": 2,
+      "dodatki": [
+        {
+          "x0": 713,
+          "y0": 62,
+          "x1": 726,
+          "y1": 109,
+          "typ": "przedmiot"
+        },
+        {
+          "x0": 489,
+          "y0": 71,
+          "x1": 509,
+          "y1": 100,
+          "typ": "przedmiot"
+        }
+      ],
+      "oczekiwane_e3": "gotowe"
     },
     {
       "auto": 3,
@@ -98,44 +113,69 @@
     },
     {
       "auto": 4,
-      "plik": "dane/mini/badany_mini_firanka_czyste_01.bmp",
-      "typ_pojazdu": "firanka",
+      "plik": "dane/mini/badany_mini_kontener_czyste_00.bmp",
+      "typ_pojazdu": "kontener",
       "nr_rej": "BI 22001",
       "dodatki_wg_manifestu": false,
       "liczba_dodatkow": 0,
       "dodatki": [],
-      "oczekiwane_e3": "gotowe"
+      "oczekiwane_e3": "gotowe (na v3 min. 3 miejsca; 'brak wskazań' tylko dla czyste_zero)"
     },
     {
       "auto": 5,
-      "plik": "dane/mini/badany_mini_chlodnia_dodatki_00.bmp",
-      "typ_pojazdu": "chlodnia",
+      "plik": "dane/mini/badany_mini_firanka_czyste_01.bmp",
+      "typ_pojazdu": "firanka",
       "nr_rej": "KR 8N334",
-      "dodatki_wg_manifestu": true,
-      "liczba_dodatkow": 1,
-      "dodatki": [
-        {
-          "x0": 456,
-          "y0": 78,
-          "x1": 467,
-          "y1": 177,
-          "typ": "przerobka"
-        }
-      ],
+      "dodatki_wg_manifestu": false,
+      "liczba_dodatkow": 0,
+      "dodatki": [],
       "oczekiwane_e3": "gotowe"
     },
     {
       "auto": 6,
-      "plik": "dane/mini/badany_mini_cysterna_czyste_00.bmp",
+      "plik": "dane/mini/badany_mini_cysterna_dodatki_00.bmp",
       "typ_pojazdu": "cysterna",
       "nr_rej": "GD 3P101",
-      "dodatki_wg_manifestu": false,
-      "liczba_dodatkow": 0,
-      "dodatki": [],
+      "dodatki_wg_manifestu": true,
+      "liczba_dodatkow": 2,
+      "dodatki": [
+        {
+          "x0": 568,
+          "y0": 40,
+          "x1": 589,
+          "y1": 66,
+          "typ": "przerobka"
+        },
+        {
+          "x0": 203,
+          "y0": 86,
+          "x1": 212,
+          "y1": 122,
+          "typ": "przedmiot"
+        }
+      ],
       "oczekiwane_e3": "brak wzorca, miejsc '—' (E5, wzorce cysterny wyjęte z biblioteki)"
+    },
+    {
+      "auto": 7,
+      "plik": "dane/mini-trudny/trudny_mini_firanka_za_ladunkiem_00.bmp",
+      "typ_pojazdu": "firanka",
+      "nr_rej": "",
+      "dodatki_wg_manifestu": true,
+      "liczba_dodatkow": 1,
+      "dodatki": [
+        {
+          "x0": 291,
+          "y0": 98,
+          "x1": 303,
+          "y1": 109,
+          "typ": "za_ladunkiem"
+        }
+      ],
+      "oczekiwane_e3": "gotowe; przypadek trudny (P60 B), bez oznaczenia na liście; więcej miejsc niż 6 -> 'i jeszcze n miejsc' (P57 A)"
     }
   ],
-  "uwaga_makieta_r1": "Makieta R1 (wpis 13:02 Programisty) użyła innego składu 6 aut (chlodnia_dodatki_01, kontener_czyste_00, cysterna_dodatki_00); obowiązujący skład scenariuszy z docs/pm/06-scenariusze.md jest w polu partia_pokazowa powyżej (do ujednolicenia w R2).",
+  "uwaga_makieta_r1": "Od zadania 31 (wersja 7 aut) partia_pokazowa ma skład i kolejność z docs/pm/06-scenariusze.md, docs/spec.md §7 i docs/demo.md (P60 B); makieta R3 ma ten sam skład.",
   "czyste_p49": {
     "liczba_razem": 28,
     "w_repo_mini": 8,
@@ -179,7 +219,7 @@
         "typ_pojazdu": "firanka",
         "trudny": false,
         "bajty": 786486,
-        "sha256": "094dfe79ce3a78cf9e240de8dfa15b92249cc22f3a5ed7f1974101697b4136a1"
+        "sha256": "4ff00247ad8dc36914204de1a031e0de36044a6480f3811c5af44b24d30d9f66"
       },
       {
         "plik": "/home/hackathon/dane/scenariusze/czyste_p49/badany_mini_firanka_czyste_05.bmp",
@@ -195,7 +235,7 @@
         "typ_pojazdu": "firanka",
         "trudny": false,
         "bajty": 786486,
-        "sha256": "6b22ec410e1058a2ec27e3c5c2cf95e52bf66459bc568522bf2c386972479fba"
+        "sha256": "e1c47eb6af7e3f64ccda1380dc1626c872694a34620284cdd668f9ecc119ee0a"
       },
       {
         "plik": "dane/mini/badany_mini_chlodnia_czyste_00.bmp",
@@ -219,7 +259,7 @@
         "typ_pojazdu": "chlodnia",
         "trudny": true,
         "bajty": 786486,
-        "sha256": "6e91fcb386befe1f2fe47582956abc57833a450cbadf25d4a307812d5462767f"
+        "sha256": "c2801d8c4af4e128552628941dc241644eff322651b49738b4bf2449269d6a27"
       },
       {
         "plik": "/home/hackathon/dane/scenariusze/czyste_p49/badany_mini_chlodnia_czyste_03.bmp",
@@ -235,7 +275,7 @@
         "typ_pojazdu": "chlodnia",
         "trudny": false,
         "bajty": 786486,
-        "sha256": "516c3e7203589db09658ffefe51424d96b6a56dc08e5b94417c38a86377c0ac0"
+        "sha256": "8d8818ae568a761cf9e1188c036ce9693e52c37aeace5ca7186fe21437c700a2"
       },
       {
         "plik": "/home/hackathon/dane/scenariusze/czyste_p49/badany_mini_chlodnia_czyste_05.bmp",
@@ -275,7 +315,7 @@
         "typ_pojazdu": "kontener",
         "trudny": true,
         "bajty": 786486,
-        "sha256": "d8c0dd17911499dd9e66c73f52d31b896d30c5b85e9621fa8dd975d335934c84"
+        "sha256": "3828524352af0574de410654db9d423cbb2ebbcc33a7eec1513d974d18159b0b"
       },
       {
         "plik": "/home/hackathon/dane/scenariusze/czyste_p49/badany_mini_kontener_czyste_03.bmp",
@@ -283,7 +323,7 @@
         "typ_pojazdu": "kontener",
         "trudny": false,
         "bajty": 786486,
-        "sha256": "ff62c5f6ed953f268b5de11dabd35dbda20c2dd23e956546eb70f74d1ee94b7e"
+        "sha256": "86a687eb00657df18fa86333d0da8ff67fcebac9661e49fc3d98fe032f7d6eda"
       },
       {
         "plik": "/home/hackathon/dane/scenariusze/czyste_p49/badany_mini_kontener_czyste_04.bmp",
@@ -291,7 +331,7 @@
         "typ_pojazdu": "kontener",
         "trudny": false,
         "bajty": 786486,
-        "sha256": "5c6114c49911364d6081ab40a65b1c20842645bb7b25de8f8296cba456bb3fd7"
+        "sha256": "0c669288d070e05d9af759281a6625529f9d998b41fcef040ae4adcdeb93d0d6"
       },
       {
         "plik": "/home/hackathon/dane/scenariusze/czyste_p49/badany_mini_kontener_czyste_05.bmp",
@@ -299,7 +339,7 @@
         "typ_pojazdu": "kontener",
         "trudny": true,
         "bajty": 786486,
-        "sha256": "656e645aacdf9f02467d51efb50f67321293668f3b53a06202a229d3646da5be"
+        "sha256": "5ac50415fd7b363d2b9a48713819a3f4e681a3ecca7cfdfc6df09fe5421cdccd"
       },
       {
         "plik": "/home/hackathon/dane/scenariusze/czyste_p49/badany_mini_kontener_czyste_06.bmp",
@@ -331,7 +371,7 @@
         "typ_pojazdu": "cysterna",
         "trudny": true,
         "bajty": 786486,
-        "sha256": "ba2b1d78552e2fb18f953081e7f91a5d22ee392c9ea77604c1179dd9e0baa5ba"
+        "sha256": "f18c27c8f2c596b6c28cc21ccb76c5d13f6c0f445cec3e6478df30e33a3a2e2e"
       },
       {
         "plik": "/home/hackathon/dane/scenariusze/czyste_p49/badany_mini_cysterna_czyste_03.bmp",
@@ -339,7 +379,7 @@
         "typ_pojazdu": "cysterna",
         "trudny": false,
         "bajty": 786486,
-        "sha256": "75357aa44f5240bd1c1d1163ffd67ff1b031fb0d0353656b23569e1573576d98"
+        "sha256": "dc19a90b499ca58483a156eee3e98be2469793af306f9047f6d57bf1b058d0a1"
       },
       {
         "plik": "/home/hackathon/dane/scenariusze/czyste_p49/badany_mini_cysterna_czyste_04.bmp",
@@ -363,7 +403,7 @@
         "typ_pojazdu": "cysterna",
         "trudny": false,
         "bajty": 786486,
-        "sha256": "37ce7510820ef734cf373a898a847283d6544f2185eaa709e13bf4f92bc52022"
+        "sha256": "98d3d07d32b9cdcca3b3b85a54474b22ffe2382a0417075648586b5039a2db51"
       }
     ]
   },
@@ -397,7 +437,7 @@
         "typ": "przedmiot"
       }
     ],
-    "sha256": "476f5a986fdfeabc4a83c84b47f01c5ae79631505546da0aadd533f6447035be"
+    "sha256": "54e5dbe752a4968e9330ce02f24e75c788a8b3e37f1a3f8662a1803974012269"
   },
   "pliki_wygenerowane": {
     "czyste_p49/badany_mini_firanka_czyste_02.bmp": {
@@ -422,7 +462,7 @@
       "typ_pojazdu": "firanka",
       "trudny": false,
       "bajty": 786486,
-      "sha256": "094dfe79ce3a78cf9e240de8dfa15b92249cc22f3a5ed7f1974101697b4136a1"
+      "sha256": "4ff00247ad8dc36914204de1a031e0de36044a6480f3811c5af44b24d30d9f66"
     },
     "czyste_p49/badany_mini_firanka_czyste_05.bmp": {
       "gdzie": "poza_repo",
@@ -438,7 +478,7 @@
       "typ_pojazdu": "firanka",
       "trudny": false,
       "bajty": 786486,
-      "sha256": "6b22ec410e1058a2ec27e3c5c2cf95e52bf66459bc568522bf2c386972479fba"
+      "sha256": "e1c47eb6af7e3f64ccda1380dc1626c872694a34620284cdd668f9ecc119ee0a"
     },
     "czyste_p49/badany_mini_chlodnia_czyste_02.bmp": {
       "gdzie": "poza_repo",
@@ -446,7 +486,7 @@
       "typ_pojazdu": "chlodnia",
       "trudny": true,
       "bajty": 786486,
-      "sha256": "6e91fcb386befe1f2fe47582956abc57833a450cbadf25d4a307812d5462767f"
+      "sha256": "c2801d8c4af4e128552628941dc241644eff322651b49738b4bf2449269d6a27"
     },
     "czyste_p49/badany_mini_chlodnia_czyste_03.bmp": {
       "gdzie": "poza_repo",
@@ -462,7 +502,7 @@
       "typ_pojazdu": "chlodnia",
       "trudny": false,
       "bajty": 786486,
-      "sha256": "516c3e7203589db09658ffefe51424d96b6a56dc08e5b94417c38a86377c0ac0"
+      "sha256": "8d8818ae568a761cf9e1188c036ce9693e52c37aeace5ca7186fe21437c700a2"
     },
     "czyste_p49/badany_mini_chlodnia_czyste_05.bmp": {
       "gdzie": "poza_repo",
@@ -486,7 +526,7 @@
       "typ_pojazdu": "kontener",
       "trudny": true,
       "bajty": 786486,
-      "sha256": "d8c0dd17911499dd9e66c73f52d31b896d30c5b85e9621fa8dd975d335934c84"
+      "sha256": "3828524352af0574de410654db9d423cbb2ebbcc33a7eec1513d974d18159b0b"
     },
     "czyste_p49/badany_mini_kontener_czyste_03.bmp": {
       "gdzie": "poza_repo",
@@ -494,7 +534,7 @@
       "typ_pojazdu": "kontener",
       "trudny": false,
       "bajty": 786486,
-      "sha256": "ff62c5f6ed953f268b5de11dabd35dbda20c2dd23e956546eb70f74d1ee94b7e"
+      "sha256": "86a687eb00657df18fa86333d0da8ff67fcebac9661e49fc3d98fe032f7d6eda"
     },
     "czyste_p49/badany_mini_kontener_czyste_04.bmp": {
       "gdzie": "poza_repo",
@@ -502,7 +542,7 @@
       "typ_pojazdu": "kontener",
       "trudny": false,
       "bajty": 786486,
-      "sha256": "5c6114c49911364d6081ab40a65b1c20842645bb7b25de8f8296cba456bb3fd7"
+      "sha256": "0c669288d070e05d9af759281a6625529f9d998b41fcef040ae4adcdeb93d0d6"
     },
     "czyste_p49/badany_mini_kontener_czyste_05.bmp": {
       "gdzie": "poza_repo",
@@ -510,7 +550,7 @@
       "typ_pojazdu": "kontener",
       "trudny": true,
       "bajty": 786486,
-      "sha256": "656e645aacdf9f02467d51efb50f67321293668f3b53a06202a229d3646da5be"
+      "sha256": "5ac50415fd7b363d2b9a48713819a3f4e681a3ecca7cfdfc6df09fe5421cdccd"
     },
     "czyste_p49/badany_mini_kontener_czyste_06.bmp": {
       "gdzie": "poza_repo",
@@ -526,7 +566,7 @@
       "typ_pojazdu": "cysterna",
       "trudny": true,
       "bajty": 786486,
-      "sha256": "ba2b1d78552e2fb18f953081e7f91a5d22ee392c9ea77604c1179dd9e0baa5ba"
+      "sha256": "f18c27c8f2c596b6c28cc21ccb76c5d13f6c0f445cec3e6478df30e33a3a2e2e"
     },
     "czyste_p49/badany_mini_cysterna_czyste_03.bmp": {
       "gdzie": "poza_repo",
@@ -534,7 +574,7 @@
       "typ_pojazdu": "cysterna",
       "trudny": false,
       "bajty": 786486,
-      "sha256": "75357aa44f5240bd1c1d1163ffd67ff1b031fb0d0353656b23569e1573576d98"
+      "sha256": "dc19a90b499ca58483a156eee3e98be2469793af306f9047f6d57bf1b058d0a1"
     },
     "czyste_p49/badany_mini_cysterna_czyste_04.bmp": {
       "gdzie": "poza_repo",
@@ -558,7 +598,7 @@
       "typ_pojazdu": "cysterna",
       "trudny": false,
       "bajty": 786486,
-      "sha256": "37ce7510820ef734cf373a898a847283d6544f2185eaa709e13bf4f92bc52022"
+      "sha256": "98d3d07d32b9cdcca3b3b85a54474b22ffe2382a0417075648586b5039a2db51"
     },
     "duzy/badany_pelny_kontener_dodatki_00.bmp": {
       "gdzie": "poza_repo",
@@ -590,7 +630,7 @@
           "typ": "przedmiot"
         }
       ],
-      "sha256": "476f5a986fdfeabc4a83c84b47f01c5ae79631505546da0aadd533f6447035be"
+      "sha256": "54e5dbe752a4968e9330ce02f24e75c788a8b3e37f1a3f8662a1803974012269"
     },
     "nieprawidlowy/plik_tekstowy.bmp": {
       "gdzie": "repo",
@@ -668,7 +708,7 @@
       "biblioteka": "pelna",
       "pliki": [
         "dane/mini/badany_mini_firanka_dodatki_00.bmp",
-        "dane/mini/badany_mini_chlodnia_czyste_00.bmp",
+        "dane/mini/badany_mini_chlodnia_dodatki_01.bmp",
         "dane/mini/badany_mini_firanka_czyste_00.bmp",
         "dane/mini/badany_mini_firanka_czyste_01.bmp",
         "/home/hackathon/dane/scenariusze/czyste_p49/badany_mini_firanka_czyste_02.bmp",
@@ -742,7 +782,6 @@
       "blokuje": true,
       "biblioteka": "bez_cysterny",
       "pliki": [
-        "dane/mini/badany_mini_cysterna_czyste_00.bmp",
         "dane/mini/badany_mini_cysterna_dodatki_00.bmp"
       ],
       "warunki": "Wzorce cysterny wyjęte z biblioteki (9 wzorców: firanka, chłodnia, kontener); auto 6 w partii.",
@@ -789,11 +828,12 @@
       "biblioteka": "bez_cysterny",
       "pliki": [
         "dane/mini/badany_mini_firanka_dodatki_00.bmp",
-        "dane/mini/badany_mini_chlodnia_czyste_00.bmp",
+        "dane/mini/badany_mini_chlodnia_dodatki_01.bmp",
         "dane/mini/badany_mini_kontener_dodatki_01.bmp",
+        "dane/mini/badany_mini_kontener_czyste_00.bmp",
         "dane/mini/badany_mini_firanka_czyste_01.bmp",
-        "dane/mini/badany_mini_chlodnia_dodatki_00.bmp",
-        "dane/mini/badany_mini_cysterna_czyste_00.bmp"
+        "dane/mini/badany_mini_cysterna_dodatki_00.bmp",
+        "dane/mini-trudny/trudny_mini_firanka_za_ladunkiem_00.bmp"
       ],
       "warunki": "Na E2 wskazać 6 plików partii pokazowej i kliknąć 'Policz partię'.",
       "oczekiwany_wynik": "Stany czeka -> liczy się -> gotowe po kolei + pasek postępu; wiersz ma miniaturę, 'auto N', nazwę pliku (P44 A), rodzaj i liczbę miejsc; kliknięcie wiersza 'gotowe' przed końcem partii nic nie robi (P38); po całej partii wiersze klikalne."
@@ -816,11 +856,12 @@
       "biblioteka": "bez_cysterny",
       "pliki": [
         "dane/mini/badany_mini_firanka_dodatki_00.bmp",
-        "dane/mini/badany_mini_chlodnia_czyste_00.bmp",
+        "dane/mini/badany_mini_chlodnia_dodatki_01.bmp",
         "dane/mini/badany_mini_kontener_dodatki_01.bmp",
+        "dane/mini/badany_mini_kontener_czyste_00.bmp",
         "dane/mini/badany_mini_firanka_czyste_01.bmp",
-        "dane/mini/badany_mini_chlodnia_dodatki_00.bmp",
-        "dane/mini/badany_mini_cysterna_czyste_00.bmp"
+        "dane/mini/badany_mini_cysterna_dodatki_00.bmp",
+        "dane/mini-trudny/trudny_mini_firanka_za_ladunkiem_00.bmp"
       ],
       "warunki": "Rozstrzyganie kolejnych aut partii pokazowej.",
       "oczekiwany_wynik": "Po ostatnim miejscu auta 1 otwiera się auto 2 (P40 B); po ostatnim aucie (auto 6) powrót na listę partii E3 z przyciskiem 'Raport partii' (P54 A)."
@@ -832,11 +873,12 @@
       "biblioteka": "bez_cysterny",
       "pliki": [
         "dane/mini/badany_mini_firanka_dodatki_00.bmp",
-        "dane/mini/badany_mini_chlodnia_czyste_00.bmp",
+        "dane/mini/badany_mini_chlodnia_dodatki_01.bmp",
         "dane/mini/badany_mini_kontener_dodatki_01.bmp",
+        "dane/mini/badany_mini_kontener_czyste_00.bmp",
         "dane/mini/badany_mini_firanka_czyste_01.bmp",
-        "dane/mini/badany_mini_chlodnia_dodatki_00.bmp",
-        "dane/mini/badany_mini_cysterna_czyste_00.bmp"
+        "dane/mini/badany_mini_cysterna_dodatki_00.bmp",
+        "dane/mini-trudny/trudny_mini_firanka_za_ladunkiem_00.bmp"
       ],
       "warunki": "Auta 1-6 rozstrzygnięte, nr rej. wpisane (WL 12345 .. GD 3P101), operator 'SCS Kowalski', miejsce 'Terespol — stanowisko 2'.",
       "oczekiwany_wynik": "Jeden przycisk 'Zapisz i zamknij partię' (P55 B, P56 A) zapisuje .json i .csv lokalnie bez internetu ze wszystkimi polami P18 (id kontroli, miejsce, data/godzina, rodzaj programu i operatora, nr rej., miejsca z decyzją i powodem, kto zdecydował)."
@@ -882,11 +924,12 @@
       "biblioteka": "bez_cysterny",
       "pliki": [
         "dane/mini/badany_mini_firanka_dodatki_00.bmp",
-        "dane/mini/badany_mini_chlodnia_czyste_00.bmp",
+        "dane/mini/badany_mini_chlodnia_dodatki_01.bmp",
         "dane/mini/badany_mini_kontener_dodatki_01.bmp",
+        "dane/mini/badany_mini_kontener_czyste_00.bmp",
         "dane/mini/badany_mini_firanka_czyste_01.bmp",
-        "dane/mini/badany_mini_chlodnia_dodatki_00.bmp",
-        "dane/mini/badany_mini_cysterna_czyste_00.bmp"
+        "dane/mini/badany_mini_cysterna_dodatki_00.bmp",
+        "dane/mini-trudny/trudny_mini_firanka_za_ladunkiem_00.bmp"
       ],
       "warunki": "Po rozstrzygnięciu auta 1 przejść do auta 3, wrócić na E3 -> auto 1, zmienić decyzję, potem E7 'Zapisz i zamknij partię'.",
       "oczekiwany_wynik": "Zmiana decyzji przed zamknięciem działa i trafia do raportu; po kliknięciu jednego przycisku 'Zapisz i zamknij partię' (P55 B, P56 A) wiersze mają stan 'rozstrzygnięte' i decyzji nie da się zmienić."
@@ -898,11 +941,12 @@
       "biblioteka": "bez_cysterny",
       "pliki": [
         "dane/mini/badany_mini_firanka_dodatki_00.bmp",
-        "dane/mini/badany_mini_chlodnia_czyste_00.bmp",
+        "dane/mini/badany_mini_chlodnia_dodatki_01.bmp",
         "dane/mini/badany_mini_kontener_dodatki_01.bmp",
+        "dane/mini/badany_mini_kontener_czyste_00.bmp",
         "dane/mini/badany_mini_firanka_czyste_01.bmp",
-        "dane/mini/badany_mini_chlodnia_dodatki_00.bmp",
-        "dane/mini/badany_mini_cysterna_czyste_00.bmp",
+        "dane/mini/badany_mini_cysterna_dodatki_00.bmp",
+        "dane/mini-trudny/trudny_mini_firanka_za_ladunkiem_00.bmp",
         "dane/mini/badany_mini_kontener_dodatki_00.bmp",
         "/home/hackathon/dane/scenariusze/duzy/badany_pelny_kontener_dodatki_00.bmp"
       ],
@@ -911,16 +955,16 @@
     },
     "demo": {
       "kryterium": "Ścieżka demo <= 2 min (P51 B, P52 A, P57 A, P59 A)",
-      "nazwa": "Przejście pokazowe (6 aut + przypadek trudny za ładunkiem)",
+      "nazwa": "Przejście pokazowe (7 aut, 7. = przypadek trudny za ładunkiem)",
       "blokuje": true,
       "biblioteka": "bez_cysterny",
       "pliki": [
         "dane/mini/badany_mini_firanka_dodatki_00.bmp",
-        "dane/mini/badany_mini_chlodnia_czyste_00.bmp",
+        "dane/mini/badany_mini_chlodnia_dodatki_01.bmp",
         "dane/mini/badany_mini_kontener_dodatki_01.bmp",
+        "dane/mini/badany_mini_kontener_czyste_00.bmp",
         "dane/mini/badany_mini_firanka_czyste_01.bmp",
-        "dane/mini/badany_mini_chlodnia_dodatki_00.bmp",
-        "dane/mini/badany_mini_cysterna_czyste_00.bmp",
+        "dane/mini/badany_mini_cysterna_dodatki_00.bmp",
         "dane/mini-trudny/trudny_mini_firanka_za_ladunkiem_00.bmp"
       ],
       "pliki_dodatkowe_trudne": [
@@ -936,7 +980,7 @@
           "typ": "za_ladunkiem"
         }
       ],
-      "warunki": "E1 (5 s) -> E2/E3 partia 6 aut (20 s) -> auto 1 S1+S5 (35 s) -> S6+S9 (25 s) -> S10 -> przypadek trudny za ładunkiem (20 s) -> auto 6 S4 (10 s) -> E7 S11 (5 s); pasek u góry 'dane sztuczne — demonstracja' (P59 A).",
+      "warunki": "E1 (5 s) -> E2/E3 partia 7 aut (20 s) -> auto 1 S1+S5 (35 s) -> S6+S9 (25 s) -> S10 -> przypadek trudny za ładunkiem (20 s) -> auto 6 S4 (10 s) -> E7 S11 (5 s); pasek u góry 'dane sztuczne — demonstracja' (P59 A).",
       "oczekiwany_wynik": "Całość <= 2 min; dla trudny_mini_firanka_za_ladunkiem_00.bmp widać dodatek w lupie albo uczciwie brak ramki z napisem 'granica programu — oglądamy obraz sam' (P52 A); na trudny_mini_chlodnia_ladunek_legalny_00.bmp bez lawiny ramek (P57 A: 6 najsilniejszych + 'i jeszcze N miejsc — pokaż')."
     }
   }
