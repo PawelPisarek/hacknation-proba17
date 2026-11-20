@@ -19,9 +19,9 @@ https://github.com/PawelPisarek/hacknation-proba17
 https://pawelpisarek.github.io/hacknation-proba17/makieta/r3/ (makieta R3)
 https://hacknation.ksefbot.pl/ (działający program, dane sztuczne)
 
-## Opis wstępny (≤ 1000 znaków; 958 zn.)
+## Opis wstępny (≤ 1000 znaków; 959 zn.)
 
-Prześwit to pomocnik operatora RTG: pokazuje, gdzie na obrazie auta patrzeć najpierw, a decyzja zawsze zostaje po stronie człowieka. Operator ma na auto kilka minut. Narzędzie AI: operator wskazuje partię obrazów (także BMP ~50 MB), program liczy auta po kolei i pokazuje listę. W aucie widać obraz badany i wzorzec obok siebie oraz kafelki miejsc z podpowiedzią „zwykle tu…”; max 6 miejsc od najbardziej odmiennego od wzorca, reszta pod „pokaż”. Program dobiera wzorzec typu pojazdu, operator może zmienić rodzaj. Bez wzorca: „brak wzorca — obejrzyj ręcznie”. Na czystych autach program zwykle coś wskazuje — decyzję zawsze podejmuje człowiek. Operator zatwierdza lub odrzuca każde miejsce (powód przy odrzuceniu); raport zapisuje się lokalnie. Najważniejsze: nie przeoczyć. Na danych sztucznych przeoczenia 7,8% i 9,7%, a czas ~50 MB ok. 2 s. Docelowo lokalnie, bez internetu. Stan: DRAFT, makieta R3, dane sztuczne.
+Prześwit to pomocnik operatora RTG: pokazuje, gdzie na obrazie auta patrzeć najpierw, a decyzja zawsze zostaje po stronie człowieka. Operator ma na auto kilka minut. Narzędzie AI: operator wskazuje partię obrazów (także BMP ~50 MB), program liczy auta po kolei i pokazuje listę. W aucie widać obraz badany i wzorzec obok siebie oraz kafelki miejsc z podpowiedzią „zwykle tu…”; max 6 miejsc od najbardziej odmiennego od wzorca, reszta pod „pokaż”. Program dobiera wzorzec typu pojazdu, operator może zmienić rodzaj. Bez wzorca: „brak wzorca — sprawdź obraz sam”. Na czystych autach program zwykle coś wskazuje — decyzję zawsze podejmuje człowiek. Operator zatwierdza lub odrzuca każde miejsce (powód przy odrzuceniu); raport zapisuje się lokalnie. Najważniejsze: nie przeoczyć. Na danych sztucznych przeoczenia 7,8% i 9,7%, a czas ~50 MB ok. 2 s. Docelowo lokalnie, bez internetu. Stan: DRAFT, makieta R3, dane sztuczne.
 
 ## Narzędzia przygotowane wcześniej (193 zn.)
 
