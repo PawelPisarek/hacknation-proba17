@@ -129,6 +129,13 @@ Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z d
 | P70 | A — podgląd 2 najbliższych wzorców badanego obrazu (z numerami 1 i 2) w E6 | odpowiedź Artura 13:23 (z pokoju 13:11) |
 | P71 | nic nie wyrzucamy z ekranu (poza porządkami makiety z P66 A i poprawkami usterek) | odpowiedź Artura 13:23 (z pokoju 13:11) |
 | P72 | A — zostawiamy raport bez miniatury teraz; miniatura w raporcie dopisana do UPROSZCZEŃ po MVP | odpowiedź Artura 13:23 (z pokoju 13:15) |
+| P73 | A — numer w małej etykiecie obok ramki, bez nakładania na inne etykiety i ramki (błąd makiety poprawiany bez pytania) | odpowiedź Artura 14:38 (w pokoju) |
+| P74 | A — auto bez miejsc: „obejrzane, bez wskazań”; ostrzeżenie P63 B tylko dla aut z nierozstrzygniętymi miejscami (doprecyzowanie: P80) | odpowiedź Artura 14:38 (w pokoju) |
+| P75 | B — słowo przy aucie 7 wstrzymane; po P79 B bez przedmiotu (słów nie ma) | odpowiedź Artura 14:38, P79 15:08 |
+| P76 | A — zoom 4× zachowuje ramkę z numerem | odpowiedź Artura 14:38 (w pokoju) |
+| P77 | A — komunikat przy polu „Nr rej.”, przycisk „Zamknij auto” | odpowiedź Artura 14:38 (w pokoju) |
+| P78 | nic nie wyrzucamy z ekranu | odpowiedź Artura 14:38 (w pokoju) |
+| P79 | B — bez słów niski / średni / wysoki, tylko kolejność od najmocniejszego miejsca (zmienia P17 i P45; P49 i P75 bez przedmiotu) | odpowiedź Artura 15:08 (w pokoju) |
 
 <!-- skill: create-prd -->
 <!-- skill: przeplywy-pm -->
