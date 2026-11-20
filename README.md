@@ -24,6 +24,20 @@ python ocena/ocena.py --manifest dane/mini/manifest.json --wyniki wyniki/mini/wy
 
 **Uwaga:** domyślne ustawienia (`prog=6`) różnią się od użytych w wynikach, więc „szybka próba” da inne liczby. Wyniki odtwarzają skrypty na pełnych zbiorach (`$DANE`, `$TRUDNE`, karta graficzna): `ocena/uruchom.sh` (metoda bazowa; domyślna siatka `prog=6,10,14`, a `prog=10,14` tylko w kroku pelny2048; wynik bazowy to konfiguracja `dobor=najblizszy,K=3,tol=2,prog=14`), `ocena/uruchom19.sh` (metoda v2, `--metoda v2`), `ocena/uruchom20.sh` (v3). Uruchomienie aplikacji z makietą: —
 
+## Aplikacja: strona + usługa na karcie (zadanie 21)
+
+- **Pod linkiem:** https://hacknation.ksefbot.pl/ — strona (`strona/`, Node) przekazuje wgrany `.bmp` (do 120 MB) do usługi
+  liczącej na karcie OMENa (`usluga/`, Python + torch). Przycisk „Partia pokazowa” liczy 7 aut z `dane/mini*`.
+- **Jedna komenda (kontener zespołu):** `sh wdroz.sh` — usługa na karcie (orkiestrator, `gpu-tlo`), wdrożenie strony,
+  sprawdzenie `/api/zdrowie` z linku. `sh wdroz.sh --usluga` budzi samą usługę (po 10 min bez pytań zwalnia kartę).
+- **Lokalnie, bez internetu (jeden kontener na stanowisko):**
+  ```
+  docker build -f usluga/Dockerfile -t przeswit .
+  docker run --rm --network none -p 8770:8770 przeswit        # strona i usługa: http://localhost:8770
+  ```
+  Z kartą NVIDIA: `--build-arg TORCH_INDEX=https://download.pytorch.org/whl/cu121` i `docker run --gpus all …`.
+  Bez Dockera: `PYTHONPATH=src:. python -m usluga.serwer --bez-sieci` (wiersz poleceń, http://127.0.0.1:8770).
+
 ## Wyniki (na danych sztucznych, nie na zdjęciach KAS)
 
 Źródło: linie `WYNIK` w `docs/decyzje.md`; metoda v2 (zad. 19), zestaw zwykły / trudny:
