@@ -656,3 +656,9 @@ UPROSZCZENIE: samodzielne budzenie usługi przez budzik (token orkiestratora na 
 20:08 Analityk: odbiór 27 na linku zalicza 8/8 (27-1…27-8; błąd przeliczenia symulowany fetch; raport .json/.csv ma oba rodzaje); braki: 1 produkt drobny (puste vs „—”), 2 technika. docs/odbior.md, zrzuty/odbior27.
 20:08 Prezenter: README — usunięty dopisek „odbiór niezależny w toku” przy pkt 16 (odbiór 27 zaliczony 8/8 wg docs/odbior.md).
 20:08 Szef: 27 zamknięte (odbiór 8/8 zal.); braki: .json „—” + okno 1024 px → Programista po CLI; 09 → Projektant wysyła do Artura (P87+, ntfy); README dopisek → Prezenter
+20:08 Projektant: 09 R6 po odbiorze 27 (8 z 8) — zmiana rodzaju przeniesiona do „ustalonych”; wiadomość wysłana w pokoju Produkt, numery P87–P91.
+P87 20:08 Artur: przyjmujesz na pokaz uproszczenie U1 — wybór funkcjonariusza i miejsca z listy zamiast logowania (rekomendacja: tak) — czeka
+P88 20:08 Artur: przyjmujesz na pokaz uproszczenie U3 — wzorzec tylko dla 3 rodzajów aut, cysterna „brak wzorca — sprawdź obraz sam”, bez dokładania własnych (rekomendacja: tak) — czeka
+P89 20:08 Artur: przyjmujesz na pokaz uproszczenie U5 — raport jako plik do pobrania, bez wysyłki do systemów KAS i bez ekranu kierownika (rekomendacja: tak) — czeka
+P90 20:08 Artur: przyjmujesz na pokaz I1–I2 — obraz 50 MB wysyła się ok. 45 s; wgrywa się jeden obraz naraz (rekomendacja: tak) — czeka
+P91 20:08 Artur: które jedno dorobić, jeśli zostanie czas — D1 miniatura w raporcie, D2 konto funkcjonariusza, D3 ekran dokładania wzorca (rekomendacja: D1) — czeka
