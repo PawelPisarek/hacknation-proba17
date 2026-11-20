@@ -50,7 +50,7 @@ Persona: „Marek". Cel: decyzja o aucie w kilka minut. Etapy dopasowane do prod
 | 7 | **Decyzja o aucie** | puszcza albo kieruje na kontrolę fizyczną (poza programem) | pokazuje, ile miejsc zatwierdzono | — | — | jedno zdanie podsumowania |
 | 8 | **Raport** | sprawdza, że numer rejestracyjny przy obrazie (etap 2) jest wpisany, i zamyka sprawę | zapisuje raport z polami P18: identyfikator kontroli, data i godzina, typ, lista miejsc z decyzją i powodem; **rodzaj dobrany przez program i rodzaj poprawiony przez operatora (jeśli zmienił; P27 A)** — automatycznie; miejsce kontroli z ustawienia stanowiska i „kto zdecydował” z zalogowanego funkcjonariusza (P22 A) | ulga | wpisywanie numeru | jedno pole, reszta bez pisania |
 
-**Chwile krytyczne:** *aha* — operator widzi ramkę dokładnie na skrytce, której sam nie zauważył (etap 5). *Chwila prawdy* — pierwsza ramka na czystej naczepie: jeśli pokaże się dużo fałszywych, operator przestaje ufać (etap 5–6). *Ryzyko porzucenia* — „wzorzec przybliżony" (etap 3) lub za dużo ramek: operator wraca do oglądania ręcznie.
+**Chwile krytyczne:** *aha* — operator widzi ramkę dokładnie na skrytce, której sam nie zauważył (etap 5). *Chwila prawdy* — pierwsza ramka na czystej naczepie: jeśli pokaże się dużo fałszywych, operator przestaje ufać (etap 5–6). *Ryzyko porzucenia* — napis „brak wzorca — sprawdź obraz sam” (etap 3, P35 A) lub za dużo ramek: operator wraca do oglądania ręcznie.
 
 ## Wnioski dla ekranów (wejście do kroków 3–5)
 - ekran wyniku: obraz + ramki + lista + powód odrzucenia z listy;
