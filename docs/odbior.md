@@ -147,3 +147,17 @@ Kryteria A1–A14 z `docs/spec.md` §4. Sposób: przeglądarka bez okna (Playwri
 | A14 | wgrać własny mały .bmp z linku; na liście partii „Dodaj jeden obraz”; usługa na OMENie wstaje od wdrożenia | wynik w kilka sekund; przycisk zawsze; po uśpieniu jasny komunikat (nie goły błąd) | zad. 21 |
 
 Dowód każdego sprawdzenia: linia „WYNIK <AC>: zalicza/NIE” z liczbą albo cytatem ekranu i godziną; zrzut ekranu w `wyniki/odbior-mvp/`.
+
+## Recenzja 09 — docs/pm/09-uproszczenia.md (bf9cb62, autor Projektant; 2026-11-20 19:13)
+
+Sprawdzone względem `docs/spec.md` §8–10, odpowiedzi Artura w `docs/decyzje.md`, zadań 23–29 i 40–42, odbioru 21 z zewnątrz. 5 braków, od najważniejszego:
+
+1. **produkt** — U2, U4, U6, U7 i U8 pytają Artura o to, co już rozstrzygnął: U2 = P12 A i P38 B, U4 = P81 A, U6 = P72 A (Artur sam wpisał miniaturę na listę dorobienia), U7 = P82 (odpowiedź 15:39: bez auta „brak wskazań”, jeśli program na nic nie wskazuje; sonda 38 — nie wskazuje), U8 = P25 A. Pytanie „A przyjmujemy / B dorabiamy” o te pięć to pytania pozorne (zasada paczki: wpis „z P<n>”). Zostają do pytania tylko U1, U3 i U5, które są w spec §8 jako UPROSZCZENIE bez odpowiedzi Artura. Pozostałe pięć — jako informacja „już ustalone” z numerami P albo wcale.
+2. **produkt** — brakuje uproszczeń, które operator naprawdę zobaczy na linku: (a) uśpiona usługa — pierwsze kliknięcie po przerwie ~25 s czekania (zmierzone w odbiorze 21; zadanie 42 ma to ukryć komunikatem „Uruchamiam program, ok. 30 s”); (b) obraz 50 MB ≈ 45 s (wysyłka przez łącze), przy celu < 1 min (A12) — Artur zna cel, ale nie ten czas; (c) wgrywany jest jeden obraz naraz (P61 A „Dodaj jeden obraz”), a partia pokazowa jest stała. Bez nich lista „uproszczeń” nie jest pełna, a U8 („bez sieci tylko docelowo”) sugeruje, że sprawdzenie lokalne (Docker/wiersz poleceń, P43 A, A12) nie istnieje.
+3. **produkt** — B przy U1, U3 i U6 to to samo co D2, D3 i D1 (logowanie, ekran dokładania wzorca, miniatura w raporcie), tylko pytane dwa razy i z różnymi opisami. B nie ma ceny ani czasu, a do wyboru jest „jedno dorobienie” (polecenie Pawła). Artur może odpowiedzieć B przy U3 i wybrać D1 — sprzeczne odpowiedzi. Zostawić U jako „przyjmujesz” (tak/nie), a dorobienie wybierać tylko w D.
+4. **technika** — czasy D1–D3 nie są jednakowo realne: D1 „1–2 h” jest ze spec §8 (P72), ale zależy od zadania 29 (decyzje do raportu) i 40 (ramki na stronie), więc liczy się dopiero po nich; D2 „kilka godzin” ze spec §8, ale to konta i hasła na publicznej stronie (repo publiczne, bez sekretów), a nie „lista”; D3 „2–3 h” nie ma źródła w spec i dotyka biblioteki na karcie oraz progu doboru z zadań 33/36 — nowy wzorzec może zepsuć A4 (8/8) i FN, a tego nie mierzymy. Podać źródło albo „nie oszacowane” i uczciwie zaznaczyć zależności.
+5. **produkt** (drobny) — słowa techniczne w wiadomości do Artura: „repozytorium KAS” (U5, U6 przez „repozytorium”), „logowanie KAS” / „role” (D2), „program liczy na naszym komputerze” (U8). Zamienić na „systemy KAS”, „konto funkcjonariusza”, „na naszym serwerze, po linku”.
+
+Niezależne od braków: U1, U3, U5 zgadzają się z `docs/spec.md` §8, a opisy z zadaniami 23–29 (zapis lokalny — zad. 29; wzorzec i podpowiedź — 25, 26; lista po kolei — 28) i 40–42 nie sprzeczają.
+
+Niezweryfikowane: nie sprawdzałem, czy wiadomość jest już w pokoju Produkt (szkic „NIE WYSŁANA”); czasów D1–D3 nie mierzyłem; stanu MVP po zadaniach 40, 29, 28, 27 (nie oddane).
