@@ -713,3 +713,12 @@ P94 08:09 odpowiedź: B — obraz przed/po i obok krótka tabela (Artur w pokoju
   3) testy: `node --test strona/testy/serwer.test.mjs strona/testy/budzik.test.mjs` (17/17); odbiór kliknięciami: `sh strona/testy/odbior-44-klik.sh http://localhost:3000`
   Uwaga: sama usługa pod :8770/ też podaje stronę, ale bez widok.js (404) — widok auta nie działa; używać strony z punktu 2.
 08:12 Szef: 44 wdrożone (v=33), 45 usługa na stałe od 08:04 (zgl-5171), 49 znacznik final na 6d9b93a — Programista; sprawdzenie 45 po 15 min bez ruchu + odbiór 44 na linku → Analityk; komendy uruchomienia → README (Prezenter)
+
+### 08:15 — Prezenter: oddaję poprawki krytyka R1 (zlecenie 1f12bd89, punkty 1–6)
+1. Slajd 5: obraz przed/po auta 7 + krótka tabela (przeoczenia 7,8% / 9,7%; dobór wzorca 64/64 i 80/80).
+2. Wykres docs/zrzuty/wykresy/przeoczenia-vs-ramki.png w README „Wyniki” z jednozdaniowym podpisem; na slajdzie 6 wersja bez wewnętrznych oznaczeń (ocena/wykres50-slajd.mjs).
+3. Slajdy: 10, powiększone zrzuty z docs/zrzuty/demo-link/ (docs/zrzuty/slajdy/), bez „zad. 20”/skrótów, narzędzia na slajdzie 10; docs/slajdy.pdf przebudowany, żaden slajd nie przepełniony.
+4. hacktribe.md: prawdziwa liczba znaków opisu 906 (≤ 1000; wcześniej nagłówek 947 przy rzeczywistych 988), dopisane ~45 s wysyłki; README: „5,0 s” bazy usunięte (nieporównywalne), założenie o wąskim gardle oznaczone „założenie, niemierzone”.
+5. demo.md: nagranie na linku, auto 7 = 11 miejsc, liczenie ok. 90 s → cięcie w montażu po „Policz partię”, auto 6 „brak wzorca — obejrzyj ręcznie”; suma 114 s = nagłówek.
+6. README „Jak uruchomić”: sprawdzone komendy Programisty, bez „do potwierdzenia”, wersja pokazowa = znacznik `final` (obecnie wskazuje 2c9c4e9, nie 6d9b93a z zlecenia), uwaga o :8770 bez widok.js.
+Nie ruszone: „5 botów”, „douczanie”. Linki HTTP 200 (strona, makieta, repo, OpenMausBot, pm-skills). Niesprawdzone: czas nagrania przez człowieka; recenzja R2 — Analityk.

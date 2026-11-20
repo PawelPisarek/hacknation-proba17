@@ -20,7 +20,7 @@ PYTHONPATH=src python -m przeswit.wykryj --biblioteka dane/mini --manifest dane/
 python ocena/ocena.py --manifest dane/mini/manifest.json --wyniki wyniki/mini/wyniki.json
 ```
 
-**Uwaga:** domyślne ustawienia (`prog=6`) różnią się od użytych w wynikach, więc „szybka próba” da inne liczby. Wyniki odtwarzają skrypty na pełnych zbiorach (`$DANE`, `$TRUDNE`, karta graficzna): `ocena/uruchom.sh` (metoda bazowa; domyślna siatka `prog=6,10,14`, a `prog=10,14` tylko w kroku pelny2048; wynik bazowy to konfiguracja `dobor=najblizszy,K=3,tol=2,prog=14`), `ocena/uruchom19.sh` (metoda v2, `--metoda v2`), `ocena/uruchom20.sh` (v3). Uruchomienie strony i usługi lokalnie: sekcja „Aplikacja” niżej.
+**Uwaga:** domyślne ustawienia (`prog=6`) różnią się od użytych w wynikach, więc „szybka próba” da inne liczby. Wyniki odtwarzają skrypty na pełnych zbiorach (`$DANE`, `$TRUDNE`, karta graficzna): `ocena/uruchom.sh` (metoda bazowa; domyślna siatka `prog=6,10,14`, a `prog=10,14` tylko w kroku pelny2048; wynik bazowy to konfiguracja `dobor=najblizszy,K=3,tol=2,prog=14`), `ocena/uruchom19.sh` (metoda v2, `--metoda v2`), `ocena/uruchom20.sh` (v3). Uruchomienie strony i usługi lokalnie oraz wersja pokazowa: sekcja „Aplikacja” niżej.
 
 ## Aplikacja: strona + usługa na karcie (zadanie 21)
 
@@ -35,12 +35,13 @@ python ocena/ocena.py --manifest dane/mini/manifest.json --wyniki wyniki/mini/wy
   ```
   Z kartą NVIDIA: `--build-arg TORCH_INDEX=https://download.pytorch.org/whl/cu121` i `docker run --gpus all …`.
   Bez Dockera: `PYTHONPATH=src:. python -m usluga.serwer --bez-sieci` (usługa liczenia, http://127.0.0.1:8770).
-- **Strona + usługa osobno, lokalnie (2 terminale):**
-  ```
-  PYTHONPATH=src:. python -m usluga.serwer --bez-sieci --bezczynnosc 0      # usługa na :8770
-  OMEN_URL=http://127.0.0.1:8770 BUDZIK_URL=- PORT=3000 node strona/serwer.mjs   # strona: http://localhost:3000
-  ```
-  <!-- do potwierdzenia: Programista wpisuje sprawdzone komendy do docs/decyzje.md; README poprawić według nich -->
+- **Strona + usługa osobno (sprawdzone przez Programistę, 20.11.2026):**
+  1. Usługa (karta NVIDIA, Python 3, `pip install -r requirements.txt`):
+     `PYTHONPATH=src:. python -m usluga.serwer --host 127.0.0.1 --port 8770 --bezczynnosc 0` — sprawdzenie: `curl http://127.0.0.1:8770/zdrowie` → `{"ok": true, …}`.
+  2. Strona (Node 22): `cp mvp/widok-auta/widok.js strona/public/ && PORT=3000 OMEN_URL=http://127.0.0.1:8770 node strona/serwer.mjs` → http://localhost:3000/ (albo Docker: `docker build -t przeswit . && docker run -p 3000:3000 -e OMEN_URL=http://<adres usługi>:8770 przeswit`).
+  3. Testy: `node --test strona/testy/serwer.test.mjs strona/testy/budzik.test.mjs` (17/17); odbiór kliknięciami: `sh strona/testy/odbior-44-klik.sh http://localhost:3000`.
+  Uwaga: sama usługa pod :8770 też podaje stronę, ale bez `widok.js` — widok auta nie działa; używać strony z punktu 2.
+- **Wersja pokazowa** (ta sama co pod linkiem po ostatnim wdrożeniu) = znacznik git `final`: `git checkout final`, potem uruchomienie jak wyżej.
 
 ## Strona na żywo — co działa
 
@@ -51,7 +52,7 @@ https://hacknation.ksefbot.pl/ (odebrane na linku, 20.11.2026, dane sztuczne):
 3. Lupa powiększa wybrane miejsce do 4×, a ramka zostaje na środku okna.
 4. Obok obrazu badanego stoi wzorzec, z przesunięciem dopasowanym do miejsca.
 5. Przy każdym miejscu jest podpowiedź „zwykle tu…” (np. podwozie — belki, koła i oś) — bez słów niski/średni/wysoki i bez procentów.
-6. Cysterna nie ma wzorca: program pisze „brak wzorca — sprawdź obraz sam” i nie rysuje ramek.
+6. Cysterna nie ma wzorca: lista partii i raport piszą „brak wzorca — obejrzyj ręcznie”, ekran auta „sprawdź obraz sam”; ramek nie ma.
 7. Własny obraz .bmp można wgrać ze strony; analiza trwała ok. 1,3 s (kontener, 12 miejsc).
 
 8. Partia pokazowa ma 7 aut z liczbą miejsc 8 / 6 / 12 / 8 / 7 / 0 / 11; auto 6 (cysterna) ma „brak wzorca”.
@@ -87,13 +88,17 @@ Metoda pod linkiem to **v3** (zad. 20, WYNIK z 13:39 w `docs/decyzje.md`), zesta
 
 **Czym jest u nas fałszywy alarm.** Fałszywy alarm to czyste auto, na którym program zaznaczył ≥ 1 miejsce. Prześwit nie odpowiada „alarm: tak/nie” — daje operatorowi **kolejność miejsc** (najbardziej odmienne od wzorca pierwsze, na ekranie najwyżej 6), bo najważniejsze jest nie przeoczyć. Dlatego miarą jest średnia liczba ramek na czystym aucie (5,8 / 6,25), a nie „100% fałszywych alarmów” bez kontekstu; na 28 czystych autach (sonda 38 w `docs/odbior.md`) program zawsze wskazał ≥ 2 miejsca, więc „brak wskazań” nie jest obietnicą produktu. Decyzję o każdym miejscu podejmuje człowiek.
 
+![Wykres: przeoczenia kontra średnia liczba ramek na czystym aucie, 128 konfiguracji v3](docs/zrzuty/wykresy/przeoczenia-vs-ramki.png)
+
+Wykres pokazuje, że wybrana konfiguracja v3 (zielony trójkąt) schodzi poniżej celu 10% przeoczeń przy ok. 6 ramkach na czystym aucie — v1 i v2 (kwadrat) mają więcej przeoczeń albo znacznie więcej ramek.
+
 | Metoda | Przeoczenia zwykły / trudny | Ramki na czystym (śr.) | Fałszywe alarmy | Dobór wzorca |
 |---|---|---|---|---|
 | v1 (baza, zad. 2) | 8/64 (12,5%) / 11/62 (17,7%) | — | 32/32 / 36/40 | 64/64 / 79/80 |
 | v2 (zad. 19) | 12/64 (18,8%) / 11/62 (17,7%) | 4,2 / 12,9 | 24/32 / 38/40 | 64/64 / 80/80 |
 | **v3 (zad. 20, pod linkiem)** | **5/64 (7,8%) / 6/62 (9,7%)** | **5,8 / 6,25** | 32/32 / 40/40 | 64/64 / 80/80 |
 
-Czas na obraz 50 MB: baza śr. 5,0 s (zwykły) i 1,7 s (trudny), v2 śr. 0,91 s, v3 śr. 1,73 s i 1,19 s. To wyniki wewnętrzne zespołu na obrazach sztucznych, nie gwarancja skuteczności na zdjęciach KAS.
+Czas na obraz 50 MB mierzymy tylko dla v3 (śr. 1,73 s / 1,19 s); czasy v1 i v2 pochodzą z innych pomiarów (m.in. cała siatka konfiguracji naraz) i nie są z nimi porównywalne, więc ich nie podajemy. To wyniki wewnętrzne zespołu na obrazach sztucznych, nie gwarancja skuteczności na zdjęciach KAS.
 
 ## Co nowego
 
