@@ -4,7 +4,7 @@ Nagrywa człowiek. Razem **117 s** (limit 120 s). Wszystko na danych sztucznych 
 Źródła: `docs/spec.md` §7, P50 A (główna ścieżka), P51 B (partia 6 aut + przypadek trudny).
 
 **Link do pokazu:** wersja na ksefbot.pl — — (adres po wdrożeniu). Do tego czasu makieta: https://pawelpisarek.github.io/hacknation-proba17/makieta/warianty/ (makieta R1: https://pawelpisarek.github.io/hacknation-proba17/makieta/r1/, gdy będzie).
-**Przed nagraniem:** usługa liczenia działa; pod ręką 6 plików z `dane/mini` (firanka_dodatki_00, firanka_czyste_00, chlodnia_czyste_00, kontener_dodatki_00, cysterna_czyste_00 oraz jedno dodatkowe z `dane/mini`; skład partii potwierdza Programista), plik `trudny_mini_firanka_za_ladunkiem_00.bmp` i własny .bmp do wgrania.
+**Przed nagraniem:** usługa liczenia działa; pod ręką partia pokazowa — 6 plików z `dane/mini`, ten sam skład co makieta R1 (Programista): auto 1 `badany_mini_firanka_dodatki_00.bmp`, auto 2 `badany_mini_chlodnia_dodatki_01.bmp`, auto 3 `badany_mini_kontener_dodatki_01.bmp`, auto 4 `badany_mini_kontener_czyste_00.bmp` (czyste — „brak wskazań”), auto 5 `badany_mini_firanka_czyste_01.bmp` (czyste — tylko „niski”), auto 6 `badany_mini_cysterna_dodatki_00.bmp` (cysterna — „brak wzorca — sprawdź obraz sam”; biblioteka bez cysterny), plik `trudny_mini_firanka_za_ladunkiem_00.bmp` i własny .bmp do wgrania.
 
 | # | Czas | Ekran | Klikamy | Co widać | Lektor (1 zdanie) |
 |---|---|---|---|---|---|
