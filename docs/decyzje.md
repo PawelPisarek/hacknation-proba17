@@ -296,3 +296,4 @@ P53 12:59 Artur: gdy w partii jest zepsuty plik (nie obraz .bmp), co robi progra
 P54 12:59 Artur: gdy operator rozstrzygnie ostatnie miejsce w ostatnim aucie partii, co widzi? A: wraca na listę partii z przyciskiem „Raport partii” (może jeszcze zmienić decyzję, P41); B: od razu otwiera się raport. Rekomendacja: A — czeka
 P55 12:59 Artur: kiedy widać „Zamknij partię”? A: dopiero po zapisie raportu (po nim bez zmian); B: zawsze w raporcie, zapis raportu robi się przy zamknięciu. Rekomendacja: A — czeka
 12:59 Prezenter: demo.md szkic (117 s, 8 kroków; P50 A, P51 B)
+12:59 Programista: PARAMETR: progi słów różnicy w makiecie R1 = wysoki ≥ 0,6, średni ≥ 0,3 siły różnicy (dowolne, P45 B) — do Artura (P49)
