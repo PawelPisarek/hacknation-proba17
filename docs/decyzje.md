@@ -402,3 +402,4 @@ P72 13:23 odpowiedź: Artur w pokoju (13:15): A — zostawiamy raport jak jest (
 14:04 Analityk: biorę zadanie 32
 14:04 Programista: biorę zadanie 22 (R2: makieta/r2/, P54–P72 + usterki krytyka R1 z 13:08)
 14:04 Projektant: krok 7 domknięcie R2 — S1 brzegowe jedno kryterium (06 i 07, R20, zał. 6), R7 z P59 A/P68 scalone, R9 zapas czasu + P69 A, nagłówek 07 P1–P72, P60 B sprawdzone (brak P60 A w 06/07/spec) — do R3 Analityka
+14:05 Prezenter: demo.md pod P60 B/P69 A — partia 7 aut, auto 1: 2 miejsca, P57–P59, P63–P65; suma 113 s (zapas 7 s)
