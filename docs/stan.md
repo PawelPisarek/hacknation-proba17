@@ -1,4 +1,4 @@
-# Stan — 12:42
+# Stan — 12:43
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -19,7 +19,7 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | 03 zbiór trudny | Analityk | zamknięte 11:18 (dane/mini-trudny, manifest-trudny.json; 112 badanych, 4 rodzaje trudności) |
 | 04 sprawdzenie zbioru trudnego | Analityk | zamknięte 11:48 (0/86 niewidocznych) |
 | README | Prezenter | zamknięte po R3 (ceb6717) |
-| docs/hacktribe.md — „Prześwit” + partie (P12) | Prezenter | aktualizacja po P35/P36 zlecona 12:42; recenzja przed 20:00 |
+| docs/hacktribe.md — „Prześwit” + partie (P12) | Prezenter | po P35/P36 (edbeb73, 913 zn.) → R1 Analityk |
 | szkielet slajdów | Prezenter | gotowy (1cd6c10) |
 | szkice wariantów A/B/C | Projektant | gotowe (docs/pm/szkice-wariantow.md) |
 | trzy makiety wariantów | Programista | zamknięte — P36: C (+ lista partii z B) |

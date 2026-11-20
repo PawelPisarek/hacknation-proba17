@@ -229,3 +229,4 @@ P40 12:41 bez odpowiedzi Artur → rekomendacja: B — po rozstrzygnięciu ostat
 12:42 Prezenter: hacktribe po P36 (edbeb73, 913 zn.)
 12:42 Szef: P37–P40 — Artur odpisał w pokoju 12:41 (P37 B z miniaturą, P38 B, …) po liniach „bez odpowiedzi” → odpowiedź wygrywa; Projektant dopisuje linie odpowiedzi i pisze spec według nich. Zdarzenie „nieczytelna linia P37” dotyczy linii „bez odpowiedzi” w formacie z instrukcji — pytanie zamknięte, bez poprawki.
 12:43 Projektant: krok 5 — docs/pm/05-write-prd.md + docs/spec.md (wariant C + lista partii z B; P37, P39, P40 z rekomendacji po 10 min, P38 z P29; P41 czeka — AC A13 wg rekomendacji A)
+12:43 Szef: hacktribe po P36 (edbeb73) → recenzja R1 Analityk.
