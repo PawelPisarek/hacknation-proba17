@@ -44,6 +44,34 @@
 
   // Zadanie 24 (lupa, A1): położenie wzorca względem badanego z doboru programu (wykryj.warp_skala):
   // x_b = s·x_w + dx, y_b = y_w + dy; dobor liczony przy szerokości SZER_DOBOR, tu przeliczony na piksele obrazu.
+  // Zadanie 26 (A5, P39 B, P42): podpowiedź „zwykle tu…” przy każdym kafelku. Strefy elementów konstrukcji —
+  // te same co w dane/generator/z12_z14.py (strefy(), ułamki szer./wys. obrazu); opis, gdy ramka leży
+  // w strefie co najmniej w połowie (pokrycie ≥ 0,5, jak w Z14). Bez strefy → napis P42.
+  const POZA_KONSTRUKCJA = "poza znaną konstrukcją, obejrzyj uważnie";
+  const STREFY = [
+    { el: "podwozie", z: [0, .78, 1, .99], opis: "zwykle tu: podwozie — belki, koła i oś" },
+    { el: "rama_gora", z: [0, .10, 1, .135], opis: "zwykle tu: górna rama nadwozia" },
+    { el: "kabina", z: [0, .20, .10, .95], opis: "zwykle tu: kabina ciągnika" },
+    { el: "agregat", rodzaj: "chlodnia", z: [.07, .14, .16, .50], opis: "zwykle tu: agregat chłodni" },
+    { el: "wlaz", rodzaj: "cysterna", z: [.39, .06, .46, .11], opis: "zwykle tu: właz cysterny" },
+    { el: "narozniki", rodzaj: "kontener", z: [.06, .10, .09, .87], opis: "zwykle tu: narożniki kontenera" },
+    { el: "narozniki2", rodzaj: "kontener", z: [.93, .10, .98, .87], opis: "zwykle tu: narożniki kontenera" },
+  ];
+  const PROG_POKRYCIA = 0.5;
+  function pokrycie(b, z) {
+    const ix = Math.max(0, Math.min(b.x1, z[2]) - Math.max(b.x0, z[0]));
+    const iy = Math.max(0, Math.min(b.y1, z[3]) - Math.max(b.y0, z[1]));
+    return (ix * iy) / Math.max(1, (b.x1 - b.x0) * (b.y1 - b.y0));
+  }
+  function podpowiedz(m, rodzaj, szer, wys) {
+    for (const s of STREFY) {
+      if (s.rodzaj && s.rodzaj !== rodzaj) continue;
+      const z = [s.z[0] * szer, s.z[1] * wys, s.z[2] * szer, s.z[3] * wys];
+      if (pokrycie(m, z) >= PROG_POKRYCIA) return { tekst: s.opis, element: s.el, znany: true };
+    }
+    return { tekst: POZA_KONSTRUKCJA, element: null, znany: false };
+  }
+
   const SZER_DOBOR = 512;
   const ZOOM_PO_KLIKNIECIU = 4;
   // Zadanie 25: usługa zapisuje końcowe położenie (z korektą ddx/ddy) w wynik.polozenie_wzorcow — w pikselach obrazu;
@@ -150,6 +178,7 @@
                 <div class="opis">
                   <b>#${m.nr}</b>
                 </div>
+                ${(() => { const p = podpowiedz(m, l.rodzaj, szer, wys); return `<div class="podp${p.znany ? "" : " poza"}">${p.tekst}</div>`; })()}
               </div>`;
             })
             .join("")}</div>` +
@@ -230,6 +259,9 @@
   }
 
   root.PrzeswitLista = {
+    POZA_KONSTRUKCJA,
+    STREFY,
+    podpowiedz,
     BRAK_WSKAZAN,
     BRAK_WZORCA,
     LIMIT_WIDOCZNYCH,
