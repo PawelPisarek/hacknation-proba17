@@ -53,7 +53,7 @@ Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wyni
 | A10 | Po ostatnim miejscu otwiera się następne auto partii | P40 B |
 | A11 | Raport z polami P18: id kontroli, miejsce (z ustawienia stanowiska), data i godzina, rodzaj programu i operatora, nr rej., miejsca z decyzją i powodem, kto zdecydował (zalogowany); bez pisania poza nr rej.; zapis lokalny | P18, P22 A; JS5 |
 | A12 | Obraz 50 MB < 1 min, bez internetu | zadanie §3, §7, §9 |
-| A13 | Cofnięcie decyzji w poprzednim aucie (lista partii → auto → zmiana do „Zamknij sprawę”) — **czeka na P41; rekomendacja A** | P41 |
+| A13 | Cofnięcie decyzji w poprzednim aucie (lista partii → auto → zmiana do „Zamknij sprawę”) — P41 A (odpowiedź Artura) | P41 |
 
 ## 5. Cele liczbowe Artura i stan pomiarów (dane sztuczne, metoda bazowa i v2 — zadanie 19; zadanie 20 w toku)
 | Miara | Cel | Dziś | Źródło |
@@ -95,7 +95,7 @@ Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z d
 | P38 | B — wejście w auto dopiero po całej partii | odpowiedź Artura 12:41 (z P29) |
 | P39 | B — podpowiedź przy każdym kafelku | odpowiedź Artura 12:41 |
 | P40 | B — po ostatnim miejscu następne auto | odpowiedź Artura 12:41 |
-| P41 | A — decyzje w poprzednim aucie można zmienić z listy partii do zamknięcia sprawy (AC A13) | **czeka na Artura**; odpowiedź po czasie wygrywa |
+| P41 | A — decyzje w poprzednim aucie można zmienić z listy partii do zamknięcia sprawy (AC A13) | odpowiedź Artura w pokoju |
 
 <!-- skill: create-prd -->
 <!-- skill: przeplywy-pm -->

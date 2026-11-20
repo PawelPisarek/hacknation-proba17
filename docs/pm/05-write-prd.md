@@ -3,7 +3,7 @@
 Spec do budowy: `docs/spec.md`. Wejście: `docs/pm/01–04`, `szkice-wariantow.md`, P2–P41, linie `WYNIK` (dane sztuczne).
 
 ## Czego nie wiem o produkcie
-- **P41** (czy decyzję w poprzednim aucie można zmienić po przejściu do następnego): czeka na Artura; w specu rekomendacja A (AC A13).
+- **P41** (czy decyzję w poprzednim aucie można zmienić po przejściu do następnego): odpowiedź Artura: A (AC A13).
 - Próg P30 B (≤ 6 ramek) jest dziś niespełniony (Z2, Z6); pytanie do Artura dopiero gdy zadanie 20 też nie da ≤ 6 ramek (decyzja Szefa 12:07).
 - Zachowanie na prawdziwych obrazach KAS — nieznane, mamy tylko sztuczne (Z10).
 
@@ -36,7 +36,7 @@ Funkcjonariusz SCS przy stanowisku RTG na przejściu granicznym; może mieć kr�
 Pierwsza wersja: wszystko z pozycji 1–5 i podstawy; cięcie od końca (założenie zespołu): najpierw pozycja 5, potem 4. Później: dokładanie wzorców, wzorce na dostawcę, wynik na bieżąco. Nie robimy: wykrywania towaru, porównania z deklaracją, pomysłów 4, 5, 7, 8, 9.
 
 ## Co zmieniła decyzja o wyglądzie (P36–P41)
-Wariant C + lista partii z B; wiersz auta z miniaturą (P37 B); wejście w auto po całej partii (P38); podpowiedź przy każdym kafelku od razu (P39 B); po ostatnim miejscu następne auto (P40 B) — wszystko odpowiedzi Artura 12:41; P41 czeka.
+Wariant C + lista partii z B; wiersz auta z miniaturą (P37 B); wejście w auto po całej partii (P38); podpowiedź przy każdym kafelku od razu (P39 B); po ostatnim miejscu następne auto (P40 B) — P41 A — zmiana decyzji z listy partii do zamknięcia sprawy; wszystko odpowiedzi Artura.
 
 Uproszczenia: pełna lista z kosztami dorobienia w `docs/spec.md` §8.
 
