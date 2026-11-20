@@ -1,4 +1,4 @@
-# Stan — 15:39
+# Stan — 15:41
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -14,7 +14,7 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | przejście demo na r3 | Analityk | zlecone 15:36 → docs/odbior-makiety.md |
 | 38 sonda czyste auto 0 miejsc na v3 (P82) | Analityk | zlecone 15:39; czyste_zero odrzucone (kopia wzorca); jest → A, nie ma → B |
 | 32 progi słów (P49 A) | Analityk | zamknięte 15:06; P79 B: słów nie ma, P49 i P75 bez przedmiotu |
-| 24–29 funkcje (P34) | Programista | 24 zamknięte 14:31 (A1 0,0 px) → 25 zamknięte 15:07 (położenie wzorców w wyniki.json, metoda bez zmian 0/32 różnic) → 26 zamknięte 15:31 (A5 540 OK, 75f266d; P81 A — teksty bez zmian) → 27 w toku → 36 brak wzorca v3 + r3 teksty P81 → 28 → 29; wdrożenie na ksefbot.pl po 21 |
+| 24–29 funkcje (P34) | Programista | 24 zamknięte 14:31 (A1 0,0 px) → 25 zamknięte 15:07 (położenie wzorców w wyniki.json, metoda bez zmian 0/32 różnic) → 26 zamknięte 15:31 (A5 540 OK, 75f266d; P81 A — teksty bez zmian) → r3 teksty P81 zamknięte 15:41 (test 32 OK) → 36 w toku (odbiór na karcie) → 27 → 28 → 29; wdrożenie na ksefbot.pl po 21 |
 | docs/demo.md + slajdy | Prezenter | 4cd0c4e: demo 113 s pod P80 A, slajdy ze zrzutami r3, hacktribe 888 zn. (znaki, nie bajty); ryzyko: zrzuty w slajdach nieczytelne, PDF nie obejrzany jako PDF → faza 2; 35 wizja w tekstach zamknięte (a23e869, 934 zn.) + slajd 7 czas programu (875d9b3) |
 
 Ustalenia Artura: P2–P56 jak wcześniej; P57 A (6 miejsc + „i jeszcze N miejsc — pokaż”); P58 A („brak wskazań — to nie gwarancja…”); P59 A / P68 (pasek „dane sztuczne — demonstracja”); P60 B (trudny jako 7. auto w partii); P61 A („Dodaj jeden obraz” na liście); P62 A (prawdziwy wybór pliku + napis „wynik przykładowy”); P63 B (ostrzeżenie przy brakach decyzji, zapis po potwierdzeniu); P64 A (godzina decyzji per auto); P65 A („Nowa partia”); P66 A (ukryć pasek E1–E7 i „makieta R1”; porządki makiety bez pytania); P67 A (pokazać 1 pudło w makiecie); P69 A (2 miejsca w aucie 1 w demo); P70 A (2 najbliższe wzorce); P71 (nic więcej nie wyrzucamy); P72 A (miniatura w raporcie po MVP); P73 A etykiety; P74 A „obejrzane, bez wskazań”; P75 B słowa po progach; P76 A ramka w zoomie; P77 A komunikat przy polu; P78 nic nie wyrzucamy; P79 B bez słów niski/średni/wysoki, tylko kolejność (zmienia P17, P45); P80 A „program nic nie wskazał — nieotwarte” do otwarcia auta, „obejrzane” po „Zamknij auto”; błędy makiety poprawiamy bez pytania.
