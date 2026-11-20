@@ -23,4 +23,3 @@ Nagrywa człowiek. Razem **117 s** (limit 120 s). Wszystko na danych sztucznych 
 - Otwarte: P52 (co, gdy brak ramki w trudnym), P54/P55 (ekran po ostatnim aucie, kiedy „Zamknij partię”) — krok 7 może się zmienić po odpowiedziach Artura.
 - Kroki 5 i 6 zależą od makiety R1 i usługi na OMENie; do tego czasu opis słowny.
 
-<!-- skill: demo -->
