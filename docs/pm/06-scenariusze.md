@@ -75,7 +75,7 @@ S: E1 (5 s) → E2/E3 partia 6 aut (20 s) → auto 1: S1+S5 (35 s) → S6 + S9 (
 ## Co blokuje oddanie (P50 A)
 Przypadek trudny w demo (P51 B, P52): `trudny_mini_firanka_za_ladunkiem_00.bmp` — widać dodatek za ładunkiem w lupie albo uczciwie brak ramki z podpisem „granica programu — oglądamy obraz sam” (P52 A); przeoczenia na tym przypadku wg Z7 trzeba wpisać do raportu jako dane sztuczne, nie jako obietnicę.
 
-Blokują: S1, S4, S6, S9, S11, S13 (przycisk „Zapisz i zamknij partię”, P56 A), S14 (główna ścieżka i bezpieczeństwo przeoczeń: operator widzi miejsca, decyzja i raport działają, własny plik z linku działa). Nie blokują, ale wpisujemy do raportu z oceny: S2 wartości progów, S3, S7, S8 pasek, S12 pomiary liczbowe, blokada zmian po zamknięciu w S13 (P50 A: zamykanie może poczekać). **Konflikt z P55 B:** jeden przycisk zapisuje raport (blokuje, S11) i zamyka partię; czy cały przycisk blokuje oddanie, rozstrzyga P56 (czeka; wg rek. A: tak, S11 i S13 blokują razem). Cele liczbowe (przeoczenia ≤ 10%, ramki ≤ 6) to osobne pomiary w `docs/spec.md` §5, nie scenariusze.
+Blokują: S1, S4, S6, S9, S11, S13 (przycisk „Zapisz i zamknij partię”, P56 A), S14 (główna ścieżka i bezpieczeństwo przeoczeń: operator widzi miejsca, decyzja i raport działają, własny plik z linku działa). Nie blokują, ale wpisujemy do raportu z oceny: S2 wartości progów, S3, S7, S8 pasek, S12 pomiary liczbowe. Konflikt P50 z P55 rozstrzygnięty: P56 A — S11 i S13 blokują razem (jeden przycisk). Cele liczbowe (przeoczenia ≤ 10%, ramki ≤ 6) to osobne pomiary w `docs/spec.md` §5, nie scenariusze.
 
 <!-- skill: test-scenarios -->
 <!-- skill: dummy-dataset -->
