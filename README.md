@@ -38,6 +38,20 @@ python ocena/ocena.py --manifest dane/mini/manifest.json --wyniki wyniki/mini/wy
   Z kartą NVIDIA: `--build-arg TORCH_INDEX=https://download.pytorch.org/whl/cu121` i `docker run --gpus all …`.
   Bez Dockera: `PYTHONPATH=src:. python -m usluga.serwer --bez-sieci` (wiersz poleceń, http://127.0.0.1:8770).
 
+## Strona na żywo — co działa
+
+https://hacknation.ksefbot.pl/ (odebrane na linku, 20.11.2026, dane sztuczne):
+
+1. Na obrazie auta widać ramki z numerami takimi samymi jak na kafelkach miejsc.
+2. Kafelki są ułożone od miejsca najbardziej odmiennego od wzorca.
+3. Lupa powiększa wybrane miejsce do 4×, a ramka zostaje na środku okna.
+4. Obok obrazu badanego stoi wzorzec, z przesunięciem dopasowanym do miejsca.
+5. Przy każdym miejscu jest podpowiedź „zwykle tu…” (np. podwozie — belki, koła i oś) — bez słów niski/średni/wysoki i bez procentów.
+6. Cysterna nie ma wzorca: program pisze „brak wzorca — sprawdź obraz sam” i nie rysuje ramek.
+7. Własny obraz .bmp można wgrać ze strony; analiza trwała ok. 1,3 s (kontener, 12 miejsc).
+
+W przygotowaniu: skład partii pokazowej, budzenie strony po przerwie, decyzje i raport, lista partii, zmiana rodzaju.
+
 ## Wyniki (na danych sztucznych, nie na zdjęciach KAS)
 
 Źródło: linie `WYNIK` w `docs/decyzje.md`; metoda v2 (zad. 19), zestaw zwykły / trudny:
