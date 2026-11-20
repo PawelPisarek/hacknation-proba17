@@ -472,3 +472,5 @@ P80 15:20 Artur: Auta, których operator jeszcze nie otworzył (np. auta 4 i 6 n
 P80 15:20 odpowiedź: A — do otwarcia auta stan to „program nic nie wskazał — nieotwarte”; „obejrzane, bez wskazań” dopiero po „Zamknij auto”, z godziną i osobą. Z ekranu nic nie wyrzucamy. (Artur w pokoju)
 15:21 Szef: P80 A przekazane Programiście (razem z poprawkami R3: braki 2, 3, 5, 6, 7); brak 4 zamknięty (spec P73–P79, Projektant).
 15:23 Szef: krok 8 (wizja, product-vision + value-proposition, docs/pm/08-wizja.md) → Projektant; recenzja przejścia → Analityk; po kroku 8 zadanie dla Prezentera (wizja do opisu i slajdów).
+15:23 Projektant: biorę krok 8 (wizja: product-vision, value-proposition → docs/pm/08-wizja.md)
+15:23 Projektant: oddaję krok 8 — docs/pm/08-wizja.md (a wizja, b 6 części JTBD, c 5 zdań dla Prezentera); bez nowych pytań P; zgodne z P58 A i P79 B
