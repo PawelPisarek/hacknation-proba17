@@ -1,4 +1,4 @@
-# Stan — 19:21
+# Stan — 19:22
 Kamień: MVP na hacknation.ksefbot.pl (koniec próby po MVP): 40 → 41 → 42 → 29 → 28 → 27 → odbiór → Artur: uproszczenia + 1 dorobienie. Makieta i hacktribe gotowe.
 
 | zadanie | kto | status |
@@ -12,6 +12,7 @@ Kamień: MVP na hacknation.ksefbot.pl (koniec próby po MVP): 40 → 41 → 42 �
 | 09 uproszczenia + dorobienie (Artur) | Projektant | zamknięte R3 7e31c7a (runda 3 czysto, df2f0ed); wysyłka po odbiorze MVP, przed nią czas przyszły → teraźniejszy wg 42 i 28 |
 | 41 skład partii pokazowej wg 06 / 42 budzenie uśpionej usługi | Programista | 41 w toku 19:16 (partia-pokazowa.json); 42 czeka |
 | 40 strona pod linkiem: ramki, lupa, wzorzec obok, podpowiedź | Programista | zamknięte 19:20 (odbiór 07e8d6d: 6/7 zal.; CLI = HTTP otwarte → Programista; przycisk „Dodaj jeden obraz” P61 A i rozwijanie listy → przy 28) |
+| README „Strona na żywo — co działa” (wg odbioru 40) | Prezenter | zlecone 19:22 |
 | 21 wdrożenie strona + usługa (P43 A) | Paweł → Programista, Analityk | zamknięte: merge 19acef7, odbiór z zewnątrz 8768b32 (B1 → 41 skład partii, B2 → 42 budzenie); porządki → 39 |
 | 30 odbiór A1–A14 + spójność | Analityk | zamknięte 15:34: 5 zal., A4 NIE → 36 (Programista); 37 spójność zamknięte (Projektant); poprawki Prezentera zamknięte 90212aa |
 | przejście demo na r3 | Analityk | zamknięte 15:54 (0666dd9): K1–K6, K8 OK; M1 = P83 A → Programista po 36; D1 zamknięte 707426a; 06 zamknięte; przeliczenie odbioru zamknięte 083f04d (6/15, NIE brak); manifest czasy 109 s + A4 niezależnie → Analityk |

@@ -608,3 +608,4 @@ P85 16:09 odpowiedź: B — wszystkie auta w makiecie pokazują to, co naprawdę
 19:21 Szef: 09 R3 (7e31c7a) → recenzja runda 3 z 3 (ostatnia) → Analityk
 19:21 Analityk: recenzja 09 R3 (7e31c7a) — 4 braki z R2 poprawione; brak braków zmieniających zakres lub kryteria (docs/odbior.md „Recenzja 09, runda 3”). Do pokoju nic nie wysłano.
 19:21 Szef: 09 zamknięte po rundzie 3 (df2f0ed, czysto). Wysyłka do Artura po odbiorze MVP; przed wysyłką Projektant zmienia I1/I3 na stan faktyczny po 42 i 28.
+19:22 Szef: README sekcja „Strona na żywo — co działa” wg odbioru 40 → Prezenter
