@@ -42,7 +42,7 @@ Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wyni
 | AC | Warunek | Źródło |
 |---|---|---|
 | A1 | Ramki na badanym mają numery zgodne z kafelkami; kliknięcie kafelka zaznacza ramkę i przybliża oba obrazy w tym samym miejscu | JS1 AC1,3,4a; P36 C |
-| A2 | Kafelki od najbardziej różnego; słowo niski/średni/wysoki, bez procentów | P17; JS1 AC2 |
+| A2 | Kafelki od najbardziej różnego; słowo niski/średni/wysoki, bez procentów; progi stałe, wspólne dla wszystkich aut (P45 B), czyste auto nie dostaje „wysoki” z samego podziału; wartości progów — P49 (czeka) | P17, P45 B; JS1 AC2 |
 | A3 | Obraz bez miejsc: komunikat „brak wskazań”, nie pusta lista | JS1 AC4 |
 | A4 | Brak wzorca → zero ramek i napis „brak wzorca — sprawdź obraz sam” | P35 A; JS1 AC5, JS3 AC6 |
 | A5 | Podpowiedź „zwykle tu…” widoczna od razu przy każdym kafelku, bez klikania; kafelek bez opisu (ok. 27% ramek, Z14) — wg P42 (Artur) napis „poza znaną konstrukcją, obejrzyj uważnie” | P39 B, P42; JS1 AC4b |
@@ -89,7 +89,7 @@ UPROSZCZENIE: raport zapisywany lokalnie jako plik, bez repozytorium KAS i bez e
 ## 9. Poza zakresem (P10, P29, P32)
 Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z deklaracją, integracja ze skanerami, chmura, wzorce na dostawcę, rozbudowane skalowanie.
 
-## 10. Ustalenia w specu — P37–P42
+## 10. Ustalenia w specu — P37–P49
 | P | Rozstrzygnięcie | Stan |
 |---|---|---|
 | P37 | B — wiersz auta z miniaturą | odpowiedź Artura 12:43 (wygrywa z rekomendacją) |
@@ -98,6 +98,13 @@ Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z d
 | P40 | B — po ostatnim miejscu następne auto | odpowiedź Artura 12:43 |
 | P41 | A — decyzje można zmienić z listy partii do zamknięcia sprawy | odpowiedź Artura 12:44 |
 | P42 | kafelek bez opisu: napis „poza znaną konstrukcją, obejrzyj uważnie” (odpowiedź własna, ani A, ani B) | odpowiedź Artura w pokoju |
+| P43 | A (Paweł) — MVP na ksefbot.pl + usługa na OMENie od wdrożenia, własny .bmp z linku (A14) | odpowiedź Pawła 12:51 |
+| P44 | A — „auto N” z nazwą pliku na liście | odpowiedź Artura 12:52 |
+| P45 | B — stałe progi słów, wspólne dla aut (nie „trzy równe części”) | odpowiedź Artura 12:52 |
+| P46 | A — „Zamknij partię” w E7, potem „rozstrzygnięte” | odpowiedź Artura 12:52 |
+| P47 | A — opis „skrytkę lub dodatkowy ładunek” bez zmian | odpowiedź Artura 12:52 |
+| P48 | A — wyjątek „poza znaną konstrukcją” w opisie | odpowiedź Artura 12:52 |
+| P49 | wartości progów słów — czeka | pytanie 12:5x |
 
 <!-- skill: create-prd -->
 <!-- skill: przeplywy-pm -->

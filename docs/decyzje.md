@@ -282,3 +282,4 @@ P50 12:55 Artur: co blokuje oddanie? A: blokują główna ścieżka (ramki i lup
 P51 12:55 Artur: co pokazujemy na demo z danych? A: partia 6 aut z dane/mini (jeden dodatek mały i jedno auto bez wzorca); B: do tego dodatkowo przypadek trudny (dodatek za ładunkiem). Rekomendacja: A — czeka
 PARAMETR: progi niski/średni/wysoki = do ustalenia na danych testowych — P49
 12:55 Szef: P45 B → zadanie 23 i makieta R1 poprawione (stałe progi); PARAMETR wartości progów → Projektant zadaje P49 Arturowi.
+12:55 Projektant: PARAMETR „trzy równe części” (P45 wg rekomendacji) nieaktualny — P45 B: stałe progi wspólne; wartości progów to P49 (linia „do Artura” zastąpiona pytaniem P49)
