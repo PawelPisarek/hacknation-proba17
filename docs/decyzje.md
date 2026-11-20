@@ -388,3 +388,4 @@ P70 13:23 odpowiedź: Artur w pokoju (13:11): A — podgląd wzorców przy aucie
 P71 13:23 odpowiedź: Artur w pokoju (13:11): nic nie wyrzucamy z ekranu (poza porządkami makiety z P66 A i poprawkami usterek bez pytania)
 P72 13:23 odpowiedź: Artur w pokoju (13:15): A — zostawiamy raport jak jest (bez miniatury teraz), wpisać miniaturę w raporcie na listę rzeczy do dorobienia po MVP (UPROSZCZENIE)
 13:23 Projektant: dopisano odpowiedzi Artura z pokoju Produkt (P60–P71 z 13:11, P72 z 13:15); P60 B wygrywa z rekomendacją A (13:20); zaktualizowano docs/spec.md (usunięta przedwczesna miniatura z E7, dodane UPROSZCZENIE P72 A, partia 7 aut P60 B, P61–P71) i docs/pm/06-scenariusze.md (partia 7 aut P60 B, demo P69 A)
+13:34 Szef: Programista wątek 1503bbd8 (zadanie 20) przerwał przez limit 5h Claude (reset 14:00) — przełączony na agy/agent-default i wznowiony; wątek 2a0e4ce1 (zadania 23/33) nadal w toku na Claude.
