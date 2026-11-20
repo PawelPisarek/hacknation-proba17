@@ -1,7 +1,7 @@
 # Slajdy R3 — Prześwit (DRAFT, 10 slajdów; PDF: docs/slajdy.pdf)
 
 > Oś przekazu (`value-prop-statements`): *Dla operatora RTG na granicy: Prześwit wskazuje miejsca, w których obraz naczepy odbiega od wzorca, więc operator w kilka minut wie, gdzie szukać skrytki — decyzję nadal podejmuje on.*
-> Wszystkie liczby: dane sztuczne, linie WYNIK w `docs/decyzje.md` (zadania 20 i 33). Zrzuty makiety R3 (część ekranów z R2: logowanie, lista partii, odrzucenie, cysterna).
+> Wszystkie liczby: dane sztuczne, linie WYNIK w `docs/decyzje.md` (zadania 20 i 33). Zrzuty makiety R3 (część ekranów z R2: logowanie, cysterna).
 
 ## 1. Prześwit
 - Narzędzie AI dla operatora RTG: porównuje obraz naczepy z wzorcem i zaznacza różnice.
@@ -25,20 +25,20 @@
 - Program dobiera wzorzec typu pojazdu z biblioteki; operator może zmienić rodzaj, a analiza liczy się od nowa.
 - Zaznacza miejsca różne od wzorca, w kolejności od najbardziej odmiennego (bez ocen słownych): najważniejsze to nie przeoczyć; pokazujemy, ile przeoczeń i ile fałszywych alarmów.
 - Partia: operator wskazuje kilka obrazów, program liczy je po kolei i oddaje listę aut.
-- Gdy nie ma wzorca: nic nie zaznacza i mówi „brak wzorca — sprawdź obraz sam”.
-- ![lista partii](zrzuty/r2/E3b-partia-gotowa-7-aut.png)  ![auto: obraz badany obok wzorca](zrzuty/r3/auto1.png)
+- Gdy nie ma wzorca: nic nie zaznacza i mówi „brak wzorca — obejrzyj ręcznie”.
+- ![lista partii](zrzuty/r3/lista.png)  ![auto: obraz badany obok wzorca](zrzuty/r3/auto1.png)
 
 ## 5. Operator decyduje
 - Przy każdym miejscu operator zatwierdza albo odrzuca; powód podaje przy odrzuceniu.
 - Decyzje, powody, kto i kiedy — w raporcie, zapisanym lokalnie jednym przyciskiem.
 - Gdy program nic nie wskazuje: „brak wskazań — to nie gwarancja, że auto jest czyste”.
-- ![odrzucenie miejsca z powodem](zrzuty/r2/E4c-auto1-2-rozstrzygniete-wzorzec-2.png)
+- ![odrzucenie miejsca z powodem](zrzuty/r3/auto7.png)
 
 ## 6. Demo (≈ 113 s, `docs/demo.md`)
 - Partia 7 aut z `dane/mini`; 7. auto to przypadek trudny (dodatek za ładunkiem), na liście nieoznaczony. U góry pasek „dane sztuczne — demonstracja”.
-- Auto 1: rozstrzygamy 2 miejsca i wracamy na listę, reszta „oczekuje”. ![lista](zrzuty/r2/E3b-partia-gotowa-7-aut.png)
+- Auto 1: rozstrzygamy 2 miejsca i wracamy na listę, reszta „oczekuje”. ![lista](zrzuty/r3/lista.png)
 - Auto: obraz i wzorzec obok siebie, kafelki, zatwierdź/odrzuć z powodem. ![auto](zrzuty/r3/auto1.png)
-- Brak wzorca (cysterna): „sprawdź obraz sam”. ![brak wzorca](zrzuty/r2/E5-cysterna-brak-wzorca.png)
+- Brak wzorca (cysterna): „obejrzyj ręcznie”. ![brak wzorca](zrzuty/r2/E5-cysterna-brak-wzorca.png)
 - Raport partii; auta bez decyzji — ostrzeżenie i potwierdzenie. ![raport](zrzuty/r3/raport.png)
 - Ograniczenie: dodatek za ładunkiem może nie dostać ramki — mówimy to wprost.
 
