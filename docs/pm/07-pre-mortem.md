@@ -12,10 +12,10 @@ Do odpowiedzi plik jest pisany wg rekomendacji (zaznaczone).
 Kolumny: **Blok** = blokuje oddanie / pokaz (tak / nie, wg P50 A: główna ścieżka); **Zmiana produktu** = czy trzeba zmienić to, co widzi operator.
 | # | Rodz. | Ryzyko („nie udało się, bo…”) | Dowód | Blok | Zmiana produktu | Działanie / właściciel |
 |---|---|---|---|---|---|---|
-| R1 | T | czyste auto dostaje za dużo ramek, operator je ignoruje | Z2/Z6 obalone (17,7 śr.; v2: 4,2 / 12,9; cel ≤ 6, P30 B); fałszywe alarmy: baza 32/32 i 36/40 czystych aut ma ≥ 1 ramkę, v2 24/32 i 38/40 — to realne ryzyko, nie pusta lista | **tak** | **tak (P57)** | zadanie 20 (metoda); P57 do Artura |
-| R2 | T | ramki nie wskazują prawdziwego dodatku na początku listy | Z8: 80% w pierwszych 6, 48% w pierwszych 3 (cel 90%) | **tak** | nie (kolejność — metoda) | zadanie 20; Programista |
-| R3 | T | przeoczenia powyżej celu: operator ufa pustej liście | Z1: 14%, v2: 17,7–18,8% (cel ≤ 10%, P31 A); Z7 mały dodatek 17–26%; „brak wskazań” rzadki: czyste auta bez ramki to 0/32 i 4/40 (baza), 8/32 i 2/40 (v2) — w demo z 7 aut (P60 B) spodziewane 0–1 wystąpień (szacunek z tych liczb, nie pomiar), więc P58 dotyczy rzadkiego przypadku, a S3 zależy od H1/zadania 31 | **tak** | **tak (P58)** | napis przy „brak wskazań”; P58 |
-| R4 | T | usługa na karcie OMENa nie słucha / wgranie z linku nie działa | poprzednia próba: usługa nie słuchała (P43) | **tak** | nie | start usługi z wdrożeniem, S14; Programista |
+| R1 | T | czyste auto dostaje za dużo ramek, operator je ignoruje | Z2/Z6 obalone (17,7 śr.; v2: 4,2 / 12,9; cel ≤ 6, P30 B); fałszywe alarmy: baza 32/32 i 36/40 czystych aut ma ≥ 1 ramkę, v2 24/32 i 38/40 — to realne ryzyko, nie pusta lista | **tak** | **tak (P57)** | zadanie 20 (v3, 4beef05): ramki na czystym śr. 5,8 (zwykły) / 6,25 (trudny) przy celu ≤ 6 — trudny minimalnie powyżej celu; ≤ 6 ramek na 22/32 (69%) i 20/40 (50%); P57 |
+| R2 | T | ramki nie wskazują prawdziwego dodatku na początku listy | Z8: 80% w pierwszych 6, 48% w pierwszych 3 (cel 90%) | **tak** | nie (kolejność — metoda) | zadanie 20 (v3); Programista |
+| R3 | T | przeoczenia powyżej celu: operator ufa pustej liście | Z1: 14%, v2: 17,7–18,8% (cel ≤ 10%, P31 A); Z7 mały dodatek 17–26%; „brak wskazań” rzadki: czyste auta bez ramki to 0/32 i 4/40 (baza), 8/32 i 2/40 (v2) — w demo z 7 aut (P60 B) spodziewane 0–1 wystąpień (szacunek z tych liczb, nie pomiar), więc P58 dotyczy rzadkiego przypadku, a S3 zależy od H1/zadania 31 | **tak** | **tak (P58)** | napis przy „brak wskazań”; P58. Zadanie 20 (v3): przeoczenia 7,8% (zwykły, 5/64) i 9,7% (trudny, 6/62; mały dodatek 6/42, za ładunkiem 0/20), oba ≤ 10% — cel spełniony |
+| R4 | T | usługa na karcie OMENa nie słucha / wgranie z linku nie działa | poprzednia próba: usługa nie słuchała (P43) | **tak** | nie | start usługi z wdrożeniem, S14; Programista. Czas 50 MB (zadanie 20): śr. 1,73 s, maks. 2,09 s (zwykły), trudny śr. 1,19 s — daleko od limitu 1 min |
 | R5 | T | wgranie ~50 MB zrywa limit serwera/proxy | A12/A14 nie sprawdzone przez stronę | **tak** | nie | test S12+S14 z 50 MB; Programista |
 | R6 | T | brak wzorca (cysterna) dostaje ramki z przybliżonego wzorca | Z4: 0/10 doborów, program napisu jeszcze nie robi | **tak** | nie (P35 A już ustalone) | zadanie 33, S4; Programista |
 | R7 | T | publiczność bierze liczby ze sztucznych danych za wynik na prawdziwych autach | Z10 (n małe), „dane sztuczne” tylko w opisie | **tak** | **tak (P59, P68)** | pasek na ekranie; P59 A (P68 scalone z P59: odpowiedź dotyczy obu) |
@@ -77,7 +77,7 @@ Kolumny: **Blok** = blokuje oddanie / pokaz (tak / nie, wg P50 A: główna ście
 | R4, R5 | S14, S12 na 50 MB | Programista (zadanie 21) | dzień przed pokazem |
 | R6 | zadanie 33; S4 | Programista | przed pokazem |
 | R7 | pasek P59 A (P68 scalone) | Programista | przed pokazem |
-| R8 | zadanie 32; P49 | Analityk → Artur | przed makietą R2 |
+| R8 | zadanie 32; P49 | Analityk → Artur | przed przeglądem Artura |
 | R9 | próba demo (stoper) wg „Ścieżka demo (do 2 min)”; zapas: ścieżka ma ok. 115 s, więc przy > 120 s skracamy krok auta 1 (P69 A: 2 miejsca) albo auto 6, bez dodawania kroków | Prezenter | dzień przed pokazem |
 | R20 | S1 brzegowe na `trudny_mini_firanka_maly_00` (lupa na małym dodatku) | Programista, Projektant | przed makietą R2 |
 
