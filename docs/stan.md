@@ -1,41 +1,21 @@
-# Stan — 13:11
+# Stan — 13:17
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
 |---|---|---|
-| 01 generator danych | Analityk | zamknięte (dane/mini w repo; pełny ThinkPad ~/dane/proba17) |
-| krok 0 docs/materialy.md | Analityk | zamknięte |
-| 02 ocena + wynik bazowy | Programista | zamknięte (4f08297): trudny FP 36/40, przeoczenia 11/62, dobór 79/80, 50 MB 1,7–5 s |
-| 19 mniej fałszywych alarmów | Programista | zamknięte (85f8e1f): cele niespełnione — trudny FP 38/40, ramki śr. 12,9, przeoczenia 18% |
-| 20 pasy podwozie/kabina/pudło (karta) | Programista | w toku od 12:04 |
+| zamknięte (start + łańcuch 0–6) | zespół | 01–04, 05–18 (sondy Z1–Z14; Z12/Z14 przegląd po R1), 19, kroki 0–6 (6 po R3 + P56 A), README, hacktribe (R3, sprawdzenie <20:00), warianty (P36 C+B), makieta R1 (krytyk 6/10) |
+| krok 7 /pre-mortem (07-pre-mortem.md) | Projektant | R2 poprawki (3 braki z R2 Analityka) w toku |
+| 20 pasy podwozie/kabina/pudło (karta) | Programista | w toku od 12:04 (wątek 1503bbd8, jeszcze na Claude) |
 | 21 wdrożenie strona + usługa (P43 A) | Paweł | w toku od 13:00 |
-| krok 1 /competitive-analysis | Projektant | zamknięte (R3) |
-| krok 2 operator (02-operator.md) | Projektant | zamknięte (R3) |
-| krok 3 /discover (03-discover.md) | Projektant | zamknięte (R3) |
-| krok 4 priorytety (04-priorytety.md) | Projektant | zamknięte (R2) |
-| krok 5 /write-prd + docs/spec.md | Projektant | zamknięty; odbiorca R2 bez braków (aba5f22) |
-| krok 6 /test-scenarios (06-scenariusze.md) | Projektant | zamknięty po R3; dopisanie P56 A w toku |
-| krok 7 /pre-mortem (07-pre-mortem.md) | Projektant | R1 poprawione; recenzja przejścia R2 (Analityk) |
+| 23 ramki i lista + 33 brak wzorca | Programista | w toku (wątek 2a0e4ce1, jeszcze na Claude) |
+| 31 dane scenariuszy | Analityk | wznowione 13:17 na agy/agent-default (po limicie Claude) |
 | 32 progi słów (P49 A) | — | po 20 i 31 |
-| 30 odbiór A1–A14 | — | do wzięcia (po 31) |
-| 31 dane scenariuszy | Analityk | w toku (generator 12:58) |
-| 22 makieta R1 (lista partii + C) | Programista | zamknięte; krytyk R1 6/10 (12 braków) → pytania do Artura (Projektant); R2 po odpowiedziach |
-| 33 brak wzorca — próg doboru | Programista | po 23 |
-| 23 ramki i lista | Programista | zlecone |
+| 30 odbiór A1–A14 | — | po 31 |
+| 22 makieta R2 | — | po odpowiedziach Artura P60–P72 (+ P57–P59 A, P54 A, P55 B, P56 A) |
 | 24–29 funkcje (P34) | — | do wzięcia po kolei |
-| 05–16 sondy Z1–Z11, Z13 | Analityk | zamknięte (3038023): Z2, Z6 obalone; Z3, Z7, Z9, Z11 potwierdzone; Z1, Z8 pomiędzy; Z4, Z13 nierozstrzygnięte |
-| 17, 18 sondy Z12, Z14 | Analityk | część liczona zamknięta: Z12 potwierdza, Z14 pomiędzy (73%); przegląd po makiecie R1 |
-| recenzja docs/hacktribe.md | Analityk | zamknięte po R3 (f62748c, 988 zn.) |
-| 03 zbiór trudny | Analityk | zamknięte 11:18 (dane/mini-trudny, manifest-trudny.json; 112 badanych, 4 rodzaje trudności) |
-| 04 sprawdzenie zbioru trudnego | Analityk | zamknięte 11:48 (0/86 niewidocznych) |
-| README | Prezenter | zamknięte po R3 (ceb6717) |
-| docs/hacktribe.md — „Prześwit” + partie (P12) | Prezenter | P47 A, P48 A wpisane; sprawdzenie końcowe przed 20:00 |
-| docs/demo.md szkic (P51 B) | Prezenter | szkic 117 s (9860149); linki po 22 i 21 |
-| szkielet slajdów | Prezenter | gotowy (1cd6c10) |
-| szkice wariantów A/B/C | Projektant | gotowe (docs/pm/szkice-wariantow.md) |
-| trzy makiety wariantów | Programista | zamknięte — P36: C (+ lista partii z B) |
+| docs/demo.md + slajdy | Prezenter | szkic 117 s (b086804) + slajdy ze zrzutami R1; liczby i PDF przed 10:30 |
 
-Ustalenia Artura: P2 wzorzec typu z biblioteki (P24: operator może poprawić rodzaj, analiza od nowa); P22 nr rej. wpisuje operator, miejsce = stanowisko, kto = zalogowany; P23 nieaktualne po P35; P37 wiersz auta z miniaturą; P38 wejście po całej partii; P39 podpowiedź przy każdym kafelku; P40 po ostatnim miejscu następne auto; P44 „auto N” + plik; P45 stałe progi (wartości P49); P46 „Zamknij partię”; P47 opis zostaje; P48 wyjątek w opisie; P49 progi dobieramy my, Artur zatwierdza po wyniku; P50 blokuje główna ścieżka, zamykanie partii może poczekać; P51 demo: 6 aut + przypadek trudny; P41 decyzję w poprzednim aucie można zmienić do zamknięcia sprawy; P42 kafelek bez opisu: „poza znaną konstrukcją, obejrzyj uważnie”; P27 po zmianie rodzaju decyzje znikają, raport ma oba rodzaje; P28 nr rej. osobno przy każdym obrazie; P25 „docelowo lokalnie”; P26 „nie przeoczyć”; nieprawdziwe zdania poprawiamy bez pytania (11:20); P3+P9 program zaznacza sam, operator zatwierdza/odrzuca na wyniku z powodem; P4 przeoczenie gorsze; P5 skuteczność najpierw; P7 kilka minut na auto; P10 zakres 1. wersji, duży obraz ~50 MB od razu; P12 partie w 1. wersji (po kolei, lista wyników); P13 powód odrzucenia z listy + „inny”; P11 nazwa „Prześwit”; P14 cztery rodzaje; P15 biblioteka z naszych czystych; P16→P35 brak wzorca → nic nie zaznaczamy, „brak wzorca — sprawdź obraz sam” (pomiar 0/12); P17 ramki + lista + wzorzec obok, różnica niski/średni/wysoki; P18 + nr rejestracyjny; P19 krótki staż; P20 kilkadziesiąt aut/zmianę; P29 pomysły 1, 2, 3 (lupa), 6, 10 (podpowiedź dla krótkiego stażu); P30 do 6 ramek na czystym; P31 ≥ 90/100 dodatków; P32 bez zmian; P33 najryzykowniejsze Z1, Z2+Z6, Z7, Z11; P34 kolejność 1 → 3 → 2 → 10 → 6.; P36 ekran C (badany i wzorzec obok, kafelki miejsc, „zwykle tu…”) + lista partii z B jako pierwszy ekran
-Otwarte pytania: P57–P59 (krok 7), P60–P71 (krytyk R1), P72 miniatura w raporcie (Artur); P49 wynik po zadaniu 32
-Środowisko: rsync i ssh wróciły (11:09), orkiestrator działa.
+Ustalenia Artura: P2–P56 jak wcześniej (P50 główna ścieżka blokuje, P51 6 aut + przypadek trudny, P52 granica programu, P53 zepsuty plik, P54 lista partii po ostatnim aucie, P55/P56 jeden przycisk „Zapisz i zamknij partię” blokuje oddanie); P57 A (6 najsilniejszych + „i jeszcze N miejsc — pokaż”); P58 A („brak wskazań — to nie gwarancja…”); P59 A (pasek „dane sztuczne — demonstracja”, też P68).
+Otwarte pytania: P60–P67, P69–P71 (krytyk R1), P72 miniatura w raporcie (Artur); P49 wynik po zadaniu 32.
+Środowisko: limit Claude 5h = 100% (reset 14:00). Na agy/agent-default: Analityk, Prezenter, Projektant, Szef + 2 wolne wątki Programisty; 2 zajęte wątki Programisty (2a0e4ce1, 1503bbd8) jeszcze na Claude — alarm do Pawła (202).
 Lista Artura na noc: —
