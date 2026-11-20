@@ -18,7 +18,7 @@ $("start").onclick = () => { S.kto = $("funk").value; S.miejsce = $("miejsce").v
 
 // ---------- E2 ----------
 function rysujE2() {
-  $("wybrane").innerHTML = S.pliki.map((p) => `<li>${esc(p.plik)}${p.wlasny ? ' <span class="szary">— próba wgrania — wynik przykładowy (makieta)</span>' : ""}${p.zepsuty ? ' <span class="szary">(plik nieczytelny)</span>' : ""}</li>`).join("") || '<li class="szary">nic nie wybrano</li>';
+  $("wybrane").innerHTML = S.pliki.map((p) => `<li>${esc(nazwaAuta(p))}${p.wlasny ? ` <span class="szary">— ${PRZYKLAD}</span>` : ""}${p.zepsuty ? ' <span class="szary">(plik nieczytelny)</span>' : ""}</li>`).join("") || '<li class="szary">nic nie wybrano</li>';
   $("policz").disabled = !S.pliki.length;
 }
 $("wskaz").onclick = () => $("plik").click();   // P62 A: prawdziwy wybór plików z dysku
@@ -28,7 +28,7 @@ $("pokazowa").onclick = () => { S.pliki = AUTA.map((a) => ({ ...a })); rysujE2()
 async function wlasnyPlik(f) {
   const nag = new Uint8Array(await f.slice(0, 2).arrayBuffer());
   const ok = nag[0] === 0x42 && nag[1] === 0x4d && f.size > 54;
-  return { ...AUTA[0], plik: f.name, wlasny: ok ? URL.createObjectURL(f) : null, zepsuty: !ok, wz: AUTA[0].wz };
+  return { ...AUTA[0], plik: f.name, nazwa: f.name, wlasny: ok ? URL.createObjectURL(f) : null, zepsuty: !ok, wz: AUTA[0].wz };
 }
 $("plik").onchange = async () => { S.pliki = await Promise.all([...$("plik").files].map(wlasnyPlik)); $("plik").value = ""; rysujE2(); };
 $("policz").onclick = () => { nowaPartia(); ekran("E3"); liczPoKolei(0); };
@@ -73,7 +73,7 @@ function rysujE3() {
     const klik = gotowa && !S.zamknieta && !a.zepsuty;
     const mini = a.zepsuty ? '<div class="szary">—</div>' : `<img class="mini" src="${obrazBadany(a)}" alt="">`;
     return `<tr data-i="${i}" class="${klik ? "klik" : "zablok"}"><td>${mini}</td>
-      <td><b>auto ${a.id}</b>${a.nr ? " · " + esc(a.nr) : ""}<br><span class="szary">${esc(a.plik)}</span>${a.wlasny ? '<br><span class="szary">próba wgrania — wynik przykładowy (makieta)</span>' : ""}</td>
+      <td><b>auto ${a.id}</b>${a.nr ? " · " + esc(a.nr) : ""}<br><span class="szary">${esc(nazwaAuta(a))}</span>${a.wlasny ? `<br><span class="szary">${PRZYKLAD}</span>` : ""}</td>
       <td>${liczone || a.zepsuty ? "—" : NAZWA[rodz]}</td>
       <td><span class="stan ${cls}">${st}</span>${a.zamkniete && !S.zamknieta ? ' <span class="szary">✓ auto zamknięte</span>' : ""}
         ${a.zepsuty ? '<div class="blad">Nie da się odczytać pliku — to nie jest obraz .bmp albo plik jest uszkodzony. Pozostałe auta liczą się dalej.</div>' : ""}</td>
@@ -99,16 +99,18 @@ $("nowa").onclick = () => { S.pliki = []; S.partia = []; S.zamknieta = false; ek
 
 // ---------- E4 / E5 ----------
 const A = () => S.partia[S.ia];
+const nazwaAuta = (a) => a.nazwa || a.plik;   // P60 B: auta pokazowe mają neutralną nazwę (skan_NN.bmp), własny plik — swoją
 const ustawSrc = (id, u) => { if (u == null) $(id).removeAttribute("src"); else if ($(id).getAttribute("src") !== u) $(id).setAttribute("src", u); };
 function otworzAuto(i) {
-  S.ia = i; const a = A(); a.otwarte = true;   // decyzja 15:29 (P80 A) S.im = Math.max(0, a.miejsca.findIndex((_, j) => !a.decyzje[j])); S.zoom = 1; S.wzn = 0; S.wszystkie = false;
+  S.ia = i; const a = A(); a.otwarte = true;   // decyzja 15:29 (P80 A)
+  S.im = Math.max(0, a.miejsca.findIndex((_, j) => !a.decyzje[j])); S.zoom = 1; S.wzn = 0; S.wszystkie = false;   // stan auta nie przechodzi na następne (P57 A, P40 B)
   przyciskiZoom(); ekran("E4"); $("a-nrinfo").textContent = ""; rysujAuto();
 }
 function brakWzorca(a) { return !Z_WZORCEM.includes(a.rodzajOperatora || a.rodzaj); }
 const widoczne = (a) => (S.wszystkie ? a.miejsca.length : Math.min(ILE_NA_LISCIE, a.miejsca.length));   // P57 A
 function rysujAuto() {
   const a = A(), rodz = a.rodzajOperatora || a.rodzaj, bw = brakWzorca(a);
-  $("a-nazwa").textContent = `auto ${a.id} z ${S.partia.length}`; $("a-plik").textContent = a.plik;
+  $("a-nazwa").textContent = `auto ${a.id} z ${S.partia.length}`; $("a-plik").textContent = a.nr || nazwaAuta(a);
   $("a-nr").value = a.nr; $("a-nr").classList.toggle("alarm", !!$("a-nrinfo").textContent && !a.nr);
   $("a-przyklad").style.display = a.wlasny ? "" : "none"; $("a-przyklad").textContent = PRZYKLAD;
   ustawSrc("imgB", obrazBadany(a));
@@ -245,7 +247,7 @@ addEventListener("resize", () => { if ($("E4").classList.contains("on")) rysujAu
 // ---------- E6 ----------
 function zmienRodzaj() {
   const a = A(); S.zRodz = a.rodzajOperatora || a.rodzaj; ekran("E6");
-  $("z-auto").textContent = `auto ${a.id} (${a.plik})`; $("z-bad").src = obrazBadany(a);
+  $("z-auto").textContent = `auto ${a.id} (${a.nr || nazwaAuta(a)})`; $("z-bad").src = obrazBadany(a);
   $("z-rodz").innerHTML = RODZAJE.map((r) => `<label><input type="radio" name="rodz" value="${r}" ${r === S.zRodz ? "checked" : ""}>${NAZWA[r]}${r === a.rodzaj ? ' <span class="szary">(program)</span>' : ""}</label>`).join("");
   $("z-rodz").querySelectorAll("input").forEach((i) => (i.onchange = () => { S.zRodz = i.value; podgladWz(); }));
   podgladWz();
@@ -269,18 +271,20 @@ $("z-zast").onclick = () => {   // P24 B, P27 A: przeliczenie od nowa, decyzje a
 // ---------- E7 ----------
 function wierszeRaportu() {
   return S.partia.filter((a) => !a.zepsuty).map((a) => ({
-    id_kontroli: S.idKontroli, auto: a.id, plik: a.plik, nr_rej: a.nr || "",
+    id_kontroli: S.idKontroli, auto: a.id, plik: nazwaAuta(a), nr_rej: a.nr || "",
     rodzaj_programu: NAZWA[a.rodzaj] + (Z_WZORCEM.includes(a.rodzaj) ? "" : " (brak wzorca)"), bez_wzorca: brakWzorca(a), rodzaj_operatora: a.rodzajOperatora ? NAZWA[a.rodzajOperatora] : "",
     liczba_miejsc: brakWzorca(a) ? 0 : a.miejsca.length, wynik_przykladowy: !!a.wlasny,
     decyzje: a.miejsca.map((x, i) => ({ nr: i + 1, decyzja: a.decyzje[i]?.d || "brak decyzji", powod: a.decyzje[i]?.powod || "" })),
-    kto: a.zamkniete ? S.kto : "—", miejsce_kontroli: S.miejsce, data_godzina: a.zamkniete && a.kiedy ? a.kiedy : "—", zamkniete: a.zamkniete, otwarte: !!a.otwarte,   // krytyk R3 brak 3 brak_decyzji: bezDecyzji(a),
+    kto: a.kiedy ? S.kto : "—", miejsce_kontroli: S.miejsce, data_godzina: a.kiedy || "—",   // P64 A / P22 A: osoba i godzina ostatniej decyzji (decyzja o miejscu albo zamknięcie auta)
+    zamkniete: a.zamkniete, otwarte: !!a.otwarte,   // krytyk R3 brak 3
+    brak_decyzji: bezDecyzji(a),   // P63 B, P83 A: ostrzeżenie przy „Zapisz i zamknij partię”
   }));
 }
 function rysujE7() {
   const w = wierszeRaportu();
   $("r-id").textContent = "· " + S.idKontroli;
   $("r-naglowek").textContent = `${S.kto} · ${S.miejsce} · ${w.length} aut · ${S.zamknieta ? "partia zamknięta" : "partia otwarta"}`;
-  $("r-wiersze").innerHTML = w.map((r) => `<tr><td>auto ${r.auto}${r.wynik_przykladowy ? '<br><span class="szary">próba wgrania — wynik przykładowy (makieta)</span>' : ""}</td><td>${r.nr_rej ? esc(r.nr_rej) : '<span class="szary">—</span>'}</td><td>${r.rodzaj_programu}</td><td>${r.rodzaj_operatora || "—"}</td>
+  $("r-wiersze").innerHTML = w.map((r) => `<tr><td>auto ${r.auto}${r.wynik_przykladowy ? `<br><span class="szary">${PRZYKLAD}</span>` : ""}</td><td>${r.nr_rej ? esc(r.nr_rej) : '<span class="szary">—</span>'}</td><td>${r.rodzaj_programu}</td><td>${r.rodzaj_operatora || "—"}</td>
     <td>${r.liczba_miejsc}</td><td>${r.decyzje.map((d) => `${d.nr}: ${d.decyzja}${d.powod ? " (" + esc(d.powod) + ")" : ""}`).join("<br>") || (r.bez_wzorca ? BW_RECZNIE : stanBezMiejsc(r))}</td>
     <td>${r.kto}</td><td>${r.miejsce_kontroli}</td><td>${r.data_godzina}</td></tr>`).join("");
   $("zapisz").style.display = S.zamknieta ? "none" : ""; $("r-nowa").style.display = S.zamknieta ? "" : "none";
