@@ -9,5 +9,5 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | krok 1 /competitive-analysis + pytania do Artura | Projektant | zlecone |
 | szkic HackTribe (nazwa, opis wstępny) | Prezenter | zlecone |
 
-Otwarte pytania: P1 (Paweł — kto jest kim).
+Otwarte pytania: —
 Lista Artura na noc: —

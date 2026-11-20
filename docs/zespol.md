@@ -1,6 +1,8 @@
-# Zespół: podpis urządzenia → osoba → rola
+# Zespół: kto jest kim (P1)
 
-| podpis urządzenia | osoba | rola |
+| gdzie pisze | osoba | rola |
 |---|---|---|
-| (czeka na P1) | Paweł | technika, wygląd, użyteczność |
-| (czeka na P1; dokładny podpis uzupełnia Projektant z pokoju Produkt) | Artur | kształt produktu |
+| rozmowa z Szefem | Paweł | technika, wygląd, użyteczność |
+| pokój Produkt (każdy, kto tam pisze) | Artur | kształt produktu |
+
+Podpisy urządzeń nieważne (P1). Nikt więcej nie dołącza.
