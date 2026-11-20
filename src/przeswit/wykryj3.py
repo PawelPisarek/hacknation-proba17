@@ -14,7 +14,7 @@ import torch.nn.functional as F
 
 from .bmp import wczytaj_szarosc
 from .wykryj import DEV, SZER_DOBOR, tlumienie, zmniejsz, dopasuj, warp_skala, dopasuj_rozmiar
-from .wykryj2 import dobierz, skladowe
+from .wykryj2 import dobierz, skladowe, jakosc_doboru, brak_wzorca, BRAK_WZORCA
 
 Y_POD, X_KAB = 0.79, 0.10
 
@@ -96,7 +96,7 @@ def scal_ramki(out, g):
     return out
 
 
-def wykryj_v3(sciezka, bib, konfiguracje, typ_prawda=None, typ_wymuszony=None):
+def wykryj_v3(sciezka, bib, konfiguracje, typ_prawda=None, typ_wymuszony=None, prog_doboru=None):
     t0 = time.perf_counter()
     g = wczytaj_szarosc(sciezka)
     H, W = g.shape
@@ -105,9 +105,16 @@ def wykryj_v3(sciezka, bib, konfiguracje, typ_prawda=None, typ_wymuszony=None):
     mal = zmniejsz(a, SZER_DOBOR)
     del a
     dop, typ = dobierz(mal, bib)
+    jak = jakosc_doboru(dop)
     if typ_wymuszony:
         typ = typ_wymuszony
     t_dobor = time.perf_counter() - t0
+    if not typ_wymuszony and brak_wzorca(dop, prog_doboru):   # zadanie 36: próg z zadania 33 także w v3
+        return dict(plik=os.path.basename(sciezka), szer=W, wys=H, typ_prawda=typ_prawda, dobor=dop[:5],
+                    jakosc_doboru=jak, brak_wzorca=True, czas_s=round(time.perf_counter() - t0, 3),
+                    czas_dobor_s=round(t_dobor, 3),
+                    konfiguracje={k["nazwa"]: dict(typ_wybrany=None, wzorce=[], miejsca=[], napis=BRAK_WZORCA)
+                                  for k in konfiguracje})
     h, w = rob.shape[-2:]
     f = w / SZER_DOBOR
     kand = [d for d in dop if d["typ"] == typ]
@@ -188,5 +195,5 @@ def wykryj_v3(sciezka, bib, konfiguracje, typ_prawda=None, typ_wymuszony=None):
     if DEV.type == "cuda":
         torch.cuda.synchronize()
     return dict(plik=os.path.basename(sciezka), szer=W, wys=H, typ_prawda=typ_prawda, dobor=dop[:5],
-                polozenie_wzorcow=pol,
+                jakosc_doboru=jak, polozenie_wzorcow=pol,
                 czas_s=round(time.perf_counter() - t0, 3), czas_dobor_s=round(t_dobor, 3), konfiguracje=wyniki)

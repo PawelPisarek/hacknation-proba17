@@ -294,17 +294,17 @@ def main():
         if os.path.basename(p) in gotowe:
             wyniki.append(gotowe[os.path.basename(p)])
             continue
+        pd = None                         # próg „brak wzorca” (zadanie 33; v3 od zadania 36)
+        if a.prog_doboru == "brak":
+            pd = ("sr", None)
+        elif a.prog_doboru:
+            mi, pv = a.prog_doboru.split(":")
+            pd = (mi, float(pv))
         if a.metoda == "v3":
             from .wykryj3 import wykryj_v3
-            r = wykryj_v3(p, bib, konf, typ, a.typ)
+            r = wykryj_v3(p, bib, konf, typ, a.typ, pd)
         elif a.metoda == "v2":
             from .wykryj2 import wykryj_v2
-            pd = None
-            if a.prog_doboru == "brak":
-                pd = ("sr", None)
-            elif a.prog_doboru:
-                mi, pv = a.prog_doboru.split(":")
-                pd = (mi, float(pv))
             r = wykryj_v2(p, bib, konf, typ, a.typ, pd)
         else:
             r = wykryj(p, bib, konf, typ)
