@@ -72,7 +72,7 @@ Format: **Cel — Warunki — Kroki → wynik — Oczekiwane.** Wszystkie kroki 
 ## Ścieżka demo (do 2 min) — przejście ręczne
 S: E1 (5 s) → E2/E3 partia 6 aut (20 s) → auto 1: S1+S5 (35 s) → S6 + S9 (25 s) → S10 → przypadek trudny `trudny_mini_firanka_za_ladunkiem_00.bmp` — dodatek za ładunkiem (P51 B, 20 s) → auto 6 S4 (10 s) → E7 S11 (5 s). Czas całości zapisać; > 2 min = poprawka scenariusza demo.
 
-## Co blokuje oddanie (P50 A)
+## Co blokuje oddanie (P50 A, zmienione przez P56 A)
 Przypadek trudny w demo (P51 B, P52): `trudny_mini_firanka_za_ladunkiem_00.bmp` — widać dodatek za ładunkiem w lupie albo uczciwie brak ramki z podpisem „granica programu — oglądamy obraz sam” (P52 A); przeoczenia na tym przypadku wg Z7 trzeba wpisać do raportu jako dane sztuczne, nie jako obietnicę.
 
 Blokują: S1, S4, S6, S9, S11, S13 (przycisk „Zapisz i zamknij partię”, P56 A), S14 (główna ścieżka i bezpieczeństwo przeoczeń: operator widzi miejsca, decyzja i raport działają, własny plik z linku działa). Nie blokują, ale wpisujemy do raportu z oceny: S2 wartości progów, S3, S7, S8 pasek, S12 pomiary liczbowe. Konflikt P50 z P55 rozstrzygnięty: P56 A — S11 i S13 blokują razem (jeden przycisk). Cele liczbowe (przeoczenia ≤ 10%, ramki ≤ 6) to osobne pomiary w `docs/spec.md` §5, nie scenariusze.

@@ -51,7 +51,7 @@ Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wyni
 | A8 | Partia liczy się po kolei; wiersz auta z miniaturą (P37 B); wejście w auto dopiero po całej partii | P12, P37, P38; JS4 |
 | A9 | Osobne pole nr rej. przy każdym aucie, przed zatwierdzeniem wyniku | P28 A |
 | A10 | Po ostatnim miejscu otwiera się następne auto partii; po ostatnim aucie partii — powrót na listę partii (E3) z przyciskiem „Raport partii” (decyzje jeszcze do zmiany, P41) | P40 B, P54 A |
-| A11 | Raport z polami P18: id kontroli, miejsce (z ustawienia stanowiska), data i godzina, rodzaj programu i operatora, nr rej., miejsca z decyzją i powodem, kto zdecydował (zalogowany); bez pisania poza nr rej.; zapis lokalny jednym przyciskiem „Zapisz i zamknij partię” (zapis .json i .csv + zamknięcie partii; czy blokuje oddanie — P56, czeka) | P18, P22 A, P55 B; JS5 |
+| A11 | Raport z polami P18: id kontroli, miejsce (z ustawienia stanowiska), data i godzina, rodzaj programu i operatora, nr rej., miejsca z decyzją i powodem, kto zdecydował (zalogowany); bez pisania poza nr rej.; zapis lokalny jednym przyciskiem „Zapisz i zamknij partię” (zapis .json i .csv + zamknięcie partii; blokuje oddanie razem z raportem — P56 A, Artur 13:03; zamykanie partii nie czeka, zmiana P50) | P18, P22 A, P55 B; JS5 |
 | A12 | Obraz 50 MB < 1 min; „bez internetu” sprawdzane uruchomieniem lokalnym (Docker/wiersz poleceń), nie przez stronę | zadanie §3, §7, §9; P43 A |
 | A14 | Wgranie własnego .bmp z linku (ksefbot.pl) daje wynik; usługa na karcie OMENa działa od wdrożenia strony | P43 A |
 | A13 | Decyzję w poprzednim aucie można zmienić z listy partii (lista → auto → zmiana) do zamknięcia partii jednym przyciskiem „Zapisz i zamknij partię” w E7 (P55 B); potem wiersz E3 „rozstrzygnięte”, bez zmian (P46 A); słowa niski/średni/wysoki = stałe progi siły różnicy, takie same w każdym aucie (P45 B; wartości progów — do ustalenia, PARAMETR) | P41 A, P45, P46 |
@@ -89,7 +89,7 @@ UPROSZCZENIE: raport zapisywany lokalnie jako plik, bez repozytorium KAS i bez e
 ## 9. Poza zakresem (P10, P29, P32)
 Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z deklaracją, integracja ze skanerami, chmura, wzorce na dostawcę, rozbudowane skalowanie.
 
-## 10. Ustalenia w specu — P37–P49
+## 10. Ustalenia w specu — P37–P56
 | P | Rozstrzygnięcie | Stan |
 |---|---|---|
 | P37 | B — wiersz auta z miniaturą | odpowiedź Artura 12:43 (wygrywa z rekomendacją) |
@@ -106,6 +106,7 @@ Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z d
 | P53 | A — zepsuty plik odrzucony z komunikatem po polsku, reszta partii liczy się | odpowiedź Artura |
 | P54 | A — po ostatnim aucie lista partii (E3) z przyciskiem „Raport partii”, decyzje jeszcze do zmiany | odpowiedź Artura |
 | P55 | B — jeden przycisk „Zapisz i zamknij partię” w E7 (zastępuje „Zapisz lokalnie” i „Zamknij partię”) | odpowiedź Artura, zmiana rekomendacji |
+| P56 | A — „Zapisz i zamknij partię” (raport + zamknięcie razem) blokuje oddanie; zmienia P50 (zamykanie partii nie czeka) | odpowiedź Artura 13:03 |
 | P47 | A — opis „skrytkę lub dodatkowy ładunek” bez zmian | odpowiedź Artura 12:52 |
 | P48 | A — wyjątek „poza znaną konstrukcją” w opisie | odpowiedź Artura 12:52 |
 | P49 | A — progi dobiera zespół na danych testowych, Artur zatwierdza po zobaczeniu wyniku | odpowiedź Artura; wartości czekają na pomiar |
