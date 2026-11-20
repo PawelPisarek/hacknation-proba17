@@ -102,20 +102,20 @@ Czas na obraz 50 MB: baza śr. 5,0 s (zwykły) i 1,7 s (trudny), v2 śr. 0,91 s,
 3. **Ramka + „zwykle tu…” zamiast surowej mapy** — ramki ponumerowane jak kafelki, kolejność od najbardziej odmiennego, śr. 5,8 / 6,25 ramki na czystym aucie (WYNIK zad. 20; zrzut: `docs/zrzuty/mvp/link-auto7-ramki.png`).
 4. **Decyzja operatora z powodem odrzucenia w raporcie** — .json, .csv i .html z miniaturami aut; zapis powodów to materiał do douczania metody (zrzut: `docs/zrzuty/mvp/link-43-raport.png`).
 5. **Działanie lokalne, bez internetu** — kontener bez sieci liczy partię pokazową 7/7 (WYNIK zad. 21).
-6. **Zbudowane przez zespół 5 botów AI** (OpenMausBot + Claude) w czasie hackathonu; czas liczenia obrazu 50 MB śr. 1,73 s / 1,19 s (WYNIK zad. 20).
+6. **Zbudowane przez zespół 5 botów AI** (OpenMausBot + Claude) w 24 h; czas liczenia obrazu 50 MB śr. 1,73 s / 1,19 s (WYNIK zad. 20).
 
 ## Skalowanie
 
-Pomiar: GTX 1050 (laptop OMEN), jeden obraz naraz. Reszta to wyliczenia z tych pomiarów — założenia podpisane.
+Pomiary: GTX 1050 (laptop OMEN), jeden obraz naraz. Reszta to wyliczenia i założenia z tych pomiarów — każde podpisane.
 
 | Wielkość | Wartość | Źródło / założenie |
 |---|---|---|
 | Czas liczenia obrazu 50 MB | śr. 1,73 s (zwykły) / 1,19 s (trudny) | pomiar, WYNIK zad. 20 |
-| Auta na godzinę na 1 kartę — samo liczenie | ok. 2 080 / ok. 3 020 | wyliczenie: 3600 s ÷ 1,73 s i ÷ 1,19 s; bez wysyłki i wczytania pliku |
-| Auta na godzinę przez stronę (wysyłka ok. 45 s) | ok. 70 na jedno stanowisko | pomiar 44,9 / 45,1 s (8768b32), całe żądanie ~52 s (WYNIK zad. 21): 3600 ÷ 52 |
-| Więcej kart / stanowisk | przepustowość rośnie mniej więcej liniowo z liczbą kart | **założenie**, niemierzone: obrazy są niezależne, usługa liczy jeden po drugim |
-| Nowy rodzaj pojazdu | dołożenie wzorców do biblioteki, bez trenowania | metoda porównuje z biblioteką wzorców (v3); koszt = zdobycie wzorców |
-| Wąskie gardło | wysyłka pliku przez sieć (45 s z ~52 s) | pomiar j.w.; przy liczeniu obok skanera (lokalnie, bez sieci) znika |
+| Auta na godzinę na 1 kartę — samo liczenie | ok. 2 080 / ok. 3 020 | wyliczenie 3600 s ÷ 1,73 s i ÷ 1,19 s, **bez wczytania pliku** (górna granica) |
+| Auta na godzinę przez stronę | rząd wielkości ok. 70 na jedno stanowisko — **nie wynik** | wysyłka 44,9 / 45,1 s (pomiar 8768b32); całe żądanie ~52 s to **jeden pomiar (n=1)** z innego przebiegu (WYNIK zad. 21); 3600 ÷ 52 |
+| Więcej kart / stanowisk | przepustowość rośnie mniej więcej liniowo z liczbą kart | **założenie, niemierzone**: obrazy są niezależne |
+| Nowy rodzaj pojazdu | dołożenie wzorców do biblioteki, bez trenowania | **założenie, niemierzone**: metoda porównuje z biblioteką (v3); próg doboru mógłby wymagać strojenia |
+| Wąskie gardło | wysyłka pliku przez sieć (45 s z ~52 s) | pomiar j.w.; że przy liczeniu obok skanera znika — **założenie, niemierzone** |
 
 ## Dane
 
