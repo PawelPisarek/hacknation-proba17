@@ -5,11 +5,11 @@ Wejście: `docs/spec.md` (A1–A14, E1–E7), `docs/pm/05-write-prd.md`, `docs/d
 ## Czego nie wiem o produkcie (pytania do Artura w pokoju)
 - **P49** (odpowiedź A): progi dobiera zespół na danych testowych; Artur zatwierdza po zobaczeniu, ile czystych aut dostaje „wysoki”. A2/S2 sprawdza zasadę, liczby wchodzą po zatwierdzeniu.
 - **P50** (odpowiedź A) + **P56** (A): blokuje główna ścieżka oraz jeden przycisk „Zapisz i zamknij partię” (raport i zamknięcie razem; bez zamknięcia nie ma „rozstrzygnięte”).
-- **P51** (odpowiedź B): demo = partia 6 aut z `dane/mini` plus przypadek trudny (dodatek za ładunkiem, `mini-trudny`).
-Scenariusze uwzględniają odpowiedzi P49–P55.
+- **P51** (odpowiedź B) + **P60** (odpowiedź B): demo = **partia 7 aut** (6 z `dane/mini` + **7. auto w partii: przypadek trudny za ładunkiem `trudny_mini_firanka_za_ladunkiem_00.bmp`**, bez oznaczania na ekranie, które auto jest trudne).
+Scenariusze uwzględniają odpowiedzi P49–P72.
 
 ## Dane pokazowe (dummy-dataset)
-**Partia pokazowa (6 aut, `dane/mini`)** — kolejność i oczekiwany stan na E3:
+**Partia pokazowa (7 aut: 6 z `dane/mini` + 7. przypadek trudny z `dane/mini-trudny`, P60 B)** — kolejność i oczekiwany stan na E3:
 | auto | plik | rodzaj | dodatki wg manifestu | oczekiwane na E3 |
 |---|---|---|---|---|
 | auto 1 | `badany_mini_firanka_dodatki_00.bmp` | firanka | tak | gotowe, liczba miejsc > 0, główna ścieżka demo |
@@ -18,6 +18,7 @@ Scenariusze uwzględniają odpowiedzi P49–P55.
 | auto 4 | `badany_mini_firanka_czyste_01.bmp` | firanka | nie | gotowe |
 | auto 5 | `badany_mini_chlodnia_dodatki_00.bmp` | chłodnia | tak | gotowe |
 | auto 6 | `badany_mini_cysterna_czyste_00.bmp` | cysterna | nie | **brak wzorca**, miejsc „—” (E5) |
+| auto 7 | `trudny_mini_firanka_za_ladunkiem_00.bmp` | firanka | tak (za ładunkiem) | gotowe (bez oznaczania, które auto jest trudne — P60 B; w E4 ramka albo uczciwy napis „granica programu — oglądamy obraz sam” wg P52 A) |
 Prawda o dodatkach i współrzędnych — z `dane/mini/manifest.json` (piksele badanego, (x0,y0)-(x1,y1)). Cysterna ma wzorce w `dane/mini`, ale **na pokazie jest wyjęta z biblioteki** (P35 A, spec E5) — TEST wyłącza wzorce cysterny przed S4.
 **Dane operatora (udawane):** funkcjonariusz „SCS Kowalski”, miejsce „Terespol — stanowisko 2”; numery rej.: `WL 12345`, `LU 5T021`, `PZ 7K889`, `BI 22001`, `KR 8N334`, `GD 3P101` (wymyślone, nie prawdziwe).
 **Dodatkowe przypadki z `mini-trudny`:** `trudny_mini_firanka_maly_00.bmp` (mały dodatek), `trudny_mini_firanka_za_ladunkiem_00.bmp` (dodatek za ładunkiem), `trudny_mini_chlodnia_ladunek_legalny_00.bmp` (duży legalny ładunek → nie ma robić lawiny ramek).
@@ -49,7 +50,7 @@ Format: **Cel — Warunki — Kroki → wynik — Oczekiwane.** Wszystkie kroki 
 **Warunki:** auto 1 (firanka) z decyzjami; **wzorce cysterny wyjęte z biblioteki (jak w S4, zanim zaczniesz krok 4)** — inaczej wybór „cysterna” da zwykłe porównanie, nie E5. **Kroki:** 1) „Zmień rodzaj” → E6 z listą 4 rodzajów i podglądem 2 najbliższych wzorców; 2) wybierz „chłodnia” → ostrzeżenie „decyzje w tym aucie zostaną skasowane”; 3) „Zastosuj”; 4) wybierz „cysterna” → E5. **Oczekiwane:** 1 klik zmiany; liczy się od nowa; decyzje auta znikają; raport zapisuje rodzaj programu i rodzaj operatora (P27 A).
 
 ### S8 (A8) Partia po kolei
-**Kroki:** 1) E2 wskaż 6 plików „Policz partię”; 2) obserwuj E3 w trakcie. **Oczekiwane:** stany czeka → liczy się → gotowe po kolei, pasek postępu; każdy wiersz ma miniaturę, „auto N” i nazwę pliku (P44 A), rodzaj, liczbę miejsc; kliknięcie wiersza „gotowe” **przed końcem partii nic nie robi** (P38); po całej partii wiersze klikalne.
+**Kroki:** 1) E2 wskaż 7 plików „Policz partię” (partia pokazowa P60 B); 2) obserwuj E3 w trakcie. **Oczekiwane:** stany czeka → liczy się → gotowe po kolei, pasek postępu; każdy wiersz ma miniaturę, „auto N” i nazwę pliku (P44 A), rodzaj, liczbę miejsc; kliknięcie wiersza „gotowe” **przed końcem partii nic nie robi** (P38); po całej partii wiersze klikalne.
 
 ### S9 (A9) Numer rejestracyjny
 **Kroki:** w E4 spróbuj „Zatwierdź” bez nr rej.; wpisz `WL 12345`; zatwierdź. **Oczekiwane:** osobne pole nr rej. przy każdym aucie, wymagane przed zatwierdzeniem wyniku (P28 A); po wpisaniu E3 pokazuje numer przy wierszu; nr zapisany w raporcie.
@@ -58,7 +59,7 @@ Format: **Cel — Warunki — Kroki → wynik — Oczekiwane.** Wszystkie kroki 
 **Kroki:** w aucie 1 rozstrzygnij wszystkie miejsca (zatwierdź/odrzuć). **Oczekiwane:** po ostatnim miejscu otwiera się auto 2 (P40 B); po ostatnim aucie partii — powrót na listę partii (E3) z przyciskiem „Raport partii” (P54 A).
 
 ### S11 (A11) Raport
-**Warunki:** auto 1–6 rozstrzygnięte, nr rej. wpisane. **Kroki:** E7 → „Zapisz i zamknij partię” (jeden przycisk, P55 B). **Oczekiwane:** pliki `.json` i `.csv` obok programu; pola P18: id kontroli, miejsce „Terespol — stanowisko 2”, data i godzina, rodzaj programu i rodzaj operatora, nr rej., miejsca z decyzją i powodem, „SCS Kowalski” jako kto zdecydował; zapis bez internetu; w raporcie nic nie wpisywane ręcznie poza nr rej.
+**Warunki:** auto 1–7 rozstrzygnięte, nr rej. wpisane (albo część aut bez decyzji → ostrzeżenie z listą aut „brak decyzji”, zapis możliwy po potwierdzeniu — P63 B). **Kroki:** E7 → „Zapisz i zamknij partię” (jeden przycisk, P55 B). **Oczekiwane:** pliki `.json` i `.csv` (lokalnie obok programu / pod linkiem pobiera przeglądarka); pola P18: id kontroli, miejsce „Terespol — stanowisko 2”, data i godzina decyzji operatora przy każdym aucie (auto bez decyzji „—”, P64 A), rodzaj programu i rodzaj operatora, nr rej., miejsca z decyzją i powodem, „SCS Kowalski” jako kto zdecydował; bez miniatury w raporcie (UPROSZCZENIE P72 A); zapis bez internetu lokalnie; w raporcie nic nie wpisywane ręcznie poza nr rej.; po zamknięciu przycisk „Nowa partia” wraca do E2 (P65 A).
 
 ### S12 (A12) Obraz 50 MB i „bez internetu”
 **Kroki:** 1) TEST uruchamia lokalnie (Docker albo wiersz poleceń) z odłączoną siecią; 2) wskazuje BMP 8192×2048 (~50 MB); 3) mierzy czas do „gotowe”; 4) otwiera lupę. **Oczekiwane:** < 1 min (Z9: śr. 5,0 s, maks. 8,1 s, pamięć 1,21 GB); lupa ≤ 1 s; zero zapytań sieciowych (np. w logu sieci). Sprawdzenie nie idzie przez stronę ksefbot.pl (P43 A).
@@ -70,7 +71,7 @@ Format: **Cel — Warunki — Kroki → wynik — Oczekiwane.** Wszystkie kroki 
 **Warunki:** strona na ksefbot.pl wdrożona; usługa na karcie OMENa wystartowała razem z wdrożeniem (TEST nie uruchamia jej ręcznie). **Kroki:** 1) otwórz link w przeglądarce; 2) kliknij partię pokazową (`dane/mini`) → wynik; 3) wgraj własny `badany_mini_kontener_dodatki_00.bmp` → wynik; 4) wgraj BMP ~50 MB → wynik; 5) po restarcie hosta powtórz krok 3 bez ręcznego uruchamiania. **Oczekiwane:** wgranie z linku daje wynik (nie błąd połączenia i nie „wgrywanie wyłączone”); usługa słucha po wdrożeniu i po restarcie; wgrywania nie wycinamy (P43 A, Paweł). Nieprawdziwy wynik = blokuje oddanie MVP.
 
 ## Ścieżka demo (do 2 min) — przejście ręczne
-S: E1 (5 s) → E2/E3 partia 6 aut (20 s) → auto 1: S1+S5 (35 s) → S6 + S9 (25 s) → S10 → przypadek trudny `trudny_mini_firanka_za_ladunkiem_00.bmp` — dodatek za ładunkiem (P51 B, 20 s) → auto 6 S4 (10 s) → E7 S11 (5 s). Czas całości zapisać; > 2 min = poprawka scenariusza demo.
+S: E1 (5 s) → E2/E3 partia 7 aut (20 s, P60 B) → auto 1: S1+S5 (35 s) → S6 + S9 (rozstrzygamy 2 miejsca i wracamy na listę, reszta „oczekuje” — P69 A, 25 s) → auto 7 (w partii, bez oznaczania na ekranie): przypadek trudny `trudny_mini_firanka_za_ladunkiem_00.bmp` — dodatek za ładunkiem (P51 B, P60 B, 15 s) → auto 6 S4 (10 s) → „Dodaj jeden obraz” z linku (P61 A, A14) → E7 S11 („Zapisz i zamknij partię” z ostrzeżeniem o autach bez decyzji → potwierdzenie, P63 B; 5 s). Czas całości zapisać; > 2 min = poprawka scenariusza demo.
 
 ## Co blokuje oddanie (P50 A, zmienione przez P56 A)
 Przypadek trudny w demo (P51 B, P52): `trudny_mini_firanka_za_ladunkiem_00.bmp` — widać dodatek za ładunkiem w lupie albo uczciwie brak ramki z podpisem „granica programu — oglądamy obraz sam” (P52 A); przeoczenia na tym przypadku wg Z7 trzeba wpisać do raportu jako dane sztuczne, nie jako obietnicę.

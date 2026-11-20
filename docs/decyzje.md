@@ -374,3 +374,17 @@ P60 13:20 bez odpowiedzi Artur → rekomendacja: A — skład partii pokazowej: 
 P60 13:25 spóźniona odpowiedź: Artur w pokoju (13:11): B — trudny jako 7. auto w partii, operator nie wie z góry, które jest trudne; tak samo na pokazie (wygrywa z rekomendacją A wpisaną o 13:20 — do poprawy w spec, 06, 07, demo i makiecie R2)
 P72 13:25 odpowiedź: Artur w pokoju (13:15): A — macie rację, nie teraz; miniatura na listę rzeczy do dorobienia po MVP (usunąć z spec E7 jako element MVP, przenieść na listę po MVP)
 13:25 Szef: WSTRZYMANO branie rekomendacji dla P61–P71 mimo sygnału przeterminowane: — Artur odpowiedział w pokoju Produkt już o 13:11 („Makieta R1: P60: B … P61: …”), a brak wpisu w docs/decyzje.md wynika z limitu Claude Projektanta o 13:13; Projektant ma przepisać pełne P61–P71 z pokoju Produkt. Zadanie 31 przyjęte (8517f28, WYNIK 17/17 OK, 54 pliki, host thinkpad) — odblokowane zadanie 30 (odbiór A1–A14).
+P60 13:23 odpowiedź: Artur w pokoju (13:11): B — trudny przypadek jako 7. auto w partii, operator nie wie z góry, które jest trudne; tak samo na pokazie (wygrywa z linią „bez odpowiedzi” 13:20)
+P61 13:23 odpowiedź: Artur w pokoju (13:11): A — na liście partii zawsze jest przycisk „Dodaj jeden obraz”, plik liczy się i dopisuje jako kolejne auto
+P62 13:23 odpowiedź: Artur w pokoju (13:11): A — wybór własnego pliku z dysku w makiecie otwiera prawdziwy wybór plików, wynik z napisem „makieta: wynik przykładowy, nie z Twojego obrazu”
+P63 13:23 odpowiedź: Artur w pokoju (13:11): B — zapis raportu przy autach bez decyzji: ostrzeżenie z listą aut „brak decyzji”, zapis możliwy po potwierdzeniu
+P64 13:23 odpowiedź: Artur w pokoju (13:11): A — data i godzina w raporcie to moment decyzji operatora przy każdym aucie (auto bez decyzji „—”)
+P65 13:23 odpowiedź: Artur w pokoju (13:11): A — po zamknięciu partii przycisk „Nowa partia” wraca do wyboru plików
+P66 13:23 odpowiedź: Artur w pokoju (13:11): A — pasek „ekrany E1…E7” i tytuł „makieta R1” ukryte dla oglądającego; zasada Artura: porządki makiety robić bez pytania
+P67 13:23 odpowiedź: Artur w pokoju (13:11): A — uczciwie: makieta pokazuje też pudło (jedna ramka obok prawdziwego dodatku), zgodnie z celem ok. 80% trafień
+P68 13:23 odpowiedź: Artur w pokoju (13:11): scalone z P59 A (wąski pasek u góry „dane sztuczne — demonstracja”; nie pytać drugi raz)
+P69 13:23 odpowiedź: Artur w pokoju (13:11): A — w demo w aucie 1 rozstrzygamy 2 miejsca i wracamy na listę, resztę zostawiamy „oczekuje”
+P70 13:23 odpowiedź: Artur w pokoju (13:11): A — podgląd wzorców przy aucie: dwa wzorce najbliższe badanego obrazu (z numerami 1 i 2)
+P71 13:23 odpowiedź: Artur w pokoju (13:11): nic nie wyrzucamy z ekranu (poza porządkami makiety z P66 A i poprawkami usterek bez pytania)
+P72 13:23 odpowiedź: Artur w pokoju (13:15): A — zostawiamy raport jak jest (bez miniatury teraz), wpisać miniaturę w raporcie na listę rzeczy do dorobienia po MVP (UPROSZCZENIE)
+13:23 Projektant: dopisano odpowiedzi Artura z pokoju Produkt (P60–P71 z 13:11, P72 z 13:15); P60 B wygrywa z rekomendacją A (13:20); zaktualizowano docs/spec.md (usunięta przedwczesna miniatura z E7, dodane UPROSZCZENIE P72 A, partia 7 aut P60 B, P61–P71) i docs/pm/06-scenariusze.md (partia 7 aut P60 B, demo P69 A)
