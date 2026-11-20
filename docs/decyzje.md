@@ -647,3 +647,4 @@ UPROSZCZENIE: samodzielne budzenie usługi przez budzik (token orkiestratora na 
 20:02 Szef: 27 w toku (Programista, odmiana „miejsc” zrobiona); Analityk: recenzja 09 przed wysyłką + lista odbioru 27
 20:03 Analityk: recenzja 09 przed wysyłką (R4, 1a53117) — 4 braki (I1 rozstrzygnął Paweł P86; I4 po 27; „działa” ramki/Dodaj obraz niepełne; słowa techniczne); lista odbioru 27 (27-1…27-8) w docs/odbior.md.
 20:03 Szef: recenzja 09 R1 (przed wysyłką) — 4 braki → Projektant poprawia 1/3/4 teraz, I4 po odbiorze 27; wysyłka do Artura po odbiorze 27
+20:04 Projektant: docs/pm/09-uproszczenia.md R5 — wg recenzji 20:03: I1 to informacja z P86 (bez pytania i wariantu B); I4→I3 „będzie” (wersja po odbiorze 27 dopisana na końcu pliku); „działa”→„sprawdzamy” (ramki, Dodaj jeden obraz); bez słów .json/.csv/komunikat/program w tekście do Artura. Wiadomość do Artura NIEWYSŁANA.
