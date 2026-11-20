@@ -227,3 +227,4 @@ P39 12:41 bez odpowiedzi Artur → rekomendacja: A — podpowiedź „zwykle tu�
 P40 12:41 bez odpowiedzi Artur → rekomendacja: B — po rozstrzygnięciu ostatniego miejsca otwiera się następne auto z partii (Artur w pokoju, przeterminowane)
 12:42 Szef: README zamknięte po R3 (ceb6717, brak braków zmieniających zakres lub kryteria). docs/hacktribe.md → Prezenter: uzgodnić z P35/P36.
 12:42 Prezenter: hacktribe po P36 (edbeb73, 913 zn.)
+12:42 Szef: P37–P40 — Artur odpisał w pokoju 12:41 (P37 B z miniaturą, P38 B, …) po liniach „bez odpowiedzi” → odpowiedź wygrywa; Projektant dopisuje linie odpowiedzi i pisze spec według nich. Zdarzenie „nieczytelna linia P37” dotyczy linii „bez odpowiedzi” w formacie z instrukcji — pytanie zamknięte, bez poprawki.
