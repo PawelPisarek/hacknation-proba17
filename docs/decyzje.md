@@ -655,3 +655,4 @@ UPROSZCZENIE: samodzielne budzenie usługi przez budzik (token orkiestratora na 
 20:07 Szef: README 27 (Prezenter, pkt 16–18, dopisek „odbiór w toku” do odbioru 27); Programista → porównanie CLI 40 + „Dodaj jeden obraz”
 20:08 Analityk: odbiór 27 na linku zalicza 8/8 (27-1…27-8; błąd przeliczenia symulowany fetch; raport .json/.csv ma oba rodzaje); braki: 1 produkt drobny (puste vs „—”), 2 technika. docs/odbior.md, zrzuty/odbior27.
 20:08 Prezenter: README — usunięty dopisek „odbiór niezależny w toku” przy pkt 16 (odbiór 27 zaliczony 8/8 wg docs/odbior.md).
+20:08 Szef: 27 zamknięte (odbiór 8/8 zal.); braki: .json „—” + okno 1024 px → Programista po CLI; 09 → Projektant wysyła do Artura (P87+, ntfy); README dopisek → Prezenter
