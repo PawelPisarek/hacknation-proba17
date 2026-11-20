@@ -549,3 +549,4 @@ P84 16:08 Artur: Gdy program na aucie nic nie wskazał, auto ma być: A — od r
 P85 16:08 Artur: W makiecie zaznaczenia na autach 1–6 są narysowane ręcznie, a tylko na aucie 7 pochodzą z programu. A — zostawiamy, z napisem „wynik przykładowy”; B — wszystkie auta pokazują to, co naprawdę wskazał program. Rekomendacja: B — zgodne z P81 („bez podrasowanych przykładów”). Makieta: https://pawelpisarek.github.io/hacknation-proba17/makieta/r3/ — czeka
 P84 16:09 odpowiedź: B — auto, na którym program nic nie wskazał, zostaje otwarte, aż ktoś je obejrzy i zamknie (Artur w pokoju)
 P85 16:09 odpowiedź: B — wszystkie auta w makiecie pokazują to, co naprawdę wskazał program; bez ręcznych zaznaczeń; wynika z P81 (Artur w pokoju)
+16:10 Szef: P84 B — bez zmian (już tak jest); P85 B → Programista: ramki aut 1–6 w r3 z wyniku v3 skryptem, po 36, razem z poprawkami 1–6; potem zrzuty i slajdy → Prezenter
