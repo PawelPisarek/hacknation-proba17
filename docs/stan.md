@@ -1,4 +1,4 @@
-# Stan — 12:08
+# Stan — 12:09
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -11,7 +11,7 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | krok 1 /competitive-analysis | Projektant | zamknięte (R3) |
 | krok 2 operator (02-operator.md) | Projektant | zamknięte (R3) |
 | krok 3 /discover (03-discover.md) | Projektant | zamknięte (R3) |
-| krok 4 priorytety (04-priorytety.md) | Projektant | poprawka po R1 (4 braki) |
+| krok 4 priorytety (04-priorytety.md) | Projektant | recenzja 2 (Analityk) |
 | 05–16 sondy Z1–Z11, Z13 | Analityk | zamknięte (3038023): Z2, Z6 obalone; Z3, Z7, Z9, Z11 potwierdzone; Z1, Z8 pomiędzy; Z4, Z13 nierozstrzygnięte |
 | 17, 18 sondy Z12, Z14 | Analityk | po makiecie |
 | recenzja docs/hacktribe.md | Analityk | zamknięte po R3 (f62748c, 988 zn.) |
