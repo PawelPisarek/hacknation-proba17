@@ -1,37 +1,45 @@
 # 09 — Uproszczenia MVP i wybór dorobienia (wiadomość do Artura — NIE WYSŁANA)
 
-Stan: szkic z 19:0x, czeka na sygnał Szefa po odbiorze MVP. Numery P nadam przy wysyłce (następne wolne po P85); tu robocze U1–U8 i D.
-Źródła: `docs/spec.md` §8–9 i §10, `docs/zadania/23–29, 40`, wpisy UPROSZCZENIE w `docs/decyzje.md`, odpowiedzi P2–P85.
+Stan: R2 po recenzji 09 R1 (5 braków, `docs/odbior.md`). Czeka na sygnał Szefa po odbiorze MVP. Numery P nadam przy wysyłce (następne wolne po P85); tu robocze U1–U3, I1–I3 i D.
+Źródła: `docs/spec.md` §8–10, `docs/zadania/23–29, 40–42`, wpisy UPROSZCZENIE w `docs/decyzje.md`, odpowiedzi P2–P85, `docs/odbior.md`.
 
 ## Czego nie wiem o produkcie
-- Czy Artur przyjmuje każde z 8 uproszczeń na pokaz (U1–U8).
-- Które jedno z trzech dorobić, jeśli zostanie czas (D).
+- Czy Artur przyjmuje trzy uproszczenia, o których jeszcze nie decydował (U1, U3, U5).
+- Które jedno z trzech dorobić, jeśli zostanie czas (D) — wybór tylko tu, bez dublowania w U.
 
 ## Wiadomość do Artura (do pokoju Produkt)
 
-Artur, MVP jest prawie gotowe. Żeby zdążyć, kilka rzeczy zrobiliśmy prościej niż w pełnym produkcie. Przy każdej: **A — przyjmujemy tak na pokaz**, **B — chcesz to mieć pełne**. Rekomendacja wszędzie A (zostawiamy jak jest). Link do repo: https://github.com/PawelPisarek/hacknation-proba17 · żywa wersja: https://hacknation.ksefbot.pl/
+Artur, MVP jest prawie gotowe. Żeby zdążyć, kilka rzeczy zrobiliśmy prościej niż w pełnym produkcie. Link do repo: https://github.com/PawelPisarek/hacknation-proba17 · żywa wersja: https://hacknation.ksefbot.pl/
+
+**1. Uproszczenia, o które pytamy** — przy każdym tylko: przyjmujesz na pokaz (tak / nie). Rekomendacja: tak.
 
 | nr | Co uproszczone | Czym zastąpione | Co to znaczy dla operatora |
 |---|---|---|---|
-| U1 | Logowanie | jedna lista funkcjonariuszy i miejsc kontroli do wybrania, bez logowania KAS | wybiera siebie z listy; w raporcie nadal jest „kto zdecydował” |
-| U2 | Liczenie partii | obrazy liczą się po kolei, auta otwiera się po policzeniu całej partii (zgodnie z P12, P38) | chwila czekania na całą partię; wynik pierwszego auta nie pojawia się wcześniej |
+| U1 | Logowanie | jedna lista funkcjonariuszy i miejsc kontroli do wybrania, bez logowania do systemów KAS | wybiera siebie z listy; w raporcie nadal jest „kto zdecydował” |
 | U3 | Wzorce | 4 rodzaje (firanka, chłodnia, kontener, cysterna) z naszych sztucznych czystych obrazów; opiekun nie dokłada własnych | dla innego rodzaju auta: „brak wzorca — sprawdź obraz sam” |
-| U4 | Podpowiedź „zwykle tu…” | ogólne opisy z programu (P81 A), nie od ekspertów KAS | opis mówi np. „podwozie — belki, koła i oś”; bywa „poza znaną konstrukcją” |
-| U5 | Raport | zapis lokalnie jako plik, bez repozytorium KAS i bez ekranu kierownika zmiany | kierownik czyta plik; nic nie wysyłamy do systemów KAS |
-| U6 | Miniatura w raporcie | tabela z decyzjami i powodami, bez obrazka z ramkami przy każdym aucie (P72 A) | żeby zobaczyć, gdzie było miejsce, trzeba je znaleźć w aucie |
-| U7 | Dane pokazowe | partia 7 aut to dane sztuczne; brak aut, na których program nic nie wskazał, bo na czystych autach zwykle coś wskazuje (P82 B) | w pokazie nie ma stanu „brak wskazań”; to nie gwarancja, że auto jest czyste (P58 A) |
-| U8 | Praca bez internetu | „docelowo działa lokalnie” (P25 A); dziś program liczy na naszym komputerze i otwiera się z linku | w pokazie potrzebny jest link; bez sieci tylko docelowo |
+| U5 | Raport | zapis jako plik, bez wysyłania do systemów KAS i bez ekranu kierownika zmiany | kierownik czyta plik; nic nie trafia do systemów KAS |
 
-Pytanie U1–U8: przyjmujesz uproszczenia? Dla każdego: A przyjmujemy / B dorabiamy. Rekomendacja: A dla wszystkich.
+**2. Co operator zobaczy na stronie pod linkiem** (to też uproszczenia, o których wiedzieć warto; pytamy tak / nie):
+- I1: przy pierwszym kliknięciu po przerwie strona czeka do ok. 30 s; widać komunikat „Uruchamiam program” (zadanie 42).
+- I2: obraz 50 MB wysyła się ok. 45 s; cel „poniżej minuty” na całe auto jest przez to ciasny.
+- I3: wgrywa się jeden obraz naraz („Dodaj jeden obraz”, P61 A); partia pokazowa jest stała.
+Rekomendacja: tak.
 
-**Co dorobić, jeśli zostanie czas — jedna rzecz (D):**
-- **D1 — miniatura w raporcie (ok. 1–2 h):** przy każdym aucie mały obraz z zaznaczonymi miejscami (zatwierdzone / odrzucone), kierownik od razu widzi, gdzie było miejsce. To Twój pomysł z 13:07 (P72).
-- **D2 — logowanie i role zamiast listy (kilka godzin):** funkcjonariusz loguje się, a „kto zdecydował” i miejsce kontroli biorą się z konta. Na pokazie widać to w działaniu.
-- **D3 — ekran dokładania wzorca (ok. 2–3 h):** opiekun dodaje czysty obraz jako nowy rodzaj, więc „brak wzorca” znika dla kolejnych aut tego rodzaju.
+**3. Już ustalone z Tobą — bez pytania, tylko informacja:**
+- liczenie partii po kolei, auta otwiera się po policzeniu całej partii — z P12 A i P38 B;
+- ogólne podpowiedzi „zwykle tu: …” zamiast opisów od ekspertów — z P81 A;
+- w raporcie brak miniatury z ramkami (na razie tabela) — z P72 A, miniatura jest na liście dorobienia niżej;
+- dane pokazowe sztuczne; w partii nie ma auta „brak wskazań”, bo na czystych autach program zwykle coś wskazuje; „brak wskazań” to nie gwarancja — z P82 i P58 A;
+- praca bez internetu tylko „docelowo”; dziś program liczy na naszym serwerze, po linku — z P25 A.
 
-Rekomendacja: **D1**: mała robota, widać w raporcie na pokazie i zamyka Twój własny pomysł. D2 jest bardziej „na pokaz”, ale zajmuje najwięcej czasu i nie zmienia pracy operatora z obrazem; D3 wymaga nowego ekranu i zasad, kto może dokładać.
+**4. Co dorobić, jeśli zostanie czas — jedna rzecz (D).** Wybierasz tylko tutaj:
+- **D1 — miniatura w raporcie (ok. 1–2 h, szacunek ze spec §8):** przy każdym aucie mały obraz z zaznaczonymi miejscami; kierownik od razu widzi, gdzie było miejsce. Twój pomysł z 13:07 (P72). Czas liczy się dopiero po zadaniach 29 (decyzje do raportu) i 40 (ramki na stronie).
+- **D2 — konto funkcjonariusza zamiast listy (kilka godzin, spec §8):** funkcjonariusz loguje się, a „kto zdecydował” i miejsce kontroli biorą się z konta. Na publicznej stronie to konta i hasła, więc więcej pracy i uwagi niż sama lista.
+- **D3 — ekran dokładania wzorca (czas nieoszacowany, wstępnie 2–3 h):** opiekun dodaje czysty obraz jako nowy rodzaj. Ryzyko: nowy wzorzec może pogorszyć wynik na cysternach i innych autach, a tego dziś nie mierzymy.
+
+Rekomendacja: **D1** — najmniejsza robota, widać ją w raporcie na pokazie, zamyka Twój własny pomysł. D2 zajmuje najwięcej czasu i nie zmienia pracy z obrazem; D3 niesie ryzyko dla wyników.
 
 ## Dla Szefa
-Wysyłka: jedna wiadomość w pokoju Produkt + ntfy (adresat Artur) + wpisy P<n> `— czeka` w `docs/decyzje.md`. Przed wysyłką: paczka do Analityka (skreślenie pytań pozornych) i sprawdzenie, że U1–U8 nadal zgadzają się ze stanem MVP po zadaniach 40, 29, 28, 27.
+Wysyłka: jedna wiadomość w pokoju Produkt + ntfy (adresat Artur) + wpisy P<n> `— czeka` w `docs/decyzje.md` (U1, U3, U5, I1–I3 jako jedno pytanie „przyjmujesz tak/nie” albo osobno; D osobno). Przed wysyłką: paczka do Analityka i sprawdzenie, że opisy zgadzają się ze stanem MVP po zadaniach 40, 29, 28, 27.
 
 <!-- skill: przeplywy-pm -->
