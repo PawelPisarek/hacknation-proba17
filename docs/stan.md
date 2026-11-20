@@ -15,6 +15,6 @@ Kamień: 10:30 materiały (README, hacktribe finalny, slajdy, demo.md, wersja �
 
 Ustalenia Artura: P2–P92 (P92 A — miniatura na stronie jak w pliku).
 Otwarte pytania: P98 (slajd 7 zrzut), P99 (slajd 1 czasy) — Artur 08:37; P100 Paweł przegląd + nagranie 08:36.
-Przegląd Pawła: prośba wysłana 08:36 (P100) — nagranie pokazu + materiały.
+Przegląd Pawła: P100 — próba zakończona 08:37 bez nagrania.
 Lista Artura na noc: pusta (D1 zrobione, P92 → 44).
 POM-1 zamknięte (P94 B).

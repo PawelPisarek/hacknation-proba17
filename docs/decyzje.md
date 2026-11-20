@@ -768,3 +768,4 @@ P100 08:36 Paweł: przegląd materiałów (link, demo.md, README, hacktribe, sla
 P98 08:37 odpowiedź: A — podmieniamy zrzut na slajdzie 7 na wiersz raportu z decyzją i powodem odrzucenia (Artur w pokoju)
 P99 08:37 odpowiedź: A — pod zrzutem na slajdzie 1 dopisujemy „liczenie ok. 2 s; wysłanie pliku przez internet ok. 45 s” (Artur w pokoju)
 08:37 Projektant: Artur — poprawki rozjazdów między slajdami to nie pytania; idą jako poprawki do Prezentera
+P100 08:37 odpowiedź: w tej próbie nagrania nie ma — Paweł kończy próbę (faza poranna działa)
