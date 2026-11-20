@@ -112,3 +112,4 @@ P28 11:23 odpowiedź: Artur w pokoju: A — osobne pole numeru rejestracyjnego p
 11:24 Szef: Artur w pokoju (11:20): poprawki nieprawdziwych zdań (niezgodnych z zadaniem lub jego odpowiedziami) robimy od razu, bez pytania go.
 11:24 Szef: hacktribe R3 (ostatnia) — braki 1–3 to niezgodności z P24/P16, P3/P13, P4 → poprawka bez pytania (Artur 11:20); brak 4 → Prezenter skraca do ≤1000 i usuwa odnośniki P/znaczniki ze slajdów. Pętla zamknięta po poprawce (3 rundy).
 11:24 Szef: P27 A, P28 A — 02-operator.md zdejmuje „czeka”, potem krok 2 R3 (ostatnia).
+11:25 Projektant: krok 2 po P27/P28 — zdjęte „czeka”, sekcje scalone, nagłówek „Ustalenia P14–P28”
