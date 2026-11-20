@@ -3,7 +3,7 @@
 Spec do budowy: `docs/spec.md`. Wejście: `docs/pm/01–04`, `szkice-wariantow.md`, P2–P41, linie `WYNIK` (dane sztuczne).
 
 ## Czego nie wiem o produkcie
-- **P42** (kafelek bez opisu, ok. 27% ramek wg Z14): czeka na Artura; w specu rekomendacja A, „brak podpowiedzi” (A5).
+- **P42** (kafelek bez opisu, ok. 27% ramek wg Z14): odpowiedź Artura: napis „poza znaną konstrukcją, obejrzyj uważnie” (A5).
 - Próg P30 B (≤ 6 ramek) jest dziś niespełniony (Z2, Z6); pytanie do Artura dopiero gdy zadanie 20 też nie da ≤ 6 ramek (decyzja Szefa 12:07).
 - Zachowanie na prawdziwych obrazach KAS — nieznane, mamy tylko sztuczne (Z10).
 

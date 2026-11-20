@@ -45,7 +45,7 @@ Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wyni
 | A2 | Kafelki od najbardziej różnego; słowo niski/średni/wysoki, bez procentów | P17; JS1 AC2 |
 | A3 | Obraz bez miejsc: komunikat „brak wskazań”, nie pusta lista | JS1 AC4 |
 | A4 | Brak wzorca → zero ramek i napis „brak wzorca — sprawdź obraz sam” | P35 A; JS1 AC5, JS3 AC6 |
-| A5 | Podpowiedź „zwykle tu…” widoczna od razu przy każdym kafelku, bez klikania; kafelek bez opisu (ok. 27% ramek, Z14) — wg rekomendacji P42 A napis „brak podpowiedzi” (**P42 czeka**) | P39 B, P42; JS1 AC4b |
+| A5 | Podpowiedź „zwykle tu…” widoczna od razu przy każdym kafelku, bez klikania; kafelek bez opisu (ok. 27% ramek, Z14) — wg P42 (Artur) napis „poza znaną konstrukcją, obejrzyj uważnie” | P39 B, P42; JS1 AC4b |
 | A6 | Odrzucenie wymaga powodu z listy P13; zatwierdzenie jednym kliknięciem; decyzja w raporcie | JS2 |
 | A7 | Zmiana rodzaju: 1 klik z listy 4 rodzajów, podgląd 2 najbliższych wzorców, przeliczenie od nowa, decyzje auta znikają, raport z oboma rodzajami | P24 B, P27 A; JS3 |
 | A8 | Partia liczy się po kolei; wiersz auta z miniaturą (P37 B); wejście w auto dopiero po całej partii | P12, P37, P38; JS4 |
@@ -96,7 +96,7 @@ Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z d
 | P39 | B — podpowiedź przy każdym kafelku | odpowiedź Artura 12:43 |
 | P40 | B — po ostatnim miejscu następne auto | odpowiedź Artura 12:43 |
 | P41 | A — decyzje można zmienić z listy partii do zamknięcia sprawy | odpowiedź Artura 12:44 |
-| P42 | kafelek bez opisu: A — napis „brak podpowiedzi” | **czeka na Artura**; rekomendacja A, spec wg niej |
+| P42 | kafelek bez opisu: napis „poza znaną konstrukcją, obejrzyj uważnie” (odpowiedź własna, ani A, ani B) | odpowiedź Artura w pokoju |
 
 <!-- skill: create-prd -->
 <!-- skill: przeplywy-pm -->
