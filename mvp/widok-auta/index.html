@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Prześwit — MVP: widok auta (zadanie 23)</title>
+<title>Prześwit — MVP: widok auta (zadania 23–24)</title>
 <style>
 :root{--tlo:#f4f6f9;--karta:#fff;--linia:#d5dbe3;--tekst:#1a2230;--szary:#5b6678;--akc:#1b5fb8}
 *{box-sizing:border-box}
@@ -22,10 +22,17 @@ main{max-width:1280px;margin:12px auto;padding:0 12px}
 .tag-miejsca{color:var(--szary)}
 .dwa{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px;background:#1c1f24}
 .dwa.jeden{grid-template-columns:1fr}
+.dwa>*{min-width:0}
 .panel-obr h3{margin:0 0 6px;font-size:12px;letter-spacing:.04em;color:#d6dce6;font-weight:600;display:flex;gap:8px;align-items:center}
 .panel-obr .podtytul{font-weight:400;color:#9aa5b6;font-family:ui-monospace,monospace;font-size:11px}
 .scena{position:relative;background:#000;border-radius:4px;overflow:hidden;line-height:0}
-.scena img{width:100%;height:auto;display:block}
+.scena img{width:100%;height:100%;display:block}
+.plotno{position:relative;width:100%;height:100%;transform-origin:0 0;--zx:1;--zy:1}
+.plotno .ramka,.plotno .ramka-wz{border-left-width:calc(2px / var(--zx));border-right-width:calc(2px / var(--zx));border-top-width:calc(2px / var(--zy));border-bottom-width:calc(2px / var(--zy));box-shadow:none}
+.plotno .ramka.akt{border-left-width:calc(3px / var(--zx));border-right-width:calc(3px / var(--zx));border-top-width:calc(3px / var(--zy));border-bottom-width:calc(3px / var(--zy));outline:none;box-shadow:none;border-color:#fff;background:rgba(27,95,184,.18)}
+.plotno .ramka span{transform:scale(calc(1 / var(--zx)),calc(1 / var(--zy)));transform-origin:0 100%}
+.ramka-wz{position:absolute;border:2px dashed #4dabf7;box-shadow:0 0 0 1px rgba(0,0,0,.6);pointer-events:none}
+.przybl button{background:#fff;border:1px solid var(--linia);padding:2px 8px;font-size:12px;cursor:pointer}.przybl button.on{background:var(--akc);color:#fff;border-color:var(--akc)}
 .warstwa-ramek{position:absolute;inset:0}
 .ramka{position:absolute;padding:0;background:transparent;border:2px solid #f0b429;cursor:pointer;box-shadow:0 0 0 1px rgba(0,0,0,.6)}
 .ramka.wysoki{border-color:#e03131}
