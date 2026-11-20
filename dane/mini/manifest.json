@@ -1,0 +1,598 @@
+{
+ "ziarno": 17,
+ "spec": "mini:3:2:2",
+ "typy": [
+  "firanka",
+  "chlodnia",
+  "kontener",
+  "cysterna"
+ ],
+ "opis": "wzorce = biblioteka czystych egzemplarzy typu (system sam dobiera wzorzec); badane = czyste/dodatki z typ_pojazdu (prawda do sprawdzenia doboru). Wzorzec dla badanego to inny egzemplarz tego samego typu.",
+ "wspolrzedne": "piksele obrazu badanego, (x0,y0)-(x1,y1) wyłącznie, y od góry",
+ "wzorce": [
+  {
+   "id": "wzorzec_mini_firanka_00",
+   "typ_pojazdu": "firanka",
+   "poziom": "mini",
+   "klasa": "wzorzec",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "wzorzec_mini_firanka_00.bmp",
+   "przesuniecie_px": [
+    1,
+    1
+   ],
+   "dlugosc_wzgl": 0.952,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "wzorzec_mini_firanka_01",
+   "typ_pojazdu": "firanka",
+   "poziom": "mini",
+   "klasa": "wzorzec",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "wzorzec_mini_firanka_01.bmp",
+   "przesuniecie_px": [
+    2,
+    -1
+   ],
+   "dlugosc_wzgl": 0.951,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "wzorzec_mini_firanka_02",
+   "typ_pojazdu": "firanka",
+   "poziom": "mini",
+   "klasa": "wzorzec",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "wzorzec_mini_firanka_02.bmp",
+   "przesuniecie_px": [
+    0,
+    0
+   ],
+   "dlugosc_wzgl": 0.858,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "wzorzec_mini_chlodnia_00",
+   "typ_pojazdu": "chlodnia",
+   "poziom": "mini",
+   "klasa": "wzorzec",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "wzorzec_mini_chlodnia_00.bmp",
+   "przesuniecie_px": [
+    0,
+    0
+   ],
+   "dlugosc_wzgl": 0.983,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "wzorzec_mini_chlodnia_01",
+   "typ_pojazdu": "chlodnia",
+   "poziom": "mini",
+   "klasa": "wzorzec",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "wzorzec_mini_chlodnia_01.bmp",
+   "przesuniecie_px": [
+    0,
+    0
+   ],
+   "dlugosc_wzgl": 0.913,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "wzorzec_mini_chlodnia_02",
+   "typ_pojazdu": "chlodnia",
+   "poziom": "mini",
+   "klasa": "wzorzec",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "wzorzec_mini_chlodnia_02.bmp",
+   "przesuniecie_px": [
+    -2,
+    -1
+   ],
+   "dlugosc_wzgl": 0.864,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "wzorzec_mini_kontener_00",
+   "typ_pojazdu": "kontener",
+   "poziom": "mini",
+   "klasa": "wzorzec",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "wzorzec_mini_kontener_00.bmp",
+   "przesuniecie_px": [
+    2,
+    1
+   ],
+   "dlugosc_wzgl": 0.841,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "wzorzec_mini_kontener_01",
+   "typ_pojazdu": "kontener",
+   "poziom": "mini",
+   "klasa": "wzorzec",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "wzorzec_mini_kontener_01.bmp",
+   "przesuniecie_px": [
+    1,
+    -1
+   ],
+   "dlugosc_wzgl": 0.938,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "wzorzec_mini_kontener_02",
+   "typ_pojazdu": "kontener",
+   "poziom": "mini",
+   "klasa": "wzorzec",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "wzorzec_mini_kontener_02.bmp",
+   "przesuniecie_px": [
+    -1,
+    0
+   ],
+   "dlugosc_wzgl": 0.879,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "wzorzec_mini_cysterna_00",
+   "typ_pojazdu": "cysterna",
+   "poziom": "mini",
+   "klasa": "wzorzec",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "wzorzec_mini_cysterna_00.bmp",
+   "przesuniecie_px": [
+    2,
+    0
+   ],
+   "dlugosc_wzgl": 0.96,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "wzorzec_mini_cysterna_01",
+   "typ_pojazdu": "cysterna",
+   "poziom": "mini",
+   "klasa": "wzorzec",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "wzorzec_mini_cysterna_01.bmp",
+   "przesuniecie_px": [
+    0,
+    0
+   ],
+   "dlugosc_wzgl": 0.882,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "wzorzec_mini_cysterna_02",
+   "typ_pojazdu": "cysterna",
+   "poziom": "mini",
+   "klasa": "wzorzec",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "wzorzec_mini_cysterna_02.bmp",
+   "przesuniecie_px": [
+    0,
+    -1
+   ],
+   "dlugosc_wzgl": 0.892,
+   "dodatki": [],
+   "bajty": 786486
+  }
+ ],
+ "badane": [
+  {
+   "id": "badany_mini_firanka_czyste_00",
+   "typ_pojazdu": "firanka",
+   "poziom": "mini",
+   "klasa": "czyste",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "badany_mini_firanka_czyste_00.bmp",
+   "przesuniecie_px": [
+    -2,
+    -1
+   ],
+   "dlugosc_wzgl": 0.985,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "badany_mini_firanka_czyste_01",
+   "typ_pojazdu": "firanka",
+   "poziom": "mini",
+   "klasa": "czyste",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "badany_mini_firanka_czyste_01.bmp",
+   "przesuniecie_px": [
+    -1,
+    -1
+   ],
+   "dlugosc_wzgl": 0.964,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "badany_mini_firanka_dodatki_00",
+   "typ_pojazdu": "firanka",
+   "poziom": "mini",
+   "klasa": "dodatki",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "badany_mini_firanka_dodatki_00.bmp",
+   "przesuniecie_px": [
+    2,
+    1
+   ],
+   "dlugosc_wzgl": 0.895,
+   "dodatki": [
+    {
+     "x0": 801,
+     "y0": 41,
+     "x1": 809,
+     "y1": 73,
+     "typ": "przerobka"
+    }
+   ],
+   "bajty": 786486
+  },
+  {
+   "id": "badany_mini_firanka_dodatki_01",
+   "typ_pojazdu": "firanka",
+   "poziom": "mini",
+   "klasa": "dodatki",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "badany_mini_firanka_dodatki_01.bmp",
+   "przesuniecie_px": [
+    2,
+    1
+   ],
+   "dlugosc_wzgl": 0.833,
+   "dodatki": [
+    {
+     "x0": 285,
+     "y0": 64,
+     "x1": 293,
+     "y1": 109,
+     "typ": "przerobka"
+    },
+    {
+     "x0": 888,
+     "y0": 97,
+     "x1": 896,
+     "y1": 182,
+     "typ": "przerobka"
+    }
+   ],
+   "bajty": 786486
+  },
+  {
+   "id": "badany_mini_chlodnia_czyste_00",
+   "typ_pojazdu": "chlodnia",
+   "poziom": "mini",
+   "klasa": "czyste",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "badany_mini_chlodnia_czyste_00.bmp",
+   "przesuniecie_px": [
+    -1,
+    1
+   ],
+   "dlugosc_wzgl": 0.946,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "badany_mini_chlodnia_czyste_01",
+   "typ_pojazdu": "chlodnia",
+   "poziom": "mini",
+   "klasa": "czyste",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "badany_mini_chlodnia_czyste_01.bmp",
+   "przesuniecie_px": [
+    1,
+    -1
+   ],
+   "dlugosc_wzgl": 0.832,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "badany_mini_chlodnia_dodatki_00",
+   "typ_pojazdu": "chlodnia",
+   "poziom": "mini",
+   "klasa": "dodatki",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "badany_mini_chlodnia_dodatki_00.bmp",
+   "przesuniecie_px": [
+    -1,
+    0
+   ],
+   "dlugosc_wzgl": 0.928,
+   "dodatki": [
+    {
+     "x0": 456,
+     "y0": 78,
+     "x1": 467,
+     "y1": 177,
+     "typ": "przerobka"
+    }
+   ],
+   "bajty": 786486
+  },
+  {
+   "id": "badany_mini_chlodnia_dodatki_01",
+   "typ_pojazdu": "chlodnia",
+   "poziom": "mini",
+   "klasa": "dodatki",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "badany_mini_chlodnia_dodatki_01.bmp",
+   "przesuniecie_px": [
+    2,
+    0
+   ],
+   "dlugosc_wzgl": 0.894,
+   "dodatki": [
+    {
+     "x0": 713,
+     "y0": 62,
+     "x1": 726,
+     "y1": 109,
+     "typ": "przedmiot"
+    },
+    {
+     "x0": 489,
+     "y0": 71,
+     "x1": 509,
+     "y1": 100,
+     "typ": "przedmiot"
+    }
+   ],
+   "bajty": 786486
+  },
+  {
+   "id": "badany_mini_kontener_czyste_00",
+   "typ_pojazdu": "kontener",
+   "poziom": "mini",
+   "klasa": "czyste",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "badany_mini_kontener_czyste_00.bmp",
+   "przesuniecie_px": [
+    1,
+    1
+   ],
+   "dlugosc_wzgl": 0.857,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "badany_mini_kontener_czyste_01",
+   "typ_pojazdu": "kontener",
+   "poziom": "mini",
+   "klasa": "czyste",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "badany_mini_kontener_czyste_01.bmp",
+   "przesuniecie_px": [
+    -2,
+    -1
+   ],
+   "dlugosc_wzgl": 0.913,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "badany_mini_kontener_dodatki_00",
+   "typ_pojazdu": "kontener",
+   "poziom": "mini",
+   "klasa": "dodatki",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "badany_mini_kontener_dodatki_00.bmp",
+   "przesuniecie_px": [
+    0,
+    -1
+   ],
+   "dlugosc_wzgl": 0.912,
+   "dodatki": [
+    {
+     "x0": 837,
+     "y0": 15,
+     "x1": 859,
+     "y1": 47,
+     "typ": "przedmiot"
+    },
+    {
+     "x0": 876,
+     "y0": 143,
+     "x1": 886,
+     "y1": 176,
+     "typ": "przedmiot"
+    }
+   ],
+   "bajty": 786486
+  },
+  {
+   "id": "badany_mini_kontener_dodatki_01",
+   "typ_pojazdu": "kontener",
+   "poziom": "mini",
+   "klasa": "dodatki",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "badany_mini_kontener_dodatki_01.bmp",
+   "przesuniecie_px": [
+    1,
+    1
+   ],
+   "dlugosc_wzgl": 0.885,
+   "dodatki": [
+    {
+     "x0": 215,
+     "y0": 234,
+     "x1": 231,
+     "y1": 243,
+     "typ": "skrytka"
+    },
+    {
+     "x0": 422,
+     "y0": 136,
+     "x1": 445,
+     "y1": 181,
+     "typ": "przedmiot"
+    }
+   ],
+   "bajty": 786486
+  },
+  {
+   "id": "badany_mini_cysterna_czyste_00",
+   "typ_pojazdu": "cysterna",
+   "poziom": "mini",
+   "klasa": "czyste",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "badany_mini_cysterna_czyste_00.bmp",
+   "przesuniecie_px": [
+    1,
+    1
+   ],
+   "dlugosc_wzgl": 0.9,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "badany_mini_cysterna_czyste_01",
+   "typ_pojazdu": "cysterna",
+   "poziom": "mini",
+   "klasa": "czyste",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "badany_mini_cysterna_czyste_01.bmp",
+   "przesuniecie_px": [
+    -2,
+    -1
+   ],
+   "dlugosc_wzgl": 0.984,
+   "dodatki": [],
+   "bajty": 786486
+  },
+  {
+   "id": "badany_mini_cysterna_dodatki_00",
+   "typ_pojazdu": "cysterna",
+   "poziom": "mini",
+   "klasa": "dodatki",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "badany_mini_cysterna_dodatki_00.bmp",
+   "przesuniecie_px": [
+    0,
+    0
+   ],
+   "dlugosc_wzgl": 0.972,
+   "dodatki": [
+    {
+     "x0": 568,
+     "y0": 40,
+     "x1": 589,
+     "y1": 66,
+     "typ": "przerobka"
+    },
+    {
+     "x0": 203,
+     "y0": 86,
+     "x1": 212,
+     "y1": 122,
+     "typ": "przedmiot"
+    }
+   ],
+   "bajty": 786486
+  },
+  {
+   "id": "badany_mini_cysterna_dodatki_01",
+   "typ_pojazdu": "cysterna",
+   "poziom": "mini",
+   "klasa": "dodatki",
+   "trudny": false,
+   "szer": 1024,
+   "wys": 256,
+   "plik": "badany_mini_cysterna_dodatki_01.bmp",
+   "przesuniecie_px": [
+    2,
+    0
+   ],
+   "dlugosc_wzgl": 0.959,
+   "dodatki": [
+    {
+     "x0": 217,
+     "y0": 143,
+     "x1": 241,
+     "y1": 165,
+     "typ": "przedmiot"
+    },
+    {
+     "x0": 376,
+     "y0": 65,
+     "x1": 392,
+     "y1": 105,
+     "typ": "przedmiot"
+    }
+   ],
+   "bajty": 786486
+  }
+ ]
+}
