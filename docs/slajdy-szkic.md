@@ -1,13 +1,13 @@
 # Slajdy R2 — Prześwit (DRAFT, 10 slajdów; PDF: docs/slajdy.pdf)
 
 > Oś przekazu (`value-prop-statements`): *Dla operatora RTG na granicy: Prześwit wskazuje miejsca, w których obraz naczepy odbiega od wzorca, więc operator w kilka minut wie, gdzie szukać skrytki — decyzję nadal podejmuje on.*
-> Wszystkie liczby: dane sztuczne, linie WYNIK w `docs/decyzje.md` (zadania 20 i 33). Zrzuty makiety R1 — stan sprzed R2.
+> Wszystkie liczby: dane sztuczne, linie WYNIK w `docs/decyzje.md` (zadania 20 i 33). Zrzuty makiety R2.
 
 ## 1. Prześwit
 - Narzędzie AI dla operatora RTG: porównuje obraz naczepy z wzorcem i zaznacza różnice.
 - Zespół: Hackathon · repo: github.com/PawelPisarek/hacknation-proba17
 - Wszystko na danych sztucznych — demonstracja.
-- ![auto: badany i wzorzec obok siebie, kafelki miejsc](zrzuty/r1/E4a-auto-widok-c.png)
+- ![auto: badany i wzorzec obok siebie, kafelki miejsc](zrzuty/r2/E4a-auto1-widok-c-z-pudlem.png)
 
 ## 2. Problem
 - Operator RTG KAS ogląda obrazy naczep i musi wypatrzyć skrytkę lub dodatkowy ładunek.
@@ -19,27 +19,27 @@
 - Operator RTG Służby Celno-Skarbowej na granicy zewnętrznej UE.
 - Zyskuje: wskazane miejsca do kontroli fizycznej zamiast przeglądania całego obrazu „na oko”.
 - Obrazy ze skanerów Nuctech i Multicontrol (.bmp, ~50 MB).
-- ![start zmiany: operator i stanowisko](zrzuty/r1/E1-logowanie.png)
+- ![start zmiany: operator i stanowisko](zrzuty/r2/E1-logowanie.png)
 
 ## 4. Rozwiązanie
 - Program dobiera wzorzec typu pojazdu z biblioteki; operator może zmienić rodzaj, a analiza liczy się od nowa.
 - Zaznacza miejsca różne od wzorca: najważniejsze to nie przeoczyć; pokazujemy, ile przeoczeń i ile fałszywych alarmów.
 - Partia: operator wskazuje kilka obrazów, program liczy je po kolei i oddaje listę aut.
 - Gdy nie ma wzorca: nic nie zaznacza i mówi „brak wzorca — sprawdź obraz sam”.
-- ![lista partii](zrzuty/r1/E3b-partia-gotowe.png)  ![auto: obraz badany obok wzorca](zrzuty/r1/E4a-auto-widok-c.png)
+- ![lista partii](zrzuty/r2/E3b-partia-gotowa-7-aut.png)  ![auto: obraz badany obok wzorca](zrzuty/r2/E4a-auto1-widok-c-z-pudlem.png)
 
 ## 5. Operator decyduje
 - Przy każdym miejscu operator zatwierdza albo odrzuca; powód podaje przy odrzuceniu.
 - Decyzje, powody, kto i kiedy — w raporcie, zapisanym lokalnie jednym przyciskiem.
 - Gdy program nic nie wskazuje: „brak wskazań — to nie gwarancja, że auto jest czyste”.
-- ![odrzucenie miejsca z powodem](zrzuty/r1/E4b-odrzuc-z-powodem.png)
+- ![odrzucenie miejsca z powodem](zrzuty/r2/E4c-auto1-2-rozstrzygniete-wzorzec-2.png)
 
 ## 6. Demo (≈ 113 s, `docs/demo.md`)
 - Partia 7 aut z `dane/mini`; 7. auto to przypadek trudny (dodatek za ładunkiem), na liście nieoznaczony. U góry pasek „dane sztuczne — demonstracja”.
-- Auto 1: rozstrzygamy 2 miejsca i wracamy na listę, reszta „oczekuje”. ![lista](zrzuty/r1/E3b-partia-gotowe.png)
-- Auto: obraz i wzorzec obok siebie, kafelki, zatwierdź/odrzuć z powodem. ![auto](zrzuty/r1/E4a-auto-widok-c.png)
-- Brak wzorca (cysterna): „sprawdź obraz sam”. ![brak wzorca](zrzuty/r1/E5-brak-wzorca.png)
-- Raport partii; auta bez decyzji — ostrzeżenie i potwierdzenie. ![raport](zrzuty/r1/E7a-raport.png)
+- Auto 1: rozstrzygamy 2 miejsca i wracamy na listę, reszta „oczekuje”. ![lista](zrzuty/r2/E3b-partia-gotowa-7-aut.png)
+- Auto: obraz i wzorzec obok siebie, kafelki, zatwierdź/odrzuć z powodem. ![auto](zrzuty/r2/E4a-auto1-widok-c-z-pudlem.png)
+- Brak wzorca (cysterna): „sprawdź obraz sam”. ![brak wzorca](zrzuty/r2/E5-cysterna-brak-wzorca.png)
+- Raport partii; auta bez decyzji — ostrzeżenie i potwierdzenie. ![raport](zrzuty/r2/E7a-raport-ostrzezenie-brak-decyzji.png)
 - Ograniczenie: dodatek za ładunkiem może nie dostać ramki — mówimy to wprost.
 
 ## 7. Jak to mierzymy — wyniki na danych sztucznych

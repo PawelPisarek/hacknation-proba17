@@ -3,7 +3,7 @@
 Nagrywa człowiek. Razem **113 s** (limit 120 s, zapas 7 s). Wszystko na danych sztucznych (`dane/mini`, `dane/mini-trudny`); przez cały pokaz u góry ekranu pasek „dane sztuczne — demonstracja” (P59 A).
 Źródła: `docs/spec.md` §7, P50 A (główna ścieżka), P51 B + P60 B (partia 7 aut, trudny przypadek to 7. auto), P69 A (w aucie 1 rozstrzygamy 2 miejsca).
 
-**Link do pokazu:** makieta R1 (E1–E7): https://pawelpisarek.github.io/hacknation-proba17/makieta/r1/ (R2 zastąpi ją po wdrożeniu); wersja na ksefbot.pl — — (adres po wdrożeniu). Zrzuty ekranów: `docs/zrzuty/r1/`.
+**Link do pokazu:** makieta R2: https://pawelpisarek.github.io/hacknation-proba17/makieta/r2/ (E1–E7, działa); wersja na ksefbot.pl — — (adres po wdrożeniu). Zrzuty ekranów: `docs/zrzuty/r2/`.
 **Przed nagraniem:** usługa liczenia działa; pod ręką partia pokazowa — 7 plików, w tej kolejności: auto 1 `badany_mini_firanka_dodatki_00.bmp`, auto 2 `badany_mini_chlodnia_dodatki_01.bmp`, auto 3 `badany_mini_kontener_dodatki_01.bmp`, auto 4 `badany_mini_kontener_czyste_00.bmp` („brak wskazań”), auto 5 `badany_mini_firanka_czyste_01.bmp`, auto 6 `badany_mini_cysterna_dodatki_00.bmp` („brak wzorca”; biblioteka bez cysterny), auto 7 `trudny_mini_firanka_za_ladunkiem_00.bmp` (trudny: dodatek za ładunkiem; na liście nie jest oznaczony jako trudny — operator nie wie z góry). Do tego własny .bmp do wgrania.
 
 | # | Czas | Ekran | Klikamy | Co widać | Lektor (1 zdanie) |
@@ -23,5 +23,5 @@ Nagrywa człowiek. Razem **113 s** (limit 120 s, zapas 7 s). Wszystko na danych 
 - Liczby skuteczności w demo nie padają. Jeśli trzeba (na pytanie, bez wyświetlania), z zadania 20, na danych sztucznych: przeoczenia 7,8% (zestaw zwykły) i 9,7% (trudny).
 - Czas liczenia pokazu dotyczy obrazów z `dane/mini` (małe); dla ~50 MB wynik zadania 20: zwykły śr. 1,73 s, trudny śr. 1,19 s — nie czekamy na niego na nagraniu.
 - Rozstrzygnięte przez Artura: P52 A, P54 A, P55 B, P56 A, P57 A, P58 A, P59 A, P60 B (trudny jako 7. auto), P63 B, P64 A, P65 A, P67 A, P69 A (2 miejsca w aucie 1), P70 A. P61 A („Dodaj jeden obraz” na liście) — alternatywa dla kroku 8, gdy trzeba wgrać plik w trakcie partii.
-- Makieta R1 ma stan sprzed tych ustaleń (R2 w budowie) — nagranie robić na R2 lub programie; zrzuty R1 mogą się różnić.
+- Nagranie robić na makiecie R2 (link wyżej); zrzuty w `docs/zrzuty/r2/` odpowiadają krokom 1–8.
 - Kroki 5–6 zależą od usługi na OMENie; trudne auto na liście nie jest oznaczone, więc wynik w kroku 6 może się zmienić z wersją programu.
