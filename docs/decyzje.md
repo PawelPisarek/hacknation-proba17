@@ -44,3 +44,6 @@ P12 11:05 Artur: zadanie wymaga przetwarzania wielu obrazów naraz (partiami) i 
 P13 11:05 Artur: gdy operator odrzuca wskazane miejsce, podaje powód. A: lista kilku gotowych powodów (np. „element konstrukcji”, „zgłoszony ładunek”, „błąd obrazu”) plus pole „inny” z własnym tekstem, czy B: tylko własny tekst? Rekomendacja: A — szybciej, a operator ma kilka minut na auto — czeka
 PARAMETR: powód odrzucenia = lista gotowych powodów + „inny” (propozycja) — do Artura (P13)
 11:05 Projektant: krok 1 R2 — 2 braki: sprzeczność zakresu z zadaniem §3 (partie, P12) i lista powodów odrzucenia (P13) nazwane w pliku
+11:06 Szef: zadanie 01 przyjęte (linia wyniku jest: 4 typy, 60 wzorców, 44+44 badane, maks 50.3 MB); dane/mini w repo, pełny zbiór na ThinkPadzie.
+11:06 Szef: alarm do Pawła — brak rsync w kontenerze, orkiestrator nie startuje zleceń (ssh już obejście).
+11:06 Szef: nazwa projektu „Prześwit” (P11) → Prezenter do docs/hacktribe.md.
