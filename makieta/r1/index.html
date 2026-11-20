@@ -1,0 +1,85 @@
+<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prześwit — makieta R1 (lista partii + widok C)</title>
+<link rel="stylesheet" href="../warianty/wspolne/styl.css">
+<style>
+.ekr{display:none}.ekr.on{display:block}
+.karta{max-width:900px;margin:14px auto;background:var(--karta);border:1px solid var(--linia);border-radius:8px;padding:14px}
+.karta h2{font-size:17px;margin:0 0 10px}
+.pole{display:flex;flex-direction:column;gap:4px;margin-bottom:10px;font-size:13px;color:var(--szary)}
+.pole select{font-size:15px;color:var(--tekst)}
+table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid var(--linia);padding:6px;text-align:left;font-size:14px;vertical-align:middle}
+th{font-size:12px;color:var(--szary);font-weight:600}
+tr.klik{cursor:pointer}tr.klik:hover{background:#f0f5fb}tr.zablok{opacity:.75}
+td img.mini{width:150px;border-radius:3px;display:block}
+.stan.czeka{background:#eceff3;color:#555}.stan.liczy{background:#fff3d6;color:#8a5a00}.stan.rozstrz{background:#e3ebf7;color:#14407a}
+.postep{height:8px;background:#e5e8ec;border-radius:4px;overflow:hidden;margin:6px 0 12px}.postep div{height:100%;background:var(--akc);width:0;transition:width .3s}
+.dwa{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:6px;background:#222}
+.dwa h3{margin:0 0 4px;font-size:13px;color:#ddd;font-weight:600;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.okno{overflow:auto;background:#000;border-radius:4px;aspect-ratio:4/1}.okno .obraz{transition:none}
+.kafle{display:flex;gap:8px;overflow-x:auto;padding:8px 12px;background:var(--karta);border-top:1px solid var(--linia)}
+.kaf{flex:0 0 auto;width:190px;border:2px solid var(--linia);border-radius:6px;padding:4px;cursor:pointer;background:#fff}
+.kaf.wyb{border-color:var(--akc)}.kaf .para{display:grid;grid-template-columns:1fr 1fr;gap:3px}.kaf .lupa{height:64px}
+.kaf .opis{font-size:12px;margin-top:3px;display:flex;gap:6px;flex-wrap:wrap}.kaf .podp{font-size:11px;padding:2px 5px;margin-top:3px}
+.kaf .podp.uwaga{background:#fff3d6;border-left-color:#e08a00}
+.st{font-size:11px;padding:0 6px;border-radius:8px;background:#eceff3}.st.zatwierdzone{background:#e3f3e6;color:#1d6b2c}.st.odrzucone{background:#fde8e6;color:#a2241a}
+.brakwsk{padding:14px;background:var(--karta);font-weight:600}
+.wzorce{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.wzorce figure{margin:0}.wzorce img{width:100%;border-radius:3px}.wzorce figcaption{font-size:12px;color:var(--szary)}
+.ostrz{background:#fde8e6;color:#a2241a;padding:8px 10px;border-radius:6px;margin:10px 0;font-weight:600}
+.rodz label{display:inline-flex;gap:4px;margin-right:14px;font-size:15px}
+.nav{font-size:12px}.nav a{margin-left:6px}
+.alarm{outline:3px solid #e08a00}
+@media(max-width:700px){.dwa{grid-template-columns:1fr}.wzorce{grid-template-columns:1fr}td img.mini{width:90px}.ukryj-tel{display:none}}
+</style></head><body>
+<header><b>Prześwit</b><span class="wariant">makieta R1 — lista partii + widok C · <span id="kto"></span></span>
+<span class="nav">ekrany:<a href="#" data-idz="E1">E1</a><a href="#" data-idz="E2">E2</a><a href="#" data-idz="E3">E3</a><a href="#" data-idz="E4">E4</a><a href="#" data-idz="E5">E5</a><a href="#" data-idz="E6">E6</a><a href="#" data-idz="E7">E7</a></span></header>
+
+<!-- E1 Logowanie i stanowisko -->
+<section class="ekr" id="E1"><div class="karta" style="max-width:420px"><h2>Logowanie i stanowisko</h2>
+<label class="pole">Funkcjonariusz<select id="funk"><option>SCS Kowalski</option><option>SCS Nowak</option><option>ASCS Wiśniewska</option></select></label>
+<label class="pole">Miejsce kontroli<select id="miejsce"><option>Terespol — stanowisko 2</option><option>Terespol — stanowisko 1</option><option>Koroszczyn — stanowisko 1</option></select></label>
+<button class="btn ok" id="start">Zacznij zmianę</button>
+<p class="szary">Stanowisko ustawiasz raz na zmianę.</p></div></section>
+
+<!-- E2 Wybór partii -->
+<section class="ekr" id="E2"><div class="karta"><h2>Wybór partii</h2>
+<button class="btn jasny" id="wskaz">Wskaż obrazy .bmp</button> <input type="file" id="plik" accept=".bmp" multiple style="display:none">
+<ul id="wybrane"></ul>
+<button class="btn ok" id="policz" disabled>Policz partię</button>
+<p class="szary">Obraz do ok. 50 MB (8192×2048) liczy się w kilka sekund (pomiar Z9: śr. 5,0 s, maks. 8,1 s; dane sztuczne).</p></div></section>
+
+<!-- E3 Lista partii -->
+<section class="ekr" id="E3"><div class="karta"><h2>Partia — <span id="p-ile"></span> <span class="stan" id="p-stan"></span></h2>
+<div class="postep"><div id="p-pasek"></div></div>
+<table><thead><tr><th>Obraz</th><th>Auto</th><th>Rodzaj</th><th>Stan</th><th>Miejsca</th></tr></thead><tbody id="p-wiersze"></tbody></table>
+<p class="szary" id="p-info"></p>
+<button class="btn jasny" id="doraportu" disabled>Raport partii</button></div></section>
+
+<!-- E4 / E5 Auto -->
+<section class="ekr" id="E4">
+<div class="pasek"><button class="btn jasny" id="dolisty">‹ lista partii</button><b id="a-nazwa"></b><span class="szary" id="a-plik"></span>
+<label>Przybliżenie <span class="przel"><button data-z="1" class="on">1×</button><button data-z="2">2×</button><button data-z="4">4×</button></span></label>
+<label>Nr rej. <input class="nrrej" id="a-nr" placeholder="np. WGM 12345"></label></div>
+<div class="dwa" id="a-dwa"><div><h3>BADANY <span id="a-ramki"></span></h3><div class="okno" id="ob"><div class="obraz" id="obB"><img id="imgB" alt="obraz badany"></div></div></div>
+<div id="a-wz"><h3>WZORZEC: <span id="a-rodzaj"></span> <button class="btn jasny" id="zmienrodz" style="padding:2px 8px">Zmień rodzaj</button></h3><div class="okno" id="ow"><div class="obraz" id="obW"><img id="imgW" alt="wzorzec"></div></div></div></div>
+<div class="kafle" id="a-kafle"></div>
+<div class="decyzja" id="a-dec"></div>
+<p class="makieta">Makieta: udawane dane (obrazy z dane/mini, ramki wpisane na sztywno). Przewijanie i przybliżanie obu obrazów jest wspólne; kliknij kafelek, żeby przybliżyć to miejsce na obu.</p>
+</section>
+
+<!-- E6 Zmiana rodzaju -->
+<section class="ekr" id="E6"><div class="karta"><h2>Zmień rodzaj — <span id="z-auto"></span></h2>
+<div class="rodz" id="z-rodz"></div>
+<div class="wzorce" style="margin-top:10px"><figure><img id="z-bad"><figcaption>badany</figcaption></figure><figure><img id="z-w0"><figcaption id="z-c0"></figcaption></figure><figure><img id="z-w1"><figcaption id="z-c1"></figcaption></figure></div>
+<div class="ostrz">Decyzje w tym aucie zostaną skasowane, a analiza policzy się od nowa.</div>
+<button class="btn ok" id="z-zast">Zastosuj</button> <button class="btn jasny" id="z-anuluj">Anuluj</button></div></section>
+
+<!-- E7 Raport -->
+<section class="ekr" id="E7"><div class="karta" style="max-width:1100px"><h2>Raport partii <span class="szary" id="r-id"></span></h2>
+<p class="szary" id="r-naglowek"></p>
+<div style="overflow-x:auto"><table><thead><tr><th>Auto</th><th>Nr rej.</th><th>Rodzaj programu</th><th>Rodzaj operatora</th><th>Miejsca</th><th>Decyzje</th><th>Kto</th><th>Miejsce kontroli</th><th>Data i godzina</th></tr></thead><tbody id="r-wiersze"></tbody></table></div>
+<p style="margin-top:12px"><button class="btn ok" id="zapisz">Zapisz lokalnie</button> <button class="btn nie" id="zamknijp" disabled>Zamknij partię</button> <button class="btn jasny" id="r-lista">‹ lista partii</button></p>
+<p class="szary" id="r-info">Zapis: pliki raport-partii.json i raport-partii.csv obok programu, bez internetu.</p></div></section>
+
+<script src="dane.js"></script>
+<script src="aplikacja.js"></script>
+</body></html>
