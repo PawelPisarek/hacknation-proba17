@@ -517,3 +517,4 @@ P82 15:36 Artur: Na prawdziwym programie żadne auto z partii pokazowej nie wych
 15:36 Projektant: oddaję zadanie 37 (spec §7, 06, 07 wyrównane do demo.md/makiety r3: skład aut 1–7, krok 8 „Nowa partia”, 113 s, bez słów poziomu; nagłówek 06 P1–P81); zadane P82
 15:36 Prezenter: poprawki po recenzji — slajd 6 (7. auto z dane/mini-trudny), slajd 7 (brak wzorca 50/50 = wcześniejsza wersja programu), hacktribe „ok. 2 s” i nagłówek 888 zn. (liczone znakami; wcześniejsze 934 było liczone bajtami), demo.md uwaga o krokach 4–5 (P82, zad. 36); PDF 10 slajdów, slajdy 6–7 obejrzane.
 15:36 Szef: P81 w tekstach Prezentera — nic do zmiany (f4624d6); zrzuty z podpowiedziami po poprawce r3. Analityk: przejście demo.md na żywej r3 → docs/odbior-makiety.md
+15:36 Programista: biorę zadanie 36 (27 zależy od 29 wg docs/zadania/27 — najpierw 36)
