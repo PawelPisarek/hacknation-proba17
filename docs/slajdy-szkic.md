@@ -36,11 +36,12 @@
 - ![wycinek: kafelki miejsc z podpowiedziami i przyciski decyzji](zrzuty/r3/wycinek-kafelki.png)
 
 ## 6. Demo (≈ 113 s, `docs/demo.md`)
-- Partia 7 aut: 6 z `dane/mini`, 7. z `dane/mini-trudny`; 7. auto to przypadek trudny (dodatek za ładunkiem), na liście nieoznaczony. U góry pasek „dane sztuczne — demonstracja”.
+- Partia 7 aut (nazwy neutralne, ramki z prawdziwego wyniku programu): miejsc 8, 6, 12, 8, 7, 0 (brak wzorca), 11. 7. auto (z `dane/mini-trudny`) to przypadek trudny (dodatek za ładunkiem), na liście nieoznaczony. U góry pasek „dane sztuczne — demonstracja”.
 - Auto 1: rozstrzygamy 2 miejsca i wracamy na listę, reszta „oczekuje”. ![lista](zrzuty/r3/lista.png)
 - Auto: obraz i wzorzec obok siebie, kafelki, zatwierdź/odrzuć z powodem. ![auto](zrzuty/r3/auto1.png)
 - Brak wzorca (cysterna): „obejrzyj ręcznie”. ![brak wzorca](zrzuty/r2/E5-cysterna-brak-wzorca.png)
 - Raport partii; auta bez decyzji — ostrzeżenie i potwierdzenie. ![raport](zrzuty/r3/raport.png)
+- Ostrzeżenie przy zamykaniu partii: „Brak decyzji: auto N (nr rej.) …”, „Zapisz mimo to” / „Wróć do listy”. ![ostrzeżenie](zrzuty/r3/raport-ostrzezenie.png)
 - Ograniczenie: dodatek za ładunkiem może nie dostać ramki — mówimy to wprost.
 
 ## 7. Jak to mierzymy — wyniki na danych sztucznych
