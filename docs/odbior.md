@@ -161,3 +161,33 @@ Sprawdzone względem `docs/spec.md` §8–10, odpowiedzi Artura w `docs/decyzje.
 Niezależne od braków: U1, U3, U5 zgadzają się z `docs/spec.md` §8, a opisy z zadaniami 23–29 (zapis lokalny — zad. 29; wzorzec i podpowiedź — 25, 26; lista po kolei — 28) i 40–42 nie sprzeczają.
 
 Niezweryfikowane: nie sprawdzałem, czy wiadomość jest już w pokoju Produkt (szkic „NIE WYSŁANA”); czasów D1–D3 nie mierzyłem; stanu MVP po zadaniach 40, 29, 28, 27 (nie oddane).
+
+## Odbiór zadania 40 na linku (https://hacknation.ksefbot.pl/, 2026-11-20 19:19)
+
+Sposób: przeglądarka bez okna (agent-browser) + zapytania do `/api/partia-pokazowa` z tej samej strony; `/api/zdrowie` 200, karta GTX 1050, v3, bez budzenia. Zrzuty: `docs/zrzuty/odbior40/z40-*.png`. Skład partii stary (7 aut z `dane/mini` i `mini-trudny`) — nie liczę jako brak (zad. 41).
+
+| kryterium | wynik | dowód |
+|---|---|---|
+| ramki na stronie = wynik usługi (A1) | **zalicza** | auto 7: 6 ramek (z 11 miejsc), numery ramek 1–6 = numery kafelków 1–6; ramka 1 na obrazie 614 px szer.: x=526 szer. 70 px; z API (740,178)–(856,256) × 614/1024 → 526 i 70 px — zgodne. Kolejność kafelków wg malejącej różnicy (2,128 → 0,517) |
+| ramki = wiersz poleceń (A1) | **NIE sprawdzone** | przebieg `ocena/uruchom40.sh` Programisty stoi w kolejce karty za usługą (19:19: karta zajęta przez usługę, `omen niedostępny`); własnego przebiegu nie puściłem, żeby nie dublować. Strona pokazuje dokładnie to, co zwraca usługa |
+| lupa | **zalicza** | auto 7, kafelek 3 + „4×”: obraz badany 614 → 2456 px; ramka 3 (`akt`) wyśrodkowana w oknie (środek ramki 392, środek okna 389 px); okno wzorca wyśrodkowane na tym samym miejscu |
+| wzorzec obok | **zalicza** | „WZORZEC: firanka trudny_wzorzec_mini_firanka_01” obok badanego; przesunięcie wzorca w oknie ≈ +6 px obrazu = `dobor.dx`=6 z API; na wzorcu jest ramka-duch (zrzut) |
+| podpowiedź | **zalicza** | auto 7: kafelki 1–4 „zwykle tu: podwozie — belki, koła i oś”, 5–6 „poza znaną konstrukcją, obejrzyj uważnie” (P81 A); nigdy pusto; brak „%” i słów niski/średni/wysoki |
+| cysterna „brak wzorca”, 0 ramek (A4) | **zalicza** | auto 6: wiersz „brak wzorca — sprawdź obraz sam”, nagłówek „0 ramek (brak wzorca)”, tylko obraz badany, brak panelu wzorca, brak „wynik mniej pewny” |
+| wgranie własnego pliku (A14) | **zalicza** | `badany_mini_kontener_dodatki_01.bmp`: kontener, 12 miejsc, „Gotowe w 1,3 s”, 6 ramek + wzorzec `wzorzec_mini_kontener_00`, podpowiedzi, bez „%” |
+
+Braki (poza składem partii):
+1. **technika** — porównanie z wierszem poleceń (uruchom40.sh) bez wyniku; kryterium „ramki = CLI” niezamknięte do czasu przebiegu Programisty.
+2. **produkt** (drobny) — przycisk wgrania nazywa się „Wskaż obraz .bmp”, a P61 A i I3 w 09 mówią „Dodaj jeden obraz”; to zad. 28, nie 40 — do ponownego sprawdzenia po 28.
+3. **technika** (drobny) — w partii na linku auto 1 ma 19 miejsc („pokazano 6 najsilniejszych”, reszta pod „i jeszcze N miejsc — pokaż”); nie sprawdzałem rozwijania listy.
+
+Niezweryfikowane: ramki = CLI; zmiana rodzaju, lista partii, decyzje, raport (zad. 27–29); budzenie uśpionej usługi (42).
+
+### Recenzja 09, runda 2 (1a55580; 2026-11-20 19:19)
+
+4 braki (sprawdzone na żywym linku i w `docs/decyzje.md`; P85 jest najwyższym P):
+1. **produkt** — U3 mówi „4 rodzaje (…cysterna)”, a na linku cysterna ma „brak wzorca” i 0 ramek (auto 6, P35 A). Napisać: 3 rodzaje z wzorcem (firanka, chłodnia, kontener); cysterna bez wzorca.
+2. **produkt** — I1 („widać komunikat „Uruchamiam program””) i I3 („Dodaj jeden obraz”) opisane jak stan obecny, a na linku jeszcze tego nie ma (przycisk „Wskaż obraz .bmp”, zad. 42 i 28 nie oddane). Przed wysyłką sprawdzić; w treści: „będzie”, nie „widać”.
+3. **produkt** (drobny) — w tekście do Artura zostają odwołania, których nie zna: „zadanie 42”, „zadaniach 29 i 40”, „spec §8”, „P61 A”, „link do repo”, „serwer”. Zamienić na opis („po dodaniu decyzji do raportu”) albo wyciąć.
+4. **technika** — D3: „pogorszyć wynik na cysternach” — cysterna nie ma dziś wzorca; ryzyko dotyczy innych aut, a dołożenie cysterny zmieniałoby A4 (8/8). Poprawić zdanie; „2–3 h” zostaje „nieoszacowane”.
+Domknięte z R1: pytania tylko o U1, U3, U5; dorobienie tylko w D; B bez dublowania; I1–I3 dopisane; czasy D1–D2 z zależnościami.
