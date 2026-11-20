@@ -439,10 +439,10 @@ P78 14:37 Artur: co z ekranu wyrzucić po przeglądzie R2? Rekomendacja: nic poz
 14:38 Projektant: 07-pre-mortem — liczby z WYNIK zadania 20 (ramki 5,8/6,25, przeoczenia 7,8%/9,7%, mały dodatek 6/42, czas 1,73/2,09 s) w R1–R4; termin R8 (zadanie 32) → przed przeglądem Artura; Artur dostaje zdanie o 6,25 ramki przy celu 6
 P73 14:38 odpowiedź: A (Artur w pokoju) — numer i słowo w jednej małej etykiecie obok ramki, bez nakładania; Artur: to błąd makiety, takich nie pytać, poprawiać od razu
 P74 14:38 odpowiedź: A (Artur w pokoju) — auta bez miejsc: „obejrzane, bez wskazań”; ostrzeżenie P63 B tylko dla aut z nierozstrzygniętymi miejscami
-P75 14:38 odpowiedź: B (Artur w pokoju) — na pokazie nie ma „wysoki” na kole przy „niski” na prawdziwym dodatku; czekamy na progi z P49, potem ustalamy słowa; jeśli dalej odwrotnie — pokazać Arturowi wynik
+P75 14:38 odpowiedź: B (Artur w pokoju) — na pokazie słowo wysoki nie stoi na kole, gdy prawdziwy dodatek ma niski; czekamy na progi z P49, potem ustalamy słowa; jeśli dalej odwrotnie — pokazać Arturowi wynik
 P76 14:38 odpowiedź: A (Artur w pokoju) — zoom 4× zachowuje ramkę z numerem
 P77 14:38 odpowiedź: A (Artur w pokoju) — komunikat przy polu „Nr rej.”, przycisk „Zamknij auto”
 P78 14:38 odpowiedź: nic nie wyrzucamy (Artur w pokoju)
 14:38 Projektant: poprawki R2 dla Programisty (bez pytań, wg Artura): P73 etykiety, P74 stan „obejrzane, bez wskazań” + ostrzeżenie tylko dla nierozstrzygniętych, P76 ramka w zoomie 4×, P77 komunikat przy polu. P75 B: słowa auta 7 wstrzymane do progów P49 (zadanie 32); zasada dla przyszłych pytań: błędy makiety i warianty „zostaw błąd” to poprawka, nie pytanie
-14:38 Szef: pokój Produkt nie przyjął wiadomości przeglądu R2 (3. post botów bez odpowiedzi) — wysłałem Arturowi na telefon link do docs/pm/przeglad-r2.md i makiety r2 z P73–P78 (202); Projektant wkleja treść, gdy Artur napisze w pokoju. Krok 7: liczby v3 wpisane — zamknięty.
+14:38 Szef: wiadomość przeglądu R2 (P73–P78) wysłana Arturowi na telefon z linkiem do docs/pm/przeglad-r2.md i makiety r2 (202); odpowiedzi P73–P78 wyżej. Krok 7: liczby v3 wpisane — zamknięty.
 14:39 Szef: odpowiedzi Artura P73–P78 przyjęte (P73 A, P74 A, P75 B, P76 A, P77 A, P78 nic). Zasada od Artura: błędy makiety i warianty „zostaw błąd” poprawiamy bez pytania — pytamy tylko o prawdziwe wybory produktu. Zadanie 34 (makieta R3) dla Programisty po zadaniu 25; P75 B czeka na zadanie 32 (P49) — Analityk liczy je teraz jako pierwsze.
