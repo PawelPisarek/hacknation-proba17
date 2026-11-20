@@ -21,7 +21,7 @@ Artur, MVP jest prawie gotowe. Żeby zdążyć, kilka rzeczy zrobiliśmy prości
 
 **2. Co operator zobaczy na stronie pod linkiem** (to też uproszczenia; pytamy tak / nie):
 - I1: obraz 50 MB wysyła się ok. 45 s; cel „poniżej minuty” na całe auto jest przez to ciasny.
-- I2: można wgrać jeden obraz naraz (przycisk „Dodaj jeden obraz” — wgrany obraz dostaje kolejny numer auta; sprawdzamy jeszcze, czy wynik zgadza się z wynikiem programu); partia pokazowa jest stała.
+- I2: można wgrać jeden obraz naraz (przycisk „Dodaj jeden obraz” — wgrany obraz dostaje kolejny numer auta; sprawdzamy jeszcze, czy wynik zgadza się z wynikiem liczenia); partia pokazowa jest stała.
 - I3: zmiana rodzaju pojazdu (Twoje P24 B i P27 A) będzie na stronie wkrótce; do tego czasu przycisku „Zmień rodzaj” nie ma albo jest nieaktywny.
 Rekomendacja: tak.
 
@@ -29,14 +29,14 @@ Rekomendacja: tak.
 - partia liczy się auto po aucie: lista od razu pokazuje miniatury, a wiersze są nieklikalne, aż policzy się cała partia — z P12 A i P38 B;
 - ogólne podpowiedzi „zwykle tu: …” zamiast opisów od ekspertów — z P81 A;
 - raport zapisuje się jako raport do pobrania (tabela), bez miniatury z ramkami — z P72 A; miniatura na liście aut już jest, w raporcie jest na liście dorobienia niżej;
-- dane pokazowe sztuczne; w partii nie ma auta „brak wskazań”, bo na czystych autach program zwykle coś wskazuje; „brak wskazań” to nie gwarancja — z P82 i P58 A;
+- dane pokazowe sztuczne; w partii nie ma auta „brak wskazań”, bo na czystych autach aplikacja zwykle coś wskazuje; „brak wskazań” to nie gwarancja — z P82 i P58 A;
 - praca bez internetu tylko „docelowo”; dziś aplikacja liczy po linku — z P25 A.
 - uśpiona usługa: pierwsze kliknięcie po dłuższej przerwie czeka do ok. 30 s; obsługa budzi ją ręcznie przed pokazem (decyzja Pawła, P86). Gdyby zasnęła w trakcie, strona pokazuje napis „Uruchamiam…” i czeka;
 
 **4. Co dorobić, jeśli zostanie czas — jedna rzecz (D).** Wybierasz tylko tutaj:
 - **D1 — miniatura w raporcie (ok. 1–2 h):** przy każdym aucie mały obraz z zaznaczonymi miejscami; kierownik od razu widzi, gdzie było miejsce. Twój pomysł z 13:07 (P72). Na liście aut miniatura już jest, w raporcie jej dalej brak — więc to nadal uproszczenie. Decyzje w raporcie sprawdzamy dalej; czas ok. 1–2 h przyjmujemy jako realny.
 - **D2 — konto funkcjonariusza zamiast listy (kilka godzin):** funkcjonariusz loguje się, a „kto zdecydował” i miejsce kontroli biorą się z konta. Na publicznej stronie to konta i hasła, więc więcej pracy i uwagi niż sama lista.
-- **D3 — ekran dokładania wzorca (czas nieoszacowany, wstępnie 2–3 h):** opiekun dodaje czysty obraz jako nowy rodzaj, np. cysternę, która dziś wzorca nie ma. Ryzyko: nowy wzorzec zmienia wyniki programu na autach tego rodzaju (też na tych z pokazu) i tego dziś nie mierzymy.
+- **D3 — ekran dokładania wzorca (czas nieoszacowany, wstępnie 2–3 h):** opiekun dodaje czysty obraz jako nowy rodzaj, np. cysternę, która dziś wzorca nie ma. Ryzyko: nowy wzorzec zmienia wyniki aplikacji na autach tego rodzaju (też na tych z pokazu) i tego dziś nie mierzymy.
 
 Rekomendacja: **D1** — najmniejsza robota, widać ją w raporcie na pokazie, zamyka Twój własny pomysł. D2 zajmuje najwięcej czasu i nie zmienia pracy z obrazem; D3 niesie ryzyko dla wyników.
 
