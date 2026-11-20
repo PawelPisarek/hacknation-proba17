@@ -6,14 +6,14 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | zamknięte (start + łańcuch 0–6 + 20, 23, 31, 33) | zespół | 01–04, 05–18 (sondy Z1–Z14; Z12/Z14 przegląd po R1), 19, 20 (v3: FN 7,8%/9,7% ≤10%, ramki 5,8/6,25, 4beef05), 23 (ramki/lista + mvp/widok-auta, 7/7 testów, 6454220), 31 (17/17 OK, 8517f28), 33 (brak wzorca sr<0,80: 50/50 cystern, 0 strat, 6454220), kroki 0–6, README, hacktribe (R3; przepisany pod P57–P72 d3a232b, opis 854/1000 zn.; link r2 sprawdzić po zad. 22 przed 20:00), warianty (P36 C+B), makieta R1 (krytyk 6/10) |
 | P57–P72 w spec, 06 i 07 | Projektant | P57–P72 w spec/06 (103b1a2) + P60 B/P69 A w 07 R3/R9 (d4d4bda) |
 | krok 7 /pre-mortem (07-pre-mortem.md) | Projektant | zamknięty po R3, liczby v3 wpisane |
-| krok 8 wizja (08-wizja.md) | Projektant | R2 poprawione → R3 (ostatnia) u Analityka → zadanie Prezentera |
+| krok 8 wizja (08-wizja.md) | Projektant | zamknięte (R3 czysto 15:28) → zadanie 35 Prezenter |
 | 22 makieta R2 | Programista | zamknięte; krytyk 7/10; Artur P73–P78 (14:38) |
 | 34 makieta R3 (P73 A, P74 A, P76 A, P77 A, P79 B, brak 7) | Programista | zamknięte; poprawki krytyka R3 (8/10, runda 3 z 3) + P80 A w r3 15:23, r3 200 — makieta zamknięta |
 | 21 wdrożenie strona + usługa (P43 A) | Paweł | w toku od 13:00 |
 | 30 odbiór A1–A14 + spójność P60 B + demo.md | Analityk | w toku od 15:06 |
 | 32 progi słów (P49 A) | Analityk | zamknięte 15:06; P79 B: słów nie ma, P49 i P75 bez przedmiotu |
 | 24–29 funkcje (P34) | Programista | 24 zamknięte 14:31 (A1 0,0 px) → 25 zamknięte 15:07 (położenie wzorców w wyniki.json, metoda bez zmian 0/32 różnic) → 26 → 27 → 28 → 29; wdrożenie na ksefbot.pl po 21 |
-| docs/demo.md + slajdy | Prezenter | 4cd0c4e: demo 113 s pod P80 A, slajdy ze zrzutami r3, hacktribe 880 zn.; ryzyko: zrzuty w slajdach nieczytelne, PDF nie obejrzany jako PDF → faza 2; po kroku 8 wizja do tekstów |
+| docs/demo.md + slajdy | Prezenter | 4cd0c4e: demo 113 s pod P80 A, slajdy ze zrzutami r3, hacktribe 880 zn.; ryzyko: zrzuty w slajdach nieczytelne, PDF nie obejrzany jako PDF → faza 2; zadanie 35 wizja w tekstach zlecone |
 
 Ustalenia Artura: P2–P56 jak wcześniej; P57 A (6 miejsc + „i jeszcze N miejsc — pokaż”); P58 A („brak wskazań — to nie gwarancja…”); P59 A / P68 (pasek „dane sztuczne — demonstracja”); P60 B (trudny jako 7. auto w partii); P61 A („Dodaj jeden obraz” na liście); P62 A (prawdziwy wybór pliku + napis „wynik przykładowy”); P63 B (ostrzeżenie przy brakach decyzji, zapis po potwierdzeniu); P64 A (godzina decyzji per auto); P65 A („Nowa partia”); P66 A (ukryć pasek E1–E7 i „makieta R1”; porządki makiety bez pytania); P67 A (pokazać 1 pudło w makiecie); P69 A (2 miejsca w aucie 1 w demo); P70 A (2 najbliższe wzorce); P71 (nic więcej nie wyrzucamy); P72 A (miniatura w raporcie po MVP); P73 A etykiety; P74 A „obejrzane, bez wskazań”; P75 B słowa po progach; P76 A ramka w zoomie; P77 A komunikat przy polu; P78 nic nie wyrzucamy; P79 B bez słów niski/średni/wysoki, tylko kolejność (zmienia P17, P45); P80 A „program nic nie wskazał — nieotwarte” do otwarcia auta, „obejrzane” po „Zamknij auto”; błędy makiety poprawiamy bez pytania.
 Otwarte pytania: brak (P80 A 15:20 → Programista w r3 razem z brakami 2,3,5,6,7).
