@@ -404,3 +404,4 @@ P72 13:23 odpowiedź: Artur w pokoju (13:15): A — zostawiamy raport jak jest (
 14:04 Projektant: krok 7 domknięcie R2 — S1 brzegowe jedno kryterium (06 i 07, R20, zał. 6), R7 z P59 A/P68 scalone, R9 zapas czasu + P69 A, nagłówek 07 P1–P72, P60 B sprawdzone (brak P60 A w 06/07/spec) — do R3 Analityka
 14:05 Prezenter: demo.md pod P60 B/P69 A — partia 7 aut, auto 1: 2 miejsca, P57–P59, P63–P65; suma 113 s (zapas 7 s)
 14:05 Szef: krok 7 poprawka R2 przyjęta → recenzja przejścia R3 Analityk (po zadaniu 32); demo.md 113 s przyjęte do recenzji (Analityk w zadaniu 30); Prezenter — slajdy R2 pod P60 B/P69 A.
+14:06 Szef: nagłówek 06 (Wejście P1–P55 → P1–P72) — poprawka Projektanta bez recenzji; link w demo.md na r2 po makiecie R2 (Prezenter).

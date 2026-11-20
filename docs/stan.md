@@ -1,4 +1,4 @@
-# Stan — 14:05
+# Stan — 14:06
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -8,7 +8,7 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | krok 7 /pre-mortem (07-pre-mortem.md) | Projektant | R2 domknięte 14:04 → recenzja R3 (Analityk, po 32) |
 | 22 makieta R2 | Programista | w toku od 14:04 (P54–P72 + usterki R1) |
 | 21 wdrożenie strona + usługa (P43 A) | Paweł | w toku od 13:00 |
-| 30 odbiór A1–A14 + spójność P60 B | Analityk (do zlecenia) | odblokowane po 31 + po aktualizacjach P60 B (spec, 06, 07, demo, makieta R2) — zlecone 14:03 (Claude) |
+| 30 odbiór A1–A14 + spójność P60 B + demo.md | Analityk (kolejka) | po 32 i recenzji kroku 7 R3 |
 | 32 progi słów (P49 A) | Analityk | w toku od 14:04; potem 30 |
 | 24–29 funkcje (P34) | Programista (kolejka) | po makiecie R2: 24 lupa → 25 wzorzec → 26 podpowiedź → 27 zmiana rodzaju → 28 partia → 29 raport |
 | docs/demo.md + slajdy | Prezenter | demo 113 s pod P60 B/P69 A (14:05) → recenzja Analityk; slajdy R2 w toku |
