@@ -1,6 +1,8 @@
 # HackTribe — tekst do formularza (DRAFT)
 
-> **SZKIC.** Wersja wstępna, przed pomiarami i przed makietą. Nie zawiera liczb skuteczności — jeszcze ich nie mierzyliśmy. Pełny opis z linkami dojdzie po zakończeniu prac.
+> **SZKIC.** Wersja wstępna, DRAFT. Dane sztuczne; wyniki wstępne, bez liczb skuteczności (liczby są w README i `docs/decyzje.md`). Pełny opis z linkami dojdzie po zakończeniu prac.
+
+Makieta (wybór wariantu): https://pawelpisarek.github.io/hacknation-proba17/makieta/warianty/
 
 ## Nazwa projektu (`product-name`)
 
@@ -16,6 +18,7 @@ https://github.com/PawelPisarek/hacknation-proba17
 
 ## Opis wstępny (≤ 1000 znaków)
 
-Operator RTG na granicy ma na jedno auto kilka minut, by wypatrzyć skrytkę lub towar spoza zgłoszenia. Małe przeróbki konstrukcji łatwo przeoczyć, a obecne narzędzie AI słabo je wykrywa. Prześwit to narzędzie AI: program dobiera wzorzec typu pojazdu z biblioteki (operator może zmienić rodzaj pojazdu, a analiza liczy się od nowa), porównuje z nim obraz i zaznacza różnice graficznie na obrazie i w raporcie. Gdy brak wzorca, nic nie zaznacza i pisze „brak wzorca — sprawdź obraz sam”. Najważniejsze: nie przeoczyć dodatku; pokazujemy, ile przeoczeń i fałszywych alarmów wyszło na zbiorze testowym. Na wyniku operator zatwierdza lub odrzuca każde miejsce; przy odrzuceniu podaje powód. Docelowo działa lokalnie, bez internetu. Od pierwszej wersji obsługuje duże pliki BMP (~50 MB) i partie: kilka obrazów liczy po kolei, oddając listę wyników; można to rozbudować o równoległe liczenie. Dane: sztuczny zbiór; skuteczności jeszcze nie mierzyliśmy.
+Operator RTG na granicy ma na jedno auto kilka minut, by wypatrzyć skrytkę lub towar spoza zgłoszenia. Małe przeróbki łatwo przeoczyć. Prześwit to narzędzie AI: pierwszy ekran to lista partii aut (kilka obrazów liczy po kolei, także duże pliki BMP ~50 MB). Po wejściu w auto operator widzi obraz badany i wzorzec obok siebie, a pod spodem kafelki zaznaczonych miejsc z podpowiedzią „zwykle tu…”. Program dobiera wzorzec typu pojazdu, operator może zmienić rodzaj (analiza liczy się od nowa). Gdy brak wzorca, nic nie zaznacza i pisze „brak wzorca — sprawdź obraz sam”. Operator zatwierdza lub odrzuca każde miejsce, przy odrzuceniu podaje powód. Najważniejsze: nie przeoczyć; pokazujemy przeoczenia i fałszywe alarmy. Docelowo lokalnie, bez internetu. Stan: szkic, makieta (wybór wariantu) gotowa, wyniki wstępne na sztucznych danych, cele skuteczności jeszcze niespełnione.
+
 
 <!-- skill: product-name -->
