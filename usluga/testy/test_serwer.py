@@ -113,6 +113,18 @@ class TestSerwer(unittest.TestCase):
         with self.assertRaises(OSError):
             urllib.request.urlopen(self.url + "/zdrowie", timeout=1)
 
+    def test_zdrowie_nie_podtrzymuje(self):   # zad. 42: budzik i strona pytają o zdrowie co chwilę
+        self.uruchom(bezczynnosc_s=1.0)
+        for _ in range(6):
+            try:
+                urllib.request.urlopen(self.url + "/zdrowie", timeout=1)
+            except OSError:
+                break
+            time.sleep(0.3)
+        time.sleep(1.0)
+        with self.assertRaises(OSError):
+            urllib.request.urlopen(self.url + "/zdrowie", timeout=1)
+
     def test_bez_sieci(self):
         self.uruchom()
         serwer.bez_sieci()

@@ -76,10 +76,10 @@ def zbuduj(licz, info, strona_dir, bezczynnosc_s, port=0, host="127.0.0.1", wzor
                 return licz(sciezka, nazwa_bib, typ)
 
         def do_GET(self):
-            ostatnie[0] = time.monotonic()
             p, q = self.sciezka()
-            if p == "/zdrowie":
+            if p == "/zdrowie":   # zad. 42: pytanie o zdrowie (strona, budzik) nie przedłuża życia usługi
                 return self.odpowiedz(200, info)
+            ostatnie[0] = time.monotonic()
             if p == "/obraz":
                 return self.obraz(q)
             if p == "/partia-pokazowa":
