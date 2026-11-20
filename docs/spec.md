@@ -36,7 +36,7 @@ Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wyni
 - **Wejście:** pliki `.bmp` (do ~50 MB każdy, 8192×2048), biblioteka wzorców czystych dla 4 rodzajów (gotowa z naszych czystych obrazów — P15; cysterna bez wzorca na pokazie → E5, P35 A).
 - **Wyjście (na obraz):** rodzaj, wzorzec, lista miejsc `{nr, x0,y0,x1,y1, słowo niski/średni/wysoki}` posortowana od najbardziej różnego, stan; **raport** (E7) z polami P18 + numer rejestracyjny + oba rodzaje.
 - **Dane pokazowe (sztuczne):** `dane/mini`, `dane/mini-trudny`, `dane/manifest*.json`; wyniki pomiarów tylko z dopiskiem „dane sztuczne”.
-- **Działanie:** lokalnie, bez internetu — docelowo (P25 A); pokaz idzie przez stronę z makietą.
+- **Działanie:** docelowo lokalnie, bez internetu (P25 A). **MVP (P43 A, Paweł):** strona na ksefbot.pl wysyła .bmp do usługi liczącej na karcie OMENa + przycisk partii pokazowej z `dane/mini`; usługa startuje razem z wdrożeniem strony (nie osobno). Wgranie własnego .bmp (także ~50 MB) działa z linku i nie jest wycinane. „Bez internetu” sprawdzamy uruchomieniem lokalnym (Docker albo wiersz poleceń).
 
 ## 4. Kryteria akceptacji (według job stories z `03-discover.md`, P-ów Artura i zadania)
 | AC | Warunek | Źródło |
@@ -52,7 +52,8 @@ Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wyni
 | A9 | Osobne pole nr rej. przy każdym aucie, przed zatwierdzeniem wyniku | P28 A |
 | A10 | Po ostatnim miejscu otwiera się następne auto partii | P40 B |
 | A11 | Raport z polami P18: id kontroli, miejsce (z ustawienia stanowiska), data i godzina, rodzaj programu i operatora, nr rej., miejsca z decyzją i powodem, kto zdecydował (zalogowany); bez pisania poza nr rej.; zapis lokalny | P18, P22 A; JS5 |
-| A12 | Obraz 50 MB < 1 min, bez internetu | zadanie §3, §7, §9 |
+| A12 | Obraz 50 MB < 1 min; „bez internetu” sprawdzane uruchomieniem lokalnym (Docker/wiersz poleceń), nie przez stronę | zadanie §3, §7, §9; P43 A |
+| A14 | Wgranie własnego .bmp z linku (ksefbot.pl) daje wynik; usługa na karcie OMENa działa od wdrożenia strony | P43 A |
 | A13 | Decyzję w poprzednim aucie można zmienić z listy partii (lista → auto → zmiana) do zamknięcia partii przyciskiem „Zamknij partię” w E7 po zapisie raportu; potem wiersz E3 „rozstrzygnięte”, bez zmian (P46 wg rekomendacji A, czeka); słowa niski/średni/wysoki = trzy równe części siły różnicy w aucie (P45 rek. A, czeka) | P41 A, P45, P46 |
 
 ## 5. Cele liczbowe Artura i stan pomiarów (dane sztuczne, metoda bazowa i v2 — zadanie 19; zadanie 20 w toku)
