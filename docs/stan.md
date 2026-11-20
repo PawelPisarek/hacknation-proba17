@@ -1,4 +1,4 @@
-# Stan — 15:35
+# Stan — 15:36
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -11,6 +11,7 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | 34 makieta R3 (P73 A, P74 A, P76 A, P77 A, P79 B, brak 7) | Programista | zamknięte; poprawki krytyka R3 (8/10, runda 3 z 3) + P80 A w r3 15:23, r3 200 — makieta zamknięta |
 | 21 wdrożenie strona + usługa (P43 A) | Paweł | w toku od 13:00 |
 | 30 odbiór A1–A14 + spójność | Analityk | zamknięte 15:34: 5 zal., A4 NIE (v3 bez progu brak wzorca), 9 jeszcze nie ma → 36 (Programista), 37 (Projektant); braki demo/slajdy/hacktribe → Prezenter |
+| przejście demo na r3 | Analityk | zlecone 15:36 → docs/odbior-makiety.md |
 | 32 progi słów (P49 A) | Analityk | zamknięte 15:06; P79 B: słów nie ma, P49 i P75 bez przedmiotu |
 | 24–29 funkcje (P34) | Programista | 24 zamknięte 14:31 (A1 0,0 px) → 25 zamknięte 15:07 (położenie wzorców w wyniki.json, metoda bez zmian 0/32 różnic) → 26 zamknięte 15:31 (A5 540 OK, 75f266d; P81 A — teksty bez zmian) → 27 w toku → 36 brak wzorca v3 + r3 teksty P81 → 28 → 29; wdrożenie na ksefbot.pl po 21 |
 | docs/demo.md + slajdy | Prezenter | 4cd0c4e: demo 113 s pod P80 A, slajdy ze zrzutami r3, hacktribe 880 zn.; ryzyko: zrzuty w slajdach nieczytelne, PDF nie obejrzany jako PDF → faza 2; 35 wizja w tekstach zamknięte (a23e869, 934 zn.) + slajd 7 czas programu (875d9b3) |
