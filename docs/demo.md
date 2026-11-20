@@ -24,4 +24,5 @@ Nagrywa człowiek. Razem **113 s** (limit 120 s, zapas 7 s). Wszystko na danych 
 - Czas liczenia pokazu dotyczy obrazów z `dane/mini` (małe); dla ~50 MB wynik zadania 20: zwykły śr. 1,73 s, trudny śr. 1,19 s — nie czekamy na niego na nagraniu.
 - Rozstrzygnięte przez Artura: P52 A, P54 A, P55 B, P56 A, P57 A, P58 A, P59 A, P60 B (trudny jako 7. auto), P63 B, P64 A, P65 A, P67 A, P69 A (2 miejsca w aucie 1), P70 A. P61 A („Dodaj jeden obraz” na liście) — alternatywa dla kroku 8, gdy trzeba wgrać plik w trakcie partii.
 - Nagranie robić na makiecie R3 (link wyżej); zrzuty w `docs/zrzuty/r3/` odpowiadają krokom 1–8.
+- Krok 4 (auto 4, „brak wskazań”) czeka na odpowiedź Artura P82, a krok 5 (brak wzorca) na zadanie 36; oba działają na makiecie, na prawdziwym programie dopiero po zadaniu 36 i P82.
 - Kroki 5–6 zależą od usługi na OMENie; trudne auto na liście nie jest oznaczone, więc wynik w kroku 6 może się zmienić z wersją programu.

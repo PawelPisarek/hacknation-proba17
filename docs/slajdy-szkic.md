@@ -36,7 +36,7 @@
 - ![odrzucenie miejsca z powodem](zrzuty/r3/auto7.png)
 
 ## 6. Demo (≈ 113 s, `docs/demo.md`)
-- Partia 7 aut z `dane/mini`; 7. auto to przypadek trudny (dodatek za ładunkiem), na liście nieoznaczony. U góry pasek „dane sztuczne — demonstracja”.
+- Partia 7 aut: 6 z `dane/mini`, 7. z `dane/mini-trudny`; 7. auto to przypadek trudny (dodatek za ładunkiem), na liście nieoznaczony. U góry pasek „dane sztuczne — demonstracja”.
 - Auto 1: rozstrzygamy 2 miejsca i wracamy na listę, reszta „oczekuje”. ![lista](zrzuty/r3/lista.png)
 - Auto: obraz i wzorzec obok siebie, kafelki, zatwierdź/odrzuć z powodem. ![auto](zrzuty/r3/auto1.png)
 - Brak wzorca (cysterna): „obejrzyj ręcznie”. ![brak wzorca](zrzuty/r2/E5-cysterna-brak-wzorca.png)
@@ -46,7 +46,7 @@
 ## 7. Jak to mierzymy — wyniki na danych sztucznych
 - Przeoczenia: 7,8% na zbiorze zwykłym (5/64), 9,7% na trudnym (6/62).
 - Ramki na czystym aucie: średnio 5,8 (zwykły) i 6,25 (trudny); fałszywe alarmy (auto z ≥ 1 ramką): 32/32 i 40/40 — dlatego lista ma najwyżej 6 miejsc i „pokaż resztę”.
-- Dobór wzorca: 64/64 (zwykły), 80/80 (trudny); cysterny bez wzorca w bibliotece → „brak wzorca” 50/50.
+- Dobór wzorca: 64/64 (zwykły), 80/80 (trudny); cysterny bez wzorca w bibliotece → „brak wzorca” 50/50 (wcześniejsza wersja programu; w obecnej poprawiamy).
 - Czas pracy programu na obraz ~50 MB: średnio 1,73 s (zwykły), 1,19 s (trudny); czasu pracy operatora nie mierzyliśmy.
 - Źródło: zadania 20 i 33 w `docs/decyzje.md`; to nie są wyniki na obrazach KAS.
 
