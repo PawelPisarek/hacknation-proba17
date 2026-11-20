@@ -105,3 +105,45 @@ Metoda: wykryj_v3, konfiguracja zadania 20 bez zmian, biblioteka dane/mini (peł
 - Zmiany w manifeście: nazwa i kryterium S2 bez słów niski/średni/wysoki (P79 B; P45 i P49 zastąpione); `warunki` w demo wyrównane do `docs/demo.md` (5+14+20+22+14+14+14+10 = 113 s).
 - Przycisk „Policz partię” na żywej r3: przed wyborem `disabled=true`, od razu po „Partia pokazowa (7 aut)” `disabled=false` — brak do Prezentera: **nie ma**.
 - Niesprawdzone: S2/S4 przeliczone przez `test_lista` na zestawach mini/mini-trudny (czyli na plikach partii), nie na ekranie makiety; czasy demo.
+
+## A4 niezależnie (OMEN, zgl-5152, 2026-11-20 19:11)
+
+Skrypt `testy/odbior/a4_niezaleznie.py` czyta wprost `wyniki.json` v3 (biblioteka bez cysterny; nie przez `test_lista`): **8 z 8 cystern (mini 4 + mini-trudny 4) ma `brak_wzorca` i 0 miejsc; `brak wzorca` u innych typów: 0** → `WYNIK A4: 8/8 OK`. Ten sam przebieg: `manifest_sprawdz.py` → `WYNIK MANIFESTU: OK` (17 scenariuszy, partia 7 aut, `warunki` demo = 109 s wg `docs/demo.md`: 5+14+20+22+10+14+14+10); `odbior.sh`: zalicza 6 z 15, NIE: brak. Pierwsze podejście (zgl-5149) przerwał wyższy priorytet (`PRZERWANO`), powtórzone raz.
+
+## Zadanie 21 — odbiór z zewnątrz (2026-11-20 19:11, https://hacknation.ksefbot.pl/, tylko wywołania strony)
+
+| # | Sprawdzenie | Wynik |
+|---|---|---|
+| 1 | strona odpowiada 200 | **tak**: `GET /` 200 w 0,17–0,23 s (3 próby, 3104 B) |
+| 2 | partia pokazowa 7/7 | **7 z 7** wyników (`GET /api/partia-pokazowa` 200, 5,2 s po obudzeniu); **ale skład inny niż w `docs/pm/06` / demo** (B1) |
+| 3 | mały plik `mini` = CLI | **5 z 5**: te same ramki (x0,y0,x1,y1) i liczba miejsc co CLI v3 z `odbior.sh` (firanka_dodatki_00: 8, chlodnia_dodatki_01: 6, kontener_czyste_00: 8, kontener_dodatki_01: 12, firanka_czyste_01: 7), 1,1–1,6 s na żądanie |
+| 4 | cysterna bez wzorca | **tak**: `cysterna_dodatki_00` i `cysterna_czyste_00` → `brak_wzorca: true`, 0 miejsc, zgodnie z CLI |
+| 5 | czasy | mini: 1,1–1,6 s od wysłania do wyniku; 50 MB (kontener, 6 miejsc, liczenie 1,54 s): **44,9 s i 45,1 s** całe żądanie (wysyłka przez łącze; < 60 s); partia pokazowa po obudzeniu 5,2 s. **Pierwsze żądanie po uśpieniu:** usługa spała (10 min) — `GET /api/partia-pokazowa` dało **503** w 0,39 s z `{"blad":"karta uśpiona — uruchom wdroz.sh --usluga"}`; strona sama usługi nie budzi (B2); budzenie `sh wdroz.sh --usluga` trwało **25 s** |
+
+Braki do Pawła:
+- **B1 (produkt):** `usluga/partia-pokazowa.json` ma stary skład: auto 1 = `firanka_czyste_00` (19 miejsc), `firanka_dodatki_00`, `chlodnia_dodatki_00`, `kontener_czyste_00`, `kontener_dodatki_00`, `cysterna_dodatki_00`, `za_ladunkiem_00`. Wg `docs/pm/06`, spec §7 i `dane/scenariusze/manifest.json` ma być: firanka_dodatki_00, chlodnia_dodatki_01, kontener_dodatki_01, kontener_czyste_00, firanka_czyste_01, cysterna_dodatki_00, za_ladunkiem_00 (P60 B). Bez tego demo „auto 1 = 8 miejsc, widać 6 i „i jeszcze 2”” nie zgadza się na linku.
+- **B2 (technika/produkt):** uśpiona usługa daje gołe 503 JSON; na stronie brak przycisku/komunikatu „budzę kartę (~25 s)” ani automatycznego budzenia. Przed pokazem trzeba obudzić ręcznie (`sh wdroz.sh --pokaz`).
+- Niesprawdzone: klik w przeglądarce (czas od kliknięcia do pokazania tabeli), własny plik z formularza strony, zachowanie strony przy 503, `GET /api/zdrowie` (200 także przy śpiącej usłudze — nie wiem, co zwraca).
+
+## Odbiór MVP na żywym linku (https://hacknation.ksefbot.pl/) — lista przygotowana, jeszcze nie sprawdzana
+
+Kryteria A1–A14 z `docs/spec.md` §4. Sposób: przeglądarka bez okna (Playwright, `--maszyna dowolna`) + `curl`; ciężkiego liczenia nie zlecam, tylko wywołania strony. Przed każdym sprawdzeniem: `GET /api/zdrowie` (200; 503 „karta uśpiona” = najpierw `sh wdroz.sh --usluga`, czas budzenia zapisać). Stan strony z 16:37 (zad. 21): tylko tabela wyników, bez ramek/lupy/wzorca/podpowiedzi — A1, A2 (kafelki), A5–A13 czekają na zadania 40, 29, 28, 27 Programisty.
+
+| AC | Jak sprawdzić na linku | Zalicza, gdy | Zależy od |
+|---|---|---|---|
+| A1 | partia pokazowa → auto 1 → klik kafelka 3; odczyt numerów ramek i kafelków; po kliknięciu współrzędne okien badany/wzorzec | numery ramek = numery kafelków; klik zaznacza ramkę i przybliża oba obrazy w tym samym miejscu (różnica położenia ≤ 14 px, próg Z12) | zad. 40 |
+| A2 | auto 1 i auto 4: kolejność kafelków z DOM, tekst kafelków | malejąca różnica; zero „%”, zero słów niski/średni/wysoki; tylko numer, stan, kolejność | zad. 40 |
+| A3 | wgrać `dane/scenariusze/czyste_zero/badany_mini_kontener_zero_00.bmp` (typ kontener) | napis „brak wskazań — to nie gwarancja, że auto jest czyste; obejrzyj obraz sam”, nie pusta lista; pole nr rej. i „Zamknij auto” | zad. 40/29 |
+| A4 | wgrać cysternę z `dane/mini` bez wzorca | „brak wzorca — sprawdź obraz sam”, 0 ramek, bez „wynik mniej pewny” (odbiór z zewnątrz: sekcja „Zadanie 21”) | gotowe po stronie API |
+| A5 | auto 1: tekst kafelków bez klikania | każdy kafelek ma „zwykle tu: …” albo „poza znaną konstrukcją, obejrzyj uważnie”; nigdy pusto | zad. 40 |
+| A6 | auto 1: „Zatwierdź” kafelka 1; „Odrzuć ▾” kafelka 2 bez powodu i z powodem z listy P13 | odrzucenie bez powodu niemożliwe; zatwierdzenie 1 kliknięciem; decyzja widoczna w raporcie | zad. 29 |
+| A7 | auto z rodzajem: „Zmień rodzaj” → inny z 4 | podgląd 2 najbliższych wzorców, przeliczenie, decyzje auta znikają, raport ma oba rodzaje | zad. 28/29 |
+| A8 | „Partia pokazowa” → obserwacja listy i stanów | auta liczą się po kolei, wiersz z miniaturą, wejście w auto dopiero po całej partii; 7 z 7 | zad. 21 + 28 |
+| A9 | auto 1: „Zatwierdź” bez nr rej., potem z `WL 12345` | osobne pole nr rej.; bez numeru zatwierdzenie zablokowane | zad. 29 |
+| A10 | rozstrzygnąć ostatnie miejsce auta 1; potem ostatniego auta | otwiera się następne auto; po ostatnim — lista partii z „Raport partii” | zad. 27 |
+| A11 | „Raport partii” → kolumny; „Zapisz i zamknij partię” z autami bez decyzji | pola P18 (id kontroli, miejsce, data/godzina, rodzaje, nr rej., decyzje z powodem, kto); „—” przy braku decyzji; ostrzeżenie „Brak decyzji: auto …” + „Zapisz mimo to” (P63 B, P74 A) | zad. 27 |
+| A12 | wgrać 50 MB (`~/dane/scenariusze/duzy/…`), zmierzyć od kliknięcia do wyniku; „bez internetu” osobno lokalnie (Docker/CLI), nie ze strony | całe żądanie < 60 s; liczenie ≈ 1,5–2 s | zad. 21 (liczenie), łącze |
+| A13 | po policzeniu partii zmienić decyzję w aucie 1 z listy; „Zapisz i zamknij partię”; „Nowa partia” | zmiana możliwa do zamknięcia; potem „rozstrzygnięte”, bez zmian; „Nowa partia” → E2; bez słów przy miejscach | zad. 27 |
+| A14 | wgrać własny mały .bmp z linku; na liście partii „Dodaj jeden obraz”; usługa na OMENie wstaje od wdrożenia | wynik w kilka sekund; przycisk zawsze; po uśpieniu jasny komunikat (nie goły błąd) | zad. 21 |
+
+Dowód każdego sprawdzenia: linia „WYNIK <AC>: zalicza/NIE” z liczbą albo cytatem ekranu i godziną; zrzut ekranu w `wyniki/odbior-mvp/`.

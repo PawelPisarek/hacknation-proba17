@@ -980,7 +980,7 @@
           "typ": "za_ladunkiem"
         }
       ],
-      "warunki": "E1 (5 s) -> E2/E3 partia 7 aut (14 s) -> auto 1 E4 (20 s) -> nr rej., zatwierdź/odrzuć, powrót na listę (22 s) -> auto 4 i 6 (14 s) -> auto 7 trudne za ładunkiem (14 s) -> E7 raport i zapis z ostrzeżeniem (14 s) -> nowa partia (10 s); razem 113 s wg docs/demo.md; pasek u góry 'dane sztuczne — demonstracja' (P59 A).",
+      "warunki": "E1 (5 s) -> E2/E3 partia 7 aut (14 s) -> auto 1 E4 (20 s) -> nr rej., zatwierdź/odrzuć, powrót na listę (22 s) -> auto 6 brak wzorca (10 s) -> auto 7 trudne za ładunkiem (14 s) -> E7 raport i zapis z ostrzeżeniem (14 s) -> nowa partia (10 s); razem 109 s wg docs/demo.md (po P82 B); pasek u góry 'dane sztuczne — demonstracja' (P59 A).",
       "oczekiwany_wynik": "Całość <= 2 min; dla trudny_mini_firanka_za_ladunkiem_00.bmp widać dodatek w lupie albo uczciwie brak ramki z napisem 'granica programu — oglądamy obraz sam' (P52 A); na trudny_mini_chlodnia_ladunek_legalny_00.bmp bez lawiny ramek (P57 A: 6 najsilniejszych + 'i jeszcze N miejsc — pokaż')."
     }
   }
