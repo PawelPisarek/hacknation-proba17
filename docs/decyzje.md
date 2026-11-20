@@ -518,3 +518,5 @@ P82 15:36 Artur: Na prawdziwym programie żadne auto z partii pokazowej nie wych
 15:36 Prezenter: poprawki po recenzji — slajd 6 (7. auto z dane/mini-trudny), slajd 7 (brak wzorca 50/50 = wcześniejsza wersja programu), hacktribe „ok. 2 s” i nagłówek 888 zn. (liczone znakami; wcześniejsze 934 było liczone bajtami), demo.md uwaga o krokach 4–5 (P82, zad. 36); PDF 10 slajdów, slajdy 6–7 obejrzane.
 15:36 Szef: P81 w tekstach Prezentera — nic do zmiany (f4624d6); zrzuty z podpowiedziami po poprawce r3. Analityk: przejście demo.md na żywej r3 → docs/odbior-makiety.md
 15:36 Programista: biorę zadanie 36 (27 zależy od 29 wg docs/zadania/27 — najpierw 36)
+15:37 Szef: zadanie 37 przyjęte (spec §7, 06, 07 = demo i r3, 113 s, P1–P81); poprawki Prezentera przyjęte (90212aa: slajdy 6–7, hacktribe 888 zn. liczone w znakach, uwagi w demo.md)
+15:37 Szef: dane/scenariusze/manifest.json ma 6 aut bez 7. (trudnego) → Analityk po przejściu demo
