@@ -1,4 +1,4 @@
-# Stan — 12:55
+# Stan — 12:56
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -8,13 +8,15 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | 02 ocena + wynik bazowy | Programista | zamknięte (4f08297): trudny FP 36/40, przeoczenia 11/62, dobór 79/80, 50 MB 1,7–5 s |
 | 19 mniej fałszywych alarmów | Programista | zamknięte (85f8e1f): cele niespełnione — trudny FP 38/40, ramki śr. 12,9, przeoczenia 18% |
 | 20 pasy podwozie/kabina/pudło (karta) | Programista | w toku od 12:04 |
-| 21 wdrożenie strona + usługa (P43 A) | — | po recenzji odbiorcy |
+| 21 wdrożenie strona + usługa (P43 A) | Programista | po 22 |
 | krok 1 /competitive-analysis | Projektant | zamknięte (R3) |
 | krok 2 operator (02-operator.md) | Projektant | zamknięte (R3) |
 | krok 3 /discover (03-discover.md) | Projektant | zamknięte (R3) |
 | krok 4 priorytety (04-priorytety.md) | Projektant | zamknięte (R2) |
 | krok 5 /write-prd + docs/spec.md | Projektant | zamknięty; odbiorca R2 bez braków (aba5f22) |
-| krok 6 /test-scenarios (06-scenariusze.md) | Projektant | zlecone |
+| krok 6 /test-scenarios (06-scenariusze.md) | Projektant | recenzja przejścia R1 (Analityk) |
+| 30 odbiór A1–A14 | — | do wzięcia (po 31) |
+| 31 dane scenariuszy | Analityk | zlecone |
 | 22 makieta R1 (lista partii + C) | Programista | w toku od 12:54 |
 | 23–29 funkcje (P34) | — | do wzięcia po kolei |
 | 05–16 sondy Z1–Z11, Z13 | Analityk | zamknięte (3038023): Z2, Z6 obalone; Z3, Z7, Z9, Z11 potwierdzone; Z1, Z8 pomiędzy; Z4, Z13 nierozstrzygnięte |

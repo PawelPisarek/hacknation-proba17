@@ -287,3 +287,4 @@ P49 12:56 odpowiedź: Artur w pokoju: A — my dobieramy progi na danych testowy
 P50 12:56 odpowiedź: Artur w pokoju: A — blokuje główna ścieżka (ramki i lupa, brak wzorca, zatwierdź/odrzuć, numer rej., raport, własny .bmp z linku); zamykanie partii może poczekać
 P51 12:56 odpowiedź: Artur w pokoju: B — demo: partia 6 aut z dane/mini plus przypadek trudny (dodatek za ładunkiem); zmienia rekomendację A
 PARAMETR: progi niski/średni/wysoki = dobiera zespół na danych testowych, wynik (ile czystych aut dostaje „wysoki”) do pokazania Arturowi do zatwierdzenia — P49
+12:56 Szef: krok 6 — meldunek Projektanta, znaczniki test-scenarios, dummy-dataset, przeplywy-pm są; A1–A14 pokryte → recenzja przejścia R1 (Analityk). Założone zadania 30 (odbiór) i 31 (dane scenariuszy).
