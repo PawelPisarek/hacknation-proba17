@@ -298,3 +298,7 @@ P55 12:59 Artur: kiedy widać „Zamknij partię”? A: dopiero po zapisie rapor
 12:59 Prezenter: demo.md szkic (117 s, 8 kroków; P50 A, P51 B)
 12:59 Programista: PARAMETR: progi słów różnicy w makiecie R1 = wysoki ≥ 0,6, średni ≥ 0,3 siły różnicy (dowolne, P45 B) — do Artura (P49)
 13:00 Szef: krok 6 po R1 poprawiony (Projektant) → recenzja przejścia R2 (Analityk). P52–P55 czekają na Artura.
+P52 13:00 odpowiedź: Artur w pokoju: A — demo uczciwie: przy dodatku za ładunkiem brak ramki, mówimy że to granica programu, operator ogląda obraz sam
+P53 13:00 odpowiedź: Artur w pokoju: A — zepsuty plik odrzucony z komunikatem po polsku, reszta partii liczy się dalej (poprawka z zadania, nie pytanie)
+P54 13:00 odpowiedź: Artur w pokoju: A — po ostatnim aucie powrót na listę partii z przyciskiem „Raport partii” (decyzje jeszcze do zmiany)
+P55 13:00 odpowiedź: Artur w pokoju: B — jeden przycisk „Zapisz i zamknij partię” (zastępuje osobne „Zapisz lokalnie” i „Zamknij partię”; zmienia rekomendację A; doprecyzowuje P46)

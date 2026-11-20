@@ -24,11 +24,11 @@ Język ekranu: polski. Udawane dane: z `dane/mini` (nazwy plików `badany_mini_<
 |---|---|---|---|
 | E1 | Logowanie i stanowisko | pole „funkcjonariusz” (lista), pole „miejsce kontroli” (lista), przycisk „Zacznij zmianę” | funkcjonariusz „SCS Kowalski”, miejsce „Terespol — stanowisko 2” (**dane udawane**); raz na zmianę |
 | E2 | Wybór partii | przycisk „Wskaż obrazy .bmp”, lista wybranych plików, „Policz partię”; makieta i demo idą na `dane/mini` (PNG); wymaganie 50 MB (A12) potwierdza pomiar Z9: śr. 5,0 s, maks. 8,1 s | 6 plików z `dane/mini` (po jednym z firanka, chłodnia, kontener, cysterna czyste/dodatki) |
-| E3 | Lista partii (z wariantu B) | tabela: miniatura, „auto N” + nazwa pliku (P44 A), rodzaj, stan, liczba miejsc (P37 B); stan liczy się po kolei (pasek postępu partii); wiersz „gotowe” klikalny dopiero po policzeniu całej partii (P38) | 6 wierszy; jeden ze stanem „brak wzorca” (cysterna), liczba miejsc „—” |
+| E3 | Lista partii (z wariantu B); po ostatnim aucie wraca tu z przyciskiem „Raport partii” (P54 A) | tabela: miniatura, „auto N” + nazwa pliku (P44 A), rodzaj, stan, liczba miejsc (P37 B); stan liczy się po kolei (pasek postępu partii); wiersz „gotowe” klikalny dopiero po policzeniu całej partii (P38) | 6 wierszy; jeden ze stanem „brak wzorca” (cysterna), liczba miejsc „—” |
 | E4 | Auto — widok C | lewo: badany z ramkami 1…n; prawo: wzorzec (nazwa rodzaju + przycisk „Zmień rodzaj”); wspólne przewijanie i lupa; pod spodem kafelki (numer, słowo niski/średni/wysoki, stan: oczekuje / zatwierdzone / odrzucone); pole „Nr rej.”; przyciski „Zatwierdź”, „Odrzuć ▾ powód”; podpowiedź „zwykle tu…” przy każdym kafelku od razu (P39 B) | firanka_dodatki_00: 6 kafelków; podpowiedź np. „zwykle tu: podwozie — belka poprzeczna” |
 | E5 | Auto — brak wzorca | zamiast ramek i kafelków napis **„brak wzorca — sprawdź obraz sam”**; sam badany obraz z lupą; pola nr rej. i „Zamknij auto” (P35 A) | cysterna (nie ma jej w bibliotece wzorców) |
 | E6 | Zmiana rodzaju | lista 4 rodzajów (firanka, chłodnia, kontener, cysterna), podgląd 2 najbliższych wzorców obok badanego, „Zastosuj”; ostrzeżenie „decyzje w tym aucie zostaną skasowane” (P27 A) | wybór cysterny → E5 |
-| E7 | Raport partii | tabela po aucie: nr rej., rodzaj programu i rodzaj operatora (P27 A), liczba miejsc, decyzje z powodami, kto zdecydował, miejsce kontroli, data i godzina (P18); „Zapisz lokalnie” | zapis pliku .json i .csv obok programu; bez internetu |
+| E7 | Raport partii | tabela po aucie: nr rej., rodzaj programu i rodzaj operatora (P27 A), liczba miejsc, decyzje z powodami, kto zdecydował, miejsce kontroli, data i godzina (P18); „Zapisz i zamknij partię” | zapis pliku .json i .csv obok programu; bez internetu |
 
 Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wynik mniej pewny” ani wzorca przybliżonego (P35 A).
 
@@ -54,7 +54,7 @@ Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wyni
 | A11 | Raport z polami P18: id kontroli, miejsce (z ustawienia stanowiska), data i godzina, rodzaj programu i operatora, nr rej., miejsca z decyzją i powodem, kto zdecydował (zalogowany); bez pisania poza nr rej.; zapis lokalny | P18, P22 A; JS5 |
 | A12 | Obraz 50 MB < 1 min; „bez internetu” sprawdzane uruchomieniem lokalnym (Docker/wiersz poleceń), nie przez stronę | zadanie §3, §7, §9; P43 A |
 | A14 | Wgranie własnego .bmp z linku (ksefbot.pl) daje wynik; usługa na karcie OMENa działa od wdrożenia strony | P43 A |
-| A13 | Decyzję w poprzednim aucie można zmienić z listy partii (lista → auto → zmiana) do zamknięcia partii przyciskiem „Zamknij partię” w E7 po zapisie raportu; potem wiersz E3 „rozstrzygnięte”, bez zmian (P46 A); słowa niski/średni/wysoki = stałe progi siły różnicy, takie same w każdym aucie (P45 B; wartości progów — do ustalenia, PARAMETR) | P41 A, P45, P46 |
+| A13 | Decyzję w poprzednim aucie można zmienić z listy partii (lista → auto → zmiana) do zamknięcia partii jednym przyciskiem „Zapisz i zamknij partię” w E7 (P55 B); potem wiersz E3 „rozstrzygnięte”, bez zmian (P46 A); słowa niski/średni/wysoki = stałe progi siły różnicy, takie same w każdym aucie (P45 B; wartości progów — do ustalenia, PARAMETR) | P41 A, P45, P46 |
 
 ## 5. Cele liczbowe Artura i stan pomiarów (dane sztuczne, metoda bazowa i v2 — zadanie 19; zadanie 20 w toku)
 | Miara | Cel | Dziś | Źródło |
@@ -101,7 +101,11 @@ Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z d
 | P43 | A (Paweł) — MVP na ksefbot.pl + usługa na OMENie od wdrożenia, własny .bmp z linku (A14) | odpowiedź Pawła 12:51 |
 | P44 | A — „auto N” z nazwą pliku na liście | odpowiedź Artura 12:52 |
 | P45 | B — stałe progi słów, wspólne dla aut (nie „trzy równe części”) | odpowiedź Artura 12:52 |
-| P46 | A — „Zamknij partię” w E7, potem „rozstrzygnięte” | odpowiedź Artura 12:52 |
+| P46 | A — „Zapisz i zamknij partię” w E7, potem „rozstrzygnięte” | odpowiedź Artura 12:52 |
+| P52 | A — demo uczciwie: przy dodatku za ładunkiem może nie być ramki, mówimy o granicy programu | odpowiedź Artura |
+| P53 | A — zepsuty plik odrzucony z komunikatem po polsku, reszta partii liczy się | odpowiedź Artura |
+| P54 | A — po ostatnim aucie lista partii (E3) z przyciskiem „Raport partii”, decyzje jeszcze do zmiany | odpowiedź Artura |
+| P55 | B — jeden przycisk „Zapisz i zamknij partię” w E7 (zastępuje „Zapisz lokalnie” i „Zamknij partię”) | odpowiedź Artura, zmiana rekomendacji |
 | P47 | A — opis „skrytkę lub dodatkowy ładunek” bez zmian | odpowiedź Artura 12:52 |
 | P48 | A — wyjątek „poza znaną konstrukcją” w opisie | odpowiedź Artura 12:52 |
 | P49 | A — progi dobiera zespół na danych testowych, Artur zatwierdza po zobaczeniu wyniku | odpowiedź Artura; wartości czekają na pomiar |
