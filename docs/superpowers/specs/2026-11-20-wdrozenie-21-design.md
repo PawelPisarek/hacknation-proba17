@@ -87,9 +87,11 @@ tego samego API.
 
 ## Po recenzji budowniczego (20.11)
 
-- **DO PAWŁA:** zlecenie `gpu-tlo` dostaje w Slurmie `--gres=gpu:1` (`orkiestrator/serwer/slurm.mjs:109`) — karta
-  na wyłączność, mimo braku `--wylaczne`. Stała usługa (`--bezczynnosc 0`) zablokuje przebiegi zespołu na karcie.
-  Warianty: (a) usługa tylko w oknie pokazu/testu, poza nim `--bezczynnosc 10`; (b) stała usługa, zespół czeka.
+- **Paweł 20.11: (a).** Zlecenie `gpu-tlo` dostaje w Slurmie `--gres=gpu:1` (`orkiestrator/serwer/slurm.mjs:109`) —
+  karta na wyłączność mimo braku `--wylaczne`. Dlatego usługa żyje tylko w oknie testu/pokazu: domyślnie
+  `--bezczynnosc 10` (10 min bez żądania → koniec, karta wolna dla zespołu); `wdroz.sh` (albo `wdroz.sh --usluga`
+  przed pokazem) podnosi ją od nowa. Strona przy martwej usłudze mówi „karta uśpiona — uruchom `wdroz.sh --usluga`”.
+  Na pokaz jury: `--bezczynnosc 0` jawnie, zdejmowane po pokazie. (Zastępuje „domyślnie 0” z §1.)
 - Moje decyzje: biblioteka wzorców jak w pomiarach — obraz pełny ↔ wzorce `maly` z `~/dane/proba17` na OMENie,
   obraz mini ↔ wzorce mini (dobór po rozmiarze); obraz Dockera tylko mini (pokaz lokalny = partia mini).
   Coolify `hacknation` serwuje próbę 16 (zakończona) — nadpisujemy. Metoda: domyślna = ta, którą Programista
