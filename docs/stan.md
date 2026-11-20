@@ -27,7 +27,7 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | 04 sprawdzenie zbioru trudnego | Analityk | zamknięte 11:48 (0/86 niewidocznych) |
 | README | Prezenter | zamknięte po R3 (ceb6717) |
 | docs/hacktribe.md — „Prześwit” + partie (P12) | Prezenter | P47 A, P48 A wpisane; sprawdzenie końcowe przed 20:00 |
-| docs/demo.md szkic (P51 B) | Prezenter | zlecone |
+| docs/demo.md szkic (P51 B) | Prezenter | szkic 117 s (9860149); linki po 22 i 21 |
 | szkielet slajdów | Prezenter | gotowy (1cd6c10) |
 | szkice wariantów A/B/C | Projektant | gotowe (docs/pm/szkice-wariantow.md) |
 | trzy makiety wariantów | Programista | zamknięte — P36: C (+ lista partii z B) |

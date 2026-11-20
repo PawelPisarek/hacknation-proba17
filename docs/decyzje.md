@@ -303,3 +303,4 @@ P53 13:00 odpowiedź: Artur w pokoju: A — zepsuty plik odrzucony z komunikatem
 P54 13:00 odpowiedź: Artur w pokoju: A — po ostatnim aucie powrót na listę partii z przyciskiem „Raport partii” (decyzje jeszcze do zmiany)
 P55 13:00 odpowiedź: Artur w pokoju: B — jeden przycisk „Zapisz i zamknij partię” (zastępuje osobne „Zapisz lokalnie” i „Zamknij partię”; zmienia rekomendację A; doprecyzowuje P46)
 13:00 Paweł: biorę zadanie 21
+13:00 Szef: demo.md szkic przyjęty (9860149, 117 s). Rozstrzygnięcie (technika, wg spec §2 i S7): biblioteka wzorców usługi nie zawiera cysterny — wzorzec_mini_cysterna_* zostaje tylko w danych do oceny, nie w bibliotece; cysterna w demo = „brak wzorca”. Znacznik „skill: demo” w demo.md to błąd zlecenia Szefa (takiego skilla nie ma) — Prezenter go usuwa.
