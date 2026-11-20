@@ -753,3 +753,4 @@ P97 08:32 odpowiedź: A — slajd 8 dostaje rysunek (słupki: auta na godzinę s
 4. Język (wyjątek dozwolony przez Szefa): na slajdzie 6 i w wykresie „v1/v2/v3/konfiguracja” → „pierwsza wersja / wersja z nocy / wersja końcowa / ustawienie”.
 Nie ruszone: slajd 8 bez rysunku (produkt → Projektant/Artur). Niesprawdzone: liczba 1995 Analityka (nie wiem, co liczył — pole ma 906 zn.); PDF oglądany jako render HTML, nie plik PDF.
 08:34 Szef: wykres skalowania przyjęty (86a76b7, liczby = README) → Prezenter wstawia na slajd 8 razem z poprawkami R2
+5. (dopisek P97 A, Artur 08:32) Slajd 8 „Skalowanie”: wykres docs/zrzuty/wykresy/skalowanie-slajd.png (commit Analityka 86a76b7) + 3 krótkie zdania; liczby zgodne z wykresem i README (2 080 / 3 020 aut/h, ok. 70 rząd wielkości n=1, 1,73 / 1,19 s, 45 s); założenia podpisane „niemierzone”. PDF przebudowany razem z poprawkami R2, 10 slajdów bez przepełnień.

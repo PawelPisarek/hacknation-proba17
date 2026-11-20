@@ -53,9 +53,10 @@
 - ![raport partii z miniaturami aut](zrzuty/slajdy/wycinek-raport.png)
 
 ## 8. Skalowanie (pomiary i założenia)
-- Pomiar: 1 karta GTX 1050, obraz 50 MB — 1,73 s / 1,19 s; wysyłka pliku przez sieć ok. 45 s.
-- Wyliczenie: ok. 2 080 / 3 020 aut/h samego liczenia (3600 ÷ czas, bez wczytania pliku); przez stronę rząd wielkości ok. 70 aut/h na stanowisko (jeden pomiar całego żądania ok. 52 s, inny przebieg) — nie wynik.
-- Założenia, niemierzone: więcej kart i stanowisk → przepustowość mniej więcej liniowo; liczenie obok skanera usuwa wąskie gardło wysyłki; nowy rodzaj pojazdu = dołożenie wzorców bez trenowania (próg doboru mógłby wymagać strojenia).
+- Pomiar: obraz 50 MB liczy się 1,73 s / 1,19 s; wysyłka pliku przez sieć ok. 45 s. Przez stronę ok. 70 aut/h to rząd wielkości (jeden pomiar), nie wynik.
+- Założenie, niemierzone: więcej kart i stanowisk → przepustowość mniej więcej liniowo.
+- Założenie, niemierzone: liczenie obok skanera usuwa wąskie gardło wysyłki.
+- ![wykres: auta na godzinę na jedną kartę](zrzuty/wykresy/skalowanie-slajd.png)
 
 ## 9. Na tle istniejących rozwiązań
 - Dostawcy skanerów (Rapiscan, Smiths Detection, Nuctech, Leidos) mają własne analizy związane z własnym sprzętem; obecne narzędzie KAS wykrywa papierosy.
