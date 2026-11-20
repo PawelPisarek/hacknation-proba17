@@ -1,4 +1,4 @@
-# Stan — 08:16 (faza 2)
+# Stan — 08:17 (faza 2)
 Kamień: 10:30 materiały (README, hacktribe finalny, slajdy, demo.md, wersja „działa na pewno”); 10:00 ostatnie wdrożenie; 11:00 zgłoszenie. Link https://hacknation.ksefbot.pl/ 200.
 
 | zadanie | kto | status |
@@ -14,7 +14,7 @@ Kamień: 10:30 materiały (README, hacktribe finalny, slajdy, demo.md, wersja �
 | 54 strojenie ramek | — | porzucone (P93: nie ruszamy programu) |
 
 Ustalenia Artura: P2–P92 (P92 A — miniatura na stronie jak w pliku).
-Otwarte pytania: brak (P94 B → slajd 6). Braki produkt krytyka (5 botów, douczanie) — Projektant/Artur.
+Otwarte pytania: P95 Artur (5 botów, rek. A: zostaje + dowód), P96 Artur (douczanie, rek. A: na „Co dalej”) — 08:17.
 Przegląd Pawła: materiały i pokaz — prośba po 46/47.
 Lista Artura na noc: pusta (D1 zrobione, P92 → 44).
 POM-1 zamknięte (P94 B).
