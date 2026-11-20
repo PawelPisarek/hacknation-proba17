@@ -520,3 +520,5 @@ P82 15:36 Artur: Na prawdziwym programie żadne auto z partii pokazowej nie wych
 15:36 Programista: biorę zadanie 36 (27 zależy od 29 wg docs/zadania/27 — najpierw 36)
 15:37 Szef: zadanie 37 przyjęte (spec §7, 06, 07 = demo i r3, 113 s, P1–P81); poprawki Prezentera przyjęte (90212aa: slajdy 6–7, hacktribe 888 zn. liczone w znakach, uwagi w demo.md)
 15:37 Szef: dane/scenariusze/manifest.json ma 6 aut bez 7. (trudnego) → Analityk po przejściu demo
+P82 15:39 odpowiedź: A, ale tylko jeśli takie auto jest w naszych danych i program nic na nim nie wskazuje bez sztuczek; jeśli nie — B z uczciwym opisem „na czystych autach program zwykle coś wskazuje” (Artur w pokoju)
+15:39 Projektant: P82 → A, warunek Artura spełniony wg docs/odbior.md (A3 zalicza): dane/scenariusze/czyste_zero/badany_mini_kontener_zero_00.bmp daje 0 miejsc na v3 bez zmiany progów (spec nie ma progu). Auto 4 w partii pokazowej = to zdjęcie zamiast kontener_czyste_00; do Szefa/Programisty: podmiana w demo.md, spec §7, 06, makiecie; w opisie uczciwie, że to zdjęcie wygenerowane tym samym generatorem co reszta (dane sztuczne)
