@@ -1,0 +1,432 @@
+[
+  {
+    "id_kontroli": "K-20261120-327",
+    "auto": 1,
+    "plik": "skan_01.bmp",
+    "nr_rej": "",
+    "rodzaj_programu": "firanka",
+    "bez_wzorca": false,
+    "rodzaj_operatora": "",
+    "liczba_miejsc": 19,
+    "wynik_przykladowy": false,
+    "decyzje": [
+      {
+        "nr": 1,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 2,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 3,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 4,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 5,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 6,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 7,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 8,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 9,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 10,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 11,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 12,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 13,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 14,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 15,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 16,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 17,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 18,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 19,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      }
+    ],
+    "kto": "—",
+    "miejsce_kontroli": "Terespol — stanowisko 2",
+    "data_godzina": "—",
+    "zamkniete": false,
+    "otwarte": false
+  },
+  {
+    "id_kontroli": "K-20261120-327",
+    "auto": 2,
+    "plik": "skan_02.bmp",
+    "nr_rej": "WGM 12345",
+    "rodzaj_programu": "firanka",
+    "bez_wzorca": false,
+    "rodzaj_operatora": "",
+    "liczba_miejsc": 8,
+    "wynik_przykladowy": false,
+    "decyzje": [
+      {
+        "nr": 1,
+        "decyzja": "odrzucone",
+        "powod": "element konstrukcji"
+      },
+      {
+        "nr": 2,
+        "decyzja": "odrzucone",
+        "powod": "nakładanie się ładunku"
+      },
+      {
+        "nr": 3,
+        "decyzja": "odrzucone",
+        "powod": "pusta paleta"
+      },
+      {
+        "nr": 4,
+        "decyzja": "zatwierdzone",
+        "powod": ""
+      },
+      {
+        "nr": 5,
+        "decyzja": "zatwierdzone",
+        "powod": ""
+      },
+      {
+        "nr": 6,
+        "decyzja": "zatwierdzone",
+        "powod": ""
+      },
+      {
+        "nr": 7,
+        "decyzja": "zatwierdzone",
+        "powod": ""
+      },
+      {
+        "nr": 8,
+        "decyzja": "zatwierdzone",
+        "powod": ""
+      }
+    ],
+    "kto": "SCS Kowalski",
+    "miejsce_kontroli": "Terespol — stanowisko 2",
+    "data_godzina": "20.11.2026, 19:35",
+    "zamkniete": true,
+    "otwarte": true
+  },
+  {
+    "id_kontroli": "K-20261120-327",
+    "auto": 3,
+    "plik": "skan_03.bmp",
+    "nr_rej": "",
+    "rodzaj_programu": "chłodnia",
+    "bez_wzorca": false,
+    "rodzaj_operatora": "",
+    "liczba_miejsc": 6,
+    "wynik_przykladowy": false,
+    "decyzje": [
+      {
+        "nr": 1,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 2,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 3,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 4,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 5,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 6,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      }
+    ],
+    "kto": "—",
+    "miejsce_kontroli": "Terespol — stanowisko 2",
+    "data_godzina": "—",
+    "zamkniete": false,
+    "otwarte": true
+  },
+  {
+    "id_kontroli": "K-20261120-327",
+    "auto": 4,
+    "plik": "skan_04.bmp",
+    "nr_rej": "",
+    "rodzaj_programu": "kontener",
+    "bez_wzorca": false,
+    "rodzaj_operatora": "",
+    "liczba_miejsc": 8,
+    "wynik_przykladowy": false,
+    "decyzje": [
+      {
+        "nr": 1,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 2,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 3,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 4,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 5,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 6,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 7,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 8,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      }
+    ],
+    "kto": "—",
+    "miejsce_kontroli": "Terespol — stanowisko 2",
+    "data_godzina": "—",
+    "zamkniete": false,
+    "otwarte": false
+  },
+  {
+    "id_kontroli": "K-20261120-327",
+    "auto": 5,
+    "plik": "skan_05.bmp",
+    "nr_rej": "",
+    "rodzaj_programu": "kontener",
+    "bez_wzorca": false,
+    "rodzaj_operatora": "",
+    "liczba_miejsc": 9,
+    "wynik_przykladowy": false,
+    "decyzje": [
+      {
+        "nr": 1,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 2,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 3,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 4,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 5,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 6,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 7,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 8,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 9,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      }
+    ],
+    "kto": "—",
+    "miejsce_kontroli": "Terespol — stanowisko 2",
+    "data_godzina": "—",
+    "zamkniete": false,
+    "otwarte": false
+  },
+  {
+    "id_kontroli": "K-20261120-327",
+    "auto": 6,
+    "plik": "skan_06.bmp",
+    "nr_rej": "",
+    "rodzaj_programu": "nieustalony (brak wzorca)",
+    "bez_wzorca": true,
+    "rodzaj_operatora": "",
+    "liczba_miejsc": 0,
+    "wynik_przykladowy": false,
+    "decyzje": [],
+    "kto": "—",
+    "miejsce_kontroli": "Terespol — stanowisko 2",
+    "data_godzina": "—",
+    "zamkniete": false,
+    "otwarte": false
+  },
+  {
+    "id_kontroli": "K-20261120-327",
+    "auto": 7,
+    "plik": "skan_07.bmp",
+    "nr_rej": "",
+    "rodzaj_programu": "firanka",
+    "bez_wzorca": false,
+    "rodzaj_operatora": "",
+    "liczba_miejsc": 11,
+    "wynik_przykladowy": false,
+    "decyzje": [
+      {
+        "nr": 1,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 2,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 3,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 4,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 5,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 6,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 7,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 8,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 9,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 10,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      },
+      {
+        "nr": 11,
+        "decyzja": "brak decyzji",
+        "powod": ""
+      }
+    ],
+    "kto": "—",
+    "miejsce_kontroli": "Terespol — stanowisko 2",
+    "data_godzina": "—",
+    "zamkniete": false,
+    "otwarte": false
+  }
+]
