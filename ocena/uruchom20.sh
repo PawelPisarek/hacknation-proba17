@@ -3,6 +3,7 @@
 # dla wybranej konfiguracji (jedna konfiguracja = prawdziwy czas na obraz).
 # Hipotezy (docs/decyzje.md, zad. 20): H1 lok (lokalne przesunięcie per kafel 0/2), H2 wyb (wzorzec per kafel 0/1),
 # H3 jas (jasność per kafel 0/1), H4 progi pasów tau_pud/tau_pod/tau_kab, H5 scal (scalanie ramek 0/0.01).
+# GOTOWE=<katalog>: kroki policzone w przerwanym przebiegu (wywłaszczenie) są brane stamtąd, nie liczone drugi raz.
 # Najpierw próba dymna (mini, 2 konfiguracje) — błąd kodu kończy przebieg od razu.
 DANE=${DANE:-$HOME/dane/proba17}
 TRUDNE=${TRUDNE:-$HOME/dane/proba17-trudny}
@@ -11,7 +12,9 @@ SIATKA=${SIATKA:-"trend=1;tolx=2;rho=0.1;konstr=1;min_pole=0.0001;lok=0,2;jas=0,
 set -e
 export PYTHONPATH=src
 nvidia-smi --query-gpu=name,memory.used,memory.total --format=csv,noheader
-w() { n=$1; d=$2; shift 2; python -m przeswit.wykryj --metoda v3 --szer-rob 2048 --biblioteka "$d" --manifest "$d/manifest.json" --wyj $WYJ/$n --bez-png "$@" | tail -1; }
+w() { n=$1; d=$2; shift 2
+  if [ -n "$GOTOWE" ] && [ -s "$GOTOWE/$n/wyniki.json" ]; then mkdir -p $WYJ/$n; cp "$GOTOWE/$n/wyniki.json" $WYJ/$n/; echo "pomijam $n (policzone w przerwanym przebiegu: $GOTOWE)"; return; fi
+  python -m przeswit.wykryj --metoda v3 --szer-rob 2048 --biblioteka "$d" --manifest "$d/manifest.json" --wyj $WYJ/$n --bez-png "$@" | tail -1; }
 w dym "$DANE" --poziom mini --siatka "trend=1;tolx=2;rho=0.1;konstr=1;min_pole=0.0001;lok=2;jas=0,1;wyb=1;tau_pud=0.08;tau_pod=0.2;tau_kab=0.2;scal=0.01"
 test -s $WYJ/dym/wyniki.json || { echo "BŁĄD: próba dymna nie zapisała wyników"; exit 3; }
 for p in mini maly; do w $p "$DANE" --poziom $p --siatka "$SIATKA"; w trudny_$p "$TRUDNE" --poziom $p --siatka "$SIATKA"; done
