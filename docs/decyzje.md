@@ -64,3 +64,4 @@ P19 11:11 Artur: kim jest operator i gdzie pracuje? Rekomendacja: doświadczony 
 P20 11:11 Artur: ile aut operator ogląda na zmianę? Rekomendacja: kilkadziesiąt (kilka minut na auto jest już ustalone) — czeka
 P21 11:11 Artur: gdzie dziś operatorowi boli najbardziej? Rekomendacja: małe skrytki w konstrukcji ginące wśród wielu podobnych obrazów oraz zmęczenie przy powtarzalnej pracy — czeka
 11:11 Projektant: krok 2 — pominięte (praca bez internetu, sztuczne dane, bez człowieka przy analizie, próg alarmu = P4, powody odrzucenia = P13) — z zadania i ustaleń P4/P9/P13
+11:11 Szef: recenzja hacktribe — 4 braki → Prezenter poprawia; nazwa zespołu „Hackathon” (jak wcześniejsza decyzja Pawła); zadanie 03 zbiór trudny
