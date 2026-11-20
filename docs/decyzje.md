@@ -727,3 +727,4 @@ P95 08:17 Artur: W materiałach (README, opis, slajdy) jest zdanie „zespół 5
 P96 08:17 Artur: W materiałach pisze, że powody odrzucenia to „materiał do douczania” metody, a program dziś niczego się nie uczy — A: przenosimy to na „Co dalej” jako plan, nie coś, co już działa; B: zostawiamy jak jest. Slajdy: https://github.com/PawelPisarek/hacknation-proba17/blob/main/docs/slajdy.pdf (rekomendacja: A) — czeka
 P95 08:18 odpowiedź: A — zdanie „zespół 5 botów AI” zostaje, z odnośnikiem do dziennika decyzji w repo (Artur w pokoju)
 P96 08:18 odpowiedź: A — „materiał do douczania” przenosimy do „Co dalej” jako plan (Artur w pokoju); Artur: poprawki nieprawdziwych zdań to nie pytania, tylko poprawki dla Programisty/Prezentera
+08:19 Szef: P95 A, P96 A (Artur w pokoju 08:18) → Prezenter; zasada Artura: poprawka zdania nieprawdziwego wobec stanu programu = bez pytania (autor poprawia sam do stanu faktycznego)
