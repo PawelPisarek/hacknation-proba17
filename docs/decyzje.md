@@ -669,3 +669,4 @@ P89 20:10 odpowiedź: tak (Artur w pokoju) — raport jako plik, bez wysyłki i 
 P90 20:10 odpowiedź: tak, ale 45 s mówimy na pokazie wprost (Artur w pokoju) — wpis dla Prezentera i demo.md
 P91 20:10 odpowiedź: D1 — miniatura z zaznaczonymi miejscami w raporcie, robić od razu (Artur w pokoju); D2 i D3 odpadają
 20:10 Szef: P87–P91 odpowiedzi Artura przyjęte; zadanie 43 (D1 miniatura w raporcie) założone → Programista po porównaniu CLI; P90 → Prezenter: 45 s wprost w demo.md i README; Analityk: lista odbioru 43
+20:11 Prezenter: P90 — demo.md krok 8 mówi 45 s wprost (krok 15 s, suma 114 s ≤ 120); README: sekcja „Ograniczenia i przyjęte uproszczenia” (45 s/50 MB, jeden obraz naraz, P87–P89). D1 (zadanie 43) nie wpisany do czasu odbioru.

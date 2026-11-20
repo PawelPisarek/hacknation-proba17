@@ -64,6 +64,13 @@ https://hacknation.ksefbot.pl/ (odebrane na linku, 20.11.2026, dane sztuczne):
 
 Gdy program jest zajęty, strona pokazuje „Uruchamiam program, ok. 30 s” i sama ponawia liczenie. Uśpiony program obsługa budzi ręcznie przed pokazem (UPROSZCZENIE P86).
 
+## Ograniczenia i przyjęte uproszczenia
+
+- Wysłanie obrazu ok. 50 MB na stronę trwa ok. 45 s (samo liczenie ok. 1,5 s), a program liczy jeden obraz naraz.
+- Wybór funkcjonariusza z listy zamiast logowania, bez integracji z systemami KAS (P87).
+- Wzorce dla 3 rodzajów pojazdów; cysterna nie ma wzorca (P88).
+- Raport partii jako plik (.json, .csv), bez wysyłki i bez ekranu kierownika (P89).
+
 ## Wyniki (na danych sztucznych, nie na zdjęciach KAS)
 
 Źródło: linie `WYNIK` w `docs/decyzje.md`; metoda v2 (zad. 19), zestaw zwykły / trudny:
