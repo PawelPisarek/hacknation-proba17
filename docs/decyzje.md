@@ -302,3 +302,4 @@ P52 13:00 odpowiedź: Artur w pokoju: A — demo uczciwie: przy dodatku za ładu
 P53 13:00 odpowiedź: Artur w pokoju: A — zepsuty plik odrzucony z komunikatem po polsku, reszta partii liczy się dalej (poprawka z zadania, nie pytanie)
 P54 13:00 odpowiedź: Artur w pokoju: A — po ostatnim aucie powrót na listę partii z przyciskiem „Raport partii” (decyzje jeszcze do zmiany)
 P55 13:00 odpowiedź: Artur w pokoju: B — jeden przycisk „Zapisz i zamknij partię” (zastępuje osobne „Zapisz lokalnie” i „Zamknij partię”; zmienia rekomendację A; doprecyzowuje P46)
+13:00 Paweł: biorę zadanie 21
