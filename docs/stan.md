@@ -1,4 +1,4 @@
-# Stan — 11:15
+# Stan — 11:16
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -7,7 +7,7 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | krok 0 docs/materialy.md | Analityk | zamknięte |
 | 02 ocena + wynik bazowy + dobór wzorca (karta OMENa) | Programista | wypchnięte 11:15 (1bbf9dd), czekam na meldunek |
 | krok 1 /competitive-analysis | Projektant | zamknięte (R3) |
-| krok 2 operator (02-operator.md) | Projektant | po P14–P21 (5fdf2bd) → R1 u Analityka |
+| krok 2 operator (02-operator.md) | Projektant | R1: 4 braki → poprawka + pytania do Artura → R2 |
 | recenzja docs/hacktribe.md | Analityk | R1 4 braki → poprawione (6adbde2) → R2 po zad. 03 |
 | 03 zbiór trudny | Analityk | zlecone |
 | docs/hacktribe.md — „Prześwit” + partie (P12) | Prezenter | gotowe (bdba1ed); recenzja przed 20:00 |
