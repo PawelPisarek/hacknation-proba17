@@ -1,4 +1,4 @@
-# Stan — 11:48
+# Stan — 11:49
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -9,16 +9,16 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | 19 mniej fałszywych alarmów (karta) | Programista | w toku |
 | krok 1 /competitive-analysis | Projektant | zamknięte (R3) |
 | krok 2 operator (02-operator.md) | Projektant | zamknięte (R3) |
-| krok 3 /discover (03-discover.md) | Projektant | recenzja 1 (Analityk) — P29–P34 odpowiedziane |
+| krok 3 /discover (03-discover.md) | Projektant | poprawka po R1 (5 braków, z P35 A) |
 | 05–18 sondy Z1–Z14 | Analityk (po 04) | zlecone (05–16 teraz; 17, 18 po makiecie) |
 | recenzja docs/hacktribe.md | Analityk | zamknięte po R3 (f62748c, 988 zn.) |
 | 03 zbiór trudny | Analityk | zamknięte 11:18 (dane/mini-trudny, manifest-trudny.json; 112 badanych, 4 rodzaje trudności) |
-| 04 sprawdzenie zbioru trudnego | Analityk | zlecone 11:28 (dowolna maszyna) |
+| 04 sprawdzenie zbioru trudnego | Analityk | zamknięte 11:48 (0/86 niewidocznych) |
 | README szkic | Prezenter | gotowe (c7e85e0, 38 linii, DRAFT); recenzja Analityka po zadaniu 04 |
 | docs/hacktribe.md — „Prześwit” + partie (P12) | Prezenter | gotowe (bdba1ed); recenzja przed 20:00 |
 | szkielet slajdów | Prezenter | gotowy (1cd6c10) |
 
 Ustalenia Artura: P2 wzorzec typu z biblioteki (P24: operator może poprawić rodzaj, analiza od nowa); P22 nr rej. wpisuje operator, miejsce = stanowisko, kto = zalogowany; P23 napis „wynik mniej pewny”; P27 po zmianie rodzaju decyzje znikają, raport ma oba rodzaje; P28 nr rej. osobno przy każdym obrazie; P25 „docelowo lokalnie”; P26 „nie przeoczyć”; nieprawdziwe zdania poprawiamy bez pytania (11:20); P3+P9 program zaznacza sam, operator zatwierdza/odrzuca na wyniku z powodem; P4 przeoczenie gorsze; P5 skuteczność najpierw; P7 kilka minut na auto; P10 zakres 1. wersji, duży obraz ~50 MB od razu; P12 partie w 1. wersji (po kolei, lista wyników); P13 powód odrzucenia z listy + „inny”; P11 nazwa „Prześwit”; P14 cztery rodzaje; P15 biblioteka z naszych czystych; P16→P35 brak wzorca → nic nie zaznaczamy, „brak wzorca — sprawdź obraz sam” (pomiar 0/12); P17 ramki + lista + wzorzec obok, różnica niski/średni/wysoki; P18 + nr rejestracyjny; P19 krótki staż; P20 kilkadziesiąt aut/zmianę; P29 pomysły 1, 2, 3 (lupa), 6, 10 (podpowiedź dla krótkiego stażu); P30 do 6 ramek na czystym; P31 ≥ 90/100 dodatków; P32 bez zmian; P33 najryzykowniejsze Z1, Z2+Z6, Z7, Z11; P34 kolejność 1 → 3 → 2 → 10 → 6.
-Otwarte pytania: P35 brak wzorca rodzaju (od 11:49, Artur)
+Otwarte pytania: —
 Środowisko: rsync i ssh wróciły (11:09), orkiestrator działa.
 Lista Artura na noc: —
