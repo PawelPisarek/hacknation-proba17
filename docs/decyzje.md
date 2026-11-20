@@ -331,3 +331,4 @@ P56 13:03 odpowiedź: Artur w pokoju: A — przycisk „Zapisz i zamknij partię
   Skład 6 aut (docs/demo.md, Programista) wobec spec §7 i P51 B: auta 1–6 zgodne z §7 (firanka_dodatki_00 pierwsze, kontener_czyste_00 „brak wskazań”, firanka_czyste_01 „niski”, cysterna „brak wzorca”) i z manifestem (dodatki firanka 1 mały 8×32, chłodnia 2, kontener 2, cysterna 2); pliki PNG istnieją. Rozbieżność: przypadek trudny P51 B jest w spec §7 po „następnym aucie”, w demo.md jako wgranie w kroku 6, w makiecie go nie ma (patrz 2); auta 2, 3, 5 nie są w demo otwierane, więc w raporcie zostają „brak decyzji” (patrz 4).
   Braki „produkt” (1–10) → Projektant (pokój Produkt); „technika” (11–12) zostają tu.
 13:05 Projektant: P56 A przeniesione do 06, spec (A11, §10) i 05 (wejście, 7.1)
+13:06 Prezenter: demo.md — P56 A w kroku 7 i uwagach
