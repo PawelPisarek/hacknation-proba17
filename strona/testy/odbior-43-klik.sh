@@ -26,8 +26,8 @@ for i in $(seq 30); do [ "$(ev '[...document.querySelectorAll("#r-wiersze img.rm
 jest '[...document.querySelectorAll("#r-wiersze img.rmini")].filter(i=>i.complete&&i.naturalWidth===320).length===7 && document.querySelector("#E7 th").textContent==="Obraz"' "kolumna „Obraz”: miniatura 320 px przy każdym z 7 aut"
 # piksele w kolorze ramki (#e08a00) na miniaturze: auta z miejscami > 0, cysterna (auto 6) = 0
 PIX='(n)=>{const i=document.querySelector(`#r-wiersze tr[data-auto="${n}"] img.rmini`),c=document.createElement("canvas");c.width=i.naturalWidth;c.height=i.naturalHeight;const g=c.getContext("2d");g.drawImage(i,0,0);const d=g.getImageData(0,0,c.width,c.height).data;let k=0;for(let j=0;j<d.length;j+=4)if(Math.abs(d[j]-224)<8&&Math.abs(d[j+1]-138)<8&&d[j+2]<8)k++;return k}'
-echo "    piksele ramek: $(ev "const f=$PIX;[1,2,3,4,5,6,7].map(n=>n+':'+f(n)).join(' ')")"
-jest "const f=$PIX;[1,2,3,4,5,7].every(n=>f(n)>50) && f(6)===0" "ramki na miniaturach aut z miejscami, cysterna bez ramek"
+echo "    piksele ramek: $(ev "(()=>{const f=$PIX;return [1,2,3,4,5,6,7].map(n=>n+':'+f(n)).join(' ')})()")"
+jest "(()=>{const f=$PIX;return [1,2,3,4,5,7].every(n=>f(n)>50) && f(6)===0})()" "ramki na miniaturach aut z miejscami, cysterna bez ramek"
 jest '/brak wzorca/.test(document.querySelector("#r-wiersze tr[data-auto=\"6\"] td").textContent)' "cysterna: „brak wzorca” pod miniaturą"
 jest "performance.getEntriesByType(\"resource\").filter(e=>/partia-pokazowa|analiza/.test(e.name)).length===$N0" "miniatury bez liczenia od nowa (zero zapytań do karty)"
 $B scrollintoview "#E7 h2" >/dev/null 2>&1 || true
