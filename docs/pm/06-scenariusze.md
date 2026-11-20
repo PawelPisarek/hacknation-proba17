@@ -1,6 +1,6 @@
 # Krok 6 — scenariusze odbioru „Prześwit” (`/test-scenarios`, dane pokazowe — `dummy-dataset`)
 
-Wejście: `docs/spec.md` (A1–A14, E1–E7), `docs/pm/05-write-prd.md`, `docs/decyzje.md` (P1–P51). Dane **sztuczne**: `dane/mini` (16 badanych + 12 wzorców, 1024×256), `dane/mini-trudny` (przypadki: egzemplarz, ładunek legalny, mały dodatek, za ładunkiem), `dane/manifest*.json` (prawda o dodatkach). Skrót ról: OP = operator RTG; TEST = tester.
+Wejście: `docs/spec.md` (A1–A14, E1–E7), `docs/pm/05-write-prd.md`, `docs/decyzje.md` (P1–P55 (P53 A: zły plik odrzucony, reszta liczy się; P54 A: po ostatnim aucie lista partii z „Raport partii”; P55 B: jeden przycisk „Zapisz i zamknij partię”)). Dane **sztuczne**: `dane/mini` (16 badanych + 12 wzorców, 1024×256), `dane/mini-trudny` (przypadki: egzemplarz, ładunek legalny, mały dodatek, za ładunkiem), `dane/manifest*.json` (prawda o dodatkach). Skrót ról: OP = operator RTG; TEST = tester.
 
 ## Czego nie wiem o produkcie (pytania do Artura w pokoju)
 - **P49** (odpowiedź A): progi dobiera zespół na danych testowych; Artur zatwierdza po zobaczeniu, ile czystych aut dostaje „wysoki”. A2/S2 sprawdza zasadę, liczby wchodzą po zatwierdzeniu.
@@ -58,7 +58,7 @@ Format: **Cel — Warunki — Kroki → wynik — Oczekiwane.** Wszystkie kroki 
 **Kroki:** w aucie 1 rozstrzygnij wszystkie miejsca (zatwierdź/odrzuć). **Oczekiwane:** po ostatnim miejscu otwiera się auto 2 (P40 B); po ostatnim aucie partii — powrót na listę partii (E3) z przyciskiem „Raport partii” (P54 A).
 
 ### S11 (A11) Raport
-**Warunki:** auto 1–6 rozstrzygnięte, nr rej. wpisane. **Kroki:** E7 → „Zapisz lokalnie”. **Oczekiwane:** pliki `.json` i `.csv` obok programu; pola P18: id kontroli, miejsce „Terespol — stanowisko 2”, data i godzina, rodzaj programu i rodzaj operatora, nr rej., miejsca z decyzją i powodem, „SCS Kowalski” jako kto zdecydował; zapis bez internetu; w raporcie nic nie wpisywane ręcznie poza nr rej.
+**Warunki:** auto 1–6 rozstrzygnięte, nr rej. wpisane. **Kroki:** E7 → „Zapisz i zamknij partię” (jeden przycisk, P55 B). **Oczekiwane:** pliki `.json` i `.csv` obok programu; pola P18: id kontroli, miejsce „Terespol — stanowisko 2”, data i godzina, rodzaj programu i rodzaj operatora, nr rej., miejsca z decyzją i powodem, „SCS Kowalski” jako kto zdecydował; zapis bez internetu; w raporcie nic nie wpisywane ręcznie poza nr rej.
 
 ### S12 (A12) Obraz 50 MB i „bez internetu”
 **Kroki:** 1) TEST uruchamia lokalnie (Docker albo wiersz poleceń) z odłączoną siecią; 2) wskazuje BMP 8192×2048 (~50 MB); 3) mierzy czas do „gotowe”; 4) otwiera lupę. **Oczekiwane:** < 1 min (Z9: śr. 5,0 s, maks. 8,1 s, pamięć 1,21 GB); lupa ≤ 1 s; zero zapytań sieciowych (np. w logu sieci). Sprawdzenie nie idzie przez stronę ksefbot.pl (P43 A).
@@ -75,7 +75,7 @@ S: E1 (5 s) → E2/E3 partia 6 aut (20 s) → auto 1: S1+S5 (35 s) → S6 + S9 (
 ## Co blokuje oddanie (P50 A)
 Przypadek trudny w demo (P51 B, P52): `trudny_mini_firanka_za_ladunkiem_00.bmp` — widać dodatek za ładunkiem w lupie albo uczciwie brak ramki z podpisem „granica programu — oglądamy obraz sam” (P52 A); przeoczenia na tym przypadku wg Z7 trzeba wpisać do raportu jako dane sztuczne, nie jako obietnicę.
 
-Blokują: S1, S4, S6, S9, S11, S14 (główna ścieżka i bezpieczeństwo przeoczeń: operator widzi miejsca, decyzja i raport działają, własny plik z linku działa). Nie blokują, ale wpisujemy do raportu z oceny: S2 wartości progów, S3, S7, S8 pasek, S12 pomiary liczbowe, S13 „Zamknij partię” (wg rek.: odpuszczamy tylko gdy zabraknie czasu — UPROSZCZENIE: raport bez zamykania partii — „rozstrzygnięte” dopisane ręcznie — pół godziny). Cele liczbowe (przeoczenia ≤ 10%, ramki ≤ 6) to osobne pomiary w `docs/spec.md` §5, nie scenariusze.
+Blokują: S1, S4, S6, S9, S11 (zapis raportu przyciskiem „Zapisz i zamknij partię”), S14 (główna ścieżka i bezpieczeństwo przeoczeń: operator widzi miejsca, decyzja i raport działają, własny plik z linku działa). Nie blokują, ale wpisujemy do raportu z oceny: S2 wartości progów, S3, S7, S8 pasek, S12 pomiary liczbowe, blokada zmian po zamknięciu w S13 (P50 A: zamykanie może poczekać). **Konflikt z P55 B:** jeden przycisk zapisuje raport (blokuje, S11) i zamyka partię; czy cały przycisk blokuje oddanie, rozstrzyga P56 (czeka; wg rek. A: tak, S11 i S13 blokują razem). Cele liczbowe (przeoczenia ≤ 10%, ramki ≤ 6) to osobne pomiary w `docs/spec.md` §5, nie scenariusze.
 
 <!-- skill: test-scenarios -->
 <!-- skill: dummy-dataset -->

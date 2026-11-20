@@ -50,8 +50,8 @@ Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wyni
 | A7 | Zmiana rodzaju: 1 klik z listy 4 rodzajów, podgląd 2 najbliższych wzorców, przeliczenie od nowa, decyzje auta znikają, raport z oboma rodzajami | P24 B, P27 A; JS3 |
 | A8 | Partia liczy się po kolei; wiersz auta z miniaturą (P37 B); wejście w auto dopiero po całej partii | P12, P37, P38; JS4 |
 | A9 | Osobne pole nr rej. przy każdym aucie, przed zatwierdzeniem wyniku | P28 A |
-| A10 | Po ostatnim miejscu otwiera się następne auto partii | P40 B |
-| A11 | Raport z polami P18: id kontroli, miejsce (z ustawienia stanowiska), data i godzina, rodzaj programu i operatora, nr rej., miejsca z decyzją i powodem, kto zdecydował (zalogowany); bez pisania poza nr rej.; zapis lokalny | P18, P22 A; JS5 |
+| A10 | Po ostatnim miejscu otwiera się następne auto partii; po ostatnim aucie partii — powrót na listę partii (E3) z przyciskiem „Raport partii” (decyzje jeszcze do zmiany, P41) | P40 B, P54 A |
+| A11 | Raport z polami P18: id kontroli, miejsce (z ustawienia stanowiska), data i godzina, rodzaj programu i operatora, nr rej., miejsca z decyzją i powodem, kto zdecydował (zalogowany); bez pisania poza nr rej.; zapis lokalny jednym przyciskiem „Zapisz i zamknij partię” (zapis .json i .csv + zamknięcie partii; czy blokuje oddanie — P56, czeka) | P18, P22 A, P55 B; JS5 |
 | A12 | Obraz 50 MB < 1 min; „bez internetu” sprawdzane uruchomieniem lokalnym (Docker/wiersz poleceń), nie przez stronę | zadanie §3, §7, §9; P43 A |
 | A14 | Wgranie własnego .bmp z linku (ksefbot.pl) daje wynik; usługa na karcie OMENa działa od wdrożenia strony | P43 A |
 | A13 | Decyzję w poprzednim aucie można zmienić z listy partii (lista → auto → zmiana) do zamknięcia partii jednym przyciskiem „Zapisz i zamknij partię” w E7 (P55 B); potem wiersz E3 „rozstrzygnięte”, bez zmian (P46 A); słowa niski/średni/wysoki = stałe progi siły różnicy, takie same w każdym aucie (P45 B; wartości progów — do ustalenia, PARAMETR) | P41 A, P45, P46 |
@@ -76,7 +76,7 @@ Cele ramek i przeoczeń **dziś niespełnione** — Szef: próg P30 B zostaje; p
 - Dane tylko sztuczne (Z10: stosunek przeoczeń 0,6, n małe) — w opisie zawsze „na danych sztucznych”.
 
 ## 7. Demo do 2 min (główna ścieżka)
-E1 (5 s) → E2/E3 partia 6 aut policzona (20 s) → wejście w firanka_dodatki_00 → E4: dwa obrazy, kafelek 1 → lupa, podpowiedź „zwykle tu…” (40 s) → Zatwierdź, Odrzuć z powodem „element konstrukcji”, wpisz nr rej. (25 s) → ostatnie miejsce → następne auto → **przypadek trudny `trudny_mini_firanka_za_ladunkiem_00.bmp` (P51 B, Artur): dodatek za ładunkiem — widać ramkę w lupie albo, gdy jej nie ma (Z7: przeoczenia małych dodatków 17–26%), uczciwy napis i oglądanie obrazu samemu; wybór pokazu P52, czeka** (15 s) → cysterna E5 „brak wzorca — sprawdź obraz sam” (10 s) → E7 raport (5 s).
+E1 (5 s) → E2/E3 partia 6 aut policzona (20 s) → wejście w firanka_dodatki_00 → E4: dwa obrazy, kafelek 1 → lupa, podpowiedź „zwykle tu…” (40 s) → Zatwierdź, Odrzuć z powodem „element konstrukcji”, wpisz nr rej. (25 s) → ostatnie miejsce → następne auto → **przypadek trudny `trudny_mini_firanka_za_ladunkiem_00.bmp` (P51 B, Artur): dodatek za ładunkiem — widać ramkę w lupie albo, gdy jej nie ma (Z7: przeoczenia małych dodatków 17–26%), uczciwy napis „granica programu — oglądamy obraz sam” i oglądanie obrazu samemu (P52 A, Artur)** (15 s) → cysterna E5 „brak wzorca — sprawdź obraz sam” (10 s) → E7 „Zapisz i zamknij partię” (5 s) — powrót po ostatnim aucie na listę partii z „Raport partii” (P54 A).
 
 ## 8. UPROSZCZENIA
 UPROSZCZENIE: logowanie i ustawienie stanowiska — jedna lista funkcjonariuszy i miejsc zamiast Keycloak/AD — dorobienie: integracja z logowaniem KAS (kilka godzin)
