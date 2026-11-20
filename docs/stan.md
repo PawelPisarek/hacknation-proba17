@@ -1,4 +1,4 @@
-# Stan — 12:58
+# Stan — 12:59
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -17,7 +17,7 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | krok 6 /test-scenarios (06-scenariusze.md) | Projektant | R1: 4 braki → poprawka; R2 po niej |
 | 32 progi słów (P49 A) | — | po 20 i 31 |
 | 30 odbiór A1–A14 | — | do wzięcia (po 31) |
-| 31 dane scenariuszy | Analityk | zlecone |
+| 31 dane scenariuszy | Analityk | w toku (generator 12:58) |
 | 22 makieta R1 (lista partii + C) | Programista | w toku od 12:54 |
 | 23–29 funkcje (P34) | — | do wzięcia po kolei |
 | 05–16 sondy Z1–Z11, Z13 | Analityk | zamknięte (3038023): Z2, Z6 obalone; Z3, Z7, Z9, Z11 potwierdzone; Z1, Z8 pomiędzy; Z4, Z13 nierozstrzygnięte |
@@ -26,7 +26,8 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | 03 zbiór trudny | Analityk | zamknięte 11:18 (dane/mini-trudny, manifest-trudny.json; 112 badanych, 4 rodzaje trudności) |
 | 04 sprawdzenie zbioru trudnego | Analityk | zamknięte 11:48 (0/86 niewidocznych) |
 | README | Prezenter | zamknięte po R3 (ceb6717) |
-| docs/hacktribe.md — „Prześwit” + partie (P12) | Prezenter | po R3 (8165184, 963 zn.); 2 sformułowania czekają na Artura |
+| docs/hacktribe.md — „Prześwit” + partie (P12) | Prezenter | P47 A, P48 A wpisane; sprawdzenie końcowe przed 20:00 |
+| docs/demo.md szkic (P51 B) | Prezenter | zlecone |
 | szkielet slajdów | Prezenter | gotowy (1cd6c10) |
 | szkice wariantów A/B/C | Projektant | gotowe (docs/pm/szkice-wariantow.md) |
 | trzy makiety wariantów | Programista | zamknięte — P36: C (+ lista partii z B) |
