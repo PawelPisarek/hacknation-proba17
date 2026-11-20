@@ -61,6 +61,7 @@ https://hacknation.ksefbot.pl/ (odebrane na linku, 20.11.2026, dane sztuczne):
 16. Rodzaj pojazdu zmienisz jednym kliknięciem, z podglądem 2 wzorców; auto przelicza się, a wcześniejsze decyzje przy nim są kasowane.
 17. Po zmianie na cysternę program pisze „brak wzorca”.
 18. Raport partii zawiera rodzaj wykryty przez program i rodzaj wybrany przez operatora.
+19. W raporcie partii przy każdym aucie jest miniatura z zaznaczonymi miejscami; cysterna ma napis „brak wzorca”. Zapis daje trzeci plik, `raport-partii.html`, który otwiera się bez internetu.
 
 Gdy program jest zajęty, strona pokazuje „Uruchamiam program, ok. 30 s” i sama ponawia liczenie. Uśpiony program obsługa budzi ręcznie przed pokazem (UPROSZCZENIE P86).
 
@@ -69,7 +70,7 @@ Gdy program jest zajęty, strona pokazuje „Uruchamiam program, ok. 30 s” i s
 - Wysłanie obrazu ok. 50 MB na stronę trwa ok. 45 s (samo liczenie ok. 1,5 s), a program liczy jeden obraz naraz.
 - Wybór funkcjonariusza z listy zamiast logowania, bez integracji z systemami KAS (P87).
 - Wzorce dla 3 rodzajów pojazdów; cysterna nie ma wzorca (P88).
-- Raport partii jako plik (.json, .csv), bez wysyłki i bez ekranu kierownika (P89).
+- Raport partii jako plik (.json, .csv, .html z miniaturami), bez wysyłki i bez ekranu kierownika (P89).
 
 ## Wyniki (na danych sztucznych, nie na zdjęciach KAS)
 

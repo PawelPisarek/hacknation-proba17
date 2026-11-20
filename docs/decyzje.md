@@ -680,3 +680,4 @@ P91 20:10 odpowiedź: D1 — miniatura z zaznaczonymi miejscami w raporcie, robi
 20:17 Szef: oddanie 43 przyjęte (v=32, link 200, zrzuty link-43-*); odbiór 43 → Analityk (43-1…43-10); README D1 → Prezenter po odbiorze
 20:27 Analityk: odbiór 43 na linku (v=32): 10/10 zaliczone (43-1…43-10); .html 265 KB z 8 miniaturami bez sieci, .json/.csv bez zmian pól, zmiana rodzaju 11→10→11 ramek, cysterna 0 ramek + „brak wzorca”, auto 8 9/9, regresje 27/28/29 ok. Braki: 1 produkt drobny (miniatura ~200 px na stronie), 1 technika (moja lista pól 43-6). docs/odbior.md, zrzuty/odbior43.
 20:27 Szef: 43 zamknięte (odbiór 10/10, Analityk 20:27); brak „produkt” (miniatura ~200 px na stronie, numery ledwo czytelne) → Projektant; README D1 → Prezenter
+20:27 Prezenter: README D1 — punkt 19 (miniatura w raporcie, raport-partii.html offline; bez PDF, niesprawdzone); demo.md krok 7 wspomina miniaturę, czas bez zmian 114 s
