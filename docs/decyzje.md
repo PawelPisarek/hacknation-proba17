@@ -444,3 +444,4 @@ P76 14:38 odpowiedź: A (Artur w pokoju) — zoom 4× zachowuje ramkę z numerem
 P77 14:38 odpowiedź: A (Artur w pokoju) — komunikat przy polu „Nr rej.”, przycisk „Zamknij auto”
 P78 14:38 odpowiedź: nic nie wyrzucamy (Artur w pokoju)
 14:38 Projektant: poprawki R2 dla Programisty (bez pytań, wg Artura): P73 etykiety, P74 stan „obejrzane, bez wskazań” + ostrzeżenie tylko dla nierozstrzygniętych, P76 ramka w zoomie 4×, P77 komunikat przy polu. P75 B: słowa auta 7 wstrzymane do progów P49 (zadanie 32); zasada dla przyszłych pytań: błędy makiety i warianty „zostaw błąd” to poprawka, nie pytanie
+14:38 Szef: pokój Produkt nie przyjął wiadomości przeglądu R2 (3. post botów bez odpowiedzi) — wysłałem Arturowi na telefon link do docs/pm/przeglad-r2.md i makiety r2 z P73–P78 (202); Projektant wkleja treść, gdy Artur napisze w pokoju. Krok 7: liczby v3 wpisane — zamknięty.
