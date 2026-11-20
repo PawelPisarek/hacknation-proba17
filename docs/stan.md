@@ -1,4 +1,4 @@
-# Stan — 15:46
+# Stan — 15:54
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -11,7 +11,7 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | 34 makieta R3 (P73 A, P74 A, P76 A, P77 A, P79 B, brak 7) | Programista | zamknięte; poprawki krytyka R3 (8/10, runda 3 z 3) + P80 A w r3 15:23, r3 200 — makieta zamknięta |
 | 21 wdrożenie strona + usługa (P43 A) | Paweł | w toku od 13:00 |
 | 30 odbiór A1–A14 + spójność | Analityk | zamknięte 15:34: 5 zal., A4 NIE → 36 (Programista); 37 spójność zamknięte (Projektant); poprawki Prezentera zamknięte 90212aa |
-| przejście demo na r3 | Analityk | zlecone 15:36 → docs/odbior-makiety.md |
+| przejście demo na r3 | Analityk | zamknięte 15:54 (0666dd9): K1–K6, K8 OK; M1 krok 7 → Programista po 36; D1 → Prezenter; 06 S2/S4 → Projektant; przeliczenie odbioru po 7 autach → Analityk po 38 |
 | 38 sonda czyste auto 0 miejsc na v3 (P82) | Analityk | zlecone 15:39; czyste_zero odrzucone (kopia wzorca); jest → A, nie ma → B |
 | 32 progi słów (P49 A) | Analityk | zamknięte 15:06; P79 B: słów nie ma, P49 i P75 bez przedmiotu |
 | 24–29 funkcje (P34) | Programista | 24 zamknięte 14:31 (A1 0,0 px) → 25 zamknięte 15:07 (położenie wzorców w wyniki.json, metoda bez zmian 0/32 różnic) → 26 zamknięte 15:31 (A5 540 OK, 75f266d; P81 A — teksty bez zmian) → r3 teksty P81 zamknięte 15:41 (test 32 OK) → 36 w toku (odbiór na karcie) → 27 → 28 → 29; wdrożenie na ksefbot.pl po 21 |
