@@ -267,3 +267,4 @@ P48 12:50 Artur: opis mówi, że każdy kafelek ma podpowiedź „zwykle tu…�
 P43 12:51 odpowiedź: Paweł: A — strona na ksefbot.pl + usługa na karcie OMENa; usługa startuje razem z wdrożeniem strony, wgranie własnego .bmp ma działać z linku (wgrywania nie wycinamy).
 12:51 Szef: założone zadanie 21 (wdrożenie strona + usługa; dowód: wgranie .bmp z linku).
 P43 12:51 odpowiedź: Paweł: A — MVP na ksefbot.pl + usługa na OMENie startuje z wdrożeniem, wgranie własnego .bmp z linku działa (A14); spec §3, A12, A14 (12:51 Projektant)
+12:52 Szef: spec po P43 (§3, A12, A14) → recenzja odbiorcy R2 Programista.
