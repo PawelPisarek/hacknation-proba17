@@ -5,7 +5,7 @@
 **Prześwit** to narzędzie AI dla operatora RTG na granicy: porównuje obraz naczepy z wzorcem typu pojazdu i zaznacza miejsca, w których może być ukryty towar. Operator zatwierdza lub odrzuca każde miejsce (odrzucenie z powodem); decyzja należy do niego.
 
 Dla kogo: operatorzy RTG Służby Celno-Skarbowej (zadanie KAS, HackNation).
-Makieta: — (po wdrożeniu) · wersja na ksefbot.pl: — (po wdrożeniu)
+Makieta: warianty do wyboru — https://pawelpisarek.github.io/hacknation-proba17/makieta/warianty/ · wersja na ksefbot.pl: — (po wdrożeniu)
 
 ## Jak uruchomić
 
