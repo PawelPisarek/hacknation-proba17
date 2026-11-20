@@ -20,7 +20,7 @@ Scenariusze uwzględniają odpowiedzi P49–P81.
 | auto 6 | `badany_mini_cysterna_dodatki_00.bmp` | cysterna | tak | **brak wzorca**, miejsc „—” (E5) |
 | auto 7 | `trudny_mini_firanka_za_ladunkiem_00.bmp` | firanka | tak (za ładunkiem) | gotowe (bez oznaczania, które auto jest trudne — P60 B; w E4 ramka albo uczciwy napis „granica programu — oglądamy obraz sam” wg P52 A) |
 Prawda o dodatkach i współrzędnych — z `dane/mini/manifest.json` (piksele badanego, (x0,y0)-(x1,y1)). Cysterna ma wzorce w `dane/mini`, ale **na pokazie jest wyjęta z biblioteki** (P35 A, spec E5) — TEST wyłącza wzorce cysterny przed S4.
-**Dane operatora (udawane):** funkcjonariusz „SCS Kowalski”, miejsce „Terespol — stanowisko 2”; numery rej.: `WL 12345`, `LU 5T021`, `PZ 7K889`, `BI 22001`, `KR 8N334`, `GD 3P101` (wymyślone, nie prawdziwe).
+**Dane operatora (udawane):** funkcjonariusz „SCS Kowalski”, miejsce „Terespol — stanowisko 2”; numery rej.: `WL 12345`, `LU 5T021`, `PZ 7K889`, `BI 22001`, `KR 8N334`, `GD 3P101`, `SK 9L512` (auto 7, trudny) (wymyślone, nie prawdziwe).
 **Dodatkowe przypadki z `mini-trudny`:** `trudny_mini_firanka_maly_00.bmp` (mały dodatek), `trudny_mini_firanka_za_ladunkiem_00.bmp` (dodatek za ładunkiem), `trudny_mini_chlodnia_ladunek_legalny_00.bmp` (duży legalny ładunek → nie ma robić lawiny ramek).
 **Plik nieprawidłowy:** dowolny `.txt` przemianowany na `.bmp` (S2b/E2) i plik BMP 8192×2048 (~50 MB) wygenerowany `dane/generator` (A12).
 
@@ -31,7 +31,7 @@ Format: **Cel — Warunki — Kroki → wynik — Oczekiwane.** Wszystkie kroki 
 **Warunki:** partia pokazowa policzona; wejście w auto 1. **Kroki:** 1) E4 → widać dwa obrazy (badany z ramkami, wzorzec) i kafelki; 2) kliknij kafelek 1 → ramka 1 zaznaczona, oba obrazy przybliżone w tym samym miejscu; 3) przewiń badany → wzorzec przewija się razem; 4) kliknij kafelek 2. **Oczekiwane:** numery ramek = numery kafelków; lupa ≤ 1 s (Z11: śr. 0,18 s); zmiana zaznaczenia przesuwa lupę na obu obrazach. **Brzegowe:** `trudny_mini_firanka_maly_00` — **kryterium:** mały dodatek widoczny w lupie = zaliczone; niewidoczny = blokuje oddanie (pada A1, wg P50) i wraca do Szefa (Z11 niesprawdzony na małym dodatku, notujemy wynik).
 
 ### S2 (A2) Kolejność bez słów
-**Kroki:** 1) auto 1 → kafelki od najbardziej różnego; 2) sprawdź, że przy kafelku jest numer i stan, bez słów poziomu i bez „%” (P79 B); 3) auto 2 (czyste) → kafelki tylko w kolejności, bez słów (P79 B). **Oczekiwane:** malejąca różnica; zero procentów i liczb na kafelkach; kolejność od najmocniejszego miejsca (P79 B); progów słów nie ma (P49, P75 bez przedmiotu).
+**Kroki:** 1) auto 1 → kafelki od najbardziej różnego; 2) sprawdź, że przy kafelku jest numer i stan, bez słów poziomu i bez „%” (P79 B); 3) auto 5 (`badany_mini_firanka_czyste_01.bmp`, bez dodatków wg manifestu) → kafelki tylko w kolejności, bez słów (P79 B); auto 2 (`chlodnia_dodatki_01`, 2 dodatki) ma tylko sprawdzić kolejność przy kilku miejscach. **Oczekiwane:** malejąca różnica; zero procentów i liczb na kafelkach; kolejność od najmocniejszego miejsca (P79 B); progów słów nie ma (P49, P75 bez przedmiotu).
 **S2b Brzegowe:** wskaż `.txt` jako `.bmp` na E2 → komunikat po polsku, plik odrzucony, reszta partii liczy się dalej (P53 A).
 
 ### S3 (A3) Brak wskazań
