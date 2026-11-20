@@ -264,3 +264,5 @@ P46 12:50 Artur: co zamyka sprawę (partię), po której nie zmieniamy decyzji (
 P47 12:50 Artur: opis projektu mówi „wypatrzyć skrytkę lub dodatkowy ładunek” (nie porównujemy z deklaracją towaru). Zostawić? A: zostawiamy to sformułowanie; B: piszemy „towar spoza zgłoszenia”. Rekomendacja: A — czeka
 P48 12:50 Artur: opis mówi, że każdy kafelek ma podpowiedź „zwykle tu…”, a wg P42 część pokazuje „poza znaną konstrukcją, obejrzyj uważnie”. A: dopisać to do opisu; B: zostawić opis bez wyjątku. Rekomendacja: A — czeka
 12:51 Projektant: spec po odbiorcy R1 wg rekomendacji P44–P48 (czekają na Artura)
+P43 12:51 odpowiedź: Paweł: A — strona na ksefbot.pl + usługa na karcie OMENa; usługa startuje razem z wdrożeniem strony, wgranie własnego .bmp ma działać z linku (wgrywania nie wycinamy).
+12:51 Szef: założone zadanie 21 (wdrożenie strona + usługa; dowód: wgranie .bmp z linku).
