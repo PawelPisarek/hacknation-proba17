@@ -152,6 +152,8 @@ test("zad. 40: przekazuje /api/obraz i podaje widok.js z mvp/", async () => {
   assert.equal(w.status, 200);
   assert.match(await w.text(), /renderWidokAuta/);
   const h = await (await fetch(url + "/")).text();
-  assert.match(h, /src="widok\.js"/);
+  assert.match(h, /src="widok\.js\?v=\d+"/);
+  const b = await fetch(url + "/nie-ma.js");
+  assert.equal(b.headers.get("cache-control"), "no-store");   // CDN nie zapamięta 404
   await zamknij(strona); await zamknij(atrapa);
 });

@@ -14,7 +14,7 @@ const LIMIT_MS = 120000;
 const LIMIT_B = 120 * 1024 * 1024;
 const zaDuzy = { blad: "plik większy niż 120 MB" };
 
-const json = (res, kod, o) => { res.writeHead(kod, { "content-type": "application/json; charset=utf-8" }); res.end(JSON.stringify(o)); };
+const json = (res, kod, o) => { res.writeHead(kod, { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" }); res.end(JSON.stringify(o)); };
 
 // Ciało bez Content-Length (chunked) zbieramy do limitu, żeby usługa dostała długość; null = za duże.
 async function zbierz(req) {
