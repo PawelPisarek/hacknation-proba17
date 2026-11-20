@@ -1,4 +1,4 @@
-# Stan — 13:03
+# Stan — 13:05
 Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dalej 07:00 MVP, 10:30 materiały.
 
 | zadanie | kto | status |
@@ -14,7 +14,8 @@ Kamień: 20:00 — makieta (GitHub Pages, udawane dane) + docs/hacktribe.md. Dal
 | krok 3 /discover (03-discover.md) | Projektant | zamknięte (R3) |
 | krok 4 priorytety (04-priorytety.md) | Projektant | zamknięte (R2) |
 | krok 5 /write-prd + docs/spec.md | Projektant | zamknięty; odbiorca R2 bez braków (aba5f22) |
-| krok 6 /test-scenarios (06-scenariusze.md) | Projektant | recenzja przejścia R3 (Analityk) |
+| krok 6 /test-scenarios (06-scenariusze.md) | Projektant | zamknięty po R3; dopisanie P56 A w toku |
+| krok 7 /pre-mortem (07-pre-mortem.md) | Projektant | zlecone 13:05 |
 | 32 progi słów (P49 A) | — | po 20 i 31 |
 | 30 odbiór A1–A14 | — | do wzięcia (po 31) |
 | 31 dane scenariuszy | Analityk | w toku (generator 12:58) |
