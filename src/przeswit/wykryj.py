@@ -252,6 +252,7 @@ def main():
     ap.add_argument("--raport", default=None, help="nazwa konfiguracji do raportu PNG (domyślnie pierwsza)")
     ap.add_argument("--metoda", default="v1", choices=["v1", "v2", "v3"], help="v1 = wynik bazowy, v2 = zadanie 19, v3 = zadanie 20")
     ap.add_argument("--bez-png", action="store_true")
+    ap.add_argument("--wznow", action="store_true", help="dopisuje każdy wynik do <wyj>/czesc.jsonl i pomija obrazy już tam zapisane (wywłaszczenie)")
     a = ap.parse_args()
     os.makedirs(a.wyj, exist_ok=True)
     typ_z_nazwy = lambda p: os.path.basename(p).split("_")[2] if os.path.basename(p).count("_") >= 3 else None
@@ -278,7 +279,20 @@ def main():
     bib = Biblioteka(wz, a.szer_rob)
     t_bib = time.perf_counter() - t0
     wyniki = []
+    czesc = os.path.join(a.wyj, "czesc.jsonl")
+    gotowe = {}
+    if a.wznow and os.path.exists(czesc):
+        for linia in open(czesc):
+            try:
+                r = json.loads(linia)
+                gotowe[r["plik"]] = r
+            except ValueError:
+                pass                      # urwana ostatnia linia
+        print(f"wznawiam: {len(gotowe)} obrazów już policzonych", flush=True)
     for p, typ in bad:   # partia: po kolei
+        if os.path.basename(p) in gotowe:
+            wyniki.append(gotowe[os.path.basename(p)])
+            continue
         if a.metoda == "v3":
             from .wykryj3 import wykryj_v3
             r = wykryj_v3(p, bib, konf, typ, a.typ)
@@ -295,6 +309,9 @@ def main():
             r["raport_png"] = raport_png(p, r["konfiguracje"][nazwa]["miejsca"],
                                          os.path.join(a.wyj, os.path.basename(p)[:-4] + ".png"))
         wyniki.append(r)
+        if a.wznow:
+            with open(czesc, "a") as fz:
+                fz.write(json.dumps(r, ensure_ascii=False) + "\n")
         k0 = r["konfiguracje"][nazwa]
         print(f"{r['plik']}: typ {k0['typ_wybrany']} (prawda {typ}), miejsc {len(k0['miejsca'])}, "
               f"{r['czas_s']:.2f} s", flush=True)
