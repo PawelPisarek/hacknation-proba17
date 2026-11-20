@@ -646,3 +646,4 @@ UPROSZCZENIE: samodzielne budzenie usługi przez budzik (token orkiestratora na 
 20:00 Programista: uwaga Szefa po odbiorze 28 — „i jeszcze N miejsc” odmieniane: 1 miejsce, 2–4 miejsca (bez 12–14), reszta miejsc; ta sama funkcja w MVP (mvp/widok-auta/widok.js) i w src/przeswit/lista.py, test w testy/test_lista.py.
 20:02 Szef: 27 w toku (Programista, odmiana „miejsc” zrobiona); Analityk: recenzja 09 przed wysyłką + lista odbioru 27
 20:03 Analityk: recenzja 09 przed wysyłką (R4, 1a53117) — 4 braki (I1 rozstrzygnął Paweł P86; I4 po 27; „działa” ramki/Dodaj obraz niepełne; słowa techniczne); lista odbioru 27 (27-1…27-8) w docs/odbior.md.
+20:03 Szef: recenzja 09 R1 (przed wysyłką) — 4 braki → Projektant poprawia 1/3/4 teraz, I4 po odbiorze 27; wysyłka do Artura po odbiorze 27
