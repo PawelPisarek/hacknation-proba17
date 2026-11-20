@@ -662,3 +662,4 @@ P88 20:08 Artur: przyjmujesz na pokaz uproszczenie U3 — wzorzec tylko dla 3 ro
 P89 20:08 Artur: przyjmujesz na pokaz uproszczenie U5 — raport jako plik do pobrania, bez wysyłki do systemów KAS i bez ekranu kierownika (rekomendacja: tak) — czeka
 P90 20:08 Artur: przyjmujesz na pokaz I1–I2 — obraz 50 MB wysyła się ok. 45 s; wgrywa się jeden obraz naraz (rekomendacja: tak) — czeka
 P91 20:08 Artur: które jedno dorobić, jeśli zostanie czas — D1 miniatura w raporcie, D2 konto funkcjonariusza, D3 ekran dokładania wzorca (rekomendacja: D1) — czeka
+20:09 Szef: 09 wysłane do Artura (P87–P91, ntfy 5×202, c5d88cb); README bez dopisku 27; czekam na Artura (P91 = dorobienie)
