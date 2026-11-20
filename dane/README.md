@@ -11,3 +11,11 @@ Wzorzec NIE jest tą samą naczepą — dobór wzorca robi system (prawda: `typ_
 - `dane/mini/` — podzbiór w repo (28 BMP + własny manifest.json), do szybkich prób.
 - Pełny zbiór (1,3 GB, nie w repo): ThinkPad `hackathon@192.168.1.113:~/dane/proba17/` (+ `generuj.py`); odtworzenie komendą wyżej.
 - `dane/generator/podglad.py plik.bmp wyj.png [krok]` — podgląd PNG.
+
+## Zbiór trudny (zadanie 03)
+Generator: `python dane/generator/generuj_trudny.py --wyj <katalog> --ziarno 17 --spec mini:2:1:1:1:1,maly:4:3:3:3:3,sredni:2:2:2:2:2,pelny:1:1:1:1:1`
+(spec: `poziom:wzorce:egzemplarz:ladunek_legalny:maly:za_ladunkiem`, liczby na typ; używa `generuj.py`, nie zmienia `dane/mini` ani `manifest.json`).
+Rodzaje (pole `trudnosc`): `egzemplarz` (czyste; silne przesunięcie/skala/jasność), `ladunek_legalny` (czyste; ładunek nakłada się na konstrukcję —
+każdy alarm to FP; prostokąty w `ladunek_legalny`), `maly` (dodatki kilkanaście px), `za_ladunkiem` (mały dodatek wewnątrz legalnego ładunku).
+`dane/manifest-trudny.json` — pełny (148 obrazów), `dane/mini-trudny/` — podzbiór w repo (24 BMP + manifest.json). Pełny zbiór 1,7 GB:
+ThinkPad `hackathon@192.168.1.113:~/dane/proba17-trudny/`.
