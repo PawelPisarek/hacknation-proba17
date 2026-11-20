@@ -4,8 +4,7 @@
 > Wszystkie liczby: dane sztuczne; źródło: linie WYNIK w `docs/decyzje.md`. Zrzuty z działającego programu (hacknation.ksefbot.pl), nie z makiety.
 
 ## 1. Prześwit
-- Prześwit to pomocnik operatora RTG: pokazuje, gdzie na obrazie auta patrzeć najpierw, a decyzja zawsze zostaje po stronie człowieka.
-- Narzędzie AI dla operatora RTG: porównuje obraz naczepy z wzorcem i zaznacza różnice.
+- Prześwit to narzędzie AI dla operatora RTG: porównuje obraz naczepy z wzorcem, zaznacza różnice i pokazuje, gdzie patrzeć najpierw — a decyzja zawsze zostaje po stronie człowieka.
 - Zespół: Hackathon · repo: github.com/PawelPisarek/hacknation-proba17
 - Działający program: hacknation.ksefbot.pl · makieta: pawelpisarek.github.io/hacknation-proba17/makieta/r3/
 - Wszystko na danych sztucznych — demonstracja.
@@ -39,8 +38,8 @@
 
 ## 6. Skuteczność: przeoczenia kontra ramki
 - Miarą jest kolejność miejsc, nie alarm tak/nie: czyste auto dostaje śr. 5,8 / 6,25 ramki (fałszywy alarm = czyste auto z ≥ 1 ramką: 32/32, 40/40).
-- Każda kropka to jedno ustawienie programu; zielony trójkąt (wersja końcowa) spełnia cel ≤ 10% przeoczeń, a „ramki na czystym aucie” to miejsca wskazane na aucie bez dodatku.
-- Źródło: 128 ustawień wersji końcowej, dane sztuczne.
+- Każda kropka to jedno ustawienie programu; zielony trójkąt (podejście końcowe, to w programie) spełnia cel ≤ 10% przeoczeń; kwadrat i linia przerywana to wcześniejsze podejścia, a „ramki na czystym aucie” to miejsca wskazane na aucie bez dodatku.
+- Źródło: 128 ustawień podejścia końcowego, dane sztuczne.
 - ![wykres: przeoczenia kontra średnia liczba ramek na czystym aucie](zrzuty/wykresy/przeoczenia-vs-ramki-slajd.png)
 
 ## 7. Co nowego
@@ -59,12 +58,11 @@
 - ![wykres: auta na godzinę na jedną kartę](zrzuty/wykresy/skalowanie-slajd.png)
 
 ## 9. Na tle istniejących rozwiązań
-- Dostawcy skanerów (Rapiscan, Smiths Detection, Nuctech, Leidos) mają własne analizy związane z własnym sprzętem; obecne narzędzie KAS wykrywa papierosy.
-- Prześwit: porównanie z wzorcem typu, lokalnie, z decyzją operatora; bez porównania z deklaracją.
-| | Skanery dostawców | Obecne narzędzie KAS | Prześwit |
-| Co robi | własne analizy, związane z własnym sprzętem | wykrywa papierosy | porównuje obraz ze wzorcem typu |
-| Decyzja | zależy od dostawcy | — | zawsze operator |
-- Źródło: analiza konkurencji, docs/pm/01-competitive-analysis.md.
+- Zadanie: obecne narzędzie AI w KAS wykrywa papierosy, ale słabo radzi sobie z małymi ilościami ukrytymi w konstrukcji pojazdu.
+| | Dostawcy skanerów | Obecne narzędzie KAS | Prześwit |
+| Jak działa | własne analizy, związane z własnym sprzętem | wykrywa papierosy | porównuje obraz ze wzorcem typu |
+| Słabość / przewaga | klasy przedmiotów, zależność od dostawcy (założenie) | słabo przy małych ilościach w konstrukcji | wskazuje zmianę konstrukcji; działa lokalnie, decyzja zawsze operatora |
+- Źródło: zadanie §1; analiza konkurencji, docs/pm/01-competitive-analysis.md (dostawcy: założenie).
 
 ## 10. Co dalej i użyte narzędzia
 - Dalej (plan): zapisane powody odrzuceń jako materiał do douczania metody; wzorce z prawdziwych danych KAS i pomiary na obrazach KAS; integracja z repozytorium obrazów i systemami KAS; wzorce per dostawca skanera; pomiar skalowania na kilku kartach.
