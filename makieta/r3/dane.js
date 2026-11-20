@@ -57,3 +57,9 @@ const wzorceAuta = (a, r) => (a.wz && a.wz[r]) || [`${a.trudnyZestaw ? "trudny_"
 const obrazWzorca = (a, r, i = 0) => png(wzorceAuta(a, r)[i]);
 const pct = (v, n) => (100 * v / n) + "%";
 const kl = () => "s2";   // P79 B: jeden kolor (kolor nie zastępuje słowa poziomu)
+
+// P80 A + decyzja 15:29: stan auta bez miejsc — nieotwarte → otwarte, niezamknięte → po „Zamknij auto” obejrzane (z osobą i godziną)
+const OBEJRZANE = "obejrzane, bez wskazań";
+const NIEOTWARTE = "program nic nie wskazał — nieotwarte";
+const OTWARTE_NIEZAMKNIETE = "program nic nie wskazał — otwarte, niezamknięte";
+const stanBezMiejsc = (a) => (a.zamkniete ? OBEJRZANE : a.otwarte ? OTWARTE_NIEZAMKNIETE : NIEOTWARTE);
