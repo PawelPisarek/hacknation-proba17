@@ -11,7 +11,7 @@ Na podstawie `docs/zadanie.md`. Data: 2026-11-20. Źródła: wyszukiwanie w siec
 ## Czego nie wiem o produkcie (stan po odpowiedziach)
 1. Wzorzec — rozstrzygnięte (P2).  2. Rola operatora — rozstrzygnięte (P3), zostaje zgodność z zadaniem §3 (P9).  3. Przeoczenie vs fałszywy alarm — rozstrzygnięte (P4).
 4. Perspektywa porównania — rozstrzygnięte (P5).  5. Cel analizy — rozstrzygnięte (P6).  6. Użytkownik, problem, zysk — rozstrzygnięte (P7).
-7. Otwarte: czy zakres pierwszej wersji z tabeli poniżej jest dobry (P10).
+7. Zakres pierwszej wersji — rozstrzygnięte (P10). Otwarte: brak. Nazwa projektu: „Prześwit" (P11).
 Rekomendacje i odpowiedzi: `docs/decyzje.md`.
 
 ## Rynek i kontekst
@@ -72,7 +72,7 @@ Oceniane względem wymagań zadania: **~50 MB/obraz**, **< 1 min na obraz** (§7
 Zadanie §3: „działa samodzielnie, bez interwencji człowieka". Artur (P3): operator przy każdym miejscu zatwierdza/odrzuca z powodem. **Da się pogodzić, rozdzielając etapy:** program analizuje i zaznacza miejsca **sam** (wymóg §3), a zatwierdzenie/odrzucenie to osobny krok **po** wyniku (raport; §9: wyniki idą do repozytorium z przypisaniem do miejsca i przedmiotu kontroli). **P9** do Artura („A czy B?"): A — analiza sama, decyzja operatora na wyniku (rekomendacja); B — operator uczestniczy już w trakcie analizy.
 **Konkurenci:** w znalezionych źródłach brak opisu zatwierdzania z powodem (Rapiscan opisuje tryby analizy, nie przepływ operatora) — nasz przepływ to potencjalna przewaga **(założenie, niezbadane)**. Operator ma kilka minut na auto (P7) — zatwierdzenie musi być szybkie (jedno kliknięcie + powód z listy).
 
-## Proponowany zakres pierwszej wersji (P6) — do akceptacji Artura (P10)
+## Zakres pierwszej wersji (P6) — zaakceptowany przez Artura (P10, 11:04): duży obraz ~50 MB działa od pierwszej wersji, partie mogą poczekać
 | Musi być | Później | Odpada |
 |---|---|---|
 | wczytanie obrazu .bmp (~50 MB), < 1 min | partie wielu obrazów, skalowanie | wykrywanie konkretnej kontrabandy (papierosy itd.) |
