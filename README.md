@@ -50,7 +50,13 @@ https://hacknation.ksefbot.pl/ (odebrane na linku, 20.11.2026, dane sztuczne):
 6. Cysterna nie ma wzorca: program pisze „brak wzorca — sprawdź obraz sam” i nie rysuje ramek.
 7. Własny obraz .bmp można wgrać ze strony; analiza trwała ok. 1,3 s (kontener, 12 miejsc).
 
-W przygotowaniu: skład partii pokazowej, budzenie strony po przerwie, decyzje i raport, lista partii, zmiana rodzaju.
+8. Partia pokazowa ma 7 aut z liczbą miejsc 8 / 6 / 12 / 8 / 7 / 0 / 11; auto 6 (cysterna) ma „brak wzorca”.
+9. Każde miejsce zatwierdzasz jednym kliknięciem albo odrzucasz z powodem wybranym z listy; auto zamykasz po wpisaniu numeru rejestracyjnego.
+10. Raport partii pobierzesz jako .json i .csv; przy zamykaniu partii program ostrzega o autach bez decyzji.
+
+Gdy program jest zajęty, strona pokazuje „Uruchamiam program, ok. 30 s” i sama ponawia liczenie. Uśpiony program obsługa budzi ręcznie przed pokazem (UPROSZCZENIE P86).
+
+W przygotowaniu: zadanie 28 (lista partii z miniaturami) i zadanie 27 (zmiana rodzaju).
 
 ## Wyniki (na danych sztucznych, nie na zdjęciach KAS)
 
