@@ -722,3 +722,4 @@ P94 08:09 odpowiedź: B — obraz przed/po i obok krótka tabela (Artur w pokoju
 5. demo.md: nagranie na linku, auto 7 = 11 miejsc, liczenie ok. 90 s → cięcie w montażu po „Policz partię”, auto 6 „brak wzorca — obejrzyj ręcznie”; suma 114 s = nagłówek.
 6. README „Jak uruchomić”: sprawdzone komendy Programisty, bez „do potwierdzenia”, wersja pokazowa = znacznik `final` (obecnie wskazuje 2c9c4e9, nie 6d9b93a z zlecenia), uwaga o :8770 bez widok.js.
 Nie ruszone: „5 botów”, „douczanie”. Linki HTTP 200 (strona, makieta, repo, OpenMausBot, pm-skills). Niesprawdzone: czas nagrania przez człowieka; recenzja R2 — Analityk.
+08:16 Szef: poprawki krytyka R1 + recenzji 46 oddane (Prezenter, 6c02ffa); final^{commit} = 6d9b93a (2c9c4e9 to obiekt znacznika) — zgodne; krytyk R2 → Analityk po 44/45
