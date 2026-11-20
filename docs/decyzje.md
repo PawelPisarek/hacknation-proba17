@@ -297,3 +297,4 @@ P54 12:59 Artur: gdy operator rozstrzygnie ostatnie miejsce w ostatnim aucie par
 P55 12:59 Artur: kiedy widać „Zamknij partię”? A: dopiero po zapisie raportu (po nim bez zmian); B: zawsze w raporcie, zapis raportu robi się przy zamknięciu. Rekomendacja: A — czeka
 12:59 Prezenter: demo.md szkic (117 s, 8 kroków; P50 A, P51 B)
 12:59 Programista: PARAMETR: progi słów różnicy w makiecie R1 = wysoki ≥ 0,6, średni ≥ 0,3 siły różnicy (dowolne, P45 B) — do Artura (P49)
+13:00 Szef: krok 6 po R1 poprawiony (Projektant) → recenzja przejścia R2 (Analityk). P52–P55 czekają na Artura.
