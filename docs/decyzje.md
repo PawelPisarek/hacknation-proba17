@@ -543,3 +543,4 @@ P83 15:55 Artur: Na makiecie (https://pawelpisarek.github.io/hacknation-proba17/
 P83 15:56 odpowiedź: A (Artur w pokoju) — to błąd makiety względem P63 B, nie pytanie; poprawka dla Programisty: zamknięcie partii z autem bez decyzji pokazuje ostrzeżenie z listą takich aut i przycisk „zapisz mimo to”. Takich nie pytać.
 P83 15:56 Szef: odpowiedź A przyjęta → M1 do Programisty (po 36 i P81 w r3)
 15:57 Szef: zasada od P83 (Artur w pokoju): brak makiety względem wcześniejszej odpowiedzi Artura = poprawka dla Programisty z numerem tej odpowiedzi, bez nowego pytania P
+16:07 Projektant: przegląd makiety r3 względem P2–P83 — 6 poprawek dla Programisty (P63/P83 komentarz w linii 276; P80/P57/P40 zakomentowana inicjalizacja w otworzAuto; P60 B nazwa pliku „trudny”; P64/P22 kto i kiedy w raporcie; P25 „docelowo”; P62 brzmienie), 2 nowe pytania (N1 stan pośredni, N2 ramki ręczne), szczegóły w docs/odbior-makiety.md „Zgodność z odpowiedziami Artura”
