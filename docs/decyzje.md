@@ -401,3 +401,4 @@ P72 13:23 odpowiedź: Artur w pokoju (13:15): A — zostawiamy raport jak jest (
 14:03 Szef: Paweł przełączył cały zespół z powrotem na Claude (domyślne i otwarte wątki; agy tylko zapas). Zlecone: Programista — zadanie 22 makieta R2 (P54–P72 + usterki krytyka R1), potem 24–29; Analityk — zadanie 32, potem 30; Projektant — krok 7 R2 drobiazgi; Prezenter — docs/demo.md pod P60 B i P69 A.
 14:04 Analityk: biorę zadanie 32
 14:04 Programista: biorę zadanie 22 (R2: makieta/r2/, P54–P72 + usterki krytyka R1 z 13:08)
+14:04 Projektant: krok 7 domknięcie R2 — S1 brzegowe jedno kryterium (06 i 07, R20, zał. 6), R7 z P59 A/P68 scalone, R9 zapas czasu + P69 A, nagłówek 07 P1–P72, P60 B sprawdzone (brak P60 A w 06/07/spec) — do R3 Analityka
