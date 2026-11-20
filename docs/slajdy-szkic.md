@@ -1,8 +1,8 @@
 # Slajdy — szkielet (DRAFT, ≤ 10 slajdów, potem PDF)
 
-> Szkic przed pomiarami i makietą. Liczby skuteczności: **[do zmierzenia]** — nie wpisujemy niczego, czego nie zmierzyliśmy.
+> Szkic przed pomiarami i makietą. Liczby skuteczności: „—” (nie wpisujemy niczego, czego nie zmierzyliśmy).
 > Oś przekazu (`value-prop-statements`): *Dla operatora RTG na granicy: Prześwit wskazuje miejsca, w których obraz naczepy odbiega od wzorca, więc operator w kilka minut wie, gdzie szukać skrytki — decyzję nadal podejmuje on.*
-> Nazwa „Prześwit” — wybór Artura (P11).
+> Nazwa „Prześwit”.
 
 ## 1. Prześwit — tytuł
 - Narzędzie AI dla operatora RTG: porównuje obraz naczepy z wzorcem i zaznacza różnice.
@@ -23,12 +23,13 @@
 
 ## 4. Rozwiązanie
 - System sam dobiera wzorzec **typu pojazdu** z biblioteki (operator rzadko ma czyste zdjęcie tej samej naczepy).
-- Program sam, bez udziału operatora, porównuje badany obraz z wzorcem i zaznacza miejsca różnic; najważniejsze: nie przeoczyć; pokazujemy, ile przeoczeń (P4, P9, P26).
-- Partie (P12): operator wskazuje kilka obrazów, program liczy je po kolei i oddaje listę wyników.
+- Program dobiera wzorzec typu pojazdu; operator może zmienić rodzaj pojazdu, a analiza liczy się od nowa. Gdy brak wzorca: „wzorzec przybliżony” i „wynik mniej pewny”.
+- Program zaznacza miejsca różnic; najważniejsze: nie przeoczyć; pokazujemy, ile przeoczeń i ile fałszywych alarmów.
+- Partie: operator wskazuje kilka obrazów, program liczy je po kolei i oddaje listę wyników.
 - [zrzut: obraz badany obok wzorca, z zaznaczeniami]
 
 ## 5. Operator decyduje
-- Dopiero na wyniku operator przy każdym zaznaczonym miejscu zatwierdza albo odrzuca; odrzucając, podaje powód (P9).
+- Dopiero na wyniku operator przy każdym zaznaczonym miejscu zatwierdza albo odrzuca; przy odrzuceniu podaje powód.
 - Decyzje i powody zostają w raporcie.
 - Człowiek zostaje decydentem; narzędzie tylko wskazuje, gdzie patrzeć.
 - [zrzut: lista miejsc z przyciskami „zatwierdź / odrzuć” i polem powodu]
@@ -39,9 +40,9 @@
 - [zrzut: kolejne kroki makiety]  ·  [link: makieta pod GitHub Pages / ksefbot.pl — wpisać po wdrożeniu]
 
 ## 7. Jak to działa i jak to mierzymy
-- Dane: sztuczne naczepy „czyste” i z „dodatkowym ładunkiem”; duże pliki .bmp (~50 MB) i partie obrazów (lista wyników) działają już w pierwszej wersji (P10, P12).
+- Dane: sztuczne naczepy „czyste” i z „dodatkowym ładunkiem”; duże pliki .bmp (~50 MB) i partie obrazów (lista wyników) działają już w pierwszej wersji.
 - Priorytet: przeoczenie jest gorsze niż fałszywy alarm — ale liczbę fałszywych alarmów pokazujemy wprost.
-- Przeoczenia (na obrazach z dodatkami): **[do zmierzenia]** · fałszywe alarmy (na obrazach czystych): **[do zmierzenia]** · czas na obraz: **[do zmierzenia]**
+- Przeoczenia (na obrazach z dodatkami): — · fałszywe alarmy (na obrazach czystych): — · czas na obraz: —
 - [zrzut: wykres/tabela wyniku na zbiorze testowym — po pomiarze]
 
 ## 8. Narzędzia przygotowane wcześniej
@@ -58,7 +59,7 @@
 ## 10. Co dalej
 - Zasilić biblioteką prawdziwych wzorców typów pojazdów po otrzymaniu danych KAS.
 - Docelowo praca lokalna, bez internetu i chmury (wymóg KAS) oraz integracja z repozytorium obrazów KAS.
-- Rozbudowa skalowania na większe zbiory oraz wzorce per dostawca skanera (Nuctech, Multicontrol); pomiary na obrazach KAS **[do zmierzenia]**.
+- Rozbudowa skalowania na większe zbiory oraz wzorce per dostawca skanera (Nuctech, Multicontrol); pomiary na obrazach KAS —.
 - [zrzut: schemat wdrożenia — opcjonalnie]
 
 <!-- skill: value-prop-statements -->
