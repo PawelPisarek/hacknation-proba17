@@ -1,7 +1,7 @@
 # Szkice trzech wariantów ekranu wyniku (przed `/write-prd`)
 
 Wejście: `docs/pm/02-operator.md`, `03-discover.md`, `04-priorytety.md`; ustalenia P17, P24, P27, P28, P29, P34, P35. Tylko funkcje z P29/P34: ramki + lista (1), lupa (3), wzorzec obok z przełączaniem (2), podpowiedź krótkiego stażu (10), zmiana rodzaju z podglądem dwóch wzorców (6). Wspólne dla wszystkich wariantów: stan obrazu w partii **gotowe** (nie „policzone”), słowo niski/średni/wysoki bez procentów (P17), zatwierdź/odrzuć z powodem z listy P13, osobne pole numeru rejestracyjnego przy obrazie (P28 A), brak wzorca → brak ramek i napis „brak wzorca — sprawdź obraz sam” (P35 A). Napisu „wynik mniej pewny” nie ma (P35 A unieważnia P23).
-Makiety: do zrobienia przez Programistę (linki wpisze Szef do pytań dla Artura): A — `<link A>`, B — `<link B>`, C — `<link C>`.
+Makiety (Programista, online): A — https://pawelpisarek.github.io/hacknation-proba17/makieta/warianty/a/, B — https://pawelpisarek.github.io/hacknation-proba17/makieta/warianty/b/, C — https://pawelpisarek.github.io/hacknation-proba17/makieta/warianty/c/.
 
 ## Wariant A — „Jeden obraz na cały ekran”
 - **Układ:** obraz naczepy zajmuje prawie cały ekran; ramki ponumerowane na obrazie; lista miejsc jako wąski pasek po prawej, domyślnie złożony.
