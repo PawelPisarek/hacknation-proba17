@@ -601,3 +601,4 @@ P85 16:09 odpowiedź: B — wszystkie auta w makiecie pokazują to, co naprawdę
 19:14 Szef: zadanie 40 przyjęte (4d9142b, 60814f8, 4cc7df0: na linku ramki, lupa 4×, wzorzec obok, podpowiedź, cysterna „brak wzorca” 0 ramek; strona 11/11, usługa 28 OK; porównanie z CLI dopisze Programista). Odbiór 40 na żywym linku → Analityk. Recenzja 09 runda 1 (567d64b, 5 braków) → Projektant poprawia cały plik.
 19:15 Projektant: poprawiony docs/pm/09-uproszczenia.md po recenzji 09 R1 (5 braków): pytamy tylko o U1, U3, U5 (tak/nie); U2, U4, U6–U8 jako „już ustalone z P12/P38/P81/P72/P82/P58/P25”; dopisane I1–I3 (rozruch ~30 s, 50 MB ≈ 45 s, jeden obraz naraz); dorobienie wybierane tylko w D; czasy D1–D3 z zależnościami; język bez słów technicznych. Rekomendacja D1 bez zmian. Wiadomość do Artura nadal NIEWYSŁANA.
 19:16 Programista: biorę zadanie 41 (skład partii pokazowej wg docs/pm/06)
+19:17 Szef: 09 R2 (1a55580) przyjęte do recenzji — runda 2 z 3 → Analityk po odbiorze 40

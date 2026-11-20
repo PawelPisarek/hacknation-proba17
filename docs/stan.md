@@ -1,4 +1,4 @@
-# Stan — 19:14
+# Stan — 19:17
 Kamień: MVP na hacknation.ksefbot.pl (koniec próby po MVP): 40 → 41 → 42 → 29 → 28 → 27 → odbiór → Artur: uproszczenia + 1 dorobienie. Makieta i hacktribe gotowe.
 
 | zadanie | kto | status |
@@ -9,7 +9,7 @@ Kamień: MVP na hacknation.ksefbot.pl (koniec próby po MVP): 40 → 41 → 42 �
 | krok 8 wizja (08-wizja.md) | Projektant | zamknięte (R3 czysto 15:28) → zadanie 35 Prezenter |
 | 22 makieta R2 | Programista | zamknięte; krytyk 7/10; Artur P73–P78 (14:38) |
 | 34 makieta R3 (P73 A, P74 A, P76 A, P77 A, P79 B, brak 7) | Programista | zamknięte; poprawki krytyka R3 (8/10, runda 3 z 3) + P80 A w r3 15:23, r3 200 — makieta zamknięta |
-| 09 uproszczenia + dorobienie (Artur) | Projektant | recenzja 1 z 3 (567d64b, 5 braków) → poprawka; wysyłka po odbiorze MVP |
+| 09 uproszczenia + dorobienie (Artur) | Projektant | R2 1a55580; recenzja 2 z 3 → Analityk po odbiorze 40; wysyłka po odbiorze MVP |
 | 41 skład partii pokazowej wg 06 / 42 budzenie uśpionej usługi | Programista | zlecone 19:12 (po 40) |
 | 40 strona pod linkiem: ramki, lupa, wzorzec obok, podpowiedź | Programista | oddane 19:14 (4d9142b), odbiór na linku → Analityk; CLI = HTTP dopisze Programista; potem 41 → 42 → 29 → 28 → 27 |
 | 21 wdrożenie strona + usługa (P43 A) | Paweł → Programista, Analityk | zamknięte: merge 19acef7, odbiór z zewnątrz 8768b32 (B1 → 41 skład partii, B2 → 42 budzenie); porządki → 39 |
