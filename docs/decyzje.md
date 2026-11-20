@@ -268,3 +268,9 @@ P43 12:51 odpowiedź: Paweł: A — strona na ksefbot.pl + usługa na karcie OME
 12:51 Szef: założone zadanie 21 (wdrożenie strona + usługa; dowód: wgranie .bmp z linku).
 P43 12:51 odpowiedź: Paweł: A — MVP na ksefbot.pl + usługa na OMENie startuje z wdrożeniem, wgranie własnego .bmp z linku działa (A14); spec §3, A12, A14 (12:51 Projektant)
 12:52 Szef: spec po P43 (§3, A12, A14) → recenzja odbiorcy R2 Programista.
+P44 12:52 odpowiedź: Artur w pokoju: A — lista partii: „auto N” z nazwą pliku, numer rej. dopisuje się po wpisaniu przy aucie
+P45 12:52 odpowiedź: Artur w pokoju: B — stałe progi, te same w każdym aucie; „wysoki” znaczy to samo wszędzie, czyste auto nie dostaje „wysoki” z samego podziału (zmienia rekomendację A)
+P46 12:52 odpowiedź: Artur w pokoju: A — przycisk „Zamknij partię” w raporcie; potem „rozstrzygnięte”, bez zmian
+P47 12:52 odpowiedź: Artur w pokoju: A — opis „wypatrzyć skrytkę lub dodatkowy ładunek” zostaje
+P48 12:52 odpowiedź: Artur w pokoju: A — wyjątek „poza znaną konstrukcją” dopisany do opisu (poprawka nieprawdziwego zdania, bez pytania)
+PARAMETR: wartości progów niski/średni/wysoki (stałe, wspólne dla aut) = do ustalenia na zbiorze testowym — do Artura

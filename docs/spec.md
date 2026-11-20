@@ -6,7 +6,7 @@
 Operator RTG (krótki staż możliwy, P19; kilkadziesiąt aut na zmianę, P20; kilka minut na auto, P7):
 1. loguje się i raz na zmianę ustawia stanowisko (miejsce kontroli) — P22 A;
 2. wskazuje kilka obrazów .bmp (partia) — P12 A; program liczy je **po kolei** i oddaje **listę partii**;
-3. na liście widzi wiersze aut (P37 B): „auto N” z nazwą pliku (nr rej. po wpisaniu w E4; P44 wg rekomendacji, czeka), rodzaj pojazdu, stan (czeka / liczy się / gotowe / brak wzorca), liczba miejsc, **miniatura obrazu** (P37 B, jak w makiecie B);
+3. na liście widzi wiersze aut (P37 B): „auto N” z nazwą pliku (nr rej. po wpisaniu w E4; P44 A), rodzaj pojazdu, stan (czeka / liczy się / gotowe / brak wzorca), liczba miejsc, **miniatura obrazu** (P37 B, jak w makiecie B);
 4. wchodzi w auto **dopiero gdy cała partia jest policzona** (P38: pomysł 7 odrzucony w P29);
 5. w aucie widzi **dwa obrazy obok siebie**: badany z ponumerowanymi ramkami i wzorzec tego samego rodzaju; przewijanie i przybliżanie wspólne (lupa, pomysł 3);
 6. pod obrazami **kafelki miejsc** od najbardziej różnego, przy każdym jedno słowo niski / średni / wysoki, bez procentów (P17);
@@ -24,7 +24,7 @@ Język ekranu: polski. Udawane dane: z `dane/mini` (nazwy plików `badany_mini_<
 |---|---|---|---|
 | E1 | Logowanie i stanowisko | pole „funkcjonariusz” (lista), pole „miejsce kontroli” (lista), przycisk „Zacznij zmianę” | funkcjonariusz „SCS Kowalski”, miejsce „Terespol — stanowisko 2” (**dane udawane**); raz na zmianę |
 | E2 | Wybór partii | przycisk „Wskaż obrazy .bmp”, lista wybranych plików, „Policz partię”; makieta i demo idą na `dane/mini` (PNG); wymaganie 50 MB (A12) potwierdza pomiar Z9: śr. 5,0 s, maks. 8,1 s | 6 plików z `dane/mini` (po jednym z firanka, chłodnia, kontener, cysterna czyste/dodatki) |
-| E3 | Lista partii (z wariantu B) | tabela: miniatura, „auto N” + nazwa pliku (P44 rek. A, czeka), rodzaj, stan, liczba miejsc (P37 B); stan liczy się po kolei (pasek postępu partii); wiersz „gotowe” klikalny dopiero po policzeniu całej partii (P38) | 6 wierszy; jeden ze stanem „brak wzorca” (cysterna), liczba miejsc „—” |
+| E3 | Lista partii (z wariantu B) | tabela: miniatura, „auto N” + nazwa pliku (P44 A), rodzaj, stan, liczba miejsc (P37 B); stan liczy się po kolei (pasek postępu partii); wiersz „gotowe” klikalny dopiero po policzeniu całej partii (P38) | 6 wierszy; jeden ze stanem „brak wzorca” (cysterna), liczba miejsc „—” |
 | E4 | Auto — widok C | lewo: badany z ramkami 1…n; prawo: wzorzec (nazwa rodzaju + przycisk „Zmień rodzaj”); wspólne przewijanie i lupa; pod spodem kafelki (numer, słowo niski/średni/wysoki, stan: oczekuje / zatwierdzone / odrzucone); pole „Nr rej.”; przyciski „Zatwierdź”, „Odrzuć ▾ powód”; podpowiedź „zwykle tu…” przy każdym kafelku od razu (P39 B) | firanka_dodatki_00: 6 kafelków; podpowiedź np. „zwykle tu: podwozie — belka poprzeczna” |
 | E5 | Auto — brak wzorca | zamiast ramek i kafelków napis **„brak wzorca — sprawdź obraz sam”**; sam badany obraz z lupą; pola nr rej. i „Zamknij auto” (P35 A) | cysterna (nie ma jej w bibliotece wzorców) |
 | E6 | Zmiana rodzaju | lista 4 rodzajów (firanka, chłodnia, kontener, cysterna), podgląd 2 najbliższych wzorców obok badanego, „Zastosuj”; ostrzeżenie „decyzje w tym aucie zostaną skasowane” (P27 A) | wybór cysterny → E5 |
@@ -54,7 +54,7 @@ Stan w nagłówku: „gotowe” (nie „policzone”). **Nie ma** napisu „wyni
 | A11 | Raport z polami P18: id kontroli, miejsce (z ustawienia stanowiska), data i godzina, rodzaj programu i operatora, nr rej., miejsca z decyzją i powodem, kto zdecydował (zalogowany); bez pisania poza nr rej.; zapis lokalny | P18, P22 A; JS5 |
 | A12 | Obraz 50 MB < 1 min; „bez internetu” sprawdzane uruchomieniem lokalnym (Docker/wiersz poleceń), nie przez stronę | zadanie §3, §7, §9; P43 A |
 | A14 | Wgranie własnego .bmp z linku (ksefbot.pl) daje wynik; usługa na karcie OMENa działa od wdrożenia strony | P43 A |
-| A13 | Decyzję w poprzednim aucie można zmienić z listy partii (lista → auto → zmiana) do zamknięcia partii przyciskiem „Zamknij partię” w E7 po zapisie raportu; potem wiersz E3 „rozstrzygnięte”, bez zmian (P46 wg rekomendacji A, czeka); słowa niski/średni/wysoki = trzy równe części siły różnicy w aucie (P45 rek. A, czeka) | P41 A, P45, P46 |
+| A13 | Decyzję w poprzednim aucie można zmienić z listy partii (lista → auto → zmiana) do zamknięcia partii przyciskiem „Zamknij partię” w E7 po zapisie raportu; potem wiersz E3 „rozstrzygnięte”, bez zmian (P46 A); słowa niski/średni/wysoki = stałe progi siły różnicy, takie same w każdym aucie (P45 B; wartości progów — do ustalenia, PARAMETR) | P41 A, P45, P46 |
 
 ## 5. Cele liczbowe Artura i stan pomiarów (dane sztuczne, metoda bazowa i v2 — zadanie 19; zadanie 20 w toku)
 | Miara | Cel | Dziś | Źródło |
@@ -103,6 +103,6 @@ Odrzucone pomysły 4, 5, 7, 8, 9; wykrywanie konkretnego towaru, porównanie z d
 <!-- skill: przeplywy-pm -->
 
 ## 11. Czekają na Artura (spec wg rekomendacji)
-P44 (A: „auto N”), P45 (A: trzy równe części w aucie), P46 (A: „Zamknij partię”), P47 (A: opis bez zmian), P48 (A: dopisać wyjątek „poza znaną konstrukcją” do opisu). P43 — Paweł (MVP na ksefbot.pl).
+P44 (A: „auto N”), P45 (B: stałe progi), P46 (A: „Zamknij partię”), P47 (A: opis bez zmian), P48 (A: dopisać wyjątek „poza znaną konstrukcją” do opisu). P43 — Paweł (MVP na ksefbot.pl).
 <!-- skill: create-prd -->
 <!-- skill: przeplywy-pm -->
