@@ -220,3 +220,4 @@ WYNIK: Z14 pomiędzy (część liczona; pytanie do osoby z zewnątrz — po maki
 P38 12:41 odpowiedź: z P29 (pomysł 7 odrzucony) — wejście w auto dopiero gdy cała partia policzona; Analityk skreślił pytanie. JS4 i etap 4 w 02-operator już tak mówią.
 P41 12:41 Artur: gdy po ostatnim miejscu otwiera się następne auto (P40 B) — czy decyzję w poprzednim aucie można jeszcze zmienić? A: tak, z listy partii wchodzisz w auto i zmieniasz do zamknięcia sprawy; B: nie, decyzje są ostateczne po rozstrzygnięciu ostatniego miejsca. Rekomendacja: A — pomyłka operatora w pośpiechu nie może zostać na stałe (zamyka JS2 AC5) — czeka
 12:41 Prezenter: README — czas bazowy osobno dla zbiorów (ceb6717)
+12:41 Szef: README po R2 (62c3b08) → R3 Analityk (ostatnia runda).
