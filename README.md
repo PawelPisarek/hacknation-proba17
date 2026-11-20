@@ -58,7 +58,7 @@ https://hacknation.ksefbot.pl/ (odebrane na linku, 20.11.2026, dane sztuczne):
 13. Gdy miejsc jest więcej niż widać, lista ma „i jeszcze N miejsc — pokaż” (z poprawną odmianą: 2 miejsca, 1 miejsce).
 14. „Zamknij auto” działa po rozstrzygnięciu ostatniego miejsca (Enter jako skrót) i otwiera następne auto; po ostatnim wraca lista z „Raport partii”.
 15. Po zamknięciu partii decyzji nie da się już zmienić (wiersze listy są zablokowane).
-16. Rodzaj pojazdu zmienisz jednym kliknięciem, z podglądem 2 wzorców; auto przelicza się, a wcześniejsze decyzje przy nim są kasowane (odbiór niezależny w toku).
+16. Rodzaj pojazdu zmienisz jednym kliknięciem, z podglądem 2 wzorców; auto przelicza się, a wcześniejsze decyzje przy nim są kasowane.
 17. Po zmianie na cysternę program pisze „brak wzorca”.
 18. Raport partii zawiera rodzaj wykryty przez program i rodzaj wybrany przez operatora.
 
