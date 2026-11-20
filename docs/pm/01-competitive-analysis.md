@@ -3,7 +3,7 @@
 Na podstawie `docs/zadanie.md`. Data: 2026-11-20. Źródła: wyszukiwanie w sieci 20.11 (linki na końcu) i wiedza ogólna — pozycje bez źródła oznaczone **(założenie)**; cen i udziałów w rynku nie podajemy, bo nie mamy ich z wiarygodnego źródła.
 
 ## Ustalenia Artura z pokoju (docs/decyzje.md)
-- **P2:** wzorzec **typu z biblioteki** — operator prawie nigdy nie ma czystego zdjęcia tej samej naczepy; system dobiera wzorzec typu sam.
+- **P2:** wzorzec **typu z biblioteki** — operator prawie nigdy nie ma czystego zdjęcia tej samej naczepy; system dobiera wzorzec typu sam, a operator może poprawić rodzaj pojazdu z listy (P24 B).
 - **P3:** operator przy każdym wskazanym miejscu zatwierdza albo odrzuca, a odrzucając podaje powód (zostaje w raporcie). **Sprzeczność z zadaniem §3** („bez interwencji człowieka") — patrz „Przepływ z operatorem" i pytanie P9.
 - **P4/P5:** przeoczenie gorsze od fałszywego alarmu; **skuteczność (czy wskazuje to, co ukryte) jest pierwsza, sposób pokazania druga.**
 - **P6:** analiza służy opisowi projektu i wyborowi zakresu pierwszej wersji. **P7:** operator ma kilka minut na jedno auto. **P8:** konkurenci właściwi.
@@ -38,7 +38,7 @@ Rekomendacje i odpowiedzi: `docs/decyzje.md`.
 
 
 ## Wzorzec typu z biblioteki (P2) — co z tego wynika
-System sam **rozpoznaje typ naczepy i dobiera wzorzec z biblioteki**. Dochodzą trzy elementy, których konkurenci nie opisują jako osobnego kroku:
+System sam **rozpoznaje typ naczepy i dobiera wzorzec z biblioteki**; operator może poprawić rodzaj z listy, wtedy analiza liczy się od nowa (P24 B). Dochodzą trzy elementy, których konkurenci nie opisują jako osobnego kroku:
 1. **Rozpoznanie typu naczepy** (np. firanka, chłodnia, skrzynia) — błąd tu psuje wszystko dalej.
 2. **Budowa biblioteki wzorców** z ok. 200 obrazów z zadania (§7: pary „przed/po"; do biblioteki idą obrazy czyste pogrupowane wg typu). Mało obrazów na typ → wzorzec nie pokrywa naturalnej zmienności pojazdów (liczby typów nie znamy — **założenie**).
 3. **Dobór i dopasowanie wzorca** — nawet ten sam typ różni się wyposażeniem, długością, ustawieniem.
@@ -77,7 +77,7 @@ Zadanie §3: „działa samodzielnie, bez interwencji człowieka". Artur (P3): o
 |---|---|---|
 | wczytanie obrazu .bmp (~50 MB), < 1 min | wzorce osobno na dostawcę skanera | wykrywanie konkretnej kontrabandy (papierosy itd.) |
 | partie (P12): operator wskazuje kilka obrazów, program liczy je po kolei i oddaje listę wyników | rozbudowane skalowanie na duże zbiory (tylko opisane jednym zdaniem) | porównanie z deklaracją/manifestem |
-| rozpoznanie typu naczepy i dobór wzorca z biblioteki | zapis wyników w repozytorium KAS | ocena „winny/niewinny" przez program |
+| rozpoznanie typu naczepy i dobór wzorca z biblioteki (poprawialny przez operatora, P24 B) | zapis wyników w repozytorium KAS | ocena „winny/niewinny" przez program |
 | zaznaczenie miejsc na obrazie i raport | uczenie z powodów odrzucenia | integracja ze skanerami |
 | zatwierdzenie/odrzucenie miejsca z powodem z listy (P3, P13) | | działanie w chmurze |
 | wynik na obrazach czystych i z „dodatkami" (§6) | | |

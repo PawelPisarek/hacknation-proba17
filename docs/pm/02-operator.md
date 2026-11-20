@@ -1,8 +1,8 @@
 # Krok 2 — Operator: persona i droga od wjazdu auta do raportu (`user-personas`, `customer-journey-map`)
 
-Wejście: `docs/zadanie.md`, `docs/pm/01-competitive-analysis.md`, ustalenia P2–P24 z `docs/decyzje.md`, otwarte pytania z `docs/materialy.md`. Produkt: **Prześwit** (P11). Brak badań terenowych. P14–P24 mają odpowiedzi Artura; to, czego nie powiedział Artur ani zadanie, jest oznaczone **(założenie)** (tylko wariant 3 persony).
+Wejście: `docs/zadanie.md`, `docs/pm/01-competitive-analysis.md`, ustalenia P2–P28 z `docs/decyzje.md`, otwarte pytania z `docs/materialy.md`. Produkt: **Prześwit** (P11). Brak badań terenowych. P14–P24 mają odpowiedzi Artura, P27–P28 czekają (w pliku **(założenie = rekomendacja)**); to, czego nie powiedział Artur ani zadanie, jest oznaczone **(założenie)** (tylko wariant 3 persony).
 
-## Czego nie wiem o produkcie (każde = pytanie do Artura w pokoju Produkt)
+## Ustalenia P14–P24 (odpowiedzi Artura w pokoju Produkt) i pytania otwarte P27–P28
 | P | Sprawa | Stan |
 |---|---|---|
 | P14 | Jakie typy pojazdów obsługujemy (nasze dane: firanka, chłodnia, kontener, cysterna) | **Artur:** te 4 (firanka, chłodnia, kontener, cysterna) — odpowiedź jest |
@@ -16,6 +16,8 @@ Wejście: `docs/zadanie.md`, `docs/pm/01-competitive-analysis.md`, ustalenia P2�
 | P22 | Skąd w raporcie numer rejestracyjny, miejsce kontroli, „kto zdecydował” | **Artur:** A — numer rejestracyjny wpisuje operator (jedno pole), miejsce kontroli = ustawienie stanowiska, „kto zdecydował” = zalogowany funkcjonariusz — odpowiedź jest |
 | P23 | Co operator widzi przy wyniku mniej pewnym | **Artur:** A — słowa niski/średni/wysoki bez zmian + napis nad listą „wynik mniej pewny” — odpowiedź jest |
 | P24 | Czy operator może zmienić rodzaj pojazdu dobrany przez system | **Artur:** B — tak, z listy jednym kliknięciem (zna rodzaj z dokumentów przewozowych); analiza liczy się od nowa — odpowiedź jest |
+| P27 | Co z decyzjami o miejscach, gdy operator zmieni rodzaj pojazdu | **czeka** — rekomendacja A: decyzje znikają, wszystko liczy się od nowa; raport zapisuje oba rodzaje (dobrany przez program i poprawiony przez operatora) |
+| P28 | Gdzie operator wpisuje numer rejestracyjny przy kilku obrazach w partii | **czeka** — rekomendacja A: osobne pole przy każdym obrazie, zanim zatwierdzi wynik (każdy obraz to inne auto) |
 Z zadania/ustaleń, więc bez pytań: praca bez internetu (§9), sztuczne dane, bez wpływu człowieka na samą analizę (P9), przeoczenie gorsze od fałszywego alarmu (P4) — próg alarmu wynika z P4 (raczej pokazać miejsce więcej niż przeoczyć), lista powodów odrzucenia z P13.
 
 ## Persona (skill `user-personas`)
@@ -38,30 +40,28 @@ Persona: „Marek". Cel: decyzja o aucie w kilka minut. Etapy dopasowane do prod
 
 | # | Etap | Co robi operator | Co robi Prześwit | Emocja | Ból | Szansa |
 |---|---|---|---|---|---|---|
+| 0 | **Logowanie i ustawienie stanowiska** | na początku zmiany loguje się jako funkcjonariusz; stanowisko ma ustawione miejsce kontroli (P22 A) | zapamiętuje, kto pracuje i gdzie; dopisuje to do każdego raportu | rutyna | dodatkowe klikanie | raz na zmianę, nie przy każdym aucie |
 | 1 | **Wjazd auta i skan** | auto wjeżdża, skaner robi obraz (plik .bmp, ~50 MB) | — (poza produktem; obraz trafia do repozytorium) | spokój/rutyna | duży plik, czekanie | wskazać kilka obrazów do partii (P12) |
-| 2 | **Wskazanie obrazów** | wybiera jeden lub kilka obrazów (partia) | wczytuje po kolei | neutralna | nie wie, czy program już liczy | pasek postępu, ile gotowych |
+| 2 | **Wskazanie obrazów** | wybiera jeden lub kilka obrazów (partia) i **wpisuje numer rejestracyjny naczepy w osobnym polu przy każdym obrazie, zanim zatwierdzi wynik** (P22 A; P28 czeka — rekomendacja A) | wczytuje po kolei | neutralna | nie wie, czy program już liczy | pasek postępu, ile gotowych |
 | 3 | **Rozpoznanie typu i wzorca** | widzi rodzaj pojazdu dobrany przez system; jeśli nie zgadza się z dokumentami przewozowymi, **zmienia rodzaj z listy (firanka, chłodnia, kontener, cysterna) jednym kliknięciem** (P24 B) | rozpoznaje rodzaj, dobiera wzorzec z biblioteki (P2); po zmianie rodzaju **liczy analizę od nowa**; brak wzorca → najbliższy rodzaj z napisem „wzorzec przybliżony (… zamiast …)” i „wynik mniej pewny” (P16) | niepewność przy „wzorcu przybliżonym”; irytacja, gdy rodzaj źle dobrany | błędny dobór → lawina fałszywych alarmów | rodzaj i wzorzec widoczne obok, zmiana jednym kliknięciem |
 | 4 | **Analiza sama** | czeka (< 1 min na obraz, §7) | zaznacza miejsca sam (P9) | niecierpliwość | czas | wynik na pierwszym obrazie przed końcem partii |
 | 5 | **Przegląd wyniku** | ogląda obraz z ramkami i listę miejsc (P17); przy wzorcu przybliżonym widzi nad listą napis „wynik mniej pewny — wzorzec przybliżony” (P23 A: słowa niski/średni/wysoki się nie zmieniają, miejsca nie są ukrywane — P4) | pokazuje obraz, ponumerowane ramki, listę od najbardziej różnego (niski/średni/wysoki) | skupienie | za dużo ramek, mała skrytka ukryta | ramki ponumerowane, przybliżenie |
 | 6 | **Decyzja przy każdym miejscu** | zatwierdza albo odrzuca; odrzucając wybiera powód z listy (P13): element konstrukcji / zgłoszony ładunek / błąd obrazu / nakładanie się ładunku / inny (tekst) | zapisuje decyzję i powód | pewność lub wątpliwość | pisanie tekstu | domyślne szybkie kliknięcia, „inny" tylko wyjątkowo |
 | 7 | **Decyzja o aucie** | puszcza albo kieruje na kontrolę fizyczną (poza programem) | pokazuje, ile miejsc zatwierdzono | — | — | jedno zdanie podsumowania |
-| 8 | **Raport** | sprawdza numer rejestracyjny naczepy (wpisany raz przy obrazie, P22 A) i zamyka sprawę | zapisuje raport z polami P18: identyfikator kontroli, data i godzina, typ, lista miejsc z decyzją i powodem — automatycznie; miejsce kontroli z ustawienia stanowiska i „kto zdecydował” z zalogowanego funkcjonariusza (P22 A) | ulga | wpisywanie numeru | jedno pole, reszta bez pisania |
+| 8 | **Raport** | sprawdza, że numer rejestracyjny przy obrazie (etap 2) jest wpisany, i zamyka sprawę | zapisuje raport z polami P18: identyfikator kontroli, data i godzina, typ, lista miejsc z decyzją i powodem; **rodzaj dobrany przez program i rodzaj poprawiony przez operatora (jeśli zmienił; P27 czeka — rekomendacja A)** — automatycznie; miejsce kontroli z ustawienia stanowiska i „kto zdecydował” z zalogowanego funkcjonariusza (P22 A) | ulga | wpisywanie numeru | jedno pole, reszta bez pisania |
 
 **Chwile krytyczne:** *aha* — operator widzi ramkę dokładnie na skrytce, której sam nie zauważył (etap 5). *Chwila prawdy* — pierwsza ramka na czystej naczepie: jeśli pokaże się dużo fałszywych, operator przestaje ufać (etap 5–6). *Ryzyko porzucenia* — „wzorzec przybliżony" (etap 3) lub za dużo ramek: operator wraca do oglądania ręcznie.
 
 ## Wnioski dla ekranów (wejście do kroków 3–5)
 - ekran wyniku: obraz + ramki + lista + powód odrzucenia z listy;
-- widoczny rodzaj pojazdu i wzorzec obok; **lista rodzajów (firanka, chłodnia, kontener, cysterna) do zmiany jednym kliknięciem, po zmianie analiza liczy się od nowa i stan obrazu wraca do „liczy się”** (P24 B); przy braku wzorca napis „wzorzec przybliżony (… zamiast …)” (P16);
+- widoczny rodzaj pojazdu i wzorzec obok; **lista rodzajów (firanka, chłodnia, kontener, cysterna) do zmiany jednym kliknięciem, po zmianie analiza liczy się od nowa i stan obrazu wraca do „liczy się”** (P24 B; po zmianie dotychczasowe decyzje znikają — P27 czeka, rekomendacja A); przy braku wzorca napis „wzorzec przybliżony (… zamiast …)” (P16);
 - przy wyniku mniej pewnym stały napis „wynik mniej pewny” nad listą; słowo niski/średni/wysoki bez zmian (P23 A);
 - przy każdym miejscu słowo różnicy (niski/średni/wysoki), lista od najbardziej różnego (P17);
 - praca partiami: lista obrazów ze stanem (czeka / liczy się / gotowe);
-- pole numeru rejestracyjnego naczepy przy obrazie (wpisuje operator, P22 A); raport z polami P18, miejsce kontroli i „kto zdecydował” automatycznie (P22 A); brak potrzeby osobnego ekranu kierownika (UPROSZCZENIE wyżej).
+- **ekran logowania i ustawień stanowiska** (funkcjonariusz, miejsce kontroli; raz na zmianę, P22 A);
+- pole numeru rejestracyjnego naczepy przy każdym obrazie partii (wpisuje operator, P22 A; P28 czeka — rekomendacja A); raport z polami P18, miejsce kontroli i „kto zdecydował” automatycznie (P22 A); brak potrzeby osobnego ekranu kierownika (UPROSZCZENIE wyżej).
 
 
-## Ustalenia Artura (P22–P24)
-- P22: numer rejestracyjny naczepy wpisuje operator (jedno pole); miejsce kontroli to ustawienie stanowiska; „kto zdecydował” z zalogowanego funkcjonariusza.
-- P23: przy wzorcu przybliżonym słowa niski/średni/wysoki bez zmian, nad listą napis „wynik mniej pewny”.
-- P24 B: system dobiera rodzaj pojazdu sam (P2), ale operator (zna go z dokumentów przewozowych) może go zmienić z listy jednym kliknięciem; analiza liczy się od nowa. Dotyczy etapu 3 drogi operatora i ekranu wyniku (lista rodzajów: firanka, chłodnia, kontener, cysterna).
 
 <!-- skill: user-personas -->
 <!-- skill: customer-journey-map -->
