@@ -2,10 +2,10 @@
 
 Wejście: `docs/pm/01–06`, `docs/spec.md` (A1–A14, §5–§7), `docs/decyzje.md` (P1–P56, WYNIK Z1–Z14). Wszystkie liczby: **dane sztuczne**. Wyobrażamy sobie: pokaz i oddanie zaliczone, ale narzędzie „nie działa dla operatora”.
 
-## Czego nie wiem o produkcie (pytania do Artura — P57–P59 niżej)
-- Co robimy, gdy czyste auto dostaje więcej niż 6 ramek (P30 B nie jest dziś osiągnięty: v2 12,9 na trudnym) — **P57**.
-- Czy ekran mówi, że „brak wskazań” nie znaczy „auto czyste” — **P58**.
-- Czy na ekranie widać stale, że to dane sztuczne i demonstracja — **P59**.
+## Czego nie wiem o produkcie (P57–P59 — odpowiedzi Artura: A, A, A)
+- Co robimy, gdy czyste auto dostaje więcej niż 6 ramek (P30 B nie jest dziś osiągnięty: v2 12,9 na trudnym) — **P57 A**: 6 najsilniejszych na liście + widoczna linia „i jeszcze N miejsc — pokaż”.
+- Czy ekran mówi, że „brak wskazań” nie znaczy „auto czyste” — **P58 A**: tak, napis na ekranie.
+- Czy na ekranie widać stale, że to dane sztuczne i demonstracja — **P59 A**: tak, pasek „dane sztuczne — demonstracja”.
 Do odpowiedzi plik jest pisany wg rekomendacji (zaznaczone).
 
 ## Pre-mortem — ryzyka (T = tygrys, P = papierowy tygrys, S = słoń)
@@ -33,7 +33,7 @@ Kolumny: **Blok** = blokuje oddanie / pokaz (tak / nie, wg P50 A: główna ście
 | R19 | S | nakładanie legalnego ładunku zalewa listę | Z6: 7/16 ≤ 6 ramek (legalny ładunek); Z7: za ładunkiem 0/16–0/20 przeoczeń | **tak** (z R1) | w P57 | jw. |
 | R20 | T | lupa nie pokaże małego dodatku (Z11 potwierdzona tylko na dużych; na małym niesprawdzona) — wtedy pada A1 | WYNIK Z11 (duże dodatki), Z7 mały 17–26%; S1 brzegowe nie wykonane | **tak** (A1 blokuje wg P50) | możliwe (gdy lupa nie wystarczy) | test S1 brzegowy na `trudny_mini_firanka_maly_00`; wynik wraca do Szefa |
 
-**Ryzyka blokujące wymagające zmiany produktu:** R1 (P57), R3 (P58), R7 (P59). Pozostałe blokujące (R2, R4, R5, R6, R8, R9, R20) — praca techniczna, bez pytania.
+**Ryzyka blokujące wymagające zmiany produktu:** R1 (P57 A), R3 (P58 A), R7 (P59 A). Pozostałe blokujące (R2, R4, R5, R6, R8, R9, R20) — praca techniczna, bez pytania.
 
 ## Red-team — najważniejsze założenia (ranking: wpływ × szansa pomyłki × tanio sprawdzić)
 ### 1. „Operator zaufa wskazaniom i nie przeoczy” (A1–A3, cel 10%)
